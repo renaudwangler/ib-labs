@@ -1,54 +1,53 @@
 ---
 layout: page
 title: 'MSMS030 - Administration de Microsoft 365'
-description: 'Microsoft 365 est en fait le porte­-drapeau de toute l’offre Cloud "Software As A Service" (SaaS) de Microsoft. Les participants à cette formation apprendront à mettre en oeuvre et administrer Microsoft 365 pour répondre aux besoins de leur organisation.'
 ---
 # Ateliers du stage
 ## Atelier 01 - Provisioning du tenant Microsoft 365
-### Exercice 1 - [Création de l'environnement](/lab1e1.html)
+### Exercice 1 - [Création de l'environnement](lab1e1.html)
 ___
 ## Atelier 02 - Gestion des utilisateurs et des groupes Microsoft 365
-### Exercice 1 - Managing Microsoft 365 users with the Microsoft 365 admin center
-### Exercice 2 - Managing Microsoft 365 password policies
-### Exercice 3 - Managing Microsoft 365 groups
-### Exercice 4 - Managing Microsoft 365 users and groups with Windows PowerShell
-### Exercice 5 - Configuring service administrators
+### Exercice 1 - Gestion des utilisateurs avec le centre d'administration Microsoft 365
+### Exercice 2 - Gestion des stratégies de most de passe Microsoft 365
+### Exercice 3 - Gestion des groupes Microsoft 365
+### Exercice 4 - Gestion des utilisateurs et des groupes Microsoft 365 avec Windows PowerShell
+### Exercice 5 - Délégation d'administration
 ___
-## Atelier  03 - Configuring Connectivity to Microsoft 365
-### Exercice 1 - Running the Microsoft 365 connectivity analyzer tools
+## Atelier  03 - Connectivité à Microsoft 365
+### Exercice 1 - Utilisation de l'outil *Microsoft 365 connectivity analyzer*
 ___
-## Atelier 04 - Configuring Directory Synchronization
-### Exercice 1 - Preparing for directory synchronization
-### Exercice 2 - Perform Directory Synchronization
-### Exercice 3 - Enable Hybrid Domain Join
+## Atelier 04 - Configuring de la synchronisation d'identités
+### Exercice 1 - Préparation de la synchronisation d'identités
+### Exercice 2 - Mise en oeuvre de la synchronisation d'identités
+### Exercice 3 - Activation de la jonction de domaine hybride
 ___
-## Atelier 05 - Deploying Microsoft 365 Apps
-### Exercice 1 - Deploying Microsoft 365 apps for enterprise
-### Exercice 2 - Deploying Microsoft 365 apps using MDM
+## Atelier 05 - Déploiement de Microsoft 365 Apps
+### Exercice 1 - Déploiement de Microsoft 365 apps for enterprise
+### Exercice 2 - Déploiement de Microsoft 365 apps via MDM
 ___
-## Atelier 06 - Configuring Exchange Online Services
-### Exercice 1 - Configuring message transport settings
-### Exercice 2 - Configuring Email Protection
-### Exercice 3 - Configuring client access policies
+## Atelier 06 - Configuration des services Exchange Online
+### Exercice 1 - Paramètres de transport des messages
+### Exercice 2 - Configuration de la protection de la messagerie
+### Exercice 3 - Configuration des stratégies d'accès clients
 ___
-## Atelier 07 - Deploying Microsoft Teams
-## Exercice 1 - Configure Microsoft Teams
+## Atelier 07 - Déploiement de Microsoft Teams
+### Exercice 1 - Configuration de Microsoft Teams
 ___
-## Atelier 08 - Configuring Sharepoint Online
-### Exercice 1 - Configuring SharePoint Online settings
-### Exercice 2 - Configuring SharePoint Online Sites
-### Exercice 3 - Configuring and verifying external user sharing
+## Atelier 08 - Configuration de Sharepoint Online
+### Exercice 1 - Configuration des paramètres de SharePoint Online
+### Exercice 2 - Configuration de sites SharePoint Online
+### Exercice 3 - Paratage externe dans Sharepoint Online
 ___
-## Atelier 09 - Other Microsoft 365 tools
-### Exercice 1 - Configuring Yammer Enterprise
-### Exercice 2 - Configuring OneDrive for Business
+## Atelier 09 - Autres outils Microsoft 365
+### Exercice 1 - Viva Engage
+### Exercice 2 - OneDrive for Business
 ___
-## Atelier 10 - Configuring Security and Compliance in Microsoft 365
-### Exercice 1 - Creating Sensitivity Labels
+## Atelier 10 - Sécurité et conformité dans Microsoft 365
+### Exercice 1 - Creation de labels de sensibilité
 ___
-## Atelier 11 - Monitoring and Troubleshooting Microsoft 365
-### Exercice 1 - Monitoring Microsoft 365 Service Health
-### Exercice 2 - Troubleshooting Mail Flow Issues
+## Atelier 11 - Surveillance et dépannage de Microsoft 365
+### Exercice 1 - Etat de santé du service Microsoft 365
+### Exercice 2 - Dépannage de flux de messages
 ___
-## Nettoyage - Closing your trial tenant
+## Nettoyage - Cloture du tenant de test
 ## Conseils génériques
