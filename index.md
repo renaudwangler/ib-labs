@@ -1,8 +1,8 @@
 ---
 layout: page
 lab:
-    title: 'Lab: Example'
-    module: 'Module 0: Placeholder'
+    title: 'Lab: Exemple'
+    module: 'Module 0: Présentation exemple'
 ---
 
 # Lab: Example
