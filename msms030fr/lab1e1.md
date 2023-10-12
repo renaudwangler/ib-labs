@@ -5,7 +5,9 @@ title: 'Atelier 1 - Exercice 1 - Création de l'environnement'
 # Atelier 1: Création de l'environnement
   - **Durée approximative**: 00 minutes
 ## Scénario
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis, erat vel egestas faucibus, dui magna semper velit, id congue sapien lectus id turpis. Nam egestas tempus enim. Ut venenatis vehicula ex, id rutrum odio lacinia at. Donec congue, tortor sed fermentum imperdiet, mauris mi auctor dui, ac cursus ex augue a odio. Aliquam erat volutpat. Vivamus faucibus fringilla augue in dignissim. Quisque sit amet nulla id risus gravida auctor. Ut in est varius, cursus odio rhoncus, placerat erat. Suspendisse nec metus est.
+Dans ce premier exercice, vous allez commencer par mettre en oeuvre le tenant 365 dans le projet pilote.
+
+Votre formateur/trice pourra, le cas échéant, vous donner quelques indications complémentaires concernant l'environnement d'atelier a distance que vous utiliserez.
 ## Objectifs
 A la fin de cet atelier, vous aurez une meilleure connaissance de:
 - Cras tincidunt massa et nunc vulputate, eget vestibulum massa tincidunt. 
