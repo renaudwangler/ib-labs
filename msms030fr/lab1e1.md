@@ -13,7 +13,6 @@ A la fin de cet atelier, vous aurez une meilleure connaissance de:
 - Cras tincidunt massa et nunc vulputate, eget vestibulum massa tincidunt. 
 - Maecenas suscipit at nisl vitae malesuada. 
 - Suspendisse eu arcu id velit consequat venenatis.
-# Instructions
 ## Avant de commencer
 1. Integer dolor purus, gravida eu sem id, efficitur aliquet neque. 
 1. Suspendisse viverra mauris in metus laoreet consectetur. 
