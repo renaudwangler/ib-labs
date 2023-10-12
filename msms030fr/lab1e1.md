@@ -1,13 +1,12 @@
 ---
 layout: page
-title: "Ex1 - Création de l'environnement"
+title: "Lab1-Ex1 - Création de l'environnement"
 ---
-# Atelier 1 - Ex 1 : Création de l'environnement
-  - **Durée approximative**: 00 minutes
-## Scénario
+- **Durée approximative**: 00 minutes
+# Scénario
 Dans ce premier exercice, vous allez commencer par mettre en oeuvre le tenant 365 dans le projet pilote.  
 Votre formateur/trice pourra, le cas échéant, vous donner quelques indications complémentaires concernant l'environnement d'atelier a distance que vous utiliserez.  
-## Objectifs
+# Objectifs
 A la fin de cet atelier, vous aurez une meilleure connaissance de:
 - Cras tincidunt massa et nunc vulputate, eget vestibulum massa tincidunt. 
 - Maecenas suscipit at nisl vitae malesuada. 
