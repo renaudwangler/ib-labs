@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 'Ex1 - Création de l\'environnement'
+title: "Ex1 - Création de l'environnement"
 ---
 # Atelier 1 - Ex 1 : Création de l'environnement
   - **Durée approximative**: 00 minutes
