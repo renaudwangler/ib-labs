@@ -1,8 +1,8 @@
 ---
 layout: page
-title: 'Atelier 1 - Exercice 1 - Création de l'environnement'
+title: 'Exercice 1 - Création de l'environnement'
 ---
-# Atelier 1: Création de l'environnement
+# Atelier 1 - Ex 1 : Création de l'environnement
   - **Durée approximative**: 00 minutes
 ## Scénario
 Dans ce premier exercice, vous allez commencer par mettre en oeuvre le tenant 365 dans le projet pilote.  
