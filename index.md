@@ -2,8 +2,8 @@
 layout: page
 title: 'Ateliers ib'
 ---
-# Ateliers du stage msms030
+# Ateliers de stages *ib Cegos*
 Vous trouverez ici les descriptifs d'ateliers pour des formations animéés par [ib Cegos](https://www.ib-formation.fr)
-## MSMS030 - [Administration de Microsoft 365](/msms030fr)
+## MSMS030 - [Administration de Microsoft 365](msms030fr)
 ___
 ## Conseils génériques
