@@ -3,10 +3,10 @@ layout: page
 title: 'MSMS030 - Administration de Microsoft 365'
 ---
 # Ateliers du stage msms030
-L'entreprise ibLabs héberge actuellement un environnement informatique *classique*, dans ses datacenter, qui comporte diverses applications historiques (comme Microsoft Exchange par exemple). L'entreprise a cependant récemment acquis un abonnement Microsoft 365, voyant ici l'opportunité d'un déploiement hybride et d'un rapprochement des application du Cloud.  
+L'entreprise Adatum héberge actuellement un environnement informatique *classique*, dans ses datacenter, qui comporte diverses applications historiques (comme Microsoft Exchange par exemple). L'entreprise a cependant récemment acquis un abonnement Microsoft 365, voyant ici l'opportunité d'un déploiement hybride et d'un rapprochement des application du Cloud.  
 
-Au fil des ateliers de ce stage, vous allez prendre l'identité de Dominique Skyetson, membre de l'équipe d'administration IT de l'entreprise.  
-L'équipe projet de ibLabs a décidé de mettre en oeuvre Microsoft 365  dans un projet pilote, afin de monter en compétence sur le produit et de voir les besoins métiers qui pourraient être couverts par les produits de l'offre Microsoft 365.
+Au fil des ateliers de ce stage, vous allez prendre l'identité de Dominique Skyetson, membre de l'équipe d'administration IT de Adatum.  
+L'équipe projet de Adatum a décidé de mettre en oeuvre Microsoft 365  dans un projet pilote, afin de monter en compétence sur le produit et de voir les besoins métiers qui pourraient être couverts par les produits de l'offre Microsoft 365.
 ## Atelier 01 - Provisioning du tenant Microsoft 365
 ### Exercice 1 - [Création de l'environnement](lab1e1.html)
 ___
