@@ -12,9 +12,9 @@ Vous allez commencer par vous connecter sur la machine cliente **LON-CL1** en ut
 
 # Objectifs
 A la fin de cet atelier, vous aurez une meilleure connaissance de:
-- Cras tincidunt massa et nunc vulputate, eget vestibulum massa tincidunt. 
-- Maecenas suscipit at nisl vitae malesuada. 
-- Suspendisse eu arcu id velit consequat venenatis.  
+- la configuration des otpions globales pour tous les utilisateurs de l'entreprise 
+- la navigation dans le portail **Microsoft 365 admin center**
+- la manière de suivre les informations que Microsoft fournit concernant l'état de santé du service.  
 
 ## Avant de commencer
 Votre formateur/trice pourra, le cas échéant, vous donner quelques indications complémentaires concernant l'environnement d'atelier a distance que vous utiliserez.  
@@ -28,91 +28,63 @@ Une fois votre atelier démarré, vous pourrez accéder au compte de test Micros
 Il vous est conseillé de prendre note des informations suivantes (fournies par goDeploy) pour utilisation ultérieure :  
 
 - **Préfixe du tenant**. Ce préfixe sera utilisé pour identifier et se connecter avec les comptes Entra Id dans votre tenant. Le format de ce préfixe est de la forme **WWLxxxxxxx.onmicrosoft.com**. Notez donc la valeur **WWLxxxxxxx** pour utilisation ultérieure dans tout cet atelier.
-- **Mot de passe du tenant**. Fourni par goDeploy, c'est le mot de passe du compte *Mod Administrator* et des utilisateurs précréés.
+- **Mot de passe du tenant**. Fourni par goDeploy, c'est le mot de passe du compte *MOD Administrator* et des utilisateurs précréés.
 - **Nom DNS d'entreprise**. goDeploy a également créé un nom de domaine DNS pour l'entreprise Adatum. Il peut être trouvé sous le nom **Lab Domain** dans l'onglet **DNS** du volet de gauche de votre environnement goDeploy (c'est un nom qui ressemble à *labXXXXXXXX.godeploylabs.com*).  
 
 ## Tâche 2 : Profil d'entreprise de Adatum
-1. Quisque dictum convallis metus, vitae vestibulum turpis dapibus non.
-    1. Suspendisse commodo tempor convallis. 
-    1. Nunc eget quam facilisis, imperdiet felis ut, blandit nibh. 
-    1. Phasellus pulvinar ornare sem, ut imperdiet justo volutpat et.
-1. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
-1. Vestibulum hendrerit orci urna, non aliquet eros eleifend vitae. 
-1. Curabitur nibh dui, vestibulum cursus neque commodo, aliquet accumsan risus. 
-    ```
-    Sed at malesuada orci, eu volutpat ex
-    ```
-1. In ac odio vulputate, faucibus lorem at, sagittis felis.
-1. Fusce tincidunt sapien nec dolor congue facilisis lacinia quis urna.
-    > **Note**: Ut feugiat est id ultrices gravida.
-1. Phasellus urna lacus, luctus at suscipit vitae, maximus ac nisl. 
-    - Morbi in tortor finibus, tempus dolor a, cursus lorem. 
-    - Maecenas id risus pharetra, viverra elit quis, lacinia odio. 
-    - Etiam rutrum pretium enim. 
-1. Curabitur in pretium urna, nec ullamcorper diam.  
+A travers les ateliers de ce stage, vous allez prendre l'identité de Dominique Skyetson, administrateur Microsoft 365 de Adatum. En tant que Dominique, il vous a été demandé de configurer le profil de l'entreprise sur le tenant de test. Dans cette tâche, vous allez procder à cette configuration. Puisque Dominique ne s'est pas encore créé de compte personnel dans l'environnement (ce sera fait à l'atelier suivant), vous allez d'abord vous connecter avec le compte *MOD Administrator* par défaut, dont vous avez précédemment noté le mot de passe.  
+1. Lors de l'ouverture de votre environnement d'ateliers, vous devez vous connecter sur la machine virtuelle **LON-DC1**. Si votre environnement s'est ouvert sur une autre machine virtuelle par défaut, basculez sur la machine **Lon-DC1**.
+1. Connectez-vous sur LON-DC1 avec le compte **ADministrator** et le mot de passe **Pa55w.Rd**.
+    > **Note**: Si un panneau **Networks** s'affiche sur la droite de votre écran demandant si vous souhaitez activer la dévouverte sur le réseau, cliquez sur **Yes**.
+1. Le **Server Manager** va s'ouvrir automatiquement. Laissez cette fenêtre ouverte mais réduisez-là dans la barre des tâches pour le moment.
+1. Sur la barre des tâches, cliquez sur l'icône de **Microsoft Edge**. Passez les éventuelles pages de bienvenue (vous pouvez choisir **Continue without signing in**).
+1. Dans le navigateur, accèdez au portail d'administration de Microsoft 365 en utilisant l'url suivante :
+```https://admin.microsoft.com```  
+1. Dans la fenêtre **Sign in**, saisissez le nom de connexion du compte *MOD Administrator* (sous la forme **admin@WWWLxxxxxxxxxx.onmicrosoft.com**) et cliquez sur **Next**
+1. Dans la fenêtre **Enter password**, saisissez ou collez le **mot de passe du tenant** que vous avez précédement noté et cliquez sur **Sign in**
+1. Sur la fenêtre **Stay signed in?**, cochez la case **Don’t show this again** et cliquez sur **Yes.**
+1. Si un popup **Welcome to Microsoft 365** apparaît, cliquez deux fois sur la flêche droite pour pouvoir le fermer.
+1. Dans le **Microsoft 365 admin center**, dans le menu de navigation de gauche, selectionnez **...Show all** pour voir tous les choix dudit menu.
+    > **Note**: Si le menu de navigation n'apparait pas, cliquez sur les trois lignes horizontales en haut à gauche de la fenêtre pour le faire apparaitre.
+1. Dans le menu de naviguation, cliquez sur **Settings** pour en ouvrir le groupe d'options, puis cliquez sur **Org Settings**.
+1. Dans la fenêtre **Org Settings**, c'est l'onglet **Services** qui est affiché par défaut. Puisque vous souhaitez modifier le profil de l'entreprise, cliquez sur l'onglet **Organization profile** pour l'afficher. selectionnez ensuite **Organization information**.
+1. Dans la fenêtre **Organization information** qui s'affiche, modifiez les informations suivantes :
+    - Name: **Adatum**
+	- Technical contact: (l'adresse email du compte *MOD Administrator*)
+1. Cliquez ensuite sur **Save**.
+1. Une fois les moficiations sauvegardées, un message ***Saved*** apparaît en haut de la fenêtre dans un encadré vert. Cliquez sur le **X** tout en haut à droite de la fenêtre **Organization information** pour la fermer.
+1. Vous êtes de retour sur l'onglet **Organization profile** de la fenêtre **Org settings**, sélectionnez dès lors **Release preferences**.
+1. Dans la fenêtre **Release preferences**, sélectionnez **Targeted release for select users** et cliquez sur **Save**.
+	> **Note:** Un des avantages de Microsoft 365 est la possibilité de tirer parti des dernières fonctionnalités et mises à jour automatiquement dans votre tenant, ce qui va réduire les couts de maintenance et la surcharge administrative pour une entreprise.
+    L'option **Targeted release for select users** vous permet de garder le contôle des utilisateurs qui auront les mises à jour et nouvelles fonctionnalités en premier, afin de préparer sereinement l'entreprise à l'arrivée de ces nouveautés pour tout le monde.
+1. Sous votre choix **Targeted release for select users** S'affichent désormais les possibilités **Select users** et **Upload users** (depuis un fichier CSV). Cliquez sur **Select users**.
+1. Dans la fenêtre **Choose users for targeted release**, cliquez dans le champ **Who should receive targeted releases?**. Vous allez ainsi avoir accès à la liste des compte utilisateurs existant.
+1. Dans la liste des utilisateurs, sélectionnez *MOD Administrator* avant de cliquer sur **Save**.
+1. Dans la fenêtre **Release preferences** , clique sur le **X** de fermeture en haut à droite.
+1. De retour sur l'onglet **Organization profile** de la fenêtre **Org settings**, sélectionnez **Custom themes**.
+1. Dans la fenêtre **Custom themes**, cliquez sur le thème **Default theme**.
+1. Dans la fenêtre **Default theme**, Deprenez le temps de parcourir les différentes options d'affichage et de branding qui s'offrent à vous. Pour les besoins de l'atelier, n'hésitez pas à modifier quelques paramètres ici pour voir comment ils seront appliqués aux utilisateurs de Adatum.
+1. Si vous avez fait des changement dans le théme par défaut, cliquez sur **Save** lorsque vous avez terminé. Cliquez ensuite sur le **X** en haut à droite pour fermer la fénétre **Default theme**.
+1. Restez connecté sur LON-DC1 VM et laissez votre navigateur Internet ouvert pour la tâche suivante de cet atelier.
+## Tâche 3: Vérification de la création du tenant
+Bien que le fournisseur d'atelier ait initié la création du tenant Microsoft 365 pour Adatum, il reste nécessaire de finaliser cette création. En tant que Dominique Skyetson, administrateur de Adatum, vous allez finaliser cette création afin de pouvoir poursuivre vos tests pour le projet pilote.
+1. Suite à la tâche précédente, vous devriez toujours être connecté sur **LON-DC1** avec le compte **Administrator** et être connecté sur le portail d'administration de Microsoft 365 sous le compte **MOD Administrator**.
+1. Dans le portail **Microsoft 365 admin center**, dans le menu de navigation, sélectionnez le groupe **Users**, puis le choix **Active users**. 
+1. Dans la liste **Active users**, vous voyez la liste des utilisateurs qui ont été pré-créés dans le tenant.
+1. En bas du menu de navigation, dans la section **Admin centers** section, sélectionnez **Exchange**.
+1. Un nouvel onglet s'ouvre dans votre navigateur, affichant le portail **Exchange admin center**. Dans le menu de navigation, ouvrez le groupe **Recipients** pour sélectionner **Mailboxes**.
+1. Une liste d'utilisateurs, similaires à celle présentée précédemment sous **Active users** dans le portail **Microsoft 365 admin center** dervait être affichée sur cette page  **Manage mailboxes**.  
+1. Dans votre navigateur, fermez l'onglete **Exchange admin center** mais laissez ouvert l'onglet **Microsoft 365 admin center** pour la suite et fin de cet exercice. 
 
-## Tâche 2: Profil d'entreprise de Adatum
-Dans votre rôle de Dominique Skyetson, administrateur de l'entreprise Adatum, il vous a été demandé de paramètrer le profil de l'entreprise pour son tenant de test. Dans cette tâche, vous allez procéder à cette configuration. Puisque Dominique n'a pas encore créé son compte nominatif d'administration (vous le ferez dans l'exercice N°2), vous allez vous connecter avec le compte Mod Administrator précédemment récupéré.  
-
-1. Après avoir lançé l'atelier, commencez par vous connecter sur la machine **LON-DC1** (basculez sur la machine **LON-DC1** si la machine **LON-CL1** a été automatiquement ouverte).  
-1. Connectez-vous à la machine **LON-DC1** en utilisant le compte **adatum\administrator** et le mot de passe **Pa55w.rd**.
-1. Si vous recevez un avertissement concernant la visibilté de la machine sur le réseau, cliquez sur ***Yes***.
-1. L'outil **Server Manager** devrait se lancer automatiquement : laissez-le ouvert mais réduisez-le dans la barre des tâches car vous n'en n'aurez pas besoin immédiatement.
-1. Sur la barre des tâche, cliquez sur l'icône **Microsoft Edge** puis maximisez la fenêtre du navigateur lorsque celle-ci s'ouvre (vous pouvez choisir de continuer sans vous connecter à Edge).
-1. Dans votre anvigateur, ouvrez la page d'accueil de Microsoft 365 en utilisant l'URL suivante : ```https://portal.microsoft.com/```.
-1. Dans la fenêtre de connexion, utilisez le nom de connexion du compte *MOD Administrator* que vous avez noté précedemment et cliquez sur **Next**.
-1. Dans la fenêtre de sélection du mot de passe, tapez le mot de passe du compte *MOD Administrateur* et cliquez sur **Sign in**.
-
-
-On the Stay signed in? dialog box, select the Don’t show this again check box and then select Yes.
-If a Welcome to Microsoft 365 popup window appears, then click twice on the right arrow and click on the check sign to close it.
-On the Microsoft 365 home page, the list of available apps is displayed. If some popup box appears on the screen, select the Got it! button to close the box, since it covers up several of the apps. Select the Admin app, which opens the Microsoft 365 admin center in a new tab.
-
-In the Microsoft 365 admin center, in the left-hand navigation pane, select ...Show all to display all the navigation menu options.
-In the left-hand navigation pane, select Settings, and then in the Settings group, select Org Settings.
-In the Settings window, the Services tab is displayed by default at the top of the screen. Since you want to update the organization profile, select the Organization profile tab, and then in the list of organization settings, select Organization information.
-In the Organization information window that appears, enter the following information:
-Street address: 123 Place de la pyramide
-City: La Défense
-State or province: Washington
-ZIP or postal code: 92911
-Country or region: France
-Phone: +33 155543210
-Technical contact: (your main administrator email)
-Preferred language: English
-Select Save.
-Once the changes have been saved, a Saved message will appear at the top of the Organization information window. Select the X in the upper right-hand corner of the window to close it.
-This will return you to the Organization profile tab of the Org settings window. In the organization profile list, select Release preferences.
-In the Release preferences window, select Targeted release for select users and then select Save.
-Note: One of the benefits of Microsoft 365 is the ability to have the latest features and updates applied to your environment automatically, which can reduce maintenance costs and overhead for an organization. By setting up your Release preferences, you can control how and when your Microsoft 365 tenant receives these updates. The Targeted release for select users option enables you to create a control group of users who will preview updates so that you can prepare the updates for your entire organization. The Targeted release for everyone option is more commonly used in development environments, where you can get updates early for your entire organization. In non-development environments, such as Adatum, targeted release to select people is the more typical preference as it enables an organization to control when it wants to make updates available to everyone once the updates have been reviewed by the control group.
-
-Under the Targeted release for select users setting are options to Select users and Upload users (from a CSV file). Select the Select users option. 1. In the Choose users for targeted release window, select the Who should receive targeted releases? field. This will display the list of existing Microsoft 365 user accounts.
-In the list of users, select your administrator account and then select Save.
-On the Release preferences window, select the X in the upper right-hand corner to close the window.
-On the Organization profile tab of the Org settings window, select Custom themes.
-In the Custom themes window, scroll though the page and review the various theme and branding options that are available for you to update. For the purpose of this lab, you can change any of the options or leave the default values as is. For example, you can add the logo of your company and set the background image as the default for all your users. Along with these options you can change the colors for your navigation pane, text color, icon color, and accent color. Go ahead and explore the different options for your tenant and make any changes that you wish.
-Note: Some color patterns aesthetically distract users. If you do change any of the colors, it is recommended that you avoid using high contrasting colors together, such as neon colors and high-resolution colors like bright pink and white.
-
-If you made any changes in the Custom themes window, select Save when you are done. When you are finished with the Custom themes, select the X in the upper right-hand corner to close the window.
-Remain logged into the LON-DC1 VM and leave all the tabs open in your browser for the remaining tasks in this lab exercise.
-1. Quisque dictum convallis metus, vitae vestibulum turpis dapibus non.
-    1. Suspendisse commodo tempor convallis. 
-    1. Nunc eget quam facilisis, imperdiet felis ut, blandit nibh. 
-    1. Phasellus pulvinar ornare sem, ut imperdiet justo volutpat et.
-1. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
-1. Vestibulum hendrerit orci urna, non aliquet eros eleifend vitae. 
-1. Curabitur nibh dui, vestibulum cursus neque commodo, aliquet accumsan risus. 
-    ```
-    Sed at malesuada orci, eu volutpat ex
-    ```
-1. In ac odio vulputate, faucibus lorem at, sagittis felis.
-1. Fusce tincidunt sapien nec dolor congue facilisis lacinia quis urna.
-    > **Note**: Ut feugiat est id ultrices gravida.
-1. Phasellus urna lacus, luctus at suscipit vitae, maximus ac nisl. 
-    - Morbi in tortor finibus, tempus dolor a, cursus lorem. 
-    - Maecenas id risus pharetra, viverra elit quis, lacinia odio. 
-    - Etiam rutrum pretium enim. 
-1. Curabitur in pretium urna, nec ullamcorper diam.  
+## Tâche 4: Verification du service Microsoft 365
+Dans cette tâche, vous allez vérifier l'état de santé du service Microsoft 365 sur votre tenant.
+1. Suite à la tâche précédente, vous devriez toujours être connecté sur **LON-DC1** avec le compte **Administrator** et être connecté sur le portail d'administration de Microsoft 365 sous le compte **MOD Administrator**.
+1. Dans le portail **Microsoft admin center**, dans le menu de navigation, ouvrez le groupe **Health** pour choisir l'option **Service health**. Cela fait apparaitre le dashboard **Service health**.
+1. Sur la page **Service health**, l'onglet **Overview** est affiché apr défaut. Cet onglet affiche les problèmes concernant actuellement les services Microsoft 365 disponibles avec vos abonnements.
+	> **Note** : Vous Si aucun problème n'est actuellement listé, vous pouvez toujours cliquer sur l'onglet **Issue history** pour réaliser l'opération suivante.
+1. Cliquez sur une ligne représentant un problème pour observer le détail des informations fournies par l'éditeur sur ce problème et son état actuel de prise en charge et/ou de résolution.
+1. après avoir observé les détails d'un problème, cliquez sur le **X** en hout à droite pour le fermer et n'hésitez pas à aller en observer d'autres.
+1. Restez connecté sur LON-DC1 VM et laissez votre navigateur Internet ouvert pour l'exercice suivant de vos ateliers.
 
 ## Résultat
-Maecenas fringilla ac purus non tincidunt. Aenean pellentesque velit id suscipit tempus. Cras at ullamcorper odio.
+A l'issue de ce premier exercice, vous avez vérifié la création du tenant pilote pour Adatum, configuré quelques otpions pour toutes l'entreprise et vérifié l'éat de santé du service Microsoft 365.

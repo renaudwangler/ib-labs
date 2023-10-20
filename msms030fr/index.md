@@ -9,6 +9,7 @@ Au fil des ateliers de ce stage, vous allez prendre l'identité de Dominique Sky
 L'équipe projet de Adatum a décidé de mettre en oeuvre Microsoft 365  dans un projet pilote, afin de monter en compétence sur le produit et de voir les besoins métiers qui pourraient être couverts par les produits de l'offre Microsoft 365.
 ## Atelier 01 - Provisioning du tenant Microsoft 365
 ### Exercice 1 - [Création de l'environnement](lab1e1.html)
+### Exercice 2 - [Ajout d'un domaine DNS d'entreprise](lab1e2.html)
 ___
 ## Atelier 02 - Gestion des utilisateurs et des groupes Microsoft 365
 ### Exercice 1 - Gestion des utilisateurs avec le centre d'administration Microsoft 365
