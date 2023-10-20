@@ -19,7 +19,7 @@ dans votre environnement d'atelier, goDeploy vous fournit un nom de domaine DNS 
     > **Note** : L'onglet **DNS** ne se trouve pas dans la machine virtuelle mais à sa gauche, dans le portail goDeploy.  
 Identifiez le **nom DNS d'entreprise** qui vous a été attribué, il devrait ressembler à *labXXXXXXXX.godeploylabs.com* et prenez-en bonne note.
 
-## Tâche 1 : Ajout du DNS d'entreprise
+## Tâche 1 - Ajout du DNS d'entreprise
 Dans cette tâche vous allez ajouter le domaine DNS d'entreprise à votre tenant Microsoft 365. 
 1. A l'issue du précédent exercice, vous devriez être connecté sur **LON-DC1** avec le compte **Administrator**.
 1. Dans votre navigateur Internet, vous devriez toujours être sur le portail **Microsoft 365 admin center**, connecté avec le compte *MOD Administrator*.

@@ -13,7 +13,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 - la nature des principaux portails d'administration
 - la navigation dans ces portails
 
-## Tâche 1: Visite du Microsoft 365 admin center
+## Tâche 1 - Visite du Microsoft 365 admin center
 Bien que vous ayez déjà accédé au portail général d'administration *Microsoft 365 admin center* dans les exercices précédents, vous allez désormais découvrir quelques fonctionnalités complémentaires de ce portail. 
 1. Basculez vers la machine virtuelle **LON-CL1**.
 1. Connectez-vous à la machine LON-CL1 avec le compte **adatum\Administrator** et le mot de passe **Pa55w.rd**. 

@@ -21,14 +21,14 @@ dans votre environnement d'atelier, goDeploy a déjà créé un tenant Microsoft
 - Un compte administrateur local pour l'environnement adatum (adatum\administrator).  
 - Un compte administrateur du tenant Microsoft 365 (dont le nom affiché est *MOD Administrator*).  
 
-## Tâche 1: Identifiants Microsoft 365
+## Tâche 1 - Identifiants Microsoft 365
 Une fois votre atelier démarré, vous pourrez accéder au compte de test Microsoft 365 fourni par l'hébergeur d'ateliers. Le compte *MOD Administrator* a été créé et s'est vu affecté le rôle *Global Administrator* sur le tenant de test.
 Il vous est conseillé de prendre note des informations suivantes (fournies par goDeploy) pour utilisation ultérieure :  
 - **Préfixe du tenant**. Ce préfixe sera utilisé pour identifier et se connecter avec les comptes Entra Id dans votre tenant. Le format de ce préfixe est de la forme **WWLxxxxxxx.onmicrosoft.com**. Notez donc la valeur **WWLxxxxxxx** pour utilisation ultérieure dans tout cet atelier.
 - **Mot de passe du tenant**. Fourni par goDeploy, c'est le mot de passe du compte *MOD Administrator* et des utilisateurs précréés.
 - **Nom DNS d'entreprise**. goDeploy a également créé un nom de domaine DNS pour l'entreprise Adatum. Il peut être trouvé sous le nom **Lab Domain** dans l'onglet **DNS** du volet de gauche de votre environnement goDeploy (c'est un nom qui ressemble à *labXXXXXXXX.godeploylabs.com*).  
 
-## Tâche 2 : Profil d'entreprise de Adatum
+## Tâche 2 - Profil d'entreprise de Adatum
 A travers les ateliers de ce stage, vous allez prendre l'identité de Dominique Skyetson, administrateur Microsoft 365 de Adatum. En tant que Dominique, il vous a été demandé de configurer le profil de l'entreprise sur le tenant de test. Dans cette tâche, vous allez procéder à cette configuration. Puisque Dominique ne s'est pas encore créé de compte personnel dans l'environnement (ce sera fait à l'atelier suivant), vous allez d'abord vous connecter avec le compte *MOD Administrator* par défaut, dont vous avez précédemment noté le mot de passe.  
 1. Lors de l'ouverture de votre environnement d'ateliers, vous devez vous connecter sur la machine virtuelle **LON-DC1**. Si votre environnement s'est ouvert sur une autre machine virtuelle par défaut, basculez sur la machine **Lon-DC1**.
 1. Connectez-vous sur LON-DC1 avec le compte **ADministrator** et le mot de passe **Pa55w.Rd**.
@@ -64,7 +64,7 @@ A travers les ateliers de ce stage, vous allez prendre l'identité de Dominique 
 1. Si vous avez fait des changements dans le thème par défaut, cliquez sur **Save** lorsque vous avez terminé. Cliquez ensuite sur le **X** en haut à droite pour fermer la fénêtre **Default theme**.
 1. Restez connecté sur LON-DC1 VM et laissez votre navigateur Internet ouvert pour la tâche suivante de cet atelier.
 
-## Tâche 3: Vérification de la création du tenant
+## Tâche 3 - Vérification de la création du tenant
 Bien que le fournisseur d'atelier ait initié la création du tenant Microsoft 365 pour Adatum, il reste nécessaire de finaliser cette création. En tant que Dominique Skyetson, administrateur de Adatum, vous allez finaliser cette création afin de pouvoir poursuivre vos tests pour le projet pilote.
 1. A la suite de la tâche précédente, vous devriez toujours être connecté sur **LON-DC1** avec le compte **Administrator** et être connecté sur le portail d'administration de Microsoft 365 sous le compte **MOD Administrator**.
 1. Dans le portail **Microsoft 365 admin center**, dans le menu de navigation, sélectionnez le groupe **Users**, puis le choix **Active users**. 
@@ -74,7 +74,7 @@ Bien que le fournisseur d'atelier ait initié la création du tenant Microsoft 3
 1. Une liste d'utilisateurs, similaires à celle présentée précédemment sous **Active users** dans le portail **Microsoft 365 admin center** devrait être affichée sur cette page  **Manage mailboxes**.  
 1. Dans votre navigateur, fermez l'onglet **Exchange admin center** mais laissez ouvert l'onglet **Microsoft 365 admin center** pour la suite et fin de cet exercice. 
 
-## Tâche 4: Vérification du service Microsoft 365
+## Tâche 4 - Vérification du service Microsoft 365
 Dans cette tâche, vous allez vérifier l'état de santé du service Microsoft 365 sur votre tenant.
 1. A la suite de la tâche précédente, vous devriez toujours être connecté sur **LON-DC1** avec le compte **Administrator** et être connecté sur le portail d'administration de Microsoft 365 sous le compte **MOD Administrator**.
 1. Dans le portail **Microsoft admin center**, dans le menu de navigation, ouvrez le groupe **Health** pour choisir l'option **Service health**. Cela fait apparaitre le dashboard **Service health**.
