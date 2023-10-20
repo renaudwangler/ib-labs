@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Lab1-Ex1 - Création de l'environnement"
+length: 00
 ---
 - **Durée approximative**: 00 minutes  
 
@@ -8,11 +9,11 @@ title: "Lab1-Ex1 - Création de l'environnement"
 Dans ce premier exercice, vous allez commencer par mettre en oeuvre le tenant 365 dans le projet pilote.  
 Les informations d'identification que vous récupèrerez lors de ce premier exercice seront, par la suite, utilisées dans l'ensemble des ateliers et des exercices du stage.  
 
-Vous allez commencer par vous connecter sur la machine cliente **LON-CL1** en utilisant le compte administrateur local **Adatum\administrator** pour ensuite vous connecter au tenant Microsoft 365 avec le compte **MOD Administrator**. Vous allez ensuite mettre à jour le profil de l'entreprise Adatum, et vous preparerez le tenant pour Entra ID et pour les futurs ateliers utilisant *Information Rights Management*, les alertes d'audit, le module Powershell *Graph* et les labels de sensibilité.  
+Vous allez commencer par vous connecter sur la machine **LON-DC1** en utilisant le compte administrateur  **Adatum\administrator** pour ensuite vous connecter au tenant Microsoft 365 avec le compte **MOD Administrator**. Vous allez ensuite mettre à jour le profil de l'entreprise Adatum.  
 
 # Objectifs
-A la fin de cet atelier, vous aurez une meilleure connaissance de:
-- la configuration des otpions globales pour tous les utilisateurs de l'entreprise 
+A la fin de cet exercice, vous aurez une meilleure connaissance de:
+- la configuration des options globales pour tous les utilisateurs de l'entreprise 
 - la navigation dans le portail **Microsoft 365 admin center**
 - la manière de suivre les informations que Microsoft fournit concernant l'état de santé du service.  
 

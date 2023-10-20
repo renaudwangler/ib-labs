@@ -10,6 +10,7 @@ L'équipe projet de Adatum a décidé de mettre en oeuvre Microsoft 365  dans un
 ## Atelier 01 - Provisioning du tenant Microsoft 365
 ### Exercice 1 - [Création de l'environnement](lab1e1.html)
 ### Exercice 2 - [Ajout d'un domaine DNS d'entreprise](lab1e2.html)
+### Exercice 3 - [Visite des portails administratifs 365](lab1e3.html)
 ___
 ## Atelier 02 - Gestion des utilisateurs et des groupes Microsoft 365
 ### Exercice 1 - Gestion des utilisateurs avec le centre d'administration Microsoft 365
