@@ -35,7 +35,7 @@ layout: default
             <hr class="" />
             <article class="col-sm-10 mb-5">
                 {% if page.length != "00" %}
-                  <div style="background-color: aqua;padding:5px;font-weight: bold;border:solid blue 2px"><strong>Durée estimée: </strong>{page.length}} minutes</div>
+                  <div style="background-color: aqua;padding:5px;border:solid blue 2px"><strong>Durée estimée: </strong>{{page.length}} minutes</div>
                 {% endif %}
                 {{ content }}
             </article>

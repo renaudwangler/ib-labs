@@ -3,8 +3,6 @@ layout: page
 title: "Lab1-Ex2 - Ajout d'un domaine DNS d'entreprise"
 length: "00"
 ---
-- **Durée approximative**: 00 minutes  
-
 # Scénario
 Adatum a donc acheté un nouveau nom de domaine DNS pour son projet pilote (fourni par votre hébergeur d'ateliers) qui soit utilisable sur Internet.
 Adatum gère directement les enregistrements de ses domaines DNS. Pour que ce domaine soit utilisable sur le tenant, il va vous falloir passer par un assistant de configuration et créer les enregistrements DNS attendus. C'est ce que vous allez réaliser dans ce second exercice.

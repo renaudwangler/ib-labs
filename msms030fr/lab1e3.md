@@ -3,8 +3,6 @@ layout: page
 title: "Lab1-Ex3 - Visite des portails administratifs 365"
 length: "00"
 ---
-- **Durée approximative**: 00 minutes  
-
 # Scénario
 Maintenant que le tenant du projet pilote 365 de Adatum est complètement créé, vous pouvez commencer à utiliser l'environnement Microsoft 365. Dans cet exercice, vous allez visiter divers portails administratifs les plus utiles pour le quotidien d'un administrateur 365 afin de commencer à vous familiariser avec leur contenu et leur navigation.
 Dans les exercices précédents, vous avez accéder aux portail 365 depuis un controleur de domaine (LON-DC1). La création du tenant étant désormais actée, il semble plu sjudicieux à Dominique Skyetson d'accèder aux outils d'administration depuis sa machine d'administrateur LON-CL1.

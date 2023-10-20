@@ -3,8 +3,6 @@ layout: page
 title: "Lab1-Ex1 - Création de l'environnement"
 length: "10"
 ---
-- **Durée approximative**: 00 minutes  
-
 # Scénario
 Dans ce premier exercice, vous allez commencer par mettre en oeuvre le tenant 365 dans le projet pilote.  
 Les informations d'identification que vous récupèrerez lors de ce premier exercice seront, par la suite, utilisées dans l'ensemble des ateliers et des exercices du stage.  
