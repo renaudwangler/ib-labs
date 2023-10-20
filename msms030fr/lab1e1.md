@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: stage
 title: "Lab1-Ex1 - Création de l'environnement"
 length: "00"
 ---
