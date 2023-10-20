@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: home
 title: 'MSMS030 - Administration de Microsoft 365'
 length: "00"
 ---
