@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: stage
 title: "Lab1-Ex3 - Visite des portails administratifs 365"
 length: "00"
 ---

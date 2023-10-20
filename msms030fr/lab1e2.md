@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: stage
 title: "Lab1-Ex2 - Ajout d'un domaine DNS d'entreprise"
 length: "00"
 ---
