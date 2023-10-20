@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Lab1-Ex2 - Ajout d'un domaine DNS d'entreprise"
-length: 00
+length: "00"
 ---
 - **Durée approximative**: 00 minutes  
 

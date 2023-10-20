@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Lab1-Ex3 - Visite des portails administratifs 365"
-length: 00
+length: "00"
 ---
 - **Durée approximative**: 00 minutes  
 

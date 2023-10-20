@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 'MSMS030 - Administration de Microsoft 365'
+length: "00"
 ---
 # Ateliers du stage msms030
 L'entreprise Adatum héberge actuellement un environnement informatique *classique*, dans ses datacenter, qui comporte diverses applications historiques (comme Microsoft Exchange par exemple). L'entreprise a cependant récemment acquis un abonnement Microsoft 365, voyant ici l'opportunité d'un déploiement hybride et d'un rapprochement des application du Cloud.  

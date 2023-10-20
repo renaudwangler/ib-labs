@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Lab1-Ex1 - Création de l'environnement"
-length: 00
+length: "10"
 ---
 - **Durée approximative**: 00 minutes  
 
