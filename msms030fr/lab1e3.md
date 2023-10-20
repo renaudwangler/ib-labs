@@ -33,22 +33,27 @@ Bien que vous ayiez déjà accédé au portail général d'administration *Micro
 1. Dans le menu de navigation, ouvrez le groupe **Health** afin de sélectionner le **Message center**.
 1. Dans la page **Message center**, l'onglet **Inbox**est affiché par défaut. Parcourez-en les messages. Si un message en particulier vous intéresse, cliquez dessus pour en ouvrir le détail. Cela va ouvrir un panneau à droite de la page qui affiche tous les détails concernant le message choisi. Après avoir fini de consulter les détails de ce messagen cliquez sur le **X** tout en haut à droite pour fermer le panneau de détails.
 1. laissez votre navigateur Internet ouvert, sur la page du portail **Microsoft 365 admin center** pour la suite de cet exercice.
+
 ## Tâche 2 - Visite du Exchange admin center
 1. Suite à la tâche précédente, vous devriez toujours être connecté à **LON-CL1** et votre navigateur Internet devrait être ouvert sur le **Microsoft 365 Admin Center**, connecté en **MOD Administrator**. Dans le menu de navigation, dans la section **Admin centers**, cliquez sur **Exchange**. Un nouvel onglet va s'ouvrir, affichant le portail **Exchange admin center**.
 1. Parcourez le **Exchange admin center**, en sélectionnant chaque entrée de son menu de navigation. Conslutez les informations disponibles pour chaque entrée et parcourez les onglets (le cas échéant).
 1. Une fois terminée votre visite du *Exchange admin center*, fermez l'onglet du navigateur dans lequel vous l'avez ouvert (laissez le navigateur et les autres onglets ouverts).
+
 ## Tâche 3 - Visite du Teams admin center
 1. Suite à la tâche précédente, vous devriez toujours être connecté à **LON-CL1** et votre navigateur Internet devrait être ouvert sur le **Microsoft 365 Admin Center**, connecté en **MOD Administrator**. Dans le menu de navigation, dans la section **Admin centers**, cliquez sur **Teams**. Un nouvel onglet va s'ouvrir, affichant le portail **Microsoft Teams admin center**.
 1. Parcourez le **Microsoft Teams admin center**, en sélectionnant chaque entrée de son menu de navigation. Conslutez les informations disponibles pour chaque entrée et parcourez les onglets (le cas échéant).
 1. Une fois terminée votre visite du *Microsoft Teams admin center*, fermez l'onglet du navigateur dans lequel vous l'avez ouvert (laissez le navigateur et les autres onglets ouverts).
+
 ## Tâche 4 - Visite du SharePoint admin center
 1. Suite à la tâche précédente, vous devriez toujours être connecté à **LON-CL1** et votre navigateur Internet devrait être ouvert sur le **Microsoft 365 Admin Center**, connecté en **MOD Administrator**. Dans le menu de navigation, dans la section **Admin centers**, cliquez sur **Sharepoint**. Un nouvel onglet va s'ouvrir, affichant le portail **Sharepoint admin center**.
 1. Parcourez le **Sharepoint admin center**, en sélectionnant chaque entrée de son menu de navigation. Conslutez les informations disponibles pour chaque entrée et parcourez les onglets (le cas échéant).
 1. Une fois terminée votre visite du *Sharepoint admin center*, fermez l'onglet du navigateur dans lequel vous l'avez ouvert (laissez le navigateur et les autres onglets ouverts).
+
 ## Tâche 5 - Visite de Microsoft 365 Defender
 1. Suite à la tâche précédente, vous devriez toujours être connecté à **LON-CL1** et votre navigateur Internet devrait être ouvert sur le **Microsoft 365 Admin Center**, connecté en **MOD Administrator**. Dans le menu de navigation, dans la section **Admin centers**, cliquez sur **Security**. Un nouvel onglet va s'ouvrir, affichant le portail **Microsoft 365 Defender**.
 1. Parcourez le **Microsoft 365 Defender*, en sélectionnant chaque entrée de son menu de navigation. Conslutez les informations disponibles pour chaque entrée et parcourez les onglets (le cas échéant).
 1. Une fois terminée votre visite du *Microsoft 365 Defender*, fermez l'onglet du navigateur dans lequel vous l'avez ouvert (laissez le navigateur et les autres onglets ouverts).
+
 ## Tâche 6 - Visite de Microsoft Purview 
 1. Suite à la tâche précédente, vous devriez toujours être connecté à **LON-CL1** et votre navigateur Internet devrait être ouvert sur le **Microsoft 365 Admin Center**, connecté en **MOD Administrator**. Dans le menu de navigation, dans la section **Admin centers**, cliquez sur **Compliance**. Un nouvel onglet va s'ouvrir, affichant le portail **Microsoft Purview**.
 1. Parcourez le **Microsoft Purview**, en sélectionnant chaque entrée de son menu de navigation. Conslutez les informations disponibles pour chaque entrée et parcourez les onglets (le cas échéant).

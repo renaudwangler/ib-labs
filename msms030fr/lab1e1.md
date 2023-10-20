@@ -25,9 +25,7 @@ dans votre environnement d'atelier, goDeploy a déja créé un tenant Microsoft 
 
 ## Tâche 1: Identifiants Microsoft 365
 Une fois votre atelier démarré, vous pourrez accéder au compte de test Microsoft 365 fourni par l'hébergeur d'ateliers. Le compte *MOD Administrator* a été créé et s'est vu affecté le rôle *Global Administrator* sur le tenant de test.
-
 Il vous est conseillé de prendre note des informations suivantes (fournies par goDeploy) pour utilisation ultérieure :  
-
 - **Préfixe du tenant**. Ce préfixe sera utilisé pour identifier et se connecter avec les comptes Entra Id dans votre tenant. Le format de ce préfixe est de la forme **WWLxxxxxxx.onmicrosoft.com**. Notez donc la valeur **WWLxxxxxxx** pour utilisation ultérieure dans tout cet atelier.
 - **Mot de passe du tenant**. Fourni par goDeploy, c'est le mot de passe du compte *MOD Administrator* et des utilisateurs précréés.
 - **Nom DNS d'entreprise**. goDeploy a également créé un nom de domaine DNS pour l'entreprise Adatum. Il peut être trouvé sous le nom **Lab Domain** dans l'onglet **DNS** du volet de gauche de votre environnement goDeploy (c'est un nom qui ressemble à *labXXXXXXXX.godeploylabs.com*).  
@@ -67,6 +65,7 @@ A travers les ateliers de ce stage, vous allez prendre l'identité de Dominique 
 1. Dans la fenêtre **Default theme**, Deprenez le temps de parcourir les différentes options d'affichage et de branding qui s'offrent à vous. Pour les besoins de l'atelier, n'hésitez pas à modifier quelques paramètres ici pour voir comment ils seront appliqués aux utilisateurs de Adatum.
 1. Si vous avez fait des changement dans le théme par défaut, cliquez sur **Save** lorsque vous avez terminé. Cliquez ensuite sur le **X** en haut à droite pour fermer la fénétre **Default theme**.
 1. Restez connecté sur LON-DC1 VM et laissez votre navigateur Internet ouvert pour la tâche suivante de cet atelier.
+
 ## Tâche 3: Vérification de la création du tenant
 Bien que le fournisseur d'atelier ait initié la création du tenant Microsoft 365 pour Adatum, il reste nécessaire de finaliser cette création. En tant que Dominique Skyetson, administrateur de Adatum, vous allez finaliser cette création afin de pouvoir poursuivre vos tests pour le projet pilote.
 1. Suite à la tâche précédente, vous devriez toujours être connecté sur **LON-DC1** avec le compte **Administrator** et être connecté sur le portail d'administration de Microsoft 365 sous le compte **MOD Administrator**.
