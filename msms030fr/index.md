@@ -15,7 +15,7 @@ L'équipe projet de Adatum a décidé de mettre en œuvre Microsoft 365  dans un
 ___
 ## Atelier 02 - Gestion des utilisateurs et des groupes Microsoft 365
 ### Exercice 1 - [Gestion des utilisateurs avec le centre d'administration Microsoft 365](lab2e1.html)
-### Exercice 2 - Gestion des stratégies de mots de passe Microsoft 365
+### Exercice 2 - [Gestion des stratégies de mots de passe Microsoft 365](lab2e2.html)
 ### Exercice 3 - Gestion des groupes Microsoft 365
 ### Exercice 4 - Gestion des utilisateurs et des groupes Microsoft 365 avec Windows PowerShell
 ### Exercice 5 - Délégation d'administration
