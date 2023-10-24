@@ -4,75 +4,74 @@ title: "Lab2-Ex4 - Gestion des utilisateurs et des groupes avec Windows PowerShe
 length: "00"
 ---
 # Scénario
-Windows Powershell can improve the way an administrator can automate and streamline complicated or simple tasks that can be time-consuming when performed in the Microsoft 365 admin portal interface. By entering commands directly to the tenant, tasks that would take hours by hand can be reduced to minutes or even seconds with PowerShell.  
-In this exercise, you will continue in your role as Holly Dickson. Holly wants to perform some basic user maintenance using Windows PowerShell. This will enable her to compare her experience creating and maintaining users in the Microsoft 365 admin center to performing the same tasks using Windows PowerShell.  
-You will use Windows PowerShell to create new user accounts and assign them licenses, modify existing user accounts, create Microsoft 365 groups using PowerShell, and configure user passwords. 
+Windows Powershell permet aux administrateurs d'automatiser, d'accélérer et de fluidifier les tâches qui seraient faites dans le portail Microssoft 365 admin center, les plus compliquées comme les plus simples.
+Dans cet exerice, vous allez continuer, en tant que Dominique, à faire des opérations administratives de maintenance dans Microsoft 365 en utilisant Windows Powershell. cela vous permettra de comparer l'expérience de création et de maintenance des utilisateurs et des groupes entre le centre d'administration et le scripting Powershell.
+Vous souhaitez donc utiliser Windows Powershell pour créer des comptes utilisateurs, leur affecter des les licences, modifier des comptes, crééer des groupes...
 
 
 # Objectifs
 A la fin de cet exercice, vous aurez une meilleure connaissance de :
 - 
 
-## Tâche 1 - Installing Microsoft Azure Active Directory module for Windows PowerShell
-In this task you are going to lay the foundation for editing and managing the Microsoft 365 tenant with the use of PowerShell. 
-1. You should still be logged into the **LON-CL1** VM as the **Administrator** account with a password of **Pa55w.rd**.
-1. In the Search box in the bottom left corner of your taskbar, enter **powershell**. 
-1. In the list of search results, right-click on **Windows PowerShell** (not **Windows Powershell (x86)**), and in the menu that appears select **Run as administrator**.
-1. If a **Do you want to allow this app to make changes to your device** dialog box appears, select **Yes**.
-1. Maximize your PowerShell window. In **Windows PowerShell**, at the command prompt type the following command and then press Enter:
-	```Install-Module MSOnline```
-1. If you are prompted to install the **NuGet provider**, enter **Y** to select **[Y] Yes**.
-1. If you are prompted to confirm whether you want to install the module from an untrusted repository (PSGallery), enter **A** to select **[A] Yes to All.** 
-1. Once the installation is complete, the screen will return to the Windows PowerShell command prompt. At the command prompt type the following command to install the Azure AD PowerShell module and then press Enter:
-	```Install-Module AzureADPreview```
-1. If you are prompted to confirm whether you want to install the module from an untrusted repository (PSGallery), enter **A** to select **[A] Yes to All.** 
-1. Once the installation is complete, the screen will return to the Windows PowerShell command prompt. You have now installed the **Windows Azure Active Directory PowerShell Module**.
-1. Leave the Windows PowerShell window open and proceed to the next task.
+## Tâche 1 - Installation du module Windows Powershell pour Entra ID
+Dans cette tâche vous allez mettre en place l'environnement fondamental pour la gestion de Microsoft 365 à l'aide de Windows Powershell.
+1. Suite à l'exerice précédent, vous devriez êtres resté connecté sur la machine **LON-CL1** avec le compte **Administrator** et le mot de passe **Pa55w.rd**.
+1. Dans la zone de recherche en bas à gauche de la barre des tâches, tapez ```powershell```
+1. Faites un clic-droit sur **Windows Powershell ISE** et, dans le menu qui apparait, choisissez **Run as administrator**.
+1. Si une fenêtre **Do you want to allow this app to make changes to your device** apparait, cliquez sur **Yes**.
+1. Dans la partie basse (fond bleu) de la fenêtre **Administrator: Windows PowerShell ISE**, tapez ```install-module mircosoft.graph -force``` et faites **[Entrée]**.
+1. S'il vous est demandé si vous souhaitez faire confiance à **NuGet provider**, tapez **Y** pour répondre oui.
+1. S'il vous est demandé de confirmer si vous souhaitez installer les modules depuis la **Powershell Gallery** (PSGallery), tapez **A** pour répondre *Oui à tous*
+1. Attendez que l'installation des modules se termine et que l'ISE vous rende la main (Vous pouvez vérifier la couleur du bouton **Stop** en haut de l'outil qui doit être repassé au gris, s'il est rouge c'est que le processus d'installation n'est pas encore terminé, il peut se passer quelques minutes pendant lesquelles vous aurez l'impression que plus rien n'évolue).
+1. Laissez la fenêtre **Administrator: Windows Powershell ISE** ouverte pour la tâche suivante.
 
-## Tâche 2 - Create new users and assign licenses by using Windows PowerShell
-In a previous lab exercise, you created new user accounts using the **Microsoft 365 admin center**. In this task, you will create two new users using Windows PowerShell, and you will assign each an **Office 365 E5** license. You will then delete one of the users and then restore the deleted user's account back to the Active users list. 
-1. You should still be logged into the **LON-CL1** VM as the **Administrator** account with a password of **Pa55w.rd**.
-1. You should still have the **Windows PowerShell** window open from the prior task. At the powershell prompt type the following command that connects your PowerShell session to the Microsoft Online Service and then press Enter:  
-	```Connect-MsolService```
-1. In the **Sign in** dialog box that appears, log in as **Holly@xxx.onmicrosoft.com** with a password of **ibForm@tion**. 
-1. PowerShell's execution policy settings dictate what PowerShell scripts can be run on a Windows system. Setting this policy to **Unrestricted** enables Holly to load all configuration files and run all scripts. At the command prompt, type the following command and then press Enter:  
-	```Set-ExecutionPolicy bypass```  
-	>If you are prompted to verify that you want to change the execution policy, enter **A** to select **[A] Yes to All.** 
-1. At the Powershell prompt, type the following command and then press Enter to create a new user named **Catherine Richard** with a password of **Pa55w.rd** and a location set to **CH**. In Catherine's username in the following command, don't forget to replace **xxx** with your unique tenant ID. Setting the -ForceChangePassword parameter to false means Catherine will not have to change her password when she signs in the first time.  
-	```New-MsolUser –UserPrincipalName catherine@xxx.onmicrosoft.com –DisplayName "Catherine Richard" –FirstName Catherine –LastName Richard –Password 'Pa55w.rd' –ForceChangePassword $false –UsageLocation CH```  
-1. At the Powershell prompt, type the following command and then press Enter to create a new user named **Tameka Reed** with a password of **Pa55w.rd** and a location set to **CH**. In Tameka's username in the following command, don't forget to replace **xxx** with the unique tenant ID provided by your lab hosting provider.  
-	```New-MsolUser –UserPrincipalName tameka@xxx.onmicrosoft.com –DisplayName "Tameka Reed" –FirstName Tameka –LastName Reed –Password 'Pa55w.rd' –ForceChangePassword $false –UsageLocation CH```  
-1. At the Powershell prompt, type the following command and then press Enter to display all the users who are unlicensed:  
-	```Get-MsolUser -UnlicensedUsersOnly```  
-1. At the Powershell prompt, type the following command and then press Enter to show all available licenses inside Adatum's Microsoft 365 deployment:  
-	```Get-MsolAccountSku```  
-	The **SPB** license is the Microsoft 365 Premium license that was assigned to most of the user accounts.  
-	>**Note**:  25 licenses were purchased with subscription. 
-1. At the Powershell prompt, type the following command and then press Enter to assign a license to **Catherine Richard**. In the command, don't forget to replace the two instances of **xxx** with your unique tenant ID. This command will assign a Microsoft 365 Business Premium license to Catherine.  
-	```Set-MsolUserLicense -UserPrincipalName catherine@xxx.onmicrosoft.com –AddLicenses "xxx:SPB"```  
-1. At the Powershell prompt, type the following command and then press Enter to assign a license to **Tameka Reed**. In the command, don't forget to replace the two instances of **xxx** with your unique tenant ID. This command will assign a Microsoft 365 Business Premium license to Tameka.  
-	```Set-MsolUserLicense -UserPrincipalName tameka@xxx.onmicrosoft.com –AddLicenses "xxx:SPB"```  
-1. At the Powershell prompt, type the following command and then press Enter to block Catherine from signing in. In the command, don't forget to replace the **xxx** with your unique tenant ID.  
-	```Set-MsolUser -UserPrincipalName Catherine@xxx.onmicrosoft.com -BlockCredential $true```  
-1. At the Powershell prompt, type the following command and then press Enter to delete Catherine's user account. In the command, don't forget to replace the **xxx** with your unique tenant ID.  
-	**Note**:This command will delete Catherine's user account without requesting a confirmation.  
-	```Remove-MsolUser –UserPrincipalName Catherine@xxx.onmicrosoft.com –Force```  
-1. At the Powershell prompt, type the following command and then press Enter to view the **Deleted Users** list:  
-	```Get-MsolUser –ReturnDeletedUsers```  
-1. Verify that Catherine Richard is in the list of deleted users. Note that it specifies that she is still licensed.
-1. At the Powershell prompt, type the following command and then press Enter to restore Catherine's user account to an active user status. In the command, don't forget to replace the **xxx** with your unique tenant ID.  
-	```Restore-MsolUser –UserPrincipalName Catherine@xxx.onmicrosoft.com```  
+## Tâche 2 - Créer de nouveaux utilisateurs et leur affecter des licences.
+Dans un exercice précédent, vous avez créé des comptes utilisateurs en utilisant le portail **Microsoft 365 admin center**. Dans cette tâche, vous allez créer deux nouveaux utilisateurs en utilisant Windows PowerShell, avant de leur affecter une licence **Office 365 E5** à chacun. Vous apprendrez ensuite à supprimer un utilisateur et le remettre en production.
+1. Vous devriez êtres resté connecté sur la machine **LON-CL1** avec le compte **Administrator** et le mot de passe **Pa55w.rd**; l'outil **Windows Powershell ISE** devrait être resté ouvert en tant qu'administrateur. Si nécessaire, maximisez sa fenêtre.
+1. Dans la partie basse (fond bleu) de l'outil, tapez la commande suivante avant de taper sur **[Entrée]** pour la valider : ```Connect-MgGraph -scopes User.ReadWrite.All,Organization.Read.all```.
+1. Dans la fenêtre **Sign in** qui apparaît, connectez vous avec le compte de Dominique Skyetson : **dom@WWLxxxxx.onmicrosoft.com** et son mot de passe (**ibForm@tion**). 
+1. dans la fenêtre **Permission requested**, cochez la case **Consent on behalf of your organization** et cliquez sur **Accept**.
+1. Pour être sur que tous les scripts Windows Powershell puissent s'éxecuter correctement, il vous faut désactiver le *garde-fou* des stratégies d'exécution. Pour ce faire, utilisez la commande suivante : ```Set-ExecutionPolicy bypass -force```
+	>**Note :** Comme pour les commandes précédentes, il vous faudra taper sur la touche **[ENtrée]** pour lancer l'exécution de chaque commande. Nous partirons de ce principe et ne le rappelerons plus après chaque commande.
+1. Utilisez désormais la commande suivante pour créer le premier compte utilisateur nommé **Catherine Richard** avec un mot de passe **Pa55w.rd** et un emplacement **CH**. Dans la commande suivante, pensez bien à remplacer WWLxxxx.onmicrosoft.com par le nom de domaine pertinent dans votre contexte d'atelier. 
+	>**Note :** La valeur *False* pour *ForceChangePasswordNextSignIn* signifie que Catherine n'aura pas besoin de modifier son mot de passe lors de sa première connexion.  
+	```$user1 = New-MGuser –UserPrincipalName catherine@WWLxxxxx.onmicrosoft.com –DisplayName "Catherine Richard" -GivenName Catherine -SurName Richard -PasswordProfile @{password='Pa55w.rd';ForceChangePasswordNextSignIn=$false} -UsageLocation CH -AccountEn,abled -MailNickname catherine```
+	>**Note :** Vous pouvez simplement taper la commande ```$user1``` pour afficher le résultat de l'opération précédente avant de passer à la suite.
+1. la commande suivante va créer un second compte utilisateur pour **Tameka Reed** (pensez à remplacer le nom du domaine):
+	```$user2 = New-MGuser –UserPrincipalName tameka@WWLxxxxx.onmicrosoft.com –DisplayName "Tameka Reed" -GivenName Tameka -SurName Reed -PasswordProfile @{password='Pa55w.rd';ForceChangePasswordNextSignIn=$false} -UsageLocation CH -AccountEnabled -MailNickname tameka```
+	>**Note :** Vous pouvez simplement taper la commande ```$user2``` pour afficher le résultat de l'opération précédente avant de passer à la suite.
+1. Utilisez la commande suivante pour obtenir la liste des comptes qui n'ont pas de licence associée à leur compte :
+	```Get-MgUser -Filter "assignedLicenses/`$count eq 0 and userType eq 'Member'" -ConsistencyLevel eventual -CountVariable unlicensedUserCount -All```
+1. Utilisez la commande suivante pour obtenir la licence **Office 365 E3** disponible dans le contexte du projet pilote :
+	```$license = Get-MgSubscribedSku|where SkuPartNumber -eq ENTERPRISEPACK```
+	>**Note :** Vous pouvez simplement taper la commande ```$license``` pour afficher le résultat de l'opération précédente avant de passer à la suite.
+1. Utilisez la commande suivante pour affecter la licence au premier compte utilisateur :
+	```Set-MgUserLicense -userId $user1.id -AddLicenses @{SkuId=$license.SkuId} -RemoveLicenses @()```
+1. Utilisez la commande suivante pour affecter la même licence au second compte utilisateur :
+	```Set-MgUserLicense -userId $user2.id -AddLicenses @{SkuId=$license.SkuId} -RemoveLicenses @()```	
+1. Utilisez la commande suivante pour bloquer le compte de Catherine et l'empècher de se connecter à l'environnement Mixcrosoft 365 :
+	```Update-MgUser -UserId $user1.Id -AccountEnabled:$false```
+1. Utilisez la commande suivante pour supprimer le compte de Catherine :
+	```Remove-MgUser -UserId $user1.Id```
+	>**Note :** Cette commande supprimer le compte utilisateur sans demande aucune confirmation.
+1. Utilisez la commande suivante pour afficher tous les utilisateurs supprimés (et restaurables) :
+	```Get-MgDirectoryDeletedUser```
+1. Vérifiez que Catherine Richard fait partie des comptes supprimés remontés par la précédente commande.
+1. Utilisez la commande suivante pour restaurer le compte de Catherine :
+	```Restore-MgDirectoryDeletedItem -DirectoryObjectId (Get-MgDirectoryDeletedUser|where DisplayName -like catherine*).id```
+1. Utilisez la commande suivante pour afficher tous les utilisateurs supprimés (et restaurables) :
+	```Get-MgDirectoryDeletedUser```
 1. At the Powershell prompt, type the following command and then press Enter to view the list of deleted users:  
-	```Get-MsolUser –ReturnDeletedUsers```  
-1. Since Catherine should have been the only deleted user prior to being restored, there will be no users to display, so PowerShell should simply display the command prompt.
-1. At the Powershell prompt, type the following command and then press Enter to view the list of active users:  
-	```Get-MsolUser```  
-1. Verify that Catherine Richard is in the active users list.
-1. At the Powershell prompt, type the following command and then press Enter to unblock Catherine from signing in to Microsoft 365. In the command, don't forget to replace the **xxx** with your unique tenant ID.  
-	```Set-MsolUser -UserPrincipalName Catherine@xxx.onmicrosoft.com -BlockCredential $false```
-1. Leave the Windows PowerShell window open and proceed to the next task.
+	```Get-MsolUser –ReturnDeletedUsers```
+1. Maintenant que le compte de Catherine a été restauré, il ne devrait plus se trouver dans la liste des utilisateurs restaurables (celle-ci devrait désormais être vide).
+1. Utilisez la commande suivante pour afficher la liste des utilisateurs actifs :
+	```Get-MgUser```
+1. Vérifiez que le compte de Catherine fait bien partie de cette liste. 
+1. Utilisez la commande suivante pour débloquer le compte de Catherine Richard et lui permettre de nouveau de se connecter :
+	```Update-MgUser -UserId $user1.Id -AccountEnabled```
+1. Laissez l'outil **Windows Powershell ISE** ouvert pour l'utiliser de nouveau dans la ta^che suivante.
 
-## Tâche 3 - Bulk Import users using Windows PowerShell
+## Tâche 3 - Import d'utilisateurs multiples
 In this task, you will use Windows PowerShell to import a csv file of new user account records into Microsoft 365. The file path is **C:\labfiles\O365Users.csv**.  
 At first you will attempt to import the users and assign each an **Microsoft 365 Business Premium** license. Based on the outcome of that import, you will make an adjustment to the csv file and re-import the users without a license.  
 1. You should still be logged into the **LON-CL1** VM as the **Administrator** account with a password of **Pa55w.rd**.
