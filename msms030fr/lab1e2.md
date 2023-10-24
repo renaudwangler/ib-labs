@@ -51,3 +51,5 @@ Dans cette tâche vous allez ajouter le domaine DNS d'entreprise à votre tenant
 
 ## Résultat
 A l'issue de ce second exercice, vous avez mis en place tous les enregistrements DNS nécessaires au bon fonctionnement des services Microsoft 365 pour le projet pilote de Adatum.
+
+Vous pouvez poursuivre par [l'exercice 3 -Visite des portails administratifs 365](lab1e3.html)

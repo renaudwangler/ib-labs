@@ -86,3 +86,5 @@ Dans cette tâche, vous allez vérifier l'état de santé du service Microsoft 3
 
 ## Résultat
 A l'issue de ce premier exercice, vous avez vérifié la création du tenant pilote pour Adatum, configuré quelques options pour toute l'entreprise et vérifié l'état de santé du service Microsoft 365.
+
+Vous pouvez poursuivre par [l'exercice 2 - Ajout d'un domaine DNS d'entreprise](lab1e2.html)
