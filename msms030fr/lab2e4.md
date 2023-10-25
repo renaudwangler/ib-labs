@@ -28,7 +28,7 @@ Dans cette tâche vous allez mettre en place l'environnement fondamental pour la
 ## Tâche 2 - Créer de nouveaux utilisateurs et leur affecter des licences.
 Dans un exercice précédent, vous avez créé des comptes utilisateurs en utilisant le portail **Microsoft 365 admin center**. Dans cette tâche, vous allez créer deux nouveaux utilisateurs en utilisant Windows PowerShell, avant de leur affecter une licence **Office 365 E5** à chacun. Vous apprendrez ensuite à supprimer un utilisateur et le remettre en production.
 1. Vous devriez êtres resté connecté sur la machine **LON-CL1** avec le compte **Administrator** et le mot de passe **Pa55w.rd**; l'outil **Windows Powershell ISE** devrait être resté ouvert en tant qu'administrateur. Si nécessaire, maximisez sa fenêtre.
-1. Dans la partie basse (fond bleu) de l'outil, tapez la commande suivante avant de taper sur **[Entrée]** pour la valider : ```Connect-MgGraph -scopes User.ReadWrite.All,Organization.Read.all```.
+1. Dans la partie basse (fond bleu) de l'outil, tapez la commande suivante avant de taper sur **[Entrée]** pour la valider : ```Connect-MgGraph -scopes User.ReadWrite.All,groups.ReadWrite.All,Organization.Read.all```.
 1. Dans la fenêtre **Sign in** qui apparaît, connectez vous avec le compte de Dominique Skyetson : **dom@WWLxxxxx.onmicrosoft.com** et son mot de passe (**ibForm@tion**). 
 1. dans la fenêtre **Permission requested**, cochez la case **Consent on behalf of your organization** et cliquez sur **Accept**.
 1. Pour être sur que tous les scripts Windows Powershell puissent s'éxecuter correctement, il vous faut désactiver le *garde-fou* des stratégies d'exécution. Pour ce faire, utilisez la commande suivante : ```Set-ExecutionPolicy bypass -force```
@@ -83,7 +83,7 @@ Dans cette tâche, vous allez utiliser Windows Poqershell pour importer un fichi
 1. Cliquez sur le bouton **Replace All** avant de fermer la fenêtre de remplacement.
 1. Cliquez sur la case **X** de fermeture de **Notepad**. Dans la boite de dialogue qui apparaît vous demandant si vous souhaitez sauvegarder vos modifications, cliquez sur **Save**.
 1. Retournez à **Administrator : Windows Powershell ISE** pour utiliser la commande suivante pour procéder à l'import des utilisateurs contenus dans le fichier :
-	```Import-Csv -Path .\users.csv | ForEach-Object {New-MGuser –UserPrincipalName $_.UPN –DisplayName $_.DisplayName -GivenName $_.LastName -SurName $_.FirstName -PasswordProfile @{password='Pa55w.rd';ForceChangePasswordNextSignIn=$false} -UsageLocation $_.UsageLocation -AccountEnabled -MailNickname $_.FirstName -jobTitle $_.Title -Department $_.department -StreetAddress $_.StreetAddress -City $_.city -PostalCode $_.POstalCode -Country $_.Country}```
+	```Import-Csv -Path .\users.csv | ForEach-Object {New-MGuser –UserPrincipalName $_.UPN –DisplayName $_.DisplayName -GivenName $_.LastName -SurName $_.FirstName -PasswordProfile @{password='Pa55w.rd';ForceChangePasswordNextSignIn=$false} -UsageLocation $_.UsageLocation -AccountEnabled -MailNickname $_.FirstName -jobTitle $_.Title -Department $_.department -StreetAddress $_.StreetAddress -City $_.city -PostalCode $_.PostalCode -Country $_.Country}```
 1. Constatez le résultat de cette commande : chaque utilisateur est ajouté à l'environnement Microsoft 365 (sans licence affectée cependant).
 1. Vous pouvez ensuite utiliser la commande suivante pour obtenir la liste des comptes utilisateurs et constater qu'elle contient désormais les nouveaux utilisateurs importé à l'instant :
 	```Get-MgUser```
@@ -94,14 +94,13 @@ Dans cette tâche, vous allez utiliser Windows Poqershell pour importer un fichi
 1. Fermez l'onget **Exchange Admin Center** dans le navigateur, pour retourner sur l'onglet **Microsoft 365 admin center**. 
 1. Conservez la session ouverte sur la machine virtuelle LON-CL1 pour la tâche suivante
 
-## Tâche 4 - Configure groups and group membership by using Windows PowerShell
-In a previous lab exercise, you used the Microsoft 365 admin center to create several Microsoft 365 groups. In this task, you will use PowerShell to create a group and add two members to the group.
-1. You should still be logged into the **LON-CL1** VM as the **Administrator** account with a password of **Pa55w.rd**.
-1. Towards the end of the prior task, you minimized the **Windows PowerShell** window. Select the **PowerShell** icon on the taskbar to maximize the window. 
-1. In **Windows PowerShell**, at the command prompt type the following command and press Enter to create a new Microsoft 365 group called **Marketing**:  
-	```New-MsolGroup –DisplayName “Marketing” –Description "Marketing department users"```  
-1. At the Powershell prompt, type the following command and then press Enter to configure a variable for the group. This command will create a macro cmdlet that will retrieve all objects that belong to Marketing.  
-	```$MktGrp = Get-MsolGroup | Where-Object {$_.DisplayName -eq "Marketing"}```  
+## Tâche 4 - Configurez les groupes et leur appartenance
+Dans un exercice antérieur, avous avez utlisé le portail d'administration Microsoft 365 pour créer quelques groupes. Dans cette tâche, vous allez utiliser Windows Powershell pour créer un groupe et ajouter deux membres à celui-ci.
+1. Vous devriez être resté connecté sur la machine **LON-CL1** avec le compte **Administrator** et le mot de passe **Pa55w.rd**; l'outil **Windows Powershell ISE** devrait être resté ouvert en tant qu'administrateur. Si nécessaire, maximisez sa fenêtre.
+1. Dans la partie basse (fond bleu) de l'outil, tapez la commande suivante avant de taper sur **[Entrée]** pour la valider : 
+	```$mktGroup = New-MgGroup -DisplayName Marketing -Description 'Marketing department users' -groupTypes unified -MailEnabled -securityEnabled -mailNickName marketing```
+
+
 1. At the Powershell prompt, type the following command and then press Enter to configure a variable for the first user account. This command will create a macro cmdlet that retrieves all users that have a display name Catherine Richard.  
 	```$Catherine = Get-MsolUser | Where-Object {$_.DisplayName -eq "Catherine Richard"}```  
 1. At the Powershell prompt, type the following command and then press Enter to configure a variable for the first user account. This command will create a macro cmdlet that retrieves all users that have a display name Tameka Reed.  
