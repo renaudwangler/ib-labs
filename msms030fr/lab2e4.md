@@ -69,7 +69,7 @@ Dans un exercice précédent, vous avez créé des comptes utilisateurs en utili
 1. Vérifiez que le compte de Catherine fait bien partie de cette liste. 
 1. Utilisez la commande suivante pour débloquer le compte de Catherine Richard et lui permettre de nouveau de se connecter :
 	```Update-MgUser -UserId $user1.Id -AccountEnabled```
-1. Laissez l'outil **Windows Powershell ISE** ouvert pour l'utiliser de nouveau dans la ta^che suivante.
+1. Laissez l'outil **Windows Powershell ISE** ouvert pour l'utiliser de nouveau dans la tâche suivante.
 
 ## Tâche 3 - Import d'utilisateurs multiples
 Dans cette tâche, vous allez utiliser Windows Poqershell pour importer un fichier CSV de nouveaux utilisateurs dans Microsoft 365. 
@@ -99,22 +99,16 @@ Dans un exercice antérieur, avous avez utlisé le portail d'administration Micr
 1. Vous devriez être resté connecté sur la machine **LON-CL1** avec le compte **Administrator** et le mot de passe **Pa55w.rd**; l'outil **Windows Powershell ISE** devrait être resté ouvert en tant qu'administrateur. Si nécessaire, maximisez sa fenêtre.
 1. Dans la partie basse (fond bleu) de l'outil, tapez la commande suivante avant de taper sur **[Entrée]** pour la valider : 
 	```$mktGroup = New-MgGroup -DisplayName Marketing -Description 'Marketing department users' -groupTypes unified -MailEnabled -securityEnabled -mailNickName marketing```
+1. Utilisez la commande suivante pour ajouter **Catherine** (compte utilisateur créés précédemment et encore référencé par la variable powershell) dans le noiuveau groupe **Marketing** :
+	```New-MgGroupMember -groupId $mktGroup.Id -DirectoryObjectId $user1.Id```
+1. Utilisez la commande suivante pour ajouter le compte de **Tameka** dans le noiuveau groupe **Marketing** :
+	```New-MgGroupMember -groupId $mktGroup.Id -DirectoryObjectId $user2.Id```
+1. Pour vérifier votre mise en oeuvre, vous pouvez utiliser la commande suivante :
+	```Get-MgGroupMember -groupId $mktGroup.Id | ForEach-Object {Get-MgUser -UserId $_.Id}```
+1. Vérifiez que Catherine Richard et Tameka Reed apparaissent dans la liste des membres du groupe Marketing.
+1. Laissez l'outil **Windows Powershell ISE** ouvert pour l'utiliser de nouveau dans la tâche suivante.
 
-
-1. At the Powershell prompt, type the following command and then press Enter to configure a variable for the first user account. This command will create a macro cmdlet that retrieves all users that have a display name Catherine Richard.  
-	```$Catherine = Get-MsolUser | Where-Object {$_.DisplayName -eq "Catherine Richard"}```  
-1. At the Powershell prompt, type the following command and then press Enter to configure a variable for the first user account. This command will create a macro cmdlet that retrieves all users that have a display name Tameka Reed.  
-	```$Tameka = Get-MsolUser | Where-Object {$_.DisplayName -eq "Tameka Reed"}```  
-1. At the Powershell prompt, type the following command and then press Enter to add Catherine Richard to the newly created Marketing department users group:  
-	```Add-MsolGroupMember -GroupObjectId $MktGrp.ObjectId -GroupMemberType "User" -GroupMemberObjectId $Catherine.ObjectId```  
-1. At the Powershell prompt, type the following command and then press Enter to add Tameka Reed to the newly created Marketing department users group:  
-	```Add-MsolGroupMember -GroupObjectId $MktGrp.ObjectId -GroupMemberType "User" -GroupMemberObjectId $Tameka.ObjectId```  
-1. At the Powershell prompt, type the following command and then press Enter to retrieve all members associated with the new Marketing department users group:  
-	```Get-MsolGroupMember -GroupObjectId $MktGrp.ObjectId```
-1. Verify that Catherine Richard and Tameka Reed appear in the list of group members for the Marketing department users group.
-1. Leave Windows PowerShell open and proceed to the next task.
-
-## Tâche 5 - Configure user passwords by using Windows PowerShell
+## Tâche 5 - Configure les mots de passe des utilisateurs
 In a previous lab, you used the Microsoft 365 admin center to update Adatum's password policy by first changing the expiration period from 90 days to 14. You then reset the expiration days from 14 days back to 90.  
 For this task, you will use PowerShell to set the expiration days from 90 to 60, and the notification period from 14 days to 10.  
 In a previous lab, you reset a user's password using the Microsoft 365 admin center. In this task, you will change a user's password using PowerShell. You will also use PowerShell to update every user account by turning off the **Password Never Expires** parameter for all users. This will ensure that all users will be subject to the new password policy in which their password will expire after 60 days.
