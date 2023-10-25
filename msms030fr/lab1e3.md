@@ -59,3 +59,4 @@ Bien que vous ayez déjà accédé au portail général d'administration *Micros
 
 ## Résultat
 A l'issue de ce premier exercice, vous avez visité les principaux portails utiles au quotidien d'un administrateur Microsoft 365 et commencé à appréhender la navigation dans ceux-ci.
+# Fin de l'atelier 1

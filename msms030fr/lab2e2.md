@@ -88,4 +88,4 @@ Si vous n'avez pas de téléphone :
 ## Résultat
 A l'issue de ce deuxième exercice, vous avez testé l'authentification mutlifactorielle.
 
-Vous pouvez poursuivre par [l'exercice 3 - Gestion des groupes](lab2e3.html)
+Vous pouvez poursuivre par [l'exercice 3 - Gestion des groupes](lab2e3)

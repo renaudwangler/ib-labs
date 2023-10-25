@@ -133,4 +133,4 @@ Dans cette tâche, vous allez vérifier l'impact des changements que vous avez f
 ## Résultat
 A l'issue de ce premier exercice, vous avez créé et géré des comptes utilisateurs ainsi que leurs licences pour coller au plus près aux besoins métier de Adatum.
 
-Vous pouvez poursuivre par [l'exercice 2 - Gestion des stratégies de mots de passe Microsoft 365](lab2e2.html)
+Vous pouvez poursuivre par [l'exercice 2 - Gestion des stratégies de mots de passe Microsoft 365](lab2e2)

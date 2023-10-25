@@ -1,6 +1,6 @@
 ---
 layout: stage
-title: "Lab2-Ex4 - Gestion des utilisateurs et des groupes avec Windows PowerShell"
+title: "Lab2-Ex5 - Délégation d'administration"
 length: "00"
 ---
 # Scénario
@@ -23,29 +23,23 @@ Connecté avec un compte *Global Admin*, vous allez commencer cet exercice par t
 1. Restez connecté sur la machine virtulle LON-CL1 pour la tâche suivante.
 
 ## Tâche 2 - Délégation administrative avec Windows PowerShell  
-This task is similar to the prior one in that you will assign administrator rights to users; however, in this case, you will use Windows PowerShell to perform this function rather than the Office 365 Admin Center. This will give you experience performing this management function in PowerShell, since some administrators prefer performing maintenance such as this using PowerShell. In addition, PowerShell enables you to display all the users assigned to a specific role, which can be very important when auditing your Office 365 deployment. In this task, you will learn how to use PowerShell to display all the users assigned to a specific role.
-1. You should still be logged into **LON-CL1** from the prior task. Navigate to the Windows PowerShell window that you left open from the previous lab. If you closed the PowerShell window, then open an elevated instance of it using the same instruction as before.
+Cette tâche est assez similaire à la précédente, mais vous allez la réaliser avec l'outillage Windows Powershell.
+1. Vous devriez être toujours connecté sur la machine virtuelle LON-CL1, avec l'outil **Administrator : Windows Powershell ISE** réduit dans la barre des tâches. Agrandissez en la fenêtre (ou relancez l'outil en administrateur si vous l'aviez fermé).
+1. Vous allez d'abord vous (re)connecter à l'environnement Microsoft 365 avec le module Microsoft Graph. Utilisez la commande suivante :
 1. You should begin by running the following command that connects your PowerShell session to the Microsoft Online Service:  
-	```Connect-MsolService```  
-1. In the **Sign in** dialog box that appears, log in as **Holly@xxx.onmicrosoft.com** (where xxx is your unique tenant ID) with password **ibForm@tion**.
-1. To view all the available roles in Microsoft 365, enter the following command in the Windows PowerShell window and then press Enter:  
-	```Get-MsolRole |Select-Object -Property Name,Description |Out-GridView```
-1. Holly now wants to assign **Nona Snider** to the **Service support administrator** role. In the Windows PowerShell window, at the command prompt, type the following command, and then press Enter:  
-	```Add-MsolRoleMember -RoleName "Service support administrator” –RoleMemberEmailAddress Nona@xxx.onmicrosoft.com```  
-	(where xxx is your unique tenant ID)
-1. You now want to verify which users have been assigned to certain roles. Displaying the users assigned to a role is a two-step process in PowerShell.  
-	>**Important : ** Do NOT perform the following commands just yet – this is an informational step whose purpose is to describe what you will be doing in the remaining steps in this task.  
-		- You will begin by running a command that creates a variable ($role) that states that anytime $role is used in a cmdlet, it should retrieve all users assigned to whichever role name you are validating.  
-		```$role = Get-MsolRole -RoleName "enter name of role here"```  
-		- After creating the variable in the prior step, you will then run the following command that directs PowerShell to display all object IDs for the users who have been assigned to the name of the role that you invoked in the previous $role variable.  
-		```Get-MsolRoleMember -RoleObjectId $role.ObjectId```
-1. You should now run the following two commands as described in the previous step to verify that Nona Snider was assigned the Service support administrator role:   
-	```$role = Get-MsolRole -RoleName "Service support administrator"; Get-MsolRoleMember -RoleObjectId $role.ObjectId```  
-1. Verify that **Nona Snider** is in the list of users who have been assigned the **Service support administrator** role.
-1. You should now run the following two commands to verify which Adatum users have been assigned to the **Billing Administrator** role.  
-	```$role = Get-MsolRole -RoleName "Billing Administrator"; Get-MsolRoleMember -RoleObjectId $role.ObjectId```
-1. Verify that **Elvis Cress** is in the list of users who have been assigned the **Billing Administrator** role (you assigned Elvis to this role in the prior task using the Microsoft 365 admin center). 
-1. Leave your Windows PowerShell session open for future lab exercises; simply minimize it before going on to the next task.
+	```Connect-MgGraph -scopes user.Read.All,RoleManagement.ReadWrite.Directory``
+1. Dans la fenêtre **Sign in** qui apparaît, connectez vous avec le compte de Dominique Skyetson : **dom@WWLxxxxx.onmicrosoft.com** et son mot de passe (**ibForm@tion**). 
+1. dans la fenêtre **Permission requested**, cochez la case **Consent on behalf of your organization** et cliquez sur **Accept**.	
+1. Pour voir tous les rôles diponibles, vous poubvez utiliser la commande suivante :
+	```Get-MgRoleManagementDirectoryRoleDefinition |Select-Object -Property DisplayName,Description | Out-GridView```
+1. Dominique souhaite affecter le rôle **Service support administrator** à **Nona Snider**. Pour ce faire, vous pouvez urtiliser la commande suivante :
+	```New-MgRoleManagementDirectoryRoleAssignment -DirectoryScopeId '/' -RoleDefinitionId (Get-MgRoleManagementDirectoryRoleDefinition | where DisplayName -eq 'Service support administrator').Id -PrincipalId (Get-MgUser -Search 'DisplayName:nona' -ConsistencyLevel eventual).Id```
+1. Vous souhaitez désormais vérifier quels utilisateurs se sont vu affecter quels rôles. Pour réaliser cette recherche en Powershell, vous pouvez utiliser la commande suivante :
+	```Get-MgRoleManagementDirectoryRoleAssignment -Filter "roleDefinitionId eq '$((Get-MgRoleManagementDirectoryRoleDefinition |Select-Object -Property DisplayName,Description,Id | Out-GridView -PassThru).Id)'" | ForEach-Object {Get-MgUser -UserId $_.PrincipalId -ErrorAction SilentlyContinue}```
+1. Dans la fenêtre affichant la liste des rôles, sélectionnez la ligne **Service Support Administrator** (Vous pouvez cliquer sur le tire de colonne **DisplayName** pour en trier le contenu) et cliquez sur **OK**.
+1. Vérifiez que le compte de **Nona Snider** est dans la liste des utilisateurs a qui le rôle **Service support administrator** A été affecté.
+	>**Note :** Vous pouvez utiliser la même commande pour vérifier les utilisateurs à qui a été affecté le rôle **Billing Administrator**. Vous devriez ainsi pouvoir retrouver le compte de **Elvis Cress**.
+1. Laissez l'outil **Windows Powershell ISE** ouvert pour d'autres opération dans la suite des ateliers, vous pouvez le réduire en icône dans la barre des tâches.
 
 ## Tâche 3 - Vérification de la délégation administrative
 In this task, you will begin by examining the administrative properties of two users, Allan Yoo and Leanna Goodwin. You will then log into the Office 365 home page on the Client 1 VM (LON-CL1) as each user to confirm several of the changes that you made when managing their administrative delegation in the prior tasks. Finally, as Leanna Goodwin, Adatum's newly assigned User Administrator, you will perform several user account maintenance tasks, such as resetting passwords and blocking a user account.  
