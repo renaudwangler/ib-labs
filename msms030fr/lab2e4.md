@@ -35,7 +35,7 @@ Dans un exercice précédent, vous avez créé des comptes utilisateurs en utili
 	>**Note :** Comme pour les commandes précédentes, il vous faudra taper sur la touche **[ENtrée]** pour lancer l'exécution de chaque commande. Nous partirons de ce principe et ne le rappelerons plus après chaque commande.
 1. Utilisez désormais la commande suivante pour créer le premier compte utilisateur nommé **Catherine Richard** avec un mot de passe **Pa55w.rd** et un emplacement **CH**. Dans la commande suivante, pensez bien à remplacer WWLxxxx.onmicrosoft.com par le nom de domaine pertinent dans votre contexte d'atelier. 
 	>**Note :** La valeur *False* pour *ForceChangePasswordNextSignIn* signifie que Catherine n'aura pas besoin de modifier son mot de passe lors de sa première connexion.  
-	```$user1 = New-MGuser –UserPrincipalName catherine@WWLxxxxx.onmicrosoft.com –DisplayName "Catherine Richard" -GivenName Catherine -SurName Richard -PasswordProfile @{password='Pa55w.rd';ForceChangePasswordNextSignIn=$false} -UsageLocation CH -AccountEn,abled -MailNickname catherine```
+	```$user1 = New-MGuser –UserPrincipalName catherine@WWLxxxxx.onmicrosoft.com –DisplayName "Catherine Richard" -GivenName Catherine -SurName Richard -PasswordProfile @{password='Pa55w.rd';ForceChangePasswordNextSignIn=$false} -UsageLocation CH -AccountEnabled -MailNickname catherine```
 	>**Note :** Vous pouvez simplement taper la commande ```$user1``` pour afficher le résultat de l'opération précédente avant de passer à la suite.
 1. la commande suivante va créer un second compte utilisateur pour **Tameka Reed** (pensez à remplacer le nom du domaine):
 	```$user2 = New-MGuser –UserPrincipalName tameka@WWLxxxxx.onmicrosoft.com –DisplayName "Tameka Reed" -GivenName Tameka -SurName Reed -PasswordProfile @{password='Pa55w.rd';ForceChangePasswordNextSignIn=$false} -UsageLocation CH -AccountEnabled -MailNickname tameka```
@@ -74,33 +74,25 @@ Dans un exercice précédent, vous avez créé des comptes utilisateurs en utili
 ## Tâche 3 - Import d'utilisateurs multiples
 Dans cette tâche, vous allez utiliser Windows Poqershell pour importer un fichier CSV de nouveaux utilisateurs dans Microsoft 365. 
  
-1. Vous devriez êtres resté connecté sur la machine **LON-CL1** avec le compte **Administrator** et le mot de passe **Pa55w.rd**; l'outil **Windows Powershell ISE** devrait être resté ouvert en tant qu'administrateur. Si nécessaire, maximisez sa fenêtre.
+1. Vous devriez être resté connecté sur la machine **LON-CL1** avec le compte **Administrator** et le mot de passe **Pa55w.rd**; l'outil **Windows Powershell ISE** devrait être resté ouvert en tant qu'administrateur. Si nécessaire, maximisez sa fenêtre.
 1. Dans la partie basse (fond bleu) de l'outil, tapez la commande suivante avant de taper sur **[Entrée]** pour la valider : ```Invoke-WebRequest "https://raw.githubusercontent.com/renaudwangler/ib-labs/master/msms030fr/users.csv" | Select-Object -ExpandProperty Content | Out-File ".\users.csv"```.
 1. En tuilisant la commande suivante, vous allez pourvoir visualiser le contenu du fichier CSV dans **Notepad** :
 ```notepad .\users.csv```
-
-
-
-1. In **Notepad**, review the records for each user account. Note the domain portion of each username is **yourdomain.hostdomain.com**. You need to replace this with **xxx.onmicrosoft.com** for each user (where you will enter the unique tenant ID in place of xxx). The easiest way to do this is by doing a Find and Replace. In the menu bar at the top of the **Notepad** window, select **Edit** and then select **Replace**.
-1. In the **Replace** window, copy **yourdomain.hostdomain.com** from one of the records and paste it in the **Find what** field, enter **xxx.onmicrosoft.com** in the **Replace with** field (replacing xxx with your tenant ID), and then select **Replace All**.
-1. In **Notepad**, review the records for each user account. Note the license assigned to each user is **adatumyyxxxx:ENTERPRISEPACK**. You need to replace this with **xxx:SPB** for each user (where you will enter your unique tenant ID in place of xxx). The easiest way to do this is by doing a Find and Replace. The **Replace** window should still be open; if you closed it after the prior step, then open it again.
-1. In the **Replace** window, copy **adatumyyxxxx:ENTERPRISEPACK** from one of the records and paste it in the **Find what** field, enter **xxx:SPB** in the **Replace with** field (replacing xxx with your tenant ID), and then select **Replace All**.
-1. Close the **Replace** window.
-1.  Select the X in the upper right corner of the **Notepad** window to close it.  
-In the **Notepad** dialog box that appears asking if you want to save the changes to the O365Users.csv file, select **Save**.
-1. Close File Explorer.
-1. In **Windows PowerShell**, copy the following command and paste it in at the command prompt and then press Enter to bulk import the users from the O365Users.csv file into Microsoft 365:
-	```Import-Csv -Path C:\labfiles\O365Users.csv | ForEach-Object { New-MsolUser -UserPrincipalName $_."UPN" -AlternateEmailAddresses $_."AltEmail" -FirstName $_."FirstName" -LastName $_."LastName" -DisplayName $_."DisplayName" -BlockCredential $False -ForceChangePassword $False -LicenseAssignment $_."LicenseAssignment" -Password $_."Password" -PasswordNeverExpires $True -Title $_."Title" -Department $_."Department" -Office $_."Office" -PhoneNumber $_."PhoneNumber" -MobilePhone $_."MobilePhone" -Fax $_."Fax" -StreetAddress $_."StreetAddress" -City $_."City" -State $_."State" -PostalCode $_."PostalCode" -Country $_."Country" -UsageLocation $_."UsageLocation" }```
-1. Notice what happens when you run this command. Each of users in the import file is successfully added into Microsoft 365, and the **isLicensed** column displays **True** for each record.  
-1. At the Powershell prompt, type the following command and then press Enter to view the list of active users:  
-	```Get-MsolUser```
-1. Verify the new users from the .csv file are included in the active users list. 
-1. Minimize the PowerShell window and switch back to your Edge browser. 
-1. In the **Microsoft 365 admin center** navigate to the **Active users** list. Review the active users and verify the new users you just imported in PowerShell appear in the list, along with Catherine Richard and Tameka Reed, who you added individually using PowerShell.
-1. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Show all** (if necessary) to display all the menu options. Under the **Admin centers** section, select **Exchange**.
-1. In the **Exchange admin center**, in the left-hand navigation pane, expand **Recipients** and select **Mailboxes**. Review the mailboxes. Note that no Exchange mailbox was created for any of the unlicensed users.
-1. Close the **Mailboxes** tab in your browser, which takes you back to the **Microsoft 365 admin center** tab. 
-1. Leave Windows PowerShell and your Edge browser open and proceed to the next task.
+1. Dans la fenêtre **users.csv - Notepad** qui s'ouvre, passez en revue les informations présentes pour les utilisateurs. Notez que, pour chaque utilisateur, le domaine de connexion est **labxxxxx.godeploylabs.com**. Il vous faut désortmais remplacer ce nom de domaine par votre **Nom DNS d'entreprise**. Dans le menu de Notepad, cliquez sur **Edit** puis **Replace**.
+1. Dans la fenêtre de remplacement, tapez ```labxxxxx.godeploylabs.com``` dans le champ **Find what** et saisissez votre **Nom DNS d'entreprise** (dont vous avez pris note dans le premier exerice et que vous pouvez retrouver dans l'onglet **DNS** de l'environnement d'ateliers) dans le champ **Replace with**.
+1. Cliquez sur le bouton **Replace All** avant de fermer la fenêtre de remplacement.
+1. Cliquez sur la case **X** de fermeture de **Notepad**. Dans la boite de dialogue qui apparaît vous demandant si vous souhaitez sauvegarder vos modifications, cliquez sur **Save**.
+1. Retournez à **Administrator : Windows Powershell ISE** pour utiliser la commande suivante pour procéder à l'import des utilisateurs contenus dans le fichier :
+	```Import-Csv -Path .\users.csv | ForEach-Object {New-MGuser –UserPrincipalName $_.UPN –DisplayName $_.DisplayName -GivenName $_.LastName -SurName $_.FirstName -PasswordProfile @{password='Pa55w.rd';ForceChangePasswordNextSignIn=$false} -UsageLocation $_.UsageLocation -AccountEnabled -MailNickname $_.FirstName -jobTitle $_.Title -Department $_.department -OfficeLocation $_.Office -StreetAddress $_.StreetAddress -City $_.city -State $_.State -PostalCode $_.POstalCode -Country $_.Country}```
+1. Constatez le résultat de cette commande : chaque utilisateur est ajouté à l'environnement Microsoft 365 (sans licence affectée cependant).
+1. Vous pouvez ensuite utiliser la commande suivante pour obtenir la liste des comptes utilisateurs et constater qu'elle contient désormais les nouveaux utilisateurs importé à l'instant :
+	```Get-MgUser```
+1. Minimiser l'outil **Administrator : Windows Powershell ISE** et retournez dans votre navigateur Internet. 
+1. Dans le portail **Microsoft 365 admin center** navigez jusqu'à la liste **Active users**. Jettez un oeil au contenu de cette loste pour vérifier que les utilisateurs importés sont bien présents, ainsir que Catherine Richard et Tameka Reed, que vous avez ajouté précédemment par commandes PowerShell.
+1. Dans le **Microsoft 365 admin center**, cliquez syr **Show all** (si nécessaire) pour afficher toutes le entrées de menu. Dans le groupe d'options **Admin centers**, cliquez sur **Exchange**.
+1. Dans le portail **Exchange admin center**, ouvrez le groupe d'options **Recipients** pour sélectionner **Mailboxes** si vous n'y êtes pas arrivé par défaut. Parcourrez les boites au lettres et noteé qu'aucune boite aux lettres n'a été créée pour les utilisateurs sans licence.
+1. Fermez l'onget **Exchange Admin Center** dans le navigateur, pour retourner sur l'onglet **Microsoft 365 admin center**. 
+1. Conservez la session ouverte sur la machine virtuelle LON-CL1 pour la tâche suivante
 
 ## Tâche 4 - Configure groups and group membership by using Windows PowerShell
 In a previous lab exercise, you used the Microsoft 365 admin center to create several Microsoft 365 groups. In this task, you will use PowerShell to create a group and add two members to the group.
