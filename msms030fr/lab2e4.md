@@ -28,7 +28,7 @@ Dans cette tâche vous allez mettre en place l'environnement fondamental pour la
 ## Tâche 2 - Créer de nouveaux utilisateurs et leur affecter des licences.
 Dans un exercice précédent, vous avez créé des comptes utilisateurs en utilisant le portail **Microsoft 365 admin center**. Dans cette tâche, vous allez créer deux nouveaux utilisateurs en utilisant Windows PowerShell, avant de leur affecter une licence **Office 365 E5** à chacun. Vous apprendrez ensuite à supprimer un utilisateur et le remettre en production.
 1. Vous devriez êtres resté connecté sur la machine **LON-CL1** avec le compte **Administrator** et le mot de passe **Pa55w.rd**; l'outil **Windows Powershell ISE** devrait être resté ouvert en tant qu'administrateur. Si nécessaire, maximisez sa fenêtre.
-1. Dans la partie basse (fond bleu) de l'outil, tapez la commande suivante avant de taper sur **[Entrée]** pour la valider : ```Connect-MgGraph -scopes User.ReadWrite.All,groups.ReadWrite.All,Organization.Read.all```.
+1. Dans la partie basse (fond bleu) de l'outil, tapez la commande suivante avant de taper sur **[Entrée]** pour la valider : ```Connect-MgGraph -scopes User.ReadWrite.All,Group.ReadWrite.All,Organization.Read.All```.
 1. Dans la fenêtre **Sign in** qui apparaît, connectez vous avec le compte de Dominique Skyetson : **dom@WWLxxxxx.onmicrosoft.com** et son mot de passe (**ibForm@tion**). 
 1. dans la fenêtre **Permission requested**, cochez la case **Consent on behalf of your organization** et cliquez sur **Accept**.
 1. Pour être sur que tous les scripts Windows Powershell puissent s'éxecuter correctement, il vous faut désactiver le *garde-fou* des stratégies d'exécution. Pour ce faire, utilisez la commande suivante : ```Set-ExecutionPolicy bypass -force```
