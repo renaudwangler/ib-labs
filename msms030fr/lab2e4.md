@@ -8,10 +8,13 @@ Windows Powershell permet aux administrateurs d'automatiser, d'accélérer et de
 Dans cet exerice, vous allez continuer, en tant que Dominique, à faire des opérations administratives de maintenance dans Microsoft 365 en utilisant Windows Powershell. cela vous permettra de comparer l'expérience de création et de maintenance des utilisateurs et des groupes entre le centre d'administration et le scripting Powershell.
 Vous souhaitez donc utiliser Windows Powershell pour créer des comptes utilisateurs, leur affecter des les licences, modifier des comptes, crééer des groupes...
 
-
 # Objectifs
 A la fin de cet exercice, vous aurez une meilleure connaissance de :
-- 
+- Le module Windows Powershell Microsoft Graph
+- La création d'utilisateurs par script
+- La création d'utilisateurs par import depuis un fichier
+- La création et modification de groupes 365 en Powershell
+- LE travail avec les stratégies de mot de passe en Powershell
 
 ## Tâche 1 - Installation du module Windows Powershell pour Entra ID
 Dans cette tâche vous allez mettre en place l'environnement fondamental pour la gestion de Microsoft 365 à l'aide de Windows Powershell.
@@ -28,7 +31,7 @@ Dans cette tâche vous allez mettre en place l'environnement fondamental pour la
 ## Tâche 2 - Créer de nouveaux utilisateurs et leur affecter des licences.
 Dans un exercice précédent, vous avez créé des comptes utilisateurs en utilisant le portail **Microsoft 365 admin center**. Dans cette tâche, vous allez créer deux nouveaux utilisateurs en utilisant Windows PowerShell, avant de leur affecter une licence **Office 365 E5** à chacun. Vous apprendrez ensuite à supprimer un utilisateur et le remettre en production.
 1. Vous devriez êtres resté connecté sur la machine **LON-CL1** avec le compte **Administrator** et le mot de passe **Pa55w.rd**; l'outil **Windows Powershell ISE** devrait être resté ouvert en tant qu'administrateur. Si nécessaire, maximisez sa fenêtre.
-1. Dans la partie basse (fond bleu) de l'outil, tapez la commande suivante avant de taper sur **[Entrée]** pour la valider : ```Connect-MgGraph -scopes User.ReadWrite.All,Group.ReadWrite.All,Organization.Read.All```.
+1. Dans la partie basse (fond bleu) de l'outil, tapez la commande suivante avant de taper sur **[Entrée]** pour la valider : ```Connect-MgGraph -scopes User.ReadWrite.All,Group.ReadWrite.All,Domain.ReadWrite.All,Organization.Read.All,UserAuthenticationMethod.ReadWrite.All```.
 1. Dans la fenêtre **Sign in** qui apparaît, connectez vous avec le compte de Dominique Skyetson : **dom@WWLxxxxx.onmicrosoft.com** et son mot de passe (**ibForm@tion**). 
 1. dans la fenêtre **Permission requested**, cochez la case **Consent on behalf of your organization** et cliquez sur **Accept**.
 1. Pour être sur que tous les scripts Windows Powershell puissent s'éxecuter correctement, il vous faut désactiver le *garde-fou* des stratégies d'exécution. Pour ce faire, utilisez la commande suivante : ```Set-ExecutionPolicy bypass -force```
@@ -108,19 +111,19 @@ Dans un exercice antérieur, avous avez utlisé le portail d'administration Micr
 1. Vérifiez que Catherine Richard et Tameka Reed apparaissent dans la liste des membres du groupe Marketing.
 1. Laissez l'outil **Windows Powershell ISE** ouvert pour l'utiliser de nouveau dans la tâche suivante.
 
-## Tâche 5 - Configure les mots de passe des utilisateurs
-In a previous lab, you used the Microsoft 365 admin center to update Adatum's password policy by first changing the expiration period from 90 days to 14. You then reset the expiration days from 14 days back to 90.  
-For this task, you will use PowerShell to set the expiration days from 90 to 60, and the notification period from 14 days to 10.  
-In a previous lab, you reset a user's password using the Microsoft 365 admin center. In this task, you will change a user's password using PowerShell. You will also use PowerShell to update every user account by turning off the **Password Never Expires** parameter for all users. This will ensure that all users will be subject to the new password policy in which their password will expire after 60 days.
-1. You should still be logged into the **LON-CL1** VM as the **Administrator** account with a password of **Pa55w.rd**.
-1. In **Windows PowerShell**, at the command prompt, type the following command and then press Enter to update the password policy for Adatum's **xxx.onmicrosoft.com** domain. You will change the expiration period to **60 days** and the notification period to **10 days**. In the command, don't forget to replace the **xxx** with your unique tenant ID.  
-	```Set-MsolPasswordPolicy -DomainName "xxx.onmicrosoft.com" –ValidityPeriod "90" -NotificationDays 14```  
-1. At the Powershell prompt, type the following command and then press Enter to change Tameka Reed's password to **P@$$W0rd**. In the command, don't forget to replace the **xxx** with the unique tenant ID provided by your lab hosting provider.   
-	```Set-MsolUserPassword –UserPrincipalName "Tameka@xxx.onmicrosoft.com" –NewPassword 'P@$$W0rd'```  
-1. At the Powershell prompt, type the following command and then press Enter to turn off **Password Never Expires** parameter for all users. This will ensure that all users will be subject to the new password policy in which their password will expire after 60 days.  
-	```Get-MsolUser | Set-MsolUser –PasswordNeverExpires $false```
-1. Leave your Windows PowerShell session open for future lab exercises; simply minimize it before going on to the next exercise. In addition, leave your browser and all its tabs open.  
+## Tâche 5 - Configurer les mots de passe des utilisateurs
+Vous avez précédemment utilisé le portail **Microsoft 365 admin center** pour mettre à jour la stratégie de mots de passe de Adatum en changeant la durée de vie de mot de passe pour la faire passer de 90 jours à 60. Vous souhaitez désormais utiliser Windows Powershell pour replacer cette durée d'éxpiration de mots de passe à 90 jours.  
+Vous allez d'ailleurs en profiter pour modifier le timind de notification de cette expiration de mots de passe pour le faire passer à 10 jours.
+1. Vous devriez être resté connecté sur la machine **LON-CL1** avec le compte **Administrator** et le mot de passe **Pa55w.rd**; l'outil **Windows Powershell ISE** devrait être resté ouvert en tant qu'administrateur. Si nécessaire, maximisez sa fenêtre.
+1. Dans la partie basse (fond bleu) de l'outil, tapez la commande suivante avant de taper sur **[Entrée]** pour la valider : 
+	```Get-MgDomain | ForEach-Object { update-MgDomain -DomainId $_.Id -PasswordNotificationWindowInDays 10 -PasswordValidityPeriodInDays 90 }```
+1. Utilisez la commande suivante pour modifier le mot de passe du compte utilisateur Tameka :
+	```Reset-MgUserAuthenticationMethodPassword -UserId $user2.id -NewPassword 'P@$$w0rd' -AuthenticationMethodId (Get-MgUserAuthenticationPasswordMethod -userId $user2.Id).id```
+1. Utilisez la commande suivante pour que le mot de passe de tous les utilisateurs expire (et s'assurer ainsi que la stratégie choisie à l'instant soit bien appliquée par tout le monde) : 
+```Get-MGuser -All | ForEach-Object { Update-MgUser -UserId $_.Id -PasswordPolicies None}```	
+1. Conservez la session ouverte sur la machine virtuelle LON-CL1, réduisez l'outil **Administrator : Windows Powershell ISE** dans la barre des tâches et maximisez la fenêtre de votre navigateur Internet pour l'exercice suivant.
 
-**Results**: After completing this exercise, you should have created new users, assigned licenses, modified existing users, and configured groups and Adatum's password policies, and reset a user password by using the Windows PowerShell command-line interface.
+## Résultat :
+Après avoir réalisé cet exercice, vous avez parcouru le module Windows Powershell **Microsoft Grpah** pour diverses actions administratives comme créer des utilisateurs, affecter des licences, créer des groupes par exemple.
 
 Vous pouvez poursuivre par [l'exercice 5 - Délégation d'administration](lab2e5)

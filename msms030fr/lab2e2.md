@@ -22,7 +22,7 @@ Par le passé, vous aviez une stratégie exigeant que les utilisateurs changent 
 1. Dans la fenêtre **Org settings**, l'onglet **Services** est affiché par défaut en haut de la page. sélectionnez plutôt l'onglet **Security & Privacy** situé à coté. 
 1. Sur la page **Security & Privacy**, sélectionnez **Password expiration policy** dans la liste de paramètres. 
 1. Sur le panneau **Password expiration policy** qui s'affiche, décochez la case **Set passwords to never expire (recommended)**.
-	> **Note :** Vous pouvez cliquer sur lel ien documentaire pour comprendre en quoi des mots de passe qui n'expire pas sont désormais considéré comme plus sécurisés.  
+	> **Note :** Vous pouvez cliquer sur le lien documentaire pour comprendre en quoi des mots de passe qui n'expire pas sont désormais considéré comme plus sécurisés.  
 
 1. Entrez **60** dans le champ **Days before passwords expire** avant de cliquer sur **Save**.
 1. Vérifiez que la case **Set passwords to never expire (recommended)** est décochée et que le message **Changes saved** apparaît en haut de page.

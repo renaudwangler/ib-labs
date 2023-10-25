@@ -9,16 +9,16 @@ L'entreprise Adatum héberge actuellement un environnement informatique *classiq
 Au fil des ateliers de ce stage, vous allez prendre l'identité de Dominique Skyetson, membre de l'équipe d'administration IT de Adatum.  
 L'équipe projet de Adatum a décidé de mettre en œuvre Microsoft 365  dans un projet pilote, afin de monter en compétence sur le produit et de voir les besoins métiers qui pourraient être couverts par les produits de l'offre Microsoft 365.
 ## Atelier 01 - Provisioning du tenant Microsoft 365
-### Exercice 1 - [Création de l'environnement](lab1e1.html)
-### Exercice 2 - [Ajout d'un domaine DNS d'entreprise](lab1e2.html)
-### Exercice 3 - [Visite des portails administratifs 365](lab1e3.html)
+### Exercice 1 - [Création de l'environnement](lab1e1)
+### Exercice 2 - [Ajout d'un domaine DNS d'entreprise](lab1e2)
+### Exercice 3 - [Visite des portails administratifs 365](lab1e3)
 ___
 ## Atelier 02 - Gestion des utilisateurs et des groupes Microsoft 365
-### Exercice 1 - [Gestion des utilisateurs avec le centre d'administration Microsoft 365](lab2e1.html)
-### Exercice 2 - [Gestion des stratégies de mots de passe Microsoft 365](lab2e2.html)
-### Exercice 3 - [Gestion des groupes](lab2e3.html)
-### Exercice 4 - [Gestion des utilisateurs et des groupes avec Windows PowerShell](lab2e4)
-### Exercice 5 - Délégation d'administration
+### Exercice 1 - [Gestion des utilisateurs avec le centre d'administration Microsoft 365](lab2e1)
+### Exercice 2 - [Gestion des stratégies de mots de passe Microsoft 365](lab2e2)
+### Exercice 3 - [Gestion des groupes](lab2e3)
+### Exercice 4 - [Gestion des utilisateurs et des groupes avec Windows PowerShell](lab2e4
+### Exercice 5 - [Délégation d'administration](lab2e5)
 ___
 ## Atelier  03 - Connectivité à Microsoft 365
 ### Exercice 1 - Utilisation de l'outil *Microsoft 365 connectivity analyzer*
