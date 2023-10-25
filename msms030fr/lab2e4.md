@@ -72,12 +72,15 @@ Dans un exercice précédent, vous avez créé des comptes utilisateurs en utili
 1. Laissez l'outil **Windows Powershell ISE** ouvert pour l'utiliser de nouveau dans la ta^che suivante.
 
 ## Tâche 3 - Import d'utilisateurs multiples
-In this task, you will use Windows PowerShell to import a csv file of new user account records into Microsoft 365. The file path is **C:\labfiles\O365Users.csv**.  
-At first you will attempt to import the users and assign each an **Microsoft 365 Business Premium** license. Based on the outcome of that import, you will make an adjustment to the csv file and re-import the users without a license.  
-1. You should still be logged into the **LON-CL1** VM as the **Administrator** account with a password of **Pa55w.rd**.
-1. You should still have the **Windows PowerShell** window open from the prior task.
-1. On the taskbar at the bottom of the screen, select the **File Explorer** icon.
-1. In **File Explorer** navigate to **C:\labfiles**, right-click on the **O365users.csv** file, and in the menu that appears select **Open with** and then Select **Notepad**.
+Dans cette tâche, vous allez utiliser Windows Poqershell pour importer un fichier CSV de nouveaux utilisateurs dans Microsoft 365. 
+ 
+1. Vous devriez êtres resté connecté sur la machine **LON-CL1** avec le compte **Administrator** et le mot de passe **Pa55w.rd**; l'outil **Windows Powershell ISE** devrait être resté ouvert en tant qu'administrateur. Si nécessaire, maximisez sa fenêtre.
+1. Dans la partie basse (fond bleu) de l'outil, tapez la commande suivante avant de taper sur **[Entrée]** pour la valider : ```Invoke-WebRequest "https://raw.githubusercontent.com/renaudwangler/ib-labs/master/msms030fr/users.csv" | Select-Object -ExpandProperty Content | Out-File ".\users.csv"```.
+1. En tuilisant la commande suivante, vous allez pourvoir visualiser le contenu du fichier CSV dans **Notepad** :
+```notepad .\users.csv```
+
+
+
 1. In **Notepad**, review the records for each user account. Note the domain portion of each username is **yourdomain.hostdomain.com**. You need to replace this with **xxx.onmicrosoft.com** for each user (where you will enter the unique tenant ID in place of xxx). The easiest way to do this is by doing a Find and Replace. In the menu bar at the top of the **Notepad** window, select **Edit** and then select **Replace**.
 1. In the **Replace** window, copy **yourdomain.hostdomain.com** from one of the records and paste it in the **Find what** field, enter **xxx.onmicrosoft.com** in the **Replace with** field (replacing xxx with your tenant ID), and then select **Replace All**.
 1. In **Notepad**, review the records for each user account. Note the license assigned to each user is **adatumyyxxxx:ENTERPRISEPACK**. You need to replace this with **xxx:SPB** for each user (where you will enter your unique tenant ID in place of xxx). The easiest way to do this is by doing a Find and Replace. The **Replace** window should still be open; if you closed it after the prior step, then open it again.
