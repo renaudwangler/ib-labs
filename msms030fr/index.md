@@ -21,7 +21,7 @@ ___
 ### Exercice 5 - [Délégation d'administration](lab2e5)
 ___
 ## Atelier  03 - Connectivité à Microsoft 365
-### Exercice 1 - Utilisation de l'outil *Microsoft 365 connectivity analyzer*
+### Exercice 1 - [Utilisation de *Microsoft 365 connectivity analyzer*](lab3e1)
 ___
 ## Atelier 04 - Configuration de la synchronisation d'identités
 ### Exercice 1 - Préparation de la synchronisation d'identités
@@ -56,5 +56,6 @@ ___
 ### Exercice 1 - Etat de santé du service Microsoft 365
 ### Exercice 2 - Dépannage de flux de messages
 ___
-## Nettoyage - Clôture du tenant de test
 ## Conseils génériques
+- Les ateliers doivent être réalisés dans l'ordre prévu pour éviter les surprises, avec les exceptions/adaptations suivantes :
+    - L'atelier 3 n'est pas indispensable.
