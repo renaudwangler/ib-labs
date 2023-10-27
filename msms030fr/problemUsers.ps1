@@ -20,17 +20,3 @@ If ($emailLogan.emailAddress -notlike 'Lara@adatum.com'){
 	Set-ADUser Logan -emailAddress Lara@adatum.com
 	Write-Host 'Logan modifié.'}
 Else { Write-Host 'Logan était déjà à jour.' }
-
-# mise à jour de l'attribut emailAddress de 'Holly'
-$emailHolly = Get-ADUser Holly -Properties emailAddress | Select emailAddress
-If ($emailHolly.emailAddress -notlike 'holly @adatum.com'){
-	Set-ADUser Holly -emailAddress 'holly @adatum.com'
-	Write-Host 'Holly mise à jour.' }
-Else { Write-Host 'Holly était déjà à jour.' }
-
-# mise à jour de l'attribut emailAddress de 'Maj'
-$emailMaj = Get-ADUser Maj -Properties emailAddress | Select emailAddress
-If ($emailMaj.emailAddress -notlike ' '){
-	Set-ADUser Maj -emailAddress ' '
-	Write-Host 'Maj mis à jour.' }
-Else { Write-Host 'Maj était déjà à jour.' }

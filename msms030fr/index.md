@@ -25,8 +25,8 @@ ___
 ___
 ## Atelier 04 - Configuration de la synchronisation d'identités
 ### Exercice 1 - [Préparation de la synchronisation d'identités](lab4e1)
-### Exercice 2 - Mise en oeuvre de la synchronisation d'identités
-### Exercice 3 - Activation de la jonction de domaine hybride
+### Exercice 2 - [Mise en oeuvre de la synchronisation d'identités](lab4e2)
+### Exercice 3 - [Activation de la jonction de domaine hybride](lab4e3)
 ___
 ## Atelier 05 - Déploiement de Microsoft 365 Apps
 ### Exercice 1 - Déploiement de Microsoft 365 apps for enterprise
@@ -58,6 +58,7 @@ ___
 ___
 ## Conseils génériques
 - Les ateliers doivent être réalisés dans l'ordre prévu pour éviter les surprises, avec les exceptions/adaptations suivantes :
-    - L'exerice 3 de l'atelier 1 n'est pas indispensable
-    - L'exercice 2 de l'atelier 2 n'eest pas indispensable
-    - L'atelier 3 n'est pas indispensable.
+    - L'exerice 3 de l'atelier 1 est dispensable
+    - L'exercice 2 de l'atelier 2 es dispensable
+    - L'atelier 3 est dispensable.
+    - Les tâches 2 et 3 de l'atelier 4, exercice 1 sont dispensables

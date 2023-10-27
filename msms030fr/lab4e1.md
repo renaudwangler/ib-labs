@@ -26,12 +26,12 @@ Dans cette tâche, vous allez vous faciliter la vie en utilisant Windows Powersh
 1. Utilisez, pour terminer, la commande suivante pour modifier l'UPN de tous les utilisateurs du domaine ADDS :  
 	```Get-ADUser -Filter * -Properties SamAccountName | ForEach-Object { Set-ADUser $_  -UserPrincipalName ($_.SamAccountName.replace(' ','') + '@' + $upnSuff )}```
 
-## Tâche 2 - Prépartion de comptes à problèmes
+## Tâche 2 - Préparation de comptes à problèmes
 L'intégration de votre ADDS on-premises avec Entra Id rendra vos utilisateurs plus productifs tout en facilitant l'administration de leurs comptes. Cependant, des erreurs peuvent survenir car, tout au long de la vie de votre ADDS, des informations érronnées ont pu être utlisées qui n'ont pas posé de problème on-premises mais ne pourraient être supportées dans le cloud.  
 Par exemple, plusieurs objets pourraient avoir un attribut **ProxyAddresses** ou **UserPrincipalName** identiques dans l'ADDS. De nombreuses erreurs similaires pourraient poser problème dans la mise en place de la synchronisation de votre annuraire.  
 Dans cette tâche, vous allez utiliser un script pour implémenter quelques erreurs sur les utilisateurs du projet pilote Adatum afin d'identitifier ensuite la manière d'identitifier et corriger ce genre d'erreurs.
 1. Sur LON-DC1, dans la fenêtre **Administrator: WIndows Powershell**, utilisez la commande suivante pour récupérer le script que vous utiliserez ensuite :
-	```Invoke-WebRequest "https://raw.githubusercontent.com/renaudwangler/ib-labs/master/msms030fr/problemUSers.ps1" | Select-Object -ExpandProperty Content | Out-File ".\problemUSers.csv"```
+	```Invoke-WebRequest "https://raw.githubusercontent.com/renaudwangler/ib-labs/master/msms030fr/problemUsers.ps1" | Select-Object -ExpandProperty Content | Out-File ".\problemUsers.ps1"```
 1. Lancez ensuite ledit script dans la fenêtre **Administrator: Windows PowerShell** :
 	```.\problemUsers.ps1```
 	>**Note :** Vous devriez pouvoir executer ce script sans problème car vous avez déja changé la stratégie d'execution des scripts sur LON-DC1 dans l'atelier 2.
@@ -60,7 +60,7 @@ Dans cette tâche vous allez appréhender l'utlisation de l'outil **idFix** pour
 1. Sur la barre de menu bleue, clqiuez sur **Query** pour relancer la requète en raffraichir les résultats.
 1. Vérifiez que Klemen n'appraît plus dans la liste des erreurs.
 1. Trouvez la ligne de **Logan Boyle**. La colonne **VALUE** pour Logan a été incorrectement saisie en **Lara@adatum.com**, ce qui produit un doublon avec le compte de Lara Raisic, qui est aussi dans la liste.  
-	Pour corriger l'email de Logan, vous devez déjà choisir la valeur **Lara@adatum.com** dans la colonne **UPDATE** de Logan et la remplacert en saisissant ```logan@adatum.com```. 
+	Pour corriger l'email de Logan, vous devez déjà choisir la valeur **Lara@adatum.com** dans la colonne **UPDATE** de Logan et la remplacer en saisissant ```logan@adatum.com```. 
 1. Sélectionnez ensuite le champ **ACTION** sur la ligne de Logan et choisissez **EDIT**.
 1. Dans la barre de menu bleue, cliquez sur le bouton **Apply**.
 1. Dans la boite de dialogue **Apply Pending** cliquez sur **Yes**.
