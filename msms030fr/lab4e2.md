@@ -4,142 +4,129 @@ title: "Lab4-Ex2 - Mise en oeuvre de la synchronisation d'identités"
 length: "00"
 ---
 # Scénario
-In this exercise, you will enable synchronization between Adatum’s on-premises Active Directory and Azure Active Directory. Azure AD Connect will then continue to synchronize any delta changes every 30 minutes. You will then make some group updates and manually force an immediate synchronization rather than waiting for Azure AD Connect to automatically synchronize the updates. You will then verify whether the updates were synchronized.  
->**Important:** When you start this exercise, you should perform the first three tasks without any delay between them so that Azure AD Connect does not automatically synchronize the changes that you make to the identity objects.
-
+Dans cet exercice, vous allez activer la synchronisation entre l'ADDS de Adatum et Entra Id. Antra Connect continuera ensuite à synchroniser les changements toutes les 30 minutes.  
+Vous allez ensuite utiliser des objets groupes pour faire quelques modifications sur l'ADDS et vérifier l'effet de la synchronisation sur les objets équivalents dans Entra Id. Dominique souhaite aussi comprendre comment forcer la synchronisation si une opération urgente ne peut attendre le délai de 30 minutes.  
+>**Important :** En démarrant cet exerice, préparez-vous à réaliser les 3 premoières tâches sans délai entre elles pour éviter que Entra Connect ne synchronise automatiquement les changements que vous souhaitez forcer.
 
 # Objectifs
 A la fin de cet exercice, vous aurez une meilleure connaissance de :
 - L'outil Entra Connect
 - La synchronisation d'objets
 - La synchronisation forçée
-
+- La vérification de la synchronisation
 
 ## Tâche 1 - Installer Entra Connect
-In this task, you will run the Azure AD Connect setup wizard to enable synchronization between Adatum’s on-premises Active Directory and Azure Active Directory. Once the configuration is complete, the synchronization process will automatically start. 
-1. You should still be logged into **LON-DC1** as the **Administrator** from the prior task.
-1. In the **Step 2: Install IdFix - Microsoft** tab in **Edge**, navigate to: **https://admin.microsoft.com**.
-1.	1. If needed, in the **Sign in** dialog box, copy and paste in (or enter) the username of **Holly Dickson** (**holly@xxx.onmicrosoft.com**, where xxx is your unique tenant suffix ID) and then select **Next**.
-	1. In the **Enter password** dialog box, enter **ibForm@ion** and then select **Sign in**.
-	1. On the **Stay signed in?** dialog box, select the **Don’t show this again** check box and then select **Yes.**
-1. In the left-hand navigation pane, select **Users**, and then select **Active Users**.
-1. In the **Active users** window, on the menu bar, select the **ellipsis** icon (on the right-hand side), and then in the drop-down menu, select **Directory synchronization**.
-1. In the **About user synchronization** page, click on the **Next** button.
-1. On the **Select a migration option**, check the **Continuous sync** choice and click **Next**.
-1. On the **Prepare by running IdFix** page, click on the **Next** button.
-1. In the **Review synchronization tools**, select the **Azure AD Connect** option and click **Next**.
-1. On the **Sync your users** page, click on the **Download Azure AD Connect** tile.
-1. In the notification bar in the upper right-hand corner of the Edge browser, once the **AzureADConnect.msi** file has finished downloading, select **Open file**.
-1. In the **Do you want to run this file?** dialog box, select **Run**.
-1. This initiates the installation of the Microsoft Azure AD Connect Tool. If the **Welcome to Azure AD Connect** window does not appear on the desktop, find the icon for it on the taskbar (it will be the final icon on the right) and select it.  
-	On the **Welcome to Azure AD Connect** window in the setup wizard, select the **I agree to the license terms and privacy notice** check box and then select **Continue**.
-1. On the **Express Settings** page, read the instruction regarding a single Windows Server AD forest and then select **Use express settings**.
-1. On the **Connect to Azure AD** window, enter **Holly@xxx.onmicrosoft.com** (where xxx is the tenant ID) in the **USERNAME** field, enter **ibForm@tion** in the **password** field, and then select **Next**.
-1. On the **Connect to AD DS** page, enter **ADATUM\Administrator** in the **USERNAME** field, enter **Pa55w.rd** in the **PASSWORD** field, and then select **Next**.
-1. In the **Azure AD sign-in configuration** window, select the **Continue without matching all UPN suffixes to verified domains** check box at the bottom of the page, and then select **Next**.
-1. On the **Ready to configure** screen, select the check box for **Start the synchronization process when configuration completes** if it’s not already selected, and then select **Install**.
-1. Wait for the configuration to complete (This may take a few minutes) and then select **Exit**.
+Dans cet tâche, vous allez utiliser l'assistant d'installation de Entra Connect pour activer la synchronisation entre l'ADDS de Adatum et Entra Id. Une fois la configuration terminée, le processus de synchronisation démarre automatiquement.
+1. Vous devriez encore être connecté sur **LON-DC1** avec le compte **Administrator** à l'issue de la tâche précédente.
+1. Dans votre navigateur Internet, rendez-vous à l'adresse ```https://admin.microsoft.com```.
+	>**Note :** Vous pouvez réutiliser l'onglet **Step 2: Install IdFix - Microsoft** de la tâche précédente qui ne sera pas réutilisé.
+1.	1. Si besoin, dans la boite **Sign in**, utilisez l'adresse de connexion de Dominique Skyetson (**dom@WWLxxxxx.onmicrosoft.com**) et cliquez sur **Next**.
+	1. Dans la boite **Enter password**, saisissez **ibForm@ion** et cliquez sur **Sign in**.
+	1. Dans la boite **Stay signed in?**, cochez la case **Don’t show this again** et cliquez sur **Yes.**
+1. Dans le menu de navigation à gauche, ouvrez le groupe d'options **Users** pour cliquer sur **Active Users**.
+1. Au-dessus de la liste **Active users**, dans la barre de menu, cliquez sur les points de suspension à droite pour sélectionner **Directory synchronization**.
+1. Sur la page **About user synchronization**, cliquez surle bouton **Next**.
+1. Sur la page **Select a migration option**, cochez la case the **Continuous sync** avant de cliquer sur **Next**.
+1. Sur la page **Prepare by running IdFix**, cliquez sur **Next** (vous avez déjà réalisé ce nettoyage lors de l'exercice précédente de cet atelier).
+1. Sur la page **Review synchronization tools**, sélectionnez **Microsoft Entra Connect Sync** et clmiquez sur **Next**.
+1.Sur la page **Sync your users** page, cliquez sur la tuile **Download Microsoft Entra Connect Sync**.
+1. Dans la notification en haut à droite (si la notification n'apparaît pas, allez chercher le fichier **AzureADConnect.msi** dans le dossier **Downloads** de LON-DC1), cliquez sur **Open File** sous le nom du fichier téléchargé : **AzureADConnect.msi**.
+1. Si une boite de dialogue **Do you want to run this file?** s'affiche, cliquez sur **Run**.
+1. L'installation de l'outil Entra Connect a démarré, sur la fenêtre **Welcome to Azure AD Connect**, cochez la case  **I agree to the license terms and privacy notice** avant de cliquer sur **Continue**.
+	>**Note :** Si la fenêtre **Welcome to Azure AD Connect** n'apparait pas, cherchez son icône dans la barre des tâches (la plus à droite) et cliquez dessus.
+1. Sur la page **Express Settings**, lisez les mentions concernant la synchronisation de la forêt **Adatum** et cliquez sur le bouton **Use express settings**.
+1. Sur la page **Connect to Azure AD**, saisissez ```dom@WWLxxxxx.onmicrosoft.com``` dans le champ **USERNAME**, ```ibForm@tion``` dans le champ **password**, et cliquez sur **Next**.
+1. Sur la page **Connect to AD DS**, saisissez ```ADATUM\Administrator``` dans le champ **USERNAME**, et ```Pa55w.rd``` dans le champ **PASSWORD** avant de cliquer sur **Next**.
+1. Dans la page **Azure AD sign-in configuration**, cochez la case **Continue without matching all UPN suffixes to verified domains** et cliquez sur **Next**.
+1. Sur la page **Ready to configure**, vérifiez que la case **Start the synchronization process when configuration completes** soit cochée avant de cliuquer sur **Install**.
+1. Attendez la fin de la mise en oeuvre de la synchronisation (cela prendra quelques minutes) et cliquez sur **Exit**.
+1. Cliquez sur le bouton démarrer en bas à gauche de la barre des tâches. Dans le menu **Démarrer**, ouvrez le groupe **Azure AD Connect** sur l'onglet **All apps** et cliquez sur **Synchronization Service** pour lancer cet outil.  
+	>**Note :** Si, en sélectionnant **Azure AD Connect** dans le menu **Démarrer** vous ne pouvez ouvrir le groupe et sélectionner **Synchronization Service**, il pourra être nécessaire de vous déconnecter et reconnecter sur LON-DC1.
+1. Dans la fenêtre **Synchronization Service Manager**, l'onglet **Operations** est affiché par défaut, vous permettant de surveiller le processus de synchronisation.
+1. Attentez que la tâche **Export** pour **WWLxxxxx.onmicrosoft.com** soit terminée ; la colonne **Status** devrait indiquer **success**. Une fois terminée, cliquez sur cette ligne.
+1. Dans la partie inférieure de la fenêtre, un panneau de détail affiche les informations concernant cette opération de synchronisation.
+1. Dans la section **Export Statistics**, notez le nombre d'utilisateurs qui ont été ajoutés et mis à jour.
+1. Maintenant que Entra Connect a réalisé la première synchronisation, les suivantes auront lieu toutes les 30 minutes. fermez l'outil **Synchronization Service Manager**. 
+1. Retournez sur votre navigateur Internet et fermez tous les onglets ouverts sauf **Microsoft 365 admin center** pour la tâche suivante. 
 
-1. Select the **Windows (Start)** icon in the lower left corner of the taskbar. In the **Start** menu that appears, select **Azure AD Connect** to expand the group, and then select **Synchronization Service** to start this desktop application.  
-	**Note:** If you selected **Azure AD Connect** in the **Start** menu and it expanded and you were able to select **Synchronization Service**, then proceed to the next step. However, if **Azure AD Connect** did not expand when you selected it in the **Start** menu, then you will need to close all applications and then log out of LON-DC1. The remaining instruction in this step is what to do if you needed to log out of LON-DC1.
-	1. Once you have logged off, follow the instructions from your lab hosting provider to select **Ctrl+Alt+Delete**. This will display the log on screen for LON-DC1.
-	1. Log in as **Adatum\Administrator** with a password of **Pa55w.rd**. Minimize **Server Manager** after it opens, and then open **Edge** and navigate to **htps://admin.microsoft.com**. Log in as **Holly@xxx.onmicrosoft.com** with a Password of **ibForm@tion**.
-	1. Then select the **Windows (Start)** icon in the lower left corner of the taskbar. In the **Start** menu that appears, select **Azure AD Connect** to expand the group (this time it should expand), and then select **Synchronization Service**.
-1. In the **Synchronization Service Manager** window, the **Operations** tab at the top of the screen is displayed by default so that you can monitor the synchronization process. 
-1. Wait for the **Export** profile to complete for **xxx.onmicrosoft.com**; when it finishes, its **Status** should be **completed-export-errors**. Once it's complete and you see this status, select this row.  
-1. In the bottom portion of the screen, a detail pane appears showing the detailed information for this operation. 
-	1. In the **Export Statistics** section, note the number of users that were added and the number that were updated. 
-	1. In the **Export Errors** section, note the errors that appear. If you recall back in the prior lab exercise when you ran the IdFix tool, there were two users with validation errors that you purposely did not fix (**Ngoc Bich Tran** and **An Dung Dao**). Select the links under the **Export Errors** column with the **Data Validation Failed** and you will see that these are the two users that were not synchronized by the Azure AD Connect tool due to these data validation errors.    
-	>**Note:** Because a synchronization had not been performed prior to this, the initial synchronization was a **Full Synchronization** (see the **Profile Name** column). Because the synchronization process will continue to run automatically every 30 minutes, any subsequent synchronizations will display **Delta Synchronization** as its **Profile Name**. If you leave the **Synchronization Service Manager** window open, after 30 minutes you will see that it attempts to synchronize the two users who were not synchronized during the initial synchronization. These will display as a **Delta Synchronization**.
-1. Now that you have seen Azure AD Connect complete a Full Synchronization, in the next task you will make some updates and manually force an immediate synchronization rather than waiting for it to synchronize updates every 30 minutes. Close the **Synchronization Service Manager**. 
-1. In your browser, close all tabs except for the **Microsoft 365 admin center** tab. 
-1. Leave LON-DC1 open as it will be used in the next exercise.
-
-## Tâche 2 - Créer des groupes pour Tester la synchronisation  
-To test the manual, forced synchronization process, you will also set up several group scenarios to verify whether the forced synchronization function is working in Azure AD Connect. You will create a new security group, and you will update the group members in an existing, built-in security group, all within Adatum’s on-premises environment.  
-
-Each group will be assigned several members. After the forced synchronization, you will validate that you can see the new security group in Microsoft 365 and that its members were synced up from the on-premises group to the cloud group. You will also validate that you can NOT see the built-in security group in Microsoft 365, even though you added members to it in Adatum's on-premises environment. Built-in groups are predefined security groups that are located under the Builtin container in Active Directory Users and Computers. They are created automatically when you create an Active Directory domain, and you can use these groups to control access to shared resources and delegate specific domain-wide administrative roles. However, they are not synchronized to Microsoft 365, even after adding members to them within their on-premises AD group. You will validate this functionality in this task.
-1. You should still be logged into **LON-DC1** as the **Administrator** from the prior task.
-1. If **Server Manager** is closed, then re-open it now; otherwise, select the **Server Manager** icon on the taskbar.
-1. In **Server Manager**, select **Tools** at the top right side of the screen, and then in the drop-down menu select **Active Directory Administrative center**
-1. You will begin by adding members to one of the built-in security groups. In the **Active Directory Administrative Center** console tree, select **Adatum (local)**, double click the **Builtin** folder. This will display all the built-in security group folders that were automatically created at the time the **Adatum.com** domain was created.
-1. In the detail pane on the right, double-click the **Print Operators** security group.
-1. In the **Print Operators Properties** window, select the **Members** tab and then select the **Add** button.
-1. In the **Select Users, Contacts, Computers, Service Accounts, or Groups** window, in the **Enter the object names to select** field, type the following names (type all three at once with a semi-colon separating them), and then select **Check Names**:
-	- **Ashlee Pickett** 
-	- **Juanita Cook** 
-	- **Morgan Brooks**  
-8. Select **OK** to return to the **Print Operators Properties** window.
-
-9. In the **Print Operators Properties** window, select **OK** to return to the **Active Directory Administrative Center** window.
-1. You will now create a new security group. In the console tree select **Adatum (local)**, right-click on the **Research** OU, select **New,** and then select **Group**.
-1. In the **New Object - Group** window, enter the following information:
-	- Group name: **Manufacturing**
-	- Group scope: **Universal**
+## Tâche 2 - Créer des groupes pour Tester la synchronisation
+Vous allez maintenant créer un nouveau groupe de sécurité dans ADDS, le mettre à jour et l'inclure dans un groupe *built-in* de l'ADDS.  
+Chaque groupe se verra affecté plusieurs membres. Après la synchronisation forçée, vous vérifierez que le groupe de sécurité est désormais visible dans Entra Id. Vous vérifierez également que le groupe *built-in* n'est PAS visible dans Entra Id, bien qu'il comporte des utilisateurs présent dans l'annuaire.  
+Les groupes *Built-in* sont des groupes prédéfinis dans l'ADDS, situés dans le conteneur système **Builtin**. Ils sont créés nativement lors de l'installation de l'ADDS et n'ont d'utilité que dans la mise ne place de la sécurité de l'ADDDS. N'étant pas utiles dans le cloud, vous vérifierez ici qu'ils n'y sont pas synchronisés.
+1. Vous devriez toujours être connecté sur **LON-DC1** avec le compte **Administrator** à l'issue de la tâche précédente.
+1. Si vous aviez fermé l'outil **Server Manager**, réouvrez-le maintenant ; sinon, cliquez sur son icône dans la barre des tâches pour le maximiser.
+1. Dans l'outil **Server Manager**, cliquez sur le menu **Tools** en haut à droite et lancez le **Active Directory Administrative center**.
+1. Vous allez commencer par ajouter des membres dans un groupe *built-in*. Dans la console **Active Directory Administrative Center**, sélectionnez **Adatum (local)**, dans la navigation à gauche.
+1. Double-cliquez sur le conteneur **Builtin**. Cela va fficher tous les groupes *built-in* qui ont été créés uatomatiquement lors de l'installationd de l'ADDS de Adatum.
+1. Dans le panneau détail à doite, double-cliquez sur le groupe **Print Operators**.
+1. Dans la fenêtre des propriétés de **Print Operators**, choisissez l'onglet **Members**et cliquez sur le bouton **Add**.
+1. Dans la boite de dialogue **Select Users, Contacts, Computers, Service Accounts, or Groups**, tapez les noms d'utilisateur suivant dans le champ **Enter the object names to select** :```Ashlee; Juanita; Morgan``` avant de cliquer sur le bouton **OK**.
+1. Dans la fenêtre **Print Operators**, cliquez encore sur **OK** pour revenir sur la fenêtre **Active Directory Administrative Center**.
+1. Vous allez maintenant créér un groupe de sécurité. Dans l'arborescence de la console, double-cliquez sur **Adatum (local)**.
+1. Faites un clic-droit sur l'OU **Research**, choisissez successivement **New >** puis **Group**.
+1. Dans la fenêtre **Create Group:** saisissez les informations suivantes :
+	- Group name: ```Manufacturing```
 	- Group type: **Security**
-1. Switch to the members tab and  repeat previous steps to add the following members to this group:  
-	- **Bernardo Rutter**
-	- **Charlie Miller**
-	- **Dawn Williamson**  
-1. Select **OK** and leave the **Active Directory Administrative Center** window open for the next task.  
+	- Group scope: **Universal**
+1. Basculez sur l'onglet **Members** et répétez les opérations que vous avez faites sur le premier groupe pour ajouter les utilisateurs suivant à ce groupe : ```Bernardo; Charlie; Dawn```.
+1. Cliquez sur **OK** mais laissez l'outil **Active Directory Administrative Center** ouvert pour la tâche suivante.  
  
 ## Tâche 3 - Modifier des groupes pour Tester la synchronisation 
-This task sets up another scenario for testing whether the sync process is working in Azure AD Connect. In this task you will change the members of a group to see if they are reflected in the cloud once the group is synced.
-1. This task continues from where the previous task left off in LON-DC1. In the **Active Directory Administrative Center** window, in the console tree select **Adatum (local)**, double-click the **Research** organizational unit to open it.  
-	In the detail pane on the right, double-click the **Research** security group.  
-1. In the **Research Properties** window, select the **Members** tab to view the members of this group.
-1. You want to remove the following users from the group:
-	- **Cai Chu**  
-	- **Shannon Booth**  
-	- **Tia Zecirevic**  
-	While you can remove each user individually, the quickest way is to remove all three at one time. Select the first user, then hold the **Ctrl** key down while selecting the other two. With all three users selected, select the **Remove** button. Verify the three users have been removed, and then select **OK.**
-1. Close the **Active Directory Administrative Center** window.
-1. Leave LON-DC1 open as you will continue using it in the next task. 
-	>**Important:** You should perform the next task immediately after completing this one so that Azure AD Connect doesn’t automatically synchronize the changes that you just made to the identity objects in the previous tasks.
+1. Dans l'outil **Active Directory Administrative Center**, docuble-cliquez sur **Adatum (local)** puis sur l'OU **Research** dans l'arborescence de la console.
+1. Dans le panneau de droite, parcourez la liste des utilisateurs et des groupes pour double-cliquer sur le groupe de sécurité **Research**.
+1. Dans la fenêtre de propriétés du groupe **Research**, sélectionnez l'onglet **Members** pour visualiser les membres du groupe.
+1. Vous souyhaitez supprimer plusieurs membres du groupe : sélectionnez la ligne de **Cai Chu**
+1. En maintenant la touche **[Ctrl]**, cliquez sur les lignes de **Shannon Booth** et **Tia Zecirevic**.
+1. Une fois les trois utilisateurs sélectionnés, clisquez sur le bouton **Remove**.
+1. Vérifiez que les utilisateurs choisis ne sont plus dans la liste des membres et cliquez sur **OK**.
+1. Fermez la console **Active Directory Administrative Center**.
 
-## Task 4 - Forcer la synchronisation   
-In this task, you will force a sync between Adatum’s on-premises AD and Azure AD instead of waiting 30 minutes for Azure AD Connect to synchronize the identity objects. You must use PowerShell to perform a forced synchronization.
-1. On LON-DC1, if the **Windows PowerShell** application is still open from a prior action, then **you MUST close it now**.  
-	>**Important:** The reason for this step is that if Windows PowerShell was opened BEFORE the Azure AD Connect setup, the cmdlet **Start-ADSyncSyncCycle** that is used in step 3 will not be available and you will receive an error indicating that the cmdlet is not recognized when you attempt to run it. Therefore, it’s recommended that at this step, you close Windows PowerShell if it’s open and then restart it.  
-1. At this point, Windows PowerShell should NOT be open. To open it, select the **magnifying glass (Search)** icon in the taskbar, type **PowerShell** in the Search box, and then in the menu, select **Windows PowerShell** (not Windows PowerShell ISE).  
-1. In **Windows PowerShell**, run the following command to manually run a sync cycle between Adatum’s on-premises AD and Azure AD. The **Delta** switch is used here so that only the updates are synchronized.  
-	```Start-ADSyncSyncCycle -PolicyType Delta```
-1. Once the synchronization process has successfully completed, minimize your PowerShell window (do not close it) and proceed to the next task. You will use PowerShell in the next task to validate some of the results of the directory synchronization.
-5. Remain in LON-DC1 and proceed to the next task.
+## Task 4 - Forcer la synchronisation
+Dans cette tâche, vous allez forcer volontairement la synchronisation entre l'ADDS et Entra Id, plutôt que d'attendre jusqu'à 30 minutes qu'elle ait lieu. Vous allez utiliser Windows PowerShell pour lancer cette synchonisation.
+1. Sur LON-DC1, si la console **Administrator: Windows PowerShell** est toujorus ouverte, **vous devez la fermer maintenant**.  
+	>**Important :** Le module Powershell n'était pas encore installé lorsque vous avez précédemment lançé la console Windows Powershell : il vous faut donc désormais la relancer pour avoir accès aux commandes de ce module que vous allez utiliser dans cette tâche.
+1. Faites un clic-droit sur le bouton Démarrer, tout à gauche de la barre des tâches et sélectionnez **Windows Powershell (Admin)**.
+1. Dans la fenêtre **Administrator: Windows PowerShell**, utilisez la comande suivante pour lancer la synchronisation : ```Start-ADSyncSyncCycle -PolicyType Delta```
+	>**Note :** Le paramêtre **Delta** est utilisé pour ne synchoniser que les mises à jour.
+1. Une fois la synchrnonisation lançée, minimisez la console PowerShell window (ne la fermez pas) et passez à la tâche suivante.
 
 ## Task 5 - Résultat de la Synchronisation   
-In this task, you will validate whether the changes you made earlier were synchronized from Adatum’s on-premises AD to Azure AD. You will validate the changes using the Microsoft 365 admin center, and then you’ll perform the same validations using Windows PowerShell. This gives you experience in validating synchronization using both the Microsoft 365 admin center GUI and PowerShell.
-1. Switch to the **LON-CL1** client VM. 
-2. Log into LON-CL1 as the **Administrator** with the password **Pa55w.rd**.
-3. Now let’s examine the synchronization results for the groups that you updated in the previous tasks. In your **Edge** browser, if a tab exists for the **Microsoft 365 admin center**, then proceed to the next step.
-	Otherwise, enter **https://admin.microsoft.com/** in the address bar to open the **Microsoft 365 admin center** page, log in as **holly@xxx.onmicrosoft.com** (where xxx is the tenant ID) with a password of **ibForm@tion**.
-1. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Teams & groups**, and then select **Active teams & groups**.
-1. In the **Active teams & groups** window, verify that the **Manufacturing** group appears in the **Security** list, and that the **Print Operators** group does NOT appear. As mentioned previously, built-in groups such as the **Print Operators** security group are not synced from the on-premises environment to Microsoft 365, even when you add members to the group as you did in the earlier task.
-	>**Note:** You may need to wait up to 10 minutes before the **Manufacturing** group appears. Continue to refresh the list until you see the group.  
-1.	In the **Active teams & groups** list, locate the **Manufacturing** group.  
-	In the **Sync status** verify that it was **Synced from on-premises** icon (You can do this by holding your mouse over the icon that appears in the **Sync status** column to display to icon name).
-1. Select the **Manufacturing** group to open the **Manufacturing** group window.
-1. In the **Manufacturing** group window, note up under the Manufacturing title that it’s a security group that contains three members. Also note the message indicating that you can only manage this group in your on-premises environment using either Active Directory users and groups (i.e. Users and Computers) or the on-premises Exchange admin center.  
-	The window currently displays the **General** tab. Select the **Members** tab. Note that the group has no owner (the system did not automatically assign Holly Dickson as the group owner). Verify that the three users that you added as members of the on-premises group have been synced up and are members of this cloud-based group as well. Close the **Manufacturing** group window.
-1. Now let’s examine this group using Windows PowerShell. If **Windows PowerShell** is already open on the taskbar, then select the PowerShell icon and proceed to the next step; otherwise, type **PowerShell** in the **Search** field on the taskbar and then select the **Windows PowerShell** application. 
-1. You should begin by running the following command that connects your PowerShell session to the Microsoft Online Service:  
-	```Connect-MsolService```
-1. In the **Sign in** dialog box, log in as **holly@xxx.onmicrosoft.com** (where xxx is your tenant ID) with a password of **ibForm@tion**.
-1. Run the following command that displays a list of all the Azure AD groups:  
-	```Get-MsolGroup```
-1. In the list of groups that’s displayed, you should verify that you can see the **Research** and **Manufacturing** groups, and that you do not see the  **Print Operators** group (this is the built-in group that did not synchronize from on-premises to Azure AD).
-1. To verify that the group membership changes that you made in your on-premises Active Directory were synced to the **Research** group in Azure AD, you should copy the **ObjectID** for the **Research** group to your clipboard by dragging your mouse over the ObjectId string and right-clicking.   
-1. Then run the following command to display the members of this group. In the command, replace **<ObjectId>** with the value that you copied in the prior step by right-clicking to paste in the value.  
-	```Get-MsolGroupMember -GroupObjectId <ObjectID>```
-1. Verify the membership of the Research group does **NOT** contain the following users that you earlier removed from the group in AD DS:
+1. Basculez sur la machine virtuelle **LON-CL1**.
+1. Log into LON-CL1 as the **Administrator** with the password **Pa55w.rd**.
+1. Examinons maintenant les résultats de la synchronisation. Lancez votre navigateur Edge et ouvrez le centre d'administration Microsoft 365 en utilisant l'adresse suivante : ```https://admin.microsoft.com```.
+1. Connectez vous avec le compte de Dominique (```dom@WWLxxxxx.onmicrosoft.com``` avec son mot de passe ```ibForm@tion```.
+1. Dans le portail **Microsoft 365 admin center**, dans le menu de navigation à gauche, ouvrez le groupe d'options **Teams & groups** pour sélectionner **Active teams & groups**.
+1. Dans la liste **Active teams & groups**, vérifiez qu'un groupe **Manufacturing** apparaît sous l'onglet **Security groups**.
+1. Vérifiez que, au contraire le groupe **Print Operators** n'est pas présent.
+	>**Note :** Il vous faudra peu-être attendre quelques minutes pour que le groupe **Manufacturing** apparaisse, continuez à rafraichir la liste avec le bouton **Refresh** jusqu'à ce qu'il soit présent.
+1.	Dans la liste **Active teams & groups**, sur la ligne du groupe **Manufacturing** vérfiiez que la colonne **Sync status** contiend une icône **Synced from on-premises**.
+	Cliquez sur le groupe **Manufacturing** pour ouvrir son panneau de propriétés.
+1. Sur le panneau **Manufacturing**, notez le message indiquant que vous ne pouvez gérer cet objet ici car il a été synchronisé depuis votre ADDS.  
+	CLiquez sur l'onglet **Members** et vérifiez que trois utilisateurs sont memebres de ce groupe : ceux que vous avez ajouté lors d'une précédente tâche de cet exercice.
+1. Fermez le panneau **Manufacturing**.
+1. Regardons maintenant le contenu de ce groupe en PowerShell. Dans la barre des tâches, cliquez sur l'icone de l'outil **Administrator: Windows PowerSHell ISE** que vous aviez réduit précédemment.
+1. Dans la partie basse (fond bleu) de l'outil, tapez la commande suivante pour vous connecter à Entra Id : ```Connect-MgGraph -scopes User.Read.All,Group.Read.All```.
+1. Dans la fenêtre **Sign in** qui apparaît, connectez-vous avec le compte de Dominique Skyetson : **dom@WWLxxxxx.onmicrosoft.com** (ou sélectionnez le dans la fenêtre **Pick an Account** le cas échéant) et son mot de passe (**ibForm@tion**). 
+1. Dans la fenêtre **Permission requested**, cochez la case **Consent on behalf of your organization** et cliquez sur **Accept**.
+1. Utilisez la commande suivante pour chercher le groupe **Print Operators** :
+	```Get-MgGroup -Filter "DisplayName eq 'Print Operators' and MailEnabled eq false"```
+1. Vérifiez que la commande ne renvoit pas de réponse, ceci indiquant que le groupe **Print Operators** est introuvable car il n'a pas été synchronisé.
+1. Utilisez la commande suivante pour obtenir identifier le groupe **Marketing** :
+	```$mktGroup = Get-MgGroup -Filter "DisplayName eq 'Marketing' and MailEnabled eq false"```
+1. Vous pouvez utiliser la commande suivante pour vérifier si le groupe **Marketing** a été trouvé :
+	```$mktGroup```
+1. Utilisez la commande suivante pour afficher la liste des utilisateurs inclus dans le groupe **Marketing** :
+	```Get-MgGroupMember -GroupId $mktGroup.Id | ForEach-Object { Get-MgUser -UserId $_.Id} | Out-GridView```
+
+1. VVérifiez que les utilisateurs suivants, que vous aviez enlevé à la tâche précédente **ne sont pas présents** dans la liste affichée :
 	- Cai Chu
 	- Shannon Booth
 	- Tai Zecirevic
-1. Repeat steps 13-14 for the **Manufacturing** security group. In the **Manufacturing** group, you added the following members in AD DS, each of which you should see in the list of group members:
+1. Vérifiez que les utilisateurs suivants, que vous aviez ajouté à la tâche précédente sont présents dans la liste affichée :
 	- Bernardo Rutter
 	- Charlie Miller
 	- Dawn Williamson
-1. Once you have completed the validation steps, minimize your PowerShell window (do not close it) and proceed to the next Lab. 
+1. Une fois votre vérification effectuée, fermez la fenêtre d'affichage des membres du groupe mais laissez ouvert l'outil **Administrator: WIndows PowerShell** pour l'exercice suivant.
 
 ## Résultat
 Dans cet exerice, vous avez installé l'outil de synchronisation Entra Connect et utilisé certaines de ses fonctionnalités.
