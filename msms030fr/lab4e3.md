@@ -4,70 +4,73 @@ title: "Lab4-Ex3 - Activation de la jonction de domaine hybride"
 length: "00"
 ---
 # Scénario
-In this exercise, you will run Azure AD Connect to configure Hybrid Azure AD join. Hybrid Azure AD join enables automatic account configuration and Single-Sign-On to cloud services for devices joined to Adatum's on-premises Active Directory. You will verify the device sync and verify the Hybrid Azure AD Join on LON-CL1 by using dsregcmd and the Windows 10 Mail app.
+Dans cet exercice, vous allez configurer Entra Connect pour configurer la jonction de domaine Hybride. La jonction de domaine hybride permet aux ordinateurs de l'entrerprise qui ont un compte dans ADDS d'être automatiquement inscrits et reconnus dans Entra Id.
 
 # Objectifs
 A la fin de cet exercice, vous aurez une meilleure connaissance de :
+- La configuration de la jonction hybride des postes de travail dans Entra Connect
 
 ## Tâche 1 - Configurer la jonction hybride Entra Id
-In this task, you will run the Azure AD Connect setup wizard to enable Hybrid Azure AD join of devices joined to Adatum’s on-premises Active Directory. 
-1. You should still be logged into **LON-DC1** as the **Administrator** from the prior exercise.
-1. Start **Azure AD Connect** by double-clicking the icon on the Desktop.
-1. In **Microsoft Azure Active Directory Connect**, click **Configure**.
-1. In **Additional tasks**, select **Configure device options**, and then select **Next**.
-1. In **Overview**, select **Next**.
-1. In **Connect to Azure AD** window, enter **Holly@xxx.onmicrosoft.com** (where xxx is your tenant ID) in the **USERNAME** field, enter **ibForm@tion** in the **PASSWORD** field, and then select **Next**.
-1. If a **Sign in to your account** window pops up, use it to sign in as **Holly@xxx.onmicrosoft.com** (where xxx is your tenant ID) with the password **ibForm@tion**.
-1. In **Device options**, select **Configure Hybrid Azure AD join**, and then select **Next**.
-1. In **Device operating systems**, select **Windows 10 or later domain-joined devices**, and then select **Next**.
-1. In SCP configuration, select the checkbox to the left of **Adatum.com**, and under **Authentication Service** select **Azure Active Directory**, and select **Add**.
-1. In the **Enterprise Admin Credentials** window, enter **ADATUM\Administrator** in the **USERNAME** field, enter **Pa55w.rd** in the **PASSWORD** field, and then select **OK**.
-1. Back in **SCP configuration**, select **Next**.
-1. **In Ready to configure**, select **Configure**.
-1. In **Configuration complete**, select **Exit**.
-1. Switch to **LON-CL1** and if necessary, close any open applications and then select the **Start button**, select the icon for **Administrator** and then select sign out.
-1. On the log-in screen, click **Other user** and sign-in as **Beth@xxxUPNxxx** (where xxxUPNxxx is the name your lab hosting provider assigned to the custom domain) account with a password of **Pa55w.rd**.
+Dans cette tâche, vous allez utiliser l'assisttant de configuration de Entra Connect pour activer la jponction hybride des ordinateurs membres de l'ADDS.
+1. Basculez sur la machine virtuelle **LON-DC1** sur laquelle vous devriez être resté connecté avec le compte **Administrator**.
+1. Sur le bureau, double-cliquez sur l'icône **Azure AD Connect** pour lancer l'outil Entra Connect.
+1. Dans la page d'accueil **Welcome to Azure AD Connect**, cliquez sur le bouton **Configure**.
+1. Sur la page **Additional tasks**, sélectionnez la ligne **Configure device options** puis cliquez sur **Next**.
+1. Sur la page **Overview**, cliquez sur **Next**.
+1. Sur la page **Connect to Azure AD**, saisissez les informations de connexion de Dominique Skyetson (```dom@WWLxxxxx.onmicrosoft.com``` dans le champ **USERNAME** et ```ibForm@tion``` dans le champ **PASSWORD**) puis cliquez sur **Next**.
+1. Si une fenêtre **Sign in to your account** surgit, utilisez la pour vous connecter avec le compte de Dominique.
+1. Sur la page **Device options**, sélectionnez **Configure Hybrid Azure AD join** et cliquez sur **Next**.
+1. Sur la page **Device operating systems**, cochez la case **Windows 10 or later domain-joined devices** et cliquez sur **Next**.
+1. Sur la page **SCP configuration**, sélectionnez la case à cocher en regard de **Adatum.com**
+	1. Sélectionnez **Azure Active Directory** dans le champ **Authentication Service**.
+	1. Cliquez sur **Add**.
+	1. Dans la boite de dialogue **Enterprise Admin Credentials**, entrez ```ADATUM\Administrator``` dans le champ **USERNAME** et ```Pa55w.rd``` Dasn le champ **PASSWORD**.
+	1. Cliquez sur **OK**.
+1. De retour sur la fenêtre **SCP configuration**, cliquez sur **Next**.
+1. Sur la page **Ready to configure**, cliquez sur le bouton **Configure**.
+1. Sur la page **Configuration complete**, cliquez sur **Exit**.
+1. Basculez sur la machine **LON-CL1** faitres un clic-droit sur le bouton **Démarrer** et choisissez **Shut down or sign out >** puis **sign out**.
+1. Si une liste d'applications ouvertes empèchant la fermeture de session s'affiche, cliquez sur **SIgn out anyway**.
+1. Sur la mire d'ouverture de session, cliquez sur **Other user** et connectez vous avec le compte de  ```Beth@labxxxxx.godeploylabs.com``` et le mot de passe ```Pa55w.rd```.
 
 ## Tâche 2 - Affecter des licences
-In this task, you assign product licenses to a synced user.
-1. Switch to **LON-DC1**, after finishing the previous lab exercise, you should still be logged into Microsoft 365 in your Edge browser as Holly Dickson.
-1. In your **Edge** browser, select the **Microsoft 365 admin center** tab, and then in the left-hand navigation pane, expand **Users**, and then select **Active Users**.
-1. In **Active users**, in **Search active users list** enter **beth** and press Enter.
-1. Select **Beth Burke**.
-1. In the menu bar above the list of users, select **Manage product licenses**. If you do not see this button, select the **ellipsis** icon (**More actions**). In the drop-down menu that appears, select **Manage product liceneses**.
-1. In the **Licenses and apps** pane that appears for Beth Burke, select **Add License* and turno on **Assign license to Beth Burke**, and click **Save changes**, then close the pane by clicking the **X** in the upper right-hand corner.
+1. Basculez de nouveau sur **LON-DC1**, vous devriez encore être connecté en tant que Dominique Skyetson sur le portail **Microsoft 365 admin center** dans **Edge**.
+1. Dans le portail **Microsoft 365 admin center**, naviguez vers la liste des **Active Users** si nécessaire.
+1. Dans la liste des **Active users**, dans le champ **Search active users list** entrez ```beth``` et appuyez sur **[Entrée]**.
+1. Cliquez sur le nom de **Beth Burke**.
+1. Dans le panneau qui apparait concernant les informations de **Deth Burke**, cliquez sur l'onglet **Licenses and apps**.
+1. Sur l'onglet **Licenses and apps** de Beth Burke, select **Add License* cochez les deux cases en regard des licences disponibles et cliquez sur **Save changes**
+1. Cliquez sur le **X** en haut à droite pour fermer le panneau d'informations de Beth Burke.
 
 ## Tâche 3 - Verifier la synchronisation des périphériques
-In this task, you will start another sync cycle and verify that computer accounts from Adatum's on-premises Active Directory are synced as devices to Azure Active Directory.
-1. You should still be logged into **LON-DC1** as the **Administrator** from the prior task.
-1. In the **PowerShell** window, press the **Up arrow** key to repeat the last command:  
+1. Sur LON-DC1, dans la fenêtre **Administrator: Windows PowerShell**, utilisez la flèche haute du clavier pour rappeler la dernière commande :  
    ```Start-AdSyncSyncCycle -PolicyType Delta```
-1. After finishing the previous exercise, you should still be logged into Microsoft 365 in your Edge browser as Holly Dickson.
-1. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **...Show all** to display all the navigation menu options.
-1. In the left-hand navigation pane, under **Admin centers**, select **Azure Active Directory**.
-1. In the **Entra admin center**, in the left-hand navigation pane, select **Devices/All deives**.
-1. In the **Devices | All devices** blade, look for **LON-CL1**. If you do not see the device, wait a few minutes, and above the list of devices, click **Refresh** until you see **LON-CL1**.
+1. Appuyez sur **[Entrée]** pour lancer la commande de synchronisation.
+1. De retour dans votre navigateur Internet, dans le portail **Microsoft 365 admin center**, dans le menu de navigation de gauche, cliquez sur **...Show all** pour afficher toutes les options.
+1. En bas du menu de navigation ,dans la section **Admin centers**, cliquez sur **Identity** pour ouvrir le centre d'administration Entra.
+1. Dans le portail **Entra admin center**, dans le menu de navigation à gauche, ouvrez le groupe d'options **Devices** pour sélectionner **All devices**.
+1. Dans le fenêtre **Devices - All devices**, vérifiez que **LON-CL1** apparait. Si ce n'est pas le cas, attendez un instant et, au dessus de la liste des périphériques, cliquez sur le bouton **Refresh** jusqu'à voir apparaitre **LON-CL1**.
 
 ## Tâche 4 - Verifier l'hybridation Entra Id
-In this task, you will verify the Hybrid Azure AD Join by running the dsregcmd command. Moreover, you will verify Single-Sign-On and automatic account configuration in the Windows 10 Mail app.
-1. Switch to **LON-CL1**.
-1. You should still be logged in as **Beth** from the previous task. In order to trigger the Hybrid Join, you need to sign out as Beth.
-1. On the log-in screen, you log in as **Beth@xxxUPNxxx** (where xxxUPNxxx is the name your lab hosting provider assigned to the custom domain) account with a password of **Pa55w.rd**.
-1. Right-click the **Windows (Start) icon** in the lower left corner of the taskbar, and select **Windows Powershell**.
-1. Type ```dsregcmd /status``` and press Enter.
-1. In the output, beside **AzureADJoined** you should see **YES**. If not, wait a few moments and try again.
-1. Close **Windows Powershell**.
-1. Select the **Windows (Start)** icon in the lower left corner of the taskbar, and select **Settings**.
-1. In **Windows Settings**, select **Accounts**.
-1. Select **Email & app accounts**. You should see Beth's Work or school account.  
- >  **Note:** If you do not see the **Beth@xxxUPNxxx** account listed, log off and back on again and try again from **Step 8**.
-1. Close **Settings**.
-1. Select the **Windows (Start)** icon in the lower left corner of the taskbar, and select **Mail**.
-1. In the **Add an account** pop-up, Beth's work or school account should be offered at the top of the list. Select it.
-1. The account should be configured automatically without any intervention. When the **All done!** message appears, click **Done**.
-	>**Note:** Syncing might not work yet, if the mailbox was not created. If Beth receives the first mail, syncing should work.
-1. Close the **Mail** app and then Sign out as Beth.
+1. BAsculez de nouveau sur la machine **LON-CL1**.
+1. Vous devriez toujours être connecté avec le compte de Beth. Pour vosu assurer que la jonction hybride soit effective le plus rapidement possible, il vous faut vous déconnecter : faites un clic-droit sur le bouton **Démarrer** et choisissez **Shut down or sign out >** puis **sign out**.
+1. Si une liste d'applications ouvertes empèchant la fermeture de session s'affiche, cliquez sur **SIgn out anyway**.
+1. Sur la mire d'ouverture de session, connectez vous avec le compte de  ```Beth@labxxxxx.godeploylabs.com``` et le mot de passe ```Pa55w.rd```.
+1. Faites un clic-droit sur le bouton **Démarrer** sur la barre des tâches et cliquez sur **Windows Powershell**.
+1. Utilisez la commande suivante pour afficher l'état de la jonction de la machine : ```dsregcmd /status```.
+1. Au début du résultat, vous devriez voir **YES** en regard de **AzureADJoined**. Si ce n'est pas le cas, attendez quelques instants avant de réessayer.
+1. Fermez la fenêtre **Windows Powershell**.
+1. Ouvrez le menu **Démarrer** et cliquez sur l'engrenage **Settings** dans son menu de navigation à gauche.
+1. Dasn la fenêtre **Windows Settings**, cliquez sur **Accounts**.
+1. Cliquez sur l'onglet **Email & accounts**. Vous devriez y voir le compte *Work or school* de Beth.
+1. Fermez la fenêtre **Settings**.
+1. Dans la barre des tâches, dans la zone de recherche, tapez ```mail``` pusi cliquez sur l'application **Mail** dans le menu démarrer.
+1. Dans la boite de dialogue **Add an account**, le compte de Beth devrait être proposé comme premier choix dans la liste : cliquez dessus.
+1. Une fois la configuration terminée, dans la fenêtre **All done!**, cliquez sur **Done**.
+	>**Note :** Il est possible que la synchonisation de la boite aux lettres ne soirt pas encore fonctionnelle et/ou que la boite aux lettres de Beth ne soit pas encore totalement opérationnelle. Ce n'est pas particulièrement pénalisant dans le contexte de cet exercice.
+1. Fermez l'application **Mail** et déconnectez-vous de LON-CL1 avec le compte de beth comme déjà réalisé précédemment.
 
 ## Résultat
+A l'issue de cet exercice, vous avez vu la procédure permettant de mettre en place la jonction hybride des postes de travail entre ADDS et Entra Id.
 
 # Fin de l'atelier 4

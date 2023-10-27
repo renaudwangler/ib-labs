@@ -126,7 +126,7 @@ Dans cette tâche, vous allez forcer volontairement la synchronisation entre l'A
 	- Bernardo Rutter
 	- Charlie Miller
 	- Dawn Williamson
-1. Une fois votre vérification effectuée, fermez la fenêtre d'affichage des membres du groupe mais laissez ouvert l'outil **Administrator: WIndows PowerShell** pour l'exercice suivant.
+1. Une fois votre vérification effectuée, fermez la fenêtre d'affichage des membres du groupe.
 
 ## Résultat
 Dans cet exerice, vous avez installé l'outil de synchronisation Entra Connect et utilisé certaines de ses fonctionnalités.
