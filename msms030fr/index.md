@@ -29,32 +29,32 @@ ___
 ### Exercice 3 - [Activation de la jonction de domaine hybride](lab4e3)
 ___
 ## Atelier 05 - Déploiement de Microsoft 365 Apps
-### Exercice 1 - Déploiement de Microsoft 365 apps for enterprise
-### Exercice 2 - Déploiement de Microsoft 365 apps via MDM
+### Exercice 1 - [Déploiement de Microsoft 365 apps for enterprise (en)](lab5e1)
+### Exercice 2 -[Déploiement de Microsoft 365 apps via MDM (en)](lab5e2)
 ___
 ## Atelier 06 - Configuration des services Exchange Online
-### Exercice 1 - Paramètres de transport des messages
-### Exercice 2 - Configuration de la protection de la messagerie
-### Exercice 3 - Configuration des stratégies d'accès clients
+### Exercice 1 - [Paramètres de transport des messages (en)](lab6e1)
+### Exercice 2 - [Configuration de la protection de la messagerie (en)](lab6e2)
+### Exercice 3 - [Configuration des stratégies d'accès clients (en)](lab6e3)
 ___
 ## Atelier 07 - Déploiement de Microsoft Teams
-### Exercice 1 - Configuration de Microsoft Teams
+### Exercice 1 - [Configuration de Microsoft Teams (en)](lab7e1)
 ___
 ## Atelier 08 - Configuration de Sharepoint Online
-### Exercice 1 - Configuration des paramètres de SharePoint Online
-### Exercice 2 - Configuration de sites SharePoint Online
-### Exercice 3 - Partage externe dans Sharepoint Online
+### Exercice 1 - [Configuration des paramètres de SharePoint Online (en)](lab8e1)
+### Exercice 2 - [Configuration de sites SharePoint Online (en)](lab8e2)
+### Exercice 3 - [Partage externe dans Sharepoint Online (en)](lab8e3)
 ___
 ## Atelier 09 - Autres outils Microsoft 365
-### Exercice 1 - Viva Engage
-### Exercice 2 - OneDrive for Business
+### Exercice 1 - [Viva Engage (en)](lab9e1)
+### Exercice 2 - [OneDrive for Business (en)](lab9e2)
 ___
 ## Atelier 10 - Sécurité et conformité dans Microsoft 365
-### Exercice 1 - Création de labels de sensibilité
+### Exercice 1 - [Création de labels de sensibilité (en)](lab10e1)
 ___
 ## Atelier 11 - Surveillance et dépannage de Microsoft 365
-### Exercice 1 - Etat de santé du service Microsoft 365
-### Exercice 2 - Dépannage de flux de messages
+### Exercice 1 - [Etat de santé du service Microsoft 365 (en)](lab11e1)
+### Exercice 2 - [Dépannage de flux de messages (en)](lab11e2)
 ___
 ## Conseils génériques
 - Les ateliers doivent être réalisés dans l'ordre prévu pour éviter les surprises, avec les exceptions/adaptations suivantes :
