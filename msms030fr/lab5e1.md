@@ -4,94 +4,94 @@ title: "Lab5-Ex1 - Déploiement de Microsoft 365 apps for enterprise"
 length: "00"
 ---
 # Scénario
-You have taken on the persona of Dominique Skyetson, Adatum's Enterprise Administrator, and you have Microsoft 365 deployed in a virtualized lab environment. In this exercise, you will perform the tasks necessary to manage a user-driven Microsoft 365 Apps installation. Performing a user-driven Microsoft 365 Apps installation is a two-step process: 1) configuring the user account so the user is eligible to download and install the setup file, and 2) performing the installation.  
-In the first two tasks in this exercise, you will verify the following conditions that affect whether a user can be blocked from downloading the Microsoft 365 Apps for enterprise suite:
-- The user does not have an appropriate Office 365 license (which you will verify in Task 1). 
-- An admin turns off the global Office download setting that controls the downloading of mobile and desktop apps for all users (which you will verify in Task 2).  
-In the final task in this exercise, you will install the Microsoft 365 Apps for enterprise suite for one of Adatum's users.
+Vous avez pris l'identité de Dominique Skyetson, Administrateur de l'entreprise Adatum, et vous avez commençé à déployer Microsoft 365 dans un environnemùent virtuel pilote. Dans cet exerice, vous allez réaliser les tâches nécessaires pour comprendre l'installation de la suite Office par les utilisateurs. Cette installation *user-driven* est un processus à deux étapes : 1) Configurer le compte utilisateur de telle sorte qu'un utilisateur éligible puisse télécharger les fichiers et réaliszer l'installation, et 2) préaliser l'installation de la suite Office.  
+Dasn les deux premières tâches de cet exercice, vous allez vérifier en quoi les conditions suivantes affectent la possibilité pour un utilisateur de télécharger la suite Microsoft 365 Apps for enterprise :  
+- L'utilisateur n'a pas de licence pour la suite Office (ce que vous vérifierez en tâche 1). 
+- Un administrateur désactive le paramètre global permettant aux utilisateurs le télécgargement des applications pour tous les utilisateurs (testé en tâche 2).  
+Dans la dernière têche de cet exercice, vous installerez la suite Microsoft 365 Apps for enterprise depuis le compte d'un des utilisateurs de Adatum.
 
 # Objectifs
 A la fin de cet exercice, vous aurez une meilleure connaissance de :
+- L'impact des licences sur la possibilité, pour les utilisateurs, d'installer la suite Office.
+- Le paramètre global permettant d'empèche de télécharger l'assistant d'installation de la suite Office.
+- l'installation *user-driven* de Microsoft 365 apps.
 
+## Tâche 1 – Vérifier l'impact des licences sur l'installation
+Dans cette tâche, Dominique va tester si un utilisateur qui ne s'est pas vu affecté de licence peut ou non télécharger Microsoft 365 Apps. Pour ce test, vous pouvez utiliser n'importe quel utilisateur préexistant de la liste **Active Users** dans le portail Microsoft 365 admin center. Ces utilisateurs ont des comptes Entra Id du domain epar défaut (WWLxxxxx.onmicrosoft.com); ils n'ont pas de compte correspondant *on-premises* dans le domaine ADDS adatum.com domain (qui a désormais été changé on-premises et remplacé par labxxxxx.godeploylabs.com). Sans compte on-premises, vous ne pouvez vous connecter à une VM Cliente.  
+C'est pourquoi vous devez d'abord utiliser un compte ADDS pour vous connecter. Pour ce tests, vous utiliserez le compte de **Laura Atkins**. Vous allez créer un compte pour Laura, mais sans lui affecter de license.  
+Vou utiliserez ensuite la VM **LON-CL2** pour installer Microsoft 365 Apps.
+1. Basculez vers **LON-CL2** et connectez-vous en **Admin** avec le mot de passe **Pa55w.rd**.
+1. Vous allez commencer par tester si un utilisateur sans licence Office 365 peut ou non installer Microsoft 365 Apps. Pour ce test, vous allez utiliser le comtpe de **Laura Atkins**. Vous avez créé un compte pour Laura dans [lab2e1#t%C3%A2che-1---cr%C3%A9ation-dutilisateurs](l'atelier 2, exercice 1), mais ne lui avez pas affecté de licence. Dans LON-CL2, cliquez sur l'icône **Microsoft Edge** sur la barre des tâches.
+1. Maximisez votre navigateur Internet puis rendez vous sur la page d'accueil **Microsoft 365** en utilisant l'addresse suivante : ```https://www.microsoft365.com```
+	>**Note :** Si n'importe quel compte est automatiquement connecté, déconnectez-le en cliquant sur l'icône d'utilisateur (rond en haut à droite) et en sélectionnant **Sign out**, retapez ensuite ```https://www.microsoft365.com``` dans la barre d'addresse.
+1. Cliquez sur **Sign in**.
+1. Dans la fenêtre **Sign in**, tapez **Laura@WWLxxxxx.onmicrosoft.com** avant de cliquer sur **Next**.
+1. Dans la fenêtre **Enter password**, saisissez ```Pa55w.rd``` et cliquez sur **Sign in**.
+1. Dans la boite de dialogue **Update your password**, entrez **Pa55w.rd**** dans le champ **Current password**, puis entrez ```ibForm@tion``` dans les champs **New password** et **Confirm password**. Clisuez sur **Sign in**.
+1. Si une fenêtre **Stay signed in?** apparait, cochez la case **Don't show this again** et cliquez sur **Yes.**
+1. Si la boite de dialogue **Welcome to Microoft 365** apparait, fermez-la.
+1. Dans la page **Welcome to Microsoft 365** de Laura, constatez que Microsoft 365 apps n'apparait pas dans le menu **Install apps** puisque Laura ne s'est pas vu affecté de licence Office 365.  
+1. Cliquez sur le menu **Install apps** et sélectionnez **Other install options**.
+1. La fenêtre **My account** de Laura s'affiche. Sous la section **Office apps &amp; devices**, vous ne devriez rien trouver...  
+	>**Important :** Vous venez de vérifier qu'un utilisateur ne peut télécharger Microsoft 365 Apps for enterprise s'il ne s'est pas vu affecter de licence idoine.
+1. Laissez votre navigateur Internet ouvert pour réaliser la tâche suivante.
 
-## Task 1 – Verify how licensing affects installing Microsoft 365 Apps for enterprise
-In this task, Dominique will test whether a user who has not been assigned an appropriate Office 365 license can download Microsoft 365 Apps. For this test, you cannot use any of the existing users that appear in the **Active Users** list in the Microsoft 365 admin center. These users only have Microsoft 365 accounts (xxx.onmicrosoft.com accounts); they do not have corresponding on-premises accounts in the adatum.com domain (which has now been changed on-premises to the xxxUPNxxx). Without an on-premises account, you cannot log into a client VM as any of these users to install Microsoft 365 Apps for enterprise on the client machine.  
-Therefore, you must use one of Adatum's on-premises user accounts that has been loaded in its VM environment. For this test, you will use **Laura Atkins**. You will create a Microsoft 365 account for Laura, but you will not assign her any Microsoft 365 license.  
-You will then use the **LON-CL2** VM for installing Microsoft 365 Apps (it's already installed on the other client machines).
-1. Switch to **LON-CL2** and log in as **Admin** with a password of **Pa55w.rd**.
-1. You will begin by testing whether a user without an appropriate Office 365 license can install Microsoft 365 Apps. For this test, you will use **Laura Atkins**. You added a Microsoft 365 user account for Laura in Lab 1, but you did not assign her an Office 365 license. For this test, you will log into Microsoft 365 on LON-CL2 as Laura.  
-	On LON-CL2, select the **Microsoft Edge** icon on the taskbar.
-1. In **Microsoft Edge**, maximize your browser, then go to the **Microsoft 365** homepage by entering the following URL in the address bar: **https://portal.office.com/**
-	>**Note :** If any account is autologed, click the user Name on the upper-right corner of the Edge browser and select **Sign out** then retype the **https://portal.office.com/** url in the address bar before clicking on **+ Use another account**.
-1. In the **Sign in** window, enter **Laura@xxx.onmicrosoft.com** (where xxx is your tenant ID) and then select **Next**.
-1. In the **Enter password** window, enter **Pa55w.rd** and then select **Sign in**.
-1. In the **Update your password** dialog box, enter **Pa55w.rd**** in the **Current password** field, and then enter **ibForm@tion** in the **New password** and **Confirm password** fields. Select **Sign in**.
-1. If you receive an error message indicating the new password has been entered too many times before, choose and enter another password of your choice in the **New password** and **Confirm password** fields and then select **Sign in**.
-1. If a **Stay signed in?** window appears, select the **Don't show this again** check box and then select **Yes.**
-1. In the **Microsoft 365** homepage for Laura, notice that no Microsoft 365 apps appear in the **Install apps** menu since Laura has not been assigned an Office 365 license.  
-	>**Note**: the red warning message that appears at the top of page. Laura has not been assigned an Office license that includes the Office desktop apps, so she’s unable to install Microsoft 365 Apps for enterprise.
-1. Select the **Install apps** drop-down arrow, and then select **Other install options**.
-1. This displays the **My account** window for Laura. Under the **Apps &amp; devices** section, you may see a notice indicating Laura has not been assigned an Office license that includes the Office desktop apps.	
-	>**Important:** You have just verified that a user cannot download Microsoft 365 Apps for enterprise if he or she has not been assigned an appropriate Office 365 license.
-1. Leave your browser and all tabs open and proceed to the next step.
+## Tâche 2 – Paramêtre de téléchargement global
+Dominique va désormais tester si les utilisateurs avec licence peuvent être empèché de télécharger Microsoft 365 Apps si un administrateur comme lui désactive le paramètre global controlant ce téléchargement pour tous les utilisateurs.
+1. Basculez vers **LON-DC1**, ou vous devriez encore être connecté avec le compte **Administrator**. Vous devriez également avoir votre navigateur Internet ouvert, et y être connecté avec le compte de Dominique Skyetson. Vous devirez avoir un onglet ouvert sur le portail **Microsoft 365 admin center**.
+1. Pour désactiver le paramêtre de téléchargement global, ouvrez l'onget de votre navigateur qui affiche le portail **Microsoft 365 admin center**, Si nécessaire, cliquez sur **...Show all** dans le menu de navigation afin de pouvoir ouvrir le groupe d'options **Settings**, et sélectionnez pour finir **Org Settings**.
+1. Sur la page **Org settings**, l'onglet **Services** est affiché par défaut. Défilez la liste des services afin de pouvoir cliquer sur **Microsoft 365 installation options**.
+1. Dans le panneau **Microsoft 365 installation options** qui s'affiche, clqiuez sur l'onglet **Installation** puis, dans la section **Apps for Windows and mobile devices**, décochez la case **Office (includes Skype for Business)**, ce qui va désactiver cette fonctionnalité.
+1. Cliquez sur **Save**.
+	>**Important :** Laissez le panneau *Microsoft 365 installation options** ouvert car vous allez y revenir dans la tâche suivante.
 
-## Task 2 – Verify how the global Office download setting affects installing Microsoft 365 Apps
-Dominique is now going to test whether licensed users can be prohibited from downloading Microsoft 365 Apps if an admin such as herself turns off the global Office download setting that controls the downloading of mobile and desktop apps for all users.
-1. Switch to **LON-DC1**, where you should still be logged in as the **Administrator**. You should also have your **Edge** browser open, and you should be signed into Microsoft 365 as Dominique Skyetson. Your browser should have tabs open for the **Microsoft 365 admin center**.
-1. To turn off the global Office download setting, select the **Microsoft 365 admin center** tab in your browser, and then if necessary, select **...Show all** in the left-hand navigation pane. Select **Settings**, and then within the group, select **Org Settings**.
-1. In the **Settings** window, the **Services** tab is displayed by default. Scroll down through the list of services and select **Microsoft 365 installation options**.
-1. In the **Microsoft 365 installation options** window, select the **Installation** tab and, in the **Apps for Windows and mobile devices** section, Unselect the check box **Office (includes Skype for Business)** so that it’s blank, which turns this feature **Off**.
-1. Select **Save**.
-	>**Important:** Leave the **Office installation options** window open as you will come back to it in a later step in this task.
-1. You should now test whether turning off this global download setting affects a **licensed** user from installing Microsoft 365 Apps for enterprise. In this case, you are going to use **Alan Yoo**, who you also added in Lab 1; however, unlike Laura Atkins, you assigned Alan an Office 365 E5 license.
-1. Switch  to **LON-CL2**.
-1. In LON-CL2, you should still be logged in to the Microsoft 365 portal as Laura Atkins from the prior task. You must first log out of Microsoft Office as Laura, so select the circle with the **LA** initials in the upper right-hand corner of the screen. In the **My accounts** window, select **Sign out**.
-	>**Important**: As a best practice to avoid any confusion when logging out as one user and logging in as another, close all other tabs that are open in your Edge browser except for this **Sign out** tab.
-1. In the **Sign out** tab, go to the **Microsoft 365** homepage by entering the following URL in the address bar: **https://portal.office.com/**
-1. You are now going to sign into Microsoft 365 as **Alan Yoo**. In the **Pick an account** window, select **+ Use another account**. In the **Sign in** window, enter **Alan@xxx.onmicrosoft.com** (where xxx is your tenant ID) and then select **Next**.
-1. In the **Enter password** window, enter **Pa55w.rd** and then select **Sign in.**
-1. In the **Update your password** dialog box, enter **Pa55w.rd**** in the **Current password** field, and then enter **ibForm@tion** in the **New password** and **Confirm password** fields. Select **Sign in**.
-1. If you receive an error message indicating the new password has been entered too many times before, choose and enter another password of your choice in the **New password** and **Confirm password** fields and then select **Sign in**.
-1. If a **Welcome to Microoft 365** window appears, close it.
-1. In the **Microsoft 365** homepage for Alan, select the **Install apps** drop-down arrow, and then in the drop-down menu, select **Other install options**.
-1. In the **My account** window, select the **Office apps &amp; devices** section.
-1. In the **Apps &amp; devices** window, under the **Office** section at the top of the page, a message is displayed indicating the "Your admin has turned off office installs[..]".
-	>**Important:** You have just verified that a licensed user is unable to download Microsoft 365 Apps for enterprise if the global Office download setting has been turned Off.
-1. At this point Holly wants to turn the global Office download setting back On so that Alan can download Microsoft 365 Apps for enterprise.  
-	To do this, you must switch back to **LON-DC1**. The **Micrsoft 365 installation options** window should still be open in your browser from when you earlier turned Off the Global Office download option.  
-	In the **Microsoft 365 installation options** window, under the **Apps for Windows and mobile devices** section, the **Office (includes Skype for Business)** check box is currently blank. Select this check box so that it displays a check mark, which now turns this feature back On.
-1. Select **Save**.
-1. Once you receive a message indicating the changes are saved, select the **X** in the upper-right corner of this window to close it. 
-1. Now that this global Microsoft 365 apps download option is turned back On, you should see if it affects Alan’s ability to download Microsoft 365 Apps.
-	To do this, you must switch back to **LON-CL2**.
-1. In LON-CL2, Alan's Edge browser should still be open, and the **Apps and devices** page should be displayed along with the message that indicated your admin has turned off Office installs. Since you just turned this option back On, you need to refresh this page to see how it affects Alan’s ability to download Microsoft 365 Apps for enterprise.  
-	Select the **Refresh icon** that appears to the left of the address bar at the top of your browser.
-	>**Note :** You may have to wait a few minutes and refresh again before seeing the new installation option.
-1. In the **Office apps &amp; devices** section, the **Install Office** button now appears along with a message indicating you can install Office on up to 5 PCs or Macs, 5 tablets, and 5 smartphones.  
-	>**Important:** You have just verified that a user with an Office license is able to download Microsoft 365 Apps for enterprise if the global Office download setting is turned On.
-1. Leave this page open on LON-CL2 and continue to the next task to perform the user-driven installation for Alan Yoo.
+1. Vous souhaitez tester si, en désactivant ce paramètre, cela empèche un utilisateur **licencié** d'installer Microsoft 365 Apps for enterprise. Dans ce cas vous allez utiliser le compte de **Alan Yoo**, qui a aussi été créé lors de [lab2e1#t%C3%A2che-1---cr%C3%A9ation-dutilisateurs](l'atelier 2, exercice 1); cependant, contrairement à Laura Atkins, vous aviez affecté une licence Office 365 E3 à Alan.
+1. Bascluez vers **LON-CL2**.
+1. Sur LON-CL2, vous devriez encore être connecté à l'environnement Microsoft 365 avec le compte de Laura Atkins suite à la tâche précédente. Vous devez d'abord vous déconnecter du compte de Laura, cliquez donc sur son icône (le rond en haut à droite avec ses initiales **LA**) pour cliquer sur **Sign out**.
+	>**Important**: Suite à une déconnexion, il est très fortement conseillé de fermer tous les onglets de votre navigateur sauf celui qui s'appelle **Login**.
+1. Dans l'onglet **Login**, cliquez sur **Switch to a different account**.
+1. Dans le champ **Email address**, saisissez ```alan@WWLxxxxx.onmicrosoft.com``` et cliquez sur **Sign in**
+1. Dans la fenêtre **Enter password**, saisissez ```Pa55w.rd``` et cliquez sur **Sign in.**
+1. Dans la boite de dialogue **Update your password**, tapez ```Pa55w.rd``` dans le champ **Current password**, tapez ensuite ```ibForm@tion``` dans les champs **New password** et **Confirm password** avant de cliquer sur **Sign in**.
+1. Dans la page  **Welcome to Microsoft 365** de Alan, cliquez sur les menu **Install apps** et sélectionnez **Other install options**.
+1. La fenêtre **My account** de Alan s'affiche. Sous la section **Office apps &amp; devices**, vous ne devriez rien trouver...  
+	>**Important :** Vous venez de vérifier qu'un utilisateur licencié ne peut télécharger Microsoft 365 Apps for enterprise si le paramètre global l'en empèche.
+1. Dominique souhaite désormais réactiver le paramètre d'installation global pour que Alan puisse réaliser l'installation de Microsoft 365 Apps for enterprise.  
+	Pour ce faire, basculez de nouveau sur **LON-DC1**. La fenêtre **Micrsoft 365 installation options** devrait toujours être ouverte suite à la tâche précédente.  
+	Cliquez sur l'onglet **Installation** si nécessaire et dans la section **Apps for Windows and mobile devices**, cochez la case **Office (includes Skype for Business)** pour réactiver cette fonctionnalité.
+1. cliquez sur **Save**.
+1. Une fois vos modifications sauvegardées, cliquez sur le **X** de fermeture en haut à droite du panneau **Micrsoft 365 installation options** pour le fermer. 
+1. Pour vérifier comment ce changement de paramètre affecte le compte d'Alan dans sa possibilité de télécharger Microsoft 365 Apps, basculez de nouveau sur **LON-CL2**.
+1. Sur LON-CL2, le navigateur Internet devrait être resté ouvert sur la page du compte de Alan contenant la section **Office apps and devices**.  
+	Cliquez sur l'icône **Refresh** du navigateur pour recharger complètement la page.
+	>**Note :** IL pourra être nécessaire d'attendre quelques instants et de recharger de nouveau la page...
+1. Sous la section **Office apps &amp; devices**, un bouton **Install Office** est apparu, précédé d'un message indiquant que Alan peut procéder à l'installation pour 5 PCs ou Macs, 5 tablettes et 5 smartphones.  
+	>**Important:** Vous venez de vérifier qu'un utilisateur avec une licence Office affectée est capable de lancer le téléchargement et l'installation de la suite Office depuis son portail si le paramêtre global est actif.
+1. Restez sur cette page sur LON-CL2 pour réaliser l'installation *user-driven* dans la tâche suivante.
 
-## Task 3 – Perform a User-Driven Installation of Microsoft 365 Apps for enterprise 
-In the prior task, you logged into Alan Yoo’s client PC, and you verified that a licensed user could download Microsoft 365 Apps for enterprise if he or she was assigned an Office 365 license and the global Office download setting was turned On. In this task, you will continue the process by having Alan Yoo perform a user-driven installation of the Microsoft 365 suite from the Microsoft 365 portal.  
-1. On LON-CL2, you should still be logged in your Internet browser as Alan Yoo. 
-1. You should still be in Alan’s **My account** window since this is where you left off at the end of the prior task. Under the **Office apps &amp; devices** section, the **Install Office** button now appears since Alan is assigned an Office 365 E5 license and the global Office download setting is turned On.  
-	>**Important:** Selecting this **Install Office** button will install the 64 bit, English version of Microsoft 365 Apps. However, if you want to install a different language or version, then select **View apps &amp; devices**, which opens the **Apps &amp; devices** page; this enables you to select a different language and version of Microsoft 365 Apps to install.  
+## Tâche 3 – Installation *user-driven*
+Dans la tâche précédente, vous vous êtes connecté avec le compte de Alan Yoo et avez vérifié qu'un utilisateur correctement licencié peut télécharger Microsoft 365 Apps for enterprise. Dans cette tâche, vous allez poursuivre vos tests en procédant à l'installation de la suite office à l'aide du compte de Alan Yoo.  
+1. Vous devriez encore être connecté à LON-CL2, avec votre navigateur Internet ouvert sur la page **My Account** de Alan Yoo. 
+1. Dans la section **Office apps &amp; devices**, vous avez constaté qu'un bouton **Install Office** est apparu.  
+	>**Important :** En cliquant sur ce bouton  **Install Office** c'est la version anglaise 64 bit de Microsoft 365 Apps qui sera installée. Cependant, si vous souhaitez installer une autre version et/ou une autre langue, il vous faut cliquer sur l'onglet **Apps &amp; devices**.  
 
-	Since Alan wants to install the 32-bit English version of Microsoft 365 Apps for enterprise, switch the **Version** field to **32-bit** and select the **Install Office** button.
-1.  In the notification bar that appears in the upper right-hand corner of the page, once the **OfficeSetup.exe** file is downloaded, select **Open file**. This will initiate the installation wizard.
-1. If a **Do you want to allow this app to make changes to your device?** dialog box that appears, select **Yes**.
-	>**Important:** If another Office version is allready installed on your client computer, you must first unsintall office (using windows Settings/Apps/Apps & features) before installing the Microsoft 365 Apps version.
-1. The installation may take several minutes to complete. Once the installation is complete, click on the **Close** button on the **You're all set!** window.
-1. To verify Alan Yoo's Microsoft 365 Apps for enterprise installation, select the **Start** icon in the lower-left corner of the taskbar. The **Recently added** section (at the top of the **Start** menu) displays Microsoft 365 Apps for enterprise that were just installed. This can include Word, PowerPoint, OneNote, Outlook, Publisher, Access, Skype for business, and Excel.
-1. In the **Start** menu, select **Word**.
-1. Select **Sign-in or create account** and in the **Activate Office** window, enter **Alan@xxx.onmicrosoft.com** (where xxx is your tenant ID) and then select **Next**.
-1. In the **Enter password** window, enter **ibForm@tion** and then select **Sign in.**
-1. In the **Stay signed in to all your apps** window, select **No, sign in to this app only**.
-1. On the **Your privacy matters** window, select **Close**.
-1. Verify that Word is functioning properly by opening a blank Word document, entering some text, and saving the document to the **Documents** folder. 
-1. Close Word.
-1. Leave your browser open and proceed to the next lab.  
+	Puisque Alan veut installer une version 32-bits anglaise de Microsoft 365 Apps for enterprise, cliquez sur l'onglet  **Apps &amp; devices** et modifiez le champ **Version** à **32-bit** avant de cliquer sur le bouton orange **Install Office**.
+1.  Dans la barre de notification qui apparait en haut à droite de votre navigateur, cliquez sur le lien **Open file** sous le fichier **OfficeSetup.exe** une fois ce dernier téléchargé. Vous allez ainsi lancer l'assistant d'installation d'Office.
+1. Si une boite de dialogue **Do you want to allow this app to make changes to your device?** apparait, cliquez sur **Yes**.
+1. L'installation va prendre quelques minutes à se terminer. Une fois l'installation réalisée, cliquez sur le bouton **Close** dans la fenêtre **You're all set!**.
+1. Pour vérifier l'installation de Microsoft 365 Apps for enterprise par Alan Yoo, cliquez sur le bouton **Démarrer** en bas à gauche de la barre des tâches. La section **Recently added** (en haut du menu **Démarrer**) affiche Microsoft 365 Apps for enterprise qui vient juste d'être installée. Cela pourra inclure Word, PowerPoint, OneNote, Outlook, Publisher, Access, Teams et Excel.
+1. Dans le menu **Démarrer**, cliquez sur **Word**.
+1. Dans la fenêtre **Hello Alan, welcome to Word**, cliquez sur **Continue**.
+1. Dans la fenêtre **Activate Office**, vérifiez l'adresse de Alan : ```alan@WWLxxxxx.onmicrosoft.com``` avant de cliquer sur **Next**.
+1. Dans la fenêtre **Enter password**, tapez **ibForm@tion** et cliquez sur **Sign in.**
+1. Sur la fenêtre **Stay signed in to all your apps**, cliquez sur le lien **No, sign in to this app only**.
+1. Sur la fenêtre **Accept the license agreement**, cliquez sur le bouton **Accept**.
+1. Dans le fenêtre **Your privacy matters** window, cliquez sur **Close**.
+1. Vérifiez que Word fonctionne correctement en créant un nouveau document vierge (**Blank document**) et en tapant un peu de texte avant de le sauvegarder dans le dossier **Documents**.
+1. Fermez Word.
+1. Laissez votre navigateur ouvert en vue de l'exercice suivant.  
 
 ## Résultat
+Vous avez vérifié les paramêtres de téléchargement et l'impact des licences sur l'installation *user-driven* de la suite Microsoft 365 apps.
 
 Vous pouvez poursuivre par [l'exercice 2 - Déploiement de Microsoft 365 apps via MDM](lab5e2)
