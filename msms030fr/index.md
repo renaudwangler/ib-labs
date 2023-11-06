@@ -29,7 +29,7 @@ ___
 ### Exercice 3 - [Activation de la jonction de domaine hybride](lab4e3)
 ___
 ## Atelier 05 - Déploiement de Microsoft 365 Apps
-### Exercice 1 - [Déploiement de Microsoft 365 apps for enterprise (en)](lab5e1)
+### Exercice 1 - [Déploiement de Microsoft 365 apps for enterprise](lab5e1)
 ### Exercice 2 -[Déploiement de Microsoft 365 apps via MDM (en)](lab5e2)
 ___
 ## Atelier 06 - Configuration des services Exchange Online
