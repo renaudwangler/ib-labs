@@ -5,7 +5,7 @@ length: "00"
 ---
 # Scénario
 Adatum has transitioned to Microsoft 365 as its enterprise cloud solution. The company has been awarded several government contracts which work heavily with sensitive and classified products.  
-In your role as Holly Dickson, Adatum’s Enterprise Administrator, the company CTO has requested that you devise a solution for encrypting and securing messages when working in these related contracts. He has also requested that any references to “Project New Day” be automatically encrypted. This is a top-secret project, and it is imperative that no mention of this project be leaked outside the company.  
+In your role as Dominique Skyetson, Adatum’s Enterprise Administrator, the company CTO has requested that you devise a solution for encrypting and securing messages when working in these related contracts. He has also requested that any references to “Project New Day” be automatically encrypted. This is a top-secret project, and it is imperative that no mention of this project be leaked outside the company.  
 In this lab, you will address your CTO's request by creating sensitivity labels that will be used for creating label policies. You will create sensitivity labels using the Microsoft 365 Compliance center as well as Windows PowerShell. While still satisfying your CTO's request, this plan will provide you with experience using each method as part of your pilot project. This way, you can later decide which approach you prefer when you transition from your pilot phase to the production phase. With your labels in place, you will then create a label policy - again, using both the Compliance center and PowerShell.  
 >**Important:** Sensitivity labels and policies can take up to 24 hours to propagate through the system and update the back-end servers. Unfortunately, with this training course nearing its end, you will not have time to verify your work by testing the labels and policies you created. However, it is hoped that this lab exercise will still provide you with experience and insight into the mechanics of creating sensitivity labels and policies, even though you cannot test them.  
 
@@ -14,10 +14,10 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 
 
 ## Task 1 - Creating a test team
-In your role as Holly Dickson, you will create a new Microsoft 365 group titled PND Group (for Project New Day, the name of which you want to avoid circulating through the company) that will be used as part of your sensitivity label testing in the upcoming tasks.
+In your role as Dominique Skyetson, you will create a new Microsoft 365 group titled PND Group (for Project New Day, the name of which you want to avoid circulating through the company) that will be used as part of your sensitivity label testing in the upcoming tasks.
 1. In **LON-CL1**, you should still be logged in as the **Administrator** with a password of **Pa55w.rd**.
 1. At the end of the prior lab, you logged out of Microsoft 365 as the MOD Administrator and closed Edge. Select the **Edge** icon on the taskbar and then enter the following URL in the address bar: **https://portal.office.com**.
-1. In the **Pick an account** window, select **Holly Dickson** at **holly@xxx.onmicrosoft.com** (where xxx is your tenant ID) and enter **ibForm@tion** as her password.
+1. In the **Pick an account** window, select **Dominique Skyetson** at **dom@WWLxxxxx.onmicrosoft.com** (where xxx is your tenant ID) and enter **ibForm@tion** as her password.
 1. On the **Microsoft 365** homepage select **Admin**.
 1. On the **Microsoft 365 admin center**, in the left-hand navigation pane select **Teams & groups**, and then select **Active teams & groups**.
 1. In the **Active teams & groups** window, select **Add a group** on the menu bar at the top of the page.
@@ -40,9 +40,9 @@ In your role as Holly Dickson, you will create a new Microsoft 365 group titled 
 1. Leave your Edge browser and all its tabs open and proceed to the next task.
 
 ## Task 2 - Creating Sensitivity Labels using the Purview portal
-Holly has decided to test creating sensitivity labels using both the Microsoft Purview portal and Windows PowerShell. In this task you will use the Microsoft Purview Portal for this portion of your test.
+Dominique has decided to test creating sensitivity labels using both the Microsoft Purview portal and Windows PowerShell. In this task you will use the Microsoft Purview Portal for this portion of your test.
 1. On **LON-CL1**, you should still be logged in as the **Administrator** with a password of **Pa55w.rd**.
-1. In your Edge browser, you should still have a tab open for the **Microsoft 365** homepage and the **Microsoft 365 admin center** and you should still be logged in as Holly Dickson.  
+1. In your Edge browser, you should still have a tab open for the **Microsoft 365** homepage and the **Microsoft 365 admin center** and you should still be logged in as Dominique Dickson.  
 	Select the **Microsoft 365 admin center** tab.
 1.	In the **Microsoft 365 admin center**, select **Show all** in the left navigation pane and then under **Admin centers**, select **Compliance**.
 1.	In the **Microsoft Purview** portal, in the left-hand navigation pane, select **Information protection** from the **Solutions** group.
@@ -78,8 +78,8 @@ Holly has decided to test creating sensitivity labels using both the Microsoft P
 1. Leave your Edge browser and all its tabs open and proceed to the next task.
 
 ## Task 3 - Creating Sensitivity Labels using Windows PowerShell
-Holly has decided to test creating sensitivity labels using both the Purview portal and Windows PowerShell. In this task you will use Windows PowerShell for this portion of your test.  
->**Note:** What Holly will learn from this task is that due to a current limitation, not all parameters for a sensitivity label can be updated in PowerShell at this time. The remaining parameters will have to be entered using the Purview portal.  
+Dominique has decided to test creating sensitivity labels using both the Purview portal and Windows PowerShell. In this task you will use Windows PowerShell for this portion of your test.  
+>**Note:** What Dominique will learn from this task is that due to a current limitation, not all parameters for a sensitivity label can be updated in PowerShell at this time. The remaining parameters will have to be entered using the Purview portal.  
 1. On **LON-CL1**, you should still be logged in as the **Administrator** with a password of **Pa55w.rd**.
 1. Select the **magnifying glass (Search)** icon in the bottom left corner of your taskbar and then enter **powershell** in the Search field.
 1. In the list of search results, right-click on **Windows PowerShell**, and in the menu that appears select **Run as administrator**.
@@ -136,7 +136,7 @@ Holly has decided to test creating sensitivity labels using both the Purview por
 1. Leave your Edge browser and all its tabs open and proceed to the next task.
 	
 ## Task 4 - Creating Sensitivity Label Policies using the Purview portal
-Holly has decided to test creating sensitivity label policies using both the Microsoft Purview portal and Windows PowerShell. In this task you will use the Purview portal for this portion of your test.
+Dominique has decided to test creating sensitivity label policies using both the Microsoft Purview portal and Windows PowerShell. In this task you will use the Purview portal for this portion of your test.
 1. On **LON-CL1** you should still be in the **Microsoft Purview** tab, which should be displaying the **Information Protection** page. You are currently displaying the **Labels** tab for this page.  
 	In the list of tabs across the top of the page, select **Label policies**.
 1. On the **Label policies** page, on the menu bar above the list of policies, select **Publish label**. This initiates a wizard to create a new sensitivity label policies.
@@ -155,8 +155,8 @@ Holly has decided to test creating sensitivity label policies using both the Mic
 1. Leave your Edge browser and all its tabs open and proceed to the next task.
 
 ## Task 5 - Creating Sensitivity Label Policies using Windows PowerShell
-Holly has decided to test creating sensitivity label policies using both the Purview portal and Windows PowerShell. In this task you will use Windows PowerShell for this portion of your test.  
->**Note:** What Holly will learn from this task is that due to a current limitation, only the basic parameters for a sensitivity label can be updated in PowerShell. The remaining parameters will have to be entered using the Purview portal.
+Dominique has decided to test creating sensitivity label policies using both the Purview portal and Windows PowerShell. In this task you will use Windows PowerShell for this portion of your test.  
+>**Note:** What Dominique will learn from this task is that due to a current limitation, only the basic parameters for a sensitivity label can be updated in PowerShell. The remaining parameters will have to be entered using the Purview portal.
 1. On **LON-CL1**, you should still be logged in as the **Administrator** with a password of **Pa55w.rd**.
 1. Windows PowerShell should still be open from a prior task. If so, then skip to the next step. However, if you closed PowerShell, then open an elevated instance of it now (Run as administrator) and run the following commands to re-establish your session:  
 	```Import-Module ExchangeOnlineManagement```  

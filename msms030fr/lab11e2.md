@@ -4,8 +4,8 @@ title: "Lab11-Ex2 - Dépannage de flux de messages"
 length: "00"
 ---
 # Scénario
-The logical conclusion to monitoring Microsoft 365 service health is the ability to troubleshoot errors that occur in the system. For Holly Dickson, this means monitoring mail-related issues, which have been a nagging issue for Adatum in the past. Holly plans to take advantage of Microsoft's Remote Connectivity Analyzer tool to troubleshoot mail-flow issues. The tool is web-based and is designed to help IT Administrators troubleshoot connectivity issues that affect their Microsoft deployments. The tool simulates several client log-on and mail flow scenarios. When a test fails, many of the errors have troubleshooting tips to assist the IT Administrator to correct the problem.  
-Holly plans to test this tool by sending email to a non-existent domain and to a non-existent user and then use the tool to troubleshoot the errors that occur. She will then test message tracing to help troubleshoot mail-flow issues. Message tracing in the Exchange admin center follows email messages as they travel through an Exchange Online organization. Holly will use message tracing to determine if a message was received, rejected, deferred, or delivered by the service. She will also use it to show what actions were taken on the message before it reached its final status.
+The logical conclusion to monitoring Microsoft 365 service health is the ability to troubleshoot errors that occur in the system. For Dominique Skyetson, this means monitoring mail-related issues, which have been a nagging issue for Adatum in the past. Dominique plans to take advantage of Microsoft's Remote Connectivity Analyzer tool to troubleshoot mail-flow issues. The tool is web-based and is designed to help IT Administrators troubleshoot connectivity issues that affect their Microsoft deployments. The tool simulates several client log-on and mail flow scenarios. When a test fails, many of the errors have troubleshooting tips to assist the IT Administrator to correct the problem.  
+Dominique plans to test this tool by sending email to a non-existent domain and to a non-existent user and then use the tool to troubleshoot the errors that occur. She will then test message tracing to help troubleshoot mail-flow issues. Message tracing in the Exchange admin center follows email messages as they travel through an Exchange Online organization. Dominique will use message tracing to determine if a message was received, rejected, deferred, or delivered by the service. She will also use it to show what actions were taken on the message before it reached its final status.
 
 # Objectifs
 A la fin de cet exercice, vous aurez une meilleure connaissance de :
@@ -13,7 +13,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 
 ## Task 1 - Send an email to a non-existent domain
 1. On **LON-CL1** you should still be logged in as the **Administrator** from the prior lab exercise. 
-1. Your Edge browser should still be open, and you should be logged into Microsoft 365 as Holly Dickson. You should have tabs open for the **Microsoft 365** homepage and the **Microsoft 365 admin center**.
+1. Your Edge browser should still be open, and you should be logged into Microsoft 365 as Dominique Skyetson. You should have tabs open for the **Microsoft 365** homepage and the **Microsoft 365 admin center**.
 1. Select the **Microsoft 365** homepage tab, and in the Microsoft portal, select **Outlook**.
 1. In **Outlook**, select **New mail**.
 1. In the message form, type **user@alt.none** in the **To** box.
@@ -29,7 +29,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 1. Leave the Edge browser and all tabs open and proceed to the next task.
 
 ## Task 2 - Send an email to a non-existent user
-1. In the **Edge** browser, select the **Mail - Outlook** tab for Holly Dickson.
+1. In the **Edge** browser, select the **Mail - Outlook** tab for Dominique Skyetson.
 1. In **Outlook**, select **New mail**.
 1. In the message form, type **ynotknirf082760@outlook.com** in the **To** box.
 1. Enter a subject and some body text and then select **Send**.
@@ -48,7 +48,7 @@ In this task, you will conduct a message trace to monitor message flow. Note tha
 1. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Show all**, and then under **Admin centers** select **Security**.
 1. In the **Microsoft Defender** portal, in the left-hand navigation pane, select **Exchange message trace** in the  **Email & collaboration** section.
 1. In **Message trace** page, note the existing queries that you can use. However, in this case, you will create a custom message trace. Select **+Start a trace**.
-1. In the **New message trace** window, select the **Senders** field. In the list of users that appears, select **Holly Dickson**.
+1. In the **New message trace** window, select the **Senders** field. In the list of users that appears, select **Dominique Skyetson**.
 1. In the **Time range** chart, move the slider to **1 day** (this will show the past 24 hours).
 1. In the  **Detailed search options** section, in the **Delivery status** field, select **Failed**.
 1. Select **Search**.

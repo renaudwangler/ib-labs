@@ -4,7 +4,7 @@ title: "Lab8-Ex1 - Configuration des paramètres de SharePoint Online"
 length: "00"
 ---
 # Scénario
-Now that Holly Dickson has configure Exchange Online and Microsoft Teams, she will begin preparing Adatum to implement SharePoint Online within the organization's Microsoft 365 pilot project. In this exercise, Holly will begin by configuring SharePoint Online settings to meet Adatum's business needs.
+Now that Dominique Skyetson has configure Exchange Online and Microsoft Teams, she will begin preparing Adatum to implement SharePoint Online within the organization's Microsoft 365 pilot project. In this exercise, Dominique will begin by configuring SharePoint Online settings to meet Adatum's business needs.
 
 # Objectifs
 A la fin de cet exercice, vous aurez une meilleure connaissance de :
@@ -12,7 +12,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 
 ## Task 1 - Configure settings
 1. Switch to **LON-CL1**, where you should still be logged in as the **Administrator** with a password of **Pa55w.rd**.
-1. You should still have Microsoft Edge and the Microsoft 365 admin center open from an earlier lab. If so, proceed to the next step; otherwise, open Microsoft Edge, navigate to **https://portal.office.com/**, log in as **Holly@xxx.onmicrosoft.com** (where xxx is your tenant ID) and a password of **ibForm@tion**, and then in the **Microsoft 365** homepage, select **Admin** to open the Microsoft 365 admin center.
+1. You should still have Microsoft Edge and the Microsoft 365 admin center open from an earlier lab. If so, proceed to the next step; otherwise, open Microsoft Edge, navigate to **https://portal.office.com/**, log in as **dom@WWLxxxxx.onmicrosoft.com** (where xxx is your tenant ID) and a password of **ibForm@tion**, and then in the **Microsoft 365** homepage, select **Admin** to open the Microsoft 365 admin center.
 1. To start fresh in this SharePoint lab exercise, close any tab in the Edge browser other than the **Microsoft 365** homepage tab and the **Microsoft 365 admin center** tab.
 1. In the **Microsoft 365 admin center** tab, in the left-hand navigation pane, select **Show all** (if necessary), then scroll down to **Admin centers** and select **SharePoint**. This will open the **SharePoint admin center** in a new tab.
 1. If a **Take tour** window appears, click outside it to dismiss it.

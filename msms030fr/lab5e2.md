@@ -4,11 +4,11 @@ title: "Lab5-Ex2 - Déploiement de Microsoft 365 apps via MDM"
 length: "00"
 ---
 # Scénario
-You have taken on the persona of Holly Dickson, Adatum's Enterprise Administrator, and you have Microsoft 365 deployed in a virtualized lab environment. In this exercise, you will perform the tasks necessary to manage a Microsoft 365 Apps installation using Mobile Device Management.  
+You have taken on the persona of Dominique Skyetson, Adatum's Enterprise Administrator, and you have Microsoft 365 deployed in a virtualized lab environment. In this exercise, you will perform the tasks necessary to manage a Microsoft 365 Apps installation using Mobile Device Management.  
 Starting in Windows 10, version 1709, you can use a Group Policy to trigger auto-enrollment to MDM for Active Directory (AD) domain-joined devices.  
 The enrollment into Intune is triggered by a group policy created on your local AD and happens without any user interaction. This means you can automatically mass-enroll a large number of domain-joined corporate devices into Microsoft Intune. The enrollment process starts in the background once you sign in to the device with your Azure AD account.  
-In the first task, Holly adds Microsoft 365 apps as a managed app.  
-In tasks 2 and 3 in this exercise, Holly extends the Hybrid Azure AD domain-join setup to enroll devices for cloud-based Mobile Device and Mobile Application Management (MDM and MAM).  
+In the first task, Dominique adds Microsoft 365 apps as a managed app.  
+In tasks 2 and 3 in this exercise, Dominique extends the Hybrid Azure AD domain-join setup to enroll devices for cloud-based Mobile Device and Mobile Application Management (MDM and MAM).  
 In the final task, you will verify the installation of Microsoft 365 apps for enterprise.
 
 # Objectifs
@@ -16,12 +16,12 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 
 
 ## Task 1 - Add Microsoft 365 apps to Windows 10 devices with Microsoft Intune
-Holly wants to add Microsoft 365 apps automatically to managed devices. To manage devices using Microsoft 365, Adatum has purchased Enterprise Security + Mobility E5 licenses. In this task, Holly assigns on of these licenes to a user. Then, she add Microsoft 365 apps to managed devices and verifies the installation.
+Dominique wants to add Microsoft 365 apps automatically to managed devices. To manage devices using Microsoft 365, Adatum has purchased Enterprise Security + Mobility E5 licenses. In this task, Dominique assigns on of these licenes to a user. Then, she add Microsoft 365 apps to managed devices and verifies the installation.
 1. Switch to the **LON-CL1** client VM.
 1. Log into LON-CL1 as the **Adatum\Administrator** with the password **Pa55w.rd**.
 1. On the taskbar at the bottom of the page, select the **Microsoft Edge** icon. Maximize your browser window when it opens.
 1. In your browser go to the **Microsoft 365** homepage by entering the following URL in the address bar: **https://portal.office.com/** 
-1. If needed, sign in with **Holly@xxx.onmicrosoft.com** (where xxx should be replace with your tenant ID) account and her password **ibForm@tion**.
+1. If needed, sign in with **dom@wwLxxxxx.onmicrosoft.com** (where xxx should be replace with your tenant ID) account and her password **ibForm@tion**.
 1. In the **Microsoft 365** homepage, select **Admin**.
 1. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Show all...**, then select **Endpoint Manager**.
 1. In **Microsoft Endpoint Manager admin center**, in the left-hand navigation pane, select **Apps**.
@@ -40,14 +40,14 @@ Holly wants to add Microsoft 365 apps automatically to managed devices. To manag
 
 ## Task 2 - Verify auto-enrollment requirements
 To ensure that the auto-enrollment feature is working as expected, you must verify that various requirements and settings are configured correctly. The following steps demonstrate required settings using the Intune service:
-1. From the previous task, you should still be logged into the **Microsoft Endpoint Manager admin center** as Holly.
+1. From the previous task, you should still be logged into the **Microsoft Endpoint Manager admin center** as Dominique.
 1. In the **Microsoft Endpoint Manager admin center**, in the left-hand navigation pane, select **Devices**.
 1. In the **Devices** section, under **Device enrollment**, select **Enroll devices**.
 1. In the **Enroll devices** blade, select the **Automatic Enrollment** tile.
 1. In **Configure Microsoft Intune**, beside **MDM user scope**, select **All**. Beside **MAM user cope**, select **All**. Select **Save**.
 
 ## Task 3 - Configure the auto-enrollment Group Policy for a single PC
-Holly wants to show how the new auto-enrollment policy works. This is not recommended for the production environment in the enterprise. For bulk deployment, you should deploy the same setting using an Active Directory domain group policy object.
+Dominique wants to show how the new auto-enrollment policy works. This is not recommended for the production environment in the enterprise. For bulk deployment, you should deploy the same setting using an Active Directory domain group policy object.
 1. Switch to **LON-CL3**.
 1. You should still be logged into LON-CL3 as **Adatum\Administrator**. 
 1. Select the **Windows (Start)** icon in the lower left corner of the taskbar, and type **gpedit**.

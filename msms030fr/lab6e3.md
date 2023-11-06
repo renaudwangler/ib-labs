@@ -4,8 +4,8 @@ title: "Lab6-Ex3 - Configuration des stratégies d'accès clients"
 length: "00"
 ---
 # Scénario
-Outlook on the web enables Adatum's users to access their mailboxes through a web browser. After Adatum created its Microsoft 365 tenant with Exchange Online, the tenant included a single Outlook Web App policy titled OWAMailboxPolicy-Default. This policy defines Outlook on the web settings for all users. However, Holly Dickson, Adatum's Enterprise Admin, wants to create an additional Outlook on the web policy that applies to a specific user (in this case, Nona Snider). By verifying whether a user-specific policy such as this works, Holly will be able to vary the Outlook on the web settings for users with different needs.  
-Holly will then configure a mailbox policy for mobile devices that requires a password and sets the parameter for password length. Holly will then create a mobile device access policy that places any new devices into quarantine, at which point the device must be approved to be removed from quarantine so that it can send and receive messages.
+Outlook on the web enables Adatum's users to access their mailboxes through a web browser. After Adatum created its Microsoft 365 tenant with Exchange Online, the tenant included a single Outlook Web App policy titled OWAMailboxPolicy-Default. This policy defines Outlook on the web settings for all users. However, Dominique Skyetson, Adatum's Enterprise Admin, wants to create an additional Outlook on the web policy that applies to a specific user (in this case, Nona Snider). By verifying whether a user-specific policy such as this works, Dominique will be able to vary the Outlook on the web settings for users with different needs.  
+Dominique will then configure a mailbox policy for mobile devices that requires a password and sets the parameter for password length. Dominique will then create a mobile device access policy that places any new devices into quarantine, at which point the device must be approved to be removed from quarantine so that it can send and receive messages.
 
 # Objectifs
 A la fin de cet exercice, vous aurez une meilleure connaissance de :
@@ -13,13 +13,13 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 
 ## Task 1: Configure an Outlook Web App policy
 1. You should still be logged into LON-CL1 as the **Administrator** with a password of **Pa55w.rd**.
-1. Your Edge browser should be open from the prior exercise, with tabs open for the **Microsoft 365** homepage, the **Microsoft 365 admin center**, and the **Exchange admin center**. You should still be signed into Microsoft 365 as Holly Dickson.  
+1. Your Edge browser should be open from the prior exercise, with tabs open for the **Microsoft 365** homepage, the **Microsoft 365 admin center**, and the **Exchange admin center**. You should still be signed into Microsoft 365 as Dominique Skyetson.  
 	If you closed the Exchange admin center tab after the prior lab exercise, then in the **Microsoft 365 Admin center**, under **Admin Centers** in the left-hand navigation pane, select **Exchange**.
 1. In the **Exchange admin center** tab, in the left-hand navigation pane, select **Outlook Web App policies** under **Roles**.
 1. On the the **Outlook Web App policies** tab, note the existing Outlook Web App policy titled **OWAMailboxPolicy-Default**. This policy defines Outlook on the web settings for all users.  
-	Since Holly wants to add a new policy, select **New OWA policy** on the menu bar. 
+	Since Dominique wants to add a new policy, select **New OWA policy** on the menu bar. 
 1. In the **new Outlook Web App mailbox policy** window, enter **Limited features** in the **Policy name** field. Note - This policy is titled **Limited features** since it reduces the number of features that will be enabled for the policy.
-1. Click on the **Next** button. The window displays a list of features that will be enabled for this Outlook Web App mailbox policy. The majority of these features are selected by default. Clear the check boxes for the following features that Holly does not want included in this custom policy:  
+1. Click on the **Next** button. The window displays a list of features that will be enabled for this Outlook Web App mailbox policy. The majority of these features are selected by default. Clear the check boxes for the following features that Dominique does not want included in this custom policy:  
 	- **Instant messaging**
 	- **Text messaging**
 	- **LinkedIn contact sync**
@@ -54,7 +54,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 ## Task 2: Configure mobile-device access
 In this task, you will create a mobile device access policy that places any new devices into quarantine, at which point the device must be approved to be removed from quarantine so that it can send and receive messages. 
 1. Switch to **LON-CL1**, where you should still be logged in as the **Administrator** with a password of **Pa55w.rd**. 
-1. Your Edge browser should be open from the prior exercise, with tabs open for the **Microsoft 365** homepage, the **Microsoft 365 admin center**, and the **Exchange admin center**. You should still be signed into Microsoft 365 as Holly Dickson.  
+1. Your Edge browser should be open from the prior exercise, with tabs open for the **Microsoft 365** homepage, the **Microsoft 365 admin center**, and the **Exchange admin center**. You should still be signed into Microsoft 365 as Dominique Skyetson.  
 	If you closed the Exchange admin center tab after the prior lab exercise, then in the **Microsoft 365 Admin center**, under **Admin Centers** in the left-hand navigation pane, select **Exchange**.
 1. In the **Exchange admin center**, in the left-hand navigation pane, select **Mobile device access** under the **mobile** section.
 1. On the **Quarantined Devices** page, click on the **Edit** button.
@@ -66,7 +66,7 @@ In this task, you will create a mobile device access policy that places any new 
 ## Task 3: Configure a mailbox policy for mobile devices
 In this task, you will configure a mailbox policy for mobile devices that requires a password and sets the parameter for password length.
 1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**.
-1. Your Edge browser should be open from the prior exercise, with tabs open for the **Microsoft 365** homepage, the **Microsoft 365 admin center**, and the **Exchange admin center**. You should still be signed into Microsoft 365 as Holly Dickson.  
+1. Your Edge browser should be open from the prior exercise, with tabs open for the **Microsoft 365** homepage, the **Microsoft 365 admin center**, and the **Exchange admin center**. You should still be signed into Microsoft 365 as Dominique Skyetson.  
 	If you closed the Exchange admin center tab after the prior lab exercise, then in the **Microsoft 365 Admin center**, under **Admin Centers** in the left-hand navigation pane, select **Exchange**.
 1. In the **Exchange admin center**, select the **Mobile device mailbox policy** from the **Mobile** section.
 1. On the **Mobile device mailbox policy** page, click on the **Default** policy.

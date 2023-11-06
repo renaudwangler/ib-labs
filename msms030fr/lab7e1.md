@@ -4,11 +4,11 @@ title: "Lab7-Ex1 - Configuration de Microsoft Teams"
 length: "00"
 ---
 # Scénario
-In this exercise you will learn how to manage and configure Microsoft Teams through the Teams admin center. As Holly Dickson, Adatum's Enterprise Admin, you have decided to customize the company's Global meeting policy. Meeting policies control the features that are available to participants in meetings that are scheduled by users in an organization. An organization-wide policy named Global is created by default, and all users within the organization are automatically assigned this meeting policy. An admin can either make changes to this policy or create one or more custom policies and assign users to them. Holly has chosen to customize the Global policy.  
-Holly also wants to use the Teams meetings settings to control whether anonymous users can join Teams meetings and customize meeting invitations. As part of Adatum’s pilot project for implementing Microsoft Teams, she has been tasked with configuring Teams meeting settings to see how they handle email invitations.  
-Next, Holly wants to create a new messaging policy that addresses the chat and channel messaging requirements set forth by Adatum’s project team. She will then create a resource account for a cloud call queue, which is a service that accepts customer calls, plays a greeting message, and then places the customer calls in a wait queue while searching a pre-configured list of agents to answer each call. Once she has created the resource account for her calling queue, she will create the call queue itself and assign it the resource account.  
-At this point, Holly will turn her attention to calling policies. She has been tasked with creating a custom calling policy for Adatum. Instead of customizing the default global policy, she will follow best practice guidelines and create her own customized policy that will be used as Adatum’s default policy.  
-Finally, Holly wants to manage Teams access, and specifically external access and guess access. She wants to block communication with users from a specific domain  that has been the source of multiple spam attacks within Adatum over the past year. At the same time, she wants to allow communication with the users from another domain that is one of Adatum's key business partners.
+In this exercise you will learn how to manage and configure Microsoft Teams through the Teams admin center. As Dominique Skyetson, Adatum's Enterprise Admin, you have decided to customize the company's Global meeting policy. Meeting policies control the features that are available to participants in meetings that are scheduled by users in an organization. An organization-wide policy named Global is created by default, and all users within the organization are automatically assigned this meeting policy. An admin can either make changes to this policy or create one or more custom policies and assign users to them. Dominique has chosen to customize the Global policy.  
+Dominique also wants to use the Teams meetings settings to control whether anonymous users can join Teams meetings and customize meeting invitations. As part of Adatum’s pilot project for implementing Microsoft Teams, she has been tasked with configuring Teams meeting settings to see how they handle email invitations.  
+Next, Dominique wants to create a new messaging policy that addresses the chat and channel messaging requirements set forth by Adatum’s project team. She will then create a resource account for a cloud call queue, which is a service that accepts customer calls, plays a greeting message, and then places the customer calls in a wait queue while searching a pre-configured list of agents to answer each call. Once she has created the resource account for her calling queue, she will create the call queue itself and assign it the resource account.  
+At this point, Dominique will turn her attention to calling policies. She has been tasked with creating a custom calling policy for Adatum. Instead of customizing the default global policy, she will follow best practice guidelines and create her own customized policy that will be used as Adatum’s default policy.  
+Finally, Dominique wants to manage Teams access, and specifically external access and guess access. She wants to block communication with users from a specific domain  that has been the source of multiple spam attacks within Adatum over the past year. At the same time, she wants to allow communication with the users from another domain that is one of Adatum's key business partners.
 
 # Objectifs
 A la fin de cet exercice, vous aurez une meilleure connaissance de :
@@ -16,9 +16,9 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 
 ## Task 1 – Manage Global Meeting Policy
 Meeting policies control the features that are available to participants in meetings that are scheduled by users in your organization. An organization-wide policy named Global is created by default, and all users in your organization are automatically assigned this meeting policy. You can either make changes to this policy or create one or more custom policies and assign users to them. When you create a custom policy, you can allow or prevent certain features from being available to your users, and then assign the policy to one or more users who will have the settings applied to them.  
-As Holly Dickson, Adatum's Enterprise Administrator, you want to customize the company's Global meeting policy as part of Adatum’s pilot project for implementing Microsoft Teams.
+As Dominique Skyetson, Adatum's Enterprise Administrator, you want to customize the company's Global meeting policy as part of Adatum’s pilot project for implementing Microsoft Teams.
 1. Switch to **LON-CL1**, where you should still be logged in as **ADATUM\Administrator** and password **Pa55w.rd**.
-1. You should still have Microsoft Edge and the Microsoft 365 admin center open from an earlier lab. If so, proceed to the next step; otherwise, open Microsoft Edge, navigate to **https://portal.office.com/**, log in as **Holly@xxx.onmicrosoft.com** (where xxx is your tenant ID) with a password of **ibForm@tion**, and then in the **Microsoft 365** homepage, select **Admin** to open the Microsoft 365 admin center.
+1. You should still have Microsoft Edge and the Microsoft 365 admin center open from an earlier lab. If so, proceed to the next step; otherwise, open Microsoft Edge, navigate to **https://portal.office.com/**, log in as **dom@WWLxxxxx.onmicrosoft.com** (where xxx is your tenant ID) with a password of **ibForm@tion**, and then in the **Microsoft 365** homepage, select **Admin** to open the Microsoft 365 admin center.
 1. To start fresh in this Teams lab exercise, close any tab in the Edge browser other than the **Microsoft 365** homepage tab and the **Microsoft 365 admin center** tab. 
 1. In the **Microsoft 365 admin center** tab, in the left-hand navigation pane, select **Show all** (if necessary), then scroll down to **Admin centers** and select **Teams.** This will open the **Microsoft Teams admin center** in a new tab.
 1. If a **Welcome to the Teams admin center** window appears, select the **Skip tour** option.
@@ -32,7 +32,7 @@ As Holly Dickson, Adatum's Enterprise Administrator, you want to customize the c
 1. Leave all tabs open in your browser and proceed to the next task. 
 
 ## Task 2 – Manage Meeting Settings
-As Holly Dickson, Adatum’s Microsoft 365 Enterprise Administrator, you use the Teams meetings settings to control whether anonymous users can join Teams meetings and customize meeting invitations. You can also use these settings to enable Quality of Service (QoS) and set port ranges for real-time traffic. These settings apply to all Teams meetings that users schedule in your organization. As part of Adatum’s pilot project for implementing Microsoft Teams, you want to configure Teams meeting settings to see how they handle email invitations.
+As Dominique Skyetson, Adatum’s Microsoft 365 Enterprise Administrator, you use the Teams meetings settings to control whether anonymous users can join Teams meetings and customize meeting invitations. You can also use these settings to enable Quality of Service (QoS) and set port ranges for real-time traffic. These settings apply to all Teams meetings that users schedule in your organization. As part of Adatum’s pilot project for implementing Microsoft Teams, you want to configure Teams meeting settings to see how they handle email invitations.
 1. On **LON-CL1** you should still have the **Microsoft Teams admin center** open from the prior task. In the left-hand navigation pane, under the **Meetings** group, select **Meeting settings.**
 1. On the **Meetings settings** page, under the **Email invitation** section, enter (or copy and paste in) the following information:
 	- Logo URL: leave blank
@@ -49,7 +49,7 @@ As Holly Dickson, Adatum’s Microsoft 365 Enterprise Administrator, you use the
 
 ## Task 3 – Manage Messaging Policies
 Messaging policies are used to control which chat and channel messaging features are available to users in Microsoft Teams. You can use the Global default policy that is created automatically or create one or more custom messaging policies for people in your organization. After you create a policy, you can assign it to a user or group of users in your organization.  
-As part of her Microsoft Teams pilot project for Adatum, Holly wants to create a new messaging policy that addresses the chat and channel messaging requirements set forth by Adatum’s project team.
+As part of her Microsoft Teams pilot project for Adatum, Dominique wants to create a new messaging policy that addresses the chat and channel messaging requirements set forth by Adatum’s project team.
 1. On **LON-CL1** you should still have the **Microsoft Teams admin center** open from the prior task. In the left-hand navigation pane, select **Messaging policies**.
 1. In the **Messaging policies** window, view the list of messaging policies. As you can see, only the **Global (Org-wide default)** policy exists. Select **+ Add** in the menu bar that appears above the list of policies.
 1. In the **Messaging policies \ Add** window, enter **Chat and Channel Messaging Policy** in the **Add a name for your messaging policy** field at the top of the form.
@@ -82,7 +82,7 @@ As part of her Microsoft Teams pilot project for Adatum, Holly wants to create a
 
 ## Task 4 – Create a Resource Account
 A resource account, which is referred to as a disabled user object in Azure Active Directory, can be used to represent resources in general. For example, a resource account in Exchange can be used to represent conference rooms, and in Microsoft Teams, resource accounts can be used to represent Phone System call queues and auto attendants.  
-As part of Adatum’s pilot project for implementing Microsoft Teams, Holly Dickson has been asked to create a resource account for a cloud call queue, which is a service that accepts customer calls, plays a greeting message, and then places the customer calls in a wait queue while searching a pre-configured list of agents to answer each call.  
+As part of Adatum’s pilot project for implementing Microsoft Teams, Dominique Skyetson has been asked to create a resource account for a cloud call queue, which is a service that accepts customer calls, plays a greeting message, and then places the customer calls in a wait queue while searching a pre-configured list of agents to answer each call.  
 Creating a calling queue is a two-step process. In this task, you will first create a resource account that represents the call queue. In the next task, you will create the actual call queue and associate it with this resource account.  
 1. On **LON-CL1**, switch to the **Microsoft 365 admin center** tab of your browser
 1. Expand **Billing** and click on **Purchase sevices**
@@ -130,7 +130,7 @@ Now that you have created the resource account for your calling queue, you will 
 
 ## Task 6 - Create a Calling Policy 
 In Microsoft Teams, calling policies control which calling and call forwarding features are available to users. Calling policies determine whether a user can make private calls, use call forwarding or simultaneous ringing to other users or external phone numbers, route calls to voicemail, send calls to Call Groups, use delegation for inbound and outbound calls, and so on. A default global policy is created automatically, but admins can also create and assign custom calling policies.  
-As part of her Microsoft Teams pilot project, Holly Dickson has been tasked with creating a custom calling policy for Adatum. Instead of customizing the default global policy, she will follow best practice guidelines and create her own customized policy that will be used as Adatum’s default policy
+As part of her Microsoft Teams pilot project, Dominique Skyetson has been tasked with creating a custom calling policy for Adatum. Instead of customizing the default global policy, she will follow best practice guidelines and create her own customized policy that will be used as Adatum’s default policy
 1. On **LON-CL1** you should still have the **Microsoft Teams admin center** open from the prior task. In the left-hand navigation pane, under the **Voice** group, select **Calling policies.**
 1. In the **Calling policies** window, scroll down through the list to see the predefined calling policies and then select **+ Add** in the menu bar that appears above the list of calling policies.
 1. In the **Calling policies \ Add** window, enter **Default Adatum Calling Policy** in the **Add a name for your calling policy** field at the top of the form.
@@ -146,7 +146,7 @@ As part of her Microsoft Teams pilot project, Holly Dickson has been tasked with
 
 ## Task 7 – Manage External Access
 With Microsoft Teams’ external access feature, Teams users from other domains can participate in your chats and calls. You can also block the users in specific domains from joining chats and calls.  
-As part of her Microsoft Teams pilot project, Holly Dickson wants to block communication with users from a specific domain (spam.com) that has been the source of multiple spam attacks within Adatum over the past year. At the same time, Holly wants to allow communication with the users from another domain (microsoft.com) that is one of Adatum's key business partners.
+As part of her Microsoft Teams pilot project, Dominique Skyetson wants to block communication with users from a specific domain (spam.com) that has been the source of multiple spam attacks within Adatum over the past year. At the same time, Dominique wants to allow communication with the users from another domain (microsoft.com) that is one of Adatum's key business partners.
 1. On **LON-CL1** you should still have the **Microsoft Teams admin center** open from the prior task. In the left-hand navigation pane, select the **Users** group, select **External access.**
 1. In the **External access** window, select the **Allow all external domains** menu and change its value to **Allow only specific external domains**
 1. To add the domain in which you want to allow communication, select the **Allow domains** button.
@@ -176,7 +176,7 @@ As part of your Microsoft Teams pilot project for Adatum, you will turn on guest
 1. Leave all tabs open in your browser and proceed to the next task. 
 
 ## Task 9 – Manage Teams Settings
-Microsoft Teams includes a variety of global settings that control performance within Teams. As part of her Microsoft Teams pilot project, Holly Dickson will configure a number of these settings as determined by Adatum’s project team.
+Microsoft Teams includes a variety of global settings that control performance within Teams. As part of her Microsoft Teams pilot project, Dominique Skyetson will configure a number of these settings as determined by Adatum’s project team.
 1. On **LON-CL1** you should still have the **Microsoft Teams admin center** open from the prior task. In the left-hand navigation pane, select the **Teams** group, select **Teams settings.**
 
 2. In the **Teams settings** window, select the following values for each setting:

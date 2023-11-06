@@ -4,11 +4,11 @@ title: "Lab8-Ex2 - Configuration de sites SharePoint Online"
 length: "00"
 ---
 # Scénario
-In this exercise, Holly Dickson wants to begin exploring SharePoint Online sites. For comparison purposes, Holly plans to create a site using the SharePoint Online admin center, followed by a second site using Windows PowerShell. She will then configure access permissions to the sites, and then follow that up by verifying the access permissions work.## Task 1: Create a site using the SharePoint admin center
+In this exercise, Dominique Skyetson wants to begin exploring SharePoint Online sites. For comparison purposes, Dominique plans to create a site using the SharePoint Online admin center, followed by a second site using Windows PowerShell. She will then configure access permissions to the sites, and then follow that up by verifying the access permissions work.## Task 1: Create a site using the SharePoint admin center
 In this task, you will use the SharePoint admin center to create a site for Adatum's Marketing department.
 1. On **LON-CL1** you should still be logged in as the **Administrator** with a password of **Pa55w.rd**.
 1. You should still have Microsoft Edge open from the previous exercise, along with tabs for the **Microsoft 365** homepage, the **Microsoft 365 admin center**, and the **SharePoint admin center**. If so, select the **SharePoint admin center** and proceed to the next step.  
-	Otherwise, open Microsoft Edge, navigate to **https://portal.office.com/**, log in as **Holly@xxx.onmicrosoft.com** (where xxx is your tenant ID) and a password of **ibForm@tion**, and then in the **Microsoft 365** homepage, select **Admin** to open the Microsoft 365 admin center, select **Show all** in the left-hand navigation pane, and then under **Admin centers** select **Sharepoint**.
+	Otherwise, open Microsoft Edge, navigate to **https://portal.office.com/**, log in as **dom@WWLxxxxx.onmicrosoft.com** (where xxx is your tenant ID) and a password of **ibForm@tion**, and then in the **Microsoft 365** homepage, select **Admin** to open the Microsoft 365 admin center, select **Show all** in the left-hand navigation pane, and then under **Admin centers** select **Sharepoint**.
 1. In the left-hand navigation page, expand **Sites** and select **Active sites**.
 1. On the menu-bar above the list of sites, select **+ Create**.
 1. On the **Create a site** window, select **Communication Site**.
@@ -43,8 +43,8 @@ Now that you have experience creating a site using the SharePoint admin center, 
 1. Leave your Edge browser open along with the **Microsoft 365** homepage tab, the **Microsoft 365 admin center** tab, and the **SharePoint admin center** tab, and then proceed to the next task.
 
 ## Task 3: Configure permissions on the sites
-Now that you have added sites for Adatum's Marketing and Accounting departments, you will configure permissions for the Marketing site. Because you are still signed into Microsoft 365 as Holly Dickson, you must open an In-Private browser session in Edge and log into Microsoft 365 as the global administrator so that you can assign Nona Snider as an admin to the Marketing site.  
-Only a site's site admin can assign another user as an admin to the site. While you are signed into Edge as Holly Dickson, she is not an admin for the Marketing site. Therefore, you will have to open an InPrivate session so that you can log in as the MOD Administrator to make this assignment.  
+Now that you have added sites for Adatum's Marketing and Accounting departments, you will configure permissions for the Marketing site. Because you are still signed into Microsoft 365 as Dominique Skyetson, you must open an In-Private browser session in Edge and log into Microsoft 365 as the global administrator so that you can assign Nona Snider as an admin to the Marketing site.  
+Only a site's site admin can assign another user as an admin to the site. While you are signed into Edge as Dominique Skyetson, she is not an admin for the Marketing site. Therefore, you will have to open an InPrivate session so that you can log in as the MOD Administrator to make this assignment.  
 You will then open a second InPrivate browsing session and log in as Patti Fernandez to verify that she is a site admin for the Marketing site. You will do this by accessing the Marketing site's **Site Administrators** page, which is only accessible to site admins.  
 1. On **LON-CL1**, right-click on the **Edge** icon on the taskbar, and in the menu that appears, select **New InPrivate window**.
 1. In your **InPrivate Browsing** session, enter the following URL in the address bar: **https://portal.office.com**.

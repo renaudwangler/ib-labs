@@ -4,8 +4,8 @@ title: "Lab9-Ex1 - Viva Engage"
 length: "00"
 ---
 # Scénario
-Because Yammer Enterprise brings the rich social experiences of Yammer to Microsoft Teams, SharePoint Online, and other Microsoft 365 apps, Holly Dickson is interested in implementing Microsoft Yammer in Adatum's Microsoft 365 pilot project. This will enable Adatum users to share, create, and edit files directly from Yammer conversations with Office for the web.  
-In this exercise Holly will configure the Yammer organizational settings for Adatum. She will also configure Yammer to enforce Microsoft 365 identity, which enables single sign-on (SSO) capabilities in Yammer. Holly will complete her Yammer preparation by configuring the Yammer user experience.
+Because Yammer Enterprise brings the rich social experiences of Yammer to Microsoft Teams, SharePoint Online, and other Microsoft 365 apps, Dominique Skyetson is interested in implementing Microsoft Yammer in Adatum's Microsoft 365 pilot project. This will enable Adatum users to share, create, and edit files directly from Yammer conversations with Office for the web.  
+In this exercise Dominique will configure the Yammer organizational settings for Adatum. She will also configure Yammer to enforce Microsoft 365 identity, which enables single sign-on (SSO) capabilities in Yammer. Dominique will complete her Yammer preparation by configuring the Yammer user experience.
 
 # Objectifs
 A la fin de cet exercice, vous aurez une meilleure connaissance de :
@@ -16,7 +16,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 1. Please close all browser sessions you currently have open. This will enable you to start with a fresh browsing session.  
 	With Edge closed, select the **Edge** icon on the taskbar to open a new session. 
 1. In Edge, enter the following URL in the address bar: **https://portal.office.com**.
-1. In the **Pick an account** window, select Holly Dickson's account (**Holly@xxx.onmicrosoft.com** (where xxx is your tenant ID)). In the **Enter password** window, enter **ibForm@tion** and then select **Sign in**.
+1. In the **Pick an account** window, select Dominique Skyetson's account (**dom@WWLxxxxx.onmicrosoft.com** (where xxx is your tenant ID)). In the **Enter password** window, enter **ibForm@tion** and then select **Sign in**.
 1. On the **Stay signed in?** window, select **Don't show this again** and then select **Yes**.
 1. On the **Microsoft 365** homepage, select **Yammer** from the **App launcher**.  
 	>If the **Welcome to the new Yammer** window appears, close it by selecting the **X** in the upper right-hand corner.
@@ -64,13 +64,13 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 1. Leave your Edge browsing session open, but close the **Yammer: Notifications** tab and proceed to the next task.
 
 ## Task 3 - Using Yammer
-In this task, you will log into Yammer as Sherri Harrell and verify that you receive the Acceptable Use Policy statement that Holly configured in the earlier task.
+In this task, you will log into Yammer as Sherri Harrell and verify that you receive the Acceptable Use Policy statement that Dominique configured in the earlier task.
 1. Switch to **LON-CL2**. The last time you used LON-CL2, you were logged into Outlook on the web as the global Administrator. You were then instructed to log out of Outlook and close your Edge browsing session at the end of the lab. If your Edge browser is still open, then close it now.
 1. Select the **Microsoft Edge** icon on the taskbar to open a new Edge browsing session, and then enter the following URL in the address bar: **https://portal.office.com**.
 1. In the **Pick an account** window, if Sherri Harrell's **sherri@xxx.onmicrosoft.com** account appears in the list, then select it now; otherwise, select **Use another account**, sign in as **sherri@xxx.onmicrosoft.com** (where xxx is your tenant ID), and enter **Pa55w.rd**.
 1. On the **Microsoft Office Home** page, select **Yammer** from the App launcher.
 1. If a **Welcome to the new Yammer!** window appears, then close it.
-1. A **Adatum Acceptable Use Policy** dialog box should appear that displays the Welcome message that Holly configured in the earlier task. Select **I accept**.
+1. A **Adatum Acceptable Use Policy** dialog box should appear that displays the Welcome message that Dominique configured in the earlier task. Select **I accept**.
 	You have now verified that a user who is signing into Yammer for the first time receives the Acceptable Use Policy statment. If Sherri were to sign out of Yammer and then sign back in, the **Adatum Acceptable Use Policy** dialog box would not appear, since she already accepted it.
 
 ## Résultat

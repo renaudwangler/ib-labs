@@ -4,7 +4,7 @@ title: "Lab6-Ex2 - Configuration de la protection de la messagerie"
 length: "00"
 ---
 # Scénario
-In this lab, you will continue in your role as Holly Dickson, Adatum’s Enterprise Administrator. Adatum has experienced a recent rash of malware infections. The company's CTO has asked Holly to investigate the various options that are available in Exchange Online to fortify Adatum’s messaging environment.  
+In this lab, you will continue in your role as Dominique Skyetson, Adatum’s Enterprise Administrator. Adatum has experienced a recent rash of malware infections. The company's CTO has asked Dominique to investigate the various options that are available in Exchange Online to fortify Adatum’s messaging environment.  
 You will access the Exchange admin center for Exchange Online from your client computer and create a series of hygiene filters that are designed to protect Adatum’s messaging environment. You will create a malware filter, a connection filter, and a spam filter. Finally, you will enable Microsoft 365 Advanced Threat Protection, which will safeguard Adatum against malicious threats posed by email messages, links (URLs), and collaboration tools.
 
 # Objectifs
@@ -15,7 +15,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 In this task, you will create a malware filter that checks for attachments that have a specific file type that indicate a possible malware attachment. If an attachment is found matching one of those file types and the recipient’s domain matches Adatum’s Microsoft 365 domain, then default notification text will be applied to the message.
 
 1. You should still be logged into LON-CL1 as the **Administrator** with a password of **Pa55w.rd**.
-1. Your Edge browser should be open from the prior lab, with tabs open for the **Microsoft 365** homepage, the **Microsoft 365 admin center**, and the **Exchange admin center**. You should still be signed into Microsoft 365 as Holly Dickson.
+1. Your Edge browser should be open from the prior lab, with tabs open for the **Microsoft 365** homepage, the **Microsoft 365 admin center**, and the **Exchange admin center**. You should still be signed into Microsoft 365 as Dominique Skyetson.
 1. In the **Microsoft 365 Admin center**, under **Admin Centers** in the left-hand navigation pane, select **Security**.
 1. In the **Email &amp; collaboration** section of the left-hand navigation, select **Policies &amp; rules**.
 1. Select **Threat policies** and then select **Anti-malware**.
@@ -32,7 +32,7 @@ In this task, you will create a malware filter that checks for attachments that 
 ## Task 2 - Create a Connection Filter (Anti-spam policy)
 In this task, you will modify the default connection filter to include an allowed IP address and a blocked IP address. Any messages originating from the allowed IP address will always be accepted, and any messages originating from the blocked IP address will always be blocked. 
 1. You should still be logged into LON-CL1 as the **Administrator** with a password of **Pa55w.rd**.
-1. Your Edge browser should be open from the prior task, with tabs open for the **Microsoft 365** homepage, the **Microsoft 365 admin center**, and the **Mircosoft 365 Defender**. You should still be signed into Microsoft 365 as Holly Dickson.  
+1. Your Edge browser should be open from the prior task, with tabs open for the **Microsoft 365** homepage, the **Microsoft 365 admin center**, and the **Mircosoft 365 Defender**. You should still be signed into Microsoft 365 as Dominique Skyetson.  
 	If you closed the Defender tab after the prior task, then in the **Microsoft 365 Admin center**, under **Admin Centers** in the left-hand navigation pane, select **Security**.
 1. In the **Threat policies** tab, select **Anti-spam**.
 1. In the list of policies, select the **Connection filter policy (default)** filter. Once the policy details are displayed, select **Edit connection filter policy**.
@@ -44,9 +44,9 @@ In this task, you will modify the default connection filter to include an allowe
 
 ## Task 3 - Create a Spam Filter
 For Microsoft 365 customers whose mailboxes are hosted in Microsoft Exchange Online, their email messages are automatically protected against spam and malware. Microsoft 365 has built-in malware and spam filtering capabilities that help protect inbound and outbound messages from malicious software and help protect you from spam.  
-As Adatum’s Enterprise Administrator, Holly doesn't need to set up or maintain the filtering technologies, which are enabled by default. However, she can make company-specific filtering customizations in the Exchange admin center. She has decided to test this out by configuring a spam policy to grant or deny an email by focusing on the language of the email and the location of the email's origin.
+As Adatum’s Enterprise Administrator, Dominique doesn't need to set up or maintain the filtering technologies, which are enabled by default. However, she can make company-specific filtering customizations in the Exchange admin center. She has decided to test this out by configuring a spam policy to grant or deny an email by focusing on the language of the email and the location of the email's origin.
 1. You should still be logged into LON-CL1 as the **Administrator** with a password of **Pa55w.rd**.
-1. Your Edge browser should be open from the prior task, with tabs open for the **Microsoft 365** homepage, the **Microsoft 365 admin center**, and the **Microssoft 365 Defenderr**. You should still be signed into Microsoft 365 as Holly Dickson.  
+1. Your Edge browser should be open from the prior task, with tabs open for the **Microsoft 365** homepage, the **Microsoft 365 admin center**, and the **Microssoft 365 Defenderr**. You should still be signed into Microsoft 365 as Dominique Skyetson.  
 	If you closed the Defender tab after the prior task, then in the **Microsoft 365 Admin center**, under **Admin Centers** in the left-hand navigation pane, select **Security**.
 1. In the list of anti-spam policies, select the **Anti-spam inbound policy (Default)** policy.
 1. In the **Anti-spam inbound policy (Default)** window, select the **Edit actions** link.  

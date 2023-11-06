@@ -4,7 +4,7 @@ title: "Lab6-Ex1 - Paramètres de transport des messages"
 length: "00"
 ---
 # Scénario
-In this exercise, you will take on the persona of Holly Dickson, Adatum’s Enterprise Administrator. As part of her pilot project for Adatum’s Exchange deployment, Holly wants to begin by creating custom send and receive connectors in her Exchange Online deployment using the Microsoft 365 Exchange admin center. Exchange uses connectors to enable incoming and outgoing mail flow in Exchange Online and between services in the transport pipeline.  
+In this exercise, you will take on the persona of Dominique Skyetson, Adatum’s Enterprise Administrator. As part of her pilot project for Adatum’s Exchange deployment, Dominique wants to begin by creating custom send and receive connectors in her Exchange Online deployment using the Microsoft 365 Exchange admin center. Exchange uses connectors to enable incoming and outgoing mail flow in Exchange Online and between services in the transport pipeline.  
 You will then create a series of mail flow rules that are designed to protect Adatum’s messaging environment. You will first create a mail flow rule that adds a disclaimer message to each received email; the message will indicate that you must delete the message if you are not the intended recipient. You will then create a second rule in which any email received that was intended for Megan Bowen must be forwarded automatically to the MOD Administrator for approval first. Finally, if the Development teams sends or receives email, then journal reports will be sent to a specific web address.
 
 # Objectifs
@@ -50,7 +50,7 @@ In this task you will create two connectors to enforce Transport Layer Security 
 ## Task 2: Create transport rules
 In the next few tasks, you will create a series of mail flow rules that are designed to protect Adatum’s messaging environment. In this task, you will create a mail flow rule that adds a disclaimer message to each received email; the message will indicate that you must delete the message if you are not the intended recipient. You will then create a second rule in which any email received that was intended for Megan Bowen must be forwarded automatically to the MOD Administrator for approval first.
 1. You should still be logged into **LON-CL1** as the **Administrator** account with a password of **Pa55w.rd**.
-1. Your Edge browser should be open from the prior task, with tabs open for the **Microsoft 365** homepage, the **Microsoft 365 admin center**, and the **Exchange admin center**. You should still be signed into Microsoft 365 as Holly Dickson.
+1. Your Edge browser should be open from the prior task, with tabs open for the **Microsoft 365** homepage, the **Microsoft 365 admin center**, and the **Exchange admin center**. You should still be signed into Microsoft 365 as Dominique Skyetson.
 1. In the **Exchange admin center**, the **Mail flow** section in the left-hand navigation pane should still be expanded from the prior task, and on this page, the **Connectors** page should be displayed. Since you want to create a message transport rule, select **Rules** in the left-hand navigation pane.
 1. You will begin by creating a rule that adds a disclaimer message to each received email. On the **Rules** page, select the **+ Add a rule** on the menu bar. In the menu that appears, select **Apply disclaimers**.
 1. In the **Set rule conditions*** window, enter the following information:  
@@ -91,7 +91,7 @@ In this task, you will test the new transport rules that you created in the prio
 1. In the message body, enter **Disclaimer message test and moderator approval test** and then select the **Send** sign button.
 1. You will now sign out as Nona Snider and then sign into Outlook on the web as your global administrator. Select the NS initials in the upper right corner of the screen, and select **Sign out**.
 1. Once you are signed out of **Outlook on the web**, enter the following URL in the address bar: **https://Outlook.office365.com**  
-	>**Note :** If outlook is automatically logged with another account (Holly...), sign out again
+	>**Note :** If outlook is automatically logged with another account (Dominique...), sign out again
 1. In the **Pick an account** window, select **+ Use another account**. In the **Sign in** window, enter your global amdinistrator account and select **Next**. In the **Enter password** window, enter your global administrator's password and then select **Sign in**.
 1. In **Outlook on the web**, check the global aministrator's **Inbox**. If you see the message from Nona to Misty, open the message and verify the disclaimer message was added to the body of the email.  
 	However, if the email is not in the global Admin's Inbox, check the **Junk Email** folder. If the email is not there, then sign out of Outlook on the web as the global Admin, repeat steps 10-11 to sign into Outlook on the web as **Misty Philips** (where the username will be **Misty@xxx.onmicrosoft.com** and the password **Pa55w.rd**.  
@@ -100,7 +100,7 @@ In this task, you will test the new transport rules that you created in the prio
 
 ## Task 4 - Track internal and external message delivery
 1. You should still be logged into LON-CL1 as the **Administrator**.
-1. The Edge browser should be open from the prior task, with tabs open for the **Microsoft 365** homepage, the **Microsoft 365 admin center**, and the **Exchange admin center**. You should still be signed into Microsoft 365 as Holly Dickson.   
+1. The Edge browser should be open from the prior task, with tabs open for the **Microsoft 365** homepage, the **Microsoft 365 admin center**, and the **Exchange admin center**. You should still be signed into Microsoft 365 as Dominique Skyetson.   
 	If you closed the Exchange admin center tab after the prior lab exercise, then in the **Microsoft 365 Admin center**, under **Admin Centers** in the left-hand navigation pane, select **Exchange**.
 1. In the **Exchange admin center**, in the left-hand navigation pane, under **mail flow**, select **message trace**.
 

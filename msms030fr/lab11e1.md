@@ -4,8 +4,8 @@ title: "Lab11-Ex1 - Etat de santé du service Microsoft 365"
 length: "00"
 ---
 # Scénario
-As Holly Dickson concludes her Microsoft 365 pilot project, she is interested in viewing the health of Adatum's Microsoft services, including Office on the web, Yammer, and mobile device management cloud services. After doing a little research, Holly has discovered that this information is available on the Service health page in the Microsoft 365 admin center. Therefore, if Adataum experiences problems with a cloud service, Holly can check its service health to determine whether this is a known issue with a resolution in progress before she calls Microsoft Support or spends time troubleshooting.  
-In this exercise, Holly will view the Microsoft 365 service health and several service health reports in the Microsoft 365 admin center.
+As Dominique Skyetson concludes her Microsoft 365 pilot project, she is interested in viewing the health of Adatum's Microsoft services, including Office on the web, Yammer, and mobile device management cloud services. After doing a little research, Dominique has discovered that this information is available on the Service health page in the Microsoft 365 admin center. Therefore, if Adataum experiences problems with a cloud service, Dominique can check its service health to determine whether this is a known issue with a resolution in progress before she calls Microsoft Support or spends time troubleshooting.  
+In this exercise, Dominique will view the Microsoft 365 service health and several service health reports in the Microsoft 365 admin center.
 
 # Objectifs
 A la fin de cet exercice, vous aurez une meilleure connaissance de :
@@ -13,7 +13,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 
 ## Task 1- View Microsoft 365 service health
 1. On **LON-CL1** you should still be logged in as the **Administrator** from the prior lab exercise.
-1. In your Edge browser, you should still have a tab open for the **Microsoft 365** homepage and the **Microsoft 365 admin center** and you should still be logged in as Holly Dickson.
+1. In your Edge browser, you should still have a tab open for the **Microsoft 365** homepage and the **Microsoft 365 admin center** and you should still be logged in as Dominique Skyetson.
 1. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Show all**, select **Health**, and then select **Service health**.
 1. On the **Service health** page, if any issue is present under the **Active issues** section, click on its title to open an information pane with informations about the issue. Review information about the issue, then close this issue pane.
 1. On the **Service health** page, under **Microsoft service health** Look for the services list if any displays some problems or advisories. Try to attach this information to the previous issue.
@@ -25,7 +25,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 
 ## Task 2 - View reports in the Microsoft 365  admin center
 
-1. On **LON-CL1** you should still be logged in as the **Administrator** from the prior lab exercise. In your Edge browser, you should also be logged into Microsoft 365 as Holly Dickson.
+1. On **LON-CL1** you should still be logged in as the **Administrator** from the prior lab exercise. In your Edge browser, you should also be logged into Microsoft 365 as Dominique Skyetson.
 1. In the **Microsoft 365  admin center**, in the left-hand navigation pane, select **Reports**. Note that as of this writing there are only 2 reports listed in this group. Select each of the reports to view information related to it.
 1. Microsoft 365 includes a variety of additional reports, which can be found in the portals to which they apply. For example:  
 	- Security reports are included in the Reports dashboard in the Defender portal. In the **Microsoft 365 admin center**, under the **Admin centers** group, select **Security**. This opens the **Microsoft Defender** portal. In the navigation pane select **Reports**.

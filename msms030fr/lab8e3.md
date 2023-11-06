@@ -4,22 +4,22 @@ title: "Lab8-Ex3 - Partage externe dans Sharepoint Online"
 length: "00"
 ---
 # Scénario
-In the last two exercises, Holly Dickson has configured SharePoint Online services and SharePoint Online sites. She is now ready to configure SharePoint Online for external sharing as part of her overall permissions planning for SharePoint in Microsoft 365.  
+In the last two exercises, Dominique Skyetson has configured SharePoint Online services and SharePoint Online sites. She is now ready to configure SharePoint Online for external sharing as part of her overall permissions planning for SharePoint in Microsoft 365.  
 The external sharing features of Microsoft SharePoint let users in an organization share content with people outside the organization (such as partners, vendors, clients, or customers). External sharing can also be used to share between licensed users on multiple Microsoft 365 subscriptions if your organization has more than one subscription.  
-SharePoint has external sharing settings at both the organization level and the site level. To allow external sharing on any Adatum site, Holly must first allow it at the organization level. She can then restrict external sharing for other sites. If a site's external sharing option and the organization-level sharing option don't match, the most restrictive value will always be applied.  
+SharePoint has external sharing settings at both the organization level and the site level. To allow external sharing on any Adatum site, Dominique must first allow it at the organization level. She can then restrict external sharing for other sites. If a site's external sharing option and the organization-level sharing option don't match, the most restrictive value will always be applied.  
 Even if your organization-level setting allows external sharing, not all new sites allow it by default. The default sharing setting for Microsoft 365 group-connected team sites is "New and existing guests." The default for communication sites and classic sites is "Only people in your organization."  
-In this exercise, Holly will allow external sharing at the organization level and for a specific site. She will then verify that she can share a document as well as a site with external users.
+In this exercise, Dominique will allow external sharing at the organization level and for a specific site. She will then verify that she can share a document as well as a site with external users.
 
 # Objectifs
 A la fin de cet exercice, vous aurez une meilleure connaissance de :
 
 
 ## Task 1: Configure global settings for external user sharing
-In this task, Holly will enable external sharing at the organization level.
+In this task, Dominique will enable external sharing at the organization level.
 
 1. You should still be on **LON-CL1**, where you should be logged in as the **Administrator** with a password of **Pa55w.rd**.
 1. You should still have Microsoft Edge open from an earlier lab, along with tabs for the **Microsoft 365**  homepage, **Microsoft 365 admin center**, and **SharePoint admin center**.  
-	If so, proceed to the next step; otherwise, open Microsoft Edge, navigate to **https://portal.office.com/**, log in as **Holly@xxx.onmicrosoft.com** (where xxx is your tenant ID) and **ibForm@tion**, and then in the **Microsoft Office Home** page, select **Admin**, and then in the **Microsoft 365 admin center**, select **SharePoint**.
+	If so, proceed to the next step; otherwise, open Microsoft Edge, navigate to **https://portal.office.com/**, log in as **dom@WWLxxxxx.onmicrosoft.com** (where xxx is your tenant ID) and **ibForm@tion**, and then in the **Microsoft Office Home** page, select **Admin**, and then in the **Microsoft 365 admin center**, select **SharePoint**.
 
 1. On the **SharePoint admin center**, in the left-hand navigation pane, select **Policies** and then select **Sharing**.
 1. On the **Sharing** page, click to open the **More external sharing settings** section and verify the **Allow only users in specific security groups to share externally** check box is not selected. If this check box is selected, then unselect it and select **Save**.
@@ -70,7 +70,7 @@ In the prior lab exercise, you created a new Marketing site. In this task, you w
 	>**Note:** You are redirected directly to the Word Document. Word Online opens and displays the document.
 1. Verify that you can access the Word document and then select **Edit in Browser**. 
 1. Add some text in this document. Close the document and then re-open it to verify your changes appear.
-1. On the **Microsoft Office Home** page, select the user icon (the circle with Holly Dickson's **HD** initials in it) in the upper right-hand corner, and in the **My account** window that appears, select **Sign out**. Once you are signed out, close all other tabs, and then close Microsoft Edge.
+1. On the **Microsoft Office Home** page, select the user icon (the circle with Dominique Skyetson's **HD** initials in it) in the upper right-hand corner, and in the **My account** window that appears, select **Sign out**. Once you are signed out, close all other tabs, and then close Microsoft Edge.
 
 ## Résultat
 A l'issue de cet exercice, vous avez configuré un nouveau site Sharepoint Online pour le partager avec des utilisateurs externes et testé cette fonctionnalité de partage.

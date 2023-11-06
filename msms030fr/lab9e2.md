@@ -4,9 +4,9 @@ title: "Lab9-Ex2 - OneDrive for Business"
 length: "00"
 ---
 # Scénario
-Now that she has implemented Microsoft Yammer in Adatum's Microsoft 365 pilot project, Holly Dickson is ready to do the same with Microsoft OneDrive for Business. Holly knows that with OneDrive, Adatum's users can easily and securely store and access their files from all their devices. This will enable them to more efficiently work with others regardless of whether they're inside or outside the organization and terminate that sharing whenever they want.  
-Holly also knows that OneDrive for Business will help protect their work through advanced encryption while the data is in transit and at rest in data centers. Because Adatum is serious about improving its security requirements, Holly plans to implement OneDrive to help ensure that her users adhere to Adatum's most rigorous compliance standards by enabling them to choose where their data lives and providing detailed reporting of how that data has been changed and accessed.  
-In this exercise, Holly will enable OneDrive for Business synchronization, create test files to be synchronized, and then verify file synchronization.  
+Now that she has implemented Microsoft Yammer in Adatum's Microsoft 365 pilot project, Dominique Skyetson is ready to do the same with Microsoft OneDrive for Business. Dominique knows that with OneDrive, Adatum's users can easily and securely store and access their files from all their devices. This will enable them to more efficiently work with others regardless of whether they're inside or outside the organization and terminate that sharing whenever they want.  
+Dominique also knows that OneDrive for Business will help protect their work through advanced encryption while the data is in transit and at rest in data centers. Because Adatum is serious about improving its security requirements, Dominique plans to implement OneDrive to help ensure that her users adhere to Adatum's most rigorous compliance standards by enabling them to choose where their data lives and providing detailed reporting of how that data has been changed and accessed.  
+In this exercise, Dominique will enable OneDrive for Business synchronization, create test files to be synchronized, and then verify file synchronization.  
 This lab exercise will be performed within LON-CL2.
 
 # Objectifs
@@ -46,7 +46,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 1. Leave File Explorer open as well as your Edge browser and proceed to the next task. 
 
 ## Task 2: Create files to synchronize with OneDrive for Business
-Now that you have enabled file synchronization with OneDrive for Business, Holly Dickson wants to create test files to be synchronized and then verify file synchronization.
+Now that you have enabled file synchronization with OneDrive for Business, Dominique Skyetson wants to create test files to be synchronized and then verify file synchronization.
 1. On **LON-CL2**, ensure that the **OneDrive for Business** folder is open in File Explorer from the previous task. If not, open **File Explorer** and select **OneDrive - Adatum Corporation**.
 1. In **File Explorer**, select **Home** that appears in the menu bar at the top of the window.
 1. In the ribbon that appears on the **Home** tab, select **New folder**. This creates a new folder. Enter **Private** as the folder name.

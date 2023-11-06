@@ -4,7 +4,7 @@ title: "Lab5-Ex1 - Déploiement de Microsoft 365 apps for enterprise"
 length: "00"
 ---
 # Scénario
-You have taken on the persona of Holly Dickson, Adatum's Enterprise Administrator, and you have Microsoft 365 deployed in a virtualized lab environment. In this exercise, you will perform the tasks necessary to manage a user-driven Microsoft 365 Apps installation. Performing a user-driven Microsoft 365 Apps installation is a two-step process: 1) configuring the user account so the user is eligible to download and install the setup file, and 2) performing the installation.  
+You have taken on the persona of Dominique Skyetson, Adatum's Enterprise Administrator, and you have Microsoft 365 deployed in a virtualized lab environment. In this exercise, you will perform the tasks necessary to manage a user-driven Microsoft 365 Apps installation. Performing a user-driven Microsoft 365 Apps installation is a two-step process: 1) configuring the user account so the user is eligible to download and install the setup file, and 2) performing the installation.  
 In the first two tasks in this exercise, you will verify the following conditions that affect whether a user can be blocked from downloading the Microsoft 365 Apps for enterprise suite:
 - The user does not have an appropriate Office 365 license (which you will verify in Task 1). 
 - An admin turns off the global Office download setting that controls the downloading of mobile and desktop apps for all users (which you will verify in Task 2).  
@@ -15,7 +15,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 
 
 ## Task 1 – Verify how licensing affects installing Microsoft 365 Apps for enterprise
-In this task, Holly will test whether a user who has not been assigned an appropriate Office 365 license can download Microsoft 365 Apps. For this test, you cannot use any of the existing users that appear in the **Active Users** list in the Microsoft 365 admin center. These users only have Microsoft 365 accounts (xxx.onmicrosoft.com accounts); they do not have corresponding on-premises accounts in the adatum.com domain (which has now been changed on-premises to the xxxUPNxxx). Without an on-premises account, you cannot log into a client VM as any of these users to install Microsoft 365 Apps for enterprise on the client machine.  
+In this task, Dominique will test whether a user who has not been assigned an appropriate Office 365 license can download Microsoft 365 Apps. For this test, you cannot use any of the existing users that appear in the **Active Users** list in the Microsoft 365 admin center. These users only have Microsoft 365 accounts (xxx.onmicrosoft.com accounts); they do not have corresponding on-premises accounts in the adatum.com domain (which has now been changed on-premises to the xxxUPNxxx). Without an on-premises account, you cannot log into a client VM as any of these users to install Microsoft 365 Apps for enterprise on the client machine.  
 Therefore, you must use one of Adatum's on-premises user accounts that has been loaded in its VM environment. For this test, you will use **Laura Atkins**. You will create a Microsoft 365 account for Laura, but you will not assign her any Microsoft 365 license.  
 You will then use the **LON-CL2** VM for installing Microsoft 365 Apps (it's already installed on the other client machines).
 1. Switch to **LON-CL2** and log in as **Admin** with a password of **Pa55w.rd**.
@@ -36,8 +36,8 @@ You will then use the **LON-CL2** VM for installing Microsoft 365 Apps (it's alr
 1. Leave your browser and all tabs open and proceed to the next step.
 
 ## Task 2 – Verify how the global Office download setting affects installing Microsoft 365 Apps
-Holly is now going to test whether licensed users can be prohibited from downloading Microsoft 365 Apps if an admin such as herself turns off the global Office download setting that controls the downloading of mobile and desktop apps for all users.
-1. Switch to **LON-DC1**, where you should still be logged in as the **Administrator**. You should also have your **Edge** browser open, and you should be signed into Microsoft 365 as Holly Dickson. Your browser should have tabs open for the **Microsoft 365 admin center**.
+Dominique is now going to test whether licensed users can be prohibited from downloading Microsoft 365 Apps if an admin such as herself turns off the global Office download setting that controls the downloading of mobile and desktop apps for all users.
+1. Switch to **LON-DC1**, where you should still be logged in as the **Administrator**. You should also have your **Edge** browser open, and you should be signed into Microsoft 365 as Dominique Skyetson. Your browser should have tabs open for the **Microsoft 365 admin center**.
 1. To turn off the global Office download setting, select the **Microsoft 365 admin center** tab in your browser, and then if necessary, select **...Show all** in the left-hand navigation pane. Select **Settings**, and then within the group, select **Org Settings**.
 1. In the **Settings** window, the **Services** tab is displayed by default. Scroll down through the list of services and select **Microsoft 365 installation options**.
 1. In the **Microsoft 365 installation options** window, select the **Installation** tab and, in the **Apps for Windows and mobile devices** section, Unselect the check box **Office (includes Skype for Business)** so that it’s blank, which turns this feature **Off**.
