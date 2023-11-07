@@ -30,7 +30,7 @@ ___
 ___
 ## Atelier 05 - Déploiement de Microsoft 365 Apps
 ### Exercice 1 - [Déploiement de Microsoft 365 apps for enterprise](lab5e1)
-### Exercice 2 -[Déploiement de Microsoft 365 apps via MDM (en)](lab5e2)
+### Exercice 2 -[Déploiement de Microsoft 365 apps via MDM](lab5e2)
 ___
 ## Atelier 06 - Configuration des services Exchange Online
 ### Exercice 1 - [Paramètres de transport des messages (en)](lab6e1)
