@@ -65,7 +65,7 @@ Les groupes *Built-in* sont des groupes prédéfinis dans l'ADDS, situés dans l
 1. Vous allez maintenant créer un groupe de sécurité. Dans l'arborescence de la console, double-cliquez sur **Adatum (local)**.
 1. Faites un clic-droit sur l'OU **Research**, choisissez successivement **New >** puis **Group**.
 1. Dans la fenêtre **Create Group:** saisissez les informations suivantes :
-	- Group name: ```Manufacturing```
+	- Group name: ```Marketing```
 	- Group type: **Security**
 	- Group scope: **Universal**
 1. Basculez sur l'onglet **Members** et répétez les opérations que vous avez faites sur le premier groupe pour ajouter les utilisateurs suivant à ce groupe : ```Bernardo; Charlie; Dawn```.
@@ -110,7 +110,7 @@ Dans cette tâche, vous allez forcer volontairement la synchronisation entre l'A
 1. Utilisez la commande suivante pour chercher le groupe **Print Operators** :
 	```Get-MgGroup -Filter "DisplayName eq 'Print Operators' and MailEnabled eq false"```
 1. Vérifiez que la commande ne renvoie pas de réponse, ceci indiquant que le groupe **Print Operators** est introuvable car il n'a pas été synchronisé.
-1. Utilisez la commande suivante pour obtenir identifier le groupe **Marketing** :
+1. Utilisez la commande suivante pour obtenir l'identité du groupe **Marketing** :
 	```$mktGroup = Get-MgGroup -Filter "DisplayName eq 'Marketing' and MailEnabled eq false"```
 1. Vous pouvez utiliser la commande suivante pour vérifier si le groupe **Marketing** a été trouvé :
 	```$mktGroup```

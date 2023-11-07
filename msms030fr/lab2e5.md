@@ -55,7 +55,7 @@ Dans cette tâche, Dominique va vérifier la délégation administrative mise en
 1. Dans cette nouvelle fenêtre privée, saisissez l'adresse ```https://www.microsoft365.com``` pour vous rendre sur le portail Microsoft 365.
 1. Vous allez commencer par vous connecter avec le compte de **Alan Yoo**. Cliquez sur **Sign In**
 1. Dans la fenêtre **Sign-in**, entrez **Alan@WWLxxxxx.onmicrosoft.com** (remplacez bien par votre préfixe de tenant).  
-1. Dans la fenêtre **Enter password**, tapez **Pa55w.rd****.
+1. Dans la fenêtre **Enter password**, tapez **Pa55w.rd**.
 1. Dans la fenêtre **Update your pasword**, changez le mot de passe de Alan comme déjà vu précédemment de **Pa55w.rd** vers **ibForm@tion**.
 1. Dans la fenêtre **Stay signed in?**, cliquez sur **Yes**.
 1. Si une fenêtre **Welcome to Microsoft 365** apparait, cliquez deux fois sur la flèche de droite pour pouvoir la fermer.

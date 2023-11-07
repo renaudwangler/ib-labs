@@ -5,7 +5,7 @@ length: "00"
 ---
 # Scénario
 Vous avez pris l'identité de Dominique Skyetson, Administrateur de l'entreprise Adatum, et vous avez commencé à déployer Microsoft 365 dans un environnement virtuel pilote. Dans cet exercice, Dominique veut créer des connecteurs Exchange Online d'émission et de réception en utilisant le portail Exchange admin center. Exchange utilise ces connecteurs pour gèrer les flux de messages entrant et sortant vers et depuis les serveurs Exchange Online.  
-Vous allez ensuite créer une série de règles de transport pour modifier le flux de messages da,s l'environnement Adatum. Une première règle ajoutera un disclaimer à chaque message reçu, tandis qu'une seconde fera suivre les message à destination de Megan Bowen vers la boite de Dominique Skyetson pour approbabtion avant livraison. Finalement, si l'équipe de développement reçoit un message, un raport sera envoyé à une adresse web spécifique.
+Vous allez ensuite créer une série de règles de transport pour modifier le flux de messages da,s l'environnement Adatum. Une première règle ajoutera un disclaimer à chaque message reçu, tandis qu'une seconde fera suivre les message à destination de Megan Bowen vers la boite de Dominique Skyetson pour approbabtion avant livraison.
 
 # Objectifs
 A la fin de cet exercice, vous aurez une meilleure connaissance de :
