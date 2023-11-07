@@ -4,85 +4,81 @@ title: "Lab6-Ex2 - Configuration de la protection de la messagerie"
 length: "00"
 ---
 # Scénario
-In this lab, you will continue in your role as Dominique Skyetson, Adatum’s Enterprise Administrator. Adatum has experienced a recent rash of malware infections. The company's CTO has asked Dominique to investigate the various options that are available in Exchange Online to fortify Adatum’s messaging environment.  
-You will access the Exchange admin center for Exchange Online from your client computer and create a series of hygiene filters that are designed to protect Adatum’s messaging environment. You will create a malware filter, a connection filter, and a spam filter. Finally, you will enable Microsoft 365 Advanced Threat Protection, which will safeguard Adatum against malicious threats posed by email messages, links (URLs), and collaboration tools.
+Dans cet exercice, vous allez continuer, sous l'identité de Dominique Skyetson, Administrateur de l'entreprise Adatum à déployer Microsoft 365 dans un environnement virtuel pilote. Adatum a récemment constaté une recrudescence des attaques virales. Le CTO de l'entreprise a demandé à Dominique de rechercher les différentes options disponibles dans Exchange Online pour fortifier l'environnement de messagerie de Adatum.  
+Vous allez accéder au centre d'administration de Exchange Online depuis votre machine cliente et créer une série de règles de filtrage d'hygiène pensées pour protéger l'environnement de messagerie de Adatum. Vous allez créer un filtre antiviral, un filtre de connexion et un filtre de spam. Au final, vous activerez Microsoft Defender for Office, qui protègera Adatum des attaques malicieuces contenues dans les emails, les liens (URLs) et les autres outils de collaboration.
 
 # Objectifs
 A la fin de cet exercice, vous aurez une meilleure connaissance de :
+- Les stratégies antivirales de Microsoft 365
+- Les stratégies antispam de Microsoft 365
+- Defender for Office et les stratégies *Safe attachment*
 
 
-## Task 1 - Create a Malware Filter  
-In this task, you will create a malware filter that checks for attachments that have a specific file type that indicate a possible malware attachment. If an attachment is found matching one of those file types and the recipient’s domain matches Adatum’s Microsoft 365 domain, then default notification text will be applied to the message.
+## Tâche 1 - Créer un filtre antiviral
+Dans cette tâche, vous allez créer un filtre antiviral pour les pièces jointes d'un type de fichier particulier qui pourraient correspondre à une attaque potentielle. Si une pièce jointe correspond à un des types de fichiers et que le domaine destinataire est le domaine de Adatum, alors un message préventif sera appliqué au message.
+1. Vous devriez encore être connecté sur **LON-CL1** à l'issue de l'atelier précédent. Les portails **Microsoft 365 admin center** et **Exchange admin center** devraient encore être resté ouverts dans votre navigateur (et vous devriez y être connecté avec le compte de *Dominique Skyetson*).
+1. Dans le portail **Microsoft 365 Admin center**, sous la section **Admin Centers** du menu de navigation à gauche, cliquez sur **Security**.
+1. Dans le portail **Microsoft 365 Defender**, dans le groupe d'options **Email &amp; collaboration** du menu de navigation, cliquez sur **Policies &amp; rules**.
+1. Sur la page **Policies &amp; rules**, cliquez sur **Threat policies**.
+1. Sur la page **Threat policies**, cliquez sur **Anti-malware** dans la section **Policies**.
+1. Sur la barre de menu, cliquez sur **+ Create** pour ajouter un nouveau filtre antiviral.
+1. Sur la page **Name your policy**, entrez ```Malware Policy``` dans le champ **Name**.
+1. Dans le champ **Description**, saisissez ```This policy has been created to protect the messaging environment.``` avant de cliquer sur **Next**.
+1. Sur la page **Users and Domains**, cliquez dans le champ **Domains** et tapez ```onmicrosoft```pour sélectionner votre domaine original (**WWLxxxxx.onmicrosoft.com** et pas WWLxxxxx.mail.onmicrosoft.com) avant de cliquer sur **Next**.
+1. Sur la page **Protection settings**, constatez les valeurs par défaut et les options disponibles et cliquez sur **Next**.
+1. Sur la page **Review**, cliquez sur le bouton **Submit** (vous pouvez aussi choisir d'annuler l'assistant car vous ne testerez pas cette stratégie antivirale).
+1. Sur la page **Created new anti-malware policy**, cliquez sur **Done**.
+1. Dans le menu de navigation séquentielle en haut de page, cliquez sur **Threat policies** pour remonter d'un niveau.
 
-1. You should still be logged into LON-CL1 as the **Administrator** with a password of **Pa55w.rd**.
-1. Your Edge browser should be open from the prior lab, with tabs open for the **Microsoft 365** homepage, the **Microsoft 365 admin center**, and the **Exchange admin center**. You should still be signed into Microsoft 365 as Dominique Skyetson.
-1. In the **Microsoft 365 Admin center**, under **Admin Centers** in the left-hand navigation pane, select **Security**.
-1. In the **Email &amp; collaboration** section of the left-hand navigation, select **Policies &amp; rules**.
-1. Select **Threat policies** and then select **Anti-malware**.
-1. On the menu bar, select the **+ Create** buton to add a new malware filter.
-1. In the **Name your policy** window, enter **Malware Policy** in the **Name** field.
-1. In the **Description** field, enter **This policy has been created to protect the messaging environment.** and then select **Next**.
-1. In the **Users and Domains** page, select the **Domains** field and then type **onmicrosoft** and from the list of options, select your main **xxx.onmicrosoft.com** domain (where xxx is your tenant suffix ID). and then select **Next**.
-1. In the **Protection settings** page, review the defaults and available options and then select **Next**.
-1. In the **Review** page, select **Submit** (you may also cancel the wizard since you won't test this antimalware policy).
-1. if a **Security** window pops up, click on **Yes**
-1. On the **Created new anti-malware policy** page, select **Done**.
-1. In the breadcrumb navigation at the top of the page, select **Threat policies**.
+## Tâche 2 - Créer un filtre de connexion
+Dans cette tâche, vous allez modifier le filtre de connexion par défaut pour y inclure une IP bloquée et une IP de confiance. Tout message venant d'une IP de confiance sera accepté, tandis que tout message venant d'une IP bloquée sera bloqué.
+1. Vous devriez encore être connecté sur **LON-CL1** à l'issue de l'atelier précédent. Les portails **Microsoft 365 admin center**, **Exchange admin center** et **Mircosoft 365 Defender** devraient encore être resté ouverts dans votre navigateur (et vous devriez y être connecté avec le compte de *Dominique Skyetson*).
+1. Dans le portail **Microsoft 365 Defender**, sur la page **Threat policies**, cliquez sur **Anti-spam**.
+1. Dans la liste des stratégies, sélectionnez **Connection filter policy (Default)**.
+1. Une fois le panneau des détails de la stratégie affiché, cliquez sur le lien **Edit connection filter policy**.
+1. Dans le contexte de l'atelier, vous **N'ALLEZ PAS** ajouter d'adresse IP bloquée. Vous pourriez le faire si vous aviez connaissance d'une adresse que vous souhaitez tester et/ou marquer comme problèmatique. Cependant, il faudra à peu près une heure pour que ce changement se propage sur la globalité de l'environnement. Pour votre atelier, il est suffisant de constater que vous êtes à même d'ajouter une adresse IP dans cette interface.
+1. Cochez la case **Turn on safe list** plus bas dans la page. C'est un conseil d'activer cette fonction pour votre *tenant* pour souscrire à la gestion ar Microsoft des adresses à problèmes les plus connues.Cocher cette case supprimera automatiquement les messages de spam émis par ces émetteurs.
+1. Cliquez sur les boutons **Save** puis **Close** une fois les changements sauvegardés.
+1. Laissez votre navigateur Internet ouvert sur l'onglet **Anti-spam policies** pour la tâche suivante.
 
-## Task 2 - Create a Connection Filter (Anti-spam policy)
-In this task, you will modify the default connection filter to include an allowed IP address and a blocked IP address. Any messages originating from the allowed IP address will always be accepted, and any messages originating from the blocked IP address will always be blocked. 
-1. You should still be logged into LON-CL1 as the **Administrator** with a password of **Pa55w.rd**.
-1. Your Edge browser should be open from the prior task, with tabs open for the **Microsoft 365** homepage, the **Microsoft 365 admin center**, and the **Mircosoft 365 Defender**. You should still be signed into Microsoft 365 as Dominique Skyetson.  
-	If you closed the Defender tab after the prior task, then in the **Microsoft 365 Admin center**, under **Admin Centers** in the left-hand navigation pane, select **Security**.
-1. In the **Threat policies** tab, select **Anti-spam**.
-1. In the list of policies, select the **Connection filter policy (default)** filter. Once the policy details are displayed, select **Edit connection filter policy**.
-1. At this time, you will **NOT** be adding IP addresses to the allow or block lists. You can do this if you have a known IP address you would like to test against. However, it typically takes up to 1 hour to propagate the change within the system. For this lab, simply review the fact that you can create allowed and blocked lists of IP addresses.
-1. Select the **Turn on safe list** check box at the bottom of the page. This is a best practice that enables for your tenant the most common third-party sources of trusted senders that Microsoft subscribes to. Selecting this check box skips spam filtering on messages sent from these senders, ensuring that they are never mistakenly marked as spam.
-1. Select **Save** and then select **Close** once the changes are successfully saved (you may also select the **Close** button since you won't test this policy effects).
-1. if a **Security** window pops up, click on **Yes**
-1. Leave the **Anti-spam policies tab open**.
-
-## Task 3 - Create a Spam Filter
-For Microsoft 365 customers whose mailboxes are hosted in Microsoft Exchange Online, their email messages are automatically protected against spam and malware. Microsoft 365 has built-in malware and spam filtering capabilities that help protect inbound and outbound messages from malicious software and help protect you from spam.  
-As Adatum’s Enterprise Administrator, Dominique doesn't need to set up or maintain the filtering technologies, which are enabled by default. However, she can make company-specific filtering customizations in the Exchange admin center. She has decided to test this out by configuring a spam policy to grant or deny an email by focusing on the language of the email and the location of the email's origin.
-1. You should still be logged into LON-CL1 as the **Administrator** with a password of **Pa55w.rd**.
-1. Your Edge browser should be open from the prior task, with tabs open for the **Microsoft 365** homepage, the **Microsoft 365 admin center**, and the **Microssoft 365 Defenderr**. You should still be signed into Microsoft 365 as Dominique Skyetson.  
-	If you closed the Defender tab after the prior task, then in the **Microsoft 365 Admin center**, under **Admin Centers** in the left-hand navigation pane, select **Security**.
-1. In the list of anti-spam policies, select the **Anti-spam inbound policy (Default)** policy.
-1. In the **Anti-spam inbound policy (Default)** window, select the **Edit actions** link.  
-	>**Note:** In this section you will be presented a variety of options on how you would like spam to be handled and what rating will be triggered depending on the severity of the spam.
-1. In the **Actions** section, make the following selections:
-	- Spam: **Move message to Junk Email folder**
-	- High Confident Spam: **Prepend subject line with text**
+## Tâche 3 - Créer un filtre antispam
+Pour les clients Microsoft 365 dont les boites aux lettres sont hébergées sur Exchange Online, leurs messages sont automatiquement protéfés contre les spams et les virus. Microsoft 365 a des fonctionnalités natives de filtrage antipam et antivirales qui protègent les flux de messages entrant et sortant.  
+En tant qu'administrateur de Adatum, Dominique souhaite actiber et maintenir les technologies de filtrage utilisées, qui sont activées par défaut. Ceci étant, il peut customiser l'utilisation de ces technologies dans le contexte de l'entreprise.
+1. Vous devriez encore être connecté sur **LON-CL1** à l'issue de l'atelier précédent. Les portails **Microsoft 365 admin center**, **Exchange admin center** et **Mircosoft 365 Defender** devraient encore être resté ouverts dans votre navigateur (et vous devriez y être connecté avec le compte de *Dominique Skyetson*).
+1. Dans le portail **Microsoft 365 Defender**, sur la page **Anti-spam policies**, cliquez sur **Anti-spam inbound policy (Default)**.
+1. Dans le panneau **Anti-spam inbound policy (Default)** qui s'affiche, descendez pour cliquer sur le lien **Edit actions**.  
+	>**Note :** Dans cette section vous sont présentées une selection d'options sur la manière dont seront repérés les spam et la manière dont il seront traités en fonction de leur niveau de gravité.
+1. Dans la fenêtree **Actions**, réalisez les sélections suivantes:
+	- Spam : **Move message to Junk Email folder**
+	- High Confident Spam : **Prepend subject line with text**
 	- Bulk complaint level (BCL) met or exceeded : **Move message to Junk Email folder**
 	- Retain spam in quarantine for this many days: **10**
-	- Prepend subject line with this text: enter **SPAM: This message contains potential spam**
-1. Select **Save** and then select **Close** once the changes are successfully saved (you may also select **Cancel** since you won't test this policy effects).
-1. if a **Security** window pops up, click on **Yes**
-1. Leave the **Anti-spam policies tab open**.
+	- Prepend subject line with this text: saisissez ```SPAM: This message contains potential spam```
+1. Cliquez sur le bouton **Save**.
+1. Une fois les modifcations sauveagrdées, cliquez sur **Close**.
+1. Laissez votre navigateur Internet ouvert sur l'onglet **Anti-spam policies** pour la tâche suivante.
 
-## Task 4: Enable Advanced Threat Protection and Create a Safe Attachments Policy
-In this task, you will turn on Advanced Threat Protection (ATP) for SharePoint, OneDrive, and Microsoft Teams, and you will create an ATP Safe Attachments policy that will test email attachments for malware that are sent to recipients within Adatum's xxx.onmicrosoft.com domain. You will configure the policy so that if an attachment is blocked, it will be removed from the email that is sent to the recipient, and a copy of the email will be redirected to Joni Sherman for additional review.
-1. You should still be logged into LON-CL1 as the **Administrator** with a password of **Pa55w.rd**.
-1. In your Edge browser session, select your **Anti-spam policies** tab from an earlier task and in the breadcrumb navigation at the top of the page, select **Thread policies**.
-1. Select the **Safe Attachments** link.
-1. In the **Safe attachments** window, select **Global settings** on the menu bar.
-1. In the **Global settings** window, at the top of the page under the **Protect files in SharePoint, OneDrive, and Microsoft Teams** section, select the **Turn on Defender for Office 365 for SharePoint, OneDrive and Microsoft Teams** toggle switch to **On** and then select **Save**.
-1. On the **Safe attachments** page, select **+ Create** on the menu bar to add a new Safe Attachments policy. This will initiate a **New Safe Attachment Policy** wizard to create a new policy.
-1. On the **Name your policy** page, enter **AttachmentPolicy1** in the **Name** field and then select **Next**.
-1. On the **Users and domains** page, select the **Domains** field and then type **onmicrosoft** and from the list of options, select the **xxx.onmicrosoft.com** domain (where xxx is your tenant suffix ID). and then select **Next**.
-1. On the **Settings** page, under the **Safe attachments unknown malware response** section, select the **Dynamic Delivery** option. This option will still send the email but will hold the attachment until it has been scanned and marked acceptable.
-1. Under the **Redirect messages with detected attachments** section, select the **Enable redirect** check box.
-1. In the **Send messages that contain monitored attachments to the specified eemail address** field, enter Jessica Jennings' email address of **jessica@xxx.onmicrosoft.com** (where xxx is your unique tenant ID) and then select **Next**.
-1. On the **Review** page, review your entries and if anything needs to be changed, select the appropriate **Edit** link. If everything appears correct, select **Submit** and then select **Done*.
-(you may also select **Cancel** since you won't test this policy effects).
-1. if a **Security** window pops up, click on **Yes**
-1. Leave LON-CL1 and your **Edge** session open for the next exercise.
+## Task 4: Stratégie *Safe attachment*
+Dans cette dernière tâche, vous allez activer **Defender for Office** pour Sharepoint, OneDrive et Teams et vous allez créer une stratégie *Safe Attachments** qui va permettre de tester les pièces jointes des messages non détectées comme problèmatiques par l'antivirus. Vous allez configurer la stratégie de sorte que si une pièce jointe est problèmatique, elle soit retirée du message avant sa livraison au destinataire et qu'une copie du message original soit envoyée dans la boite de Dominique Skyetson pour investigation plus poussée.
+1. Vous devriez encore être connecté sur **LON-CL1** à l'issue de l'atelier précédent. Les portails **Microsoft 365 admin center**, **Exchange admin center** et **Mircosoft 365 Defender** devraient encore être resté ouverts dans votre navigateur (et vous devriez y être connecté avec le compte de *Dominique Skyetson*).
+1. Dans le portail **Microsoft 365 Defender**, en haut de la page **Anti-spam policies**, dans le menu séquentiel, cliquez sur **Threat policies** pour remonter d'un niveau.
+1. Dans la section **Policies**, cliquez sur **Safe attachments**.
+1. Sur la page **Safe attachments**, cliquez sur **Global settings** dans la barre de menu.
+1. Dans le panneau **Global settings** qui s'affiche, dans la section **Protect files in SharePoint, OneDrive, and Microsoft Teams**, activez l'option **Turn on Defender for Office 365 for SharePoint, OneDrive and Microsoft Teams** si elle ne l'est pas et cliquez sur **Save** (cliquez sur **Cancel** si vous n'avez fait aucun changement).
+1. Sur la page **Safe attachments**, cliquez sur **+ Create** dans la barre de menu pour créer une nouvelle stratégie.
+1. Sur la page **Name your policy**, saisissez ```AttachmentPolicy1``` dans le champ **Name** avant de cliquer sur **Next**.
+1. Sur la page **Users and domains**, cliquez dans le champ **Domains** et tapez ```onmicrosoft```. Sélectionnez ensuite votre domaine **WWLxxxxx.onmicrosoft.com** et cliquez sur **Next**.
+1. Sur la page **Settings**, dans la section **Safe attachments unknown malware response**, choisissez l'option **Dynamic Delivery**. Cette option permet l'envoi des message traités à leur destinataires dès leur réception, mais sans permettre l'accès à la pièce jointe tant que celle-ci n'a pas été correctement scannée comme sans danger.
+1. Sous la section **Redirect messages with detected attachments**, cochez la case **Enable redirect**.
+1. Dans le champ **Send messages that contain monitored attachments to the specified eemail address**, entrez l'adresse de Dominique Skyetson (**dom@WWLxxxxx.onmicrosoft.com**) avant de cliquer sur **Next**.
+1. Sur la page **Review**, cliquez sur le bouton **Submit** puis **Done*.
+	(Vous pouvez aussi cliquer sur **Cancel** puisque cette stratégie ne sera pas testée)
+1. Laissez la session ouverte sur LON-CL1 et ne fermez pas votre navigateur Internet pour l'exercice suivant.
 
->**NOTE:** Unfortunately, we are unable to create a training lab in which you can validate the ATP Safe Attachments policy that you just created. To do so, you must send an email that contains a malicious attachment. There are some common test viruses that are available, such as the EICAR test virus; however, with well-known test viruses such as EICAR, the messages in which they are attached get quarantined before they can be processed by Office 365 ATP. Since the ATP Safe Attachments functionality is meant to protect against unknown and zero-day viruses and malware, it is very difficult, and not recommended, to create such an attachment.  
-That being said, after you have defined ATP Safe Attachment policies in your real-world environment, one good way to see how the service is working is by viewing Advanced Threat Protection reports. For more information on using ATP reporting to validate your Safe Links and Safe Attachment policies, see [View Defender for Office 365 reports in the Microsoft 365 Defender portal](https://learn.microsoft.com/en-us/microsoft-365/security/office-365-security/reports-defender-for-office-365).
+>**NOTE :** Malheureusement, il nous est impossible de créer un environnement d'ateliers dans lequel vous pourriez tester les stratégies que vous venez de créer. Pour ce faire, il vous faudrait vous envoyer un message contenant une cyber-attaque qui ne serait pas préalablement détéctée par les antivirus de l'environnement Microsoft 365.  
+Ceci étant dit, après avoir créer une stratégie *Safe Attachments* dans un environement de production, une bonne manière de constater son bon fonctionnement peut être la consultation des rapports de Defender for office dans le portail. Pour plus d'information sur leur utilisation, vous pouvez consulter la section suivante de la documentation : [View Defender for Office 365 reports in the Microsoft 365 Defender portal](https://learn.microsoft.com/microsoft-365/security/office-365-security/reports-defender-for-office-365).
 
 ## Résultat
-Au cours de cet exerice, vous avez configuré les paramètres anti-spam et anti-virus.
+Au cours de cet exerice, vous avez configuré les paramètres anti-spam et anti-virus de Microsoft 365.
 
 Vous pouvez poursuivre par [l'exercice 3 - Configuration des stratégies d'accès clients](lab6e3)

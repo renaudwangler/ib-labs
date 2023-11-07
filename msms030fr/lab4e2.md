@@ -21,7 +21,7 @@ Dans cette tâche, vous allez utiliser l'assistant d'installation de Entra Conne
 1. Dans votre navigateur Internet, rendez-vous à l'adresse ```https://admin.microsoft.com```.
 	>**Note :** Vous pouvez réutiliser l'onglet **Step 2: Install IdFix - Microsoft** de la tâche précédente qui ne sera pas réutilisé.
 1.	1. Si besoin, dans la boite **Sign in**, utilisez l'adresse de connexion de Dominique Skyetson (**dom@WWLxxxxx.onmicrosoft.com**) et cliquez sur **Next**.
-	1. Dans la boite **Enter password**, saisissez **ibForm@ion** et cliquez sur **Sign in**.
+	1. Dans la boite **Enter password**, saisissez ```ibForm@tion``` et cliquez sur **Sign in**.
 	1. Dans la boite **Stay signed in?**, cochez la case **Don’t show this again** et cliquez sur **Yes.**
 1. Dans le menu de navigation à gauche, ouvrez le groupe d'options **Users** pour cliquer sur **Active Users**.
 1. Au-dessus de la liste **Active users**, dans la barre de menu, cliquez sur les points de suspension à droite pour sélectionner **Directory synchronization**.
@@ -65,7 +65,7 @@ Les groupes *Built-in* sont des groupes prédéfinis dans l'ADDS, situés dans l
 1. Vous allez maintenant créer un groupe de sécurité. Dans l'arborescence de la console, double-cliquez sur **Adatum (local)**.
 1. Faites un clic-droit sur l'OU **Research**, choisissez successivement **New >** puis **Group**.
 1. Dans la fenêtre **Create Group:** saisissez les informations suivantes :
-	- Group name: ```Marketing```
+	- Group name: ```Manufacturing```
 	- Group type: **Security**
 	- Group scope: **Universal**
 1. Basculez sur l'onglet **Members** et répétez les opérations que vous avez faites sur le premier groupe pour ajouter les utilisateurs suivant à ce groupe : ```Bernardo; Charlie; Dawn```.
@@ -110,11 +110,11 @@ Dans cette tâche, vous allez forcer volontairement la synchronisation entre l'A
 1. Utilisez la commande suivante pour chercher le groupe **Print Operators** :
 	```Get-MgGroup -Filter "DisplayName eq 'Print Operators' and MailEnabled eq false"```
 1. Vérifiez que la commande ne renvoie pas de réponse, ceci indiquant que le groupe **Print Operators** est introuvable car il n'a pas été synchronisé.
-1. Utilisez la commande suivante pour obtenir l'identité du groupe **Marketing** :
-	```$mktGroup = Get-MgGroup -Filter "DisplayName eq 'Marketing' and MailEnabled eq false"```
-1. Vous pouvez utiliser la commande suivante pour vérifier si le groupe **Marketing** a été trouvé :
+1. Utilisez la commande suivante pour obtenir l'identité du groupe **Manufacturing** :
+	```$mktGroup = Get-MgGroup -Filter "DisplayName eq 'Manufacturing' and MailEnabled eq false"```
+1. Vous pouvez utiliser la commande suivante pour vérifier si le groupe **Manufacturing** a été trouvé :
 	```$mktGroup```
-1. Utilisez la commande suivante pour afficher la liste des utilisateurs inclus dans le groupe **Marketing** :
+1. Utilisez la commande suivante pour afficher la liste des utilisateurs inclus dans le groupe **Manufacturing** :
 	```Get-MgGroupMember -GroupId $mktGroup.Id | ForEach-Object { Get-MgUser -UserId $_.Id} | Out-GridView```
 
 1. Vérifiez que les utilisateurs suivants, que vous aviez enlevé à la tâche précédente **ne sont pas présents** dans la liste affichée :

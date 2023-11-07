@@ -64,7 +64,7 @@ Dans cette tâche, Beth Burke va vérifier que l'ordinateur est enrôlé pour le
    >**Note :** Si le mot de passe de Beth n'est pas correct, vous pouvez le réinitialiser :
       1. Basculez sur **LON-DC1**
       1. Dans l'outil **Server Manager**, utilisez le menu **Tools** en haut à droite pour lancer l'**Active Directory Administrative Center**.
-      1. Dans a page **Pverview** de l'**Active Directory Administrative Center**, tapez ```adatum\beth``` dans le champ **User name** de la tuile **RESET PASSWORD**.
+      1. Dans a page **Preview** de l'**Active Directory Administrative Center**, tapez ```adatum\beth``` dans le champ **User name** de la tuile **RESET PASSWORD**.
       1. Tapez ```Pa55W.rd``` dans les champs **Password** et **Confirm password**.
       1. Décochez la case **User must change password at next log on**.
       1. Cliquez sur **Apply**.
