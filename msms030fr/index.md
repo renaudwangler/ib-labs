@@ -33,7 +33,7 @@ ___
 ### Exercice 2 -[Déploiement de Microsoft 365 apps via MDM](lab5e2)
 ___
 ## Atelier 06 - Configuration des services Exchange Online
-### Exercice 1 - [Paramètres de transport des messages (en)](lab6e1)
+### Exercice 1 - [Paramètres de transport des messages](lab6e1)
 ### Exercice 2 - [Configuration de la protection de la messagerie (en)](lab6e2)
 ### Exercice 3 - [Configuration des stratégies d'accès clients (en)](lab6e3)
 ___

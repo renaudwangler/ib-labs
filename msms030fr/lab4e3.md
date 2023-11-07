@@ -30,7 +30,7 @@ Dans cette tâche, vous allez utiliser l'assistant de configuration de Entra Con
 1. Sur la page **Ready to configure**, cliquez sur le bouton **Configure**.
 1. Sur la page **Configuration complete**, cliquez sur **Exit**.
 1. Basculez sur la machine **LON-CL1** faitres un clic-droit sur le bouton **Démarrer** et choisissez **Shut down or sign out >** puis **sign out**.
-1. Si une liste d'applications ouvertes empèchant la fermeture de session s'affiche, cliquez sur **SIgn out anyway**.
+1. Si une liste d'applications ouvertes empèchant la fermeture de session s'affiche, cliquez sur **Sign out anyway**.
 1. Sur la mire d'ouverture de session, cliquez sur **Other user** et connectez-vous avec le compte de  ```Beth@labxxxxx.godeploylabs.com``` et le mot de passe ```Pa55w.rd```.
 
 ## Tâche 2 - Affecter des licences
