@@ -62,13 +62,13 @@ Dans cette tâche, Beth Burke va vérifier que l'ordinateur est enrôlé pour le
 
 1. Connectez-vous à  **LON-CL1** en cliquant sur **Other user** pour utiliser le compte **Beth@labxxxxx.godeploylabs.com** avec le mot de passe **Pa55w.rd**.
    >**Note :** Si le mot de passe de Beth n'est pas correct, vous pouvez le réinitialiser :
-   1. Basculez sur **LON-DC1**
-   1. Dans l'outil **Server Manager**, utilisez le menu **Tools** en haut à droite pour lancer l'**Active Directory Administrative Center**.
-   1. Dans a page **Pverview** de l'**Active Directory Administrative Center**, tapez ```adatum\beth``` dans le champ **User name** de la tuile **RESET PASSWORD**.
-   1. Tapez ```Pa55W.rd``` dans les champs **Password** et **Confirm password**.
-   1. Décochez la case **User must change password at next log on**.
-   1. Cliquez sur **Apply**.
-   1. Fermez l'**Active Directory Administrative Center** et rebasculez sur **LON-CL1** pour vous connecter avec le compte de Beth.
+      1. Basculez sur **LON-DC1**
+      1. Dans l'outil **Server Manager**, utilisez le menu **Tools** en haut à droite pour lancer l'**Active Directory Administrative Center**.
+      1. Dans a page **Pverview** de l'**Active Directory Administrative Center**, tapez ```adatum\beth``` dans le champ **User name** de la tuile **RESET PASSWORD**.
+      1. Tapez ```Pa55W.rd``` dans les champs **Password** et **Confirm password**.
+      1. Décochez la case **User must change password at next log on**.
+      1. Cliquez sur **Apply**.
+      1. Fermez l'**Active Directory Administrative Center** et rebasculez sur **LON-CL1** pour vous connecter avec le compte de Beth.
 1. Cliquez sur le bouton **Démarrer** à gauche de la barre des tâches et cliquez sur **Settings**.
 1. Cliquez sur la section **Accounts** et choisissez l'onglet **Access work or school**.
 1. Sélectionnez le compte de domaine de Beth's.
