@@ -14,8 +14,10 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 ## Task 1 - Create a custom send and receive connector to enforce TLS
 In this task you will create two connectors to enforce Transport Layer Security (TLS) with Trey Research, one of Adatum's most important partners who deals in top-secret government information that must be encrypted within email messages. One connector will be a send (outbound) connector from Adatum to Trey Research. The second connector will be a receive (inbound) connector from Trey Research to Adatum.  
 >**Important:** Connectors help control the flow of email messages to and from your Microsoft 365 organization. While most organizations do not require connectors, there are certain scenarios that require them. For Adatum, it frequently exchanges top-secret  information with Trey Research. As such, Adatum wants to apply security restrictions by using TLS to encrypt sensitive information.  
-1. You should still be logged into **LON-CL1** as the **Administrator** account with a password of **Pa55w.rd**.
-1. Your Edge browser should be open from the prior lab, with tabs open for the **Microsoft 365** homepage, the **Microsoft 365 admin center**.
+1. Ouvrez une session sur LON-CL1 en utilisant le compte ```adatum\administrator``` et le mot de passe ```Pa55w.rd```.
+1. Cliquez sur l'icône de **Microsoft Edge** dans la barre des tâches pour lancer votre navigateur Internet. Maximisez sa fenêtre.
+1. Dans votre navigateur internet, utilisez l'adresse ```https://admin.microsoft.com``` pour ouvrir le portail **Microsoft 365 admin center**.
+
 1. In the **Microsoft 365 Admin center**, under **Admin Centers** in the left-hand navigation pane, select **Exchange**.
 1. In the **Exchange admin center**, in the left-hand navigation pane, expand **Mail flow**.
 1. Under **Mail flow** , select **Connectors**.
