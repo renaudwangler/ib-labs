@@ -21,7 +21,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
  *Outlook on the web* pour tous les utilisateurs.  
 	Puisque Dominique souhaite ajouter une stratégie spécifique, cliquer sur **New OWA policy** sur a barre de menu au-dessus de la liste.
 1. Dans le panneau **new Outlook Web App mailbox policy**, sur la page **Set up the basics**, entrez ```Limited features``` dans le champ **Name**.
-	>**Note :** Cette sratégie est nommée **Limited features** car elle réduit les fonctionnalités accessibles depuis le webmail.
+	>**Note :** Cette stratégie est nommée **Limited features** car elle réduit les fonctionnalités accessibles depuis le Webmail.
 1. Cliquez sur le bouton **Next**.
 1. Sur la page **Select features**, sont affichées toutes les fonctionnalités activées dans *Outlook on the web*. La plupart de ces fonctionnalités sont activées par défaut. Décochez les cases en regard des fonctionnalités suivantes que Dominique ne veut plus voir accessibles dans cette stratégie :  
 	- **Instant messaging**
@@ -29,7 +29,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 	- **LinkedIn contact sync**
 	- **Information management/Journaling**
 1. Cliquez sur le bouton **Next**.
-1. sur la page **View and access attachments**, décochez la case sous **Private computers**.
+1. Sur la page **View and access attachments**, décochez la case sous **Private computers**.
 1. Cliquez sur **Next** puis **Create**.
 1. Cliquez sur **Done** une fois que la stratégie a été créée.
 1. Dans le menu de navigation du portail **Exchange admin center**, cliquez sur **Mailboxes** dans le groupe d'options **Recipients**.
@@ -38,8 +38,8 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 1. Sur la page **Manage settings for email apps**, remplacez (vous pouvez cliquer sur le **x** à droite de la stratégie actuelle) le contenu du champ **Outlook web app mailbox policy** en tapant ```Limited features```.
 1. Sélectionnez votre stratégie **Limited features** avant de cliquer sur **Save**.
 1. Fermez le panneau d'information d'**Alan Yoo** une fois le changement sauvegardé.
-1. Vous allez maintenant ouvrir le client Outlook sur LON-CL2. Basculez sur la machine virtuelle **LON-CL2** sur laquelle vous devriez être connecté avec l'utlisateur **.\admin**. Cliquez sur le bouton **Démarrer** de la barre des tâches et, dans le menu **Démarrer**, cliquez sur **Outlook**.
-1. Si votre client Outlook n'est pas configuré, configurez le, par exemple, pour le compte de Alan Yoo (alan@WWLxxxxx.onmicrosoft.com).
+1. Vous allez maintenant ouvrir le client Outlook sur LON-CL2. Basculez sur la machine virtuelle **LON-CL2** sur laquelle vous devriez être connecté avec l'utilisateur **.\admin**. Cliquez sur le bouton **Démarrer** de la barre des tâches et, dans le menu **Démarrer**, cliquez sur **Outlook**.
+1. Si votre client Outlook n'est pas configuré, configurez-le, par exemple, pour le compte de Alan Yoo (alan@WWLxxxxx.onmicrosoft.com).
 1. Dans **Outlook**, cliquez sur **+ New Email**.
 1. Dans la fenêtre de composition de nouveau message, cliquez sur le bouton **To** et, dans la liste des utilisateurs qui apparaît, sélectionnez **Alan Yoo** avant de cliquer sur **To** et **OK**.
 1. Dans le champ **Subject**, entrez ```Attachment Test```.
@@ -52,10 +52,10 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 1. Dans la boite de réception de Alan (*Inbox*), sélectionnez le message reçu de la tâche précédente dont le sujet est **Attachment Test**.
 1. Sélectionnez la flèche descendante à droite du fichier joint **dism.log**.
 1. Dans la boite de Alan, vous ne devriez pas avoir l'option **Donwload** si la stratégie s'est correctement appliquée.
-	>**Note :** La prise en coimpte de votre stratégie peut prendre quelques minutes. Vous pouvez aussi essayer de faire un *force-refresh* de votre navigateur pour vous assurer que le moteur de webmail que Alan utilise n'est pas celui qui a été précédemment mis en cache par exemple.
+	>**Note :** La prise en compte de votre stratégie peut prendre quelques minutes. Vous pouvez aussi essayer de faire un *force-refresh* de votre navigateur pour vous assurer que le moteur de Webmail que Alan utilise n'est pas celui qui a été précédemment mis en cache par exemple.
 1. Conservez votre navigateur Internet ouvert pour les ateliers suivants.
 
-## Tâche 2 - Configurer l'acçés mobile
+## Tâche 2 - Configurer l'accès mobile
 Dans cette tâche, vous allez créer une stratégie d'accès mobile qui place tous les nouveaux périphériques mobiles en quarantaine, après quoi la synchronisation de ces nouveaux périphériques devra être validée par un administrateur.  
 1. Basculez sur **LON-CL1**. Les portails **Microsoft 365 admin center** et **Exchange admin center** devraient encore être resté ouverts dans votre navigateur (et vous devriez y être connecté avec le compte de *Dominique Skyetson*).
 1. Dans le portail **Exchange admin center**, ouvrez le groupe d'options **Mobile** pour cliquer sur **Mobile device access**.
@@ -74,10 +74,10 @@ Dans cette tâche, vous allez configurer une stratégie de boite aux lettres acc
 1. Cochez la case en face de **Allow simple passwords** (si elle n'est pas déjà cochée).
 1. Dans le champ **Minimum password length**, entrez une valeur de **6**.
 1. Dans le champ **Password recycle count**, entrez une valeur de **5**.
-1. Cliquez sur **Save** et fermez le panneau **Edit mobile device mailbox policy** une fois vos chanegments sauvegardés.
+1. Cliquez sur **Save** et fermez le panneau **Edit mobile device mailbox policy** une fois vos changements sauvegardés.
 1. Conservez votre navigateur Internet ouvert pour les ateliers suivants.
 
 ## Résultat
-Dans cet exerice, vous avez découvert les stratégie permettant de gèrer le comportement du webmail et de l'utilisation de Echange Online depuis des périphériques mobiles.
+Dans cet exercice, vous avez découvert les stratégies permettant de gérer le comportement du Webmail et de l'utilisation de Echange Online depuis des périphériques mobiles.
 
 # Fin de l'atelier 6
