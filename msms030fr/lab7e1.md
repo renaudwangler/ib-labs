@@ -31,104 +31,103 @@ Dans le rôle de Dominique Skyetson, vous souhaitez maintenant customiser la str
 1. Cliquez sur le bouton **Confirm** dans la boite de dialogue **Changes will take time to take effect**.
 1. Conservez votre navigateur Internet ouvert pour la tâche suivante. 
 
-## Task 2 – Manage Meeting Settings
-As Dominique Skyetson, Adatum’s Microsoft 365 Enterprise Administrator, you use the Teams meetings settings to control whether anonymous users can join Teams meetings and customize meeting invitations. You can also use these settings to enable Quality of Service (QoS) and set port ranges for real-time traffic. These settings apply to all Teams meetings that users schedule in your organization. As part of Adatum’s pilot project for implementing Microsoft Teams, you want to configure Teams meeting settings to see how they handle email invitations.
-1. On **LON-CL1** you should still have the **Microsoft Teams admin center** open from the prior task. In the left-hand navigation pane, under the **Meetings** group, select **Meeting settings.**
-1. On the **Meetings settings** page, under the **Email invitation** section, enter (or copy and paste in) the following information:
-	- Logo URL: leave blank
-	- Legal URL: **https://adatum.com/legal.html**
-	- Help URL: **https://adatum.com/joiningmeetinghelp.html**
-	- Footer: **Please accept at your earliest convenience. Thank you!**
-1. Select the **Preview invite** button.
-1. On the **Email invite preview** window, review the preview image of the invitation and then select the **Close** button at the bottom of the page.
-1. On the **Meetings settings** page, under the **Network** section, review the current settings.  
-	>**Note:** If you have specific ports that your company uses for sending and receiving media traffic, this is where you would enter those ports. If you do not have specific media ports prescribed by your network administrator, then you would leave this section alone. For the purposes of this lab, you will not update this section. 
-1. Scroll to the bottom of the page and select **Save**.
-1. Select **Confirm** in the **Changes will take time to take effect** window.
-1. Leave all tabs open in your browser and proceed to the next task. 
+## Tâche 2 – Gestion des paramètres de réunions
+Toujours en tant que Dominique Skyetson, Administrateur de l'entreprise Adatum, vous allez ici utiliser les paramètres de contrôle des réunions *Teams* pour contrôler sir les utilisateurs anonymes peuvent rejoindre des réunion, et customiser les messages d'invitation. Vous pourriez aussi utiliser ces paramètres pour activer la QOS (*Quality of Service*) et définire les ports utilisés pour le traffic temps-réel. Tous ces paramètres s'appliquent à toutes les réunions *Teams* que les utilisateurs de l'entrepise vont plannifier.
+1. Les portails **Microsoft 365 admin center** et **Microsoft Teams admin center** devraient encore être resté ouverts dans votre navigateur (et vous devriez y être connecté avec le compte de *Dominique Skyetson*).
+1. sur le portail **Microsoft Teams admin center**, cliquez sur **Meeting settings** dans le groupe d'options **Meetings**.
+1. Sur la page **Meetings settings**, dans la section **Email invitation**, Saisissez les informations suivantes :
+	- **Logo URL** : ```https://renaudwangler.github.io/ib-labs/assets/logo_ibcegos.png```
+	- **Legal URL** : ```https://adatum.com/legal.html```
+	- **Help URL** : ```https://adatum.com/joiningmeetinghelp.html```
+	- **Footer :** ```Please accept at your earliest convenience. Thank you!```
+1. CLiquez sur le bouton **Preview invite**.
+1. Sur la boite de dialogue **Email invite preview**, consultez l'apperçu de l'inviation avant de cliquer sur le bouton **Close** pour la fermer.
+1. De retour sur la page **Meetings settings**, sous la section **Network**, consultez les paramètres actuels.  
+	>**Note :** Si vous aviez besoin de ports réseau spécifiques que votre entreprise utilise pour envoyer et recevoir le flux multimédia, c'est l'endroit ou vous pourriez le configurer. Pour les besoins de notre atelier, vous n'avez pas besoin de toucher aux paramètres de cette section. 
+1. Cliquez sur le bouton **Save**.
+1. cliquez sur le bouton **Confirm** puis sur le
+1. Select **Confirm** dans la boite de dialogue **Changes will take time to take effect**.
+1. Conservez votre navigateur Internet ouvert pour la tâche suivante.
 
-## Task 3 – Manage Messaging Policies
-Messaging policies are used to control which chat and channel messaging features are available to users in Microsoft Teams. You can use the Global default policy that is created automatically or create one or more custom messaging policies for people in your organization. After you create a policy, you can assign it to a user or group of users in your organization.  
-As part of her Microsoft Teams pilot project for Adatum, Dominique wants to create a new messaging policy that addresses the chat and channel messaging requirements set forth by Adatum’s project team.
-1. On **LON-CL1** you should still have the **Microsoft Teams admin center** open from the prior task. In the left-hand navigation pane, select **Messaging policies**.
-1. In the **Messaging policies** window, view the list of messaging policies. As you can see, only the **Global (Org-wide default)** policy exists. Select **+ Add** in the menu bar that appears above the list of policies.
-1. In the **Messaging policies \ Add** window, enter **Chat and Channel Messaging Policy** in the **Add a name for your messaging policy** field at the top of the form.
-1. Select the following values for each setting:
-	- Owners can delete sent messages: **Off**
-	- Delete sent messages: **Off**
-	- Delete chat : **Off**
-	- Edit sent messages: **On**
-	- Read receipts: **Turned on for everyone**
-	- Chat: **On**
-	- Chat with groups : **On**
-	- Giphy in conversations: **Off**
-	- Giphy content rating: **Strict**
-	- Memes in conversations: **Off**
-	- Stickers in conversations: **Off**
-	- URL previews: **On**
-	- Translate messages: **On**
-	- Immersive reader for messages: **On**
-	- Send urgent messages using priority notifications: **On**
-	- Create voice messages: **Allowed in chats and channels**
-	- On mobile devices, display favorite channels about recent chats: **Not enabled**
-	- Remove users from a group chat: **Off**
-	- Text prediction : **Off**
-	- Suggested replies: **On**
-	- Chat permission role : **Restricted permissions**
-	- Users with full chat permissions can delete any message : **Off**
-	- Viedo messages : **Off**
-1. Select **Save.** 
-1. Leave all tabs open in your browser and proceed to the next task. 
+## Tâche 3 – Gestion des stratégies de messages
+Les stratégies de messages sont utilisées pour contrôler quelles fonctionnaltés de messagerie sont disponibles aux utilisateurs *Teams* dans la messagerie interpersonnelle et dans les canaux d'équipes. Vous pouvez utiliser la stratégie par défaut qui a été créée automatiquement en même temps que votre tenant ou créer de nouvelles stratégies spécifiques répondant à des besoins particuliers de certains utilisateurs choisis dans l'entreprise.  
+Dans le contexte de son projet pilote, Adatum demande la création d'une nouvelle stratégie de messages concernant les fonctionnalité dans les messages dans l'environnement *Teams*.
+1. Les portails **Microsoft 365 admin center** et **Microsoft Teams admin center** devraient encore être resté ouverts dans votre navigateur (et vous devriez y être connecté avec le compte de *Dominique Skyetson*).
+1. sur le portail **Microsoft Teams admin center**, cliquez sur **Messaging settings** dans le groupe d'options **Messaging**.
+1. Sur la page **Messaging policies**, constatez que seule la stratégie par défaut **Global (Org-wide default)** existe. Cliquez sur **+ Add** dans la barre de menu au-dessus de la liste de stratégies.
+1. Sur la fenêtre **Messaging policies \ Add**, saisissez ```Chat and Channel Messaging Policy``` dans le champ **Add a name for your messaging policy** en haut du formulaire.
+1. Sélectionnez les valeurs suivantes pour chaque paramètre :
+	- **Owners can delete sent messages** : **Off**
+	- **Delete sent messages** : **Off**
+	- **Delete chat** : **Off**
+	- **Edit sent messages** : **On**
+	- **Read receipts** : **Turned on for everyone**
+	- **Chat** : **On**
+	- **Chat with groups** : **On**
+	- **Giphy in conversations** : **Off**
+	- **Giphy content rating** : **Moderate**
+	- **Memes in conversations** : **Off**
+	- **Stickers in conversations** : **Off**
+	- **URL previews** : **On**
+	- **Translate messages** : **On**
+	- **Immersive reader for messages** : **On**
+	- **Send urgent messages using priority notifications** : **On**
+	- **Create voice messages** : **Allowed in chats and channels**
+	- **On mobile devices, display favorite channels about recent chats** : **Not enabled**
+	- **Remove users from a group chat** : **Off**
+	- **Text prediction** : **Off**
+	- **Suggested replies** : **On**
+	- **Chat permission role** : **Restricted permissions**
+	- **Users with full chat permissions can delete any message** : **Off**
+	- **Video messages** : **Off**
+1. Cliquez sur **Save.** 
+1. Conservez votre navigateur Internet ouvert pour la tâche suivante.
 
-## Task 4 – Create a Resource Account
-A resource account, which is referred to as a disabled user object in Azure Active Directory, can be used to represent resources in general. For example, a resource account in Exchange can be used to represent conference rooms, and in Microsoft Teams, resource accounts can be used to represent Phone System call queues and auto attendants.  
-As part of Adatum’s pilot project for implementing Microsoft Teams, Dominique Skyetson has been asked to create a resource account for a cloud call queue, which is a service that accepts customer calls, plays a greeting message, and then places the customer calls in a wait queue while searching a pre-configured list of agents to answer each call.  
-Creating a calling queue is a two-step process. In this task, you will first create a resource account that represents the call queue. In the next task, you will create the actual call queue and associate it with this resource account.  
-1. On **LON-CL1**, switch to the **Microsoft 365 admin center** tab of your browser
-1. Expand **Billing** and click on **Purchase sevices**
-1. in the search field, type **Teams phone** and click on the **Details** button below the **Microsoft Teams Phone Standard**
-1. In the **Microsoft Teams Phone Standard** window, click on the **Select a plan** menu and select **Microsoft Teams Phone Standard (Trial)** before clicking on **Start free trial**.
-1. On the **Checkout** window, click on the **Place order** button and close the page.
-1. Back on the **Microsoft 365 admin center**, Open the left-hand menu and select **Billing/Your products**
-1. On the **Your products** Window, click on the **Microsoft Teams Phone Standard** line to edit your subscription
-1. On your subscription window, click on the **Edit recurring billing** link (you may have to wait a little and refresh if the link is not yet available) and set it to **Off** before clicking on the **Save** button.
-1. Click on **Yes** on the **Turn off recurring billing ?** confirmation window.
-1. On **LON-CL1** switch back to the **Teams admin center** tab of your browser and refresh the browser page. In the left-hand navigation pane, select **Voice** and then select **Resource accounts.**
-1. In the **Resource accounts** window, select **+ Add** in the menu bar at the top of the page.
-1. In the **Add resource account** pane that appears on the right, enter the following information:
-	- Display name: **Calling Queue 1**
-	- Username: **Ccq**
-	- Domain name: In the domain name field to the right of the username, select the drop-down arrow and select **xxx.onmicrosoft.com** (where xxx is your unique tenant ID)
-	- Resource account type: **Call queue**
-1. Select **Save**. **Calling Queue 1** will now appear in the list of Resource accounts. 
-1. Leave all tabs open in your browser and proceed to the next task. 
+## Tâche 4 – Créer un compte de resource
+Un compte de ressource, qui correspond à un objet utilisateur désactivé dans *Entr Id*, peut être utilisé pour représenter n'importe quelle ressource. Par exemple, un compte de ressource dans Exchange est utilisé pour représenter une salle de réunion et, dans *Teams*, les comptes de ressource seront utilisés pour les système de file d'attente et de répondeur de la téléphonie.  
+Dans le contexte du projet pilote de Adatum, Dominique a été sollicité pour créer un compte de ressource pour un standard d'appel téléphonqiue qui devra accepter les appels des clients, jouer un message de bienvenue et placer ensuite le client en attente d'un agent qui décroche l'appel pour s'en occuper.  
+Créer une file d'attente téléphonique est un processus en deux étapes, dans cette première tâche, vous allez créer le compte de ressource qui représente cette file d'attente. Dans la prochaine tâche, vous associerez réellemen la file d'attente au dit compte.
+1. Sur l'onglet **Teams admin center** de votre navigateur, dans le menu de navigation, ouvrez le groupe d'options **Voice** et cliquez sur **Resource accounts.**
+1. Sur la page **Resource accounts** cliquez sur **+ Add** dans la barre de menu au dessus de la liste des comptes de ressource.
+1. Sur le panneau **Add resource account** qui apparaît, entrez les information suivantes:
+	- **Display name** : **Calling Queue 1**
+	- **Username** : **cq1**
+	- **Domain name** : Dans le champ domaine à droite de l'adresse email, sélectionnez, dans le menu déroulant votre nom de domaine **WWLxxxxx.onmicrosoft.com**.
+	- **Resource account type** : **Call queue**
+1. Cliquez sur **Save**.
+1. **Calling Queue 1** apparaît désormais dans la liste des comptes de ressource.
+1. Conservez votre navigateur Internet ouvert pour la tâche suivante.
 
-## Task 5 - Create a Call Queue
-Now that you have created the resource account for your calling queue, you will create the call queue itself and assign it the resource account.
-1. On **LON-CL11** you should still have the **Microsoft Teams admin center** open from the prior task. In the left-hand navigation pane, under **Voice** and then select **Call queues.**
-1. In the **Call queues** window, select **+ Add** in the menu bar at the top of the page.
-1. In the **Call queues \ Add a call queue** window, enter **Call Queue 1** in the **Add a name for your call queue** field at the top of the form.
-1. The page displays a message indicating **You haven’t added any resource accounts yet.** Below this message, select the **Add** button.
-1. In the **Add account** pane that appears on the right-side of the screen, in the **Search by display or username** box, enter **Calling.** As you type **Calling**, a popup appears listing call resource accounts whose title starts with **Calling**. **Calling Queue 1** is displayed. As you hover your mouse over **Calling Queue 1**, an **Add** button appears to the right of it. Select the **Add** button.
-1. At the bottom of the **Add accounts** pane, select **Add.** This returns you to the **Call Queue 1** window, which now displays **Calling Queue 1** in the list of Resource accounts associated with this call queue.
-1. In the **Call Queue 1** window, click **Next** and in the **Greeting and music** tab input the following values:
-	- Greeting: **No greeting**
-	- Music on hold: **Play default music**
-1. In the **Greeting and music** window, click **Next** and in the **Call answering** tab input the following values:
-	- Select **Choose users and groups**, and then select the **Add users** button. In the **Add users** pane that appears on the right-side of the screen, in the **Search by display name or username** box, enter **Alan**. As you type **Alan**, a popup appears listing users whose name starts with **Alan**. As you hover your mouse over **Alan Yoo**, an **Add** button appears to the right of it. Select the **Add** button.  
-		>**Important:** Note the red error message that appears across the top of the page. The error message indicates that Alan cannot be associated with this call queue because he is not enterprise-voice enabled. In the **Add users** window, select **Cancel**. 
-	- Select the **Add groups** button. In the **Add call agents** pane on the right-side of the screen, in the **Search by distribution list or group name** box, enter **Sales.** As you type Sales, a window appears listing the groups whose name starts with Sales. As you hover your mouse over **Sales Department**, an **Add** button appears to the right of it. Select the **Add** button.  
-	- In the **Add call agents** pane, the Sales Department appears under **Selected groups**. Select the **Add** button at the bottom of the pane.
-1. In the **Call answering** window, click **Next** and in the **Agent selection** tab input the following values:
-	- Routing Method: **Round Robin**   
-	- Presence-based routing - **Off**
-	- Call agents can opt out of taking calls: **On**
-	- Call agent alert time (seconds) - 45 (entering the value in the field is easier than dragging the slider icon)
-1. In the **Agent sekection** window, click **Next** and leave all setting to their default value in the **Call overflow handling**.
-1. In the **Call timeout handling** window, leave all setting to their default and select **Submit**. **Call Queue 1** will appear in the list of Call queues.
-1. Leave all tabs open in your browser and proceed to the next task. 
+## Tâche 5 - Créer une file d'attente
+Maintenant que vous avez créé un compte de ressource pour votre file d'atente, vous allez créer ladite file d'attente et de l'affecter au compte de ressource.
+1. sur le portail **Microsoft Teams admin center**, cliquez sur **Call queues** dans le groupe d'options **Voice**.
+1. Sur la page **Call queues**, cliquez sur **+ Add** dans la barre de menu en haut de la page.
+1. Sur la page **Call queues \ Add a call queue**, entrez ```Call Queue 1``` dans le champ **Add a name for your call queue** en haut du formulaire.
+1. La page affiche un message indiquant **You haven’t added any resource accounts yet.**. Sous ce message, cliquez sur le bouton **Add**.
+1. Sur le panneau **Add account** qui apparaît à droite de l'écran, dans la boite **Search by display or username**, saisissez ```Calling```. Dans le popup qui apapraît, sélectionnez le compte **Calling Queue 1** (s'il n'apparaît pas, patientez un instant avant de rafraichir votre navigateur et de réessayer) en passant votre souris dessus et cliquez sur le bouton **Add** qui apparaît à sa droite.
+1. En bas du panneau **Add accounts** cliquez sur le bouton **Add**. Vous retournez sur la page" **Call Queue 1**, qui affiche désormais **Calling Queue 1** dans la liste des comptes de ressource pour cette file d'attente.
+1. Sur la fenêtre **Call Queue 1**, cliquez sur **Next**.
+1. Sur la page **Greeting and music**, saisissez les valeurs suivantes :
+	- **Greeting** : **No greeting**
+	- **Music on hold** : **Play default music**
+1. Sur la page **Greeting and music** window, cliquez sur **Next**.
+1. Sur la page **Call answering** saisissez les valeurs suivantes :
+	- Sélectionnez **Choose users and groups**, pour cliquer sur le bouton **Add users**. Dans le panneau **Add users**, entrez ```alan``` dans le champ **Search by display name or username**. Passez votre souris sur la ligne de **Alan Yoo** qui s'affiche pour cliquer sur le bouton **Add** à sa droite.  
+		>**Important :** Constatez le message d'erreur rouge qui apparaît en haut du panneau, indiquant que Alan Yoo n'a pas de licence téléphonie *Teams* associée. Sur le panneau **Add users**, cliquez sur **Cancel**. 
+	- Cliquez sur le bouton **Add groups**. Dans le panneau **Add call agents**, tapez ```sales``` dans le champ **Search by distribution list or group name**.Passez votre souris sur la ligne de **Sales department** qui s'affiche pour cliquer sur le bouton **Add** à sa droite. Select the **Add** button.  
+	- En bas du panneau **Add call agents** cliquez sur le bouton **Add**.
+1. Sur la page **Call answering**, cliquez sur **Next**.
+1. Sur la page **Agen selection** renseignez les valeurs suivantes :
+	- **Routing Method** : **Round Robin**   
+	- **Presence-based routing** : **Off**
+	- **Call agents can opt out of taking calls** : **On**
+	- **Call agent alert time (seconds)** : **45** (il pourra être plus simple de taper la valeur dans le champ que d'utiliser le curseur)
+1. Sur la page **Agent selection**, cliquez sur **Next**.
+1. Sur la page **Exception handling**, laissez les valeurs par défaut et lciquez sur **Next**.
+1. Sur la page **Authorized users**, cliquez sur **Submit**. **Call Queue 1** apparaît désormais dans la liste des files d'attente.
+1. Conservez votre navigateur Internet ouvert pour la tâche suivante.
 
-## Task 6 - Create a Calling Policy 
+## Tâche 6 - Créer une stratégie d'appels
 In Microsoft Teams, calling policies control which calling and call forwarding features are available to users. Calling policies determine whether a user can make private calls, use call forwarding or simultaneous ringing to other users or external phone numbers, route calls to voicemail, send calls to Call Groups, use delegation for inbound and outbound calls, and so on. A default global policy is created automatically, but admins can also create and assign custom calling policies.  
 As part of her Microsoft Teams pilot project, Dominique Skyetson has been tasked with creating a custom calling policy for Adatum. Instead of customizing the default global policy, she will follow best practice guidelines and create her own customized policy that will be used as Adatum’s default policy
 1. On **LON-CL1** you should still have the **Microsoft Teams admin center** open from the prior task. In the left-hand navigation pane, under the **Voice** group, select **Calling policies.**
