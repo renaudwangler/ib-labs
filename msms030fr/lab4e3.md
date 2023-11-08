@@ -29,7 +29,7 @@ Dans cette tâche, vous allez utiliser l'assistant de configuration de Entra Con
 1. De retour sur la fenêtre **SCP configuration**, cliquez sur **Next**.
 1. Sur la page **Ready to configure**, cliquez sur le bouton **Configure**.
 1. Sur la page **Configuration complete**, cliquez sur **Exit**.
-1. Basculez sur la machine **LON-CL1** faitres un clic-droit sur le bouton **Démarrer** et choisissez **Shut down or sign out >** puis **sign out**.
+1. Basculez sur la machine **LON-CL1** faites un clic-droit sur le bouton **Démarrer** et choisissez **Shut down or sign out >** puis **sign out**.
 1. Si une liste d'applications ouvertes empèchant la fermeture de session s'affiche, cliquez sur **Sign out anyway**.
 1. Sur la mire d'ouverture de session, cliquez sur **Other user** et connectez-vous avec le compte de  ```Beth@labxxxxx.godeploylabs.com``` et le mot de passe ```Pa55w.rd```.
 
@@ -39,7 +39,7 @@ Dans cette tâche, vous allez utiliser l'assistant de configuration de Entra Con
 1. Dans la liste des **Active users**, dans le champ **Search active users list** entrez ```beth``` et appuyez sur **[Entrée]**.
 1. Cliquez sur le nom de **Beth Burke**.
 1. Dans le panneau qui apparait concernant les informations de **Deth Burke**, cliquez sur l'onglet **Licenses and apps**.
-1. Sur l'onglet **Licenses and apps** de Beth Burke, select **Add License* cochez les deux cases en regard des licences disponibles et cliquez sur **Save changes**
+1. Sur l'onglet **Licenses and apps** de Beth Burke, select **Add License** cochez les deux cases en regard des licences disponibles et cliquez sur **Save changes**
 1. Cliquez sur le **X** en haut à droite pour fermer le panneau d'informations de Beth Burke.
 
 ## Tâche 3 - Vérifier la synchronisation des périphériques
@@ -56,7 +56,7 @@ Dans cette tâche, vous allez utiliser l'assistant de configuration de Entra Con
 1. Vous devriez toujours être connecté avec le compte de Beth. Pour vous assurer que la jonction hybride soit effective le plus rapidement possible, il vous faut vous déconnecter : faites un clic-droit sur le bouton **Démarrer** et choisissez **Shut down or sign out >** puis **sign out**.
 1. Si une liste d'applications ouvertes empêchant la fermeture de session s'affiche, cliquez sur **SIgn out anyway**.
 1. Sur la mire d'ouverture de session, connectez vous avec le compte de  ```Beth@labxxxxx.godeploylabs.com``` et le mot de passe ```Pa55w.rd```.
-1. Faites un clic-droit sur le bouton **Démarrer** sur la barre des tâches et cliquez sur **Windows Powershell**.
+1. Sur la barre des tâches, dans le champ de recherche à droite du bouton Démarrer, tapez ```Windows PowerShell ISE``` sur **Windows Powershell (ISE)**.
 1. Utilisez la commande suivante pour afficher l'état de la jonction de la machine : ```dsregcmd /status```.
 1. Au début du résultat, vous devriez voir **YES** en regard de **AzureADJoined**. Si ce n'est pas le cas, attendez quelques instants avant de réessayer.
 1. Fermez la fenêtre **Windows Powershell**.

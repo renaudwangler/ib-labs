@@ -97,7 +97,7 @@ Dans cette tâche, vous allez tester les nouvelles règles de transport que vous
 	- Si votre message de test est arrivé, c'est probablement que la règle que vous avez créée ne s'est pas encore propagée sur la globalité de l'environnement Exchange Online : vous pouvez retenter l'envoi d'un nouveau message si vous souhaiter pousser le test plus loin.
 	- Si votre message de test n'est pas arrivé, vous pouvez basculez entre vos sessions Outlook pour valider l'envoi du message depuis la boite de Dominique et vérifier sa réception après modération dans la boite de Megan Bowen.
 1. Sur LON-CL1, fermez votre page de navigation privée de votre navigateur Internet.
-1. Basculez sur LON-CL2 pour y fermez votre navigateur Internet.
+1. Basculez sur LON-CL2 pour y fermer votre navigateur Internet.
 
 ## Tâche 4 - Traçabilité de la livraison des messages
 1. Sur LON-CL1, vous devriez être resté connecté avec le compte **adatum\Administrator** et le mot de passe **Pa55w.rd**.

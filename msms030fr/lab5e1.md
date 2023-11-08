@@ -5,7 +5,7 @@ length: "00"
 ---
 # Scénario
 Vous avez pris l'identité de Dominique Skyetson, Administrateur de l'entreprise Adatum, et vous avez commencé à déployer Microsoft 365 dans un environnement virtuel pilote. Dans cet exercice, vous allez réaliser les tâches nécessaires pour comprendre l'installation de la suite Office par les utilisateurs. Cette installation *user-driven* est un processus à deux étapes : 1) Configurer le compte utilisateur de telle sorte qu'un utilisateur éligible puisse télécharger les fichiers et réaliser l'installation, et 2) réaliser l'installation de la suite Office.  
-Dasn les deux premières tâches de cet exercice, vous allez vérifier en quoi les conditions suivantes affectent la possibilité pour un utilisateur de télécharger la suite Microsoft 365 Apps for enterprise :  
+Dans les deux premières tâches de cet exercice, vous allez vérifier en quoi les conditions suivantes affectent la possibilité pour un utilisateur de télécharger la suite Microsoft 365 Apps for enterprise :  
 - L'utilisateur n'a pas de licence pour la suite Office (ce que vous vérifierez en tâche 1). 
 - Un administrateur désactive le paramètre global permettant aux utilisateurs le téléchargement des applications pour tous les utilisateurs (testé en tâche 2).  
 Dans la dernière tâche de cet exercice, vous installerez la suite Microsoft 365 Apps for enterprise depuis le compte d'un des utilisateurs de Adatum.
@@ -20,7 +20,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 Dans cette tâche, Dominique va tester si un utilisateur qui ne s'est pas vu affecté de licence peut ou non télécharger Microsoft 365 Apps. Pour ce test, vous pouvez utiliser n'importe quel utilisateur préexistant de la liste **Active Users** dans le portail Microsoft 365 admin center. Ces utilisateurs ont des comptes Entra Id du domaine par défaut (WWLxxxxx.onmicrosoft.com); ils n'ont pas de compte correspondant *on-premises* dans le domaine ADDS adatum.com (qui a désormais été changé *on-premises* et remplacé par labxxxxx.godeploylabs.com). Sans compte *on-premises*, vous ne pouvez vous connecter à une VM Cliente.  
 C'est pourquoi vous devez d'abord utiliser un compte ADDS pour vous connecter. Pour ce test, vous utiliserez le compte de **Laura Atkins**. Vous allez créer un compte pour Laura, mais sans lui affecter de licence.  
 Vous utiliserez ensuite la VM **LON-CL2** pour installer Microsoft 365 Apps.
-1. Basculez vers **LON-CL2** et connectez-vous en **Admin** avec le mot de passe **Pa55w.rd**.
+1. Basculez vers **LON-CL2** et connectez-vous en **.\Admin** avec le mot de passe **Pa55w.rd**.
 1. Vous allez commencer par tester si un utilisateur sans licence Office 365 peut ou non installer Microsoft 365 Apps. Pour ce test, vous allez utiliser le compte de **Laura Atkins**. Vous avez créé un compte pour Laura dans [l'atelier 2,exercice1](lab2e1#t%C3%A2che-1---cr%C3%A9ation-dutilisateurs), mais ne lui avez pas affecté de licence. Dans LON-CL2, cliquez sur l'icône **Microsoft Edge** sur la barre des tâches.
 1. Maximisez votre navigateur Internet puis rendez-vous sur la page d'accueil **Microsoft 365** en utilisant l'adresse suivante : ```https://www.microsoft365.com```
 	>**Note :** Si n'importe quel compte est automatiquement connecté, déconnectez-le en cliquant sur l'icône d'utilisateur (rond en haut à droite) et en sélectionnant **Sign out**, retapez ensuite ```https://www.microsoft365.com``` dans la barre d'adresse.

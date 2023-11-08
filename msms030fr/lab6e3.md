@@ -4,79 +4,80 @@ title: "Lab6-Ex3 - Configuration des stratégies d'accès clients"
 length: "00"
 ---
 # Scénario
-Outlook on the web enables Adatum's users to access their mailboxes through a web browser. After Adatum created its Microsoft 365 tenant with Exchange Online, the tenant included a single Outlook Web App policy titled OWAMailboxPolicy-Default. This policy defines Outlook on the web settings for all users. However, Dominique Skyetson, Adatum's Enterprise Admin, wants to create an additional Outlook on the web policy that applies to a specific user (in this case, Nona Snider). By verifying whether a user-specific policy such as this works, Dominique will be able to vary the Outlook on the web settings for users with different needs.  
-Dominique will then configure a mailbox policy for mobile devices that requires a password and sets the parameter for password length. Dominique will then create a mobile device access policy that places any new devices into quarantine, at which point the device must be approved to be removed from quarantine so that it can send and receive messages.
+Outlook on the web permet aux utilisateurs d'Adatum d'accèder à leur boite aux lettres depuis un navigateur Interner. Après qu'Adatum ait créé son tenant Microsoft 365 avec Exchange Online, ce dernier inclut une unique stratégie nommée **OWAMailboxPolicy-Default**. Cette stratégie définit les paramètres Outlook on the web pour tous les utilisateurs. Cependant, Dominique Skyetson, par son rôle d'administrateur de Adatum, souhaite créer une stratégie Outlook on the web policy qui s'appliqera à un utilisateur particulier (dans notre cas Alan Yoo). En vérifiant si une telle affectation de straégie par utilisateur fonctionne, Dominique sera dès lors capable de gérer les paramètres de boite aux lettres pour les différentes populations d'utilisateurs de l'entreprise.  
+Dominique configurera ensuite une stratégie de boite aux lettres pour les périphériques mobiles qui exige un mot de passe de périphérique, ainsi qu'une stratégie de périphérique mobile permettant de placer en quarantaine tout nouveau périphérique; nécessitant approbation de celui-ci pour qu'il puisse synchroniser les messages.
 
 # Objectifs
 A la fin de cet exercice, vous aurez une meilleure connaissance de :
+- La stratégie permettant de gérer le comportement de *Outlook on the web*
+- La stratégie de mise en quarantaine des nouveaux périphériques mobiles
+- La stratégie d'accès à la boite aux lettres depuis des périphériques mobiles
 
 
-## Task 1: Configure an Outlook Web App policy
-1. You should still be logged into LON-CL1 as the **Administrator** with a password of **Pa55w.rd**.
-1. Your Edge browser should be open from the prior exercise, with tabs open for the **Microsoft 365** homepage, the **Microsoft 365 admin center**, and the **Exchange admin center**. You should still be signed into Microsoft 365 as Dominique Skyetson.  
-	If you closed the Exchange admin center tab after the prior lab exercise, then in the **Microsoft 365 Admin center**, under **Admin Centers** in the left-hand navigation pane, select **Exchange**.
-1. In the **Exchange admin center** tab, in the left-hand navigation pane, select **Outlook Web App policies** under **Roles**.
-1. On the the **Outlook Web App policies** tab, note the existing Outlook Web App policy titled **OWAMailboxPolicy-Default**. This policy defines Outlook on the web settings for all users.  
-	Since Dominique wants to add a new policy, select **New OWA policy** on the menu bar. 
-1. In the **new Outlook Web App mailbox policy** window, enter **Limited features** in the **Policy name** field. Note - This policy is titled **Limited features** since it reduces the number of features that will be enabled for the policy.
-1. Click on the **Next** button. The window displays a list of features that will be enabled for this Outlook Web App mailbox policy. The majority of these features are selected by default. Clear the check boxes for the following features that Dominique does not want included in this custom policy:  
+## Tâche 1 - Configuration de stratégie Outlook Web App
+1. Vous devriez encore être connecté sur **LON-CL1** à l'issue de l'atelier précédent. Les portails **Microsoft 365 admin center**, **Exchange admin center** et **Mircosoft 365 Defender** (que vous pouvez désormais fermer) devraient encore être resté ouverts dans votre navigateur (et vous devriez y être connecté avec le compte de *Dominique Skyetson*).
+1. Dans le portail **Exchange admin center**, ouvrez le groupe d'options **Roles** pour cliquer sur **Outlook Web App policies**.
+1. Sur la page **Outlook Web App policies**, constatez la présence d'une stratégie par défaut, nommée **OWAMailboxPolicy-Default**. Cette stratégie définit les paramètres de 
+ *Outlook on the web* pour tous les utilisateurs.  
+	Puisque Dominique souhaite ajouter une stratégie spécifique, cliquer sur **New OWA policy** sur a barre de menu au-dessus de la liste.
+1. Dans le panneau **new Outlook Web App mailbox policy**, sur la page **Set up the basics**, entrez ```Limited features``` dans le champ **Name**.
+	>**Note :** Cette sratégie est nommée **Limited features** car elle réduit les fonctionnalités accessibles depuis le webmail.
+1. Cliquez sur le bouton **Next**.
+1. Sur la page **Select features**, sont affichées toutes les fonctionnalités activées dans *Outlook on the web*. La plupart de ces fonctionnalités sont activées par défaut. Décochez les cases en regard des fonctionnalités suivantes que Dominique ne veut plus voir accessibles dans cette stratégie :  
 	- **Instant messaging**
 	- **Text messaging**
 	- **LinkedIn contact sync**
-	- **Journaling**
-1. Click ont the **Next** button. On the **View and access attachments** pane, clear the **Private computers** check box, select **Next** and **Create**.
-1. Click on **Done** once the information has been successfully saved.
-4. On the **recipients** page, the **mailboxes** tab at the top of the page is displayed by default. In the list of user mailboxes, select **Nona Snider**.
-5. In the **Nona Snider** window, in the left-hand navigation pane, click on **Manage email apps settings** under **Email apps & mobile devices**.  
-7. In the **Manage settings for email apps** window replace the **Outlook web app mailbox policy** by typing **Limited features**, then select **Save**.
-8. Close the **Nona Snider** pane once the information is successfully saved.
-9. You will now open **Outlook 2019**. Select the Windows icon in the bottom left-hand corner of the taskbar. In the program menu that appears, scroll down and select **Outlook**.  
-	>If a **Microsoft Office Activation Wizard** appears that indicates this copy of Microsoft Office is not activated, select **Close**.
-10. By default Outlook should open for the tenant admin account (the global Administrator, whose email address end with @xxx.onmicrosoft.com). However, if you are instead prompted for user credentials in a dialog box, enter your global administator account.
-11. If a **Stay signed in to all your apps** window appears, click on the **No, sign in to this app only** link.
-12. In **Outlook 2019**, select **New Email**.
-13. In the **new email** window, select the **To** button, and in the list of users that appears, select **Nona Snider**, select **To**, and then select **OK**.
-14. In the **Subject** box, enter **Attachment Test**.
-15. In the ribbon, select **Attach File**, and then Select **Browse This PC**.
-16. In the **Insert File** window, browse to **C:\Windows\Logs\DISM**, select **dism.log**, and then select **Insert**.
-17. Select **Send**.
-18. After sending the email, close Outlook 2019.
-19. Switch to **LON-CL2**.
-20. **Outlook** (web version) should still be open from a previous lab; however, you should be logged in as the global Administrator from the first exercise in this lab. Therefore, you must log out from Outlook as the global Administrator and log back in as Nona.  
-	To do so, select the Administrator's user icon (the circle with the initials) in the upper right corner of the screen, then select **Sign out**, enter **https://outlook.office365.com** in the address bar, sign in as Nona Snider (**nona@xxx.onmicrosoft.com**, where xxx is your tenant ID), and enter **Pa55w.rd** as password.
-1. In Nona's **Inbox**, select the email that you just sent from the **MOD Administrator** that contains the **Attachment Test** subject.
-1. Select the **dism.log** message attachment.
-1. A message should appear indicating that you do not have permission to download files.  
-	>**Note:** In some cases, it may take a few minutes for the new Outlook Web App mailbox policy to take effect, so you may not see this message at this time.
-1. Close the message attachment window.
-1. Leave the Edge browser open and and all its tabs.
+	- **Information management/Journaling**
+1. Cliquez sur le bouton **Next**.
+1. sur la page **View and access attachments**, décochez la case sous **Private computers**.
+1. Cliquez sur **Next** puis **Create**.
+1. Cliquez sur **Done** une fois que la stratégie a été créée.
+1. Dans le menu de navigation du portail **Exchange admin center**, cliquez sur **Mailboxes** dans le groupe d'options **Recipients**.
+1. Sur la page **Manage mailboxes**, cliquez sur la ligne correspondante à l'utilisateur **Alan Yoo**.
+1. Sur le panneau d'informations de **Alan Yoo** qui s'affiche, cliquez sur **Manage email apps settings** dans la section **Email apps & mobile devices**.
+1. Sur la page **Manage settings for email apps**, remplacez (vous pouvez cliquer sur le **x** à droite de la stratégie actuelle) le contenu du champ **Outlook web app mailbox policy** en tapant ```Limited features```.
+1. Sélectionnez votre stratégie **Limited features** avant de cliquer sur **Save**.
+1. Fermez le panneau d'information d'**Alan Yoo** une fois le changement sauvegardé.
+1. Vous allez maintenant ouvrir le client Outlook sur LON-CL2. Basculez sur la machine virtuelle **LON-CL2** sur laquelle vous devriez être connecté avec l'utlisateur **.\admin**. Cliquez sur le bouton **Démarrer** de la barre des tâches et, dans le menu **Démarrer**, cliquez sur **Outlook**.
+1. Si votre client Outlook n'est pas configuré, configurez le, par exemple, pour le compte de Alan Yoo (alan@WWLxxxxx.onmicrosoft.com).
+1. Dans **Outlook**, cliquez sur **+ New Email**.
+1. Dans la fenêtre de composition de nouveau message, cliquez sur le bouton **To** et, dans la liste des utilisateurs qui apparaît, sélectionnez **Alan Yoo** avant de cliquer sur **To** et **OK**.
+1. Dans le champ **Subject**, entrez ```Attachment Test```.
+1. Dans le bandeau, cliquez sur l'icône de pièce jointe et choisissez **Browse This PC**.
+1. Dans la fenêtre **Insert File**, naviguez vers **C:\Windows\Logs\DISM**, sélectionnez **dism.log** puis cliquez sur **Insert**.
+1. Cliquez sur **Send**.
+1. Après que le message soit envoyé, fermez Outlook.
+1. Si un navigateur Internet est ouvert sur LON-CL2, fermez-le. Lancez ensuite une nouvelle session de navigation en cliquant sur l'icône de **Edge** dans la barre des tâches.
+1. Ouvrez *Outlook on the Web* pour **Alan Yoo** en vous rendant à l'adresse suivante : ```https://outlook.office365.com```. Si la boite aux lettres de Alan ne s'ouvre pas, connectez-vous avec son compte (**alan@WWLxxxxx.onmicrosoft.com** et le mot de passe **Pa55w.rd**).
+1. Dans la boite de réception de Alan (*Inbox*), sélectionnez le message reçu de la tâche précédente dont le sujet est **Attachment Test**.
+1. Sélectionnez la flèche descendante à droite du fichier joint **dism.log**.
+1. Dans la boite de Alan, vous ne devriez pas avoir l'option **Donwload** si la stratégie s'est correctement appliquée.
+	>**Note :** La prise en coimpte de votre stratégie peut prendre quelques minutes. Vous pouvez aussi essayer de faire un *force-refresh* de votre navigateur pour vous assurer que le moteur de webmail que Alan utilise n'est pas celui qui a été précédemment mis en cache par exemple.
+1. Conservez votre navigateur Internet ouvert pour les ateliers suivants.
 
-## Task 2: Configure mobile-device access
-In this task, you will create a mobile device access policy that places any new devices into quarantine, at which point the device must be approved to be removed from quarantine so that it can send and receive messages. 
-1. Switch to **LON-CL1**, where you should still be logged in as the **Administrator** with a password of **Pa55w.rd**. 
-1. Your Edge browser should be open from the prior exercise, with tabs open for the **Microsoft 365** homepage, the **Microsoft 365 admin center**, and the **Exchange admin center**. You should still be signed into Microsoft 365 as Dominique Skyetson.  
-	If you closed the Exchange admin center tab after the prior lab exercise, then in the **Microsoft 365 Admin center**, under **Admin Centers** in the left-hand navigation pane, select **Exchange**.
-1. In the **Exchange admin center**, in the left-hand navigation pane, select **Mobile device access** under the **mobile** section.
-1. On the **Quarantined Devices** page, click on the **Edit** button.
-1. In the **Exchange ActiveSync access settings** window, under the **Connection Settings** section, select the **Quarantine – Let me decide to block or allow later** option.
-1. Under the **Quarantine Notification Email Messages** section, enter your global administrator account.
-1. In the **Exchange ActiveSync access settings** window, select **Save** and close the **Exchange ActiveSync access settings** window.
-1. Leave the Edge browser open and and all its tabs.
+## Tâche 2 - Configurer l'acçés mobile
+Dans cette tâche, vous allez créer une stratégie d'accès mobile qui place tous les nouveaux périphériques mobiles en quarantaine, après quoi la synchronisation de ces nouveaux périphériques devra être validée par un administrateur.  
+1. Basculez sur **LON-CL1**. Les portails **Microsoft 365 admin center** et **Exchange admin center** devraient encore être resté ouverts dans votre navigateur (et vous devriez y être connecté avec le compte de *Dominique Skyetson*).
+1. Dans le portail **Exchange admin center**, ouvrez le groupe d'options **Mobile** pour cliquer sur **Mobile device access**.
+1. Sur la page **Quarantined Devices**, cliquez sur le bouton **Edit** en haut à droite.
+1. Dans le panneau **Exchange ActiveSync access settings** qui s'affiche, dans la section **Connection Settings**, sélectionnez l'option **Quarantine – Let me decide to block or allow later**.
+1. Sous la section **Quarantine Notification Email Messages**, enter l'adresse email de Dominique (**dom@WWLxxxxx.onmicrosoft.com**).
+1. Cliquez sur le bouton **Save** avatn de fermer le panneau **Exchange ActiveSync access settings**.
+1. Conservez votre navigateur Internet ouvert pour la tâche suivante.
 
-## Task 3: Configure a mailbox policy for mobile devices
-In this task, you will configure a mailbox policy for mobile devices that requires a password and sets the parameter for password length.
-1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**.
-1. Your Edge browser should be open from the prior exercise, with tabs open for the **Microsoft 365** homepage, the **Microsoft 365 admin center**, and the **Exchange admin center**. You should still be signed into Microsoft 365 as Dominique Skyetson.  
-	If you closed the Exchange admin center tab after the prior lab exercise, then in the **Microsoft 365 Admin center**, under **Admin Centers** in the left-hand navigation pane, select **Exchange**.
-1. In the **Exchange admin center**, select the **Mobile device mailbox policy** from the **Mobile** section.
-1. On the **Mobile device mailbox policy** page, click on the **Default** policy.
-1. In the **Edit mobile device mailbox policy** window, select the **security** tab in the left-hand navigation pane.
-1. In the **security** tab, select the **Require a mobile device mailbox password** check box that appears at the top of the window.
-1. Select the **Allow simple passwords** check box (if it's not already selected).
-1. Select the **Minimum password length** check box, enter a value of **6**.
-1. In the **Password recycle count** field, enter a value of **5**, select **Save**, and then close the **Edit mobile device mailbox policy** once the information is successfully saved.
-11. Leave the Edge browser and all its tabs open.
+## Tâche 3 - Configurer la boite aux lettres pour les mobiles
+Dans cette tâche, vous allez configurer une stratégie de boite aux lettres accédée par les périphériques mobiles afin d'exiger un mot de passe de périphérique et une longeur minimum dudit mot de passe.
+1. Dans le portail **Exchange admin center**, ouvrez le groupe d'options **Mobile** pour cliquer sur **Mobile device mailbox policy**.
+1. Sur la page **Mobile device mailbox policy**, cliquez sur la stratégie **Default**.
+1. Sur le panneau **Edit mobile device mailbox policy**, cliquez sur l'onglet **security** pour l'afficher en lieu et place de l'onglet *General*.
+1. Sur l'onglet **Security**, cochez la case en regard de **Require a mobile device mailbox password**.
+1. Cochez la case en face de **Allow simple passwords** (si elle n'est pas déjà cochée).
+1. Dans le champ **Minimum password length**, entrez une valeur de **6**.
+1. Dans le champ **Password recycle count**, entrez une valeur de **5**.
+1. Cliquez sur **Save** et fermez le panneau **Edit mobile device mailbox policy** une fois vos chanegments sauvegardés.
+1. Conservez votre navigateur Internet ouvert pour les ateliers suivants.
 
 ## Résultat
+Dans cet exerice, vous avez découvert les stratégie permettant de gèrer le comportement du webmail et de l'utilisation de Echange Online depuis des périphériques mobiles.
 
 # Fin de l'atelier 6

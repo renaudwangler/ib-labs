@@ -13,7 +13,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 - Le nettoyage des utilisateurs on-premises avant de les synchroniser
 
 ## Tâche 1 - Modification des UPN
-Dans *Active Directory Domain Service** (ADDS), le suffixe UPN par défaut est le nom DNS du domaine dans lequel le compte utilisateur a été créé. L'assistant d'installation Entra Connect utilise l'attribut *UserPrincipalName* (bien qu'il soit possible d'en sélectionner un autre) comme nom de connexion utilisateur pour Entra Id.  
+Dans *Active Directory Domain Service* (ADDS), le suffixe UPN par défaut est le nom DNS du domaine dans lequel le compte utilisateur a été créé. L'assistant d'installation Entra Connect utilise l'attribut *UserPrincipalName* (bien qu'il soit possible d'en sélectionner un autre) comme nom de connexion utilisateur pour Entra Id.  
 L'environnement de test du pilote de Adatum que vous utilisez a été créé par votre hébergeur d'ateliers et le nom de domaine de l'ADDS choisi est **adatum.com**. Les utilisateurs ADDS ont donc été créés dans ce domaine qui ne sera pourtant pas celui utilisé pour l'environnement Entra Id de Adatum (le nom DNS d'entreprise sera utilisé à la place).  
 Dans cette tâche, vous allez vous faciliter la vie en utilisant Windows Powershell pour changer le suffixe UPN de votre environnement ADDS et l'UPN de tous les utilisateurs *on-premises*.  
 1. Basculez sur la machine virtuelle **LON-DC1** sur laquelle vous devriez encore être connecté avec le compte **ADATUM\Administrator** et le mot de passe **Pa55w.rd**.
