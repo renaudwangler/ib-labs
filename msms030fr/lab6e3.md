@@ -29,7 +29,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 	- **LinkedIn contact sync**
 	- **Information management/Journaling**
 1. Cliquez sur le bouton **Next**.
-1. Sur la page **View and access attachments**, décochez la case sous **Private computers**.
+1. Sur la page **View and access attachments**, décochez la case sous **Public or shared computers** ainsi que celle sous **Private computers**.
 1. Cliquez sur **Next** puis **Create**.
 1. Cliquez sur **Done** une fois que la stratégie a été créée.
 1. Dans le menu de navigation du portail **Exchange admin center**, cliquez sur **Mailboxes** dans le groupe d'options **Recipients**.
