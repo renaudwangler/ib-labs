@@ -4,46 +4,51 @@ title: "Lab8-Ex1 - Configuration des paramètres de SharePoint Online"
 length: "00"
 ---
 # Scénario
-Now that Dominique Skyetson has configure Exchange Online and Microsoft Teams, she will begin preparing Adatum to implement SharePoint Online within the organization's Microsoft 365 pilot project. In this exercise, Dominique will begin by configuring SharePoint Online settings to meet Adatum's business needs.
+Maintenant que Dominique a configuré *Exchange Online* et *Teams*, il s'apprette à implémenter *Sharepoint Online* dans le projet pilote d'Adatum.  
+Dans cet exercice, Dominique va commencer par modifier les paramètres génériques de Sharepoint Online pour les mettre en conformité avec les besoins business d'Adatum.
 
 # Objectifs
 A la fin de cet exercice, vous aurez une meilleure connaissance de :
+- L'utilisation du portail administratif de Sharepoint online
+- L'utilisation des profils utilisateurs dans Sharepoint Online
+- L'utilisation des applications dans Sharepoint Online
 
 
-## Task 1 - Configure settings
-1. Switch to **LON-CL1**, where you should still be logged in as the **Administrator** with a password of **Pa55w.rd**.
-1. You should still have Microsoft Edge and the Microsoft 365 admin center open from an earlier lab. If so, proceed to the next step; otherwise, open Microsoft Edge, navigate to **https://portal.office.com/**, log in as **dom@WWLxxxxx.onmicrosoft.com** (where xxx is your tenant ID) and a password of **ibForm@tion**, and then in the **Microsoft 365** homepage, select **Admin** to open the Microsoft 365 admin center.
-1. To start fresh in this SharePoint lab exercise, close any tab in the Edge browser other than the **Microsoft 365** homepage tab and the **Microsoft 365 admin center** tab.
-1. In the **Microsoft 365 admin center** tab, in the left-hand navigation pane, select **Show all** (if necessary), then scroll down to **Admin centers** and select **SharePoint**. This will open the **SharePoint admin center** in a new tab.
-1. If a **Take tour** window appears, click outside it to dismiss it.
-1. In the left-hand navigation pane, select **Policies** and then select **Sharing**.
-1. On the **Sharing** page, select **More external sharing settings** to expand this group of settings. Within this group of external sharing settings, select the **Guests must sign in using the same account to which sharing invitations are sent** check box, and select the **Allow guests to share items they don't own** check box (if it's not already selected by default). Scroll to the bottom of the window and select **Save**.
-1. Leave all tabs open in your browser and proceed to the next task. 
+## Tâche 1 - Configuration de paramètres
+1. Basculez sur la machine virtuelle **LON-CL1**, sur laquelle vous devriez encore être connecté avec le compte **adatum\Administrator** et le mot de passe **Pa55w.rd**.
+1. Les portails **Microsoft 365 admin center** et **Microsoft Teams admin center** (que vous pouvez désormais fermer) devraient encore être resté ouverts dans votre navigateur (et vous devriez y être connecté avec le compte de *Dominique Skyetson*).
+1. Dans le portail **Microsoft 365 admin center**, dans le menu de navigation, cliquez sur **Show all** (si nécessaire) puis cliquez sur **Sharepoint** sous la section **Admin centers**. Ceci va ouvrir le portail **SharePoint admin center** dans un nouvel onglet.
+1. Si une boite de dialogue **Take tour** apparaît, cliquez en dehors pour la fermer.
+1. Dans le menu de navigation du portail *Sahrepoint admin center**, ouvre le groupe d'options **Policies** pour cliquer sur **Sharing**.
+1. sur la page **Sharing**, cliquez pour ouvrir la section **More external sharing settings**. Parmi les options affichées, cochez les cases **Guests must sign in using the same account to which sharing invitations are sent** et **Allow guests to share items they don't own** (si elle n'est pas déjà cochée par défaut)). cliquez sur le bouton **Save** en bas de page.
+1. Conservez votre navigateur Internet ouvert pour la tâche suivante. 
 
-## Task 2 - Configure user profiles
-1. On **LON-CL1** you should still have the **SharePoint admin center** open from the prior task. In the left-hand navigation pane, select **More features**.
-1. On the **More features** page, in the **User profiles** group, select **Open**.
-1. On the **User Profiles** page, under the **People** group, select **Manage User Profiles**.
-1. On the **User Profiles** page, enter **Nona** in the **Find profiles** field and then select **Find**. Nona Snider's account will appear in the account name list. 
-1. In the list of accounts, select the **Account name** for **Nona Snider**. In the drop-down menu that appears, select **Edit My Profile**.
-1. In the **User Profiles** page, in the **Manager** field, enter the name of your global account and select the **check names** icon to the right of the field and verify the field displays your global admin name.
-1. In the upper-right corner of the page, select **Save and Close**.
-1. Close the **Manage User Profiles** tab in your browser. This should return you back to the **SharePoint admin center** tab.
-1. On the **SharePoint admin center** tab, it should still be displaying the **More features** page. In the **User profiles** group, select **Open**.
-1. On the **User Profiles** page, under the **My Site settings** group, select **Setup My Sites**.
-1. In the **My Site Settings** tab, scroll down to the **My Site Cleanup** section and in the **Secondary Owner** field, enter your global admin name and then select the **Check names** icon. Verify the field displays your global admin name.
-1. Scroll down to the bottom of the page and select **OK**.
-1. Close the **Manage Profile Service** tab in your Edge browser.
-1. Leave all tabs open in your browser and proceed to the next task. 
+## Tâche 2 - Configuration des profils utilisateurs
+1. Les portails **Microsoft 365 admin center** et **Sharepoint admin center** devraient être resté ouverts dans votre navigateur (et vous devriez y être connecté avec le compte de *Dominique Skyetson*).
+1. Dans le menu de navigation du portail **SharePoint admin center** cliquez sur **More features**.
+1. Sur la page **More features**, cliquez sur le bouton **Open** sur la tuile **User profiles**.
+1. Sur la page **User Profiles**, sous l'en-tête **People** cliquez sur **Manage User Profiles**.
+1. Sur la page **User Profiles**, tapez ````Alan`` dans le champ **Find profiles** avant de cliquer surt **Find**.
+1. Le profil de Alan yoo s'affiche dans la liste. Cliquez sur la première colonne de la ligne du profil de Alan pour sélectionner **Edit My Profile**.
+1. Dans la page **User Profiles**, Saisissez ```dominique``` dans le champ **Manager** et cliquez sur l'icône **check names** à droite du champ et vérifiez que le compte de Dominique Skyetson est affiché.
+1. Dans le coin haut à droite de la page **User Priles**, cliquez sur le bouton **Save and close**.
+1. Fermez l'onglet **Manage User Profiles** de votre navigateur internet, afin de retourner sur l'onglet contenant le **SharePoint admin center**.
+1. Sur la page **More features**, cliquez sur le bouton **Open** sur la tuile **User profiles**.
+1. Sur la page **User Profiles**, sous l'en-tête **My Site Settings** cliquez sur **Setup My Sites**.
+1. Sur l'onglet **My Site Settings**, faites défiler la page jusqqu'à la section **My Site Cleanup** ; tapez ```dominique``` dans le champ **Secondary Owner** et cliquez sur l'icône **check names** à droite du champ et vérifiez que le compte de Dominique Skyetson est affiché.
+1. Défilez jusqu'en bas de la page pour cliquer sur **OK**.
+1. Fermez l'onglet **Manage User Profiles** de votre navigateur internet.
+1. Conservez votre navigateur Internet ouvert pour la tâche suivante. 
 
-## Task 3 - Configure apps
-1. On **LON-CL1** you should still have the **SharePoint admin center** open from the prior task, and it should be displaying the **More features** page.
-1. On the **More features** page, under the **Apps** group, select **Open**.
-1. On the **Apps** page, select the **More Features** tab.
-1. In the **More features** page, click on the **Open** button on the **Configure store settings** tile.
-1. In the **Apps for Office from the Store** setting, select **No** to disable apps from starting when documents are opened in the browser.
-1. Select **OK**.
-1. Close the last two opened tabs in your browser to leave the **Microsoft 365** home page, the **Microsoft 365 admin center** and the **Sharepoint admin center** tabs opened.
+## Task 3 - Configuration des applications
+1. Les portails **Microsoft 365 admin center** et **Sharepoint admin center** devraient être resté ouverts dans votre navigateur (et vous devriez y être connecté avec le compte de *Dominique Skyetson*).
+1. Dans le menu de navigation du portail **SharePoint admin center** cliquez sur **More features**.
+1. Sur la page **More features**, cliquez sur le bouton **Open** sur la tuile **Apps**.
+1. Attendez que le catalogue d'applications soit prêt (votre navigateur Internet peut recharger la pgae plusieurs fois) et cliquez sur **More Features** dans le menu de navigation.
+1. Sur la page **More features**, cliquez sur le bouton **Open** sur la tuile **Configure store settings**.
+1. Sur la page **Apps**, en regard de **Apps for Office from the Store** cliquez sur **No** pour désactiver le lancement des applications Office lors de l'ouverture des documents des sites Sharepoint dans le navigateur.
+1. Cliquez sur **OK**.
+1. Fermez les deux derniers onglets ouverts dans votre navigateur Internet, laissant les portails **Microsoft 365 admin center** et **Sharepoint admin center** ouverts pour l'exercice suivant.
 
 ## Résultat
 A l'issue de cet exercice, vous avez configuré les paramètres principaux du service Sharepoint Online.

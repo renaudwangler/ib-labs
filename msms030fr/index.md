@@ -38,7 +38,7 @@ ___
 ### Exercice 3 - [Configuration des stratégies d'accès clients](lab6e3)
 ___
 ## Atelier 07 - Déploiement de Microsoft Teams
-### Exercice 1 - [Configuration de Microsoft Teams (en)](lab7e1)
+### Exercice 1 - [Configuration de Microsoft Teams](lab7e1)
 ___
 ## Atelier 08 - Configuration de Sharepoint Online
 ### Exercice 1 - [Configuration des paramètres de SharePoint Online (en)](lab8e1)
