@@ -12,6 +12,11 @@ Finalement, Dominique souhaite gérer l'accès à *Teams*, spécifiquement l'acc
 
 # Objectifs
 A la fin de cet exercice, vous aurez une meilleure connaissance de :
+- Les réunions *Teams* et leurs stratégies
+- Les stratégies de messages
+- Les files d'attente (standards téléphoniques) dans *Teams*
+- Les stratégies d'accès externe et invité dans *Teams*
+- Les paramètres globaux du client *Teams*
 
 
 ## Tâche 1 - Gestion de la stratégie globale de réunion
@@ -128,87 +133,93 @@ Maintenant que vous avez créé un compte de ressource pour votre file d'atente,
 1. Conservez votre navigateur Internet ouvert pour la tâche suivante.
 
 ## Tâche 6 - Créer une stratégie d'appels
-In Microsoft Teams, calling policies control which calling and call forwarding features are available to users. Calling policies determine whether a user can make private calls, use call forwarding or simultaneous ringing to other users or external phone numbers, route calls to voicemail, send calls to Call Groups, use delegation for inbound and outbound calls, and so on. A default global policy is created automatically, but admins can also create and assign custom calling policies.  
-As part of her Microsoft Teams pilot project, Dominique Skyetson has been tasked with creating a custom calling policy for Adatum. Instead of customizing the default global policy, she will follow best practice guidelines and create her own customized policy that will be used as Adatum’s default policy
-1. On **LON-CL1** you should still have the **Microsoft Teams admin center** open from the prior task. In the left-hand navigation pane, under the **Voice** group, select **Calling policies.**
-1. In the **Calling policies** window, scroll down through the list to see the predefined calling policies and then select **+ Add** in the menu bar that appears above the list of calling policies.
-1. In the **Calling policies \ Add** window, enter **Default Adatum Calling Policy** in the **Add a name for your calling policy** field at the top of the form.
-1. Scroll down the page and select the following values for each setting (leave any other value to it default value):
-	- Make private calls: **On**
-	- Call forwarding and simultaneous ringing to people in your organization: **Off**
-	- Voicemail is available for routing inbound calls: **Enabled**
-	- Delegation for inbound and outbound calls: **Off**
-	- Prevent toll bypass and send calls through the PSTN: **On**
-	- Busy on busy when in a call: **Enabled**
-1. Select **Save**, **Default Adatum Calling Policy** will appear in the list of Calling policies. Note the **yes** value in the Custom policy column.
-1. Leave all tabs open in your browser and proceed to the next task.
+Dans *Teams*, les stratégies d'appels contrôlent quelles fonctionnalité d'appel et de télphonie sont disponibles aux utilisateurs. les stratégies d'appels déterminent si un utilisateur peut apsser des appels privés, utiliser le transfert d'appel ou des numéros d'appels spécifiques, transfert ses appels vers sa boite vocale, initier des appels de groupe etc... Des stratégies d'appels par défaut sont créées en même temps que le tenant mais les administrateurs peuvent également créer des stratégies plus spécifiques.  
+Dans le cadre du projet pilote *Teams* de Adatum, Dominique Skyetson a été missionné pour créer une stratégie d'appels spécifiques. Ainsi, au lieu de modifier une stratégie par défaut, il va créer sa propre stratégie qui sera utilisée sur les comptes des utilisateurs Adatum.
+1. Sur le portail **Microsoft Teams admin center**, cliquez sur **Calling policies** dans le groupe d'options **Voice**.
+1. Sur la page **Calling policies**, parcourez les stratégies proposées par défaut avant de cliquer sur **+ Add** dans la barre de menu au dessus de la liste des stratégies.
+1. Sur la page **Calling policies \ Add**, Saisissez ```Default Adatum Calling Policy``` dans le champ **Add a name for your calling policy** en haut du formulaire.
+1. Parcourez ensuite le formulaire pour saisir les valeurs suivantes (laissez les éléments non mentionnés à leur valeur par défaut) :
+	- **Make private calls** : **On**
+	- **Call forwarding and simultaneous ringing to people in your organization** : **Off**
+	- **Voicemail for inbound calls** : **Off**
+	- **Delegation for inbound and outbound calls** : **Off**
+	- **Prevent toll bypass and send calls through the PSTN** : **On**
+	- **Busy on busy during calls** : **Let users decide**
+1. Cliquez sur le bouton **Save**.
+1. La stratégie **Default Adatum Calling Policy** apparâit désormais dans la liste. Notez que **yes** s'affiche dans la colonne *Custom policy*.
+1. Conservez votre navigateur Internet ouvert pour la tâche suivante.
 
-## Task 7 – Manage External Access
-With Microsoft Teams’ external access feature, Teams users from other domains can participate in your chats and calls. You can also block the users in specific domains from joining chats and calls.  
-As part of her Microsoft Teams pilot project, Dominique Skyetson wants to block communication with users from a specific domain (spam.com) that has been the source of multiple spam attacks within Adatum over the past year. At the same time, Dominique wants to allow communication with the users from another domain (microsoft.com) that is one of Adatum's key business partners.
-1. On **LON-CL1** you should still have the **Microsoft Teams admin center** open from the prior task. In the left-hand navigation pane, select the **Users** group, select **External access.**
-1. In the **External access** window, select the **Allow all external domains** menu and change its value to **Allow only specific external domains**
-1. To add the domain in which you want to allow communication, select the **Allow domains** button.
-1. In the **Add xternal domain** window, enter **microsoft.com** in the **Domain** field
-1. Select **Done.** 
-1. Select **Save.**
-1. Select **Confirm** in the **Changes will take time to take effect** window.
-11. Leave all tabs open in your browser and proceed to the next task. 
+## Tâche 7 – Gestion de l'accès externe
+Grâce à la fonctionnalité d'accès externe, les utilisateurs *Teams* d'autres domaines peuvent participer à des appels et des échanges de messages. Vous pouvez cependant bloquer les utilisateurs de certains domaines.  
+Dans le contexte du projet pilote d'Adatum, Dominique Skyetson souhaite bloquer la communication avec tous les domaines Entra Id externes, sauf pour ce qui concerne les utilisateurs de deux entités partenaire de Adatum (microsoft.com et ib.cegos.fr).
+1. Sur le portail **Microsoft Teams admin center**, cliquez sur **External access** dans le groupe d'options **Users**.
+1. Sur la page **External access**, cliquez sur le menu **Allow all external domains** et séelctionnez **Allow only specific external domains**
+1. Pour ajouter le domaine avec lequel la communication est autorisée, cliquez sur le bouton **Allow domains**.
+1. Dans le panneau **Add external domain**, saisissez ```microsoft.com``` dans le champ **Domain** avant de cliquer sur **Done**.
+1. Pour ajouter un second domaine autorisé, cliquez sur **+ Add a domain** au-dessus de la liste des domaines autorisés.
+1. Dans le panneau **Add external domain**, saisissez ```ib.cegos.fr``` dans le champ **Domain** avant de cliquer sur **Done**.
+1. Cliquez sur le bouton **Save** en bas de page.
+1. Dans la boite de dialogue **Changes will take time to take effect**, cliquez sur **Confirm**.
+1. Conservez votre navigateur Internet ouvert pour la tâche suivante. 
 
-## Task 8 – Manage Guest Access
-Microsoft Teams’ guest access feature is a tenant-level setting that is turned Off by default. Once this setting is turned On, you can configure settings for guests. IT admins can add guests at the tenant level, set and manage guest user policies and permissions, and generate reports on guest user activity.  
-As part of your Microsoft Teams pilot project for Adatum, you will turn on guest access and then customize a variety of the guest settings as defined by Adatum’s project team.
-1. On **LON-CL1** you should still have the **Microsoft Teams admin center** open from the prior task. In the left-hand navigation pane, under the **Users** group, select **Guest access**.
-1. In the **Guest access** window, ensure the **Allow guest access in Teams** setting is to **On**.
-1. Scroll down the page and select the following values for the **Messaging** section :
-	- Edit sent messages: **Off**
-	- Delete sent Messages: **Off**
-	- Delete chat : **Off**
-	- Chat: **On**
-	- Giphy in conversations: **Off**
-	- Giphy content rating: **Strict**
-	- Memes in conversations: **Off**
-	- Stickers in conversations: **Off**
-	- Immersive reader for messages: **On**
-1. Select **Save.**
-1. Select **Confirm** in the **Changes will take time to take effect** window.
-1. Leave all tabs open in your browser and proceed to the next task. 
+## Tâche 8 – Gestion de l'accès invité
+La fonctionnalité d'accès invité de *Teams* permet de gérer si les utilisateurs d'entités externes peuvent être invités dans l'environnement *Teams* et si quelles fonctionnalités sont accessibles à ces utilisateurs invités.  
+Dans le contexte du projet pilote Adatum, Dominique Skyetson va maintenant modifier les fonctionnalités disponibles pour les comptes invités dans le tenant de Adatum.
+1. Sur le portail **Microsoft Teams admin center**, cliquez sur **Guest access** dans le groupe d'options **Users**.
+1. Dans la fenêtre **Guest access**, assurez-vous que **Guest access** soit sur **On** en tête de formulaire.
+1. Parcourez les paramètres de la section **Messaging** pour modifier les valeurs suivantes :
+	- **Edit sent messages** : **Off**
+	- **Delete sent Messages** : **Off**
+	- **Delete chat** : **Off**
+	- **Chat** : **On**
+	- **Giphy in conversations** : **Off**
+	- **Giphy content rating** : **Strict**
+	- **Memes in conversations** : **Off**
+	- **Stickers in conversations** : **Off**
+	- **Immersive reader for messages** : **On**
+1. Cliquez sur le bouton **Save** en bas de page.
+1. Dans la boite de dialogue **Changes will take time to take effect**, cliquez sur **Confirm**.
+1. Conservez votre navigateur Internet ouvert pour la tâche suivante.
 
-## Task 9 – Manage Teams Settings
-Microsoft Teams includes a variety of global settings that control performance within Teams. As part of her Microsoft Teams pilot project, Dominique Skyetson will configure a number of these settings as determined by Adatum’s project team.
-1. On **LON-CL1** you should still have the **Microsoft Teams admin center** open from the prior task. In the left-hand navigation pane, select the **Teams** group, select **Teams settings.**
-
-2. In the **Teams settings** window, select the following values for each setting:
-	- Notifications and feeds
+## Tâche 9 – Gestion des paramètres Teams
+Le portail d'administration de *Teams* inclut un ensemble de paramêtre qui contrôlent la performance du client *Teams*.  
+Dominique Skyetson va, pour finir cet atelier, configurer un certain nombre de ces paramêtres choisis par l'équipe projet pilote d'Adatum.
+1. Sur le portail **Microsoft Teams admin center**, cliquez sur **Teams settings** dans le groupe d'options **Teams**.
+1. Sur la page **Teams settings**, sélectionnez les valeurs suivantes :
+	- **Notifications and feeds**
 		- Suggested feeds can appear in a user's activity feed: **On**
-	- Tagging
+	- **Tagging**
 		- Who can manage tags: **Team owners and members**
 		- Team owners can change who can manage tags: **On**
-		- Suggested tags: **Sales** (press the space bar after entering this value); **Manufacturing** (press the space bar after entering this value); **Accounting** (press the space bar after entering this value)
+		- Suggested tags: ```Sales Manufacturing Accounting ``` (Notez qu'il y a un espace après chaque étiquette)
 		- Custom tags: **On**
 		- Shifts app can apply tags: **Off**
-	- Email integration
-		- Allow users to send emails to a channel email address: **On**
-		- Accept channel email from these SMTP Domains: **microsoft.com** (press the space bar after entering this value)
-	- Files
+	- **Email integration**
+		- Users can send emails to a channel email address: **On**
+		- Accept channel email from these SMTP Domains: ```microsoft.com ib.cegos.fr ``` (Notez qu'il y a un espace après chaque domaine)
+	- **Files**
 		- Citrix files: **On**
 		- DropBox: **Off**
 		- Box: **Off**
 		- Google Drive: **On**
 		- Egnyte: **Off**
-	- Organization
-		- Show Organization tab in chats: **On**
-	- Devices
+	- **Organization**
+		- Show Organization tab for users : **On**
+	- **Devices**
 		- Require a secondary form of authentication to access meeting content: **No access**
 		- Set content PIN: **Required for outside scheduled meeting**
 		- Surface Hub accounts can send emails: **On**
-	- Search by name
+	- **Search by name**
 		- Scope directory search using an Exchange address book policy: **On**
-	- Safety and communications
+	- **Safety and communications**
 		- Role-based chat permissions: **Off**
-1. Select **Save.**
-1. Select **Confirm** in the **Changes will take time to take effect** window. 
+	- **Shared channels**
+		- Provide a link to my support request page : **Off**
+1. Cliquez sur le bouton **Save.**
+1. Dans la boite de dialogue **Changes will take time to take effect**, cliquez sur **Confirm**.
+1. Conservez votre navigateur Internet ouvert pour l'atelier suivant.
 
 ## Résultat
+Dans cet atelier, vous avez travaillé sur l'accessibilité de divers fonctionnalités dans l'environnement *Teams*.
 
 # Fin de l'atelier 7
