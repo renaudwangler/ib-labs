@@ -36,7 +36,7 @@ A travers les ateliers de ce stage, vous allez prendre l'identité de Dominique 
 1. Le **Server Manager** va s'ouvrir automatiquement. Laissez cette fenêtre ouverte mais réduisez-là dans la barre des tâches pour le moment.
 1. Sur la barre des tâches, cliquez sur l'icône de **Microsoft Edge**. Passez les éventuelles pages de bienvenue (vous pouvez choisir **Continue without signing in**).
 1. Dans le navigateur, accédez au portail d'administration de Microsoft 365 en utilisant l'url suivante :
-```https://admin.microsoft.com```  
+```https://admin.microsoft.com```
 1. Dans la fenêtre **Sign in**, saisissez le nom de connexion du compte *MOD Administrator* (sous la forme **admin@WWWLxxxxxxxxxx.onmicrosoft.com**) et cliquez sur **Next**
 1. Dans la fenêtre **Enter password**, saisissez ou collez le **mot de passe du tenant** que vous avez précédemment noté et cliquez sur **Sign in**
 1. Sur la fenêtre **Stay signed in?**, cochez la case **Don’t show this again** et cliquez sur **Yes.**

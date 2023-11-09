@@ -4,45 +4,50 @@ title: "Lab8-Ex2 - Configuration de sites SharePoint Online"
 length: "00"
 ---
 # Scénario
-In this exercise, Dominique Skyetson wants to begin exploring SharePoint Online sites. For comparison purposes, Dominique plans to create a site using the SharePoint Online admin center, followed by a second site using Windows PowerShell. She will then configure access permissions to the sites, and then follow that up by verifying the access permissions work.## Task 1: Create a site using the SharePoint admin center
-In this task, you will use the SharePoint admin center to create a site for Adatum's Marketing department.
-1. On **LON-CL1** you should still be logged in as the **Administrator** with a password of **Pa55w.rd**.
-1. You should still have Microsoft Edge open from the previous exercise, along with tabs for the **Microsoft 365** homepage, the **Microsoft 365 admin center**, and the **SharePoint admin center**. If so, select the **SharePoint admin center** and proceed to the next step.  
-	Otherwise, open Microsoft Edge, navigate to **https://portal.office.com/**, log in as **dom@WWLxxxxx.onmicrosoft.com** (where xxx is your tenant ID) and a password of **ibForm@tion**, and then in the **Microsoft 365** homepage, select **Admin** to open the Microsoft 365 admin center, select **Show all** in the left-hand navigation pane, and then under **Admin centers** select **Sharepoint**.
-1. In the left-hand navigation page, expand **Sites** and select **Active sites**.
-1. On the menu-bar above the list of sites, select **+ Create**.
-1. On the **Create a site** window, select **Communication Site**.
-1. In the **Communication Site** window, enter **Marketing** in the **Site name** field.
-1. In the **Site owner** field, enter your global admin name and then select your global admin account from the list.
-1. Leave the default values unchanged for the other settings and then select **Finish**. This will return you to the **Active sites** page.
-	>**Note:** It can sometimes take a few minutes for SharePoint Online to provision a new site. Eventually, the **Marketing** site will appear in the list of active sites. Do not proceed to the next step until the **Marketing** site appears in the list.
-1. On the **Active sites** page, hover your mouse over the line for the marketing site. Select the check box that appears to the left of the of the **Marketing** site's name. 
-1. Selecting the check box for the marketing site will trigger the **Sharing** menu to appear on the ribbon. However, it may take a few minutes for the **Sharing** menu to appear. You can speed this up by refreshing the page by selecting the **Refresh** icon to the left of the address bar, or by pressing the F5 key.
-1. Select **Sharing** once the Sharing menu appears on the ribbon.
-1. In the **Sharing** window, select **Anyone** and then select **Save**.
-	>**Note:** The site settings changes to allow external user sharing. This process is usually done within one minute. External user sharing is now enabled and you can use it for this marketing site.
-1. Leave your Edge browser and all its tabs open and proceed to the next task.
+Dans cet exercice, Dominique Skyetson veut commencer à explorer les sites *SharePoint Online*. Pour en comparer le fonctionnement, Dominique va créer un site en utilisant le portail *SharePoint Online admin center*, avant d'en créer un second en utilisant Windows PowerShell. Elle va ensuite mettre en place les persmissions d'accès sur les sites et vérifier leur mode de fonctionnement.
 
-## Task 2: Create a site collection using Windows PowerShell
-Now that you have experience creating a site using the SharePoint admin center, you will use Windows PowerShell to create a site for Adatum's Accounting department. This will provide you with experience using both mechanisms to create sites.
-1. You should still be logged into **LON-CL1** and you should have the **SharePoint admin center** open from the prior task.
-1. In the Search box in the bottom left corner of your taskbar, enter **powershell**. 
-1. In the list of search results, right-click on **Windows PowerShell**, and in the menu that appears select **Run as administrator**.
-1. If a **Do you want to allow this app to make changes to your device** dialog box appears, select **Yes**.
-1. Maximize your PowerShell window. In **Windows PowerShell**, at the Powershell prompt type the following command and then press Enter:  
-	```Install-Module Microsoft.Online.SharePoint.PowerShell```
-1. If you are prompted to install the **NuGet provider**, enter **Y** to select **[Y] Yes**.
-1. If you are prompted to confirm whether you want to install the module from an untrusted repository (PSGallery), enter **A** to select **[A] Yes to All.**
-1. At the command prompt, type the following command and then press Enter (where xxx is your unique tenant ID):  
-	```Connect-SPOService –Url https://xxx-admin.sharepoint.com```
-1. In the **Enter your credentials** dialog box, enter your global admin name and password and Select **OK**.
-1. At the powershell prompt, type the following command and then press Enter to add a new site titled **Accounting** (where xxx is your tenant ID and XadminX is your global administrator name):  
-	```New-SPOSite -Url https://xxx.sharepoint.com/sites/Accounting -Owner XAdminX@xxx.onmicrosoft.com -StorageQuota 500 -NoWait -Template PROJECTSITE#0 –Title Accounting```
-1. Minimize the **PowerShell** window.
-1. In your Edge browser, the **Active sites** page should still be displayed from the prior task. If the new **Accounting** site does not appear in the list of sites, select the **Refresh** icon that appears to the left of the address bar. **Do not** proceed to the next step until you have verified that the new **Accounting** site appears in the Sites list.
-1. Leave your Edge browser open along with the **Microsoft 365** homepage tab, the **Microsoft 365 admin center** tab, and the **SharePoint admin center** tab, and then proceed to the next task.
+## Tâche 1: Créer un site dans le SharePoint admin center
+Dans cette tâche, vous allez utiliser le portail Sharepoint admin center pour créer un site pour le service formation de Adatum.
+1. Sur la machine LON-CL1, les portails **Microsoft 365 admin center** et **Sharepoint admin center** devraient être resté ouverts dans votre navigateur (et vous devriez y être connecté avec le compte de *Dominique Skyetson*).
+1. Dans le menu de navigation du **Sharepoint admin center**, cliquez sur le choix **Active sites** dans le groupe d'options **Sites**.
+1. Sur la barre de menu au-dessus de la liste de sites, cliquez sur le bouton **+ Create**.
+1. Sur la page **Create a site: Select the site type**, cliquez sur la tuile **Communication Site**.
+1. Sur la page **Select a template**, choisissez le modèle de site qui vous semble convenable pour la communication sur les formations proposées par Adatum en cliquant sur la tuile correspondante. Validez votre choix en cliquant sur **use template**.
+1. Sur la page **Give your site a name**, saisissez ```Training``` dans le champ **Site name**.
+1. Dans le champ **Site description**, saisissez ```Adatum training department catalog```.
+1. Dans le champ **Site owner**, tapez ```dominique``` et cliquez sur le compte de Dominique Skyetson.
+1. Sur la page **Give your site a name**, cliquez sur le bouton **Next**.
+1. Sur la page **Set language and other options**, cliquez sur le bouton **Create site**. Vous allez retourner sur la page **Active sites**.
+	>**Note :** La création d'un site Sharepoint Online peut prendre quelques minutes. Ne passez pas à la suite des opérations tant que vous ne voyez pas apparaître le site **Training** dans la liste.
 
-## Task 3: Configure permissions on the sites
+1. Sur la page **Active sites**, passez votre souris sur la ligne du site **Trainingùù. Sélectionnez la case à cocher qui s'affiche à gauche du nom du site.
+1. Sélectionnez la ligne du site **Training** devrait faire apparaître le bouton **Sharing** dans la barre de menu au-dessus de la liste de sites. Si ce bouton n'apparaît pas, vous pouvez tenter de rafraichir la page de votre navigateur.
+1. Cliquez sur le bouton **Sharing** une fois qu'il est apparau sur la barre de menu.
+1. Dans le panneau **Sharing**, sélectionnez **Anyone** avant de cliquer sur **Save** et de fermer le panneau.
+	>**Note :** Les paramètres de site changent pour permettre le partage d'éléments de ce site de la manière la plus ouverte possible.
+
+1. Conservez votre navigateur Internet ouvert pour les tâches ultérieures.
+
+## Tâche 2: Créer un site avec Windows Powershell
+Après avoir créé un site avec le portail d'administration de Sharepoint Online, vous allez désormais utiliser Windows Powershell pour créer un site pour le service comptabilité de Adatum.
+1. Sur **LON-CL1**, tapez ```Powershell ISE``` dans la recherche à droite du bouton **Démarrer** sur la barre des tâches.
+1. Sur le menu **Démarrer**, dans le panneau de détail sur l'application **Windows PowerShell ISE**, cliquez sur **Run as administrator**.
+1. Si une fenêtre **User Account Control** apparaît, connectez-vous avec le compte **adatum\administrator** et le mot de passe **Pa55w.rd**.
+1. Dans la partie basse (bleue) de la fenêtre **Administrator: Windows Powershell ISE**, utilisez la commande suivante pour installer le module Powershell de gestion de Sharepoint Online :  
+	```Install-Module Microsoft.Online.SharePoint.PowerShell -Force```
+1. Dans l'invite de commande de l'ISE, utilisez la commande suivante pour vous connecter à votre environnement Sharepoint Online :  
+	```Connect-SPOService –Url https://WWLxxxxx-admin.sharepoint.com```
+	>**Note :** WWLxxxxx est votre préfixe de tenant que vous avez noté au début de vos ateliers. Notez que, dans cette commande, il est suffixé de *-admin*.
+1. Dans la boite de dialogue **Sign in**, saisissez le nom de connexion de Dominique Skyetson (dom@WWLxxxxx.onmicrosoft.com) et cliquez sur **Next**.
+1. Dans la boite de dialogue **Enter password**, saisissez ```ibForm@tion``` et cliquez sur **Sign in**.
+1. dans l'invite Powershell, utilisez la commande suivante pour créer un nouveau site nommé **Accounting** :  
+	```New-SPOSite -Url https://WWLxxxxx.sharepoint.com/sites/Accounting -Owner dom@WWLxxxxx.onmicrosoft.com -StorageQuota 500 -NoWait -Template PROJECTSITE#0 –Title Accounting```
+	>**Note :** WWLxxxxx est votre préfixe de tenant que vous avez noté au début de vos ateliers. Notez que, dans cette commande, il est **n'est pas** suffixé de *-admin* !
+1. Minimisez la fenêtre **Administrator: Windows Powershell ISE**.
+1. Dans votre navigateur Internet, la page **Active sites** devrait toujours être affichée à l'issue de la tâche précédente. Si le site **Accounting** ne s'affiche pas, rafraichissez la page du navigateur. (il vous faudra peut-être attendre quelques instants et répéter l'opération). Ne passez pas à la tâche suivante tant que vous n'avez pas constaté l'affichage du site **Accounting** dans la liste des sites actifs.
+1. Conservez votre navigateur Internet ouvert pour la tâche suivante.
+
+## Tâche 3: Configurer des permissions sur les sites
 Now that you have added sites for Adatum's Marketing and Accounting departments, you will configure permissions for the Marketing site. Because you are still signed into Microsoft 365 as Dominique Skyetson, you must open an In-Private browser session in Edge and log into Microsoft 365 as the global administrator so that you can assign Nona Snider as an admin to the Marketing site.  
 Only a site's site admin can assign another user as an admin to the site. While you are signed into Edge as Dominique Skyetson, she is not an admin for the Marketing site. Therefore, you will have to open an InPrivate session so that you can log in as the MOD Administrator to make this assignment.  
 You will then open a second InPrivate browsing session and log in as Patti Fernandez to verify that she is a site admin for the Marketing site. You will do this by accessing the Marketing site's **Site Administrators** page, which is only accessible to site admins.  
