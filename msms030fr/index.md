@@ -42,7 +42,7 @@ ___
 ___
 ## Atelier 08 - Configuration de Sharepoint Online
 ### Exercice 1 - [Configuration des paramètres de SharePoint Online](lab8e1)
-### Exercice 2 - [Configuration de sites SharePoint Online (en)](lab8e2)
+### Exercice 2 - [Configuration de sites SharePoint Online](lab8e2)
 ### Exercice 3 - [Partage externe dans Sharepoint Online (en)](lab8e3)
 ___
 ## Atelier 09 - Autres outils Microsoft 365
