@@ -4,74 +4,66 @@ title: "Lab9-Ex1 - Viva Engage"
 length: "00"
 ---
 # Scénario
-Because Yammer Enterprise brings the rich social experiences of Yammer to Microsoft Teams, SharePoint Online, and other Microsoft 365 apps, Dominique Skyetson is interested in implementing Microsoft Yammer in Adatum's Microsoft 365 pilot project. This will enable Adatum users to share, create, and edit files directly from Yammer conversations with Office for the web.  
-In this exercise Dominique will configure the Yammer organizational settings for Adatum. She will also configure Yammer to enforce Microsoft 365 identity, which enables single sign-on (SSO) capabilities in Yammer. Dominique will complete her Yammer preparation by configuring the Yammer user experience.
+Comme *Engage* amène la richesse du réseau social d'entreprise Yammer aux environnements *teams*, *SharePoint Online* et aux autres applications Microsoft 365, Dominique Skyetson s'intéresse à la mise en oeuvre de *Viva Engage* dans le projet pilote d'Adatum. Ceci permettra aux utilisateurs d'Adatum de partager, créer et éditer des fichiers directement dans les conversations *Engage* avec *Office for the web*.  
+Dans cet exercice, Dominique va configurer les paramètres principaux de *Viva Engage* pour l'environnement Adatum avant de préparer l'outil pour une meilleure expérience utilisateurs.
 
 # Objectifs
 A la fin de cet exercice, vous aurez une meilleure connaissance de :
+- L'administration de *Viva Engage*
+- Le paramètrage personnel de *Viva Engage*
 
 
-## Task 1 - Configure a Yammer organization setting
-1. On **LON-CL1**, you should still be logged in as the **Administrator** with a password of **Pa55w.rd**.
-1. Please close all browser sessions you currently have open. This will enable you to start with a fresh browsing session.  
-	With Edge closed, select the **Edge** icon on the taskbar to open a new session. 
-1. In Edge, enter the following URL in the address bar: **https://portal.office.com**.
-1. In the **Pick an account** window, select Dominique Skyetson's account (**dom@WWLxxxxx.onmicrosoft.com** (where xxx is your tenant ID)). In the **Enter password** window, enter **ibForm@tion** and then select **Sign in**.
-1. On the **Stay signed in?** window, select **Don't show this again** and then select **Yes**.
-1. On the **Microsoft 365** homepage, select **Yammer** from the **App launcher**.  
-	>If the **Welcome to the new Yammer** window appears, close it by selecting the **X** in the upper right-hand corner.
-1. On the **Yammer** home page, on the right-side of the title bar at the top of the page, select the **gear**(Settings) icon.
-1. In the **Settings** pane that appears, under the **Yammer** section, select **Edit network admin settings**. This opens the **Yammer admin center**.
-1. In the **Yammer admin center**, in the left-hand navigation pane, under the **Network** group, select **Usage Policy**.
-1. In the **Usage Policy** window, update the following settings:  
-	- Select the **Require users to accept policy during sign up and after any changes are made to the policy** check box.
-	- Select the **Display policy reminder in sidebar** check box.
-	- In the **Custom Policy Title** field, enter **Adatum Acceptable Use Policy**.
-	- In the **Enter your policy in the textbox below** field, copy and paste in the following text: **Welcome to Yammer! Our goal is to provide a collaborative environment to connect with colleagues and bridge various departments and geographic locations to share meaningful information.**
-1. Select **Save**.
-1. Click on the **Yammer** title to go back to the Yammer home page.
-1. In the **Adatum Acceptable Use Policy** window that appears, select **I Accept**. 
-1. If the **Welcome to the new Yammer!** window appears again, select the **X** in the upper right-hand corner to close it.
-1. On the **Yammer** home page, on the right-side of the title bar at the top of the page, select the **gear**(Settings) icon.
-1. In the **Settings** pane that appears, under the **Yammer** section, select **Edit network admin settings**. This opens the **Yammer admin center**.
-1. In the **Yammer admin center**, in the left-hand navigation pane, under the **Network** group, select **Configuration**.
-1. On the **Configuration** page, in the **Email Settings** section, select the **Require all users in your network to confirm their messages posted via email before posting** check box.
-1. In the **Enabled Features** section, remove the check mark from **3rd Party Applications** to disable this feature.
-1. Select **Save**.
-1. In the **Yammer admin center**, in the left-hand navigation pane, under the **Content and Security** group, select **Data Retention**.
-1. In the **Data Retention Policy** page, read the description of available options and select **Archive** (if it's not already selected) and then Select **Save**.
-1. In the **Yammer admin center**, in the left-hand navigation pane, under the **Content and Security** group, select **Monitor Keywords**.
-1. In the **Monitor Keywords** page, enter your global administrator name in the **Email Address** field.
-1. In the text box below the **Email Address**  field, enter the following words, one in each line: **gambling**, **erotic**, **warez**.
-1. Select **Save**.
-1. In the **Yammer admin center**, in the left-hand navigation pane, under the **Content and Security** section, select **Security Settings**.
-1. Under the **Office 365 Identity Enforcement** section, verify the **Enforce Office 365  identity** check box is selected by default and then select **Save**.
-1. In your Edge browser, close the **Yammer admin center** tab and proceed to the next task.
+## Tâche 1 - Configurer les paramètres globaux de Engage
+1. Retournez sur la machine virtuelle **LON-CL1** ou votre session devrait déjà ouverte, avec le compte **ADATUM\Administrator** et le mot de passe **Pa55w.rd**.
+1. Le portail **Microsoft 365 admin center** devrait encore être resté ouvert dans votre navigateur Internet (et vous devriez y être connecté avec le compte de *Dominique Skyetson*).
+1. Cliquez sur le menu des applications 365 (le carré de 3 x 3 cases haut à gauche de la page) pour y choisir **Engage**.
+	>Si une boite de dialogue **Welcome to the new Viva Engage!** s'affiche, fermez la en utilisant le **X** dans le coin suppérieur droit.
+1. Sur la page d'accueil **Viva Engage**, cliquez sur l'icône d'engrenage **Settings** en haut à droite.
+1. Dans le panneau **Settings**, sous la section **Viva Engage**, cliquez sur **Edit network admin settings**. Ceci ouvre la page administrative de **Engage**.
+1. Dans le menu de navigation du portail d'administration **Engage**, sous la section **Network**, cliquez sur **Usage Policy**.
+1. Dans la page **Usage Policy** Utilisez les paramètres suivants :  
+	- Cochez la case **Require users to accept policy during sign up and after any changes are made to the policy**.
+	- Cochez la case **Display policy reminder in sidebar**.
+	- Dans le champ **Custom Policy Title**, entrez ```Adatum Acceptable Use Policy```.
+	- Dasn le champ **Enter your policy in the textbox below**, saisissez le texte suivant : ```Welcome to Engage! Our goal is to provide a collaborative environment to connect with colleagues and bridge various departments and geographic locations to share meaningful information.```
+1. Cliquez sur le bouton **Save** en bas de page.
+1. Si nécessaire, cliquez sur le titre **Engage** dans le bandeau pour retourner à la page d'accueil de Viva engage.
+1. Dans la boite de dialogue **Adatum Acceptable Use Policy**, cliquez sur **I Accept**.
+1. Fermez les éventuelles popup de bienvenue et d'information en cliquant sur le **X** en haut à droite de chacun.
+1. Sur la page d'accueil **Viva Engage**, cliquez sur l'icône d'engrenage **Settings** en haut à droite.
+1. Dans le panneau **Settings**, sous la section **Viva Engage**, cliquez sur **Edit network admin settings**. Ceci ouvre la page administrative de **Engage**.
+1. Dans le menu de navigation du portail d'administration **Engage**, sous la section **Network**, cliquez sur **Configuration**.
+1. Sur la page **Configuration**, dans la section **Email Settings**, cochez la case **Require all users in your network to confirm their messages posted via email before posting**.
+1. Dans la section **Enabled Features**, décochez la case **3rd Party Applications**.
+1. Cliquez sur **Save** en bas de page.
+1. Dans le menu de navigation du portail d'administration **Engage**, sous la section **Content and Security**, cliquez sur **Monitor Keywords**.
+1. Sur la page **Monitor Keywords**, entrez l'adresse de Dominique (*dom@WWLxxxxx.onmicrosoft.com*) dans le champ **Email Address**.
+1. Dans la boite de texte sous **Email Address**, entrez la liste de mots suivants, un sur chaque ligne : ```gambling```, ```erotic```, ```warez```.
+1. CLiquez sur **Save** en bas de page.
+1. Dans votre navigateur Internet, fermez l'onglet **Viva Engage : Admin\[...]** avant de passer à la tâche suivante.
+	>**Note :** Dans la tâche suivante, vous allez réouvrir *Engage*. Le fait d'avoir fermé l'onglet vous assure que vos nouveaux paramètres seront bien pris en compte pour votre prochaine session de navigation.
 
-## Task 2 - Configure the Yammer user experience
-1. On **LON-CL1**, you should still be logged in as the **Administrator** with a password of **Pa55w.rd**.
-1. At the end of the prior task, you were instructed to close the **Yammer admin center** tab. If you did not do it, then please do so now.
-1. In your Edge browser, you will re-open Yammer to start a fresh session with the updated configuration settings from the prior task. On the **Microsoft 365** homepage, select **Yammer** from the App launcher.
-1. On the **Yammer** home page, on the right-side of the title bar at the top of the page, select the **gear**(Settings) icon.
-1. In the **Settings** pane that appears, under the **Yammer** section, select **Edit settings**. This opens the **Account Settings** page.
-1. the **Account Settings** page, select the **Notifications** tab at the top of the page.
-1. In the list of notifications, all the check boxes in the **Email me when...** section are selected. Unselect all the check boxes except for these three:  
+## Tâche 2 - Configurer l'expérience utilisateur dans *Engage*
+1. Le portail **Microsoft 365 admin center** devrait encore être resté ouvert dans votre navigateur Internet (et vous devriez y être connecté avec le compte de *Dominique Skyetson*).
+1. Cliquez sur le menu des applications 365 (le carré de 3 x 3 cases haut à gauche de la page) pour y choisir **Engage**.
+1. Sur la page d'accueil **Viva Engage**, cliquez sur l'icône d'engrenage **Settings** en haut à droite.
+1. Dans le panneau **Settings**, sous la section **Viva Engage**, cliquez sur **Edit settings**. Ceci ouvre la page **Account Settings**.
+1. Sur la page **Account Settings**, cliquez sur l'onglet **Notifications**.
+1. Dans la liste de notifications, toutes les cases en regard des options pour la section **Email me when...** sont cochées par défaut. Décochez toutes les cases souf les trois suivantes :  
 	- **I receive a message in my inbox**
 	- **I log in from somewhere new**
 	- **I post a message via email (This will send a confirmation email)**  
 	Verfify that only these three check boxes are selected and all other check boxes are now blank.
-1. Select **Save**.
-1. Leave your Edge browsing session open, but close the **Yammer: Notifications** tab and proceed to the next task.
+1. Cliquez sur le bouton **Save**.
+1. Dans votre navigateur Internet, fermez l'onglet **Viva Engage : Notifications** avant de passer à la tâche suivante.
 
-## Task 3 - Using Yammer
-In this task, you will log into Yammer as Sherri Harrell and verify that you receive the Acceptable Use Policy statement that Dominique configured in the earlier task.
-1. Switch to **LON-CL2**. The last time you used LON-CL2, you were logged into Outlook on the web as the global Administrator. You were then instructed to log out of Outlook and close your Edge browsing session at the end of the lab. If your Edge browser is still open, then close it now.
-1. Select the **Microsoft Edge** icon on the taskbar to open a new Edge browsing session, and then enter the following URL in the address bar: **https://portal.office.com**.
-1. In the **Pick an account** window, if Sherri Harrell's **sherri@xxx.onmicrosoft.com** account appears in the list, then select it now; otherwise, select **Use another account**, sign in as **sherri@xxx.onmicrosoft.com** (where xxx is your tenant ID), and enter **Pa55w.rd**.
-1. On the **Microsoft Office Home** page, select **Yammer** from the App launcher.
-1. If a **Welcome to the new Yammer!** window appears, then close it.
-1. A **Adatum Acceptable Use Policy** dialog box should appear that displays the Welcome message that Dominique configured in the earlier task. Select **I accept**.
-	You have now verified that a user who is signing into Yammer for the first time receives the Acceptable Use Policy statment. If Sherri were to sign out of Yammer and then sign back in, the **Adatum Acceptable Use Policy** dialog box would not appear, since she already accepted it.
+## Tâche 3 - Utilisation de *Viva Engage*
+Dans cette tâche, vous allez vous connecter à *Viva Engage* avec le compte de Alan Yoo et vérifier que vous receviez bien l'avertissement sur l'utilisation correcte de *Engage* dans l'environnement Adatum que Dominique a configuré dans la première tâche.
+1. Basculez vers la machine virtuelle **LON-CL2**. La dernière fois que vous avez utilisé LON-CL2 vous aviez utilisé le navigateur Internet pour ouvrir la boite aux lettres de Alan dans *Outlook on the web*. Fermez tous les onglets du navigateur, sauf celui intitulé **Mail - Alan Yoo - Outlook**.
+1. Cliquez sur le menu des applications 365 (le carré de 3 x 3 cases haut à gauche de la page) pour y choisir **Engage**.
+	>Si une boite de dialogue **Welcome to the new Viva Engage!** s'affiche, fermez la en utilisant le **X** dans le coin suppérieur droit.
+1. Une boite de dialogue **Adatum Acceptable Use Policy** devrait s'afficher, indiquant le comportement que Alan est sensé respecter dans cet outil, cliquez sur **I Accept**.
+	**Note :** Si Alan se connecte de nouveau à *Engage* sur la machine ou sur une autre, cette boite de dialogue ne lui sera désormais plus présentée.
 
 ## Résultat
 A la fin de cet exercice, vous devriez avoir activé Viva Engage pour le projet pilote de Adatum.

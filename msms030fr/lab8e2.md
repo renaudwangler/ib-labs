@@ -12,7 +12,7 @@ Dans cette tâche, vous allez utiliser le portail Sharepoint admin center pour c
 1. Dans le menu de navigation du **Sharepoint admin center**, cliquez sur le choix **Active sites** dans le groupe d'options **Sites**.
 1. Sur la barre de menu au-dessus de la liste de sites, cliquez sur le bouton **+ Create**.
 1. Sur la page **Create a site: Select the site type**, cliquez sur la tuile **Communication Site**.
-1. Sur la page **Select a template**, choisissez le modèle de site qui vous semble convenable pour la communication sur les formations proposées par Adatum en cliquant sur la tuile correspondante. Validez votre choix en cliquant sur **use template**.
+1. Sur la page **Select a template**, choisissez le modèle de site qui semble convenir pour la communication sur les formations proposées par Adatum en cliquant sur la première tuile. Validez votre choix en cliquant sur **use template**.
 1. Sur la page **Give your site a name**, saisissez ```Training``` dans le champ **Site name**.
 1. Dans le champ **Site description**, saisissez ```Adatum training department catalog```.
 1. Dans le champ **Site owner**, tapez ```dominique``` et cliquez sur le compte de Dominique Skyetson.
@@ -61,7 +61,7 @@ Après avoir ajouté les sites de la formation et de la comptabilité d'Adatum, 
 	Sur le panneau **Training** qui s'affiche à droite de l'écran, sélectionnez l'onglet **Membership**.
 1. Sur l'onglet **Membership**, sous la section **Site admins** cliquez sur **+ Add site admins**.
 1. Sur la page **Add site admins to training**, tapez ```Alan``` dans le champ **Search by name or email address**. Sélectionnez le compte de **Alan Yoo** lorsqu'il apparaît puis cliquez sur **Add (1)**.
-1. Fermez le panneau **Add site admins to marketing**.
+1. Fermez le panneau **Add site admins to Training**.
 1. Basculez sur la machine virtuelle **LON-CL2** ou vous devriez encore être connecté avec le compte **.\admin**.
 1. Dans le navigateur Edge, le Webmail **Outlook** devrait être resté ouvert (et vous devriez y être connecté avec le compte de *Alan Yoo*).
 1. Dans la barre d'adresse du navigateur, utilisez l'adresse suivante : ```https://WWLxxxxx.sharepoint.com/sites/Training``` pour ouvrir le site Sharepoint du service formation de Adatum.
