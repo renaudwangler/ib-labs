@@ -50,37 +50,33 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 1. laissez ouvert l'explorateur de fichier et le navigateur Internet pour la tâche suivante.
 
 ## Tâche 2: Création de fichiers à synchroniser avec OneDrive
-Now that you have enabled file synchronization with OneDrive for Business, Dominique Skyetson wants to create test files to be synchronized and then verify file synchronization.
-1. On **LON-CL2**, ensure that the **OneDrive for Business** folder is open in File Explorer from the previous task. If not, open **File Explorer** and select **OneDrive - Adatum Corporation**.
-1. In **File Explorer**, select **Home** that appears in the menu bar at the top of the window.
-1. In the ribbon that appears on the **Home** tab, select **New folder**. This creates a new folder. Enter **Private** as the folder name.
-1. You now want to create another folder, so select the **Home** tab again, and on the ribbon, select **New folder**, and then enter **Project A** as the folder name.
-1. You now want to create a new Word document in the **Private** folder.  
-	If you double-click on the **Private** folder and then right-click in the detail pane and select **New** in the menu, it does NOT provide an option to create a Microsoft Word document.  
-	Instead, in the folder tree in the left-hand pane of the File Explorer window, you must select **OneDrive - Adatum Corporation** to expand it, then select the **Private** folder, right-click in the detail pane, and then select **New** in the menu. This will display a sub-menu with a variety of file types. Select **Microsoft Word Document** and name the document **Holidays.docx**.
-1. In the **File Explorer** window, note the document icon that appears to the left of the **Holidays.docx**. It may be hard to see, but the icon start as two blue arrows. This will come into play after you complete this step.  
-	Double-click the **Holidays.docx** to open it (note Alan Yoo is the licensed user displayed in the top left-corner of the Word document). Type some text in the document, save the document, and then close Microsoft Word.
-1. Note how the document icon for **Holidays.docx** changes from two blue arrows to a small green check mark icon after the synchronization process is complete. The document has been transferred to the OneDrive cloud storage automatically.
-1. In the **File Explorer** window, navigate to **OneDrive for Business** in the navigation address line to move one level up.
-1. In the **File Explorer** window, with the **OneDrive - Adatum Corporation** object expanded in the folder tree, select the **Project A** folder. Right-click in the detail pane for this folder, and in the menu that appears, select **New**, and then select **Microsoft Word Document**. Name the document **Project targets.docx**.
-1. Double-click **Project targets.docx** to open it, and then type some short text, save the changes, and then close Microsoft Word.
-1. Verify that the document synchronized by checking the document icon in File Explorer. The icon should be a green check mark.
-1. Minimize the **File Explorer** window.
-1. To view the files online, switch to the Microsoft Edge window. You should still be in the **OneDrive** tab. Refresh the view.
-1. In the **Files** list, you should see your two folders - **Private** and **Project A**.
-1. Select the **Private** folder, and then select the **Holidays.docx** file to open it in Word Online.
-1. In the menu bar at the top of the page, the **Tell me what you want to do** option is set to **Editing**. Add some additional text to the document. The document is saved automatically when **Saved** is displayed in the title bar.
-1. In your Edge browser, select the **OneDrive for Business** tab.
-1. Since you just updated the **Holidays.docx** file, you will see this reflected in the **Modified** column, which shows that the document changed just a few seconds ago.
-1. Switch back to **File Explorer**. 
+Maintenant que la synchronisation de fichiers est activée avec *OneDrive for Business*, Dominique Skyetson veut créer des fichier sur un poste local pour vérifier qu'il se synchronise bien dans le cloud.
+1. Sur **LON-CL2**, assurez-vous que le dossier **OneDrive for Business** est ouvert dans l'explorateur de fichier depuis la tâche précédente. Si ce n'est pas le cas, ouvrez l'explorateur de fichier et sélectionnez l'emplacement **OneDrive - Adatum**.
+1. Dans l'explorateur, cliquez sur **New folder** dasn la section **New** de l'onglet **Home**.
+1. In **File Explorer**, select **Home** that appears in the menu bar at the top of the window. Saisissez ```Private``` comme nom pour ce dossier.
+1. De la même manière, créez un second dossier nommé ```Project A```.
+1. Cliquez sur **New item** dans la section **New** de l'onglet **Home** de l'explorateur de fichiers et choisissez **Microsoft Word Document** et nommez le document ```Holidays```.docx.
+1. Dans l'explorateur de fichiers, une petite coche verte apparaît à droite du nom du fichier **Holidays.docx**.  
+	Double-cliquez sur le fichier **Holidays.docx** pour l'ouvrir (notez que Word est licencié pour Alan Yoo, visible en haut à droite de Word). Tapez quelque texte de test dans le document, sauvegardez le document et fermez Microsoft Word.
+1. Notez que l'icône dans la colonne **Status** que l'icône passe en double flèches bleue et se transforme en coche verte une fois le document synchronisé.
+1. Dans l'explorateur de fichiers, cliquez sur **OneDrive - Adatum** dans la barre d'adresse pour naviguer dans le dossier parent.
+1. Double cliquez sur le dossier **Project A**.
+1. Cliquez sur **New item** dans la section **New** de l'onglet **Home** de l'explorateur de fichiers et choisissez **Microsoft Word Document** et nommez le document ```Project targets```.docx.
+1. Double-cliquez sur le fichier **Project targets.docx** pour l'ouvrir, tapez quelques mots de test, sauvegardez vos changements aavnt de fermer Microsoft Word.
+1. Vérifiez que le fichier est synchronisé en notant que son icône de statut est devenu une coche verte avant de minimiser l'explorateur de fichiers dans la barre des tâches.
+1. Basculez dans la fenêtre de votre navigateur Internet. Vous devriez toujours être sur l'onglet **OneDrive**. Rafraichissez la fenêtre et cliquez sur l'entrée **My files** dans le menu de navigation à gauche.
+1. Dans la liste **My files**, vous devriez voir vos deux nouveaux dossiers - **Private** et **Project A**.
+1. Cliquez sur votre document **Holidays.docx** pour l'ouvrir dans Word Online.
+1. Dans la barre de menu en haut de page, le **Mode Menu** est sur **Editing**. Ajoutez quelques mots à votre document. Ce dernier est automtiquement sauvegardé une fois que la coche apparaît sur le nuage à droite de son nom.
+1. Dans votre navigateur Internet, basculez sur l'onglet **OneDrive for Business**.
+1. Puisque vous venez de modifier votre fichier **Holidays.docx**, vous verrez mention de ce changement dans la colonne **Modified**, qui vous indique que le document a éré modifié il y a quelques secondes.
+1. Basculez de nouveau vers l'explorateur de fichier que vous aviez minimisé. 
+1. Dans l'arborescence, cliquez sur **OndeDrive - Adatum** pour retourner à la racine de votre emplacement OneDrive. VOus devriez voir que les changements que vous venez de faire ont été correctement synchronisés sur la copie locale.
 1. In the folder tree, **OneDrive - Adatum Corporation** should still expanded. Select the **Private** folder and then open **Holidays.docx**. You should see the changes you made in Word Online are synchronized back automatically.
-1. Leave File Explorer open as well as your Edge browser and proceed to the next task. 
 
-## Task 3: Share files with other users
-1. On **LON-CL2**, ensure that the **OneDrive for Business** folder is open in File Explorer from the previous task. If not, open **File Explorer** and select **OneDrive - Adatum Corporation** to expand it so that you can see the **Private** and **Project A** folders.
-1. In **File Explorer**, in the folder tree under **OneDrive - Adatum Corporation**, right-click the **Project A** folder and select **View online**.
-1. Microsoft Edge opens (if you receive a dialog box asking which app to use to open this folder, select Microsoft Edge). If you are prompted to sign in, then sign in as Alan Yoo (**alan@xxx.onmicrosoft.com** (where xxx is your tenant ID)) and a password of **ibForm@tion**.
-1. In your Edge browser, a tab should open with Alan Yoo's **OneDrive for Business** account. The tab should be displaying Alan's **My Files**, and specifically the **Project A** folder.  
+## Tâche 3 - Partage de fichiers avec d'autres utilisateurs
+1. Dans l'explorateyr de fichier, faites un clic-droit sur le dossier *Project A** et sélectionnez **View online**.
+1. Votre navigateur Internet devrait s'ouvrir dur le **OneDrive for Business** de Alan, avec l'arborescence ouverte sur **My files > Project A**.  
 	Hover your mouse to the left of the **Project Targets.docx** field and select the circle so that it displays a check mark. With the file selected, select **Share** that appears in the menu bar at the top of the page and select **Email link**.
 1. In the **Send link** window that appears, enter the following information:  
 	- Enter your global adminsitrator name in the **To: Name, group or email** field. This will return a list of users. Select your global administrator.
