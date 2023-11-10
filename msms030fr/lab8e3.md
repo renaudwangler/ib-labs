@@ -4,75 +4,64 @@ title: "Lab8-Ex3 - Partage externe dans Sharepoint Online"
 length: "00"
 ---
 # Scénario
-In the last two exercises, Dominique Skyetson has configured SharePoint Online services and SharePoint Online sites. She is now ready to configure SharePoint Online for external sharing as part of her overall permissions planning for SharePoint in Microsoft 365.  
-The external sharing features of Microsoft SharePoint let users in an organization share content with people outside the organization (such as partners, vendors, clients, or customers). External sharing can also be used to share between licensed users on multiple Microsoft 365 subscriptions if your organization has more than one subscription.  
-SharePoint has external sharing settings at both the organization level and the site level. To allow external sharing on any Adatum site, Dominique must first allow it at the organization level. She can then restrict external sharing for other sites. If a site's external sharing option and the organization-level sharing option don't match, the most restrictive value will always be applied.  
-Even if your organization-level setting allows external sharing, not all new sites allow it by default. The default sharing setting for Microsoft 365 group-connected team sites is "New and existing guests." The default for communication sites and classic sites is "Only people in your organization."  
-In this exercise, Dominique will allow external sharing at the organization level and for a specific site. She will then verify that she can share a document as well as a site with external users.
+Dans les deux précédents exercices, Dominique Skyetson a configuré les services et les sites *SharePoint Online*. Il est donc désormais prêt à gérer le partage externe dans Sharepoint Online, dans le contexte d'ouverture d'Adatum vers Microsoft 365.  
+Les fonctionnalités de partage externe de Sharepoint Online permet aux utilisateurs d'une entreprise de partager du contenu avec des tuilisateurs externes à l'entreprise (comme des partenaires, vendeurs ou des clients). Le partage externe peut également être utilisé pour faciliter le travail de collaborateurs dont les comptes sont situés dans des *tenant Entra Id* distinct, si votre organisation en regroupe plusieurs.  
+Sharepoint propose un paramétrage du partage externe au niveau de la globalité de l'entreprise et au niveau de chaque site. Pour permettre le partage sur un site de Adatum, Dominique doit d'abord l'autoriser au niveau de l'entreprise. Il pourra ensuite restreindre le partage externe site par site. Si les paramètres de partage externe d'un site et ceux de l'entreprise ne sont pas identique, ce sera le niveau le plus restrictif qui sera appliqué.  
+Même si le niveau global de l'entreprise autorise le partage externe, touts les nouveaux sites ne l'autoriseront pas par défaut. Le niveau de partage par défaut pour les site correspondant aux équipes *Teams* et autres groupes Microsoft 365 est "*New and existing guests*". Le niveau de partage par défaut pour les site Sharepoint de communication classiques est "*Only people in your organization*".  
+Dans cet exercice, Dominique va autoriser le partage externe au niveau de l'organisation et pour un site spécifique. Il vérifiera ensuite qu'il peut partager un document comme un site avec des utilisateurs externes.
 
 # Objectifs
 A la fin de cet exercice, vous aurez une meilleure connaissance de :
+- L'activation du partage externe
+- La fonctionnalité de partage externe
+- La consommation du partage externe par un utilisateur non membre de l'entreprise
 
+## Tâche 1 - Configurer le paramètre de partage global de Sharepoint
+Dans cette tâche, Dominique va autoriser le partage externe sur la globalité de l'entreprise.
+1. Basculez vers la machine virtuelle **LON-CL1** ou votre session devrait déjà ouverte, avec le compte **ADATUM\Administrator** et le mot de passe **Pa55w.rd**.
+1. Les portails **Microsoft 365 admin center** et **Sharepoint admin center** devraient encore être resté ouverts dans votre navigateur Internet (et vous devriez y être connecté avec le compte de *Dominique Skyetson*).
+1. Dans le menu de navigation du portail **SharePoint admin center**, sélectionnez **Sharing** dans le groupe d'options **Policies**.
+1. Sur la page **Sharing**, cliquez sur la section **More external sharing settings** pour l'ouvrir et vérifiez que la case **Allow only users in specific security groups to share externally** est décochée. Si elle était cochée, décochez-la avant de cliquer sur le bouton **Save** en bas de page.
+1. Conservez votre navigateur Internet ouvert pour la tâche suivante.
 
-## Task 1: Configure global settings for external user sharing
-In this task, Dominique will enable external sharing at the organization level.
+## Tâche 2- Configurer un site pour le partage externe
+Dans l'exercice précédent, vous avez créé un site pour le service formation d'Adatum. Dans cette tâche, vous allez configurer la possibilité de configurer le partage externe sur ce site.
+1. Dans le menu de navigation du portail **SharePoint admin center**, cliquez sur **Active sites** dans le groupe d'options **Sites**.
+1. Sur la liste des sites Sharepoint, cliquez sur le nom du site **Training** (pas sur son adresse *../sites/TRaining*).
+1. Sur le panneau **Training** qui apparaît à droite de l'écran, cliquez sur l'onglet **Settings**.
+1. Sur l'onglet **Settings**, l'option **Anyone** devrait être sélectionnée par défaut pour le champ **External file sharing**. Si ce n'est pas le cas, changez-la avant de sauvegrader (avec le bouton *Save*) ce changement.
+1. Fermez ensuite le panneau **Training**.
+1. Dans la liste des sites Sharepoint, cliquez désormais sur l'adresse **../sites/training** du site du service formation.
+1. Un nouvel onglet s'ouvre, affichant le contenu du site **Training**. En haut de ce nouvel onglet (sous le bandeau *Sharepoint*), cliquezs ur **Site access**.
+1. dans le panneau **Site access** qui s'affiche, vous pouvez afficher les propriétaires, membres et visiteurs du site. En ouvrant la section **Site visitors - no control**, vous devriez pouvoir vérifier la présence de **Elvis Cress* et **Libby Hayward**.
+1. Dans le champ situé au dessus de ces groupes (sous la mention **Add users, Microsoft 365 groups or \[...]), entrez une adresse email personnelle (qui n'a pas besoin d'être un compte Microsoft 365). Votre adresse email appraît ensuite sous le champ en question, vous pouvez cliquer dessus.  
+	Votre adresse personnelle apparaît désormais sous le champ, accompagnée d'un message indiquant que cette adresse est en dehors de l'entreprise Adatum.
+1. Dans le chjamp **Add a message**, saisissez le message suivant : ```Comme convenu, vous pouvez désormais accéder au site Formation de Adatum.```.
+1. Cliquez ensuite sur le bouton **Share**.
+1. Dans la barre de menu de la page **training**, cliquez sur **Documents**.
+1. Dans la barre de menu de la page **Documents** qui s'affiche, cliquez sur **+ New** pour choisir **Word document**.
+1. **Word Online** s'ouvre dans un nouvel onglet de votre navigateur Internet. Si une boite de dialogue **Your privacy option** s'affiche, cliquez sur **Close**.
+1. Dans le document vierge *Word*, tapez quelque mots de test et attendez que le document soit automatiquement sauvegardé (vous pouvez le surveiller en attendant l'icône de nuage marqué d'une coche de validation à droite du nom du **Document**). Cliquez ensuite sur le menu déroulant (la flèche) à droite du nom du **Document**.
+1. Dans le panneau qui s'affiche, dans le champ **Location**, cliquez sur le lien **Shared Documents**.
+1. Un nouvel onglet s'ouvre dans votre navigateur, affichant de nouveau la page des **Documents** du site **training**. Le document que vous venez de créer (Nommé par défaut *Document.docx*) devrait apparaître dans la liste des documents.
+1. Sélectionnez donc le bouton **Share this item with other people** qui s'affiche à droite du nom de votre document lorsque vous passez la souris dessus.
+1. Dans la boite de dialogue **Share "Document.docx"** qui s'affiche, entrez l'adresse de messagerie personnelle que vous avez déjà utilisée au point précédent dans le champ **Add a name, group or email** et saisissez ```Voici le document que nous avions convenu de vosu partager. Il vous est possible de l'éditer.``` dans le champ **Add a message**.
+1. Cliquez sur le bouton **Send**.
+1. Fermez la boite de dialogue **Link shared with you** qui s'affiche.
+1. Conservez votre navigateur Internet ouvert , mais fermez-y tous les onglets sauf le premier (le portail **Microsoft 365 admin center**) pour l'exercice suivant. 
 
-1. You should still be on **LON-CL1**, where you should be logged in as the **Administrator** with a password of **Pa55w.rd**.
-1. You should still have Microsoft Edge open from an earlier lab, along with tabs for the **Microsoft 365**  homepage, **Microsoft 365 admin center**, and **SharePoint admin center**.  
-	If so, proceed to the next step; otherwise, open Microsoft Edge, navigate to **https://portal.office.com/**, log in as **dom@WWLxxxxx.onmicrosoft.com** (where xxx is your tenant ID) and **ibForm@tion**, and then in the **Microsoft Office Home** page, select **Admin**, and then in the **Microsoft 365 admin center**, select **SharePoint**.
-
-1. On the **SharePoint admin center**, in the left-hand navigation pane, select **Policies** and then select **Sharing**.
-1. On the **Sharing** page, click to open the **More external sharing settings** section and verify the **Allow only users in specific security groups to share externally** check box is not selected. If this check box is selected, then unselect it and select **Save**.
-1. Leave all tabs open in your browser and proceed to the next task. 
-
-## Task 2: Configure a site collection for external user sharing
-In the prior lab exercise, you created a new Marketing site. In this task, you will configure it to allow external sharing.
-1. You should still be on **LON-CL1**, where you should be logged in as the **Administrator** with a password of **Pa55w.rd**.
-1. You should still have Microsoft Edge open from an earlier lab, along with tabs for the **Microsoft 365** homepage, **Microsoft 365 admin center**, and **SharePoint admin center**.
-1. In the **SharePoint admin center**, in the left-hand navigation pane, select **Sites** and then select **Active sites**.
-1. On the **Active sites** page, in the list of sites, select the **Marketing** site line.
-1. In the **Marketing** pane that appears on the right side of the screen, select the **Policies** tab.
-1. In the **Policies** tab, under the **External sharing** group, select **Edit**.
-1. On the **Sharing** window that appears, under the **External sharing** group, the **Anyone** option should be selected by default.  
-	If this option is not selected, then select it now and select **Save**. If the **Anyone** option was already selected, then close the **Sharing** window.
-. Close the **Marketing** pane.
-1. You must now open an In-Private browsing session for the global Administrator to access the new Marketing site. Right-click on the **Edge** icon on the taskbar, and in the menu that appears, select **New InPrivate window**.
-1. In your **InPrivate Browsing** session, enter the following URL in the address bar: **https://portal.office.com**.
-1. In the **Sign in** window, enter your global admin name, and then select **Next**.
-1. In the **Enter password** window, enter your global administrator password and then select **Sign in**.
-1. On the **Stay signed in?** window, select **Yes**.
-1. This opens the **Microsoft Office Home** tab in your Edge browser. Open a new tab in your browser and enter the following URL in the address bar: **https://xxx.sharepoint.com/sites/Marketing** (where xxx is your tenant ID).
-1. In the **Marketing** site, in the top-right corner, select **SHARE**.
-1. In the **Share site** window, you can expand the owners, members, and groups to see that the site is currently shared with Jessica Jennings, Sherri Harrell, and your global Administrator.
-1. On the **Share site** window, below the **Add users, Microsoft 365 Groups...** text, enter a personal email address (that should not be a 365 email). Your email address will appear in a list below this field; select this address now.  
-	Your email addres will appear below this field, along with a message indicating it is outside of Adatum's organization.
-1. In the **Add a message** field, enter the following message: **You can now access the SharePoint site collection for Adatum's Marketing team.**
-1. Select **Share**.
-1. On the **Marketing** page, in the menu-bar, select **Documents**.
-1. On the **Documents** page, in the menu bar, select **+ New**, and then in the drop-down menu that appears, select **Word document**.
-1. **Word Online** will open in a new tab in your browser. In the **Your privacy option** window that appears, select **Close**.
-1. In the blank **Word** document, type some text, and then wait for the document to be automatically saved. Once it is saved, the word **Saved** will appear in the document title. Once the document is saved, select the drop-down arrow that appears to the right of **Saved**. In the drop-down window that appears, in the **Location** field, the path **Marketing - Shared Documents** appears (where each is hyperlinked). Select the **Shared Documents** link.
-1. This will open the **Marketing** site and the **Documents** tab. In the **Documents** page, the document that you just created (Document.docx, since you did not name it), should appear in the documents list.
-1. In the document list, select the vertical ellipsis icon to the right of the document name, and in the menu that appears, select **Share**.
-1. In the **Send link** window that appears, in the **Enter a name or email address**, enter a personal email address, and enter **This document is shared with you. You have edit permissions.** in the **Add a message (optional)** field. Select **Send**.
-1. Close the **Link sent** window that appears.
-1. Close the InPrivage browsing session for the global Administrator.
-1. Leave all tabs open in your browser and proceed to the next task. 
-
-## Task 3: Verify external user sharing
-1. Navigate to your personal email maibox.
-1. The Inbox should include two emails from Microsoft Online Services Team. If the messages are not in the Inbox, look in the Junk folder.
-1. Open the message that has the subject: **xAdminX wants to share Marketing**.
-1. Select the **Marketing** link in the email.
-1. Select either **Microsoft Account** or **Organizational Account** depending the email account type and verify that you can access the **Marketing** site. Select the **Documents** tab and verify you can access the shared document.
-1. In your Inbox, open the second invitation email message with the subject of **MOD Administrator wants to share the document**.
-1. Select the **Document** link.  
-	>**Note:** You are redirected directly to the Word Document. Word Online opens and displays the document.
-1. Verify that you can access the Word document and then select **Edit in Browser**. 
-1. Add some text in this document. Close the document and then re-open it to verify your changes appear.
-1. On the **Microsoft Office Home** page, select the user icon (the circle with Dominique Skyetson's **HD** initials in it) in the upper right-hand corner, and in the **My account** window that appears, select **Sign out**. Once you are signed out, close all other tabs, and then close Microsoft Edge.
+## Tâche 3 - Vérification du partage externe
+1. Ouvrez la boite aux lettres personnelle que vous avez utilisée dans la tâche précédente.
+1. Votre boite de réception devrait contenir deux messages d'invitation. Si vous ne les y trouvez pas, vérifiez votre dossier de courrier indésirable.
+1. Ouvrez le message qui a pour sujet : **Dominique Skyetson wants to share Training**.
+1. Cliquez sur le lien **Training** dans le message.
+1. Connectez vous avec les indications qui vous sont fournies (qui vont différer selon que vous ayiez un compte *Entra Id*, un compte personnel Microsoft ou ni l'un ni l'autre) et vérifiez que vous pouvez accéder au site **Training**
+1. Fermez le site **Training** et retournez dans votre boite aux lettres personnelle pour ouvrir le second message qui devrait avoir pour sujet **Dominique Skyetson shared "Document" with you**.
+1. Une fois le second message ouvert, vous pouvez cliquer sur le bouton **Open**
+	>**Note :** Vous êtes automatiquement redirigé vers Word Online ou s'ouvre le document que vous avez créé tout à l'heure.
+1. Vérifiez que vous pouvez modifier le contenu du document, en surveillant la marque de sauvegarde à droite de son nom après avoir fait quelques modifications dedans.
 
 ## Résultat
-A l'issue de cet exercice, vous avez configuré un nouveau site Sharepoint Online pour le partager avec des utilisateurs externes et testé cette fonctionnalité de partage.
+A l'issue de cet exercice, vous avez configuré un nouveau site Sharepoint Online pour le partager avec des utilisateurs externes et testé cette fonctionnalité.
 
 # Fin de l'atelier 8
