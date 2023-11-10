@@ -46,7 +46,7 @@ ___
 ### Exercice 3 - [Partage externe dans Sharepoint Online](lab8e3)
 ___
 ## Atelier 09 - Autres outils Microsoft 365
-### Exercice 1 - [Viva Engage (en)](lab9e1)
+### Exercice 1 - [Viva Engage](lab9e1)
 ### Exercice 2 - [OneDrive for Business (en)](lab9e2)
 ___
 ## Atelier 10 - Sécurité et conformité dans Microsoft 365

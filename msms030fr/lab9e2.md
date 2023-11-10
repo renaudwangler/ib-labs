@@ -4,48 +4,52 @@ title: "Lab9-Ex2 - OneDrive for Business"
 length: "00"
 ---
 # Scénario
-Now that she has implemented Microsoft Yammer in Adatum's Microsoft 365 pilot project, Dominique Skyetson is ready to do the same with Microsoft OneDrive for Business. Dominique knows that with OneDrive, Adatum's users can easily and securely store and access their files from all their devices. This will enable them to more efficiently work with others regardless of whether they're inside or outside the organization and terminate that sharing whenever they want.  
-Dominique also knows that OneDrive for Business will help protect their work through advanced encryption while the data is in transit and at rest in data centers. Because Adatum is serious about improving its security requirements, Dominique plans to implement OneDrive to help ensure that her users adhere to Adatum's most rigorous compliance standards by enabling them to choose where their data lives and providing detailed reporting of how that data has been changed and accessed.  
-In this exercise, Dominique will enable OneDrive for Business synchronization, create test files to be synchronized, and then verify file synchronization.  
-This lab exercise will be performed within LON-CL2.
+Après avoir implémenté *Viva Engage* dans le projet pilote Adatum, Dominique Skyetson est prêt à faire de même avec *OneDrive for Business*. Dominique sait que, avec OneDrive, les utilisateurs d'Adatum pourront accéder aisément et de manière sécurisée à leur fichiers de travail depuis tous leur périphériques. Cela leur permettra aussi d'être plus efficace dans le travail avec d'autres collaborateurs, qu'ils soient internes ou externes à l'entreprise.  
+Dominique a également conscience que *OneDrive for Business* aidera à mieux protéger les documents métier de Adatum car il seront chiffrés, aussi bien lors de leur déplacement que lors de leur stockage.  
+Dans cet exercice, Dominique va mettre en oeuvre la synchronisation *OneDrive for Business*, créer quelques fichiers test à synchroniser et vérifier le résultat de ces opérations.  
 
 # Objectifs
 A la fin de cet exercice, vous aurez une meilleure connaissance de :
 
 
-## Task 1: Enable OneDrive for Business synchronization
-1. On **LON-CL2**, you should still be logged in as the **Administrator**.
-1. If Microsoft Edge is open from an earlier lab, then close it now.
-1. In an earlier lab, you logged into Microsoft 365 as Alan Yoo and you downloaded and installed **Microsoft 365 Apps for enterprise**.  
-	You should now open your local **Word** app again by selecting the **Windows** icon on the bottom-left corner of the taskbar, and then in the **Start** menu, selecting **Word**.
-1. When **Word** opens, verify which user account it is licensed to at the top of the Word document. If Alan's name appears along with his initials in a circle, then skip to the next step.  
-	However, if a different user account appears, then select the user account, and in the window that appears, select **Sign in with a different account**. In the **Sign in** window, enter **alan@xxx.onmicrosoft.com (where xxx is your unique tenant ID). Verify that **Alan Yoo** now appears at the top of the Word form.
-1. Now that you have verified that Word is licensed to Alan Yoo, close Word.
-1. Open Microsoft Edge and then connect to **https://portal.office.com**.
-1. Sign in as **Alan@xxx.onmicrosoft.com** with a password of **ibForm@tion**.
-1. On the **Microsoft Office Home** page, select **OneDrive**.
-1. If the **Welcome to OneDrive for Business** page appears, Select **Next**.
-1. In the **OneDrive** window, select **+ New** at the top of the page, and then in the drop-down menu that appears, select **Word document**.
-1. If a **Your privacy option** window appears, select **Close**.
-1. In the **Word Online** tab that opens in your Edge browser, type some text, at which point Word Online will save the document as **Document.docx**.
-1. You want to rename the document as **OneDrive Test**, so in the Word menu bar, select **File**, select **Save as**, and then select **Rename**. In the window that appears, enter **OneDrive Test** in the **File Name** field and then select off this field. This will change the file name and close the window.
-1. Close the Word Online tab in your browser.
-1. In the **OneDrive** window, the **OneDrive test.docx** file should now appear in the list of files. On the menu bar at the top of the page, select **Sync**.
-1. In the **This site is trying to open Microsoft OneDrive** window, select the **Always allow xxx-my.sharepoint.com to open links of this type in the associated app** check box and then select **Open**.
-1. In the **Set up OneDrive** window, Alan Yoo's account is displayed in the username field. Select **Sign in**.
-1. In the **Enter password** window, enter **ibForm@tion** and then select **Sign in**.
-1. In the **Your OneDrive folder**, note the location of your OneDrive folder and then select **Next**.
-1. On the **Sync your files to this PC** window, select **Next**.
-1. On the **Get to know your OneDrive** window, select **Next**.
-1. On the **Share files and folders** window, select **Next**.
-1. On the **All your files, ready and on-demand** window, select **Next**.
-1. On the **Get the mobile app** window, select **Later**.
-1. On the **You OneDrive is ready for you** window, select **Open my OneDrive folder**.
-1. **File Explorer** is automatically opened for you. In the **File Explorer** window, select **OneDrive - Adatum Corporation**.
-1. Note that File Explorer displays the location where the synchronized files will be stored. Verify that the **OneDrive test.docx** file that you created earlier in Word Online has been synchronized to the local computer.
-1. Leave File Explorer open as well as your Edge browser and proceed to the next task. 
+## Tâche 1 - Activation de la synchronisation OneDrive
+1. Vous deviez être connecté sur **LON-CL2**, avec le compte **.\Admin** et le mot de passe **Pa55w.rd**.
+1. Dans un précédent atelier, vous vous êtes connecté sur Microsoft 365 en tant que Alan Yoo et avez téléchargé et installé **Microsoft 365 Apps for enterprise**.  
+	Vous devriez donc désormais pouvoir ouvrir l'application **Word** en tapant ```winword``` dans la barre de recherche, à droite du bouton **Démarrer** sur la barre des tâches. Cliquez sur **Word** dans la section **Best match** du menu **Démarrer**.
+1. Lorsque **Word** s'ouvre, vérifiez quel compte utilisateur est licencié pour l'utiliser, ne haut à droite de la fenêtre. S'il s'agit déjà du compte de Alan (ses initiales **AY** sont dans le cercle), passez au point suivant.  
+	Cependant, si un compte différent est présent :
+	1. cliquez sur le bouton **Account** en bas à gauche de la fenêtre Word. Cliquez ensuite sur le lien **Sign out**.
+	1. Validez l'opération en cliquant sur le bouton **Sign out**.
+	1. Cliquez ensuite sur le bouton **Sign In**.
+	1. Dans la fenêtre **Sign in**, saisissez **alan@WWLxxxxx.onmicrosoft.com** et cliquez sur **Next**.
+	1. Vérifiez que **Alan Yoo** apparaît désormais en haut à droite de Word.
+1. Après avoir vérifié que Word est licencié pour Alan Yoo, vous pouvez fermer Word.
+1. Basculez sur le navigateur Edge qui devrai être encore ouvert et connecté avec le compte de **Alan Yoo** sur sa boite aux lettres *Outlook on the web*.
+1. Cliquez sur le menu des applications 365 (le carré de 3 x 3 cases haut à gauche de la page) pour y choisir **OneDrive**.
+1. Si une fenêtre **Welcome to OneDrive for Business** apparaît, fermez-la.
+1. Dans la page **OneDrive**, cliquez sur le bouton **+ Add new** et choisissez **Word document**.
+1. Si une fenêtre **Your privacy option** s'affiche, cliquez sur **Close**.
+1. Dans le document vierge qui s'est ouvert sur un nouvel onglet de navigation dans **Word Online**, tapez un peu de texte témoin et constatez que *Word Online* le sauvegarde en surveillant la petite coche de validation qui apparaît sur le nuage à droite du nom de votre document (**Doument**).
+1. Vous souhaitez renommer ce document. Dans la barre de menu de Word Online, ouvrez le menu **File**, cliquez sur **Save as** pour choisir **Rename**.
+1. Dans le panneau qui s'affiche, entrez ```OneDrive Test``` dans le champ **File Name** et cliquez en-dehors de ce champ. cela va renommer votre fichier et fermer le panneau de sauvegarde.
+1. Fermez l'onglet Word Online de votre navigateur.
+1. Dans la fenêtre **OneDrive** window, votre document **OneDrive test.docx** devrait appraître (si ce n'est pas le cas, rafraichissez cette fenêtre). Cliquez sur l'icône d'engrenage **Settings** en haut à droite.
+1. Sur le panneau **Settings**, cliquez sur **Sync the OneDrive**.
+1. Sur la boite de dialogue **This site is trying to open Microsoft OneDrive**, cochez la case **Always allow WWLxxxxx-my.sharepoint.com to open links of this type in the associated app** avant de cliquer sur **Open**.
+1. Dans la boite de dialogue **Set up OneDrive**, le compte d'Alan Yoo est affiché dans le champ **Email address**. Cliquez sur **Sign in**.
+1. Dans la fenêtre **Enter password**, saisissez ```ibForm@tion``` et cliquez sur **Sign in**.
+1. Sur la page **Stay signed in to all your apps**, cliquez sur **No, sign in to this app only**.
+1. Sur la fenêtre **Your OneDrive folder**, notez l'emplacement local de votre dossier OneDrive et cliquez sur **Next**.
+1. Sur la page **Backup folders on this PC**, cliquez sur **I'll do it later**.
+1. Sur la page **Get to know your OneDrive**, cliquez sur **Next**.
+1. Sur la page **Share files and folders**, cliquez sur **Next**.
+1. Sur la page **All your files, ready and on-demand**, cliquez sur **Next**.
+1. Sur la page **Get the mobile app**, cliquez sur **Later**.
+1. Sur la page **You OneDrive is ready for you** cliquez sur **Open my OneDrive folder**.
+1. L' explorateur de fichiers de Windows va s'ouvrir automatiquement sur le dossier **OneDrive - Adatum**.Vérifiez que le document **OneDrive test.docx** est présent effectivement synchronisé sur le poste de travail local
+1. laissez ouvert l'explorateur de fichier et le navigateur Internet pour la tâche suivante.
 
-## Task 2: Create files to synchronize with OneDrive for Business
+## Tâche 2: Création de fichiers à synchroniser avec OneDrive
 Now that you have enabled file synchronization with OneDrive for Business, Dominique Skyetson wants to create test files to be synchronized and then verify file synchronization.
 1. On **LON-CL2**, ensure that the **OneDrive for Business** folder is open in File Explorer from the previous task. If not, open **File Explorer** and select **OneDrive - Adatum Corporation**.
 1. In **File Explorer**, select **Home** that appears in the menu bar at the top of the window.
