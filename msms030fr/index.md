@@ -50,7 +50,7 @@ ___
 ### Exercice 2 - [OneDrive for Business](lab9e2)
 ___
 ## Atelier 10 - Sécurité et conformité dans Microsoft 365
-### Exercice 1 - [Création de labels de sensibilité (en)](lab10e1)
+### Exercice 1 - [Création de labels de sensibilité](lab10e1)
 ___
 ## Atelier 11 - Surveillance et dépannage de Microsoft 365
 ### Exercice 1 - [Etat de santé du service Microsoft 365 (en)](lab11e1)
