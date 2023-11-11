@@ -10,6 +10,8 @@ Dans cet exercice, Dominique va mettre en oeuvre la synchronisation *OneDrive fo
 
 # Objectifs
 A la fin de cet exercice, vous aurez une meilleure connaissance de :
+- La synchronisation *OneDrive for business*
+- La fonctionnalité de partage de fichiers de *OneDrive for business*
 
 
 ## Tâche 1 - Activation de la synchronisation OneDrive
@@ -49,7 +51,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 1. L' explorateur de fichiers de Windows va s'ouvrir automatiquement sur le dossier **OneDrive - Adatum**.Vérifiez que le document **OneDrive test.docx** est présent effectivement synchronisé sur le poste de travail local
 1. laissez ouvert l'explorateur de fichier et le navigateur Internet pour la tâche suivante.
 
-## Tâche 2: Création de fichiers à synchroniser avec OneDrive
+## Tâche 2 - Création de fichiers à synchroniser avec OneDrive
 Maintenant que la synchronisation de fichiers est activée avec *OneDrive for Business*, Dominique Skyetson veut créer des fichier sur un poste local pour vérifier qu'il se synchronise bien dans le cloud.
 1. Sur **LON-CL2**, assurez-vous que le dossier **OneDrive for Business** est ouvert dans l'explorateur de fichier depuis la tâche précédente. Si ce n'est pas le cas, ouvrez l'explorateur de fichier et sélectionnez l'emplacement **OneDrive - Adatum**.
 1. Dans l'explorateur, cliquez sur **New folder** dasn la section **New** de l'onglet **Home**.
@@ -75,26 +77,29 @@ Maintenant que la synchronisation de fichiers est activée avec *OneDrive for Bu
 1. In the folder tree, **OneDrive - Adatum Corporation** should still expanded. Select the **Private** folder and then open **Holidays.docx**. You should see the changes you made in Word Online are synchronized back automatically.
 
 ## Tâche 3 - Partage de fichiers avec d'autres utilisateurs
-1. Dans l'explorateyr de fichier, faites un clic-droit sur le dossier *Project A** et sélectionnez **View online**.
-1. Votre navigateur Internet devrait s'ouvrir dur le **OneDrive for Business** de Alan, avec l'arborescence ouverte sur **My files > Project A**.  
-	Hover your mouse to the left of the **Project Targets.docx** field and select the circle so that it displays a check mark. With the file selected, select **Share** that appears in the menu bar at the top of the page and select **Email link**.
-1. In the **Send link** window that appears, enter the following information:  
-	- Enter your global adminsitrator name in the **To: Name, group or email** field. This will return a list of users. Select your global administrator.
-	- In the **Add another** field, enter **Nona**. In the list of users, select **Nona Snider**.
-	- In the **Add a message (optional)** field, enter **This is the latest information for Project A**.
-1. Select **Send**. After the emails are created, close the **Link sent** window.
-1. Open a new InPrivate Microsoft Edge window, and then connect to **https://portal.office.com**.
-1. Sign in as your global admin and use your global administrator's password.
-1. In the **Microsoft 365** homepage, select **Outook**.
-1. Select the message with the subject **Alan Yoo shared ""Project Targets" with you**.
-1. In the message box, select **Project Targets**.
-1. Verify the document opens, and then make some changes to it. The changes should be automatically saved, and the file name at the top of the document should display **Saved**. All modifications are stored online in the OneDrive for Business cloud storage. By default, SharePoint Online creates a new version when the document changes. This can be viewed by the owner in the version history.
-1. Close the InPrivate Microsoft Edge window.
-1. You now want to turn off sharing for this document. In the Microsoft Edge window, the **Project targets** document should still be selected. Note in the file list, the **Sharing** column indicates the file is **Shared**.  
-	Select the **Shared** status in the **Sharing** column. This will open a **Manage access** window. (Note - another way to open the **Manage access** window for this file is to select **Share** in the menu bar just as you did when you originally shared the file, and then select the ellipsis icon in the **Share** window, and then select **Manage access**).
-1. In the **Manage access** window, select **Stop sharing**. In the confirmation window that appears, select **Stop sharing** again.
-1. Close the **Manage Access** window. Note in the file list how the value of the **Sharing** column for this file changed from **Shared** to **Private**.
-1. On the **Microsoft 365** homepage, select the user icon (the circle with Alan Yoo's **AY** initials in it) in the upper right-hand corner, and in the **My account** window that appears, select **Sign out**. Once you are signed out, close all other tabs, and then close Microsoft Edge.
+1. Dans l'explorateur de fichier, faites un clic-droit sur le dossier *Project A** et sélectionnez **View online**.
+1. Votre navigateur Internet devrait s'ouvrir sur le **OneDrive for Business** de Alan, avec l'arborescence ouverte sur **My files > Project A**.  
+	Passez votre souris à gauche du nom de fichier **Projetc Targets.docx** et sélectionnez le cercle qui apparît de sorte que ce dernier affiche une coche.
+1. Une fois le fichier sélectionné, cliquez sur le bouton **Share** dans le menu en haut de page.
+1. Dans la boite de dialogue **Share "Project Targets.docx**, entrez les informations suivantes :
+	- Entrez l'adresse de Dominique (*dom@WWLxxxxx.onmicrosoft.com*) dans le champ **Add a name, group or email**. Sélectionnez le compte de **Dominique Skyetson** qui s'affiche.
+	- Dans le même champ, sur **Add more**, entrez **Nona** et sélectionnez le compte de **Nona Snider** qui s'affiche.
+	- Dans le champ **Add a message** saisissez ```Voici les dernières informations sur le projet A.```.
+1. Cliquez sur le bouton **Send**.
+1. Après que le message ait été envoyé, fermez la fenêtre **Link shared with**.
+1. Basculez sur **LON-CL1**. Votre navigateur Internet devrai être encore ouvert, avec le compte de Dominique Skyetson connecté.
+1. Si vous n'avez aucun onglet ouvert sur la messagerie de Dominique, cliquez sur le menu des applications 365 (le carré de 3 x 3 cases haut à gauche de la page) pour y choisir **Outlook**.
+1. Sélectionnez le message qui a pour sujet **Alan Yoo shared ""Project Targets" with you** (s'il n'apparaît pas, rafraichissez la page *Outlook on the web*).
+1. Dans le message reçu, cliquez sur le bouton **Open**.
+1. Vérifiez que votre document s'ouvre correctement dans *Word online* et faites quelques changements au texte. Ces changements devraient être automatiquement sauvegardés (une coche de validation apparaît à droite du nom du fichier **Project targets**). Par défaut, la nouvelle version est directement sauvegardée dans *OneDrive for business* et les versions précédentes restent consultables.
+1. Fermez tous les onglets de votre navigateur Internet, sauf celui incluant le portail **Microsoft 365 admin center**.
+1. Basculez de nouveau sur LON-CL2 car Alan souhaite stopper le partage du document.
+1. Rafraichissez la fenêtre de votre navigateur Internet affichant le fichier **Projext targets.docx** dans *OneDrive for business*. Notez comme la colonne **Sharing** en regard du fichier indique désormais la mention **Shared**.
+1. Cliquez sur le status **Shared** dans la colonne **Sharing**. la boite de dialogue **Manage Access** s'ouvre.
+1. Dans la boite de dialogue **Manage access** window, cliquez sur **Stop sharing**.
+1. Dans la boite de dialogue **Stop sharing?**, cliquez de nouveau sur **Stop sharing**.
+1. Fermez la boite de dialogue **Manage Access** window. Notez que , dans la liste des fichier, la colonne **Sahring** est repassée à **Private** (si ce n'est pas le cas automatiquement, rafraichissez la page du navigateur Internet).
+1. Laissez votre navigateur Internet ouvert en fermant les onglets concernant *OneDrive for business* et *Word Online*.
 
 ## Résultat
 Dans cet exerice, vous avez appris à configurer OneDrive for business pour le projet pilote de Adatum.
