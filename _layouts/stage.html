@@ -58,6 +58,6 @@ layout: default
         window.onload = addCopyButton();
     </script>
     <div id="pageVersion">
-        {{ page.date }}
+        version {{ "now" | date : "%Y%m%d-%H%M" }}
     </div>
 </body>

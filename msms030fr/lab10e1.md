@@ -132,24 +132,23 @@ Après avoir testé la création de labels de données sensibles en utilisant le
 1. Sur la page **Review your settings and finish**, révisez votre saisie et, si nécessaire, cliquez sur le lien **Edit** pour les modifier; sinon, cliquez sur le bouton **Save label** en bas de page.
 1. Sur la page **Label updated**, cliquez sur le bouton **Done**.
 	
-## Tâche 4 - Créer une stratégie de labels dans *Purview*
-Dominique has decided to test creating sensitivity label policies using both the Microsoft Purview portal and Windows PowerShell. In this task you will use the Purview portal for this portion of your test.
-1. On **LON-CL1** you should still be in the **Microsoft Purview** tab, which should be displaying the **Information Protection** page. You are currently displaying the **Labels** tab for this page.  
-	In the list of tabs across the top of the page, select **Label policies**.
-1. On the **Label policies** page, on the menu bar above the list of policies, select **Publish label**. This initiates a wizard to create a new sensitivity label policies.
-1. In the **Create policy** wizard, on the **Choose sensitivity labels to publish** page, select **Choose sensitivity labels to publish**.
-1. On the **Sensitivity labels to publish** pane that appears, select **Classified** and then select **Add** (Note - you will publish the Secret label in the next task using Windows PowerShell).
-1. On the **Choose sensitivity labels to publish** page, select **Next**.
-1. On the **Publish to users and groups** page, you will define the users and groups to which this published label will be made available. Note that the **Users and groups** is set by default to **All**, which will include all users and groups in the organization. Select **Next**.
-1. On the **Policy Settings** page, leave the every checkbox unchecked and select **Next**.
-1. On the **Apply a default label to documents** page, select **Next**.
-1. On the **Apply a default label to emails** page, select **Next**.
-1. On the **Apply a default label to meetings and calendar events**, select **Next**.
-1. On the **Apply a default label to Power BI content** page, select **Next**.
-1. On the **Name your policy** page, enter **Classified Policy** in the **Name** field and enter **This policy is used for sensitive information in Government contracts only** in the description Field. Select **Next**.
-1. On the **Review and finish** page, review the entries that you made. If any need to be corrected, select the corresponding **Edit** option and make the necessary changes. When all settings are correct, select **Submit**.
-1. On the **New policy created** page, select **Done**.
-1. Leave your Edge browser and all its tabs open and proceed to the next task.
+## Tâche 4 - Publication de labels dans *Purview*
+Dans sa découverte des méthodes de travail avec les labels de données sensibles dans Microsoft 365, Dominique souaite comprendre comment publier ces labels dans le portail *Purview*.
+1. Dans le menu de **Microsoft Purview**, cliquez sur **Label policies** dans le choix d'options **Information Protection**
+1. Sur la page **Label policies**, cliquez sur **Publish label** dans le menu au-dessus de la liste des stratégies de labels.
+1. Dans l'assistant **Create policy**, sur la page **Choose sensitivity labels to publish**, cliquez sur le lien **Choose sensitivity labels to publish**.
+1. Dans le panneau **Sensitivity labels to publish** qui s'affiche, cochez la case devant **Adatum-Classified** avant de cliquer sur **Add**.
+1. De retour sur la page **Choose sensitivity labels to publish** cliquez sur le bouton **Next**.
+1. Sur la page **Assign admin units**, cliquez sur **Next**.
+1. Sur la page **Publish to users and groups**, vous allez définir quels utilisateurs et groupes sont légitime à utiliser le label. Notez que le choix sélectionné est sur **All**, ce qui inclut tous les utilisateurs d'Adatum. Cliquez donc sur **Next**.
+1. Sur la page **Policy Settings**, laissez toutes les cases décochées et cliquez sur **Next**.
+1. Sur la page **Apply a default label to documents**, cliquez sur **Next**.
+1. Sur la page **Default settings for emails**, cliquez sur **Next**.
+1. Sur la page **Default settings for meetings and calendar events**, cliquez sur le bouton **Next**.
+1. Sur la page **Default settings for Power BI content**, cliquez sur **Next**.
+1. Sur la page **Name your policy**, saisissez ```Adatum-Classified Policy``` dans le champ **Name** et ```This policy is used for sensitive information in Government contracts only``` dans le champ **Description** avant de cliquer **Next**.
+1. Sur la page **Review and finish**, révisez votre saisie et, si nécessaire, cliquez sur le lien **Edit** pour la modifier; sinon, cliquez sur le bouton **Submit** en bas de page.
+1. Sur la page **New policy created**, cliquez sur **Done**.
 
 ## Task 5 - Creating Sensitivity Label Policies using Windows PowerShell
 Dominique has decided to test creating sensitivity label policies using both the Purview portal and Windows PowerShell. In this task you will use Windows PowerShell for this portion of your test.  
