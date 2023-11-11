@@ -34,7 +34,7 @@ Dans votre rôle d'administrateur, en tant que Dominique Skyetson, vous allez cr
 
 1. Toujours sur la page **Edit Settings**, dans le champ **Privacy**, **Private - People can only join if they're added by an owner\[...].**.
 1. Cliquez sur le bouton **Next**.
-1. Sur la page **Review and finish adding team**, révisez votre saisie et, si nécessaire, cliquez sur le lien **Edit** pour les modifier; sinon, cliquez sur le bouton **Add team** en bas de page.
+1. Sur la page **Review and finish adding team**, c
 1. Sur la page **New team created**, notez le message indiquant qu'il peut s'écouler 5 minutes avant que la nouvelle équipe ne s'affiche. Cliquez sur **Close**.
 1. Sur la page **Active teams and groups**, cliquez sur le bouton **Refresh** dans la barre de menu au-dessus de la liste des groupes. Si nécessaire, arttendez quemlques instants et répétez l'opération jusqu'à ce qu'apparaîsse la nouvelle équipe.
 1. Une fois l'équipe **PND group** affichée dans la liste, cliquez sur son nom.
@@ -46,53 +46,50 @@ Dans votre rôle d'administrateur, en tant que Dominique Skyetson, vous allez cr
 1. Laissez ouvert le navigateur Internet pour la tâche suivante.
 
 ## Tâche 2 - Création de labels dans le portail *Purview*
-Dominique has decided to test creating sensitivity labels using both the Microsoft Purview portal and Windows PowerShell. In this task you will use the Microsoft Purview Portal for this portion of your test.
-1. On **LON-CL1**, you should still be logged in as the **Administrator** with a password of **Pa55w.rd**.
-1. In your Edge browser, you should still have a tab open for the **Microsoft 365** homepage and the **Microsoft 365 admin center** and you should still be logged in as Dominique Dickson.  
-	Select the **Microsoft 365 admin center** tab.
-1.	In the **Microsoft 365 admin center**, select **Show all** in the left navigation pane and then under **Admin centers**, select **Compliance**.
-1.	In the **Microsoft Purview** portal, in the left-hand navigation pane, select **Information protection** from the **Solutions** group.
-1.	On the **Information protection** page, select the **Labels** tab. On the menu bar above the list of labels, select **Create a label**. This initiates a wizard to create a new sensitivity label.
-1.	In the **New sensitivity label** wizard, on the **Name and create a tooltip for your label** page, enter **Classified** in the **Name** and **Display name** fields, and enter **For Official Use Only** in the **Description for Users** field. Select **Next**.
-1. On the **Define the scope for this label** page, select **Next**.
-1. On the **Choose protection settings for labeled items** page, select the **Apply content marking** checkbox and select **Next**.
-1.	On the **Content marking** page, select the toggle switch to turn **ON** Content Marking. This displays several additional options, which should be updated in the following steps.
-1. Select the **Add a watermark** check box and then select **Customize text**.
-1. In the **Customize watermark text** window, enter the following information and then select **Save**: 
-	- Watermark text: **CLASSIFIED**
-	- Font size: **48**
-	- Font color: **Red**
-	- Text layout: **Diagonal**
-1. Select the **Add a header** check box and then select **Customize text**.
-1. In the **Customize header text** window, enter the following information and then select **Save**:  
-	- Header text: **FOR OFFICIAL USE ONLY**
-	- Font size: **12**
-	- Font color: **Blue**
-	- Align text: **Left**
-1. Select the **Add a footer** check box and then select **Customize text**.
-1. In the **Customize footer text** window, enter the following information and then select **Save**:  
-	- Footer text: **CONFIDENTIAL**
-	- Font size: **12**
-	- Font color: **Green**
-	- Align text: **Left**
-1. On the **Content marking** page, select **Next**. 
-1. On the **Auto-labeling for files and emails** page, ensure **Auto-labeling for files and emails** is not selected, and then select **Next**.
-1. On the **Define protection settings for groups and sites**, select **Next**. 
-1. On the **Auto-labeling for schematized data assets (preview)** page, select **Next**.
-1.	On the **Review your settings** page, review the entries that you made. If any need to be corrected, select the corresponding **Edit** option and make the necessary changes. When all settings are correct, select **Create label**.
-1.	On the **Your label was created** page, select **Done**.
+Dominique a décidé de tester la création de labels de données sensibles en utilisant le portail *Purview* et *Windows Powershell*. Dans cette tâche, vous allez d'abord utiliser le portail *Purview* pour créer un premier label.
+1. Dans le menu du portail **Microsoft 365 admin center**, cliquez sur **Compliance** sous la section **Admin centers**.
+1. Dans le menu de navigation du portail **Microsoft Purview**, cliquez sur **Labels** dans le groupe d'options **Information protection**.
+1. Sur la page **Labels**, cliquez sur le bouton **Turn on** pour activer les compléments d'activation des labesl de données sensibles.
+1. Dans la boite de dialogue qui s'affiche, cliquez sur **Yes**.
+1. une fois la boite de dialogue fermée, dans le bandeau jaune sur la page **Labels**, cliquez sur **Turn on now**.
+1. Sur la page **Labels**, cliquez sur **+ Create a label** dans la barre de menu au-dessus de la liste des labels.
+1. Sur la page **Provide basci details for this label**, saisissez ```Adatum-Classified``` dans les champs **Name** et **Display name**
+1. Saisissez ```For Official Use Only``` dans les champs **Description for Users** et **Description for admins**
+1. Cliquez sur le bouton **Next**.
+1. Sur la page **Define the scope for this label**, cliquez sur **Next**.
+1. Sur la page **Choose protection settings for labeled items** page, cochez la case devant **Apply content marking** et cliquez sur **Next**.
+1.	Sur la page **Content marking**, cliquez sur le contrôle de bascule **Content marking** pour le faire passer à *ON**. De nouvelles options s'affichent que vous allez compléter dans les étapes suivantes.
+1. Cochez la case **Add a watermark** et cliquez sur le bouton **Customize text**.
+1. Dans le panneau **Customize watermark text**, saisissez les informations suivantes avant de cliquer sur le bouton **Save** :
+	- **Watermark text** : ```ADATUM - CLASSIFIED```
+	- **Font size** : **48**
+	- **Font color** : **Red**
+	- **Text layout** : **Diagonal**
+1. Cochez la case **Add a header** et cliquez sur le bouton **Customize text**.
+1. Dans le panneau **Customize header text**, saisissez les informations suivantes avant de cliquer sur le bouton **Save** :
+	- **Header text** : ```FOR OFFICIAL USE ONLY```
+	- **Font size** : **12**
+	- **Font color** : **Blue**
+	- **Align text** : **Left**
+1. Cliquez sur le bouton **Customize text** sous la case à cocher **Add a footer** (cochez-la si elle ne l'est pas par défaut).
+1. Dans le panneau **Customize footer text**, saisissez les informations suivantes avant de cliquer sur le bouton **Save** :
+	- **Footer text** : ```ADATUM - CLASSIFIED```
+	- **Font size** : **12**
+	- **Font color** : **Green**
+	- **Align text**: **Left**
+1. Sur la page **Content marking**, cliquez sur le bouton **Next**.
+1. Sur la page **Auto-labeling for files and emails**, assurez-vous que l'option **Auto-labeling for files and emails** reste désactivée et cliquez sur **Next**.
+1. Sur la page **Define protection settings for groups and sites**, cliquez sur **Next**. 
+1. Sur la page **Auto-labeling for schematized data assets (preview)** cliquez encore sur **Next**.
+1. Sur la page **Review your settings and finish**, révisez votre saisie et, si nécessaire, cliquez sur le lien **Edit** pour les modifier; sinon, cliquez sur le bouton **Create label** en bas de page.
+1. Sur la page **Your sensitivity label was created**, cliquez sur le bouton **Done**.
+1. Sur le panneau **Publish label** qui s'affiche, cliquez sur **Cancel**, vous realiserez la publication des labels ultérieurement, dans la tâche 4 du présent exercice.
 1. Leave your Edge browser and all its tabs open and proceed to the next task.
 
-## Task 3 - Creating Sensitivity Labels using Windows PowerShell
-Dominique has decided to test creating sensitivity labels using both the Purview portal and Windows PowerShell. In this task you will use Windows PowerShell for this portion of your test.  
->**Note:** What Dominique will learn from this task is that due to a current limitation, not all parameters for a sensitivity label can be updated in PowerShell at this time. The remaining parameters will have to be entered using the Purview portal.  
-1. On **LON-CL1**, you should still be logged in as the **Administrator** with a password of **Pa55w.rd**.
-1. Select the **magnifying glass (Search)** icon in the bottom left corner of your taskbar and then enter **powershell** in the Search field.
-1. In the list of search results, right-click on **Windows PowerShell**, and in the menu that appears select **Run as administrator**.
-1. Maximize your PowerShell window. In **Windows PowerShell**, at the powershell prompt type the following command and then press Enter:  
-	```Set-ExecutionPolicy -ExecutionPolicy RemoteSigned```  
-	You will be prompted to confirm whether you want to change the execution policy. Enter **A** for **[A] Yes to all**.
-1. At the powershell prompt, enter the following command and then press Enter to install the Exchange Online Management Module into Windows PowerShell.  
+## Tâche 3 - Création de labels avec *Windows PowerShell*
+Après avoir testé la création de labels de données sensibles en utilisant le portail *Purview*, Dominique souhaite tester la création de labels avec *Windows Powershell*.  
+1. Si vous aviez minimisé la fenêtre **Administrator: Windows Powershell ISE** dans la barre des tâches, cliquez sur son icône pour la maximiser. Sinon, tapez ```Windows Powershell ISE``` dans le champ de recherche à droite du bouton **Démarrer** sur la barre des tâches. A droite du menu **Démarrer**, cliquez sur **Run as administrator** sous l'application.
+1. Dans la commande (bleue) de **Administrator: Windows PowerShell ISE**, utilisez la commande suivante :  
 	```Install-Module -Name ExchangeOnlineManagement```  
 	If you are prompted to verify that you want to install the module from an untrusted repository, enter **A** to select **[A] Yes to All.**  
 1. 	At the powershell prompt enter the following command and then press Enter (remember to replace xxx with your tenant ID and XadminX with your global administrator logon name):  
