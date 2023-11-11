@@ -2,6 +2,7 @@
 layout: stage
 title: "Lab2-Ex1 - Gestion des utilisateurs avec le centre d'administration Microsoft 365"
 length: "00"
+date: "11/11/2023"
 ---
 # Scénario
 Dominique Skyetson est l'administrateur de l'entreprise Adatum. Comme il n'a pas de compte utilisateur Microsoft 365 déclaré pour lui-même, Dominique s'est jusqu'à présent connecté à l'administration du tenant avec le compte *Mod Administrator*. Dans cet exercice, il va se créer son compte et y assigner le rôle *Global Administrator* qui lui permettra ensuite de faire toutes les actions administratives sur le tenant de manière nominative.

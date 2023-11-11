@@ -2,6 +2,7 @@
 layout: stage
 title: "Lab5-Ex2 - Déploiement de Microsoft 365 apps via MDM"
 length: "00"
+date: "11/11/2023"
 ---
 # Scénario
 Vous avez pris l'identité de Dominique Skyetson, Administrateur de l'entreprise Adatum, et vous avez commencé à déployer Microsoft 365 dans un environnement virtuel pilote. Dans cet exercice, vous allez réaliser les tâches nécessaires à l'installation de Microsoft 365 Apps en utilisant le MDM.  

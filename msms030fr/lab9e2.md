@@ -2,6 +2,7 @@
 layout: stage
 title: "Lab9-Ex2 - OneDrive for Business"
 length: "00"
+date: "11/11/2023"
 ---
 # Scénario
 Après avoir implémenté *Viva Engage* dans le projet pilote Adatum, Dominique Skyetson est prêt à faire de même avec *OneDrive for Business*. Dominique sait que, avec OneDrive, les utilisateurs d'Adatum pourront accéder aisément et de manière sécurisée à leurs fichiers de travail depuis tous leur périphériques. Cela leur permettra aussi d'être plus efficace dans le travail avec d'autres collaborateurs, qu'ils soient internes ou externes à l'entreprise.  

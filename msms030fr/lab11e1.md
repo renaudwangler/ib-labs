@@ -2,6 +2,7 @@
 layout: stage
 title: "Lab11-Ex1 - Etat de santé du service Microsoft 365"
 length: "00"
+date: "11/11/2023"
 ---
 # Scénario
 As Dominique Skyetson concludes her Microsoft 365 pilot project, she is interested in viewing the health of Adatum's Microsoft services, including Office on the web, Yammer, and mobile device management cloud services. After doing a little research, Dominique has discovered that this information is available on the Service health page in the Microsoft 365 admin center. Therefore, if Adataum experiences problems with a cloud service, Dominique can check its service health to determine whether this is a known issue with a resolution in progress before she calls Microsoft Support or spends time troubleshooting.  

@@ -2,6 +2,7 @@
 layout: stage
 title: "Utilisation de Microsoft 365 connectivity analyzer"
 length: "00"
+date: "11/11/2023"
 ---
 # Scénario
 Le *Remote Connectivity Analyzer* est un outil web pensé pour aider les administrateurs IT à dépanner les soucis de connectivité avec leurs déploiement Exchange, Microsoft 365 et Teams. Dominique Skyetson, en tant qu'administrateur de Adatum, doit savoir utiliser cet outil si une configuration erronnée vient interrompre les communications dans le projet pilote par exemple.

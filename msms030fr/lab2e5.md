@@ -2,6 +2,7 @@
 layout: stage
 title: "Lab2-Ex5 - Délégation d'administration"
 length: "00"
+date: "11/11/2023"
 ---
 # Scénario
 Dans cet exercice, en tant que Dominique Skyetson et pour le projet pilote Microsoft 365 de Adatum, vous allez gérer la délégation administrative en affectant des rôles d'administrateurs à plusieurs utilisateurs. Vous allez procéder à ces affectations de rôle à la fois par le portail d'administration et en Powershell. Une fois ces rôles affectés, vous vous connecterez avec les comptes concernés pour tester la délégation administrative.

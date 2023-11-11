@@ -2,6 +2,7 @@
 layout: stage
 title: "Lab1-Ex2 - Ajout d'un domaine DNS d'entreprise"
 length: "00"
+date: "11/11/2023"
 ---
 # Scénario
 Adatum a donc acheté un nouveau nom de domaine DNS pour son projet pilote (fourni par votre hébergeur d'ateliers) qui soit utilisable sur Internet.

@@ -2,6 +2,7 @@
 layout: stage
 title: "Lab11-Ex2 - Dépannage de flux de messages"
 length: "00"
+date: "11/11/2023"
 ---
 # Scénario
 The logical conclusion to monitoring Microsoft 365 service health is the ability to troubleshoot errors that occur in the system. For Dominique Skyetson, this means monitoring mail-related issues, which have been a nagging issue for Adatum in the past. Dominique plans to take advantage of Microsoft's Remote Connectivity Analyzer tool to troubleshoot mail-flow issues. The tool is web-based and is designed to help IT Administrators troubleshoot connectivity issues that affect their Microsoft deployments. The tool simulates several client log-on and mail flow scenarios. When a test fails, many of the errors have troubleshooting tips to assist the IT Administrator to correct the problem.  

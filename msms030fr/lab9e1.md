@@ -2,6 +2,7 @@
 layout: stage
 title: "Lab9-Ex1 - Viva Engage"
 length: "00"
+date: "11/11/2023"
 ---
 # Scénario
 Comme *Engage* amène la richesse du réseau social d'entreprise Yammer aux environnements *teams*, *SharePoint Online* et aux autres applications Microsoft 365, Dominique Skyetson s'intéresse à la mise en oeuvre de *Viva Engage* dans le projet pilote d'Adatum. Ceci permettra aux utilisateurs d'Adatum de partager, créer et éditer des fichiers directement dans les conversations *Engage* avec *Office for the web*.  

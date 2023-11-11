@@ -2,6 +2,7 @@
 layout: stage
 title: "Lab4-Ex1 - Préparation de la synchronisation d'identités"
 length: "00"
+date: "11/11/2023"
 ---
 # Scénario
 Comme dans les précédents exercices, vous allez vous glisser dans la peau de Dominique Skyetson, administrateur de Adatum. Dans cet atelier, vous réaliserez les tâches nécessaires pour gérer l'hybridation de la gestion d'identités du projet pilote entre l'Active Directory existant et l'Entra ID utilisé par l'environnement Microsoft 365.  

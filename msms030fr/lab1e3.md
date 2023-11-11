@@ -2,6 +2,7 @@
 layout: stage
 title: "Lab1-Ex3 - Visite des portails administratifs 365"
 length: "00"
+date: "11/11/2023"
 ---
 # Scénario
 Maintenant que le tenant du projet pilote 365 de Adatum est complètement créé, vous pouvez commencer à utiliser l'environnement Microsoft 365. Dans cet exercice, vous allez visiter divers portails administratifs les plus utiles pour le quotidien d'un administrateur 365 afin de commencer à vous familiariser avec leur contenu et leur navigation.
