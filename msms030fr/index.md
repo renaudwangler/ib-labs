@@ -47,7 +47,7 @@ ___
 ___
 ## Atelier 09 - Autres outils Microsoft 365
 ### Exercice 1 - [Viva Engage](lab9e1)
-### Exercice 2 - [OneDrive for Business (en)](lab9e2)
+### Exercice 2 - [OneDrive for Business](lab9e2)
 ___
 ## Atelier 10 - Sécurité et conformité dans Microsoft 365
 ### Exercice 1 - [Création de labels de sensibilité (en)](lab10e1)
@@ -62,3 +62,4 @@ ___
     - L'exercice 2 de l'atelier 2 es dispensable
     - L'atelier 3 est dispensable.
     - Les tâches 2 et 3 de l'atelier 4, exercice 1 sont dispensables
+    - Si vous souhaitez maximiser vos chances de constater les résultats de l'atelier 10, vous pouvez le réaliser en avance, car son résultat nécessite une latence importante.

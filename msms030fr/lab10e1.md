@@ -4,42 +4,48 @@ title: "Lab10-Ex1 - Création de labels de sensibilité"
 length: "00"
 ---
 # Scénario
-Adatum has transitioned to Microsoft 365 as its enterprise cloud solution. The company has been awarded several government contracts which work heavily with sensitive and classified products.  
-In your role as Dominique Skyetson, Adatum’s Enterprise Administrator, the company CTO has requested that you devise a solution for encrypting and securing messages when working in these related contracts. He has also requested that any references to “Project New Day” be automatically encrypted. This is a top-secret project, and it is imperative that no mention of this project be leaked outside the company.  
-In this lab, you will address your CTO's request by creating sensitivity labels that will be used for creating label policies. You will create sensitivity labels using the Microsoft 365 Compliance center as well as Windows PowerShell. While still satisfying your CTO's request, this plan will provide you with experience using each method as part of your pilot project. This way, you can later decide which approach you prefer when you transition from your pilot phase to the production phase. With your labels in place, you will then create a label policy - again, using both the Compliance center and PowerShell.  
->**Important:** Sensitivity labels and policies can take up to 24 hours to propagate through the system and update the back-end servers. Unfortunately, with this training course nearing its end, you will not have time to verify your work by testing the labels and policies you created. However, it is hoped that this lab exercise will still provide you with experience and insight into the mechanics of creating sensitivity labels and policies, even though you cannot test them.  
+Adatum a désormais une bonne vision de Microsoft 365 grâce à son projet pilote. L'entreprise a gagné plusieurs contrats gouvernementaux, l'amenant à travailler sur de nombreux produits sensibles et classifiés.  
+Dans son rôle d'administrateur de l'entrepreise Adatum, Dominique Skyetson s'est vu demandé par le CTO d'étudier une solution pour protéger et chiffrer les messages concernants ces contrats sensibles.  
+Il lui a également été demandé qut toute référence au "**Project New Day**" soit automatiquement chiffrée. Il s'agit du nom de code d'un projet top-secret, et il est impératif qu'aucune mention de ce projet ne fuite en dehors du contexte d'Adatum.  
+Dans cet atelier, vous allez voir comment mettre en oeuvre la réponse à la demande du CTO en utilisant les labels d'informations sensibles dans le centre d'administration *Purview* et avec des commandes *Windows Powershell*.
+>**Important :** Les labels d'informations sensibles et leur stratégies peuvent prendre jusqu'à 24h pour se propager dans l'intégramité de l'environnement 365. Malheureusement, comme votre stage touche à sa fin, il y a de fortes chances que vous ne soyiez pas à même d'en vérifier l'application dans votre tenant de test. Ceci étant acté, cet exercice va tout de même vous permettre de découvrir les interfaces de mise en oeuvre desdits labels et des stratégies correspondantes.
 
 # Objectifs
 A la fin de cet exercice, vous aurez une meilleure connaissance de :
 
 
-## Task 1 - Creating a test team
-In your role as Dominique Skyetson, you will create a new Microsoft 365 group titled PND Group (for Project New Day, the name of which you want to avoid circulating through the company) that will be used as part of your sensitivity label testing in the upcoming tasks.
-1. In **LON-CL1**, you should still be logged in as the **Administrator** with a password of **Pa55w.rd**.
-1. At the end of the prior lab, you logged out of Microsoft 365 as the MOD Administrator and closed Edge. Select the **Edge** icon on the taskbar and then enter the following URL in the address bar: **https://portal.office.com**.
-1. In the **Pick an account** window, select **Dominique Skyetson** at **dom@WWLxxxxx.onmicrosoft.com** (where xxx is your tenant ID) and enter **ibForm@tion** as her password.
-1. On the **Microsoft 365** homepage select **Admin**.
-1. On the **Microsoft 365 admin center**, in the left-hand navigation pane select **Teams & groups**, and then select **Active teams & groups**.
-1. In the **Active teams & groups** window, select **Add a group** on the menu bar at the top of the page.
-1. In the **Choose a group type** pane that appears, the **Microsoft 365 (recommended)** group type is selected by default. Accept this value by selecting **Next**.
-1. In the **Set up the basics** window, enter **PND Group** in the **Name** field and **Group used for sensitivity label testing** in the **Description field** and then select **Next** (Note - if you leave the **Description** field blank, you must still select it to enable the **Next** button).
-1. In the **Assign owners** window, select **+ Assign owners**, enter your global administrator name in the **Search for a name or email address** field, which will display the list of active users. Select your global administrator and then select **Add (1)**. When your administrator is listed, select **Next**.
-1. In the **Add members** windows, select **+ Add members**. In the list of users, it may be easier to enter the first few characters of each user's first name in the Search field rather than scrolling through the list of all on-premises users that were synchronized to Microsoft 365 in the earlier directory synchronization lab.
-	Select **Isaiah Langer**, **Sherri Harrell**, and **Nona Snider** and then select **Add (3)**, and then select **Next**.
-1. In the **Edit settings** window, enter **PNDgroup** in the **Group email address** field.  
-	**Note:** To the right of the **Group email address** field is the domain field. This is different from adding users in that no other domains appear; therefore, you must leave this value as is.  
-	After configuring this field, the PND Group email address should appear as: **PNDgroup@xxxUPNxxx**  
-	After configuring the email address, under the **Privacy** section, select **Private**, and leave the check box selected to **Create a team for this group**. Select **Next**.
-1. On the **Review and finish adding group** window, review the information and if anything needs to be changed, select the appropriate **Edit** option; otherwise, select the **Create group** button at the bottom of the page.
-1. On the **PND Group group created** window, note the message that appears at the top of the page that indicates it may take up to 5 minutes before the group appears in the list of active groups. Select **Close**
-1. On the **Active teams and groups** window, select **Refresh** on the menu bar to refresh the list of active groups. You may have to wait a few minutes and refresh again. Once the **PND Group** group appears in the list, select the group line.
-1. For security purposes, you have decided to add Elvis Cress as an additional owner of this group. In the **PND Group** pane that appears, the **General** tab is displayed by default. Select the **Membership** tab. 
-1. In the **Membership** tab, in the **Owners** section, select **+ Add owners**. This displays an **Add team owners to PND Group** pane.
-1. In the Search field, enter **Elvis**, select **Elvis Cress**, and then select **Add (1)**.
-1. On the **PND Group** window, select the **X** in the upper right-hand corner to close the window.
-1. Leave your Edge browser and all its tabs open and proceed to the next task.
+## Tâche 1 - Créer une équipe *Teams* de test
+Dans votre rôle d'administrateur, en tant que Dominique Skyetson, vous allez créer une nouvelle équipe *Teams*, nommée **PND Group** (pour groupe *Project New Day*) qui sera utilisée pour l'applications des labels de données sensibles par la suite.
+1. Basculez vers la machine virtuelle **LON-CL1**, sur laquelle vous devrez être resté connecté avec le compte **adatum\Administrator** avec le mot de passe **Pa55w.rd**.
+1. A l'issue de l'atelier précédent, votre navigateur Internet devrait être resté ouvert, avec un onglet contenant le portail **Microsoft 365 admin center**, connecté avec le compte de Dominique Skyetson.  
+	>**Note :** Si besoin, utilisez l'adresse ```https://admin.microsoft.com``` pour ouvrir le portail d'administration si vous l'aviez fermé.
 
-## Task 2 - Creating Sensitivity Labels using the Purview portal
+1. Dans le menu de navigation du portail **Microsoft 365 admin center**,cliquez sur **Active teams & groups** dans le groupe d'options **Teams & groups**.
+1. Sur la page **Active teams & groups**, cliquez sur le bouton **+ Add a team** sur la barre d'outils de l'onglet **Teams & Microsoft 365 groups**.
+1. Sur la page **Set up the basics**, saisissez ```PND Group``` dans le champ **Name of team** et ```Group used for sensitivity label testing``` dans le champ **Describe this team**.
+1. Cliquez sur **Next**.
+1. Sur la page **Add owners**, entrez ```Dominique```dans le champ **Owners** et cliquez sur le compte de **Dominique Skyetson** lorsqu'il s'affiche.
+1. Cliquez sur **Next**.
+1. Sur la page **Add members**, entrez ```Isaiah```dans le champ **Members** et cliquez sur le compte de **Isaiah Langer** lorsqu'il s'affiche.
+1. Procédez de même pour ajoutez les comptes de ```Alan``` (Alan Yoo) et ```Joni``` (Joni Sherman).
+1. Cliquez sur le bouton **Next**.
+1. Sur la page **Edit settings**, saisissez ```PNDgroup``` dans le champ **Team email address**.  
+	>**Note :** A droite du champ **Tema email address**, selectionnez votre préfixe de tenant de sorte que le nom de la nouvelle équipe ressemble à *PNDgroup@WWLxxxxx.onmicrosoft.com*.
+
+1. Toujours sur la page **Edit Settings**, dans le champ **Privacy**, **Private - People can only join if they're added by an owner\[...].**.
+1. Cliquez sur le bouton **Next**.
+1. Sur la page **Review and finish adding team**, révisez votre saisie et, si nécessaire, cliquez sur le lien **Edit** pour les modifier; sinon, cliquez sur le bouton **Add team** en bas de page.
+1. Sur la page **New team created**, notez le message indiquant qu'il peut s'écouler 5 minutes avant que la nouvelle équipe ne s'affiche. Cliquez sur **Close**.
+1. Sur la page **Active teams and groups**, cliquez sur le bouton **Refresh** dans la barre de menu au-dessus de la liste des groupes. Si nécessaire, arttendez quemlques instants et répétez l'opération jusqu'à ce qu'apparaîsse la nouvelle équipe.
+1. Une fois l'équipe **PND group** affichée dans la liste, cliquez sur son nom.
+1. Pour des questions de sécurité, vous avez décidé d'inclure Elviss Cress comme copropriétaire de cette équipe. Dans le panneau **PND Group** qui s'affiche, l'onglet **General** est affiché par défaut, cliquez sur l'onglet **Membership** pour l'afficher.
+1. Sur l'onglet **Membership**, cliquez sur le bouton **+ Add owners**.
+1. Sur le panneau **Add team owners to PND Group**, saisissez ```Elvis``` et cliquez sur le compte de **Elvis Cress** qui s'affiche.
+1. En bas de page, cliquez sur **Add (1)**.
+1. De retour sur le panneau **Add team owners to PND Group**, cliquez sur le **X** en haut à droite pour fermer les informations sur l'équipe.
+1. Laissez ouvert le navigateur Internet pour la tâche suivante.
+
+## Tâche 2 - Création de labels dans le portail *Purview*
 Dominique has decided to test creating sensitivity labels using both the Microsoft Purview portal and Windows PowerShell. In this task you will use the Microsoft Purview Portal for this portion of your test.
 1. On **LON-CL1**, you should still be logged in as the **Administrator** with a password of **Pa55w.rd**.
 1. In your Edge browser, you should still have a tab open for the **Microsoft 365** homepage and the **Microsoft 365 admin center** and you should still be logged in as Dominique Dickson.  
