@@ -46,6 +46,11 @@ layout: default
             <span class="navbar-text">
                 Retour à la <a href="index.html">liste des ateliers.</a>
             </span>
+            {% if page.date %}
+            <div id=""pageVersion">
+                Edité le page.date
+            </div>
+            {% endif %}
         </nav>
     </footer>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -58,6 +63,7 @@ layout: default
         window.onload = addCopyButton();
     </script>
     <div id="pageVersion">
-        version {{ "now" | date : "%Y%m%d-%H%M" }}
+        version {{ "now" | date : "%Y%m%d-%H%M" }} <br/>
+        Date {{ .lastmod }}
     </div>
 </body>

@@ -2,6 +2,7 @@
 layout: stage
 title: "Lab10-Ex1 - Création de labels de sensibilité"
 length: "00"
+date: "11/11/2023 1440"
 ---
 # Scénario
 Adatum a désormais une bonne vision de Microsoft 365 grâce à son projet pilote. L'entreprise a gagné plusieurs contrats gouvernementaux, l'amenant à travailler sur de nombreux produits sensibles et classifiés.  
@@ -12,7 +13,10 @@ Dans cet atelier, vous allez voir comment mettre en oeuvre la réponse à la dem
 
 # Objectifs
 A la fin de cet exercice, vous aurez une meilleure connaissance de :
-
+- La création de labels de sensibilité dans le portail *Purview*.
+- La création de labels de sensibilité avec *Windows PowerShell.
+- La création de stratégies de publication de labels de sensibilité dans le portail *Purview*.
+- La création de stratégies de publication de labels de sensibilité avec *Windows PowerShell.
 
 ## Tâche 1 - Créer une équipe *Teams* de test
 Dans votre rôle d'administrateur, en tant que Dominique Skyetson, vous allez créer une nouvelle équipe *Teams*, nommée **PND Group** (pour groupe *Project New Day*) qui sera utilisée pour l'applications des labels de données sensibles par la suite.
@@ -150,26 +154,21 @@ Dans sa découverte des méthodes de travail avec les labels de données sensibl
 1. Sur la page **Review and finish**, révisez votre saisie et, si nécessaire, cliquez sur le lien **Edit** pour la modifier; sinon, cliquez sur le bouton **Submit** en bas de page.
 1. Sur la page **New policy created**, cliquez sur **Done**.
 
-## Task 5 - Creating Sensitivity Label Policies using Windows PowerShell
-Dominique has decided to test creating sensitivity label policies using both the Purview portal and Windows PowerShell. In this task you will use Windows PowerShell for this portion of your test.  
->**Note:** What Dominique will learn from this task is that due to a current limitation, only the basic parameters for a sensitivity label can be updated in PowerShell. The remaining parameters will have to be entered using the Purview portal.
-1. On **LON-CL1**, you should still be logged in as the **Administrator** with a password of **Pa55w.rd**.
-1. Windows PowerShell should still be open from a prior task. If so, then skip to the next step. However, if you closed PowerShell, then open an elevated instance of it now (Run as administrator) and run the following commands to re-establish your session:  
-	```Import-Module ExchangeOnlineManagement```  
-	```Connect-IPPSSession -UserPrincipalName XadminX@xxx.onmicrosoft.com```  
-	>**Note:** (remember to replace xxx with your tenant ID and XadminX with your global administrator name).  
+## Tâche 5 - Publication de labels avec *Windows PowerShell*
+Dominique a, pour finir, décidé de tester la publication de labels de données sensibles avec *Windows PowerShell*.  
+>**Note :** Comme pour les labels précédemment, il serait hors portée de notre stage de réaliser le détail de ces opérations avec *Windows PowerShell*. C'est pourquoi Dominique va se contenter de vérifier la faisabilité de la publication de labels en Powershell...
 
-	You will then be prompted to enter the Password for the global Administrator and then seelct **Sign in**.
-1. At the powershell prompt enter the following command and then press Enter to create a new Sensitivity label policy named “Secret” using the secret Label that you created in the earlier task. This label policy will be applied to the PND Group group and will use the highest-level label as the default for documents and will automatically apply the label to emails and documents sent from this group. Do not forge to replace xxx with your tenant ID.  
-	```New-LabelPolicy -Name "Secret policy" -Labels "Secret" -Comment "This policy is for the Microsoft 365 pilot project team related to Project New Day." -ModernGroupLocation PNDgroup@xxx.onmicrosoft.com   -AdvancedSettings @{AttachmentAction="Automatic"}```
-1. At the command prompt enter the following command and then press Enter:  
-	```Set-LabelPolicy -Identity "Secret policy" -AdvancedSettings @{DisableMandatoryInOutlook="True"}```
-1. On the taskbar, select the Edge browser icon, and then select the **Microsoft Purview** tab. You should still be in the **Information protection** page and it should be displaying the **Label polixcies** tab for this page.  
-	In the list of label policies, the **Classified** label that you created earlier should be displayed. Select **Refresh** on the menu bar above the list of labels.
-1. In the list of label policies, you should now see the **Classified policy** that you created using the Compliance Center and the **Secret policy** that you created using Windows PowerShell.  
-1. Close Windows PowerShell.
-1. Leave your Edge browser and all its tabs open and proceed to the next lab.
+1. Utilisez son icône sur la barre des tâches pour maximiser la fenêtre **Administrator: Windows PowerShell ISE** que vous aviez utilisée dans une tâche précédente.
+1. Dans la commande (bleue) de **Administrator: Windows PowerShell ISE**, utilisez la commande suivante pour créer un stratégie de publication de labels nommée *Adatum-Secret policy* :  
+	```New-LabelPolicy -Name 'Adatum-Secret policy' -Labels 'Adatum-Secret' -Comment 'This policy is for the Microsoft 365 pilot project team related to Project New Day.' -ModernGroupLocation PNDgroup@WWLxxxxx.onmicrosoft.com   -AdvancedSettings @{AttachmentAction = 'Automatic'; DisableMandatoryInOutlook = 'True'}``` 
+	>**Note :** Pensez à modifier le préfixe de tenant dans la précédente commande en le remplaçant par celui de votre tenant de test.
+
+1. Basculez vers votre navigateur Internet et affichez l'onglet du portail **Microsoft Purview**. Vous devriez être resté sur la page **Label policies**.
+1. Dans la liste des stratégies, la stratégie **Adatum-Classified Policy** que vous avez créé dans le portail est affichée. Cliquez sur le bouton **Refresh** dans la barre de menu au-dessus de la liste.
+1. Vous devriez désormais trouver dans la liste des stratégies celle nommée **Adatum-Secret policy** que vous venez de créer en PowerShell. 
+1. Laissez votre navigateur Internet ouvert pour la réalisation du dernier atelier.
 
 ## Résultat
+Dans cet atelier, vous avez créé des labels de données sensibles et les stratégies permettant de les rendre disponibles aux utilisateur de l'environnement.
 
 # Fin de l'atelier 10
