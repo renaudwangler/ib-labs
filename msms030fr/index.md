@@ -53,7 +53,7 @@ ___
 ### Exercice 1 - [Création de labels de sensibilité](lab10e1)
 ___
 ## Atelier 11 - Surveillance et dépannage de Microsoft 365
-### Exercice 1 - [Etat de santé du service Microsoft 365 (en)](lab11e1)
+### Exercice 1 - [Etat de santé du service Microsoft 365](lab11e1)
 ### Exercice 2 - [Dépannage de flux de messages (en)](lab11e2)
 ___
 ## Conseils génériques
