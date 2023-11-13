@@ -5,7 +5,11 @@
 
 #pageVersion { color:gray; font-size: smaller; margin: 0px;position: absolute; right: 5px;bottom: 5px;}
 
-.copyBtn { padding: 2px; margin-left: 3px; cursor: pointer; height: 1.2em; width: .8em;background-color: whitesmoke;color: black;
-    border: solid 1px black; border-radius: .1em;}
+//.copyBtn { padding: 2px; margin-left: 3px; cursor: pointer; height: 1.2em; width: .8em;background-color: whitesmoke;color: black; border: solid 1px black; border-radius: .1em;}
+//.copyBtn::before { border: .1rem solid black; border-bottom-color: transparent; border-right-color: transparent; height: 1.4em; left: 40%; top: 40%; width: 1em; }
+
+.copyBtn,.copyBtn::before { display: block; height: 1.2em; width: .8em; border-radius: .2em; }
+.copyBtn {margin: 2px;background-color:darkslategrey;}
+.copyBtn::before { content: ''; background-color: whitesmoke;}
 .copyBtn:hover {background: black;}
-.copyBtn:before { border: .1rem solid black; border-bottom-color: transparent; border-right-color: transparent; height: .8em; left: 40%; top: 40%; width: .7em; }
+
