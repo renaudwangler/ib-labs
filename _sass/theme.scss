@@ -91,7 +91,7 @@ blockquote {
     border-color: #bff1ff;
     color: inherit;
     font-size: smaller;
-    padding: 20px;
+    padding: 8px;
     margin-top: 15px;
     border-radius: 6px;
     display: flex;
@@ -100,13 +100,6 @@ blockquote {
 blockquote p {
     margin-top: 0px;
     margin-left: 1ch;
-}
-
-blockquote:before {
-    content: "❕";
-    font-weight: bolder;
-    font-size: larger;
-    font-family: segoe-ui, "Segoe UI", "Segoe WP", "Helvetica Neue", Helvetica, sans-serif;
 }
 
 article img {
