@@ -9,12 +9,13 @@ function addCopyButton() {
         copyButton.type = 'button';
         codeBlock.appendChild(copyButton);
         copyButton.addEventListener("click", async () => {
-          await copyCode(codeBlock.innerText.slice(0,-6));});
-          console.log(codeBlock.getElementsByTagName('button')[0].className)
+          await copyCode(codeBlock);});
+          
         }
     });
     }
-async function copyCode(code2copy) {
-    await navigator.clipboard.writeText(code2copy);
+async function copyCode(codeBlock) {
+    await navigator.clipboard.writeText(codeBlock.innerText.slice(0,-6));
+    console.log(codeBlock.getElementsByTagName('button')[0].className)
     }
     
