@@ -5,11 +5,8 @@
 
 #pageVersion { color:gray; font-size: smaller; margin: 0px;position: absolute; right: 5px;bottom: 5px;}
 
-//.copyBtn { padding: 2px; margin-left: 3px; cursor: pointer; height: 1.2em; width: .8em;background-color: whitesmoke;color: black; border: solid 1px black; border-radius: .1em;}
-//.copyBtn::before { border: .1rem solid black; border-bottom-color: transparent; border-right-color: transparent; height: 1.4em; left: 40%; top: 40%; width: 1em; }
-
-.copyBtn,.copyBtn::before { display: block; height: 1.2em; width: .8em; border-radius: .2em; }
-.copyBtn {margin: 2px;background-color:darkslategrey;}
-.copyBtn::before { content: ''; background-color: whitesmoke;}
+.copyBtn,.copyBtn::before { display: inline-block; height: 1.2em; width: .8em; border-radius: .2em; margin: 0;padding: 0; cursor: pointer}
+.copyBtn {margin-left: 4px;background-color:darkslategrey;vertical-align: text-bottom;}
+.copyBtn::before { content: ''; background-color: whitesmoke; margin-left: 2px; margin-top: 2px;}
 .copyBtn:hover {background: black;}
 
