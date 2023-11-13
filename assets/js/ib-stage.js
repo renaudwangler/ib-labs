@@ -9,7 +9,7 @@ function addCopyButton() {
         copyButton.type = 'button';
         codeBlock.appendChild(copyButton);
         copyButton.addEventListener("click", async () => {
-          this.className = 'copyBtnDone';
+          console.log(this);
           await copyCode(codeBlock.innerText.slice(0,-6));});}
     });
     }
