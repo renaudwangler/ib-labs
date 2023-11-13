@@ -2,7 +2,7 @@
 layout: stage
 title: "Lab1-Ex1 - Création de l'environnement"
 length: "00"
-date: "11/11/2023"
+date: "13/11/2023"
 ---
 # Scénario
 Dans ce premier exercice, vous allez commencer par mettre en œuvre le tenant 365 dans le projet pilote.  

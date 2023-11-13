@@ -2,7 +2,7 @@
 layout: stage
 title: "Lab2-Ex1 - Gestion des utilisateurs avec le centre d'administration Microsoft 365"
 length: "00"
-date: "11/11/2023"
+date: "13/11/2023"
 ---
 # Scénario
 Dominique Skyetson est l'administrateur de l'entreprise Adatum. Comme il n'a pas de compte utilisateur Microsoft 365 déclaré pour lui-même, Dominique s'est jusqu'à présent connecté à l'administration du tenant avec le compte *Mod Administrator*. Dans cet exercice, il va se créer son compte et y assigner le rôle *Global Administrator* qui lui permettra ensuite de faire toutes les actions administratives sur le tenant de manière nominative.
@@ -22,17 +22,17 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 	>Puisque vous prenez le rôle de Dominique Skyetson pour cet exercice, vous allez vous créer un compte utilisateur pour vous même et lui affecter le rôle *Global Administrator*, donnant ainsi à Dominique l'accès à toutes les prérogatives administratives dans l'environnement Microsoft 365.
 1. Dans la fenêtre **Active Users**, cliquez sur **Add a user**.
 1. Sur la page **Set up the basics**, saisissez les informations suivantes :
-	- First name : **Dominique**
-	- Last name : **Skyetson** 
-	- Display name : En tabulant dans ce champ, il sera automatiquement rempli avec la valeur **Dominique Skyetson**.
-	- Username : **dom**  
+	- First name : ```Dominique```
+	- Last name : ```Skyetson``` 
+	- Display name : En tabulant dans ce champ, il sera automatiquement rempli avec la valeur ```Dominique Skyetson```.
+	- Username : ```dom```  
 		>**IMPORTANT :** A droite du champ **Username** se trouve le domaine de l'utilisateur. Il sera rempli avec le domaine DNS configuré comme étant le domaine par défaut. Pour Adatum, il s'agit du domaine que vous avez ajouté lors du premier atelier.  
 		Cependant, pour les besoin des exercices concernant la synchronisation d'identité, il vous est conseillé de sélectionner le domaine **WWLxxxxx.onmicrosoft.com** pour tous les utilisateurs que vous créez dans cet exercice.  
 		C'est pourquoi vous devez sélectionner la flèche à droite du champ **Domains** pour sélectionner le domaine **WWLxxxxx.onmicrosoft.com** (s'il vous est impossible de sélectionner ce domaine à la création des utilisateurs, vous pouvez le changer à postériori).  
 		Après avoir configuré ce champ, le nom utilisateur de Dominique devrait apparaitre sous la forme:
 		**dom@WWLxxxxx.onmicrosoft.com**  
 	- Décochez l'option **Automatically create a password**
-	- Password : **Pa55w.rd** (Astuce : cliquez sur l'icône d'oeil à droite pour vérifier le mot de passe saisi)
+	- Password : ```Pa55w.rd``` (Astuce : cliquez sur l'icône d'oeil à droite pour vérifier le mot de passe saisi)
 	- Cochez la case **Require this user to change their password when they first sign in**
 1. Cliquez **Next**.
 1. Sur la page **Assign product licenses** , saisissez les informations suivantes:
@@ -47,14 +47,14 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 1. Sur la page **Dominique Skyetson added to active users**, cliquez sur **Show** à coté de **Password** pour vérifier que vous avez bien saisi correctement **Pa55w.rd**.
 1. En bas de la page, cliquez sur le lien **Add another user** et recommencez les étapes 3 à 12 précédentes, pour ajouter les utilisateurs avec les informations suivantes :
 	- **Username domain :** Lors de la saisie du **Username** pour chaque utilisateur, assurez-vous de sélectionner le domaine **WWLxxxxx.onmicrosoft.com** comme vous l'avez fait pour le compte de Dominique (Si vous ne pouvez le sélectionner à la création, changez-le une fois le compte créé).
-	- **Password :** Utilisez le mot de passe **Pa55w.rd**, et, comme pour le compte de Dominique, exiger le changement de mot de passe à la première connexion.
+	- **Password :** Utilisez le mot de passe ```Pa55w.rd```, et, comme pour le compte de Dominique, exigez le changement de mot de passe à la première connexion.
 	- **Licenses :** Affectez une licence **Office 365 E3** à l'utilisateur **Alan Yoo**. Pour tous les autres utilisateurs, sélectionner l'option **Create user without product license (not recommended)**.
 	- **Roles :** Par défaut chaque utilisateur se verra affecter le rôle **User role (no administration access)**; Cela suffira pour le moment. Dans un futur exercice, vous affecterez des rôles administratifs à certains utilisateurs pour tester la délégation administrative. Ainsi, en arrivant sur la page **Optional settings**, cliquez directement sur **Next**.
-	> **Alan Yoo** | username **alan** | Licence **Office 365 E3** mais pas de rôle admin  
-	**Ada Russell** | username **ada** | Ni licence ni rôle admin
-	**Adam Hobbs** | username **adam** | Ni licence ni rôle admin
-	**Libby Hayward** | username **libby** | Ni licence ni rôle admin
-	**Laura Atkins** | username **laura** | Ni licence ni rôle admin
+	> ```Alan Yoo** | username ```alan``` | Licence **Office 365 E3** mais pas de rôle admin  
+	```Ada Russell``` | username ```ada``` | Ni licence ni rôle admin
+	```Adam Hobbs``` | username ```adam``` | Ni licence ni rôle admin
+	```Libby Hayward``` | username ```libby``` | Ni licence ni rôle admin
+	```Laura Atkins```| username ```laura``` | Ni licence ni rôle admin
 1. Après avoir ajouté le dernier compte (celui de *Laura Atkins*) cliquez sur le bouton **Close** pour revenir à la liste des **Active users**
 1. Vérifiez la liste **Active users**. Vérifiez que chacun des précédents utilisateurs a pour domaine **WWLxxxxx.onmicrosoft.com** et changez-le si ce n'est pas le cas.
 1. Restez connecté sur LON-CL1 et laissez votre navigateur Internet ouvert pour la tâche suivante de cet atelier.
@@ -66,7 +66,7 @@ Vous affecterez ensuite une licence produit au compte de Ada Russell. Pour finir
 1. Vous devriez encore être connecté sur **LON-CL1** à l'issue du premier atelier. Le **Microsoft 365 admin center** devrait encore être resté ouvert dans votre navigateur et vous devriez y être connecté avec le compte *MOD Administrator*.
 1. Dans le portail **Microsoft 365 admin center**, la page **Active users** devrait être encore affichée à l'issue de la première tâche de cet exercice. Sélectionnez la case à cocher en regard du compte de **Alan Yoo**, sans cliquer sur la ligne de ce compte en lui-même.
 1. Dans la barre de menu au-dessus de la liste d'utilisateurs, sélectionnez les **points de suspension** (**More actions**). Dans le menu qui apparait, sélectionnez **Manage contact information**.
-1. Dans le panneau **Manage contact information** qui apparait pour Alan Yoo, saisissez **Accounts Receivable** dans le champ **Department** avant de cliquer sur **Save changes**. 
+1. Dans le panneau **Manage contact information** qui apparait pour Alan Yoo, saisissez ```Accounts Receivable``` dans le champ **Department** avant de cliquer sur **Save changes**. 
 1. Une fois que le bandeau vert indiquant **Contact information updated** apparait, cliquez sur le **X** de fermeture en haut à droite du panneau **Manage contact information**.
 1. Le compte d'Alan Yoo devrait toujours être sélectionné dans la liste **Active Users**. Dans la barre de menu au-dessus de la liste d'utilisateurs, sélectionnez les **points de suspension** (**More actions**) de nouveau. Dans le menu qui apparait, sélectionnez **Edit sign-in status**.
 1. Sur le panneau **Block sign-in**, cochez la case **Block this user from signing in** avant de cliquer sur le bouton **Save changes**. Notez le bandeau vert indiquant que le compte de Alan est désormais bloqué et qu'il sera déconnecté des services Microsoft dans les 30 minutes. Cliquez sur le **X** de fermeture en haut à droite du panneau **Block sign-in**.
@@ -107,7 +107,7 @@ Dans cette tâche, vous allez vérifier l'impact des changements que vous avez f
 1. Dans la fenêtre **Pick an account**, sélectionnez **+ Use another account**.
 1. Dans la fenêtre **Sign in**, entrez **Libby@WWLxxxxx.onmicrosoft.com** et cliquez sur **Next**.
 1. Dans la fenêtre **Enter password**, saisissez le mot de passe temporaire de Libby dont vous avez pris note à l'étape précédente et cliquez sur le bouton **Sign in**.
-1. Dans la fenêtre **Update your password**, entrez de nouveau le mot de passe temporaire de Libby dans le champ **Current password**, et utilisez le mot de passe **ibForm@tion** dans les champs **New password** et **Confirm password**. Cliquez sur **Sign in**.
+1. Dans la fenêtre **Update your password**, entrez de nouveau le mot de passe temporaire de Libby dans le champ **Current password**, et utilisez le mot de passe ```ibForm@tion``` dans les champs **New password** et **Confirm password**. Cliquez sur **Sign in**.
 1. Si une fenêtre **Welcome to Microsoft 365** apparait, cliquez deux fois sur la flèche de droite pour accéder à la validation vous permettant de la fermer.
 1. Vérifiez que vous pouvez accéder à la page d'accueil de Microsoft 365. Notez qu'aucune application n'est présente sur le portail de Libby puisque vous n'avez affecté aucune licence au compte de Libby.
 1. Vous devez désormais vous déconnecter du compte de Libby pour tenter de vous connecter avec le compte de Alan Yoo. Pour vous déconnecter, cliquez sur le cercle en haut à droite contenant **LH** (les initiales de Libby Hayward) et cliquez sur **Sign out**.
@@ -116,12 +116,12 @@ Dans cette tâche, vous allez vérifier l'impact des changements que vous avez f
 1. Dans la page **login**, cliquez sur le choix **Switch to a different account** en dessous du bouton **Sign in**
 1. Saisissez **Alan@WWLxxxxx.onmicrosoft.com** dans le champ **Email address** avant de cliquer sur **Sign in**.
 1. Dans la fenêtre **Sign in**, cliquez sur **Next**
-1. Dans la fenêtre **Enter password**, saisissez **Pa55w.rd** et cliquez sur **Sign in**.
+1. Dans la fenêtre **Enter password**, saisissez ```Pa55w.rd``` et cliquez sur **Sign in**.
 1. Sur la fenêtre **Pick an account**, constatez qu'un message d'erreur apparait, indiquant que le compte de Alan a été bloqué. Vous venez de vérifier que Alan ne peut plus se connecter à Microsoft 365.
 1. Vous allez finalement vous connecter avec votre compte admin de Dominique Skyetson, en utilisant le compte nominatif que vous avez créé dans la première tâche de cet exercice. Dans la fenêtre **Pick an account**, sélectionnez donc **+ Use another account**.
 1. Dans la fenêtre **Sign in**, saisissez **dom@WWLxxx.onmicrosoft.com** et cliquez sur **Next**.
-1. Dans la fenêtre suivante, utilisez le mot de passe **Pa55w.rd** et cliquez sur **Sign in**.
-1. Dans la fenêtre **Update your password**, saisissez **Pa55w.rd*** dans le champ **Current password** et saisissez **ibForm@tion** dans les champs **New password** et **Confirm password**. Cliquez sur **Sign in**.
+1. Dans la fenêtre suivante, utilisez le mot de passe ```Pa55w.rd``` et cliquez sur **Sign in**.
+1. Dans la fenêtre **Update your password**, saisissez ```Pa55w.rd``` dans le champ **Current password** et saisissez ```ibForm@tion``` dans les champs **New password** et **Confirm password**. Cliquez sur **Sign in**.
 1. Si une fenêtre **Welcome to Microsoft 365** apparait, cliquez deux fois sur la flèche de droite pour accèder à la validation vous permettant de la fermer. 
 1. Dans la page d'accueil **Welcome to Microsot 365**, cliquez sur la tuile **Admin**.
 1. Dans le portail **Microsoft 365 admin center**, dans le menu de navigation à gauche, ouvrez le groupe **Users** pour y sélectionner **Active users**.

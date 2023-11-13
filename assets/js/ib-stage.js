@@ -5,7 +5,7 @@ function addCopyButton() {
         let copyButton = document.createElement("button");
         copyButton.innerText = '';
         copyButton.className = 'copyBtn';
-        copyButton.title = 'Cliquer pour copier ce texte dans votre presse-papier.';
+        copyButton.title = 'Cliquez pour copier ce texte dans votre presse-papier.';
         copyButton.type = 'button';
         codeBlock.appendChild(copyButton);
         copyButton.addEventListener("click", async () => {
@@ -15,7 +15,8 @@ function addCopyButton() {
     });
     }
 async function copyCode(codeBlock) {
-    await navigator.clipboard.writeText(codeBlock.innerText.slice(0,-6));
-    console.log(codeBlock.getElementsByTagName('button')[0].className='copyBtnDone')
+    await navigator.clipboard.writeText(codeBlock.innerText);
+    codeBlock.getElementsByTagName('button')[0].className='copyBtnDone';
+    codeBlock.getElementsByTagName('button')[0].title = 'Texte copié (recliquez pour copier de nouveau)'
     }
     
