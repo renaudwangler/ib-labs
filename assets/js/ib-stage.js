@@ -16,6 +16,6 @@ function addCopyButton() {
     }
 async function copyCode(codeBlock) {
     await navigator.clipboard.writeText(codeBlock.innerText.slice(0,-6));
-    console.log(codeBlock.getElementsByTagName('button')[0].className)
+    console.log(codeBlock.getElementsByTagName('button')[0].className='copyBtnDone')
     }
     

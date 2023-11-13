@@ -32,7 +32,7 @@ Il vous est conseillé de prendre note des informations suivantes (fournies par 
 ## Tâche 2 - Profil d'entreprise de Adatum
 A travers les ateliers de ce stage, vous allez prendre l'identité de Dominique Skyetson, administrateur Microsoft 365 de Adatum. En tant que Dominique, il vous a été demandé de configurer le profil de l'entreprise sur le tenant de test. Dans cette tâche, vous allez procéder à cette configuration. Puisque Dominique ne s'est pas encore créé de compte personnel dans l'environnement (ce sera fait à l'atelier suivant), vous allez d'abord vous connecter avec le compte *MOD Administrator* par défaut, dont vous avez précédemment noté le mot de passe.  
 1. Lors de l'ouverture de votre environnement d'ateliers, vous devez vous connecter sur la machine virtuelle **LON-DC1**. Si votre environnement s'est ouvert sur une autre machine virtuelle par défaut, basculez sur la machine **Lon-DC1**.
-1. Connectez-vous sur LON-DC1 avec le compte **ADministrator** et le mot de passe **Pa55w.Rd**.
+1. Connectez-vous sur LON-DC1 avec le compte ```Administrator``` et le mot de passe ```Pa55w.Rd```.
     > **Note :** Si un panneau **Networks** s'affiche sur la droite de votre écran demandant si vous souhaitez activer la découverte sur le réseau, cliquez sur **Yes**.
 1. Le **Server Manager** va s'ouvrir automatiquement. Laissez cette fenêtre ouverte mais réduisez-là dans la barre des tâches pour le moment.
 1. Sur la barre des tâches, cliquez sur l'icône de **Microsoft Edge**. Passez les éventuelles pages de bienvenue (vous pouvez choisir **Continue without signing in**).
@@ -47,7 +47,7 @@ A travers les ateliers de ce stage, vous allez prendre l'identité de Dominique 
 1. Dans le menu de navigation, cliquez sur **Settings** pour en ouvrir le groupe d'options, puis cliquez sur **Org Settings**.
 1. Dans la fenêtre **Org Settings**, c'est l'onglet **Services** qui est affiché par défaut. Puisque vous souhaitez modifier le profil de l'entreprise, cliquez sur l'onglet **Organization profile** pour l'afficher. sélectionnez ensuite **Organization information**.
 1. Dans la fenêtre **Organization information** qui s'affiche, modifiez les informations suivantes :
-    - Name : **Adatum**
+    - Name : ```Adatum*```
 	- Technical contact : (l'adresse email du compte *MOD Administrator*)
 1. Cliquez ensuite sur **Save**.
 1. Une fois les modifications sauvegardées, un message ***Saved*** apparaît en haut de la fenêtre dans un encadré vert. Cliquez sur le **X** tout en haut à droite de la fenêtre **Organization information** pour la fermer.
@@ -56,7 +56,7 @@ A travers les ateliers de ce stage, vous allez prendre l'identité de Dominique 
 	> **Note :** Un des avantages de Microsoft 365 est la possibilité de tirer parti des dernières fonctionnalités et mises à jour automatiquement dans votre tenant, ce qui va réduire les couts de maintenance et la surcharge administrative pour une entreprise.
     L'option **Targeted release for select users** vous permet de garder le contrôle des utilisateurs qui auront les mises à jour et nouvelles fonctionnalités en premier, afin de préparer sereinement l'entreprise à l'arrivée de ces nouveautés pour tout le monde.
 1. Sous votre choix **Targeted release for select users** S'affichent désormais les possibilités **Select users** et **Upload users** (depuis un fichier CSV). Cliquez sur **Select users**.
-1. Dans la fenêtre **Choose users for targeted release**, cliquez dans le champ **Who should receive targeted releases?**. Vous allez ainsi avoir accès à la liste des compte utilisateurs existant.
+1. Dans la fenêtre **Choose users for targeted release**, cliquez dans le champ **Who should receive targeted releases?**. Vous allez ainsi avoir accès à la liste des comptes utilisateurs existant.
 1. Dans la liste des utilisateurs, sélectionnez *MOD Administrator* avant de cliquer sur **Save**.
 1. Dans la fenêtre **Release preferences** , clique sur le **X** de fermeture en haut à droite.
 1. De retour sur l'onglet **Organization profile** de la fenêtre **Org settings**, sélectionnez **Custom themes**.
@@ -80,7 +80,7 @@ Dans cette tâche, vous allez vérifier l'état de santé du service Microsoft 3
 1. A la suite de la tâche précédente, vous devriez toujours être connecté sur **LON-DC1** avec le compte **Administrator** et être connecté sur le portail d'administration de Microsoft 365 sous le compte **MOD Administrator**.
 1. Dans le portail **Microsoft admin center**, dans le menu de navigation, ouvrez le groupe **Health** pour choisir l'option **Service health**. Cela fait apparaitre le dashboard **Service health**.
 1. Sur la page **Service health**, l'onglet **Overview** est affiché apr défaut. Cet onglet affiche les problèmes concernant actuellement les services Microsoft 365 disponibles avec vos abonnements.
-	> **Note** : Vous Si aucun problème n'est actuellement listé, vous pouvez toujours cliquer sur l'onglet **Issue history** pour réaliser l'opération suivante.
+	> **Note** : Si aucun problème n'est actuellement listé, vous pouvez toujours cliquer sur l'onglet **Issue history** pour réaliser l'opération suivante.
 1. Cliquez sur une ligne représentant un problème pour observer le détail des informations fournies par l'éditeur sur ce problème et son état actuel de prise en charge et/ou de résolution.
 1. Après avoir observé les détails d'un problème, cliquez sur le **X** en haut à droite pour le fermer et n'hésitez pas à aller en observer d'autres.
 1. Restez connecté sur LON-DC1 VM et laissez votre navigateur Internet ouvert pour l'exercice suivant de vos ateliers.
