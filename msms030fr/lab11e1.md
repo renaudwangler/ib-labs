@@ -33,12 +33,12 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 1. Consultez chacun des 2 types de rapports proposés ici (**Usage** et **Adoption Score**).
 1. Microsoft 365 inclut également d'autres types de rapport, qui peuvent être trouvés dans le portail qui les concerne. Par exemple des :
 	- Rapports de sécurité sont disponibles dans le portail *Defender*.
-		>1. Dans le menu de navigation du portail **Microsoft 365 admin center**, cliquez sur le portail **Security** dans la section **Admin centers**.
-		>1. En bas du menu de navigation du portail **Defender**, cliquez sur le choix **Reports**.
+		1. Dans le menu de navigation du portail **Microsoft 365 admin center**, cliquez sur le portail **Security** dans la section **Admin centers**.
+		1. En bas du menu de navigation du portail **Defender**, cliquez sur le choix **Reports**.
 
 	- Rapports de flux de messages dans le centre d'administration Exchange.
-		>1. Dans le menu de navigation du portail **Microsoft 365 admin center**, cliquez sur le portail **Exchange** dans la section **Admin centers**.
-		>1. Dans le menu de navigation du portail **Exchange**, sélectionnez **Mail flow** dans le groupe d'options **Reports** 
+		1. Dans le menu de navigation du portail **Microsoft 365 admin center**, cliquez sur le portail **Exchange** dans la section **Admin centers**.
+		1. Dans le menu de navigation du portail **Exchange**, sélectionnez **Mail flow** dans le groupe d'options **Reports** 
 
 	>**Note :** Dans le contexte de votre atelier, de nombreux rapports contiendront peu ou pas d'information, du fait du peu d'interaction des utilisateurs Adatum avec l'environnement pilote...
 
