@@ -2,38 +2,47 @@
 layout: stage
 title: "Lab11-Ex1 - Etat de santé du service Microsoft 365"
 length: "00"
-date: "En cours"
+date: "13/11/2023"
 ---
 # Scénario
-As Dominique Skyetson concludes her Microsoft 365 pilot project, she is interested in viewing the health of Adatum's Microsoft services, including Office on the web, Yammer, and mobile device management cloud services. After doing a little research, Dominique has discovered that this information is available on the Service health page in the Microsoft 365 admin center. Therefore, if Adataum experiences problems with a cloud service, Dominique can check its service health to determine whether this is a known issue with a resolution in progress before she calls Microsoft Support or spends time troubleshooting.  
-In this exercise, Dominique will view the Microsoft 365 service health and several service health reports in the Microsoft 365 admin center.
+Pour conclure le projet pilote d'Adatum, Dominique Skyetson souhaite faire le point sur la visibilité de l'état des services Microsoft 365, incluant Office on the web, Engage et le MDM. Après une petite recherche, Dominique a décvouvert que cette information est directement accessible dans la page *Service Health* sur le portail d'administration Microsoft 365. Ainsi, si Adatum rencontre des problèmes avec l'exploitation d'un service Cloud, Dominique peut vérifier l'état de santé dudit service pour déterminer si le problème est actuel/connu/en cours de résolution avant d'ouvrir un ticket de support chez Microsoft et/ou de passer du temps à résoudre le souci. 
+
+Dans cet exerice, Dominique va visualiser les informations d'état de santé du service et divers rapports depuis le portails *Microsoft 365 admin center*.
 
 # Objectifs
 A la fin de cet exercice, vous aurez une meilleure connaissance de :
+- La consultation de l'état de santé des services de l'environnement Microsoft 365
+- La consultation de rapports depuis les portails d'administration.
 
 
-## Task 1- View Microsoft 365 service health
-1. On **LON-CL1** you should still be logged in as the **Administrator** from the prior lab exercise.
-1. In your Edge browser, you should still have a tab open for the **Microsoft 365** homepage and the **Microsoft 365 admin center** and you should still be logged in as Dominique Skyetson.
-1. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Show all**, select **Health**, and then select **Service health**.
-1. On the **Service health** page, if any issue is present under the **Active issues** section, click on its title to open an information pane with informations about the issue. Review information about the issue, then close this issue pane.
-1. On the **Service health** page, under **Microsoft service health** Look for the services list if any displays some problems or advisories. Try to attach this information to the previous issue.
-1. On the **Service health** page, select **Issue history** on the menu bar. This displays a history of incidents and advisories that have been resolved.
-1. In the **Microsoft 365 admin center**, in the left-hand navigation pane under **Health**, select **Message center**.
-1. The **Message Center** page displays a list of all active messages related to  planned changes in the **Inbox**. Select a message to open a detail pane that provides a high-level overview of the planed change. Review any of the messages that interest you.
-1.The **Archive** tab displays pasts changes. Select any entry in the list to view the details about it. Close the detail pane to return to the history list. Repeat this for any event that interests you.
-1. Leave the Edge browser and all its tabs open and proceed to the next task.
+## Tâche 1 - Visualiser l'état de santé des services
+1. Sur la machine virtuelle **LON-CL1**, votre session devrait déjà ouverte, avec le compte **ADATUM\Administrator** et le mot de passe **Pa55w.rd**.
+1. Les portails **Microsoft 365 admin center** et **Sharepoint Purview** (que vous pouvez désormais fermer) devraient être resté ouverts dans votre navigateur Internet (et vous devriez y être connecté avec le compte de *Dominique Skyetson*).
+1. Dans le menu de navigation du portail **Microsoft 365 admin center**, sélectionnez **Service health** dans le groupe d'options **Health** (il pourra être utile de cliquer sur **Show all**).
+1. Sur la page **Service health** page, si un problème est présent dans la section **Active issues Microsoft is working on**, cliquez sur son titre pour ouvrir un panneau d'information contenant les détails du problème. Consultez les informations détaillées sur le problème, puis fermer le panneau.
+1. Sur la page **Service health**, sous la section **Service status**, consultez la liste des services pour voir si certains affichent un problème connu en cours. Essayez, le cas échéant, de faire le lien avec les informations consultées dans le point précédent.
+1. Sur la page **Service health**, cliquez sur l'onglet **Issue history**. Un historique des incidents récemment résolus et autres avertiossements va s'afficher.
+1. Dans le menu de navigation du portail **Microsoft 365 admin center**, sélectionnez **Message center** dans le groupe d'options **Health**.
+1. La page **Message Center** affiche une liste de tous les messages en cours (*inbox*) liés à des modifications plannifiées et/ou en cours de mise en oeuvre. Sélectionnez un message pour consulter quelques informations sur le changement prévu. N'hésitez pas à consulter n'importe quel message dont le thème vous intéresse.
+1. L'onglet **Archive** affiche la liste de changement récent, mais passés. Sélectionnez une entrée de la liste pour avoir plus de détails dessus.
+1. Laissez ouvert le navigateur Internet pour la tâche suivante.
 
-## Task 2 - View reports in the Microsoft 365  admin center
+## Tâche 2 - Visualiser des rapports
 
-1. On **LON-CL1** you should still be logged in as the **Administrator** from the prior lab exercise. In your Edge browser, you should also be logged into Microsoft 365 as Dominique Skyetson.
-1. In the **Microsoft 365  admin center**, in the left-hand navigation pane, select **Reports**. Note that as of this writing there are only 2 reports listed in this group. Select each of the reports to view information related to it.
-1. Microsoft 365 includes a variety of additional reports, which can be found in the portals to which they apply. For example:  
-	- Security reports are included in the Reports dashboard in the Defender portal. In the **Microsoft 365 admin center**, under the **Admin centers** group, select **Security**. This opens the **Microsoft Defender** portal. In the navigation pane select **Reports**.
-	- Mail flow reports are included in the Exchange admin center. In the **Microsoft 365 admin center**, under the **Admin centers** group, select **Exchange**. This opens the **Exchange admin center**. In the navigation pane select **Mail flow**, in the **Reports** section.  
-	Review any of the reports that are of interest to you. 
-	>**Note:** Most of the reports have limited data due to the lack of data in your virtualized lab environment for the fictitious Adatum Corporation.
-4. Leave the Edge browser open, and leave the **Microsoft 365** homepage tab open as well as the **Microsoft 365 admin center** tab. However, close all other tabs and then proceed to the next task.
+1. Dans le menu de navigation du portail **Microsoft 365 admin center**, cliquez sur le groupe d'options **Reports**.
+1. Consultez chacun des 2 types de rapports proposés ici (**Usage** et **Adoption Score**).
+1. Microsoft 365 inclut également d'autres types de rapport, qui peuvent être trouvés dans le portail qui les concerne. Par exemple des :
+	- Rapports de sécurité sont disponibles dans le portail *Defender*.
+		>1. Dans le menu de navigation du portail **Microsoft 365 admin center**, cliquez sur le portail **Security** dans la section **Admin centers**.
+		1. En bas du menu de naviagtion du portail **Defender**, cliquez sur le choix **Reports**.
+
+	- Rapports de flux de messages dans le centre d'administration Exchange.
+		>1. Dans le menu de navigation du portail **Microsoft 365 admin center**, cliquez sur le portail **Exchange** dans la section **Admin centers**.
+		1. Dans le menu de navigation du portail **Exchangz**, sélectionnez **Mail flow** dans le groupe d'options **Reports** 
+
+	>**Note :** Dans le contexte de votre ateliers, de nombreux rapports contiendront peu ou pas d'information, du fait du peu d'intéraction des utilisateurs Adatum avec l'environnement pilote...
+
+1. Laissez ouvert le navigateur Internet pour l'exercice suivant, vous pouvez fermez tous les onglets sauf celui qui affiche le portail **Microsoft 365 admin center**.
 
 ## Résultat
 A l'issue de cet exercice, vous devriez savoir surveiller l'état de santé des services Microsoft 365 et consulter des rapports depuis le centre d'administration.
