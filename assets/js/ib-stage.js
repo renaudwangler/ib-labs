@@ -5,7 +5,8 @@ function addCopyButton() {
         let copyButton = document.createElement("button");
         copyButton.innerText = '';
         copyButton.className = 'copyBtn';
-        copyButton.title = 'Cliquer pour copier ce texte dans votre presse-papier.'
+        copyButton.title = 'Cliquer pour copier ce texte dans votre presse-papier.';
+        copyButton.type = 'button';
         codeBlock.appendChild(copyButton);
         copyButton.addEventListener("click", async () => {
           await copyCode(codeBlock.innerText.slice(0,-6));});}
