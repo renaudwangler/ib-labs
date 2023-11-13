@@ -3,7 +3,7 @@ function addCopyButton() {
       // only add button if browser supports Clipboard API
       if (navigator.clipboard) {
         let copyButton = document.createElement("button");
-        copyButton.innerText = 'copier';
+        copyButton.innerText = '';
         copyButton.className = 'copyBtn';
         codeBlock.appendChild(copyButton);
         copyButton.addEventListener("click", async () => {
