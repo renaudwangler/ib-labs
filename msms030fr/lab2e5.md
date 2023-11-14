@@ -56,8 +56,8 @@ Dans cette tâche, Dominique va vérifier la délégation administrative mise en
 1. Dans cette nouvelle fenêtre privée, saisissez l'adresse ```https://www.microsoft365.com``` pour vous rendre sur le portail Microsoft 365.
 1. Vous allez commencer par vous connecter avec le compte de **Alan Yoo**. Cliquez sur **Sign In**
 1. Dans la fenêtre **Sign-in**, entrez **Alan@WWLxxxxx.onmicrosoft.com** (remplacez bien par votre préfixe de tenant).  
-1. Dans la fenêtre **Enter password**, tapez **Pa55w.rd**.
-1. Dans la fenêtre **Update your pasword**, changez le mot de passe de Alan comme déjà vu précédemment de **Pa55w.rd** vers **ibForm@tion**.
+1. Dans la fenêtre **Enter password**, tapez ```Pa55w.rd```.
+1. Dans la fenêtre **Update your pasword**, changez le mot de passe de Alan comme déjà vu précédemment de **Pa55w.rd** vers ```ibForm@tion```.
 1. Dans la fenêtre **Stay signed in?**, cliquez sur **Yes**.
 1. Si une fenêtre **Welcome to Microsoft 365** apparait, cliquez deux fois sur la flèche de droite pour pouvoir la fermer.
 1. Notez que sur la page d'accueil de **Microsoft 365**, Alan n'a pas d'option **Admin** pour ouvrir le portail d'administration.
@@ -65,7 +65,7 @@ Dans cette tâche, Dominique va vérifier la délégation administrative mise en
 1. Dans **Microsoft Edge**, en haut à droite de la page, cliquez sur l'icône utilisateur de **Alan Yoo** (Le cercle contenant ses initiales **AY**), et cliquez sur **Sign out.**
 1. Vous allez désormais vous connecter avec le compte de **Leanna Goodwin**. Dans votre page actuelle sur **Edge** en navigation privée, vous devriez être face à un message indiquant **Alan, you're signed out now**. Sur cette page, cliquez sur **Switch to a different account**, et saisissez l'adresse **Leanna@labxxxxx.godeploylabs.com** dans le champ **Email address** qui s'affiche avant de cliquer sur **Sign in**.
 1. Dans la fenêtre **Sign in**, vérifiez que l'adresse de Leanna est correctement saisie avant de cliquer sur **Next**.
-1. Dans la fenêtre **Enter password**, entrez **Pa55w.rd**.
+1. Dans la fenêtre **Enter password**, entrez ```Pa55w.rd```.
 1. Cliquez sur **Yes** sur la fenêtre **Stay signed in?**.
 1. Si une fenêtre **Welcome to Microsoft 365** s'affiche, fermez-la comme vu précédemment.
 1. Notez que, vu que Leanna s'est vu affecter un rôle administratif, elle peut accéder au centre d'administration : La tuile **Admin** Apparaît à gauche sur la page d'accueil. Cliquez sur **Admin** pour ouvrir le **Microsoft 365 admin center** dans un nouvel onglet.
@@ -77,7 +77,7 @@ Dans la liste **Active users**, notez que, en passant la souris sur les lignes r
 1. Vous devriez recevoir un message d'erreur indiquant que vous ne pouvez réinitialiser le mot de passe de Elvis car il s'est vu affecté un rôle administratif. En effet, Elvis est *Billing Administrator*. Comme seul le *Global Admin* permet de réinitialiser le mot de passe d'un autre administrateur, Leanna devra demander à Dominique de s'occuper du cas de Elvis. Cliquez sur **Close**.
 1. Si un sondage d'option s'affiche, fermez-le en cliquant sur **Cancel**.
 1. Dans la liste **Active users**, cliquez sur la clef **Reset a password** en regard du compte de **Alan Yoo**.
-1. Dans le panneau **Reset password** pour Alan, si nécessaire, décochez la case **Automatically create a password** et saisissez **Pa55w.rd** dans le champ **Password**. Si nécessaire,  sélectionnez la case à cocher **Require this user to change their password when they first sign in**.
+1. Dans le panneau **Reset password** pour Alan, si nécessaire, décochez la case **Automatically create a password** et saisissez ```Pa55w.rd``` dans le champ **Password**. Si nécessaire,  sélectionnez la case à cocher **Require this user to change their password when they first sign in**.
 1. Cliquez sur **Reset password**.
 1. Dans la fenêtre **Password has been reseet**, vous devriez voir un message vert indiquant que la réinitialisation du mot de passe a correctement eu lieu. Cliquez sur **close**.
 1. Adatum suppute que le compte de Leila Macdonald's ait pu être compromis récemment. En conséquence, Leanna s'est vu demander de bloquer le compte de Leila pour l'empêcher de se connecter jusqu'à ce que l'équipe sécurité détermine l'étendue du problème. Dans la liste **Active users**, cliquez sur le nom de **Leila Macdonald**.   

@@ -5,60 +5,63 @@ length: "00"
 date: "En cours"
 ---
 # Scénario
-The logical conclusion to monitoring Microsoft 365 service health is the ability to troubleshoot errors that occur in the system. For Dominique Skyetson, this means monitoring mail-related issues, which have been a nagging issue for Adatum in the past. Dominique plans to take advantage of Microsoft's Remote Connectivity Analyzer tool to troubleshoot mail-flow issues. The tool is web-based and is designed to help IT Administrators troubleshoot connectivity issues that affect their Microsoft deployments. The tool simulates several client log-on and mail flow scenarios. When a test fails, many of the errors have troubleshooting tips to assist the IT Administrator to correct the problem.  
-Dominique plans to test this tool by sending email to a non-existent domain and to a non-existent user and then use the tool to troubleshoot the errors that occur. She will then test message tracing to help troubleshoot mail-flow issues. Message tracing in the Exchange admin center follows email messages as they travel through an Exchange Online organization. Dominique will use message tracing to determine if a message was received, rejected, deferred, or delivered by the service. She will also use it to show what actions were taken on the message before it reached its final status.
+La conclusion logique à la surveillance des services Microsoft 365 esy la possibilité de dépanner les erreurs qui surviennent dans le système. Pour Dominique Skyetson ca veut dire surveiller les problèmes liés à la messagerie, qui furent une plaie par le passé pour Adatum. Dominique pense tirer parti du *Remote Connectivity Analyzer* pour dépanner les problèmes de flux de messages. C'est un outil web pensé pour aider les administrateurs système à dépanner les problèmes de connectivité affectant leur environnement. L'outil va simuler diffrents flux de connexion et d'utilisation des outils.  
+Dominique a prévu de tester cet outil en envoyant un email à un domaine qui n'existe pas et à un utilisateur n'existant pas. Ensuite, il va utiliser l'outil pour résoudre les erreurs survenues. Il va ensuite tester la tracabilité des messages pour en voir l'utilité dans son scénario de flux de messages. Dominique va ainsi chercher à savoir si un message a été reçu, rejetté, différé ou livré par les services Exchange Online.
 
 # Objectifs
 A la fin de cet exercice, vous aurez une meilleure connaissance de :
+- L'outil d'analyse des en-tête de messages
+- La traçabilité des messages Exchange
 
 
-## Task 1 - Send an email to a non-existent domain
-1. On **LON-CL1** you should still be logged in as the **Administrator** from the prior lab exercise. 
-1. Your Edge browser should still be open, and you should be logged into Microsoft 365 as Dominique Skyetson. You should have tabs open for the **Microsoft 365** homepage and the **Microsoft 365 admin center**.
-1. Select the **Microsoft 365** homepage tab, and in the Microsoft portal, select **Outlook**.
-1. In **Outlook**, select **New mail**.
-1. In the message form, type **user@alt.none** in the **To** box.
-1. Enter a subject and some body text and then select **Send**.
-1. Wait for the delivery failure message to appear.
-1. Once the delivery failure message arrives, select the delivery failure message. Note the reason for the failure: **The Domain Name System (DNS) reported that the recipient's domain does not exist.**
-1. Scroll down in the text portion of the message to the **Diagnostic information for administrators** section. Select all the text in this section (starting with **Generating server** down to the end of this diagnostic data), and then copy it to the clipboard.
-1. In Microsoft Edge, open a new tab and enter the following URL in the address bar: **https://testconnectivity.microsoft.com**
-1. This opens the **Microsoft Remote Connectivity Analyzer** page. In the left-hand navigation pane, select the **Message Analyzer** tab.
-1. In the **Message Header Analyzer** page, in the section that displays **Paste headers here**, press **Ctrl-V** to paste in the header data that you copied to the clipboard, and then select **Analyze headers**.
-1. Review the diagnostic information and the time taken for the message to be rejected.
-1. Select **Clear** to reset the Message Header Analyzer.
-1. Leave the Edge browser and all tabs open and proceed to the next task.
+## Tâche 1 - Envoi d'un email à un domaine non existant
+1. Sur la machine virtuelle **LON-CL1**, votre session devrait déjà ouverte, avec le compte **ADATUM\Administrator** et le mot de passe **Pa55w.rd**.
+1. Le portail **Microsoft 365 admin center** devrait être resté ouvert dans votre navigateur Internet (et vous devriez y être connecté avec le compte de *Dominique Skyetson*).
+1. Dans la page **Microsoft 365 admin center**, cliquez sur le menu des applications 365 (le carré de 3 x 3 cases en haut à gauche) pour y choisir **Outlook**.
+1. Dans **Outlook**, cliquez sur le bouton **New mail**.
+1. Dans le formulaire de nouveau message, tapez ```user@alt.none``` dans le champ **To**.
+1. Dans le champ **subject**, saisissez ```Test email for non-existing domain.``` et tapez un peu de texgt dans le coprs du message avdn de cliquer sur le bouton **Send**.
+1. Attendez de recoir le mesage d'échec de livraison.
+1. une fois le message d'échec de livraion reçu, ouvrez-le. Notez la raison de l'echec de livraion : **The Domain Name System (DNS) reported that the recipient's domain does not exist.**
+1. Descendez dans le corps du message jusqu'à la section **Diagnostic information for administrators**. Sélectionnez tout le texte de cette section (qui commence par **Generating server** jusqu'à la fin du message) et copiez-le dans votre presse-papier.
+1. Ouvrez un nouvel onglet dans votre navigateur Internet et utilisez l'URL suivante ```https://testconnectivity.microsoft.com```.
+1. La page **Microsoft Remote Connectivity Analyzer** s'ouvre. Dans le menu de navigation à gauche, cliquez sur l'onglet **Message Analyzer**.
+1. Dans la page **Message Header Analyzer** qui s'est ouverte dans un nouvel onglet, Cliquez dans la zone de texte sous le titre **Insert the message header you would like to analyze** et copiez-y les informations de diagnostique précédemment copiées.
+1. Cliquez ensuite sur le bouton **Analyze headers**.
+1. Consultez les informations de diagnotique et le temps qu'il a fallu pour que le message soit rejetté par exemple.
+1. Cliquez sur **Clear** pour réinitialiser le *Message Header Analyzer*.
+1. Laissez tous les onglets ouverts sur votre navigateur Internet pour la tâche suivante.
 
-## Task 2 - Send an email to a non-existent user
-1. In the **Edge** browser, select the **Mail - Outlook** tab for Dominique Skyetson.
-1. In **Outlook**, select **New mail**.
-1. In the message form, type **ynotknirf082760@outlook.com** in the **To** box.
-1. Enter a subject and some body text and then select **Send**.
-1. Wait for the delivery failure message to appear.
-1. Once the delivery failure message arrives, select the delivery failure message. Note the reason for the failure: **Delivery has failed to these recipients or groups:**
-1. Scroll down in the text portion of the message to the **Diagnostic information for administrators** section. Select all the text in this section (starting with **Generating server** down to the end of this diagnostic data), and then copy it to the clipboard. 
-1. In Microsoft Edge, select the **Message Analyzer** tab.
-1. In the **Message Header Analyzer** page, in the section that displays **Paste headers here**, press **Ctrl-V** to paste in the header data that you copied to the clipboard, and then select **Analyze headers**.
-1. Review the diagnostic information and the time taken for the message to be rejected.
-1. Select **Clear** to reset the Message Header Analyzer.
-1. In the **Edge** browser, close all tabs except for the **Microsoft 365** homepage tab. 
+## Tâche 2 - Envoi d'un email à un utilisateur non existant
+1. Dans votre navigateur Internet, basculez sur l'onglet affichant la messagire **Outlook** de Dominique Skyetson.
+1. Dans **Outlook**, cliquez sur le bouton **New mail**.
+1. Dans le formulaire de nouveau message, tapez ```ynotknirf082760@outlook.com``` dans le champ **To**.
+1. Dans le champ **subject**, saisissez ```Test email for non-existing user.``` et tapez un peu de texgt dans le coprs du message avdn de cliquer sur le bouton **Send**.
+1. Attendez de recoir le mesage d'échec de livraison.
+1. une fois le message d'échec de livraion reçu, ouvrez-le.
+1. Descendez dans le corps du message jusqu'à la section **Diagnostic information for administrators**. Sélectionnez tout le texte de cette section (qui commence par **Generating server** jusqu'à la fin du message) et copiez-le dans votre presse-papier.
+1. Dans votre navigateur Internet, basculez vers l'onglet **Message Header Analyzer**.
+1. Cliquez dans la zone de texte sous le titre **Insert the message header you would like to analyze** et copiez-y les informations de diagnostique précédemment copiées.
+1. Cliquez ensuite sur le bouton **Analyze headers**.
+1. Consultez les informations de diagnotique et le temps qu'il a fallu pour que le message soit rejetté par exemple.
+1. Fermez tous les onglets ouverts sur votre navigateur Internet, hormis celui contenant le portail **Microsoft 365 admin center**.
 
-## Task 3 - Analyze mail flow
-In this task, you will conduct a message trace to monitor message flow. Note that the Message Trace feature is provided through the Exchange Online admin center. However, it can be accessed from the **Defender** portal.
-1. In the **Edge** browser on **LON-CL1**, the **Microsoft 365** homepage tab should still be open from the prior task. In this tab, select **Admin**. 
-1. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Show all**, and then under **Admin centers** select **Security**.
-1. In the **Microsoft Defender** portal, in the left-hand navigation pane, select **Exchange message trace** in the  **Email & collaboration** section.
-1. In **Message trace** page, note the existing queries that you can use. However, in this case, you will create a custom message trace. Select **+Start a trace**.
-1. In the **New message trace** window, select the **Senders** field. In the list of users that appears, select **Dominique Skyetson**.
-1. In the **Time range** chart, move the slider to **1 day** (this will show the past 24 hours).
-1. In the  **Detailed search options** section, in the **Delivery status** field, select **Failed**.
-1. Select **Search**.
-1. On the **Message trace search results** page, note the two messages that appear.  
-Click the message for the non-existent user. This opens the **Message trace details** pane, which displays the detailed information for the message, including the sender, recipient, message size, ID, and IP address information.  
-	Select the **Message events** and **More information** sections to expand them. As you review the information, pay special note to the following data: Receive, Submit, Span. Diagnostics, and Faild.  Close the pane when you are finished.
-1. Repeat the prior step for the non-existent domain message. 
-1. Close the Message Trace window.
+## Tâche 3 - Analyse du flux de messages
+Dans cette tâche, vous allez surveiller le flux de message en analysant leur traçabilité. Notez que bien que la fonctionnalité de traçabilité des messages soit fournie par *Exchange*, elle s'accède depuis le portail *Defender*.
+1. Dans le menu de navigation du portail **Microsoft 365 admin center**, sous la section **Admin centers**, cliquez sur **Security** (il pourra être utile de cliquer sur **Show all**).
+1. Dans le menu de navigation du portail **Microsoft Defender**, cliquez sur **Exchange message trace** dans la section **Email & collaboration** section.
+1. Dans la page **Message trace** vous trouvez quelques requêtes par défaut que vous pouvez directement utiliser. Cependant, dans le cas de Dominique, il souhaite créeer une trace customisée. cliquez sur **+Start a trace**.
+1. Dans le panneau **New message trace** qui s'affiche, cliquez dans le champ **Senders** et tapez ```Dominique```. Sélectionnez le compte de **Dominique Skyetson**.
+1. Sur l'échelle **Time range**, déplaçez le pointeur sur **1 day** (cela permet d'afficher les dernières 24 heures).
+1. Sous la section **Detailed search options**, dans le champ **Delivery status**, sélectionnez **Failed**.
+1. Cliquez sur le bouton **Search**.
+1. Sur la page **Message trace search results**, les deux messages des tâches précédentes de cet exercice apparaîssent, Cliquez sur le message **Test email for non-existent user**.
+1. Un panneau **Message trace details** s'ouvre, vous donnant des informations concernant ce message et comportant, entre autre, l'émetteur, le destinataire, la taille du message et des informations d'adresses IP.
+1. Sélectionnez les zones **Message events** et **More information** pour les ouvrir.
+1. Fermez le panneau **Message trace details**.
+1. Répètez les opérations précédentes pour le message **Test email for non-existent domain**.
 
 ## Résultat
+A l'issue de ce dernier exercice, vous avez compris comment analyser les problèmes de messages non délivrés.
 
 # Fin des ateliers du stage msms030
