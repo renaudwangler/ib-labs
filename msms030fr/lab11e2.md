@@ -2,7 +2,7 @@
 layout: stage
 title: "Lab11-Ex2 - Dépannage de flux de messages"
 length: "00"
-date: "En cours"
+date: "14/11/2023"
 ---
 # Scénario
 La conclusion logique à la surveillance des services Microsoft 365 esy la possibilité de dépanner les erreurs qui surviennent dans le système. Pour Dominique Skyetson ca veut dire surveiller les problèmes liés à la messagerie, qui furent une plaie par le passé pour Adatum. Dominique pense tirer parti du *Remote Connectivity Analyzer* pour dépanner les problèmes de flux de messages. C'est un outil web pensé pour aider les administrateurs système à dépanner les problèmes de connectivité affectant leur environnement. L'outil va simuler différents flux de connexion et d'utilisation des outils.  
