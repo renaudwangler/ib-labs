@@ -11,11 +11,11 @@ Il est possible de constater si le DC n'a pas correctement démarré dans l'inte
 1. Pour vérifier en PowerShell, lancer une invite *Windows PowerShell* en administrateur (en faisant, par exemple, un clic-droit sur le bouton Démarre de la barre des tâches et en choisissant **Windows Powershell (admin)** ou **Terminal (admin)**)
 1. Dans l'invite PowerShell, utilisez la commande suivante :  
     ```(Get-NetConnectionProfile).NetworkCategory```  
-    Si le résultat de la précente commande est **Public** ou **Private**, le DC n'a pas correctement démarré : passez à la procédure de *nettoyage* du réseau du DC. Sinon, le reste de cette procédure ne vous servira pas pour ce démarrage.
+    Si le résultat de la précente commande est **Public** ou **Private**, le DC n'a pas correctement démarré : passez à la [procédure de *nettoyage* du réseau du DC](#nettoyage-du-r%C3%A9seau-du-dc). Sinon, le reste de cette procédure ne vous servira pas pour ce démarrage.
 1. Pour vérifier en interface graphique, dans une session administrative sur votre DC, lancez le gestionnaire de serveur (**Server Manager**).
 1. Cliquez sur l'onglet **Local Server**
 1. Dans la section **Properties**, notez la valeur de **Microsoft Defender Firewall**  
-    Si le résultat affiché est **Public: On** ou **private: On**, le DC n'a pas correctement démarré : passez à la procédure de *nettoyage* du réseau du DC. Sinon, le reste de cette procédure ne vous servira pas pour ce démarrage.
+    Si le résultat affiché est **Public: On** ou **private: On**, le DC n'a pas correctement démarré : passez à la [procédure de *nettoyage* du réseau du DC](#nettoyage-du-r%C3%A9seau-du-dc). Sinon, le reste de cette procédure ne vous servira pas pour ce démarrage.
 
 ## Nettoyage du réseau du DC
 Si le DC de votre domaine ADDS n'a pas correctement démarré, vous pouyvez *forcer* le redémarrage de son client ADDS une fois que le service serveur ADDS a démarré. Si vous êtes connecté localement sur le DC, le service serveur ADDS a correctement démarré.
