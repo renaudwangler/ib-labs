@@ -45,7 +45,7 @@ $(function() {
           'aria-hidden': 'true'
         })
       ).append(
-        'Copy'
+        'Copier'
       )
     );
     header.insertBefore($(this));
