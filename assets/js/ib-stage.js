@@ -1,7 +1,7 @@
 function addCopyButton() {
     document.querySelectorAll("code").forEach((codeBlock) => {
-      // only add button if browser supports Clipboard API
-      if (navigator.clipboard) {
+      // only add custom button for simple code fields and browser supports Clipboard API
+      if (codeBlock.childElementCount == 1 && navigator.clipboard) {
         let copyButton = document.createElement("button");
         copyButton.innerText = '';
         copyButton.className = 'copyBtn';
