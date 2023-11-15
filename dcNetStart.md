@@ -32,6 +32,14 @@ Si le DC de votre domaine ADDS n'a pas correctement démarré, vous pouyvez *for
 1. Après ces deux actions, votre DC devrait être *proprepment* démarré (vous pouvez le vérifier par la procédure précédente).
 
 ## (re)Démarrage des clients
+Une fois le DC correctement démarré, il va vous falloir redémarrer toutes les autres machines virtuelles (afin qu'elles aient effectué leur démarrage dans un contexte ADDS propre et sécurisé).  
+Comme pour les procédures précédentes, vous pouez réaliser celle-ci en PowerShell :  
+1. lancer une invite *Windows PowerShell* en administrateur (en faisant, par exemple, un clic-droit sur le bouton Démarre de la barre des tâches et en choisissant **Windows Powershell (admin)** ou **Terminal (admin)**)
+1. Dans l'invite PowerShell, utilisez la commande suivante :  
+    ```Get-ADDomain|foreach-object {get-ADComputer -Filter * -searchBase $_.computersContainer|foreach-object {echo "Redémarrage de $($_.DNSHostName)"; Restart-Computer -ComputerName $_.DNSHostName -Force}}```
+1. Une fois ces commandes passées, attendez que la machine sur laquelle vous souhaitez travailler ait redémarré...
+1. Pour redémarrer les machines en passant par l'interface graphique, réalisez les opérations suivantes sur **chaque** machine virtuelle :
+    1. Basculez sur la machine à redémarrer.
 
 ## Commandes tout en un
 Si vous voulez vous simplifier la vie, vous pouvez utiliser les quelques lignes de script suivantes pour réaliser l'ensemble des opérations proposées dans les procédures précédentes en une fois :  
