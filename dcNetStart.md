@@ -18,23 +18,23 @@ Il est possible de constater si le DC n'a pas correctement démarré dans l'inte
     Si le résultat affiché est **Public: On** ou **private: On**, le DC n'a pas correctement démarré : passez à la [procédure de *nettoyage* du réseau du DC](#nettoyage-du-r%C3%A9seau-du-dc). Sinon, le reste de cette procédure ne vous servira pas pour ce démarrage.
 
 ## Nettoyage du réseau du DC
-Si le DC de votre domaine ADDS n'a pas correctement démarré, vous pouyvez *forcer* le redémarrage de son client ADDS une fois que le service serveur ADDS a démarré. Si vous êtes connecté localement sur le DC, le service serveur ADDS a correctement démarré.
+Si le DC de votre domaine ADDS n'a pas correctement démarré, vous pouvez *forcer* le redémarrage de son client ADDS une fois que le service serveur ADDS a démarré. Si vous êtes connecté localement sur le DC, le service serveur ADDS a correctement démarré.
 1. Pour redémarrer la carte réseau du DC en PowerShell, lancer une invite *Windows PowerShell* en administrateur (en faisant, par exemple, un clic-droit sur le bouton Démarre de la barre des tâches et en choisissant **Windows Powershell (admin)** ou **Terminal (admin)**)
 1. Dans l'invite PowerShell, utilisez la commande suivante :  
     ```Get-NetAdapter|restart-NetAdapter```
-1. Une fois cette commande passée, votre DC devrait être *proprepment* démarré (vous pouvez le vérifier par la procédure précédente).
+1. Une fois cette commande passée, votre DC devrait être *proprement* démarré (vous pouvez le vérifier par la procédure précédente).
 1. Pour redémarrer la carte réseau du DC en interface graphique, lancez le gestionnaire de serveur (**Server Manager**).
 1. Dans la section **Properties**, cliquez sur l'adresse IP en face du nom de votre carte réseau (*Ethernet* par défaut).
 1. Dans la fenêtre *Network Connections* qui s'affiche, sélectionnez la carte réseau.
 1. Cliquez ensuite sur le bouton **Disable this network device**.
 1. Resélectionnez la carte réseau.
 1. Cliquez ensuite sur le bouton **Enable this network device**.
-1. Après ces deux actions, votre DC devrait être *proprepment* démarré (vous pouvez le vérifier par la procédure précédente).
+1. Après ces deux actions, votre DC devrait être *proprement* démarré (vous pouvez le vérifier par la procédure précédente).
 
 ## (re)Démarrage des clients
 Une fois le DC correctement démarré, il va vous falloir redémarrer toutes les autres machines virtuelles (afin qu'elles aient effectué leur démarrage dans un contexte ADDS propre et sécurisé).  
-Comme pour les procédures précédentes, vous pouez réaliser celle-ci en PowerShell :  
-1. lancer une invite *Windows PowerShell* en administrateur (en faisant, par exemple, un clic-droit sur le bouton Démarre de la barre des tâches et en choisissant **Windows Powershell (admin)** ou **Terminal (admin)**)
+Comme pour les procédures précédentes, vous pouvez réaliser celle-ci en PowerShell :  
+1. Lancez une invite *Windows PowerShell* en administrateur (en faisant, par exemple, un clic-droit sur le bouton Démarre de la barre des tâches et en choisissant **Windows Powershell (admin)** ou **Terminal (admin)**)
 1. Dans l'invite PowerShell, utilisez la commande suivante :  
     ```Get-ADDomain|foreach-object {get-ADComputer -Filter * -searchBase $_.computersContainer|foreach-object {echo "Redémarrage de $($_.DNSHostName)"; Restart-Computer -ComputerName $_.DNSHostName -Force}}```
 1. Une fois ces commandes passées, attendez que la machine sur laquelle vous souhaitez travailler ait redémarré...
