@@ -51,7 +51,7 @@ Get-NetAdapter|restart-NetAdapter
 while((Get-NetConnectionProfile).NetworkCategory -ne 'DomainAuthenticated') { Start-Sleep -Seconds 1 }
 Get-ADDomain | Foreach-object {
     get-ADComputer -Filter * -searchBase $_.computersContainer | foreach-object {
-        write-host "Redémarrage de $($_.DNSHostName)"
+        write-host "Redemarrage de $($_.DNSHostName)"
         Restart-Computer -ComputerName $_.DNSHostName -Force}}
         
 ```
