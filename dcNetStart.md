@@ -1,7 +1,7 @@
 ---
 layout: stage
 title: "Démarrage propre d'un atelier mono-DC"
-length: "10"
+length: "5"
 date: "13/11/2023"
 ---
 Dans un environnement Active Directory (ADDS) ou un seul contrôleur de domaine (DC) est présent, il est fort probable que les machines virtuelles aient des problèmes d'accès aux fonctionnalités réseau.  
@@ -11,7 +11,7 @@ Il est possible de constater si le DC n'a pas correctement démarré dans l'inte
 1. Pour vérifier en PowerShell, lancer une invite *Windows PowerShell* en administrateur (en faisant, par exemple, un clic-droit sur le bouton Démarre de la barre des tâches et en choisissant **Windows Powershell (admin)** ou **Terminal (admin)**)
 1. Dans l'invite PowerShell, utilisez la commande suivante :  
     ```(Get-NetConnectionProfile).NetworkCategory```  
-    Si le résultat de la précente commande est **Public** ou **Private**, le DC n'a pas correctement démarré : passez à la [procédure de *nettoyage* du réseau du DC](#nettoyage-du-r%C3%A9seau-du-dc). Sinon, le reste de cette procédure ne vous servira pas pour ce démarrage.
+    Si le résultat de la précente commande est **Public** ou **Private**, le DC n'a pas correctement démarré : passez à la [procédure de *nettoyage* du réseau du DC](#nettoyage-du-r%C3%A9seau-du-dc). Sinon (si le résultat de la commande est **DomainAuthenticated**), le reste de cette procédure ne vous servira pas pour ce démarrage.
 1. Pour vérifier en interface graphique, dans une session administrative sur votre DC, lancez le gestionnaire de serveur (**Server Manager**).
 1. Cliquez sur l'onglet **Local Server**
 1. Dans la section **Properties**, notez la valeur de **Microsoft Defender Firewall**  
@@ -30,3 +30,17 @@ Si le DC de votre domaine ADDS n'a pas correctement démarré, vous pouyvez *for
 1. Resélectionnez la carte réseau.
 1. Cliquez ensuite sur le bouton **Enable this network device**.
 1. Après ces deux actions, votre DC devrait être *proprepment* démarré (vous pouvez le vérifier par la procédure précédente).
+
+## (re)Démarrage des clients
+
+## Commandes tout en un
+Si vous voulez vous simplifier la vie, vous pouvez utiliser les quelques lignes de script suivantes pour réaliser l'ensemble des opérations proposées dans les procédures précédentes en une fois :  
+```
+Get-NetAdapter|restart-NetAdapter
+while((Get-NetConnectionProfile).NetworkCategory -ne 'DomainAuthenticated') { Start-Sleep -Seconds 1 }
+Get-ADDomain | Foreach-object {
+    get-ADComputer -Filter * -searchBase $_.computersContainer | foreach-object {
+        echo "Redémarrage de $($_.DNSHostName)"
+        Restart-Computer -ComputerName $_.DNSHostName -Force}}
+        
+```
