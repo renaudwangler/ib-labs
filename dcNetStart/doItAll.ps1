@@ -9,4 +9,6 @@ Get-ADComputer -Filter * | Where DNSHostName -NotLike "$($ENV:ComputerName)*" | 
     try { 
         Restart-Computer -ComputerName $compName -Force -ErrorAction Stop
         Write-Host "Redémarrage de $compName." -ForegroundColor Green }
-    Catch { Write-Host "Impossible de redémarrer $compName.\r\n  ($($_.Exception.Message))." -ForegroundColor Red }}
+    Catch { 
+        Write-Host "Impossible de redémarrer $compName." -ForegroundColor Red
+        Write-Host "  ($($_.Exception.Message))." -ForegroundColor Magenta }}
