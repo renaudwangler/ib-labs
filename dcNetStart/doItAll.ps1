@@ -5,7 +5,7 @@ if ((Get-NetConnectionProfile).NetworkCategory -ne 'DomainAuthenticated') {
     while((Get-NetConnectionProfile).NetworkCategory -ne 'DomainAuthenticated') { Start-Sleep -Seconds 1 }
 } else { Write-Host "Réseau local déjà en mode domaine." -ForegroundColor Green}
 Get-ADComputer -Filter * | Where DNSHostName -NotLike "$($ENV:ComputerName)*" | ForEach-Object {
-    $compName = $_
+    $compName = $_.DNSHostName
     try { 
         Restart-Computer -ComputerName $compName -Force -ErrorAction Stop
         Write-Host "Redémarrage de $compName." -ForegroundColor Green }
