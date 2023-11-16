@@ -15,7 +15,7 @@ function addCopyButton() {
     });
     }
 async function copyCode(codeBlock) {
-    await navigator.clipboard.writeText(codeBlock.innerText);
+    await navigator.clipboard.writeText(codeBlock.innerText + "\r\n");
     codeBlock.getElementsByTagName('button')[0].className='copyBtnDone';
     codeBlock.getElementsByTagName('button')[0].title = 'Texte copié (recliquez pour copier de nouveau)'
     }
