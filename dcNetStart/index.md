@@ -49,7 +49,8 @@ Si vous voulez vous simplifier la vie, vous pouvez systèmatiser l'utilisation d
 1. Ouvrir une session sur le DC avec le compte administrateur du domaine ADDS.
 1. Lancez une invite PowerShell.
 1. Utilisez les quelques lignes de script suivantes pour réaliser l'ensemble des opérations proposées dans les procédures précédentes en une fois :  
-    ```$ADdomain = Get-ADDomain -Current LocalComputer
+    ```
+    $ADdomain = Get-ADDomain -Current LocalComputer
 if ((Get-NetConnectionProfile).NetworkCategory -ne 'DomainAuthenticated') {
     Write-Host "Nettoyage du réseau local." -ForegroundColor Yellow
     Get-NetAdapter|Restart-NetAdapter
