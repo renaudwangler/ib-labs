@@ -49,8 +49,7 @@ Si vous voulez vous simplifier la vie, vous pouvez systèmatiser l'utilisation d
 1. Ouvrir une session sur le DC avec le compte administrateur du domaine ADDS.
 1. Lancez une invite PowerShell.
 1. Utilisez les quelques lignes de script suivantes pour réaliser l'ensemble des opérations proposées dans les procédures précédentes en une fois :  
-```
-Get-NetAdapter|restart-NetAdapter
+    ```Get-NetAdapter|restart-NetAdapter
 while((Get-NetConnectionProfile).NetworkCategory -ne 'DomainAuthenticated') { Start-Sleep -Seconds 1 }
 $ADdomain = Get-ADDomain -Current LocalComputer
 (Get-ADComputer -Filter * -SearchBase $ADDomain.ComputersContainer).DNSHostName.Tolower() |ForEach-Object {
