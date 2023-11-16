@@ -58,27 +58,5 @@ $ADdomain = Get-ADDomain -Current LocalComputer
         
 ```
 
-(A tester) Version pouvant être lançée de n'importe quelle machine :
-```
-$ADdomain = Get-ADDomain -Current LocalComputer
-$DCName = (Get-ADDomainController).HostName.ToLower()
-if ((Invoke-Command -ComputerName $DCName -ScriptBlock { Get-NetConnectionProfile }).NetworkCategory -ne 'DomainAuthenticated') {
-    Write-Host "Nettoyage du reseau de $DCName." -ForegroundColor Yellow
-    Invoke-Command -ComputerName (Get-ADDomainController).HostName.ToLower() -ScriptBlock {
-        Get-NetAdapter|Restart-NetAdapter
-        while((Get-NetConnectionProfile).NetworkCategory -ne 'DomainAuthenticated') { Start-Sleep -Seconds 1 }}
-} else { Write-Host "Reseau de $DCName deja en mode domaine." -ForegroundColor Green}
-Start-Sleep -Seconds 10
-Get-NetAdapter|Restart-NetAdapter
-while((Get-NetConnectionProfile).NetworkCategory -ne 'DomainAuthenticated') { Start-Sleep -Seconds 1 }
-(Get-ADComputer -Filter * -SearchBase $ADDomain.ComputersContainer).DNSHostName.Tolower() | Where DNSHostName -NotLike "$($ENV:ComputerName)*" | Where DNSHostName -NotLike $DCName | ForEach-Object {
-    try { 
-        Restart-Computer -ComputerName $_ -Force -ErrorAction Stop
-        Write-Host "Redemarrage de $_." -ForegroundColor Green }
-    Catch { Write-Host "Impossible de redemarrer $_." -ForegroundColor Red }}
-Write-Host "Pour finir, n'oubliez pas de redemarrer la presente machine !!" -ForegroundColor Yellow
 
-```  
-
-
-```Invoke-Command -ScriptBlock [Scriptblock]::Create((Invoke-WebRequest 'https://raw.githubusercontent.com/renaudwangler/ib-labs/dcNetStart/doItAll.ps1').Content)```
+Le tout en mode script (commande à lancer dans une invite PowerShell en administrateur): ```Invoke-Command -ScriptBlock ([Scriptblock]::Create((Invoke-WebRequest 'https://raw.githubusercontent.com/renaudwangler/ib-labs/master/dcNetStart/doItAll.ps1').Content))```
