@@ -2,7 +2,7 @@
 layout: stage
 title: "Démarrage propre d'un atelier mono-DC"
 length: "3"
-date: "15/11/2023"
+date: "16/11/2023"
 ---
 Dans un environnement Active Directory (ADDS) ou un seul contrôleur de domaine (DC) est présent, il est fort probable que les machines virtuelles aient des problèmes d'accès aux fonctionnalités réseau.  
 Ceci s'explique par la séquence de démarrage : un DC n'est pas seulement un serveur ADDS, c'est aussi en client ADDS. Lorsque le DC démarre, son client ADDS se lance alors que la partie serveur ADDS n'a pas fini de démarrer (ce ne sera pas le cas si l'environnement compte plusieurs DC du même domaine ADDS).  
@@ -36,7 +36,7 @@ Une fois le DC correctement démarré, il va vous falloir redémarrer toutes les
 Comme pour les procédures précédentes, vous pouvez réaliser celle-ci en PowerShell :  
 1. Lancez une invite *Windows PowerShell* en administrateur (en faisant, par exemple, un clic-droit sur le bouton Démarre de la barre des tâches et en choisissant **Windows Powershell (admin)** ou **Terminal (admin)**)
 1. Dans l'invite PowerShell, utilisez la commande suivante :  
-    ```Get-ADDomain|foreach-object {get-ADComputer -Filter * -searchBase $_.computersContainer|foreach-object {echo "Redémarrage de $($_.DNSHostName)"; Restart-Computer -ComputerName $_.DNSHostName -Force}}```
+    ```Get-ADComputer -Filter * -SearchBase (Get-ADDomain -Current LocalComputer).computersContainer |ForEach-Object { $compName = $_.DNSHostName.ToLower(); try { Restart-Computer -ComputerName $compName -Force -ErrorAction Stop; Write-Host "Redemarrage de $compName." -ForegroundColor Green } Catch { Write-Host "Impossible de redemarrer $compName." -ForegroundColor Red }}```
 1. Une fois ces commandes passées, attendez que la machine sur laquelle vous souhaitez travailler ait redémarré...
 1. Pour redémarrer les machines en passant par l'interface graphique, réalisez les opérations suivantes sur **chaque** machine virtuelle :
     1. Basculez sur la machine à redémarrer.
@@ -45,13 +45,40 @@ Comme pour les procédures précédentes, vous pouvez réaliser celle-ci en Powe
 1. Il est fortement conseillé de commencer par la machine sur laquelle vous souhaitez ouvrir ensuite une session, la séquence de redémarrage des autres permettra ainsi de patienter pendant le redémarrage de la première...
 
 ## Astuce
-Si vous voulez vous simplifier la vie, vous pouvez utiliser les quelques lignes de script suivantes pour réaliser l'ensemble des opérations proposées dans les procédures précédentes en une fois :  
+Si vous voulez vous simplifier la vie, vous pouvez utiliser les quelques lignes de script suivantes (à lancer dans une commande PowerShell depuis le DC) pour réaliser l'ensemble des opérations proposées dans les procédures précédentes en une fois :  
 ```
 Get-NetAdapter|restart-NetAdapter
 while((Get-NetConnectionProfile).NetworkCategory -ne 'DomainAuthenticated') { Start-Sleep -Seconds 1 }
-Get-ADDomain | Foreach-object {
-    get-ADComputer -Filter * -searchBase $_.computersContainer | foreach-object {
-        write-host "Redemarrage de $($_.DNSHostName)"
-        Restart-Computer -ComputerName $_.DNSHostName -Force}}
+$ADdomain = Get-ADDomain -Current LocalComputer
+(Get-ADComputer -Filter * -SearchBase $ADDomain.ComputersContainer).DNSHostName.Tolower() |ForEach-Object {
+    try { 
+        Restart-Computer -ComputerName $_ -Force -ErrorAction Stop
+        Write-Host "Redemarrage de $_." -ForegroundColor Green }
+    Catch { Write-Host "Impossible de redemarrer $_." -ForegroundColor Red }}
         
 ```
+
+(A tester) Version pouvant être lançée de n'importe quelle machine :
+```
+$ADdomain = Get-ADDomain -Current LocalComputer
+$DCName = (Get-ADDomainController).HostName.ToLower()
+if ((Invoke-Command -ComputerName $DCName -ScriptBlock { Get-NetConnectionProfile }).NetworkCategory -ne 'DomainAuthenticated') {
+    Write-Host "Nettoyage du reseau de $DCName." -ForegroundColor Yellow
+    Invoke-Command -ComputerName (Get-ADDomainController).HostName.ToLower() -ScriptBlock {
+        Get-NetAdapter|Restart-NetAdapter
+        while((Get-NetConnectionProfile).NetworkCategory -ne 'DomainAuthenticated') { Start-Sleep -Seconds 1 }}
+} else { Write-Host "Reseau de $DCName deja en mode domaine." -ForegroundColor Green}
+Start-Sleep -Seconds 10
+Get-NetAdapter|Restart-NetAdapter
+while((Get-NetConnectionProfile).NetworkCategory -ne 'DomainAuthenticated') { Start-Sleep -Seconds 1 }
+(Get-ADComputer -Filter * -SearchBase $ADDomain.ComputersContainer).DNSHostName.Tolower() | Where DNSHostName -NotLike "$($ENV:ComputerName)*" | Where DNSHostName -NotLike $DCName | ForEach-Object {
+    try { 
+        Restart-Computer -ComputerName $_ -Force -ErrorAction Stop
+        Write-Host "Redemarrage de $_." -ForegroundColor Green }
+    Catch { Write-Host "Impossible de redemarrer $_." -ForegroundColor Red }}
+Write-Host "Pour finir, n'oubliez pas de redemarrer la presente machine !!" -ForegroundColor Yellow
+
+```  
+
+
+```Invoke-Command -ScriptBlock [Scriptblock]::Create((Invoke-WebRequest 'https://raw.githubusercontent.com/renaudwangler/ib-labs/dcNetStart/doItAll.ps1').Content)```
