@@ -49,17 +49,21 @@ Si vous voulez vous simplifier la vie, vous pouvez systèmatiser l'utilisation d
 1. Ouvrir une session sur le DC avec le compte administrateur du domaine ADDS.
 1. Lancez une invite PowerShell.
 1. Utilisez les quelques lignes de script suivantes pour réaliser l'ensemble des opérations proposées dans les procédures précédentes en une fois :  
-    ```
-    Get-NetAdapter|restart-NetAdapter
+    ```$ADdomain = Get-ADDomain -Current LocalComputer
+if ((Get-NetConnectionProfile).NetworkCategory -ne 'DomainAuthenticated') {
+    Write-Host "Nettoyage du réseau local." -ForegroundColor Yellow
+    Get-NetAdapter|Restart-NetAdapter
     while((Get-NetConnectionProfile).NetworkCategory -ne 'DomainAuthenticated') { Start-Sleep -Seconds 1 }
-    $ADdomain = Get-ADDomain -Current LocalComputer
-    (Get-ADComputer -Filter * -SearchBase $ADDomain.ComputersContainer).DNSHostName.Tolower() |ForEach-Object {
-        try { 
-            Restart-Computer -ComputerName $_ -Force -ErrorAction Stop
-            Write-Host "Redemarrage de $_." -ForegroundColor Green }
-        Catch { Write-Host "Impossible de redemarrer $_." -ForegroundColor Red }}
-
-```
-
+} else { Write-Host "Réseau local déjà en mode domaine." -ForegroundColor Green}
+Get-ADComputer -Filter * | Where DNSHostName -NotLike "$($ENV:ComputerName)*" | ForEach-Object {
+    $compName = $_.DNSHostName
+    try { 
+        Restart-Computer -ComputerName $compName -Force -ErrorAction Stop
+        Write-Host "Redémarrage de $compName." -ForegroundColor Green }
+    Catch { 
+        Write-Host "Impossible de redémarrer $compName." -ForegroundColor Red
+        Write-Host "  ($($_.Exception.Message))." -ForegroundColor Magenta }}
+        
+    ```
 1. Si vous le préférez, vous pouvez utiliser la commande suivante qui appelle un script contenant toutes les lignes présentées ci-dessus :  
     ```Invoke-Command -ScriptBlock ([Scriptblock]::Create((Invoke-WebRequest 'https://raw.githubusercontent.com/renaudwangler/ib-labs/master/dcNetStart/doItAll.ps1' -useBasicParsing).Content))```
