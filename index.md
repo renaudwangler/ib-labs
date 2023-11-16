@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: home
 title: 'Ateliers ib'
 ---
 # Ateliers de stages *ib Cegos*
