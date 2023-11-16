@@ -45,10 +45,10 @@ Comme pour les procédures précédentes, vous pouvez réaliser celle-ci en Powe
 1. Il est fortement conseillé de commencer par la machine sur laquelle vous souhaitez ouvrir ensuite une session, la séquence de redémarrage des autres permettra ainsi de patienter pendant le redémarrage de la première...
 
 ## Astuces
-1. Si vous voulez vous simplifier la vie, vous pouvez systèmatiser l'utilisation de la procédure suivante :
-    1. Ouvrir une session sur le DC avec le compte administrateur du domaine ADDS.
-    1. Lancez une invite PowerShell.
-    1. Utilisez les quelques lignes de script suivantes pour réaliser l'ensemble des opérations proposées dans les procédures précédentes en une fois :  
+Si vous voulez vous simplifier la vie, vous pouvez systèmatiser l'utilisation de la procédure suivante :  
+1. Ouvrir une session sur le DC avec le compte administrateur du domaine ADDS.
+1. Lancez une invite PowerShell.
+1. Utilisez les quelques lignes de script suivantes pour réaliser l'ensemble des opérations proposées dans les procédures précédentes en une fois :  
 ```
 Get-NetAdapter|restart-NetAdapter
 while((Get-NetConnectionProfile).NetworkCategory -ne 'DomainAuthenticated') { Start-Sleep -Seconds 1 }
@@ -60,6 +60,5 @@ $ADdomain = Get-ADDomain -Current LocalComputer
     Catch { Write-Host "Impossible de redemarrer $_." -ForegroundColor Red }}
         
 ```
-
-    1. Si vous le préférez, vous pouvez utiliser la commande suivante qui appelle un script contenant toutes les lignes présentées ci-dessus :  
+1. Si vous le préférez, vous pouvez utiliser la commande suivante qui appelle un script contenant toutes les lignes présentées ci-dessus :  
     ```Invoke-Command -ScriptBlock ([Scriptblock]::Create((Invoke-WebRequest 'https://raw.githubusercontent.com/renaudwangler/ib-labs/master/dcNetStart/doItAll.ps1' -useBasicParsing).Content))```
