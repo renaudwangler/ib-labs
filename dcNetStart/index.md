@@ -1,5 +1,5 @@
 ---
-layout: stage
+layout: page
 title: "Démarrage propre d'un atelier mono-DC"
 length: "3"
 date: "16/11/2023"
