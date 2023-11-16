@@ -59,4 +59,4 @@ $ADdomain = Get-ADDomain -Current LocalComputer
 ```
 
 
-Le tout en mode script (commande à lancer dans une invite PowerShell en administrateur): ```Invoke-Command -ScriptBlock ([Scriptblock]::Create((Invoke-WebRequest 'https://raw.githubusercontent.com/renaudwangler/ib-labs/master/dcNetStart/doItAll.ps1').Content))```
+Le tout en mode script (commande à lancer dans une invite PowerShell en administrateur): ```Invoke-Command -ScriptBlock ([Scriptblock]::Create((Invoke-WebRequest 'https://raw.githubusercontent.com/renaudwangler/ib-labs/master/dcNetStart/doItAll.ps1' -useBasicParsing).Content))```

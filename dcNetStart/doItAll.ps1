@@ -1,10 +1,10 @@
 $ADdomain = Get-ADDomain -Current LocalComputer
-if (Get-NetConnectionProfile).NetworkCategory -ne 'DomainAuthenticated') {
+if ((Get-NetConnectionProfile).NetworkCategory -ne 'DomainAuthenticated') {
     Write-Host "Nettoyage du réseau local." -ForegroundColor Yellow
     Get-NetAdapter|Restart-NetAdapter
     while((Get-NetConnectionProfile).NetworkCategory -ne 'DomainAuthenticated') { Start-Sleep -Seconds 1 }
 } else { Write-Host "Réseau local déjà en mode domaine." -ForegroundColor Green}
-(Get-ADComputer -Filter * | Where DNSHostName -NotLike "$($ENV:ComputerName)*" | ForEach-Object {
+Get-ADComputer -Filter * | Where DNSHostName -NotLike "$($ENV:ComputerName)*" | ForEach-Object {
     $compName = $_
     try { 
         Restart-Computer -ComputerName $compName -Force -ErrorAction Stop
