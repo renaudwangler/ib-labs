@@ -2,7 +2,7 @@
 layout: page
 title: "Démarrage propre d'un atelier mono-DC"
 length: "3"
-date: "16/11/2023"
+date: "20/11/2023"
 ---
 Dans un environnement Active Directory (ADDS) ou un seul contrôleur de domaine (DC) est présent, il est fort probable que les machines virtuelles aient des problèmes d'accès aux fonctionnalités réseau.  
 Ceci s'explique par la séquence de démarrage : un DC n'est pas seulement un serveur ADDS, c'est aussi en client ADDS. Lorsque le DC démarre, son client ADDS se lance alors que la partie serveur ADDS n'a pas fini de démarrer (ce ne sera pas le cas si l'environnement compte plusieurs DC du même domaine ADDS).  
@@ -47,7 +47,7 @@ Comme pour les procédures précédentes, vous pouvez réaliser celle-ci en Powe
 ## Astuces
 Si vous voulez vous simplifier la vie, vous pouvez systèmatiser l'utilisation de la procédure suivante :  
 1. Ouvrir une session sur le DC avec le compte administrateur du domaine ADDS.
-1. Lancez une invite PowerShell.
+1. Lancez une invite Windows PowerShell (5.x en administrateur).
 1. Utilisez les quelques lignes de script suivantes pour réaliser l'ensemble des opérations proposées dans les procédures précédentes en une fois :  
     ```
     $ADdomain = Get-ADDomain -Current LocalComputer
