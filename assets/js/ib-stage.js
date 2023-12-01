@@ -19,4 +19,21 @@ async function copyCode(codeBlock) {
     codeBlock.getElementsByTagName('button')[0].className='copyBtnDone';
     codeBlock.getElementsByTagName('button')[0].title = 'Texte copié (recliquez pour copier de nouveau)'
     }
-    
+
+function addLiCheckbox() {
+
+  document.querySelectorAll('ol').forEach((olBlock) => {
+    olBlock.querySelectorAll('li').forEach((liBlock) => {
+      console.log(liBlock)
+      console.log(olBlock.prototype.indexOf(liBlock))
+
+    })})
+
+  lignesIn = document.getElementsByTagName('li')
+  lignes = Array.prototype.slice.call(lignesIn);
+  lignes.forEach((ligne) => {
+    ligneOut= ligne
+    console.log(ligne.style.listStyleType)
+  })
+
+}
