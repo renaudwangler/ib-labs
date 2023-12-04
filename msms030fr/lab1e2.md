@@ -37,7 +37,7 @@ Dans cette tâche vous allez ajouter le domaine DNS d'entreprise à votre tenant
     - MX pointe vers ```labxxxxx-godeploylabs-com.mail.protection.outlook.com``` avec préférence de **0**  
     - CNAME associe ```autodiscover``` à ```autodiscover.outlook.com```  
     - TXT contient ```v=spf1 include:spf.protection.outlook.com -all```  
-    
+
 1. Plus bas dans la page **Add DNS records** cliquez sur **Advanced Options**.
 1. Trois services additionnels sont affichés ici : **Skype for Business**, **Intune and Mobile Device Management for Microsoft 365** et **DomainKeys Identified Mail (DKIM).  
 	> Sélectionnez les cases à cocher des deux premiers services, cela va faire apparaître un ensemble d'enregistrements DNS à créer pour chacun.
@@ -50,7 +50,7 @@ Dans cette tâche vous allez ajouter le domaine DNS d'entreprise à votre tenant
 
 1. Notez que deux alias CNAME sont nécessaires au fonctionnement correct de **Intune and Mobile Device Management for Microsoft 365**. Sélectionnez **CNAME Record (2)** pour les afficher et prenez bonne note de leur contenu.  
     - CNAME associe ```enterpriseregistration``` à ```enterpriseregistration.windows.net```  
-    - CNAME associe ```nterpriseenrollment``` à ```enterpriseenrollment-s.manage.microsoft.com```  
+    - CNAME associe ```enterpriseenrollment``` à ```enterpriseenrollment.manage.microsoft.com```  
 
 1. Retournez dans l'onglet **DNS** de votre environnement d'atelier et créez-y tous les enregistrements DNS nécessaires pour le tenant du projet pilote.
     > **Note** : Voici un exemple d'onglet DNS contenant les enregistrements nécessaires créés pour vous aider : il vous faudra cependant remplacer la mention labXXXXXX par votre nom DNS d'entreprise :
