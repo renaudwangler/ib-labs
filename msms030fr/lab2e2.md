@@ -55,7 +55,7 @@ Si vous n'avez pas de téléphone :
 ## Tâche 3 - Tester l'authentification multifactorielle
 1. Cliquez sur l'icône de **Microsoft Edge** sur la barre des tâches pour ouvrir une nouvelle session de navigation et réouvrez le portail **Microsoft 365 Admin center** en utilisant l'url suivante ```https://admin.microsoft.com```
 1. Dans la fenêtre **Pick an Account**, choisissez **dom@WWLxxxxx.onmicrosoft.com**.
-1. Dans la fenêtre **Enter password**, entrez **ibForm@tion** et cliquez sur **Sign in**.
+1. Dans la fenêtre **Enter password**, entrez **```ibForm@tion```** et cliquez sur **Sign in**.
 1. La MFA étant maintenant active pour Dom, une fenêtre **More information required** apparait. Cliquez sur **Next**.
 1. Dans la fenêtre **Keep your account secure** qui s'affiche désormais, il est indiqué que vous pouvez utiliser l'application *Microsoft Authenticator* pour la MFA.  
 	Pour gagner du temps dans le contexte de notre atelier, vous allez utiliser votre téléphone. Cliquez donc sur le lien **I want to set up a different method** en bas de la page. 
@@ -63,7 +63,7 @@ Si vous n'avez pas de téléphone :
 1. Dans la fenêtre **Keep your account secure**, la section concernant **Microsoft Authenticator** a donc été remplacée par une section **Phone**. Select votre pays dans la liste déroulante et entrez votre numéro de téléphone (format **678901234**) et cliquez sur **Next**.
 	>**Note :** Si vous recevez un message d'erreur, vous pouvez essayer de fermer le navigateur Internet et de reprendre au début de la présente tâche. 
 1. Vous allez recevoir sur votre téléphone un SMS vous indiquant le code à utiliser pour vérifier votre identité. Saisissez donc ce code dans le champ **Enter code** qui vient d'apparaitre et cliquez sur **Next**.
-	>**Note :** Si vous attendez trop longtemps pour réaliser cette vérification, la fenêtre **Enter password** peut réapparaitre. Dans ce cas, vous devez vous reconnecter avec le mot de passe de Dominique (**ibForm@tion**) et demander l'envoi d'un nouveau code de vérification qui sera envoyé sur votre téléphone afin que vous le saisissiez dans le champ **Enter code**.  
+	>**Note :** Si vous attendez trop longtemps pour réaliser cette vérification, la fenêtre **Enter password** peut réapparaitre. Dans ce cas, vous devez vous reconnecter avec le mot de passe de Dominique (**```ibForm@tion```**) et demander l'envoi d'un nouveau code de vérification qui sera envoyé sur votre téléphone afin que vous le saisissiez dans le champ **Enter code**.  
 
 1. Une fois la vérification effectuée, cliquez sur **Next** puis **Done**
 1. Si une fenêtre **Stay signed in?** apparait, sélectionnez **Don't show this again** et cliquez sur **Yes**.
@@ -81,7 +81,7 @@ Si vous n'avez pas de téléphone :
 1. Lorsque la fenêtre **Updates successful** apparait, cliquez sur **close**. Dans la fenêtre **multi-factor authentication**, vérifiez que le statut de Dominique a changé pour **Disabled**. 
 1. Il ne vous reste plus qu'à vous déconnecter du compte de Dominique avant de vous reconnecter (Vous devriez désormais savoir faire ces opérations, sinon, jetez un oeil à la même opération de la tâche précédente).
 
-	>**Note :** Puisque la MFA est désactivée pour le compte de Dominique, il vous sera simplement demandé le mot de passe (**ibForm@tion**) de Dominique sans vérification par code téléphonique.
+	>**Note :** Puisque la MFA est désactivée pour le compte de Dominique, il vous sera simplement demandé le mot de passe (**```ibForm@tion```**) de Dominique sans vérification par code téléphonique.
 1. Si nécessaire, une fois connecté, ouvrez le portail  **Microsoft 365 admin center** et restez connecté avec le compte de *Dominique Skyetson* dans la machine LON-CL1 pour les exercices suivants.
 
 ## Résultat
