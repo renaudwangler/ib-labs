@@ -30,7 +30,7 @@ Connecté avec un compte *Global Admin*, vous allez commencer cet exercice par t
 Cette tâche est assez similaire à la précédente, mais vous allez la réaliser avec l'outillage Windows Powershell.
 1. Vous devriez être toujours connecté sur la machine virtuelle LON-CL1, avec l'outil **Administrator : Windows Powershell ISE** réduit dans la barre des tâches. Agrandissez en la fenêtre (ou relancez l'outil en administrateur si vous l'aviez fermé).
 1. Vous allez d'abord vous (re)connecter à l'environnement Microsoft 365 avec le module Microsoft Graph. Utilisez la commande suivante : 
-	```Connect-MgGraph -scopes user.Read.All,RoleManagement.ReadWrite.Directory``
+	```Connect-MgGraph -scopes user.Read.All,RoleManagement.ReadWrite.Directory```
 1. Dans la fenêtre **Sign in** qui apparaît, connectez-vous avec le compte de Dominique Skyetson : **dom@WWLxxxxx.onmicrosoft.com** et son mot de passe (**ibForm@tion**). 
 1. Dans la fenêtre **Permission requested**, cochez la case **Consent on behalf of your organization** et cliquez sur **Accept**.	
 1. Pour voir tous les rôles diponibles, vous poubvez utiliser la commande suivante :
