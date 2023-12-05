@@ -65,8 +65,6 @@ Dans un exercice précédent, vous avez créé des comptes utilisateurs en utili
 	```Restore-MgDirectoryDeletedItem -DirectoryObjectId (Get-MgDirectoryDeletedUser|where DisplayName -like catherine*).id```
 1. Utilisez la commande suivante pour afficher tous les utilisateurs supprimés (et restaurables) :
 	```Get-MgDirectoryDeletedUser```
-1. Utilisez la commande suivante pour afficher la liste des utilisateurs supprimés :  
-	```Get-MsolUser –ReturnDeletedUsers```
 1. Maintenant que le compte de Catherine a été restauré, il ne devrait plus se trouver dans la liste des utilisateurs restaurables (celle-ci devrait désormais être vide).
 1. Utilisez la commande suivante pour afficher la liste des utilisateurs actifs :
 	```Get-MgUser```
