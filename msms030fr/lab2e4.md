@@ -65,7 +65,7 @@ Dans un exercice précédent, vous avez créé des comptes utilisateurs en utili
 	```Restore-MgDirectoryDeletedItem -DirectoryObjectId (Get-MgDirectoryDeletedUser|where DisplayName -like catherine*).id```
 1. Utilisez la commande suivante pour afficher tous les utilisateurs supprimés (et restaurables) :
 	```Get-MgDirectoryDeletedUser```
-1. At the Powershell prompt, type the following command and then press Enter to view the list of deleted users:  
+1. Utilisez la commande suivante pour afficher la liste des utilisateurs supprimés :  
 	```Get-MsolUser –ReturnDeletedUsers```
 1. Maintenant que le compte de Catherine a été restauré, il ne devrait plus se trouver dans la liste des utilisateurs restaurables (celle-ci devrait désormais être vide).
 1. Utilisez la commande suivante pour afficher la liste des utilisateurs actifs :
@@ -103,9 +103,9 @@ Dans un exercice antérieur, vous avez utilisé le portail d'administration Micr
 1. Vous devriez être resté connecté sur la machine **LON-CL1** avec le compte **Administrator** et le mot de passe **Pa55w.rd**; l'outil **Windows Powershell ISE** devrait être resté ouvert en tant qu'administrateur. Si nécessaire, maximisez sa fenêtre.
 1. Dans la partie basse (fond bleu) de l'outil, tapez la commande suivante avant de taper sur **[Entrée]** pour la valider : 
 	```$mktGroup = New-MgGroup -DisplayName Marketing -Description 'Marketing department users' -groupTypes unified -MailEnabled -securityEnabled -mailNickName marketing```
-1. Utilisez la commande suivante pour ajouter **Catherine** (compte utilisateur créés précédemment et encore référencé par la variable powershell) dans le noiuveau groupe **Marketing** :
+1. Utilisez la commande suivante pour ajouter **Catherine** (compte utilisateur créés précédemment et encore référencé par la variable powershell) dans le nouveau groupe **Marketing** :
 	```New-MgGroupMember -groupId $mktGroup.Id -DirectoryObjectId $user1.Id```
-1. Utilisez la commande suivante pour ajouter le compte de **Tameka** dans le noiuveau groupe **Marketing** :
+1. Utilisez la commande suivante pour ajouter le compte de **Tameka** dans le nouveau groupe **Marketing** :
 	```New-MgGroupMember -groupId $mktGroup.Id -DirectoryObjectId $user2.Id```
 1. Pour vérifier votre mise en oeuvre, vous pouvez utiliser la commande suivante :
 	```Get-MgGroupMember -groupId $mktGroup.Id | ForEach-Object {Get-MgUser -UserId $_.Id}```
