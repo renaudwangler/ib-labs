@@ -37,10 +37,14 @@ Dans cette tâche, vous allez utiliser l'assistant de configuration de Entra Con
 ## Tâche 2 - Affecter des licences
 1. Basculez de nouveau sur **LON-DC1**, vous devriez encore être connecté en tant que Dominique Skyetson sur le portail **Microsoft 365 admin center** dans **Edge**.
 1. Dans le portail **Microsoft 365 admin center**, naviguez vers la liste des **Active Users** si nécessaire.
+1. Dans la liste des **Active users**, dans le champ **Search active users list** entrez ```Christie``` et appuyez sur **[Entrée]**.
+1. Cliquez sur le nom de **Christie Cline**.
+1. Dans le panneau qui apparait concernant les informations de **Christie Cline**, cliquez sur l'onglet **Licenses and apps**.
+1. Sur l'onglet **Licenses and apps** de Christie Cline, décochez toutes les cases et cliquez sur **Save changes**
 1. Dans la liste des **Active users**, dans le champ **Search active users list** entrez ```beth``` et appuyez sur **[Entrée]**.
 1. Cliquez sur le nom de **Beth Burke**.
-1. Dans le panneau qui apparait concernant les informations de **Deth Burke**, cliquez sur l'onglet **Licenses and apps**.
-1. Sur l'onglet **Licenses and apps** de Beth Burke, select **Add License** cochez les cases en regard des licences disponibles et cliquez sur **Save changes**
+1. Dans le panneau qui apparait concernant les informations de **Beth Burke**, cliquez sur l'onglet **Licenses and apps**.
+1. Sur l'onglet **Licenses and apps** de Beth Burke, select **Add License** cochez toutes les cases en regard des licences disponibles et cliquez sur **Save changes**
 1. Cliquez sur le **X** en haut à droite pour fermer le panneau d'informations de Beth Burke.
 
 ## Tâche 3 - Vérifier la synchronisation des périphériques
