@@ -2,7 +2,7 @@
 layout: stage
 title: "Lab4-Ex2 - Mise en oeuvre de la synchronisation d'identités"
 length: "00"
-date: "11/11/2023"
+date: "06/12/2023"
 ---
 # Scénario
 Dans cet exercice, vous allez activer la synchronisation entre l'ADDS de Adatum et Entra Id. Entra Connect continuera ensuite à synchroniser les changements toutes les 30 minutes.  
@@ -117,15 +117,22 @@ Dans cette tâche, vous allez forcer volontairement la synchronisation entre l'A
 	```$mktGroup```
 1. Utilisez la commande suivante pour afficher la liste des utilisateurs inclus dans le groupe **Manufacturing** :
 	```Get-MgGroupMember -GroupId $mktGroup.Id | ForEach-Object { Get-MgUser -UserId $_.Id} | Out-GridView```
-
-1. Vérifiez que les utilisateurs suivants, que vous aviez enlevé à la tâche précédente **ne sont pas présents** dans la liste affichée :
-	- Cai Chu
-	- Shannon Booth
-	- Tai Zecirevic
 1. Vérifiez que les utilisateurs suivants, que vous aviez ajouté à la tâche précédente sont présents dans la liste affichée :
 	- Bernardo Rutter
 	- Charlie Miller
 	- Dawn Williamson
+
+1. Utilisez la commande suivante pour obtenir l'identité du groupe **Research** :
+	```$resGroup = Get-MgGroup -Filter "DisplayName eq 'Research' and MailEnabled eq false"```
+1. Vous pouvez utiliser la commande suivante pour vérifier si le groupe **Research** a été trouvé :
+	```$resGroup```
+1. Utilisez la commande suivante pour afficher la liste des utilisateurs inclus dans le groupe **Research** :
+	```Get-MgGroupMember -GroupId $mktGroup.Id | ForEach-Object { Get-MgUser -UserId $_.Id} | Out-GridView```
+1. Vérifiez que les utilisateurs suivants, que vous aviez enlevé à la tâche précédente **ne sont pas présents** dans la liste affichée :
+	- Cai Chu
+	- Shannon Booth
+	- Tai Zecirevic
+
 1. Une fois votre vérification effectuée, fermez la fenêtre d'affichage des membres du groupe.
 
 ## Résultat
