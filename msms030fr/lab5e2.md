@@ -2,7 +2,7 @@
 layout: stage
 title: "Lab5-Ex2 - Déploiement de Microsoft 365 apps via MDM"
 length: "00"
-date: "11/11/2023"
+date: "06/12/2023"
 ---
 # Scénario
 Vous avez pris l'identité de Dominique Skyetson, Administrateur de l'entreprise Adatum, et vous avez commencé à déployer Microsoft 365 dans un environnement virtuel pilote. Dans cet exercice, vous allez réaliser les tâches nécessaires à l'installation de Microsoft 365 Apps en utilisant le MDM.  
@@ -42,7 +42,7 @@ Pour que l'*auto-enrollment* fonctionne comme prévu, vous devez vérifier que q
 1. Dans le menu de navigation à gauche du portail **Microsoft Intune admin center**, cliquez sur **Devices**.
 1. Dans la section **Devices**, sous **Device enrollment**, cliquez sur **Enroll devices**.
 1. Dans la page **Enroll devices**, sélectionnez la tuile **Automatic Enrollment**.
-1. Dans la page **Configure**, en regard de **MDM user scope**, sélectionnez **All**. En regard de **MAM user cope**, sélectionnez **All**.
+1. Dans la page **Configure**, en regard de **MDM user scope**, sélectionnez **All**. En regard de **Windows Information Protection (WIP) user scope**, sélectionnez **All**.
 1. Cliquez sur **Save**.
 
 ## Tâche 3 - GPO locale pour *auto-enrollment*
