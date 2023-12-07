@@ -14,6 +14,7 @@ function addCopyButton() {
         }
     });
     }
+    
 async function copyCode(codeBlock) {
     await navigator.clipboard.writeText(codeBlock.innerText + "\r\n");
     codeBlock.getElementsByTagName('button')[0].className='copyBtnDone';
@@ -21,7 +22,6 @@ async function copyCode(codeBlock) {
     }
 
 function addLiCheckbox() {
-
   numLine = 0
   document.querySelectorAll('ol').forEach((olBlock) => {
     Array.prototype.slice.call(olBlock.getElementsByTagName('li')).forEach((ligne) => {
@@ -40,7 +40,8 @@ function checkBoxes(lineToCheck) {
   console.log(lineToCheck)
   document.querySelectorAll('ol').forEach((olBlock) => {
     Array.prototype.slice.call(olBlock.getElementsByTagName('li')).forEach((ligne) => {
-      if (numLine <= lineToCheck) { ligne.className = 'li_checked' }
+      if (numLine <= lineToCheck) { ligne.className = 'li_checked' } else { ligne.className = 'li_unchecked'}
+      numLine++
     })
   })
 }
