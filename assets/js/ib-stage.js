@@ -29,11 +29,7 @@ function addLiCheckbox() {
     ligne.id = 'li-'+numLine
     if (localStorage.getItem(stageName+'-li-'+numLine) == 'checked') { ligne.className = 'li_checked' } else { ligne.className = 'li_unchecked' }
     ligne.addEventListener('click',function() { checkBoxes(this.id) })
-      numLine++
-    })
-  })
-
-}
+      numLine++})})}
 
 function checkBoxes(lineToCheck) {
   numLine = 0
@@ -47,7 +43,4 @@ function checkBoxes(lineToCheck) {
         localStorage.setItem(stageName+'-li-'+numLine) = 'checked' } else { 
         ligne.className = 'li_unchecked'
         localStorage.removeItem(stageName+'-li-'+numLine)}
-      numLine++
-    })
-  })
-}
+      numLine++})})}
