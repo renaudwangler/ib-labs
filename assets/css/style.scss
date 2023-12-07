@@ -11,3 +11,4 @@
 .copyBtn:hover, .copyBtnDone:hover {background: black;}
 .copyBtnDone {background-color:green; opacity: 0.33;}
 .copyBtnDone,.copyBtnDone::before {border-color: green;}
+li.li_checked::marker { color:greenyellow;}

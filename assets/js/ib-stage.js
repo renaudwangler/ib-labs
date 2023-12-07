@@ -22,18 +22,25 @@ async function copyCode(codeBlock) {
 
 function addLiCheckbox() {
 
+  numLine = 0
   document.querySelectorAll('ol').forEach((olBlock) => {
-    olBlock.querySelectorAll('li').forEach((liBlock) => {
-      console.log(liBlock)
-      console.log(olBlock.prototype.indexOf(liBlock))
-
-    })})
-
-  lignesIn = document.getElementsByTagName('li')
-  lignes = Array.prototype.slice.call(lignesIn);
-  lignes.forEach((ligne) => {
-    ligneOut= ligne
-    console.log(ligne.style.listStyleType)
+    Array.prototype.slice.call(olBlock.getElementsByTagName('li')).forEach((ligne) => {
+    ligne.id = 'li-'+numLine
+    ligne.className = 'li_unchecked'
+    ligne.addEventListener('click',function() { checkBoxes(this.id) })
+      numLine++
+    })
   })
 
+}
+
+function checkBoxes(lineToCheck) {
+  numLine = 0
+  lineToCheck=lineToCheck.split('-')[1]
+  console.log(lineToCheck)
+  document.querySelectorAll('ol').forEach((olBlock) => {
+    Array.prototype.slice.call(olBlock.getElementsByTagName('li')).forEach((ligne) => {
+      if (numLine <= lineToCheck) { ligne.className = 'li_checked' }
+    })
+  })
 }
