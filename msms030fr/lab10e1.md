@@ -38,7 +38,7 @@ Dans votre rôle d'administrateur, en tant que Dominique Skyetson, vous allez cr
 
 1. Toujours sur la page **Edit Settings**, dans le champ **Privacy**, **Private - People can only join if they're added by an owner\[...].**.
 1. Cliquez sur le bouton **Next**.
-1. Sur la page **Review and finish adding team**, c
+1. Sur la page **Review and finish adding team**, cliquez sur le bouton **Add Team**.
 1. Sur la page **New team created**, notez le message indiquant qu'il peut s'écouler 5 minutes avant que la nouvelle équipe ne s'affiche. Cliquez sur **Close**.
 1. Sur la page **Active teams and groups**, cliquez sur le bouton **Refresh** dans la barre de menu au-dessus de la liste des groupes. Si nécessaire, attendez quelques instants et répétez l'opération jusqu'à ce qu'apparaisse la nouvelle équipe.
 1. Une fois l'équipe **PND group** affichée dans la liste, cliquez sur son nom.

@@ -35,7 +35,6 @@ function checkBoxes(lineToCheck) {
   numLine = 0
   stageName = window.location.pathname.split('/').pop()
   lineToCheck=lineToCheck.split('-')[1]
-  console.log(lineToCheck)
   document.querySelectorAll('ol').forEach((olBlock) => {
     Array.prototype.slice.call(olBlock.getElementsByTagName('li')).forEach((ligne) => {
       if (numLine <= lineToCheck) { 
