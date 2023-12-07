@@ -40,7 +40,7 @@ function checkBoxes(lineToCheck) {
     Array.prototype.slice.call(olBlock.getElementsByTagName('li')).forEach((ligne) => {
       if (numLine <= lineToCheck) { 
         ligne.className = 'li_checked'
-        localStorage.setItem(stageName+'-li-'+numLine) = 'checked' } else { 
+        localStorage.setItem(stageName+'-li-'+numLine),'checked' } else { 
         ligne.className = 'li_unchecked'
         localStorage.removeItem(stageName+'-li-'+numLine)}
       numLine++})})}
