@@ -8,12 +8,7 @@ function addCopyButton() {
         copyButton.title = 'Cliquez pour copier ce texte dans votre presse-papier.';
         copyButton.type = 'button';
         codeBlock.appendChild(copyButton);
-        copyButton.addEventListener("click", async () => {
-          await copyCode(codeBlock);});
-          
-        }
-    });
-    }
+        copyButton.addEventListener("click", async () => { await copyCode(codeBlock);}); }});}
 
 async function copyCode(codeBlock) {
     await navigator.clipboard.writeText(codeBlock.innerText + "\r\n");
@@ -45,10 +40,5 @@ function checkBoxes(lineToCheck) {
           while (ligne.hasChildNodes()) { ligne.removeChild(ligne.firstChild); }
           ligne.appendChild(lineContent)
           if (localStorage.getItem(stageName+'-li-'+numLine) == 'checked') { ligne.className = 'li_checked' } else { ligne.className = 'li_unchecked' }
-          ligne.addEventListener('click',function(e) { 
-            if (e.target.nodeName==='LI') {
-            checkBoxes(this.id) }
-          })
-            numLine++})})
-          }
-
+          ligne.addEventListener('click',function(e) { if (e.target.nodeName==='LI') { checkBoxes(this.id) }})
+            numLine++})})}
