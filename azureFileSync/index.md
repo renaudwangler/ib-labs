@@ -9,7 +9,8 @@ Dans cet atelier, nous allons tester la synchronisation de fichiers entre un ser
 
 ## Etape 1 : Créer une machine virtuelle
 Vous allez commencer par créer une machine virtuelle qui sera votre serveur de fichiers Windows.  
-> **Nota :** Vous allez utiliser une machine virtuelle dans Azure pour simuler un serveur de fichier SMB on premises.
+> **Nota :** Vous allez utiliser une machine virtuelle dans Azure pour simuler un serveur de fichier SMB on premises.  
+
 1. Connectez-vous au portail Azure (http://portal.azure.com) et cliquez sur **+ Create a resource**
 1. Dans la fenêtre **Create a resource**, sélectionnez **Compute** puis cliquez sur **Create** sous **Virtual Machine**.
 1. Dans la fenêtre **Create a virtual machine**, Utilisez les paramètres suivants dans l'onglet **Basics** (laissez les paramètres non mentionnés à leur valeur par défaut):  
@@ -102,7 +103,7 @@ Vous allez maintenant installe un agent sur votre serveur de fichiers, qui sera 
 1. Si une fenêtre **Update** apparaît, cliquez sur **OK**
 1. Dans la page **Sign in and register this server**, sélectionnez **AzureCloud** (ne cochez pas **I am signing in as a Cloud Solution Provider**) et cliquez sur **Sign in**
     > **Nota :** Si vous recevez des invites *Internet Explorer* concernant la sécurité, autorisez les domaines **https://*.microsoftonline.com**, **https://*.msauth.net** et **https://*.msftauth.net**. Une fois cela fait, si le login échoue, recliquez sur **Sign in** pour réessayer...  
-    
+
 1. Dans la page **Choose a Storage Sync Service**, utilisez les informations suivantes :
     - **Azure Subscription :** Sélectionnez l'abonnement Azure utilisé pour cet atelier
     - **Resource Group :** **demoRG**
