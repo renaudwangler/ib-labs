@@ -21,16 +21,6 @@ async function copyCode(codeBlock) {
     codeBlock.getElementsByTagName('button')[0].title = 'Texte copié (recliquez pour copier de nouveau)'
     }
 
-function addLiCheckbox() {
-  numLine = 0
-  stageName = window.location.pathname.split('/').pop()
-  document.querySelectorAll('ol').forEach((olBlock) => {
-    Array.prototype.slice.call(olBlock.getElementsByTagName('li')).forEach((ligne) => {
-    ligne.id = 'li-'+numLine
-    if (localStorage.getItem(stageName+'-li-'+numLine) == 'checked') { ligne.className = 'li_checked' } else { ligne.className = 'li_unchecked' }
-    ligne.addEventListener('click',function() { checkBoxes(this.id) })
-      numLine++})})}
-
 function checkBoxes(lineToCheck) {
   numLine = 0
   stageName = window.location.pathname.split('/').pop()
@@ -43,3 +33,22 @@ function checkBoxes(lineToCheck) {
         ligne.className = 'li_unchecked'
         localStorage.removeItem(stageName+'-li-'+numLine)}
       numLine++})})}
+
+      function addLiCheckbox() {
+        numLine = 0
+        stageName = window.location.pathname.split('/').pop()
+        document.querySelectorAll('ol').forEach((olBlock) => {
+          Array.prototype.slice.call(olBlock.getElementsByTagName('li')).forEach((ligne) => {
+          ligne.id = 'li-'+numLine
+          lineContent = document.createElement('span')
+          lineContent.innerHTML = ligne.innerHTML
+          while (ligne.hasChildNodes()) { ligne.removeChild(ligne.firstChild); }
+          ligne.appendChild(lineContent)
+          if (localStorage.getItem(stageName+'-li-'+numLine) == 'checked') { ligne.className = 'li_checked' } else { ligne.className = 'li_unchecked' }
+          ligne.addEventListener('click',function(e) { 
+            if (e.target.nodeName==='LI') {
+            checkBoxes(this.id) }
+          })
+            numLine++})})
+          }
+
