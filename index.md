@@ -8,7 +8,9 @@ Vous trouverez ici les descriptifs d'ateliers pour des formations animées par [
 
 ## [Mise en oeuvre Azure File Sync](azureFileSync)
 
-## Générique - [Mise en place environnement Azure](ibAzureLabs)
+## [Intégration de serveur avec ARC](AzureResourceControl)
 ___
-## Conseils génériques
-### - [Démarrage propre d'un atelier mono-DC](dcNetStart)
+# Conseils génériques
+## - [Démarrage propre d'un atelier mono-DC](dcNetStart)
+
+## - [Mise en place environnement Azure](ibAzureLabs)
