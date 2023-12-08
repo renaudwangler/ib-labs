@@ -42,7 +42,9 @@ Si vous n'étiez pas encore connecté à votre compte Azure dans le navigateur I
 1. Si la validation échoue, retournez sur l'onglet **Basics** pour corriger votre saisie, sinon cliquez sur **Create**
 1. Attendez que le déploiement soit terminé avant de passer à la procédure suivante  
     >**Nota :** Le déploiement va prendre quelques instants : Le plus simple est de rester sur la page **Template overview** jusqu'à ce que le bouton **Go to resource group** apparaisse.  
+
     >**Attention :** Le *resource group* créé est *vérouillé* pour empècher sa supression accidentelle. Si vous souhaitez supprimer une resource, il faudra supprimer le verrou/lock *ibLabVerrou*. Demandez de l'aide à votre formateur/trice si nécessaire.  
+
 ## Procédure 2 : Initialiser le Cloud Shell  
 >**Nota :** La réalisation de cette procédure suppose que vous avez correctement réalisé la [Procédure 1](##procédure-1-créer-quelques-ressources-génériques-dans-azure) précédente.  
 
@@ -68,6 +70,7 @@ Si vous ne pouvez/souhaitez pas accéder aux VMs Azure directement en RDP ou SSH
 >**Nota 2 :** La réalisation de cette procédure suppose que vous avez correctement réalisé la [Procédure 1](##procédure-1-créer-quelques-ressources-génériques-dans-azuree) précédente.  
 
 >**Nota 3 :** Azure Bastion est un service facturé par Microsoft. Si vous ne souhaitez pas/plus l'utiliser dans vos labs, nous vous conseillons de supprimer la resource **ibLabBastion**.  
+
 1. Commencez par accéder au **Resource Group** créé par la [Procédure 1](##procédure-1-créer-quelques-ressources-génériques-dans-azure) précédente.
 1. Dans la liste des ressources (moitié droite de l'écran), cliquez sur le *Template spec* **ibAzureLabBastion**  
 1. Cliquez sur l'action **Deploy**  
@@ -119,6 +122,7 @@ if ($ibLabVnet=Get-AzVirtualNetwork -Name ibLabVnet) {Get-AzVirtualNetwork|where
   if(!((Get-AzVirtualNetworkPeering -VirtualNetworkName $ibLabVnet.name -ResourceGroupName $ibLabVnet.ResourceGroupName).RemoteVirtualNetwork|where id -eq $alterNet.id)) {`
     $newPeer=Add-AzVirtualNetworkPeering -Name "ibLabVnet_to_$($alterNet.name)" -VirtualNetwork $ibLabVnet -RemoteVirtualNetworkId $alterNet.id;echo $newPeer.name}}}
 ```  
+
 ## Procédure 4 : Création d'une machine virtuelle administrative 
 Si vous ne pouvez/souhaitez pas utiliser votre machine personnelle/professionnelle pour installer dessus divers outils d'administration/de développement, vous pouvez utiliser la procédure suivante pour vous créer simplement une machine virtuelle.  
 >**Nota 1 :** Cette procédure n'est pas à utiliser dans la foulée des précédentes. Il faudra vous y référer au besoin, si vous avez besoin de créer la VM administrative, ou si votre formateur/trice vous y invite.  
