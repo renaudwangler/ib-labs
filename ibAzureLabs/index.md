@@ -1,5 +1,5 @@
 ---
-layout: stage
+layout: page
 title: "Mise en place d'un environnement d'ateliers ib sur un compte Azure"
 length: "00"
 date: "08/12/2023"

@@ -138,7 +138,7 @@ Pour rappel, vous pourriez également lier plusieurs partages de plusieurs serve
 
 ## Nettoyage
 Une fois cet atelier terminé, nous vous conseillons de supprimer le *resource group* **demoRG** afin d'éviter toute facturation inutile sur votre compte Azure.  
-> **Nota :** Pour supprimer le *storage sync service*, il pourra être nécessaire de l'ouvrir dans le portail puis :
+> **Nota :** Pour supprimer le *storage sync service*, il pourra être nécessaire de l'ouvrir dans le portail puis :  
 >   - Cliquer sur **registered servers** dans la section **sync**
 >   - Cliquer sur les points de suspension (...) en fin de la ligne **demoFiler** et sélectionner **Unregister server**
 >   - Taper le nom **demoFiler** dans le champ de confirmation et cliquer sur **Unregister**
