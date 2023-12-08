@@ -18,7 +18,9 @@ async function copyCode(codeBlock) {
 
 function checkBoxes(lineToCheck) {
   numLine = 0
-  stageName = window.location.pathname.split('/').pop()
+  stagePath = window.location.pathname.split('/')
+  stageName = stagePath.pop()
+  if (stageName == '') { stageName = stagePath.pop()}
   lineToCheck=lineToCheck.split('-')[1]
   document.querySelectorAll('ol').forEach((olBlock) => {
     Array.prototype.slice.call(olBlock.getElementsByTagName('li')).forEach((ligne) => {
@@ -31,7 +33,9 @@ function checkBoxes(lineToCheck) {
 
       function addLiCheckbox() {
         numLine = 0
-        stageName = window.location.pathname.split('/').pop()
+        stagePath = window.location.pathname.split('/')
+        stageName = stagePath.pop()
+        if (stageName == '') { stageName = stagePath.pop()}
         document.querySelectorAll('ol').forEach((olBlock) => {
           Array.prototype.slice.call(olBlock.getElementsByTagName('li')).forEach((ligne) => {
           ligne.id = 'li-'+numLine
