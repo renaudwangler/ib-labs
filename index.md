@@ -6,6 +6,8 @@ title: 'Ateliers ib'
 Vous trouverez ici les descriptifs d'ateliers pour des formations animées par [ib Cegos](https://www.ib-formation.fr)
 ## MSMS030 - [Administration de Microsoft 365](msms030fr)
 
+## [Mise en oeuvre Azure File Sync](azureFileSync)
+
 ## Générique - [Mise en place environnement Azure](ibAzureLabs)
 ___
 ## Conseils génériques
