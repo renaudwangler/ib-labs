@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: stage
 title: "Mise en place d'un environnement d'ateliers ib sur un compte Azure"
 length: "00"
 date: "08/12/2023"
@@ -46,7 +46,7 @@ Si vous n'étiez pas encore connecté à votre compte Azure dans le navigateur I
     >**Attention :** Le *resource group* créé est *vérouillé* pour empècher sa supression accidentelle. Si vous souhaitez supprimer une resource, il faudra supprimer le verrou/lock *ibLabVerrou*. Demandez de l'aide à votre formateur/trice si nécessaire.  
 
 ## Procédure 2 : Initialiser le Cloud Shell  
->**Nota :** La réalisation de cette procédure suppose que vous avez correctement réalisé la [Procédure 1](##procédure-1-créer-quelques-ressources-génériques-dans-azure) précédente.  
+>**Nota :** La réalisation de cette procédure suppose que vous avez correctement réalisé la [Procédure 1](#procédure-1-créer-quelques-ressources-génériques-dans-azure) précédente.  
 
 1. Dans votre portail Azure, cliquez sur l'icône du **Cloud Shell** dans la barre des icônes en haut à droite.  
 ![Lancer le Cloud Shell](cloudShell0.png)  
@@ -56,28 +56,28 @@ Si vous n'étiez pas encore connecté à votre compte Azure dans le navigateur I
 1. Remplissez les **Advanced Settings** avec les valeurs suivantes :   
    - **Subscription** : Sélectionnez votre abonnement Azure,
    - **Region** : Sélectionnez **East US** ou tout autre région désignée par votre formateur/trice,
-   - **Resource group** : Cliquez sur **Use existing** et choisissez le *Resource group* créé dans la [Procédure 1](##procédure-1-créer-quelques-ressources-génériques-dans-azuree) précédente,
-   - **Storage account** : Cliquez sur **Use existing** et choisissez le *Storage Account* créé par la [Procédure 1](##procédure-1-créer-quelques-ressources-génériques-dans-azure) précédente,
+   - **Resource group** : Cliquez sur **Use existing** et choisissez le *Resource group* créé dans la [Procédure 1](#procédure-1-créer-quelques-ressources-génériques-dans-azuree) précédente,
+   - **Storage account** : Cliquez sur **Use existing** et choisissez le *Storage Account* créé par la [Procédure 1](#procédure-1-créer-quelques-ressources-génériques-dans-azure) précédente,
    - **File share** : Cliquez sur **Use existing** et saisissez la valeur "**cloudshell**".  
     ![Advanced Settings values](cloudShell2.png)  
 1. Cliquez sur **Attach storage**. Logiquement, votre première session de *Cloud Shell* se lance.  
->**Nota :** Votre *Cloud Shell* est donc associé à un *Storage Account* qui se trouve dans votre *Resource group*. Ainsi, à la fin de chaque atelier, pour faire le ménage, vous pourrez supprimer tous les **autres** *Resource groups* et conserver celui créé par la [Procédure 1](##procédure-1-créer-quelques-ressources-génériques-dans-azure) précédente.  
+>**Nota :** Votre *Cloud Shell* est donc associé à un *Storage Account* qui se trouve dans votre *Resource group*. Ainsi, à la fin de chaque atelier, pour faire le ménage, vous pourrez supprimer tous les **autres** *Resource groups* et conserver celui créé par la [Procédure 1](#procédure-1-créer-quelques-ressources-génériques-dans-azure) précédente.  
 
 ## Procédure 3 : Permettre l'accès *Bastion* à une VM  
 Si vous ne pouvez/souhaitez pas accéder aux VMs Azure directement en RDP ou SSH depuis votre réseau/machine, vous pouvez utiliser la procédure suivante pour vous connecter à l'interface d'une VM Azure directement depuis votre navigateur.  
 >**Nota 1 :** Cette procédure n'est pas à utiliser dans la foulée des précédentes. Il faudra vous y référer au besoin, lorsque vous souhaiterez accéder à une VM que vous aurez créée dans un atelier.  
 
->**Nota 2 :** La réalisation de cette procédure suppose que vous avez correctement réalisé la [Procédure 1](##procédure-1-créer-quelques-ressources-génériques-dans-azuree) précédente.  
+>**Nota 2 :** La réalisation de cette procédure suppose que vous avez correctement réalisé la [Procédure 1](#procédure-1-créer-quelques-ressources-génériques-dans-azuree) précédente.  
 
 >**Nota 3 :** Azure Bastion est un service facturé par Microsoft. Si vous ne souhaitez pas/plus l'utiliser dans vos labs, nous vous conseillons de supprimer la resource **ibLabBastion**.  
 
-1. Commencez par accéder au **Resource Group** créé par la [Procédure 1](##procédure-1-créer-quelques-ressources-génériques-dans-azure) précédente.
+1. Commencez par accéder au **Resource Group** créé par la [Procédure 1](#procédure-1-créer-quelques-ressources-génériques-dans-azure) précédente.
 1. Dans la liste des ressources (moitié droite de l'écran), cliquez sur le *Template spec* **ibAzureLabBastion**  
 1. Cliquez sur l'action **Deploy**  
 ![ibAzureLabBastionDeploy](ibAzureLabBastionDeploy.png)  
 1. Dans la page **Deploy ibAzureLabBastion (1.0)**, sélectionnez les valeurs suivantes :  
     - **Subscription** : Sélectionnez votre abonnement Azure,
-    - **Resource Group** : Choisissez le *Resource group* créé dans la [Procédure 1](##procédure-1-créer-quelques-ressources-génériques-dans-azure) précédente,
+    - **Resource Group** : Choisissez le *Resource group* créé dans la [Procédure 1](#procédure-1-créer-quelques-ressources-génériques-dans-azure) précédente,
      - **Region** : Laissez **East US** (ou tout autre région désignée par votre formateur/trice.  
 1. Cliquez sur **Review + Create** puis, une fois la validation passée, cliquez sur **Create**  
 1. Attendez que le déploiement soit terminé avant de passer à l'étape suivante  
@@ -114,7 +114,7 @@ Si vous ne pouvez/souhaitez pas accéder aux VMs Azure directement en RDP ou SSH
 
     >**Nota 2** : Cette *Procédure 3* sera à répéter pour tout nouveau *Virtual Network* hébergeant une machine virtuelle à laquelle vous souhaiteriez vous connecter...  
 
-    >Astuce** : La commande suivante (qui peut être utilisée dans le *CloudShell*) connecte tous vos *Virtual Networks* actuels au *Virtual Network* permettant de faire la connexion *bastion*...
+    >**Astuce** : La commande suivante (qui peut être utilisée dans le *CloudShell*) connecte tous vos *Virtual Networks* actuels au *Virtual Network* permettant de faire la connexion *bastion*...  
 ```
 if ($ibLabVnet=Get-AzVirtualNetwork -Name ibLabVnet) {Get-AzVirtualNetwork|where name -notlike ibLabVnet|foreach {`
   $alterNet=$_;if(!(Get-AzVirtualNetworkPeering -VirtualNetworkName $alterNet.name -ResourceGroupName $alterNet.ResourceGroupName)) {`
@@ -127,20 +127,23 @@ if ($ibLabVnet=Get-AzVirtualNetwork -Name ibLabVnet) {Get-AzVirtualNetwork|where
 Si vous ne pouvez/souhaitez pas utiliser votre machine personnelle/professionnelle pour installer dessus divers outils d'administration/de développement, vous pouvez utiliser la procédure suivante pour vous créer simplement une machine virtuelle.  
 >**Nota 1 :** Cette procédure n'est pas à utiliser dans la foulée des précédentes. Il faudra vous y référer au besoin, si vous avez besoin de créer la VM administrative, ou si votre formateur/trice vous y invite.  
 
->**Nota 2 :** La réalisation de cette procédure suppose que vous avez correctement réalisé la [Procédure 1](##procédure-1-créer-quelques-ressources-génériques-dans-azure) précédente.  
+>**Nota 2 :** La réalisation de cette procédure suppose que vous avez correctement réalisé la [Procédure 1](#procédure-1-créer-quelques-ressources-génériques-dans-azure) précédente.  
+
 1. Dans la liste des ressources (moitié droite de l'écran), cliquez sur le *Template spec* **ibAzureLabVM**  
 1. Cliquez sur l'action **Deploy**  
 ![ibAzureLabVMDeploy](ibAzureLabVMDeploy.png)  
 1. Dans la page **Deploy ibAzureLabVM (1.0)**, sélectionnez les valeurs suivantes :  
     - **Subscription** : Sélectionnez votre abonnement Azure,
-    - **Resource Group** : Choisissez le *Resource group* créé dans la [Procédure 1](##procédure-1-créer-quelques-ressources-génériques-dans-azure) précédente,
+    - **Resource Group** : Choisissez le *Resource group* créé dans la [Procédure 1](#procédure-1-créer-quelques-ressources-génériques-dans-azure) précédente,
      - **Region** : Laissez **East US** (ou tout autre région désignée par votre formateur/trice.  
      - **Virtual Machine Size** : Laissez **Standard DS1 v2**, sauf si votre formateur/trice vous indique de changer cette valeur,  
      - **Admin Password** : La valeur par défaut est "**Pa55w.rd1234**", si vous la changez, notez la valeur choisie pour vous connecter ensuite à la VM.  
 1. Cliquez sur **Review + Create** puis, une fois la validation passée, cliquez sur **Create**  
 1. Une fois le déploiement terminé, vous pourrez vous connecter à votre nouvelle VM d'administration.  
     >**Nota 1 :** Le déploiement va prendre quelques minutes. Le plus simple est de rester sur la page **Template overview** jusqu'à ce que le bouton **Go to resource group** apparaisse.  
+
 ![go to resource group](gotoRG.png)  
 
     >**Nota 2 :** Si vous ne voulez/pouvez pas vous connecter en RDP sur la machine virtuelle d'administration, vous pouvez vous y connecter en créant un *Bastion* en suivant les étapes **1** à **6** de la [procédure 3](##procédure-3--permettre-laccès-bastion-à-une-vm).  
-Ensuite, connectez-vous à votre VM en vous référant si nécessaire aux étapes **20** à **22** de la [procédure 3](##procédure-3--permettre-laccès-bastion-à-une-vm).
+
+Ensuite, connectez-vous à votre VM en vous référant si nécessaire aux étapes **20** à **22** de la [procédure 3](#procédure-3--permettre-laccès-bastion-à-une-vm).
