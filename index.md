@@ -13,6 +13,7 @@ Vous trouverez ici les descriptifs d'ateliers pour des formations animées par [
 ## [Intégration de serveur avec ARC](AzureResourceControl)  
 > Utilisation de l'*Azure Resource Control* pour gérer une machine Windows depuis l'environnement Azure.  
 (L'accès aux resources Azure depuis la machine Windows se fera nativement gràce à une *Managed Identity*)  
+
 ___
 # Conseils génériques
 ## - [Démarrage propre d'un atelier mono-DC](dcNetStart)
