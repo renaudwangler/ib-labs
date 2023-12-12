@@ -59,9 +59,9 @@ Cette tâche n'est pas directement liée à l'activation de la fonction Windows 
 1. Connectez-vous au [Microsoft 365 admin center](https://admin.microsoft.com) en utilisant le compte *Global Administrator* de votre tenant de test.
 1. Dans le menu de navigation à gauche, cliquer sur "**... Show all**" puis, dans la section "**Admin centers**" sur "**Endpoint Manager**".
 1. Dans le "**Microsoft Endpoint Manager admin center**", cliquez sur "**Devices**" dans le menu de navigation à gauche.
-1. Dans la fenêtre "**Devices | Overview**", dans la section "**By platform**" du menu de navigation, cliquez sur "**Windows**".
-1. Dans la fenêtre "**Windows | Windows Devices**", cliquez sur "**Windows Enrollment**" dans le menu de navigation.
-1. Dans la fenêtre "**Windows | Windows enrollment**", cliquez sur la tuile "**Deployment Profiles**" de la section "**Windows Autopilot Deployment Program**".
+1. Dans la fenêtre "**Devices / Overview**", dans la section "**By platform**" du menu de navigation, cliquez sur "**Windows**".
+1. Dans la fenêtre "**Windows / Windows Devices**", cliquez sur "**Windows Enrollment**" dans le menu de navigation.
+1. Dans la fenêtre "**Windows / Windows enrollment**", cliquez sur la tuile "**Deployment Profiles**" de la section "**Windows Autopilot Deployment Program**".
 1. Dans la fenêtre "**Windows Autopilot deployment profiles**", cliquez sur le bouton "**+ Create profile**".
 1. Dans la fenêtre "**Create profile**", dans l'onglet "**Basics**", saisissez ```Mon Profil de déploiement``` pour le "**Name**" avant de cliquer sur "**Next**"
 1. Dans l'onglet "**Out-of-box experience (OOBE)**", saisissez les informations suivantes avant de cliquer sur "**Next**" (laissez les autres valeurs par défaut) :
