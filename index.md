@@ -17,6 +17,9 @@ Vous trouverez ici les descriptifs d'ateliers pour des formations animées par [
 ## [Key Vault et Identité gérée](managedId)  
 > Permettre à une VM d'accèder au mot de passe d'un partage dans un *Key Vault*. La VM n'aura pas besoin de s'authentifier car vous utiliserez une *System Assigned Managed Identity*.  
 
+## [Mise en place de la MFA avec une application Windows](alternateMFA)
+> utiliser une application installée sur un poste Windows 10/11 pour réaliser l'authentification multifactorielle (MFA) d'un utilisateur m365 ou Entra Id.  
+
 ___
 # Conseils génériques
 ## - [Démarrage propre d'un atelier mono-DC](dcNetStart)

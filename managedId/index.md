@@ -2,7 +2,7 @@
 layout: page
 title: "Key Vault et Identité gérée"
 length: "00"
-date: "08/12/2023"
+date: "12/12/2023"
 ---
 # Scenario
 Dans cet atelier, nous allons illustrer l'utilisation d'un *Key Vault* pour stocker un élément de sécurité (réprésenté ici par le mot de passe d'un *Azure File Share*).  
@@ -99,8 +99,10 @@ Pour finir, vous allez démontrer que le code tournant dans le contexte de la ma
     $sakey
     net use z: \\demosaXXXXX.file.core.windows.net\demoshare /user:demosaXXXX $sakey
     ```
+
 ## Résultat
 Vous avez pu connecter votre VM au *Azure File Share* sans besoin de gérer ni certificat ni mot de passe !
 > **Nota :** La même opération est désormais faisable depuis une machine virtuelle/physique hors Azure car le service [Azure ARC](https://docs.microsoft.com/en-us/azure/azure-arc/servers/overview) intègre nativement la notion de *System Assigned Managed Identity*  
+  
 ## Nettoyage
 Une fois cet atelier terminé, nous vous conseillons de supprimer le *resource group* **demoRG** afin d'éviter toute facturation inutile sur votre compte Azure.
