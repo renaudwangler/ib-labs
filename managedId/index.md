@@ -43,7 +43,8 @@ Vous allez maintenant créer un *File Share* dans un *Storage Account*, cible de
     - **Tier :** sélectionnez **Hot**
 1. Cliquez sur **Create**
 1. Sur la page de votre *Storage Account*, cliquez sur **Settings / Acces Keys**
-1. Cliquez sur le bouton **Show keys** et copiez la valeur du champ **Key1** (vous pouvez le faire en utilisant le bouton de copie à droite dudit champ).
+1. Cliquez sur le bouton **Show keys** et copiez la valeur du champ **Key1** (vous pouvez le faire en utilisant le bouton de copie à droite dudit champ).  
+
 ## Etape 3: Créer un *Key vault*
 Vous allez maintenant créer le *Key Vault* dans lequel vous stockerez ensuite le mot de passe de connexion au partage.
 1. Connectez-vous au portail Azure (http://portal.azure.com) et cliquez sur **+ Create a resource**
@@ -55,6 +56,7 @@ Vous allez maintenant créer le *Key Vault* dans lequel vous stockerez ensuite l
     - **Purge protection:** **Disable purge protection**
 1. Cliquez sur **Review + create** puis, une fois que le message *Validation passed* est apparu, cliquez sur **Create**.
 1. Attendez que le *Key Vault* soit créé, puis cliquez sur le bouton **Go to resource**  
+
 ## Etape 4 : Ajouter un secret dans le *Key Vault*
 Vous allez désormais placer le mot de passe de connexion au partage de fichiers dans le *Key Vault*.  
 1. Sur la page de votre *Key Vault*, cliquez sur **Settings / Secrets**
@@ -62,7 +64,8 @@ Vous allez désormais placer le mot de passe de connexion au partage de fichiers
 1. Utilisez les valeurs suivantes avant de cliquer sur le bouton **Create**  (laissez les paramètres non mentionnés à leur valeur par défaut)
     - **Upload options:** **Manual**
     - **Name:** ```sakey```
-    - **Value:** Collez la valeur de la clef que vous aviez copié à l'étape 2
+    - **Value:** Collez la valeur de la clef que vous aviez copié à l'étape 2  
+
 ## Etape 5 : Rendre le *Key Vault* accessible par la VM.
 VOus allez maintenant permettre à la VM de récupérer les informations secretes dans le *Key Vault*, en vous appuyant sur le *RBAC* interne à ce dernier.
 1. Dans la page de votre *Key Vault* , cliquez sur **Settings / Access policies**
@@ -70,6 +73,7 @@ VOus allez maintenant permettre à la VM de récupérer les informations secrete
     - **Configure from template:** **Secret Management**
     - **Select principal:** Cliquez sur **None selected** et recherchez l'entrée **demoVM** pour la choisir avant de cliquer sur le bouton **Select**  
 1. De retour sur la page **Access policies**, cliquez sur le bouton **Save**  
+
 ## Etape 6 : Vérification du fonctionnement
 Pour finir, vous allez démontrer que le code tournant dans le contexte de la machine virtuelle peut récupérer des informations dans le *Key Vault* afin, dans notre exemple, d'accéder à un partage.
 1. retournez sur la VM que vous avez déployé à l'étape 1 (vous pouvez, par exemple, cliquer sur l'entrée **demoVM** dans la liste **Recent resources** sur la page d'accueil du portail).
@@ -87,9 +91,9 @@ Pour finir, vous allez démontrer que le code tournant dans le contexte de la ma
 1. Tapez **Y** et **Entrée** pour valider l'installation du module powershell pour Azure (cette installation prend quelques minutes).
 1. A l'invite Powershell, utilisez la commande suivante pour vous connecter à lenvironnement Azure en utilisant la *System Assigned Managed Identity* :
     ```connect-azAccount -Identity```
-    > **Nota ** Notez que vous n'utilisez ni mot de passe ni certificat pour vous connecter : le paramètre `-identity` se suffit à lui-même.  
+    > **Nota :** Notez que vous n'utilisez ni mot de passe ni certificat pour vous connecter : le paramètre **-identity** se suffit à lui-même.  
 
-1. Utilisez les 2 commandes Powershell suivantes pour récupérer la clef depuis le *Key Vault* et vous connecter au *Azure FIle Shrare*:
+1. Utilisez les commandes Powershell suivantes pour récupérer la clef depuis le *Key Vault* et vous connecter au *Azure FIle Shrare*:
     ```
     $sakey=get-AzKeyVaultSecret -vaultName demoKVXXX -Name sakey -asplaintext
     $sakey
@@ -99,9 +103,4 @@ Pour finir, vous allez démontrer que le code tournant dans le contexte de la ma
 Vous avez pu connecter votre VM au *Azure File Share* sans besoin de gérer ni certificat ni mot de passe !
 > **Nota :** La même opération est désormais faisable depuis une machine virtuelle/physique hors Azure car le service [Azure ARC](https://docs.microsoft.com/en-us/azure/azure-arc/servers/overview) intègre nativement la notion de *System Assigned Managed Identity*  
 ## Nettoyage
-Une fois cet atelier terminé, nous vous conseillons de supprimer le *resource group* **demoRG** afin d'éviter toute facturation inutile sur votre compte Azure.  
-
-
-## Résultat
-Vous avez mis en place la synchronisation des fichiers contenus entre un serveur SMB Windows et un partage de fichier dans Azure.  
-Pour rappel, vous pourriez également lier plusieurs partages de plusieurs serveurs SMB pour en synchroniser le contenu sur plusieurs de vos sites.
+Une fois cet atelier terminé, nous vous conseillons de supprimer le *resource group* **demoRG** afin d'éviter toute facturation inutile sur votre compte Azure.
