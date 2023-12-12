@@ -23,9 +23,13 @@ Vous trouverez ici les descriptifs d'ateliers pour des formations animées par [
 ## [Mise en place d'un test Windows AutoPilot](autopilot)  
 > Tester de manière la plus simple et rapide possible la fonctionnalité Windows Autopilot Afin de constater la jonction et la customisation automatique d'un poste Windows 10/11 dans un tenant Microsoft 365  
 
+## [Mise en place d'un compte de test Microsoft 365](test365)
+> Création d'un compte développeur chez Microsoft et mise en place d'un environnement de test complet Microsoft 365.
+
 ___
 # Conseils génériques
 ## - [Démarrage propre d'un atelier mono-DC](dcNetStart)
+> Correction  des problèmes de démarrage des VMs dans un environnement Active Directory (ADDS) ou un seul contrôleur de domaine (DC) est présent.  
 
 ## - [Mise en place environnement Azure](ibAzureLabs)  
 > Comment mettre en place quelques ressources dans un compte Azure. Ces procédures pourront, par exemple, être utilisées en début d'une formation pour simplifier le déroulement d'ateliers basés sur un compte Azure par la suite...  
