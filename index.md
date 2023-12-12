@@ -14,6 +14,9 @@ Vous trouverez ici les descriptifs d'ateliers pour des formations animées par [
 > Utilisation de l'*Azure Resource Control* pour gérer une machine Windows depuis l'environnement Azure.  
 (L'accès aux resources Azure depuis la machine Windows se fera nativement gràce à une *Managed Identity*)  
 
+## [Key Vault et Identité gérée](managedId)  
+> Permettre à une VM d'accèder au mot de passe d'un partage dans un *Key Vault*. La VM n'aura pas besoin de s'authentifier car vous utiliserez une *System Assigned Managed Identity*.  
+
 ___
 # Conseils génériques
 ## - [Démarrage propre d'un atelier mono-DC](dcNetStart)
