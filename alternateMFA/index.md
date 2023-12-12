@@ -54,7 +54,7 @@ Dans cet atelier, vous allez utiliser une application sur un poste Windows 10/11
 ## Résultat
 Vous pouvez désormais utiliser l'application **2fast** pour générer des codes à 6 chiffres pour la connexion de l'utilisateur concerné.
 
-### Nettoyage
+## Nettoyage
 1. Lancer un navigateur Internet et se connecter au portail Azure ou 365 avec le compte Entra Id sur lequel l'activation de la MFA est souhaitée.
 1. Sur la page du portail, cliquer sur l'information du compte (image/logo dans le coin en haut à droite de la page) et cliquer sur le lien **View account**.
     >**Nota :** Un utilisateur peut accéder directement à sa page **My Account** en utilisant le lien suivant : **https://myaccount.microsoft.com**.  

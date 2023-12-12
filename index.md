@@ -20,6 +20,9 @@ Vous trouverez ici les descriptifs d'ateliers pour des formations animées par [
 ## [Mise en place de la MFA avec une application Windows](alternateMFA)
 > utiliser une application installée sur un poste Windows 10/11 pour réaliser l'authentification multifactorielle (MFA) d'un utilisateur m365 ou Entra Id.  
 
+## [Mise en place d'un test Windows AutoPilot](autopilot)  
+> Tester de manière la plus simple et rapide possible la fonctionnalité Windows Autopilot Afin de constater la jonction et la customisation automatique d'un poste Windows 10/11 dans un tenant Microsoft 365  
+
 ___
 # Conseils génériques
 ## - [Démarrage propre d'un atelier mono-DC](dcNetStart)
