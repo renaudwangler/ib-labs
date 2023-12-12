@@ -5,12 +5,17 @@ title: 'Ateliers ib'
 # Ateliers de stages *ib Cegos*
 Vous trouverez ici les descriptifs d'ateliers pour des formations animées par [ib Cegos](https://www.ib-formation.fr)
 ## MSMS030 - [Administration de Microsoft 365](msms030fr)
+> Ateliers en Français et tenus à jour de la formation ib msms030
 
-## [Mise en oeuvre Azure File Sync](azureFileSync)
+## [Mise en oeuvre Azure File Sync](azureFileSync)  
+> Tester la synchronisation de fichiers entre un serveur SMB Windows Server "classique" et un partage de fichiers "Azure File Share".  
 
-## [Intégration de serveur avec ARC](AzureResourceControl)
+## [Intégration de serveur avec ARC](AzureResourceControl)  
+> Utilisation de l'*Azure Resource Control* pour gérer une machine Windows depuis l'environnement Azure.  
+(L'accès aux resources Azure depuis la machine Windows se fera nativement gràce à une *Managed Identity*)  
 ___
 # Conseils génériques
 ## - [Démarrage propre d'un atelier mono-DC](dcNetStart)
 
-## - [Mise en place environnement Azure](ibAzureLabs)
+## - [Mise en place environnement Azure](ibAzureLabs)  
+> Comment mettre en place quelques ressources dans un compte Azure. Ces procédures pourront, par exemple, être utilisées en début d'une formation pour simplifier le déroulement d'ateliers basés sur un compte Azure par la suite...  
