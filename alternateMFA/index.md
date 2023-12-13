@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Mise en place de la M.F.A avec une application Windows"
+synopsis: "utiliser une application installée sur un poste Windows 10/11 pour réaliser l'authentification multifactorielle (MFA) d'un utilisateur m365 ou Entra Id."
 length: "00"
 date: "12/12/2023"
 ---

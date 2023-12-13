@@ -15,7 +15,8 @@ La variable obligatoire en en-tête du stage
 
 Les variables disponibles dans l'en-tête de chaque stage  
 - **length :** durée en minutes
-- **date:** Afficher la date de dernière édition d'un atelier dans son pied de page.
+- **date :** Afficher la date de dernière édition d'un atelier dans son pied de page.
+- **synopsis :** Le résumé de l'atelier pour qu'il apparaisse dans la liste
 
 # Remarques
 Les balises de code se voient adjointes un bouton pour faciliter la copie dudit code. 
