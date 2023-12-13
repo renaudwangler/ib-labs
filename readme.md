@@ -1,4 +1,4 @@
-![dernière compilation](https://github.com/renaudwangler/ib-labs/actions/workflows/jekyll-gh-pages.yml/badge.svg)
+![dernière compilation](https://github.com/renaudwangler/ib-labs/actions/workflows/pages-build-deployment/badge.svg)
 # Consultation
 [Utiliser cette URL pour consulter la documentation compilée](https://renaudwangler.github.io/ib-labs/)
 
