@@ -35,6 +35,8 @@ ___
 > Comment mettre en place quelques ressources dans un compte Azure. Ces procédures pourront, par exemple, être utilisées en début d'une formation pour simplifier le déroulement d'ateliers basés sur un compte Azure par la suite...  
 
 {% for lab in (site.pages| where_exp:'page',"page.url contains 'index.md'") %}
-## [{{lab.title}}]({{site.github.url} {{lab.url}})  
-> {{lab.synopsis}}
+  {% if lab.synopsis %}
+    ## [{{lab.title}}]({{site.github.url} {{lab.url}})  
+    > {{lab.synopsis}}
+  {% endif %}
 {% endfor %}
