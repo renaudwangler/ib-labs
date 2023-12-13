@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Démarrage propre d'un atelier mono-DC"
+genericSynopsis: "Correction  des problèmes de démarrage des VMs dans un environnement Active Directory (ADDS) ou un seul contrôleur de domaine (DC) est présent."
 length: "3"
 date: "20/11/2023"
 ---

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Mise en place d'un environnement d'ateliers ib sur un compte Azure"
+genericSynopsis: "Comment mettre en place quelques ressources dans un compte Azure. Ces procédures pourront, par exemple, être utilisées en début d'une formation pour simplifier le déroulement d'ateliers basés sur un compte Azure par la suite..."
 length: "00"
 date: "08/12/2023"
 ---

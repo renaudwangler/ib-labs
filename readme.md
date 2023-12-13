@@ -3,7 +3,7 @@
 [Utiliser cette URL pour consulter la documentation compilée](https://renaudwangler.github.io/ib-labs/)
 
 # Fichiers d'atelier
-Ajouter un dossier, contenant un **index.md**.  
+Ajouter un dossier, contenant un **index.md**.
 
 Le contenu des ateliers est rédigé en [format markdown](https://docs.github.com/fr/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).  
 
@@ -12,6 +12,8 @@ Les variables sont à insérer dans un [en-tête YAML](https://jekyllrb.com/docs
 La variable obligatoire en en-tête du stage  
 - **layout : page** pour un atelier contenu dans index.md, **home** et **stage** sinon (ex msm030fr)
 - **title :** Le nom de l'atelier en toutes lettres  
+- **synopsis :** Le résumer (descriptif) de l'atelier. la présence de cette variable listera l'atelier dans la section principale de la page d'accueil.
+- **genericSynopsis :** Le résumer (descriptif) d'un atelier. La présence de cette vraibale lsitera l'atelier dans la section **Conseils générques** de la page d'accueil.
 
 Les variables disponibles dans l'en-tête de chaque stage  
 - **length :** durée en minutes
