@@ -4,3 +4,11 @@ kramdown:
       disable : true
 sass:
   style: :compressed
+
+theme: jekyll-theme-slate
+defaults:
+  -
+    scope:
+      path: "stages"
+    values:
+      layout: "stage"
