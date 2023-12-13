@@ -1,6 +1,8 @@
 ---
 layout: page
 title: "Intégration de serveur avec ARC"
+synopsis: "Utilisation de l'*Azure Resource Control* pour gérer une machine Windows depuis l'environnement Azure.  
+(L'accès aux resources Azure depuis la machine Windows se fera nativement gràce à une *Managed Identity*)"
 length: "00"
 date: "08/12/2023"
 ---

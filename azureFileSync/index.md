@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Mise en oeuvre Azure File Sync"
+synopsis: 'Tester la synchronisation de fichiers entre un serveur SMB Windows Server "classique" et un partage de fichiers "Azure File Share".'
 length: "00"
 date: "08/12/2023"
 ---

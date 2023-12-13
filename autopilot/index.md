@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Mise en place d'un test Windows AutoPilot"
+synopsis: "Tester de manière la plus simple et rapide possible la fonctionnalité Windows Autopilot Afin de constater la jonction et la customisation automatique d'un poste Windows 10/11 dans un tenant Microsoft 365"
 length: "00"
 date: "12/12/2023"
 ---
