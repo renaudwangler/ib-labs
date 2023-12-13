@@ -1,6 +1,7 @@
 ---
 layout: home
 title: 'MSMS030 - Administration de Microsoft 365'
+synopsis: "Ateliers en Français et tenus à jour de la formation ib msms030"
 length: "00"
 ---
 # Ateliers du stage

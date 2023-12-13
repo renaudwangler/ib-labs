@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Key Vault et Identité gérée"
+synopsis: "Permettre à une VM d'accèder au mot de passe d'un partage dans un *Key Vault*. La VM n'aura pas besoin de s'authentifier car vous utiliserez une *System Assigned Managed Identity*."
 length: "00"
 date: "12/12/2023"
 ---

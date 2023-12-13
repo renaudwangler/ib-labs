@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Créer un environnement de test Microsoft 365"
+synopsis: "Création d'un compte développeur chez Microsoft et mise en place d'un environnement de test complet Microsoft 365."
 length: "00"
 date: "12/12/2023"
 ---
