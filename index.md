@@ -36,7 +36,7 @@ ___
 
 {% for lab in (site.pages| where_exp:'page',"page.url contains 'index.md'") %}
   {% if lab.synopsis %}
-    ## [{{lab.title}}]({{site.github.url} {{lab.url}})  
+    ## [{{lab.title}}]({{site.github.url}} {{lab.url}})  
     > {{lab.synopsis}}
   {% endif %}
 {% endfor %}
