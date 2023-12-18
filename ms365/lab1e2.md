@@ -2,7 +2,7 @@
 layout: stage
 title: "Lab1-Ex2 - Ajout d'un domaine DNS d'entreprise"
 length: "00"
-date: "11/11/2023"
+date: "18/12/2023"
 ---
 # Scénario
 Adatum a acheté un nouveau nom de domaine DNS pour son projet pilote, qui soit utilisable sur Internet.  
@@ -20,7 +20,7 @@ dans votre environnement d'atelier, goDeploy vous fournit un nom de domaine DNS 
 Dans cette tâche vous allez ajouter le domaine DNS d'entreprise à votre tenant Microsoft 365. 
 1. A l'issue du précédent exercice, vous devriez être connecté sur **LON-DC1** avec le compte **Administrator**.
 1. Dans votre navigateur Internet, vous devriez toujours être sur le portail **Microsoft 365 admin center**, connecté avec le compte *MOD Administrator*.
-1. Dans le portail **Microsoft 365 admin center**, dans le menu de navigation, vous aviez déjà ouvert le groupe **Settings** pour l'exercice précédant. Pour ajouter le domaine d'entreprise, cliquez sur **Domains** dans ce groupe. 
+1. Dans le portail **Microsoft 365 admin center**, dans le menu de navigation, vous aviez déjà ouvert le groupe **Settings** pour l'exercice précédent. Pour ajouter le domaine d'entreprise, cliquez sur **Domains** dans ce groupe. 
 1. Sur la page **Domains**, vous devriez voir apparaitre le domaine par défaut, créé avec votre tenant (se terminant par *.onmicrosoft.com*).
 1. Cliquez sur **+ Add domain** pour ouvrir la page **Add a domain**.
 1. Sur la page **Add a domain**, saisissez le **nom DNS d'entreprise** (```labxxxxx.godeploylabs.com```) dans le champ **Domain name** avant de cliquer sur le bouton **Use this domain**.
@@ -29,15 +29,15 @@ Dans cette tâche vous allez ajouter le domaine DNS d'entreprise à votre tenant
 1. Dans l'environnement d'atelier, ouvrer l'onglet **DNS** et cliquez sur **Add New +** dans la section **TXT Records**
 1. Dans la fenêtre **Add DNS TXT Record**, tapez **@** dans le champ **Name** et la valeur notée précédemment dans le champ **Value** avant de cliquer sur **Save**.
 1. De retour dans la machine virtuelle **LON-DC1**, Sur la page **Add a record to verify ownership**, cliquez sur le bouton **Verify**.
-1. Suyr la page **How do you want to connect to your domain?**, sélectionnez **More options**. Deux options s'affichent : **Add your own DNS records**, et **Skip and do this later (not recommended)**. L'option **Add your own DNS records** est sélectionnée par défaut, cliquez sur le couton **Continue** pour ouvrir la page **Add DNS records**.
+1. Sur la page **How do you want to connect to your domain?**, sélectionnez **More options**. Deux options s'affichent : **Add your own DNS records**, et **Skip and do this later (not recommended)**. L'option **Add your own DNS records** est sélectionnée par défaut, cliquez sur le couton **Continue** pour ouvrir la page **Add DNS records**.
 1. La page **Add DNS records** identifie les services qu'une entreprise peut implémenter dans le contexte de son déploiement Microsoft 365 et qui ont besoin d'enregistrements DNS. L'option **Exchange and Exchange Online Protection** devrait être sélectionnée par défaut (sinon, sélectionnez là).
-	> Trois enregistrements DNS sont nécessaires pour les services Exchange - un enregistrement **MX** , un alias **CNAME**, et un enregistrement **TXT**. Sélectionnez chaque enregistrement pour l'ouvrir et prendre note de son contenu à créer.  
+	> Trois enregistrements DNS sont nécessaires pour les services Exchange - un enregistrement **MX**, un alias **CNAME**, et un enregistrement **TXT**. Sélectionnez chaque enregistrement pour l'ouvrir et prendre note de son contenu à créer.  
     - MX pointe vers ```labxxxxx-godeploylabs-com.mail.protection.outlook.com``` (avec préférence de **0**)  
     - CNAME associe ```autodiscover``` à ```autodiscover.outlook.com```  
     - TXT contient ```v=spf1 include:spf.protection.outlook.com -all```  
 
 1. Plus bas dans la page **Add DNS records** cliquez sur **Advanced Options**.
-1. Trois services additionnels sont affichés ici : **Skype for Business**, **Intune and Mobile Device Management for Microsoft 365** et **DomainKeys Identified Mail (DKIM).  
+1. Trois services additionnels sont affichés ici : **Skype for Business**, **Intune and Mobile Device Management for Microsoft 365** et **DomainKeys Identified Mail (DKIM)**.  
 	> Sélectionnez les cases à cocher des deux premiers services, cela va faire apparaître un ensemble d'enregistrements DNS à créer pour chacun.
 1. Notez que quatre enregistrements DNS sont requis pour **Skype for Business** - deux **CNAME** et deux **SRV**. Sélectionnez chaque enregistrement pour l'afficher et en prendre note  
 	> **Important :** Bien que Teams soit désormais utilisée comme plateforme de collaboration et de conversation en temps réel, il reste nécessaire de sélectionner **Skype for Business**. La raison en est que Teams va s'appuyer sur ces enregistrements DNS pour diverses fonctionnalités qui ne fonctionneront pas correctement sans.  
@@ -54,7 +54,7 @@ Dans cette tâche vous allez ajouter le domaine DNS d'entreprise à votre tenant
     > **Note** : Voici un exemple d'onglet DNS contenant les enregistrements nécessaires créés pour vous aider : il vous faudra cependant remplacer la mention labXXXXXX par votre nom DNS d'entreprise :
     ![msms030fr DNS Sample](DNS-Sample.png)
 1. De retour dans la machine virtuelle **lon-DC1**, cliquez sur le bouton **Continue**. A ce moment, l'assistant de création du domaine va vérifier que tous les enregistrements DNS nécessaires ont correctement été créés.
-1. Si tous les enregistrements DNS attendus ont été correctement crées, la page **Domain setup is complete** devrait apparaître (Dans le cas contraire, vérifiez les enregistrement DNS manquant/erronés indiqués sur la page **Add DNS records** qui s'est réaffichée, avant de cliquer de nouveau sur **Continue*). Cliquez sur **Done**.
+1. Si tous les enregistrements DNS attendus ont été correctement crées, la page **Domain setup is complete** devrait apparaître (Dans le cas contraire, vérifiez les enregistrement DNS manquant/erronés indiqués sur la page **Add DNS records** qui s'est réaffichée, avant de cliquer de nouveau sur **Continue**). Cliquez sur **Done**.
 1. Vous allez être renvoyé vers la page **Domains** dans laquelle la colonne **status** pour votre DNS d'entreprise devrait afficher **Healthy**.  
 1. Restez connecté sur LON-DC1 et laissez votre navigateur Internet ouvert et connecté pour les ateliers suivants.
 
