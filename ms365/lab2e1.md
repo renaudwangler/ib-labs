@@ -58,12 +58,13 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 	- **Username domain :** Lors de la saisie du **Username** pour chaque utilisateur, laissez le domaine **labxxxxx.godeploylabs.com** comme nom de domaine par défaut.
 	- **Password :** Utilisez le mot de passe ```Pa55w.rd```, et, comme pour le compte de Dominique, exigez le changement de mot de passe à la première connexion.
 	- **Licenses :** Affectez une licence **Office 365 E3** à l'utilisateur **Alan Yoo**. Pour tous les autres utilisateurs, sélectionner l'option **Create user without product license (not recommended)**.
-	- **Roles :** Par défaut chaque utilisateur se verra affecter le rôle **User role (no administration access)**; Cela suffira pour le moment. Dans un futur exercice, vous affecterez des rôles administratifs à certains utilisateurs pour tester la délégation administrative. Ainsi, en arrivant sur la page **Optional settings**, cliquez directement sur **Next**.
-		```Alan Yoo``` | username ```alan``` | Licence **Office 365 E3** mais pas de rôle admin  
-		```Ada Russell``` | username ```ada``` | Ni licence ni rôle admin
-		```Adam Hobbs``` | username ```adam``` | Ni licence ni rôle admin
-		```Libby Hayward``` | username ```libby``` | Ni licence ni rôle admin
-		```Laura Atkins```| username ```laura``` | Ni licence ni rôle admin
+	- **Roles :** Par défaut chaque utilisateur se verra affecter le rôle **User role (no administration access)**; Cela suffira pour le moment. Dans un futur exercice, vous affecterez des rôles administratifs à certains utilisateurs pour tester la délégation administrative. Ainsi, en arrivant sur la page **Optional settings**, cliquez directement sur **Next**.  
+		| ```Alan Yoo``` | username ```alan``` | Licence **Office 365 E3** mais pas de rôle admin |
+		| ```Ada Russell``` | username ```ada``` | Ni licence ni rôle admin |
+		| ```Adam Hobbs``` | username ```adam``` | Ni licence ni rôle admin |
+		| ```Libby Hayward``` | username ```libby``` | Ni licence ni rôle admin |
+		| ```Laura Atkins```| username ```laura``` | Ni licence ni rôle admin |  
+		
 1. Après avoir ajouté le dernier compte (celui de *Laura Atkins*) cliquez sur le bouton **Close** pour revenir à la liste des **Active users**
 1. Vérifiez la liste **Active users**. Vérifiez que chacun des précédents utilisateurs a pour domaine **WWLxxxxx.onmicrosoft.com** et changez-le si ce n'est pas le cas.
 1. Restez connecté sur LON-CL1 et laissez votre navigateur Internet ouvert pour la tâche suivante de cet atelier.
