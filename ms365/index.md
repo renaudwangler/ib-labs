@@ -2,13 +2,13 @@
 layout: home
 title: 'MS365 - Administration de Microsoft 365'
 synopsis: "Ateliers en Français et tenus à jour de la formation ib MS365"
-length: "00"
 ---
 # Ateliers du stage
 L'entreprise Adatum héberge actuellement un environnement informatique *classique*, dans ses datacenters, qui comporte diverses applications historiques (comme Microsoft Exchange par exemple). L'entreprise a cependant récemment acquis un abonnement Microsoft 365, y voyant l'opportunité d'un déploiement hybride et d'un rapprochement des applications du Cloud.  
 
 Au fil des ateliers de ce stage, vous allez prendre l'identité de Dominique Skyetson, membre de l'équipe d'administration IT de Adatum.  
-L'équipe projet de Adatum a décidé de mettre en œuvre Microsoft 365  dans un projet pilote, afin de monter en compétence sur le produit et de voir les besoins métiers qui pourraient être couverts par Microsoft 365.
+L'équipe projet de Adatum a décidé de mettre en œuvre Microsoft 365  dans un projet pilote, afin de monter en compétence sur le produit et de voir les besoins métiers qui pourraient être couverts par Microsoft 365.  
+
 ## Atelier 1 - Provisioning du tenant Microsoft 365
 ### Exercice 1 - [Création de l'environnement](lab1e1)
 ### Exercice 2 - [Ajout d'un domaine DNS d'entreprise](lab1e2)
@@ -49,6 +49,8 @@ ___
 ### Exercice 2 - [Dépannage de flux de messages](lab9e2)
 ___
 ## Conseils génériques
-- Les ateliers doivent être réalisés dans l'ordre prévu pour éviter les surprises, avec les exceptions/adaptations suivantes :
+1. Pour réaliser les ateliers de ce stage, vous allez utiliser un environnement de stage fourni par notre partenaire *goDeploy*. Cet environnement, qui inclut un compte de test Microsoft 365, comporte des instructions d'atelier (en anglais) que nous vous invitons à remplacer par les présentes instructions.
+1. Si vous constatez des dérives entre les présentes instructions et les interfaces que vous rencontrez pendant votre atelier, n'hésitez pas à prévenir votre formateur/trice pour que les présentes instructions soient mises à jour.  
+1. Les ateliers doivent être réalisés dans l'ordre prévu pour éviter les surprises, avec l'exception suivante :
     - Les tâches 2 et 3 de l'atelier 3, exercice 1 sont dispensables
-    - Si vous souhaitez maximiser vos chances de constater les résultats de l'atelier 8, vous pouvez le réaliser en avance, car son résultat nécessite une latence importante.
+1. Si vous souhaitez maximiser vos chances de constater les résultats de l'atelier 8, vous pouvez le réaliser en avance, car son résultat nécessite une latence importante.
