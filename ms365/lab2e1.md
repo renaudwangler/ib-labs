@@ -71,10 +71,11 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 1. Restez connecté sur LON-CL1 et laissez votre navigateur Internet ouvert pour la tâche suivante de cet atelier.
 
 ## Tâche 2 : Modification d'utilisateurs Microsoft 365
-Dans cette tâche, vous allez réaliser nombre des actions d'édition sur les comptes utilisateurs. Vous allez commencer par mettre à jour les informations de contact d'Alan Yoo, avant de l'empêcher de se connecter.  
-Empêcher la connexion d'un utilisateur est un *best practice* lorsque vous pensez que le compte ou le mot de passe d'un utilisateur puisse avoir été compromis. Ceci évite que l'utilisateur en question puisse se connecter et, en plus, le déconnectera de tous les services Microsoft 365 dans les 60 minutes.
-Vous affecterez ensuite une licence produit au compte de Ada Russell. Pour finir, vous allez supprimer le compte de Libby Hayward avant de voir comment le restaurer.
-1. Vous devriez encore être connecté sur **LON-CL1** à l'issue du premier atelier. Le **Microsoft 365 admin center** devrait encore être resté ouvert dans votre navigateur et vous devriez y être connecté avec le compte *MOD Administrator*.
+Dans cette tâche, vous allez réaliser nombre des actions possibles d'édition de comptes utilisateurs. Vous allez commencer par mettre à jour les informations de contact d'Alan Yoo, avant de l'empêcher de se connecter.  
+Empêcher la connexion d'un utilisateur est un *best practice* lorsque vous pensez que le compte ou le mot de passe d'un utilisateur a pu être compromis. Ceci évite que l'utilisateur puisse se connecter et, de plus, le déconnectera de tous les services Microsoft 365 dans les 60 minutes.
+Vous affecterez ensuite une licence produit au compte de Ada Russell.  
+Pour finir, vous allez supprimer le compte de Libby Hayward, et voir comment le restaurer.
+1. Vous devriez encore être connecté sur **LON-CL1**. Le **Microsoft 365 admin center** devrait encore être resté ouvert dans votre navigateur et vous devriez y être connecté avec le compte *MOD Administrator*.
 1. Dans le portail **Microsoft 365 admin center**, la page **Active users** devrait être encore affichée à l'issue de la première tâche de cet exercice. Sélectionnez la case à cocher en regard du compte de **Alan Yoo**, sans cliquer sur la ligne de ce compte en lui-même.
 1. Dans la barre de menu au-dessus de la liste d'utilisateurs, sélectionnez les **points de suspension** (**More actions**). Dans le menu qui apparait, sélectionnez **Manage contact information**.
 1. Dans le panneau **Manage contact information** qui apparait pour Alan Yoo, saisissez ```Accounts Receivable``` dans le champ **Department** avant de cliquer sur **Save changes**. 
@@ -105,7 +106,7 @@ Vous affecterez ensuite une licence produit au compte de Ada Russell. Pour finir
 
 ## Tâche 3 - Vérification des paramètres utilisateurs
 Dans cette tâche, vous allez vérifier l'impact des changements que vous avez fait aux comptes utilisateurs dans les tâches précédentes. Vous allez vous connecter avec le compte de Libby Hayward et donc avoir besoin du mot de passe temporaire qui lui a été affecté. Vous allez ensuite ouvrir une session Microsoft 365 en tant que Alan Yoo, afin de valider si son compte est bien empêché de se connecter. 
-1. Vous devriez encore être connecté sur **LON-CL1** à l'issue du premier atelier. Le **Microsoft 365 admin center** devrait encore être resté ouvert dans votre navigateur et vous devriez y être connecté avec le compte *MOD Administrator*.
+1. Vous devriez encore être connecté sur **LON-CL1**. Le **Microsoft 365 admin center** devrait encore être resté ouvert dans votre navigateur et vous devriez y être connecté avec le compte *MOD Administrator*.
 1. Vous allez avoir besoin de vous connecter sur la messagerie Outlook de l'administrateur global afin de récupérer le mot de passe temporaire qui a été affecté au compte de Libby. Dans votre navigateur, dans la page du portail **Microsoft 365 admin center**, sélectionnez l'icône **Outlook** dans le menu applicatif dans le coin supérieur gauche (menu situé derrière l'icône affichant un carré de 3 cases par 3cases).   
 	 Vous allez ainsi afficher la boite Outlook du compte *Mod Administrator* dans un nouvel onglet.
 1. Si une fenêtre **Welcome** apparait, cliquez sur le **X*** en haut à droite pour la fermer.
