@@ -2,7 +2,7 @@
 layout: stage
 title: "Lab1-Ex1 - Création de l'environnement"
 length: "00"
-date: "13/11/2023"
+date: "18/12/2023"
 ---
 # Scénario
 A travers les ateliers de ce stage, vous allez prendre l'identité de Dominique Skyetson, administrateur Microsoft 365 de Adatum. En tant que Dominique, il vous a été demandé de configurer le profil de l'entreprise sur le tenant de test.  
@@ -12,9 +12,9 @@ Vous allez commencer par vous connecter sur la machine **LON-DC1** en utilisant 
 
 # Objectifs
 A la fin de cet exercice, vous aurez une meilleure connaissance de :
-- la configuration des options globales pour tous les utilisateurs de l'entreprise 
-- la navigation dans le portail **Microsoft 365 admin center**
-- la manière de suivre les informations que Microsoft fournit concernant l'état de santé du service.  
+- La configuration des options globales pour tous les utilisateurs de l'entreprise 
+- La navigation dans le portail **Microsoft 365 admin center**
+- La manière de suivre les informations que Microsoft fournit concernant l'état de santé du service.  
 
 ## Avant de commencer
 Votre formateur/trice pourra, le cas échéant, vous donner quelques indications complémentaires concernant l'environnement d'atelier a distance que vous utiliserez.  
@@ -34,18 +34,18 @@ Dans un environnement de test comme celui qui nous est fourni, qui ne contient q
 1. Lors de l'ouverture de votre environnement d'ateliers, vous devez vous connecter sur la machine virtuelle **LON-DC1**. Si votre environnement s'est ouvert sur une autre machine virtuelle par défaut, basculez sur la machine **LON-DC1**.
 1. Connectez-vous sur LON-DC1 avec le compte ```Administrator``` et le mot de passe ```Pa55w.Rd```.
 1. Attendez que l'outil **Server Manager** s'ouvre automatiquement.
-1. Sur le manu de navigation de gauche de l'aoutil **Server Manager**, cliquez sur l'onglet **Local Server**
+1. Sur le menu de navigation de gauche de l'outil **Server Manager**, cliquez sur l'onglet **Local Server**
 1. En face de la ligne **Windows Defender Firewall**, si vous voyez tout autre mention que **Domain: On**, cela indique un problème de démarrage que nous allons corriger ici.
 1. Cliquez sur le lien mentionnant l'adresse IP de LON-DC1 : **172.16.0.10**, situé en regard de la ligne **Ethernet**.
 1. Dans le dossier **Network Connections** qui vient de s'ouvrir, sélectionnez la carte réseau **Ethernet**.
 1. Faites un clic-droit sur la carte réseau Ethernet et choisissez **Disable**.
 1. Refaites un clic-droit sur la même carte réseau pour choisir **Enable**.
 1. Attendez que la mention sous le nom de la carte réseau ait changé de **Identifying** à **Adatum.com**. Cela indique que le contrôleur de domaine a correctement démarré : fermez le dossier **Network Connections**.
-1. de retour dans l'onglet **Local Server** du **Server Manager**, vous pouvez cliquez sur l'icône d'actualisation (en haut à droite) pour vérifier que la loigne **Windows Defender Firewall** mentionne désormais **Domain: On**.
+1. De retour dans l'onglet **Local Server** du **Server Manager**, vous pouvez cliquer sur l'icône d'actualisation (en haut à droite) pour vérifier que la ligne **Windows Defender Firewall** mentionne désormais **Domain: On**.
 1. Réduisez l'outil **Server Manager** dans la barre des tâches sans le fermer (vous en aurez besoin plus tard).
 1. Maintenant que LON-DC1 est correctement démarrer, il vous suffit de redémarrer les autres machines virtuelles pour qu'elles s'*accrochent* correctement au réseau de domaine : Basculez sur la machine **LON-CL1**.
-1. Sur l'écran de connexion de LON-CL1, cliquez sur l'ic$one **Power** (dernière icône en bas à droite) et choisissez **Restart**.
-1. Basculez sur la machine **LON-CL2** et répetez l'opération précédente.
+1. Sur l'écran de connexion de LON-CL1, cliquez sur l'icône **Power** (dernière icône en bas à droite) et choisissez **Restart**.
+1. Basculez sur la machine **LON-CL2** et répétez l'opération précédente.
     > **Note :** Vous n'avez pas besoin d'attendre que les machines clientes aient redémarrer pour commencer la tâche suivante.  
 
 ## Tâche 2 - Profil d'entreprise de Adatum
@@ -79,7 +79,7 @@ Puisque Dominique ne s'est pas encore créé de compte personnel dans l'environn
 1. De retour sur l'onglet **Organization profile** de la fenêtre **Org settings**, sélectionnez **Custom themes**.
 1. Dans la fenêtre **Custom themes**, cliquez sur le thème **Default theme**.
 1. Dans la fenêtre **Default theme**, prenez le temps de parcourir les différentes options d'affichage et de customisation d'affichage qui s'offrent à vous. Pour les besoins de l'atelier, n'hésitez pas à modifier quelques paramètres ici pour voir comment ils seront appliqués aux utilisateurs de Adatum.
-1. Si vous avez fait des changements dans le thème par défaut, cliquez sur **Save** lorsque vous avez terminé. Cliquez ensuite sur le **X** en haut à droite pour fermer la fénêtre **Default theme**.
+1. Si vous avez fait des changements dans le thème par défaut, cliquez sur **Save** lorsque vous avez terminé. Cliquez ensuite sur le **X** en haut à droite pour fermer la fenêtre **Default theme**.
 1. Restez connecté sur LON-DC1 VM et laissez votre navigateur Internet ouvert pour la tâche suivante de cet atelier.
 
 ## Tâche 3 - Vérification de la création du tenant
@@ -96,7 +96,7 @@ Bien que goDeploy ait initié la création du tenant Microsoft 365 pour Adatum, 
 Dans cette tâche, vous allez vérifier l'état de santé du service Microsoft 365 sur votre tenant.
 1. A la suite de la tâche précédente, vous devriez toujours être connecté sur **LON-DC1** avec le compte **Administrator** et être connecté sur le portail d'administration de Microsoft 365 sous le compte **MOD Administrator**.
 1. Dans le portail **Microsoft admin center**, dans le menu de navigation, ouvrez le groupe **Health** pour choisir l'option **Service health**. Cela fait apparaitre le dashboard **Service health**.
-1. Sur la page **Service health**, l'onglet **Overview** est affiché apr défaut. Cet onglet affiche les problèmes concernant actuellement les services Microsoft 365 disponibles avec vos abonnements.
+1. Sur la page **Service health**, l'onglet **Overview** est affiché par défaut. Cet onglet affiche les problèmes concernant actuellement les services Microsoft 365 disponibles avec vos abonnements.
 	> **Note** : Si aucun problème n'est actuellement listé, vous pouvez toujours cliquer sur l'onglet **Issue history** pour réaliser l'opération suivante.
 1. Cliquez sur une ligne représentant un problème pour observer le détail des informations fournies par l'éditeur sur ce problème et son état actuel de prise en charge et/ou de résolution.
 1. Après avoir observé les détails d'un problème, cliquez sur le **X** en haut à droite pour le fermer et n'hésitez pas à aller en observer d'autres.
