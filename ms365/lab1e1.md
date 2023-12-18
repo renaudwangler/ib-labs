@@ -51,7 +51,8 @@ Dans un environnement de test comme celui qui nous est fourni, qui ne contient q
 ## Tâche 2 - Profil d'entreprise de Adatum
 Puisque Dominique ne s'est pas encore créé de compte personnel dans l'environnement (ce sera fait à l'atelier 2), vous allez d'abord vous connecter avec le compte *MOD Administrator*, dont vous avez précédemment noté le mot de passe.  
 1. Basculez sur la machine virtuelle **LON-DC1**.
-1. Sur la barre des tâches, cliquez sur l'icône de **Microsoft Edge**. Passez les éventuelles pages de bienvenue (vous pouvez choisir **Continue without signing in**).
+1. Sur la barre des tâches, cliquez sur l'icône de **Microsoft Edge** pour lancer votre navigateur. Maximisez la fenêtre du navigateur lorsqu'elle s'ouvre pour faciliter la navigation dans les portails administratifs.
+1. Passez les éventuelles pages de bienvenue de Edge (vous pouvez choisir **Continue without signing in**).
 1. Dans le navigateur, accédez au portail d'administration de Microsoft 365 en utilisant l'url suivante :
 ```https://admin.microsoft.com```
 1. Dans la fenêtre **Sign in**, saisissez le nom de connexion du compte *MOD Administrator* (sous la forme **admin@WWWLxxxxxxxxxx.onmicrosoft.com**) et cliquez sur **Next**

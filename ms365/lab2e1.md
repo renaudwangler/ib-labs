@@ -2,13 +2,13 @@
 layout: stage
 title: "Lab2-Ex1 - Gestion des utilisateurs avec le centre d'administration Microsoft 365"
 length: "00"
-date: "13/11/2023"
+date: "18/12/2023"
 ---
 # Scénario
-Dominique Skyetson est l'administrateur de l'entreprise Adatum. Comme il n'a pas de compte utilisateur Microsoft 365 déclaré pour lui-même, Dominique s'est jusqu'à présent connecté à l'administration du tenant avec le compte *Mod Administrator*. Dans cet exercice, il va se créer son compte et y assigner le rôle *Global Administrator* qui lui permettra ensuite de faire toutes les actions administratives sur le tenant de manière nominative.
-Prenant le rôle de Dominique, vous allez ensuite créer plusieurs comptes utilisateurs en utilisant le centre d'administration 365 que vous serez par la suite amené à ajouter à des groupes pour gérer la sécurité. Bien que les administrateurs de plus haut niveau de l'entreprise ne créent pas habituellement des comptes utilisateurs, il vous est nécessaire de le faire en attendant que la configuration complète du tenant pilote soit terminée et que les comptes soient automatiquement synchronisés.  
-**Important :** Pour votre environnement réel, il est très fortement conseillé de noter le mot de passe du compte *Global Admin* original (*Mod Administrator* dans notre atelier) et de le stocker de manière particulièrement sécurisée. Ce compte est un compte non nominatif sur lequel il vous faudra peut-être compter lorsque tous les autres moyens de vous en sortir ne fonctionneront plus. La MFA ne sera jamais activée sur ce compte (car il n'est pas nominatif) et son mot de passe sera potentiellement partagé par plusieurs personnes, en faisant une cible idéale pour les attaques de sécurité. Il est donc conseillé de ne jamais l'utiliser au quotidien et de toujours préférer l'utilisation de comptes personnalisés et nominatifs (comme celui de Dominique dans notre atelier) sur lesquels la MFA sera systématiquement exigée.  
-Dans le contexte de l'atelier, vous activerez la MFA pour le compte de Dominique dans le prochain exercice au cours duquel vous vous occuperez des stratégies de mots de passe.
+Comme Dominique Skyetson n'a pas de compte utilisateur Microsoft 365 déclaré pour lui-même, il s'est jusqu'à présent connecté à l'administration du tenant avec le compte *Mod Administrator*.  
+Dans cet exercice, il va se créer son compte et y assigner le rôle *Global Administrator* qui lui permettra ensuite de faire toutes les actions administratives sur le tenant de manière nominative.  
+Prenant le rôle de Dominique, vous allez ensuite créer plusieurs comptes utilisateurs en utilisant le centre d'administration 365 que vous serez par la suite amené à ajouter à des groupes pour gérer la sécurité. Bien que les administrateurs de plus haut niveau de l'entreprise ne créent pas habituellement des comptes utilisateurs, il vous est nécessaire de le faire en attendant que la configuration complète du tenant pilote soit terminée et que les comptes soient automatiquement synchronisés (synchronisation mise en place ultérieurement).  
+> **Important :** Pour votre environnement réel, il est très fortement conseillé de noter le mot de passe du compte *Global Admin* original (*Mod Administrator* dans notre atelier) et de le stocker de manière particulièrement sécurisée. Ce compte est un compte non nominatif sur lequel il vous faudra peut-être compter lorsque tous les autres moyens de vous en sortir ne fonctionneront plus. La MFA ne sera a priori pas activée sur ce compte (car il n'est pas nominatif) et son mot de passe sera potentiellement partagé par plusieurs personnes, en faisant une cible idéale pour les attaques de sécurité. Il est donc conseillé de ne jamais l'utiliser au quotidien et de toujours préférer l'utilisation de comptes personnalisés et nominatifs (comme celui de Dominique dans notre atelier) sur lesquels la MFA sera systématiquement exigée.  
 
 # Objectifs
 A la fin de cet exercice, vous aurez une meilleure connaissance de :
@@ -17,9 +17,18 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 
 
 ## Tâche 1 - Création d'utilisateurs
-1. Vous devriez encore être connecté sur **LON-CL1** à l'issue du premier atelier. Le **Microsoft 365 admin center** devrait encore être resté ouvert dans votre navigateur et vous devriez y être connecté avec le compte *MOD Administrator*. 
+1. Baculez vers la machine virtuelle **LON-CL1**
+1. Connectez-vous à la machine LON-CL1 avec le compte ```adatum\administrator``` et le mot de passe ```Pa55W.rd```.
+1. Sur la barre des tâches, cliquez sur l'icône de **Microsoft Edge** pour lancer votre navigateur. Maximisez la fenêtre du navigateur lorsqu'elle s'ouvre pour faciliter la navigation dans les portails administratifs.
+1. Passez les éventuelles pages de bienvenue de Edge (vous pouvez choisir **Continue without signing in**).
+1. Dans le navigateur, accédez au portail d'administration de Microsoft 365 en utilisant l'url suivante :
+```https://admin.microsoft.com```
+1. Dans la fenêtre **Sign in**, saisissez le nom de connexion du compte *MOD Administrator* (sous la forme **admin@WWWLxxxxxxxxxx.onmicrosoft.com**) et cliquez sur **Next**
+1. Dans la fenêtre **Enter password**, saisissez ou collez le **mot de passe du tenant** que vous avez précédemment noté et cliquez sur **Sign in**
+1. Sur la fenêtre **Stay signed in?**, cliquez sur **No.**
+1. Si un popup **Welcome to Microsoft 365** apparaît, cliquez deux fois sur la flèche droite pour pouvoir le fermer.
 1. Dans le portail **Microsoft 365 admin center**, dans le menu de navigation à gauche, ouvrez le groupe **Users** pour sélectionner l'entrée **Active users**.  
-	>Puisque vous prenez le rôle de Dominique Skyetson pour cet exercice, vous allez vous créer un compte utilisateur pour vous même et lui affecter le rôle *Global Administrator*, donnant ainsi à Dominique l'accès à toutes les prérogatives administratives dans l'environnement Microsoft 365.
+	>Puisque vous prenez le rôle de Dominique Skyetson pour cet exercice, vous allez vous créer un compte utilisateur pour vous-même et lui affecter le rôle *Global Administrator*, donnant ainsi à Dominique l'accès à toutes les prérogatives administratives dans l'environnement Microsoft 365.
 1. Dans la fenêtre **Active Users**, cliquez sur **Add a user**.
 1. Sur la page **Set up the basics**, saisissez les informations suivantes :
 	- First name : ```Dominique```
@@ -27,8 +36,8 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 	- Display name : En tabulant dans ce champ, il sera automatiquement rempli avec la valeur ```Dominique Skyetson```.
 	- Username : ```dom```  
 		>**IMPORTANT :** A droite du champ **Username** se trouve le domaine de l'utilisateur. Il sera rempli avec le domaine DNS configuré comme étant le domaine par défaut. Pour Adatum, il s'agit du domaine que vous avez ajouté lors du premier atelier.  
-		Cependant, pour les besoin des exercices concernant la synchronisation d'identité, il vous est conseillé de sélectionner le domaine **WWLxxxxx.onmicrosoft.com** pour tous les utilisateurs que vous créez dans cet exercice.  
-		C'est pourquoi vous devez sélectionner la flèche à droite du champ **Domains** pour sélectionner le domaine **WWLxxxxx.onmicrosoft.com** (s'il vous est impossible de sélectionner ce domaine à la création des utilisateurs, vous pouvez le changer à postériori).  
+		Cependant, pour les besoin des exercices concernant la synchronisation d'identité, sélectionnez ici le domaine **WWLxxxxx.onmicrosoft.com** pour le compte de Dominique: 
+		Vous devez sélectionner la flèche à droite du champ **Domains** pour sélectionner le domaine **WWLxxxxx.onmicrosoft.com** (s'il vous est impossible de sélectionner ce domaine à la création des utilisateurs, vous pouvez le changer à postériori).  
 		Après avoir configuré ce champ, le nom utilisateur de Dominique devrait apparaitre sous la forme:
 		**dom@WWLxxxxx.onmicrosoft.com**  
 	- Décochez l'option **Automatically create a password**
@@ -46,15 +55,15 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 1. Sur la page **Review and finish** , vérifiez les informations saisies. Si quoi que ce soit nécessite d'être changé, cliquez sur le lien **Edit** correspondant et réalisez les changements nécessaires. Sinon, si tout est correct, cliquez sur **Finish adding**. 
 1. Sur la page **Dominique Skyetson added to active users**, cliquez sur **Show** à coté de **Password** pour vérifier que vous avez bien saisi correctement **Pa55w.rd**.
 1. En bas de la page, cliquez sur le lien **Add another user** et recommencez les étapes 3 à 12 précédentes, pour ajouter les utilisateurs avec les informations suivantes :
-	- **Username domain :** Lors de la saisie du **Username** pour chaque utilisateur, assurez-vous de sélectionner le domaine **WWLxxxxx.onmicrosoft.com** comme vous l'avez fait pour le compte de Dominique (Si vous ne pouvez le sélectionner à la création, changez-le une fois le compte créé).
+	- **Username domain :** Lors de la saisie du **Username** pour chaque utilisateur, laissez le domaine **labxxxxx.godeploylabs.com** comme nom de domaine par défaut.
 	- **Password :** Utilisez le mot de passe ```Pa55w.rd```, et, comme pour le compte de Dominique, exigez le changement de mot de passe à la première connexion.
 	- **Licenses :** Affectez une licence **Office 365 E3** à l'utilisateur **Alan Yoo**. Pour tous les autres utilisateurs, sélectionner l'option **Create user without product license (not recommended)**.
 	- **Roles :** Par défaut chaque utilisateur se verra affecter le rôle **User role (no administration access)**; Cela suffira pour le moment. Dans un futur exercice, vous affecterez des rôles administratifs à certains utilisateurs pour tester la délégation administrative. Ainsi, en arrivant sur la page **Optional settings**, cliquez directement sur **Next**.
-	> ```Alan Yoo``` | username ```alan``` | Licence **Office 365 E3** mais pas de rôle admin  
-	```Ada Russell``` | username ```ada``` | Ni licence ni rôle admin
-	```Adam Hobbs``` | username ```adam``` | Ni licence ni rôle admin
-	```Libby Hayward``` | username ```libby``` | Ni licence ni rôle admin
-	```Laura Atkins```| username ```laura``` | Ni licence ni rôle admin
+		```Alan Yoo``` | username ```alan``` | Licence **Office 365 E3** mais pas de rôle admin  
+		```Ada Russell``` | username ```ada``` | Ni licence ni rôle admin
+		```Adam Hobbs``` | username ```adam``` | Ni licence ni rôle admin
+		```Libby Hayward``` | username ```libby``` | Ni licence ni rôle admin
+		```Laura Atkins```| username ```laura``` | Ni licence ni rôle admin
 1. Après avoir ajouté le dernier compte (celui de *Laura Atkins*) cliquez sur le bouton **Close** pour revenir à la liste des **Active users**
 1. Vérifiez la liste **Active users**. Vérifiez que chacun des précédents utilisateurs a pour domaine **WWLxxxxx.onmicrosoft.com** et changez-le si ce n'est pas le cas.
 1. Restez connecté sur LON-CL1 et laissez votre navigateur Internet ouvert pour la tâche suivante de cet atelier.
