@@ -17,7 +17,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 
 
 ## Tâche 1 - Création d'utilisateurs
-1. Baculez vers la machine virtuelle **LON-CL1**
+1. Basculez vers la machine virtuelle **LON-CL1**
 1. Connectez-vous à la machine LON-CL1 avec le compte ```adatum\administrator``` et le mot de passe ```Pa55W.rd```.
 1. Sur la barre des tâches, cliquez sur l'icône de **Microsoft Edge** pour lancer votre navigateur. Maximisez la fenêtre du navigateur lorsqu'elle s'ouvre pour faciliter la navigation dans les portails administratifs.
 1. Passez les éventuelles pages de bienvenue de Edge (vous pouvez choisir **Continue without signing in**).
@@ -59,12 +59,14 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 	- **Password :** Utilisez le mot de passe ```Pa55w.rd```, et, comme pour le compte de Dominique, exigez le changement de mot de passe à la première connexion.
 	- **Licenses :** Affectez une licence **Office 365 E3** à l'utilisateur **Alan Yoo**. Pour tous les autres utilisateurs, sélectionner l'option **Create user without product license (not recommended)**.
 	- **Roles :** Par défaut chaque utilisateur se verra affecter le rôle **User role (no administration access)**; Cela suffira pour le moment. Dans un futur exercice, vous affecterez des rôles administratifs à certains utilisateurs pour tester la délégation administrative. Ainsi, en arrivant sur la page **Optional settings**, cliquez directement sur **Next**.  
-	
-	| ```Alan Yoo``` | username ```alan``` | Licence **Office 365 E3** mais pas de rôle admin |
-	| ```Ada Russell``` | username ```ada``` | Ni licence ni rôle admin |
-	| ```Adam Hobbs``` | username ```adam``` | Ni licence ni rôle admin |
-	| ```Libby Hayward``` | username ```libby``` | Ni licence ni rôle admin |
-	| ```Laura Atkins```| username ```laura``` | Ni licence ni rôle admin |  
+
+	| **First Name** | **Last Name** | **Display Name** | **username** | **Licence** | **Role** |
+	|----------------|---------------|------------------|--------------|-------------|----------|
+	| ```Alan``` | ```Yoo``` | Alan Yoo | ```alan``` | **Office 365 E3** | **User** |
+	| ```Ada``` | ```Russell``` | Ada Russel | ```ada``` | Sans | **User** |
+	| ```Adam``` | ```Hobbs``` | Adam Hobbs | ```adam``` | Sans | **User** |
+	| ```Libby``` | ``` Hayward``` | Libby Haywards | ```libby``` | Sans | **User** |
+	| ```Laura``` | ``` Atkins```| Laura Atkins | ```laura``` | Sans | **User** |  
 
 1. Après avoir ajouté le dernier compte (celui de *Laura Atkins*) cliquez sur le bouton **Close** pour revenir à la liste des **Active users**
 1. Vérifiez la liste **Active users**. Vérifiez que chacun des précédents utilisateurs a pour domaine **WWLxxxxx.onmicrosoft.com** et changez-le si ce n'est pas le cas.
