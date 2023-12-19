@@ -10,8 +10,8 @@ Vous testerez aussi l'effet d'une suppression de groupe sur les utilisateurs con
 
 # Objectifs
 A la fin de cet exercice, vous aurez une meilleure connaissance de :
-- les groupes Microsoft 365 et leur création dans le portail d'administration
-- la modification des membres et la suppression des groupes
+- Les groupes Microsoft 365 et leur création dans le portail d'administration
+- La modification des membres et la suppression des groupes
 
 ## Tâche 1 - Création de groupes
 En tant que Dominique Skyetson, vous souhaitez désormais mettre en oeuvre les groupes Microsoft 365 dans le projet pilote. Dans cette tâche, vous allez ajouter deux groupes de Vente et un groupe du service comptabilité. Vous allez ensuite supprimer un des groupes Vente pour constater que cela ne supprime pas les utilisateurs contenus dans ce groupe.
