@@ -1,0 +1,721 @@
+
+<?xml version="1.0" encoding="UTF-8"?><?mso-infoPathSolution PIVersion="1.0.0.0" name="urn:schemas-microsoft-com:office:infopath:matrice:" href="file:///\\defnas02\groups\MARKETING\Offre\Stages\plan\matrice.xsn" solutionVersion="1.0.0.236" productVersion="15.0.0" ?><?mso-application progid="InfoPath.Document"?><Offre xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2005-08-17T15:19:54" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003" xml:lang="fr">
+	<Stage>
+		<General>
+			<Code>MSMS102</Code>
+			<Titre>Microsoft 365 - Administration d'identité et sécurité</Titre>
+			<Message>Formation Microsoft 365 : Administration d'identité</Message>
+			<TitreCourt>M365 - Identité</TitreCourt>
+			<Titre40>M365 - Identité</Titre40>
+			<SousTitre>Administrer l'identité Entra Id et la sécurité dans un tenant Microsoft 365</SousTitre>
+			<Duree>5</Duree>
+			<Unite>Jours</Unite>
+			<Fractionnement/>
+			<Fractionnable/>
+			<Enjeux_Pro>3</Enjeux_Pro>
+			<Nouveaute>New-2023-Cata</Nouveaute>
+			<LangueSupport>US</LangueSupport>
+			<MaxPedago>6</MaxPedago>
+			<InfraDev>Autre</InfraDev>
+			<AgrementOPCA>Non</AgrementOPCA>
+			<VersionLogiciel/>
+			<TypeFormation>Stage</TypeFormation>
+			<NomAnimateur/>
+			<CVAnimateur/>
+			<PrixAnimateur>D</PrixAnimateur>
+			<UNSPSC>86101601</UNSPSC>
+			<DIF>NON</DIF>
+			<Intra>OUI</Intra>
+			<MotsCles>
+				<MotCle>M365</MotCle>
+			</MotsCles>
+			<Introduction>Microsoft 365 est en fait le point d'entrée et le porte­-drapeau de toute l’offre Cloud "Software As A Service" (SaaS) de l'éditeur. De nombreuses entreprises et organisations de toutes tailles ont dores et déjà décidé de s’appuyer sur une offre Microsoft 365 devenue mature pour externaliser leurs services les plus importants (messagerie, travail collaboratif, gestion des réunions, suite bureautique ...). Ce faisant, beaucoup ont constaté que le cloud changeait les métiers des informaticiens qui doivent désormais comprendre le service externalisé chez l’éditeur pour toujours en amélirorer la consommation. Les participants à cette formation apprendront à penser, mettre en oeuvre et administrer les identités Entra Id et la sécurité Microsoft Defender XDR pour Microsoft 365 pour les ajuster au mieux aux besoins de leur organisation. Cette formation prépare à la certification "Microsoft 365 Certified : Administrator Expert".</Introduction>
+			<Deroulement/>
+			<LieuInter>iB</LieuInter>
+			<CoordinateurOffre/>
+			<InterCata/>
+			<Typologie>Stage</Typologie>
+			<TypeInter>Classique</TypeInter>
+			<Duos>
+				<Duo>
+					<Code/>
+					<TexteCata/>
+				</Duo>
+			</Duos>
+			<Financements/>
+			<Horaires/>
+		</General>
+		<Partenaire>
+			<Societe>Microsoft</Societe>
+			<CodeStagePartenaire>MS-102T00</CodeStagePartenaire>
+		</Partenaire>
+		<Editeur>
+			<EditeurSupportAgree>Microsoft</EditeurSupportAgree>
+			<CodeAgreeFR/>
+			<DateAgreeFRActuel/>
+			<CodeAgreeUS>MS-102T00</CodeAgreeUS>
+			<DateAgreeUSActuel/>
+			<CodeAgreeFRPreced/>
+			<DateAgreeFRPreced/>
+			<CodeAgreeUSPreced/>
+			<DateAgreeUSPreced/>
+		</Editeur>
+		<TPs>
+			<TP>Cette formation couvre trois éléments centraux de l'administration d'entreprise Microsoft 365 : la gestion des identités dans le tenant Microsoft 365, la synchronisation des identités et la gestion de la sécurité et la conformité dans le contexte Microsoft 365.</TP><TP>Une pédagogie basée sur l'alternance de phases théoriques, d'ateliers de mise en pratique, de retours d'expérience et d'échanges.</TP><TP>La qualité d'une formation officielle Microsoft (support de cours numérique en anglais).</TP>
+		</TPs>
+		<Certification>
+			<Tests>
+				<CodeTest>MS-102</CodeTest>
+			</Tests>
+			<Certifications_Cegos>
+				<Certification_Cegos>Microsoft 365 Certified : Administrator Expert</Certification_Cegos>
+			</Certifications_Cegos>
+			<CodeCertif_WebCegos>MS-102</CodeCertif_WebCegos>
+			<StatutCertif_WebCegos>Option</StatutCertif_WebCegos>
+			<Texte_Certif/>
+			<ListeAcronymesCertif>Microsoft 365 Certified : Administrator Expert</ListeAcronymesCertif>
+			<Filieres>
+				<Filiere/>
+			</Filieres>
+		</Certification>
+		<Objectifs>
+			<Objectif>Savoir configurer le tenant Microsoft 365, y compris le profil d'entreprise, les options d'abonnement, les comptes d'utilisateurs, les licences, les groupes et les rôles administratifs</Objectif><Objectif>Pouvoir implémenter le déploiement de Microsoft 365 Apps</Objectif><Objectif>Planifier et à mettre en œuvre chacune des options de synchronisation d'annuaire</Objectif><Objectif>Gérer les identités synchronisées, les mots de passe et l'authentification multifactorielle dans Microsoft 365</Objectif><Objectif>Garantir la sécurité de Microsoft 365 avec Exchange Online Protection et Defender for Office</Objectif><Objectif>Comprendre comment gérer la sécurité des clients avec Microsoft Defender XDR (Microsoft Defender for Cloud Apps, Microsoft Defender for Endpoint, Defender for Identity et Defender for Office)</Objectif><Objectif>Comprendre la gestion de la conformité dans Microsoft 365 notamment autour de la gouvernance des données avec Microsoft Purview</Objectif>
+		</Objectifs>
+		<Publics>
+			<PublicsDetailles>
+				<Detail>Administrateurs Microsoft 365</Detail>
+                <Detail>Responsables de la sécurité du Système d'Information</Detail>
+			</PublicsDetailles>
+			<ProfilesParticipants>
+				<Profil/>
+			</ProfilesParticipants>
+			<MetiersNiveau>
+				<Utilisateur/>
+				<Management/>
+				<Developpement/>
+				<Infrastructure/>
+			</MetiersNiveau>
+		</Publics>
+		<Commentaire/>
+		<ListeSupportLibre>
+			<SupportLibre>
+				<TitreSupLibre/>
+				<AuteurSupLibre/>
+				<EditeurSupLibre/>
+				<ISBNSupLibre/>
+			</SupportLibre>
+		</ListeSupportLibre>
+		<ListePreRequis>
+			<PreRequis>Avoir suivi une formation d'administrateur basé sur les rôles, tel que Messagerie, Travail d'équipe, Sécurité, Conformité ou Collaboration</PreRequis>
+			<PreRequis>Posséder une compréhension du DNS et une expérience pratique des services Microsoft 365</PreRequis>
+			<PreRequis>Posséder une compréhension approfondie des pratiques informatiques générales</PreRequis>
+			<PreRequis>Avoir une connaissance pratique de PowerShell</PreRequis>
+		</ListePreRequis>
+		<Acquis>
+			<Acquis_texte>Cette formation ne fait pas l'objet d'une évaluation des acquis.</Acquis_texte>
+		</Acquis>
+		<ModalitesPedago>
+			<ModalitesPedago_texte>Cette formation est également accessible à distance.</ModalitesPedago_texte>
+		</ModalitesPedago>
+		<Modules>
+			<Module>
+				<TitreModuleAvant/>
+				<DetailModuleAvant/>
+				<TitreModule>Configurer l'expérience Microsoft 365</TitreModule>
+				<DetailModule NivDM="0">Introduction</DetailModule>
+                <DetailModule NivDM="0">Configurer l'expérience Microsoft 365</DetailModule>
+				<DetailModule NivDM="0">Gérer les abonnements dans le tenant Microsoft 365</DetailModule>
+				<DetailModule NivDM="0">Intégrer Microsoft 365 à l'aide des applications d'engagement</DetailModule>
+				<DetailModule NivDM="0">Finaliser la configuration du tenant dans Microsoft 365</DetailModule>
+				<TitreModuleApres/>
+				<DetailModuleApres/>
+				<TitreAtelier/>
+				<DetailAtelier/>
+			</Module><Module>
+				<TitreModuleAvant/>
+				<DetailModuleAvant/>
+				<TitreModule>Gérer les utilisateurs, les licences et les contacts de messagerie dans Microsoft 365</TitreModule>
+				<DetailModule NivDM="0">Introduction</DetailModule>
+				<DetailModule NivDM="0">Déterminer le modèle d'identités pour votre organisation</DetailModule>
+				<DetailModule NivDM="0">Créer des comptes utilisateurs dans Microsoft 365</DetailModule>
+				<DetailModule NivDM="0">Gérer les paramètres des compte utilisateur dans Microsoft 365</DetailModule>
+				<DetailModule NivDM="0">Gérer les licences utilisateur dans Microsoft 365</DetailModule>
+				<DetailModule NivDM="0">Récupérer des comptes utilisateurs supprimés dans Microsoft 365</DetailModule>
+				<DetailModule NivDM="0">Maintenance d'utilisateurs en bloc dans Entra Id</DetailModule>
+				<DetailModule NivDM="0">Créer et gérer des utilisateurs invités (Guests Entra Id)</DetailModule>
+				<DetailModule NivDM="0">Créer et gérer des contacts de messagerie</DetailModule>
+				<TitreModuleApres/>
+				<DetailModuleApres/>
+				<TitreAtelier/>
+				<DetailAtelier/>
+			</Module><Module>
+				<TitreModuleAvant/>
+				<DetailModuleAvant/>
+				<TitreModule>Gérer des groupes dans Microsoft 365</TitreModule>
+				<DetailModule NivDM="0">Introduction</DetailModule>
+				<DetailModule NivDM="0">Faire le point sur les groupes dans Microsoft 365</DetailModule>
+				<DetailModule NivDM="0">Créer et gérer des groupes dans Microsoft 365</DetailModule>
+				<DetailModule NivDM="0">Créer des groupes dynamiques à l'aide du Générateur de règles Entra</DetailModule>
+				<DetailModule NivDM="0">Créer une stratégie d'appellation de groupe Microsoft 365</DetailModule>
+				<DetailModule NivDM="0">Créer des groupes pour Exchange Online et SharePoint Online</DetailModule>
+				<TitreModuleApres/>
+				<DetailModuleApres/>
+				<TitreAtelier/>
+				<DetailAtelier/>
+			</Module><Module>
+				<TitreModuleAvant/>
+				<DetailModuleAvant/>
+				<TitreModule>Ajouter un domaine personnalisé dans Microsoft 365</TitreModule>
+				<DetailModule NivDM="0">Introduction</DetailModule>
+				<DetailModule NivDM="0">Planifier un domaine personnalisé pour votre déploiement Microsoft 365</DetailModule>
+				<DetailModule NivDM="0">Planifier les zones DNS pour un domaine personnalisé</DetailModule>
+				<DetailModule NivDM="0">Planifier les exigences en matière d'enregistrements DNS pour un domaine personnalisé</DetailModule>
+				<DetailModule NivDM="0">Créer un domaine personnalisé dans Microsoft 365</DetailModule>
+				<TitreModuleApres/>
+				<DetailModuleApres/>
+				<TitreAtelier/>
+				<DetailAtelier/>
+			</Module><Module>
+				<TitreModuleAvant/>
+				<DetailModuleAvant/>
+				<TitreModule>Configurer la connectivité des clients à Microsoft 365</TitreModule>
+				<DetailModule NivDM="0">Introduction</DetailModule>
+				<DetailModule NivDM="0">Examiner le fonctionnement de la configuration automatique des clients</DetailModule>
+				<DetailModule NivDM="0">Explorer les enregistrements DNS requis pour la configuration des clients</DetailModule>
+				<DetailModule NivDM="0">Configurer les clients Outlook</DetailModule>
+				<DetailModule NivDM="0">Résoudre les problèmes de connectivité des clients</DetailModule>
+				<TitreModuleApres/>
+				<DetailModuleApres/>
+				<TitreAtelier/>
+				<DetailAtelier/>
+			</Module><Module>
+				<TitreModuleAvant/>
+				<DetailModuleAvant/>
+				<TitreModule>Configurer des rôles administratifs dans Microsoft 365</TitreModule>
+				<DetailModule NivDM="0">Introduction</DetailModule>
+				<DetailModule NivDM="0">Explorer le modèle d'autorisations RBAC de Microsoft 365</DetailModule>
+				<DetailModule NivDM="0">Explorer les rôles d'administrateur Microsoft 365</DetailModule>
+				<DetailModule NivDM="0">Attribuer des rôles d'administrateur aux utilisateurs dans Microsoft 365</DetailModule>
+				<DetailModule NivDM="0">Déléguer des rôles d'administrateur à des partenaires</DetailModule>
+				<DetailModule NivDM="0">Gérer les autorisations à l'aide d'unités administratives dans Entra Id</DetailModule>
+				<DetailModule NivDM="0">Configurer l'élévation des privilèges à l'aide d'Entra Privileged Identity Management (PIM)</DetailModule>
+				<TitreModuleApres/>
+				<DetailModuleApres/>
+				<TitreAtelier/>
+				<DetailAtelier/>
+			</Module><Module>
+				<TitreModuleAvant/>
+				<DetailModuleAvant/>
+				<TitreModule>Gérer l'intégrité et les services d'un tenant Microsoft 365</TitreModule>
+				<DetailModule NivDM="0">Introduction</DetailModule>
+				<DetailModule NivDM="0">Surveiller l'intégrité des services Microsoft 365</DetailModule>
+				<DetailModule NivDM="0">Surveiller l'intégrité du tenant à l'aide du score d'adoption Microsoft 365</DetailModule>
+				<DetailModule NivDM="0">Surveiller l'intégrité du tenant à l'aide de l'analyse de l'utilisation de Microsoft 365</DetailModule>
+				<DetailModule NivDM="0">Élaborer un plan d'intervention en cas d'incident</DetailModule>
+				<DetailModule NivDM="0">Demander de l'aide à Microsoft</DetailModule>
+				<TitreModuleApres/>
+				<DetailModuleApres/>
+				<TitreAtelier/>
+				<DetailAtelier/>
+			</Module><Module>
+				<TitreModuleAvant/>
+				<DetailModuleAvant/>
+				<TitreModule>Déployer la suite Microsoft 365 Apps</TitreModule>
+				<DetailModule NivDM="0">Introduction</DetailModule>
+				<DetailModule NivDM="0">Explorer les fonctionnalités de Microsoft 365 Apps</DetailModule>
+				<DetailModule NivDM="0">Explorer la compatibilité des applications existantes à l'aide de Readiness Toolkit</DetailModule>
+				<DetailModule NivDM="0">Effectuer une installation self-service de Microsoft 365 Apps</DetailModule>
+				<DetailModule NivDM="0">Déployer Microsoft 365 Apps avec Microsoft Configuration Manager</DetailModule>
+				<DetailModule NivDM="0">Déployer Microsoft 365 Apps depuis le cloud</DetailModule>
+				<DetailModule NivDM="0">Déployer Microsoft 365 Apps depuis une source locale</DetailModule>
+				<DetailModule NivDM="0">Gérer les mises à jour de Microsoft 365 Apps</DetailModule>
+				<DetailModule NivDM="0">Comprendre les canaux de mise à jour pour Microsoft 365 Apps</DetailModule>
+				<DetailModule NivDM="0">Gérer vos applications cloud à l'aide du Centre d'administration Applications Microsoft 365</DetailModule>
+				<TitreModuleApres/>
+				<DetailModuleApres/>
+				<TitreAtelier/>
+				<DetailAtelier/>
+			</Module><Module>
+				<TitreModuleAvant/>
+				<DetailModuleAvant/>
+				<TitreModule>Analyser les données de travail dans Microsoft 365 à l'aide de Microsoft Viva Insights</TitreModule>
+				<DetailModule NivDM="0">Introduction</DetailModule>
+                <DetailModule NivDM="0">Examiner les fonctionnalités analytiques de Microsoft Viva Insights</DetailModule>
+                <DetailModule NivDM="0">Explorer l'analytique personnelle</DetailModule>
+                <DetailModule NivDM="0">Explorer l'analytique de Microsoft Teams</DetailModule>
+                <DetailModule NivDM="0">Explorer l'analytique à l'échelle de l'organisation</DetailModule>
+                <DetailModule NivDM="0">Explorer l'analytique avançée</DetailModule>
+				<TitreModuleApres/>
+				<DetailModuleApres/>
+				<TitreAtelier/>
+				<DetailAtelier/>
+			</Module><Module>
+				<TitreModuleAvant/>
+				<DetailModuleAvant/>
+				<TitreModule>Explorer la synchronisation d'identités</TitreModule>
+				<DetailModule NivDM="0">Introduction</DetailModule>
+                <DetailModule NivDM="0">Examiner les modèles d'identité pour Microsoft 365</DetailModule>
+                <DetailModule NivDM="0">Examiner les options d'authentification pour l'hybridation d'identités Entra Id</DetailModule>
+                <DetailModule NivDM="0">Explorer la synchronisation d'annuaires</DetailModule>
+				<TitreModuleApres/>
+				<DetailModuleApres/>
+				<TitreAtelier/>
+				<DetailAtelier/>
+			</Module><Module>
+				<TitreModuleAvant/>
+				<DetailModuleAvant/>
+				<TitreModule>Préparer la synchronisation d'identité pour Microsoft 365</TitreModule>
+				<DetailModule NivDM="0">Introduction</DetailModule>
+                <DetailModule NivDM="0">Planifier votre déploiement Entra Id</DetailModule>
+                <DetailModule NivDM="0">Préparer la synchronisation d'annuaires</DetailModule>
+                <DetailModule NivDM="0">Choisir le bon outil de synchronisation d'annuaires</DetailModule>
+                <DetailModule NivDM="0">Planifier la synchronisation d'annuaires à l'aide d'Entra Connect Sync</DetailModule>
+                <DetailModule NivDM="0">Planifier la synchronisation d'annuaires à l'aide d'Entra Cloud Sync</DetailModule>
+				<TitreModuleApres/>
+				<DetailModuleApres/>
+				<TitreAtelier/>
+				<DetailAtelier/>
+			</Module><Module>
+				<TitreModuleAvant/>
+				<DetailModuleAvant/>
+				<TitreModule>Mettre en œuvre des outils de synchronisation d'annuaires</TitreModule>
+				<DetailModule NivDM="0">Introduction</DetailModule>
+                <DetailModule NivDM="0">Configurer les composants requis pour Entra Connect Sync</DetailModule>
+                <DetailModule NivDM="0">Configurer Entra Connect Sync</DetailModule>
+                <DetailModule NivDM="0">Surveiller les services de synchronisation à l'aide d'Entra Connect Health</DetailModule>
+                <DetailModule NivDM="0">Configurer les conditions préalables pour Entra Cloud Sync</DetailModule>
+                <DetailModule NivDM="0">Configurer Entra Cloud Sync</DetailModule>
+				<TitreModuleApres/>
+				<DetailModuleApres/>
+				<TitreAtelier/>
+				<DetailAtelier/>
+			</Module><Module>
+				<TitreModuleAvant/>
+				<DetailModuleAvant/>
+				<TitreModule>Gérer les identités synchronisées</TitreModule>
+				<DetailModule NivDM="0">Introduction</DetailModule>
+                <DetailModule NivDM="0">Gérer les utilisateurs avec la synchronisation d'annuaires active</DetailModule>
+                <DetailModule NivDM="0">Gérer les groupes avec la synchronisation d'annuaires active</DetailModule>
+                <DetailModule NivDM="0">Utiliser les groupes de sécurité de Entra Connect Sync pour gérer la synchronisation d'annuaires</DetailModule>
+                <DetailModule NivDM="0">Configurer le filtrage d'objets pour la synchronisation d'annuaires</DetailModule>
+                <DetailModule NivDM="0">Résoudre les problèmes de synchronisation d'annuaires</DetailModule>
+				<TitreModuleApres/>
+				<DetailModuleApres/>
+				<TitreAtelier/>
+				<DetailAtelier/>
+			</Module><Module>
+				<TitreModuleAvant/>
+				<DetailModuleAvant/>
+				<TitreModule>Gérer l'accès utilisateur sécurisé dans Microsoft 365</TitreModule>
+				<DetailModule NivDM="0">Introduction</DetailModule>
+                <DetailModule NivDM="0">Gérer les mots de passe utilisateur</DetailModule>
+                <DetailModule NivDM="0">Activer la Pass-through authentication (PTA)</DetailModule>
+                <DetailModule NivDM="0">Activer l'authentification multifactorielle (MFA)</DetailModule>
+                <DetailModule NivDM="0">Activer la connexion sans mot de passe(Passwordless) avec Microsoft Authenticator</DetailModule>
+                <DetailModule NivDM="0">Explorer la gestion des mots de passe en libre-service</DetailModule>
+                <DetailModule NivDM="0">Explorer Windows Hello for Business</DetailModule>
+                <DetailModule NivDM="0">Implémenter Entra Smart Lockout</DetailModule>
+                <DetailModule NivDM="0">Mettre en œuvre les stratégies d'accès conditionnel</DetailModule>
+                <DetailModule NivDM="0">Explorer les valeurs de sécurité par défaut dans Entra Id</DetailModule>
+                <DetailModule NivDM="0">Enquêter sur les problèmes d'authentification à l'aide des journaux de connexion</DetailModule>
+				<TitreModuleApres/>
+				<DetailModuleApres/>
+				<TitreAtelier/>
+				<DetailAtelier/>
+			</Module><Module>
+				<TitreModuleAvant/>
+				<DetailModuleAvant/>
+				<TitreModule>Examiner les vecteurs de menaces et les violations de données</TitreModule>
+				<DetailModule NivDM="0">Introduction</DetailModule>
+                <DetailModule NivDM="0">Explorer le contexte de travail actuel et les menaces</DetailModule>
+                <DetailModule NivDM="0">Examiner comment l'hameçonnage récupère des informations sensibles</DetailModule>
+                <DetailModule NivDM="0">Examiner comment l'usurpation trompe les utilisateurs et compromet la sécurité des données</DetailModule>
+                <DetailModule NivDM="0">Comparer le spam et les logiciels malveillants</DetailModule>
+                <DetailModule NivDM="0">Examiner les compromissions de comptes</DetailModule>
+                <DetailModule NivDM="0">Examiner les attaques par élévation de privilèges</DetailModule>
+                <DetailModule NivDM="0">Examiner comment l'exfiltration de données déplace les données hors de votre tenant</DetailModule>
+                <DetailModule NivDM="0">Examiner comment les attaquants suppriment les données de votre tenant</DetailModule>
+                <DetailModule NivDM="0">Examiner comment le déversement de données expose les données en dehors de votre tenant</DetailModule>
+                <DetailModule NivDM="0">Examiner d'autres types d'attaques</DetailModule>
+				<TitreModuleApres/>
+				<DetailModuleApres/>
+				<TitreAtelier/>
+				<DetailAtelier/>
+			</Module><Module>
+				<TitreModuleAvant/>
+				<DetailModuleAvant/>
+				<TitreModule>Découvrez le modèle de sécurité Zero Trust</TitreModule>
+				<DetailModule NivDM="0">Introduction</DetailModule>
+                <DetailModule NivDM="0">Examiner les principes et les composantes du modèle Zero Trust</DetailModule>
+                <DetailModule NivDM="0">Planifier un modèle de sécurité Zero Trust dans votre organisation</DetailModule>
+                <DetailModule NivDM="0">Examiner la stratégie de Microsoft pour un réseau Zero Trust</DetailModule>
+                <DetailModule NivDM="0">Adopter une approche Zero Trust</DetailModule>
+				<TitreModuleApres/>
+				<DetailModuleApres/>
+				<TitreAtelier/>
+				<DetailAtelier/>
+			</Module><Module>
+				<TitreModuleAvant/>
+				<DetailModuleAvant/>
+				<TitreModule>Explorer les solutions de sécurité dans Microsoft Defender XDR</TitreModule>
+				<DetailModule NivDM="0">Introduction</DetailModule>
+                <DetailModule NivDM="0">Améliorer la protection Exchange Online Protection avec Microsoft Defender pour Office 365</DetailModule>
+                <DetailModule NivDM="0">Protéger les identités de votre organisation à l'aide de Microsoft Defender for Identity</DetailModule>
+                <DetailModule NivDM="0">Protéger votre réseau d'entreprise contre les menaces avancées à l'aide de Microsoft Defender for Endpoint</DetailModule>
+                <DetailModule NivDM="0">Protection contre les cyberattaques à l'aide de Microsoft 365 Threat Intelligence</DetailModule>
+                <DetailModule NivDM="0">Fournir des informations sur les activités suspectes à l'aide de Microsoft Cloud App Security</DetailModule>
+                <DetailModule NivDM="0">Examiner les rapports de sécurité dans Microsoft Defender XDR</DetailModule>
+				<TitreModuleApres/>
+				<DetailModuleApres/>
+				<TitreAtelier/>
+				<DetailAtelier/>
+			</Module><Module>
+				<TitreModuleAvant/>
+				<DetailModuleAvant/>
+				<TitreModule>Examiner Microsoft Secure Score</TitreModule>
+				<DetailModule NivDM="0">Introduction</DetailModule>
+                <DetailModule NivDM="0">Explorer Microsoft Secure Score</DetailModule>
+                <DetailModule NivDM="0">Evaluer votre posture de sécurité avec Microsoft Secure Score</DetailModule>
+                <DetailModule NivDM="0">Améliorer votre Secure Score</DetailModule>
+                <DetailModule NivDM="0">Suivre votre historique Microsoft Secure Score et atteindre vos objectifs</DetailModule>
+				<TitreModuleApres/>
+				<DetailModuleApres/>
+				<TitreAtelier/>
+				<DetailAtelier/>
+			</Module><Module>
+				<TitreModuleAvant/>
+				<DetailModuleAvant/>
+				<TitreModule>Examiner Privileged Identity Management (PIM)</TitreModule>
+				<DetailModule NivDM="0">Introduction</DetailModule>
+                <DetailModule NivDM="0">Explorer Privileged Identity Management dans Entra Id</DetailModule>
+                <DetailModule NivDM="0">Configurer Privileged Identity Management</DetailModule>
+                <DetailModule NivDM="0">Audit avec Privileged Identity Management</DetailModule>
+                <DetailModule NivDM="0">Contrôler les tâches d'administrateur privilégié à l'aide de Privileged Access Management</DetailModule>
+				<TitreModuleApres/>
+				<DetailModuleApres/>
+				<TitreAtelier/>
+				<DetailAtelier/>
+			</Module><Module>
+				<TitreModuleAvant/>
+				<DetailModuleAvant/>
+				<TitreModule>Examiner Microsoft Entra Id Protection</TitreModule>
+				<DetailModule NivDM="0">Introduction</DetailModule>
+                <DetailModule NivDM="0">Explorer Microsoft Entra Id Protection</DetailModule>
+                <DetailModule NivDM="0">Activer les stratégies de protection par défaut dans Microsoft Entra Id Protection</DetailModule>
+                <DetailModule NivDM="0">Explorer les vulnérabilités et les événements de risque détectés par Microsoft Entra Id Protection</DetailModule>
+                <DetailModule NivDM="0">Planifier votre enquête sur les identités</DetailModule>
+				<TitreModuleApres/>
+				<DetailModuleApres/>
+				<TitreAtelier/>
+				<DetailAtelier/>
+			</Module><Module>
+				<TitreModuleAvant/>
+				<DetailModuleAvant/>
+				<TitreModule>Examiner la protection des e-mails dans Microsoft 365</TitreModule>
+				<DetailModule NivDM="0">Introduction</DetailModule>
+                <DetailModule NivDM="0">Examiner le pipeline antiviral</DetailModule>
+                <DetailModule NivDM="0">Détecter les messages contenant du spam ou des virus à l'aide de Zero-hour Auto Purge (ZAP)</DetailModule>
+                <DetailModule NivDM="0">Explorer la protection contre l'usurpation d'identité fournie par Exchange Online Protection</DetailModule>
+                <DetailModule NivDM="0">Découvrir d'autres protections anti-usurpation d'identité</DetailModule>
+                <DetailModule NivDM="0">Examiner le filtrage du courrier indésirable sortant</DetailModule>
+				<TitreModuleApres/>
+				<DetailModuleApres/>
+				<TitreAtelier/>
+				<DetailAtelier/>
+			</Module><Module>
+				<TitreModuleAvant/>
+				<DetailModuleAvant/>
+				<TitreModule>Améliorer la protection des e-mails avec Microsoft Defender for Office 365</TitreModule>
+				<DetailModule NivDM="0">Introduction</DetailModule>
+                <DetailModule NivDM="0">Augmenter la sécurité d'EOP grace à Microsoft Defender for Office 365</DetailModule>
+                <DetailModule NivDM="0">Étendre les protections EOP à l'aide de Safe Attachments et Safe Links</DetailModule>
+                <DetailModule NivDM="0">Gérer l'usurpation d'identité intelligente</DetailModule>
+                <DetailModule NivDM="0">Configurer des stratégies de filtrage du courrier indésirable sortant</DetailModule>
+                <DetailModule NivDM="0">Débloquer l'envoi d'e-mails pour les utilisateurs</DetailModule>
+				<TitreModuleApres/>
+				<DetailModuleApres/>
+				<TitreAtelier/>
+				<DetailAtelier/>
+			</Module><Module>
+				<TitreModuleAvant/>
+				<DetailModuleAvant/>
+				<TitreModule>Gérer Safe Attachments</TitreModule>
+				<DetailModule NivDM="0">Introduction</DetailModule>
+                <DetailModule NivDM="0">Protéger les utilisateurs contre les pièces jointes malveillantes à l'aide de Safe Attachments</DetailModule>
+                <DetailModule NivDM="0">Créer des stratégies Safe Attachments à l'aide de Microsoft Defender for Office 365</DetailModule>
+                <DetailModule NivDM="0">Créer des stratégies Safe Attachments à l'aide de PowerShell</DetailModule>
+                <DetailModule NivDM="0">Modifier une stratégie Safe Attachments existante</DetailModule>
+                <DetailModule NivDM="0">Créer une règle de transport pour contourner une stratégie Safe Attachments</DetailModule>
+                <DetailModule NivDM="0">Examiner l'expérience utilisateur avec Safe Attachments</DetailModule>
+				<TitreModuleApres/>
+				<DetailModuleApres/>
+				<TitreAtelier/>
+				<DetailAtelier/>
+			</Module><Module>
+				<TitreModuleAvant/>
+				<DetailModuleAvant/>
+				<TitreModule>Gérer Safe Links</TitreModule>
+				<DetailModule NivDM="0">Introduction</DetailModule>
+                <DetailModule NivDM="0">Protéger les utilisateurs contre les URL malveillantes à l'aide de Safe Links</DetailModule>
+                <DetailModule NivDM="0">Créer des stratégies Safe Links à l'aide de Microsoft Defender XDR</DetailModule>
+                <DetailModule NivDM="0">Créer des stratégies Safe Links à l'aide de PowerShell</DetailModule>
+                <DetailModule NivDM="0">Modifier une stratégie Safe Links existante</DetailModule>
+                <DetailModule NivDM="0">Créer une règle de transport pour contourner une stratégie Safe Links</DetailModule>
+                <DetailModule NivDM="0">Examiner l'expérience utilisateur avec les Safe Links</DetailModule>
+				<TitreModuleApres/>
+				<DetailModuleApres/>
+				<TitreAtelier/>
+				<DetailAtelier/>
+			</Module><Module>
+				<TitreModuleAvant/>
+				<DetailModuleAvant/>
+				<TitreModule>Explorer Threat Intelligence dans Microsoft Defender XDR</TitreModule>
+				<DetailModule NivDM="0">Introduction</DetailModule>
+                <DetailModule NivDM="0">Découvrir Microsoft Intelligent Security Graph</DetailModule>
+                <DetailModule NivDM="0">Explorer les stratégies d'alerte dans Microsoft 365</DetailModule>
+                <DetailModule NivDM="0">Exécuter des enquêtes et des réponses automatisées</DetailModule>
+                <DetailModule NivDM="0">Explorer la chasse aux menaces avec Microsoft Threat Protection</DetailModule>
+                <DetailModule NivDM="0">Explorer la recherche avancée de menaces dans Microsoft Defender XDR</DetailModule>
+                <DetailModule NivDM="0">Explorer Threat analytics dans Microsoft 365</DetailModule>
+                <DetailModule NivDM="0">Identifier les problèmes de menace à l'aide des rapports Microsoft Defender</DetailModule>
+				<TitreModuleApres/>
+				<DetailModuleApres/>
+				<TitreAtelier/>
+				<DetailAtelier/>
+			</Module><Module>
+				<TitreModuleAvant/>
+				<DetailModuleAvant/>
+				<TitreModule>Mettre en œuvre la protection des applications à l'aide de Microsoft Defender for Cloud Apps</TitreModule>
+				<DetailModule NivDM="0">Introduction</DetailModule>
+                <DetailModule NivDM="0">Découvrir Microsoft Defender for Cloud Apps</DetailModule>
+                <DetailModule NivDM="0">Déployer Microsoft Defender for Cloud Apps</DetailModule>
+                <DetailModule NivDM="0">Configurer des stratégies de fichiers dans Microsoft Defender for Cloud Appss</DetailModule>
+                <DetailModule NivDM="0">Gérer les alertes et y répondre dans Microsoft Defender for Cloud Apps</DetailModule>
+                <DetailModule NivDM="0">Configurer Cloud Discovery dans Microsoft Defender for Cloud Apps</DetailModule>
+                <DetailModule NivDM="0">Résoudre les problèmes liés à Cloud Discovery dans Microsoft Defender for Cloud Apps</DetailModule>
+				<TitreModuleApres/>
+				<DetailModuleApres/>
+				<TitreAtelier/>
+				<DetailAtelier/>
+			</Module><Module>
+				<TitreModuleAvant/>
+				<DetailModuleAvant/>
+				<TitreModule>Implémenter la protection des points de consommation de donnée à l'aide de Microsoft Defender for Endpoint</TitreModule>
+				<DetailModule NivDM="0">Introduction</DetailModule>
+                <DetailModule NivDM="0">Explorer Microsoft Defender for Endpoint</DetailModule>
+                <DetailModule NivDM="0">Configurer Microsoft Defender for Endpoint dans Microsoft Intune</DetailModule>
+                <DetailModule NivDM="0">Intégrer des appareils à Microsoft Defender for Endpoint</DetailModule>
+                <DetailModule NivDM="0">Gérer les vulnérabilités des points de consommation de la donnée avec Microsoft Defender Vulnerability Management</DetailModule>
+                <DetailModule NivDM="0">Gérer la détection d'appareils et l'évaluation des vulnérabilités</DetailModule>
+                <DetailModule NivDM="0">Réduire votre exposition aux menaces et aux vulnérabilités</DetailModule>
+				<TitreModuleApres/>
+				<DetailModuleApres/>
+				<TitreAtelier/>
+				<DetailAtelier/>
+			</Module><Module>
+				<TitreModuleAvant/>
+				<DetailModuleAvant/>
+				<TitreModule>Mettre en œuvre une protection contre les menaces à l'aide de Microsoft Defender for Office 365</TitreModule>
+				<DetailModule NivDM="0">Introduction</DetailModule>
+                <DetailModule NivDM="0">Explorer le pack de protection Microsoft Defender for Office 365</DetailModule>
+                <DetailModule NivDM="0">Enquêter sur les attaques de sécurité à l'aide de Threat Explorer</DetailModule>
+                <DetailModule NivDM="0">Identifier les problèmes de cybersécurité à l'aide de Threat Trackers</DetailModule>
+                <DetailModule NivDM="0">Se préparer aux attaques grâce à la simulation (Attack Simulation Training)</DetailModule>
+				<TitreModuleApres/>
+				<DetailModuleApres/>
+				<TitreAtelier/>
+				<DetailAtelier/>
+			</Module><Module>
+				<TitreModuleAvant/>
+				<DetailModuleAvant/>
+				<TitreModule>Examnier les solutions pour la gouvernance de la donnée dans Microsoft Purview</TitreModule>
+				<DetailModule NivDM="0">Introduction</DetailModule>
+                <DetailModule NivDM="0">Explorer la gouvernance et la conformité de la donnée dans Microsoft Purview</DetailModule>
+                <DetailModule NivDM="0">Protéger les données sensibles avec Microsoft Purview Information Protection</DetailModule>
+                <DetailModule NivDM="0">Gouvrener la donnée de l'organisation avec Microsoft Purview Data Lifecycle Management</DetailModule>
+                <DetailModule NivDM="0">Minimiser le risque interne avec Microsoft Purview Insider Risk Management</DetailModule>
+                <DetailModule NivDM="0">Explorer les solutions Purview eDiscovery</DetailModule>
+				<TitreModuleApres/>
+				<DetailModuleApres/>
+				<TitreAtelier/>
+				<DetailAtelier/>
+			</Module><Module>
+				<TitreModuleAvant/>
+				<DetailModuleAvant/>
+				<TitreModule>Explorer l'archivage et la gestion d'enregistrements dans Microsoft 365</TitreModule>
+                <DetailModule NivDM="0">Introduction</DetailModule>
+				<DetailModule NivDM="0">Explorer les boites aux lettres d'archive dans Microsoft 365</DetailModule>
+                <DetailModule NivDM="0">Activer les boites aux lettres d'archive dans Microsoft 365</DetailModule>
+                <DetailModule NivDM="0">Explorer La gestion des enregistrements dans Microsoft Purview</DetailModule>
+                <DetailModule NivDM="0">Mettre en oeuvre La gestion des enregistrements dans Microsoft Purview</DetailModule>
+                <DetailModule NivDM="0">Restaurer la donnée supprimée dans Exchange Online</DetailModule>
+                <DetailModule NivDM="0">Restaurer la donnée supprimée dans Sharepoint Online</DetailModule>
+				<TitreModuleApres/>
+				<DetailModuleApres/>
+				<TitreAtelier/>
+				<DetailAtelier/>
+			</Module><Module>
+				<TitreModuleAvant/>
+				<DetailModuleAvant/>
+				<TitreModule>Explorer la rétention dans Microsoft 365</TitreModule>
+                <DetailModule NivDM="0">Introduction</DetailModule>
+				<DetailModule NivDM="0">Explorer la rétention en utilisant les stratégies et les étiquettes de rétention</DetailModule>
+                <DetailModule NivDM="0">Comparer les stratégies de rétention et les étiquettes de rétention</DetailModule>
+                <DetailModule NivDM="0">Définir la portée d'une stratégie de rétention</DetailModule>
+                <DetailModule NivDM="0">Examiner les principes de la rétention</DetailModule>
+                <DetailModule NivDM="0">Mettre en oeuvre la rétention avec les stratégies, les étiquettes et les scellés eDiscovery</DetailModule>
+                <DetailModule NivDM="0">Restreindre les changements des stratégies de rétention avec des verrous</DetailModule>
+				<TitreModuleApres/>
+				<DetailModuleApres/>
+				<TitreAtelier/>
+				<DetailAtelier/>
+			</Module><Module>
+				<TitreModuleAvant/>
+				<DetailModuleAvant/>
+				<TitreModule>Explorer Microsoft Purview Message Encryption</TitreModule>
+                <DetailModule NivDM="0">Introduction</DetailModule>
+				<DetailModule NivDM="0">Examiner Microsoft Purview Message Encryption</DetailModule>
+                <DetailModule NivDM="0">Configurer Microsoft Purview Message Encryption</DetailModule>
+                <DetailModule NivDM="0">Définir des règles de routage pour chiffrer les e-mails</DetailModule>
+                <DetailModule NivDM="0">Ajouter l'identité de l'entreprise aux e-mails chiffrés</DetailModule>
+                <DetailModule NivDM="0">Explorer Microsoft Purview Advanced Message Encryption</DetailModule>
+				<TitreModuleApres/>
+				<DetailModuleApres/>
+				<TitreAtelier/>
+				<DetailAtelier/>
+			</Module><Module>
+				<TitreModuleAvant/>
+				<DetailModuleAvant/>
+				<TitreModule>Explorer la conformité dans Microsoft 365</TitreModule>
+                <DetailModule NivDM="0">Introduction</DetailModule>
+				<DetailModule NivDM="0">Plannifier la sécurité et la conformité dans Microsoft 365</DetailModule>
+                <DetailModule NivDM="0">Planifier les tâches initiales de conformité dans Microsoft Purview</DetailModule>
+                <DetailModule NivDM="0">Gérer vos besoins de conformité avec Compliance Manager</DetailModule>
+                <DetailModule NivDM="0">Examiner le tableau de bord Compliance Manager</DetailModule>
+                <DetailModule NivDM="0">Analyser le score de conformité</DetailModule>
+				<TitreModuleApres/>
+				<DetailModuleApres/>
+				<TitreAtelier/>
+				<DetailAtelier/>
+			</Module><Module>
+				<TitreModuleAvant/>
+				<DetailModuleAvant/>
+				<TitreModule>Mettre en oeuvre Microsoft Purview Insider Risk Management</TitreModule>
+                <DetailModule NivDM="0">Introduction</DetailModule>
+				<DetailModule NivDM="0">Explorer la gestion du risque interne</DetailModule>
+                <DetailModule NivDM="0">Plannifier la gestion du risque interne</DetailModule>
+                <DetailModule NivDM="0">Explorer les stratégies Insider Risk Management</DetailModule>
+                <DetailModule NivDM="0">Créer des stratégies Insider Risk Management</DetailModule>
+                <DetailModule NivDM="0">Enquêter sur les activités et alertes Insider Risk Management</DetailModule>
+                <DetailModule NivDM="0">Explorer les dossiers Insider Risk Management</DetailModule>
+				<TitreModuleApres/>
+				<DetailModuleApres/>
+				<TitreAtelier/>
+				<DetailAtelier/>
+			</Module><Module>
+				<TitreModuleAvant/>
+				<DetailModuleAvant/>
+				<TitreModule>Mettre en oeuvre les barrières d'information Microsoft Purview</TitreModule>
+                <DetailModule NivDM="0">Introduction</DetailModule>
+				<DetailModule NivDM="0">Explorer les barrières d'information de Microsoft Purview</DetailModule>
+                <DetailModule NivDM="0">Configurer des barrières d'information dans Microsoft Purview</DetailModule>
+                <DetailModule NivDM="0">Examiner les barrières d'information dans Microsoft Teams</DetailModule>
+                <DetailModule NivDM="0">Examiner les barrières d'information dans OneDrive</DetailModule>
+                <DetailModule NivDM="0">Examiner les barrières d'information dans Sharepoint</DetailModule>
+				<TitreModuleApres/>
+				<DetailModuleApres/>
+				<TitreAtelier/>
+				<DetailAtelier/>
+			</Module><Module>
+				<TitreModuleAvant/>
+				<DetailModuleAvant/>
+				<TitreModule>Explorer les stratégie DLP dans Microsoft Purview</TitreModule>
+                <DetailModule NivDM="0">Introduction</DetailModule>
+				<DetailModule NivDM="0">Examiner la prévention contre la perte de données (DLP)</DetailModule>
+                <DetailModule NivDM="0">Explorer Endpoint Data Loss Prevention</DetailModule>
+                <DetailModule NivDM="0">Examiner les stratégies DLP</DetailModule>
+                <DetailModule NivDM="0">Voir le résultat des stratégies DLP</DetailModule>
+                <DetailModule NivDM="0">Explorer les rapports DLP</DetailModule>
+				<TitreModuleApres/>
+				<DetailModuleApres/>
+				<TitreAtelier/>
+				<DetailAtelier/>
+			</Module><Module>
+				<TitreModuleAvant/>
+				<DetailModuleAvant/>
+				<TitreModule>Mettre en oeuvre les stratégie DLP dans Microsoft Purview</TitreModule>
+                <DetailModule NivDM="0">Introduction</DetailModule>
+				<DetailModule NivDM="0">Plannifier l'implémentation des stratégies DLP dans Microsoft Purview</DetailModule>
+                <DetailModule NivDM="0">Mettre en oeuvre les statégies DLP par défaut dans Microsoft Purview</DetailModule>
+                <DetailModule NivDM="0">Plannifier une stratégie DLP personnalisée</DetailModule>
+                <DetailModule NivDM="0">Créer une stratégie DLP personnalisée depuis un modèle</DetailModule>
+                <DetailModule NivDM="0">Configurer les notifications par e-mail pour les stratégies DLP</DetailModule>
+                <DetailModule NivDM="0">Configurer les boites d'information pour les statégies DLP</DetailModule>
+				<TitreModuleApres/>
+				<DetailModuleApres/>
+				<TitreAtelier/>
+				<DetailAtelier/>
+			</Module><Module>
+				<TitreModuleAvant/>
+				<DetailModuleAvant/>
+				<TitreModule>Implémenter la classification d'informations sensibles/TitreModule>
+                <DetailModule NivDM="0">Introduction</DetailModule>
+				<DetailModule NivDM="0">Explorer la classification de données</DetailModule>
+                <DetailModule NivDM="0">Mettre en oeuvre la classification de données dans Microsoft 365</DetailModule>
+                <DetailModule NivDM="0">Explorer les classificateurs entrainables</DetailModule>
+                <DetailModule NivDM="0">Créer un classificateur entrainable </DetailModule>
+                <DetailModule NivDM="0">Voir la donnée marquée sensible en utilisant Content Explorer et Activity Explorer</DetailModule>
+                <DetailModule NivDM="0">Détecter les documents contenant des informations sensibles en utilisant les empreintes de documents</DetailModule>
+				<TitreModuleApres/>
+				<DetailModuleApres/>
+				<TitreAtelier/>
+				<DetailAtelier/>
+			</Module><Module>
+				<TitreModuleAvant/>
+				<DetailModuleAvant/>
+				<TitreModule>Explorer les étiquettes de niveau de confidentialité</TitreModule>
+                <DetailModule NivDM="0">Introduction</DetailModule>
+				<DetailModule NivDM="0">Gérer la protection de données en utilisant les étiquettes de niveau de confidentialité</DetailModule>
+                <DetailModule NivDM="0">Explorer ce que les étiquettes de niveau de confidentialité permettent de faire</DetailModule>
+                <DetailModule NivDM="0">Déterminer une étendue pour une étiquette de niveau de confidentialité</DetailModule>
+                <DetailModule NivDM="0">Appliquer automatiquement des étiquettes de niveau de confidentialité</DetailModule>
+                <DetailModule NivDM="0">Explorer les stratégies d'étiquettes de niveau de confidentialité</DetailModule>
+				<TitreModuleApres/>
+				<DetailModuleApres/>
+				<TitreAtelier/>
+				<DetailAtelier/>
+			</Module><Module>
+				<TitreModuleAvant/>
+				<DetailModuleAvant/>
+				<TitreModule>Implémenter les étiquettes de niveau de confidentialité</TitreModule>
+                <DetailModule NivDM="0">Introduction</DetailModule>
+				<DetailModule NivDM="0">Plannifier la stratégie de déploiement des étiquettes de niveau de confidentialité</DetailModule>
+                <DetailModule NivDM="0">Examiner les prérequis pour créer une étiquette de niveau de confidentialité</DetailModule>
+                <DetailModule NivDM="0">Créer des étiquettes de niveau de confidentialité</DetailModule>
+                <DetailModule NivDM="0">Publier des étiquettes de niveau de confidentialité</DetailModule>
+                <DetailModule NivDM="0">Supprimer des étiquettes de niveau de confidentialité</DetailModule>
+				<TitreModuleApres/>
+				<DetailModuleApres/>
+				<TitreAtelier/>
+				<DetailAtelier/>
+			</Module></Modules>
+		<ComplementsPedagogiques>
+			<Complement>
+				<TitreComplement/>
+			</Complement>
+		</ComplementsPedagogiques>
+		<Moyens>
+			<TechPedago/>
+		</Moyens>
+		<Cursus>
+			<Code/>
+		</Cursus>
+		<MoyensPedagos>
+			<MoyenPedago/>
+		</MoyensPedagos>
+		<FicheMetier>
+			<TitreFicheMetier/>
+			<URLFicheMetier/>
+		</FicheMetier>
+	</Stage>
+</Offre>
