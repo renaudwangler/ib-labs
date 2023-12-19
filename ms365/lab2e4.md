@@ -2,7 +2,7 @@
 layout: stage
 title: "Lab2-Ex4 - Délégation d'administration"
 length: "00"
-date: "11/11/2023"
+date: "19/12/2023"
 ---
 # Scénario
 Dans cet exercice, en tant que Dominique Skyetson et pour le projet pilote Microsoft 365 de Adatum, vous allez gérer la délégation administrative en affectant des rôles d'administrateurs à plusieurs utilisateurs. Vous allez procéder à ces affectations de rôle à la fois par le portail d'administration et en Powershell. Une fois ces rôles affectés, vous vous connecterez avec les comptes concernés pour tester la délégation administrative.
@@ -10,7 +10,7 @@ Dans cet exercice, en tant que Dominique Skyetson et pour le projet pilote Micro
 # Objectifs
 A la fin de cet exercice, vous aurez une meilleure connaissance de :
 - L'affectation de rôles administratifs par le centre d'administration
-- L'affectation de rôles avec Windows Powershell
+- L'affectation de rôles administratifs avec Windows Powershell
 - L'interaction entre certains rôles administratifs
 
 ## Tâche 1 - Délégation administrative dans le portail administratif
@@ -55,7 +55,7 @@ Dans cette tâche, Dominique va vérifier la délégation administrative mise en
 1. Utilisez le menu en haut à droite de votre navigateur **Edge** pour ouvrir une nouvelle fenêtre de navigation privée (**New InPrivate window**).
 1. Dans cette nouvelle fenêtre privée, saisissez l'adresse ```https://www.microsoft365.com``` pour vous rendre sur le portail Microsoft 365.
 1. Vous allez commencer par vous connecter avec le compte de **Alan Yoo**. Cliquez sur **Sign In**
-1. Dans la fenêtre **Sign-in**, entrez **Alan@WWLxxxxx.onmicrosoft.com** (remplacez bien par votre préfixe de tenant).  
+1. Dans la fenêtre **Sign-in**, entrez **Alan@Wlabxxxxx.godeploylabs.com** (remplacez bien par votre nom DNS d'entreprise).  
 1. Dans la fenêtre **Enter password**, tapez ```Pa55w.rd```.
 1. Dans la fenêtre **Update your pasword**, changez le mot de passe de Alan comme déjà vu précédemment de **Pa55w.rd** vers ```ibForm@tion```.
 1. Dans la fenêtre **Stay signed in?**, cliquez sur **Yes**.

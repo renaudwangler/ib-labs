@@ -5,7 +5,7 @@ length: "00"
 date: "19/12/2023"
 ---
 # Scénario
-Windows Powershell permet aux administrateurs d'automatiser, d'accélérer et de fluidifier les tâches qui seraient faites dans le portail Microssoft 365 admin center, les plus compliquées comme les plus simples.  
+Windows Powershell permet aux administrateurs d'automatiser, d'accélérer et de fluidifier les tâches qui seraient faites dans le portail Microsoft 365 admin center, les plus compliquées comme les plus simples.  
 Dans cet exercice, vous allez continuer, en tant que Dominique, à faire des opérations administratives de maintenance dans Microsoft 365 en utilisant Windows Powershell. Cela vous permettra de comparer l'expérience de création et de maintenance des utilisateurs et des groupes entre le centre d'administration et le scripting Powershell.
 Vous souhaitez donc utiliser Windows Powershell pour créer des comptes utilisateurs, leur affecter des licences, modifier des comptes et créer des groupes...
 
@@ -19,7 +19,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 
 ## Tâche 1 - Installation du module Windows Powershell pour Entra ID
 Dans cette tâche vous allez mettre en place l'environnement fondamental pour la gestion de Microsoft 365 à l'aide de Windows Powershell.
-1. Suite à l'exercice précédent, vous devriez être resté connecté sur la machine **LON-CL1** avec le compte **Administrator** et le mot de passe **Pa55w.rd**.
+1. A la suite de l'exercice précédent, vous devriez être resté connecté sur la machine **LON-CL1** avec le compte **Administrator** et le mot de passe **Pa55w.rd**.
 1. Dans la zone de recherche en bas à gauche de la barre des tâches, tapez ```powershell```
 1. Faites un clic-droit sur **Windows Powershell ISE** et, dans le menu qui apparait, choisissez **Run as administrator**.
 	>**Note :** Veillez à bien cliquer sur "**Windows Powershell ISE**" et non "**Windows Powershell ISE (x86)**".  
@@ -45,7 +45,7 @@ Dans un exercice précédent, vous avez créé des comptes utilisateurs en utili
 	>**Note :** La valeur *False* pour *ForceChangePasswordNextSignIn* signifie que Catherine n'aura pas besoin de modifier son mot de passe lors de sa première connexion.  
 	```$user1 = New-MGuser –UserPrincipalName catherine@$tenantId –DisplayName "Catherine Richard" -GivenName Catherine -SurName Richard -PasswordProfile @{password='Pa55w.rd';ForceChangePasswordNextSignIn=$false} -UsageLocation CH -AccountEnabled -MailNickname catherine```
 	>**Note :** Vous pouvez simplement taper la commande ```$user1``` pour afficher le résultat de l'opération précédente avant de passer à la suite.
-1. la commande suivante va créer un second compte utilisateur pour **Tameka Reed** (pensez à remplacer le nom du domaine):
+1. La commande suivante va créer un second compte utilisateur pour **Tameka Reed** (pensez à remplacer le nom du domaine):
 	```$user2 = New-MGuser –UserPrincipalName tameka@$tenantId –DisplayName "Tameka Reed" -GivenName Tameka -SurName Reed -PasswordProfile @{password='Pa55w.rd';ForceChangePasswordNextSignIn=$false} -UsageLocation CH -AccountEnabled -MailNickname tameka```
 	>**Note :** Vous pouvez simplement taper la commande ```$user2``` pour afficher le résultat de l'opération précédente avant de passer à la suite.
 1. Utilisez la commande suivante pour obtenir la liste des comptes qui n'ont pas de licence associée à leur compte :
