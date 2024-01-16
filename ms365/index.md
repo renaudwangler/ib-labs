@@ -10,8 +10,7 @@ Au fil des ateliers de ce stage, vous allez prendre l'identité de Marie Skyetso
 L'équipe projet de ib Cegos Workshop a donc décide de mettre en oeuvre Microsoft 365 dans un projet pilote, afin de monter en compétence sur les produits et de voir les besoins métiers qui pourraient être couverts par les outils de l'offre Microsoft 365.  
 
 ## Atelier 1 - Provisioning de l'environnement Microsoft 365
-### Exercice 1 - [Création de l'environnement](lab1e1)
-### Exercice 2 - [Ajout d'un domaine DNS d'entreprise](lab1e2)
+### Exercice 1 - [Création du tenant Microsoft 365](lab1e1)
 ___
 ## Atelier 2 - Gestion des utilisateurs et des groupes Microsoft 365
 ### Exercice 1 - [Gestion des utilisateurs avec le centre d'administration Microsoft 365](lab2e1)
