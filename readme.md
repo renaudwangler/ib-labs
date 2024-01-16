@@ -13,7 +13,7 @@ La variable obligatoire en en-tête du stage
 - **layout : page** pour un atelier contenu dans index.md, **home** et **stage** sinon (ex msm030fr)
 - **title :** Le nom de l'atelier en toutes lettres  
 - **synopsis :** Le résumer (descriptif) de l'atelier. la présence de cette variable listera l'atelier dans la section principale de la page d'accueil.
-- **genericSynopsis :** Le résumer (descriptif) d'un atelier. La présence de cette vraibale lsitera l'atelier dans la section **Conseils générques** de la page d'accueil.
+- **genericSynopsis :** Le résumer (descriptif) d'un atelier. La présence de cette vrariable listera l'atelier dans la section **Conseils génériques** de la page d'accueil.
 
 Les variables disponibles dans l'en-tête de chaque stage  
 - **length :** durée en minutes
