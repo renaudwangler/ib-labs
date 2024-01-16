@@ -1,15 +1,15 @@
 ---
 layout: home
 title: 'MS365 - Administration de Microsoft 365'
-synopsis: "Ateliers en Français et tenus à jour de la formation ib MS365"
+synopsis: "Ateliers pratiques de la formation ib MS365"
 ---
 # Ateliers du stage
-L'entreprise Adatum héberge actuellement un environnement informatique *classique*, dans ses datacenters, qui comporte diverses applications historiques (comme Microsoft Exchange par exemple). L'entreprise a cependant récemment acquis un abonnement Microsoft 365, y voyant l'opportunité d'un déploiement hybride et d'un rapprochement des applications du Cloud.  
+L'entreprise **ib Cegos Workshop (ICW)** héberge actuellement un environnement informatique *classique*, dans ses datacenters, qui comporte diverses applications historiques (comme Microsoft Exchange par exemple). L'entreprise a cependant récemment décider de tester la migration vers les outils présents dans l'offre Microsoft 365, y voyant une opportunité économique et une opportunité d'améliorer la qualité du service apporté par le système d'information aux utilisateurs du métier.  
 
-Au fil des ateliers de ce stage, vous allez prendre l'identité de Dominique Skyetson, membre de l'équipe d'administration IT de Adatum.  
-L'équipe projet de Adatum a décidé de mettre en œuvre Microsoft 365  dans un projet pilote, afin de monter en compétence sur le produit et de voir les besoins métiers qui pourraient être couverts par Microsoft 365.  
+Au fil des ateliers de ce stage, vous allez prendre l'identité de Marie Skyetson, membre de l'équipe d'administration IT de ICW.  
+L'équipe projet de ib Cegos Workshop a donc décide de mettre en oeuvre Microsoft 365 dans un projet pilote, afin de monter en compétence sur les produits et de voir les besoins métiers qui pourraient être couverts par les outils de l'offre Microsoft 365.  
 
-## Atelier 1 - Provisioning du tenant Microsoft 365
+## Atelier 1 - Provisioning de l'environnement Microsoft 365
 ### Exercice 1 - [Création de l'environnement](lab1e1)
 ### Exercice 2 - [Ajout d'un domaine DNS d'entreprise](lab1e2)
 ___
