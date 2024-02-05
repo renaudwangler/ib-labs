@@ -47,7 +47,7 @@ A travers les ateliers de ce stage, vous allez prendre l'identité de Dominique 
 1. Dans le menu de navigation, cliquez sur **Settings** pour en ouvrir le groupe d'options, puis cliquez sur **Org Settings**.
 1. Dans la fenêtre **Org Settings**, c'est l'onglet **Services** qui est affiché par défaut. Puisque vous souhaitez modifier le profil de l'entreprise, cliquez sur l'onglet **Organization profile** pour l'afficher. sélectionnez ensuite **Organization information**.
 1. Dans la fenêtre **Organization information** qui s'affiche, modifiez les informations suivantes :
-    - Name : ```Adatum*```
+    - Name : ```Adatum```
 	- Technical contact : (l'adresse email du compte *MOD Administrator*)
 1. Cliquez ensuite sur **Save**.
 1. Une fois les modifications sauvegardées, un message ***Saved*** apparaît en haut de la fenêtre dans un encadré vert. Cliquez sur le **X** tout en haut à droite de la fenêtre **Organization information** pour la fermer.
