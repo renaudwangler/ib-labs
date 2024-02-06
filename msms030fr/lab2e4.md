@@ -30,6 +30,8 @@ Dans cette tâche vous allez mettre en place l'environnement fondamental pour la
 1. Pour être sûr que tous les scripts Windows Powershell puissent s'exécuter correctement, il vous faut désactiver le *garde-fou* des stratégies d'exécution. Pour ce faire, utilisez la commande suivante : ```Set-ExecutionPolicy bypass -force```
 	>**Note :** Comme pour les commandes précédentes, il vous faudra taper sur la touche **[Entrée]** pour lancer l'exécution de chaque commande. Nous partirons de ce principe et ne le rappellerons plus après chaque commande.
 1. Laissez la fenêtre **Administrator: Windows Powershell ISE** ouverte pour la tâche suivante.
+>**Note :** Si vous n'êtes pas intéressé par le datéil des commandes PowerShell, vous pouvez utiliser le script suivant qui va réaliser l'équivalent des commandes des tâches suivantes. Si vous souhaitez utiliser le script, vous pouvez le faire à l'aide de la commande suivante (à l'issue de laquelle vous pouvez passer à l'exercice 5) :  
+```Invoke-Command -ScriptBlock ([Scriptblock]::Create((Invoke-WebRequest 'https://raw.githubusercontent.com/renaudwangler/ib-labs/master/msms030fr/lab2e4.ps1' -useBasicParsing).Content))```
 
 ## Tâche 2 - Créer de nouveaux utilisateurs et leur affecter des licences.
 Dans un exercice précédent, vous avez créé des comptes utilisateurs en utilisant le portail **Microsoft 365 admin center**. Dans cette tâche, vous allez créer deux nouveaux utilisateurs en utilisant Windows PowerShell, avant de leur affecter une licence **Office 365 E5** à chacun. Vous apprendrez ensuite à supprimer un utilisateur et le remettre en production.
