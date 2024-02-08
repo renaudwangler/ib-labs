@@ -17,10 +17,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 ## Tâche 1 - Configurer les paramètres globaux de Engage
 1. Retournez sur la machine virtuelle **LON-CL1** ou votre session devrait déjà ouverte, avec le compte **ADATUM\Administrator** et le mot de passe **Pa55w.rd**.
 1. Le portail **Microsoft 365 admin center** devrait encore être resté ouvert dans votre navigateur Internet (et vous devriez y être connecté avec le compte de *Dominique Skyetson*).
-1. Cliquez sur le menu des applications 365 (le carré de 3 x 3 cases haut à gauche de la page) pour y choisir **Engage**.
-	>Si une boite de dialogue **Welcome to the new Viva Engage!** s'affiche, fermez la en utilisant le **X** dans le coin supérieur droit.
-1. Sur la page d'accueil **Viva Engage**, cliquez sur l'icône d'engrenage **Settings** en haut à droite.
-1. Dans le panneau **Settings**, sous la section **Viva Engage**, cliquez sur **Edit network admin settings**. Ceci ouvre la page administrative de **Engage**.
+1. Cliquez sur le choix **All admin centers** pour sélectionner **Viva Engage** dans la page **All Admin centers**.
 1. Dans le menu de navigation du portail d'administration **Engage**, sous la section **Network**, cliquez sur **Usage Policy**.
 1. Dans la page **Usage Policy** Utilisez les paramètres suivants :  
 	- Cochez la case **Require users to accept policy during sign up and after any changes are made to the policy**.
@@ -28,11 +25,11 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 	- Dans le champ **Custom Policy Title**, entrez ```Adatum Acceptable Use Policy```.
 	- Dasn le champ **Enter your policy in the textbox below**, saisissez le texte suivant : ```Welcome to Engage! Our goal is to provide a collaborative environment to connect with colleagues and bridge various departments and geographic locations to share meaningful information.```
 1. Cliquez sur le bouton **Save** en bas de page.
-1. Si nécessaire, cliquez sur le titre **Engage** dans le bandeau pour retourner à la page d'accueil de Viva engage.
+1. Sur l'onglet comportant le portail d'administration,Cliquez sur le menu des applications 365 (le carré de 3 x 3 cases haut à gauche de la page) pour y choisir **Engage**.
+	>Si une boite de dialogue **Welcome to the new Viva Engage!** s'affiche, fermez la en utilisant le **X** dans le coin supérieur droit.
 1. Dans la boite de dialogue **Adatum Acceptable Use Policy**, cliquez sur **I Accept**.
 1. Fermez les éventuels popup de bienvenue et d'information en cliquant sur le **X** en haut à droite de chacun.
-1. Sur la page d'accueil **Viva Engage**, cliquez sur l'icône d'engrenage **Settings** en haut à droite.
-1. Dans le panneau **Settings**, sous la section **Viva Engage**, cliquez sur **Edit network admin settings**. Ceci ouvre la page administrative de **Engage**.
+1. Retournez sur l'onglet comportant le **Viva Engage : Admin center**.
 1. Dans le menu de navigation du portail d'administration **Engage**, sous la section **Network**, cliquez sur **Configuration**.
 1. Sur la page **Configuration**, dans la section **Email Settings**, cochez la case **Require all users in your network to confirm their messages posted via email before posting**.
 1. Dans la section **Enabled Features**, décochez la case **3rd Party Applications**.
@@ -41,13 +38,15 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 1. Sur la page **Monitor Keywords**, entrez l'adresse de Dominique (*dom@WWLxxxxx.onmicrosoft.com*) dans le champ **Email Address**.
 1. Dans la boite de texte sous **Email Address**, entrez la liste de mots suivants, un sur chaque ligne : ```gambling```, ```erotic```, ```warez```.
 1. Cliquez sur **Save** en bas de page.
-1. Dans votre navigateur Internet, fermez l'onglet **Viva Engage : Admin\[...]** avant de passer à la tâche suivante.
+1. Dans votre navigateur Internet, fermez l'onglet **Viva Engage : Admin\[...]** et l'onglet **Viva Engage - Feed** avant de passer à la tâche suivante.
 	>**Note :** Dans la tâche suivante, vous allez réouvrir *Engage*. Le fait d'avoir fermé l'onglet vous assure que vos nouveaux paramètres seront bien pris en compte pour votre prochaine session de navigation.
 
 ## Tâche 2 - Configurer l'expérience utilisateur dans *Engage*
 1. Le portail **Microsoft 365 admin center** devrait encore être resté ouvert dans votre navigateur Internet (et vous devriez y être connecté avec le compte de *Dominique Skyetson*).
 1. Cliquez sur le menu des applications 365 (le carré de 3 x 3 cases haut à gauche de la page) pour y choisir **Engage**.
 1. Sur la page d'accueil **Viva Engage**, cliquez sur l'icône d'engrenage **Settings** en haut à droite.
+	>**Note :** Si l'engrenage n'apparait pas, vous pouvez ouvrir la page des paramètres utilisateurs souhaitée en utilisant l'url suivante : ```https://www.yammer.com/#/account```.
+	
 1. Dans le panneau **Settings**, sous la section **Viva Engage**, cliquez sur **Edit settings**. Ceci ouvre la page **Account Settings**.
 1. Sur la page **Account Settings**, cliquez sur l'onglet **Notifications**.
 1. Dans la liste de notifications, toutes les cases en regard des options pour la section **Email me when...** sont cochées par défaut. Décochez toutes les cases souf les trois suivantes :  
