@@ -7,7 +7,7 @@ date: "11/11/2023 (15h00)"
 # Scénario
 Adatum a désormais une bonne vision de Microsoft 365 grâce à son projet pilote. L'entreprise a gagné plusieurs contrats gouvernementaux, l'amenant à travailler sur de nombreux produits sensibles et classifiés.  
 Dans son rôle d'administrateur de l'entreprise Adatum, Dominique Skyetson s'est vu demandé par le CTO d'étudier une solution pour protéger et chiffrer les messages concernant ces contrats sensibles.  
-Il lui a également été demandé qut toute référence au "**Project New Day**" soit automatiquement chiffrée. Il s'agit du nom de code d'un projet top-secret, et il est impératif qu'aucune mention de ce projet ne fuite en dehors du contexte d'Adatum.  
+Il lui a également été demandé que toute référence au "**Project New Day**" soit automatiquement chiffrée. Il s'agit du nom de code d'un projet top-secret, et il est impératif qu'aucune mention de ce projet ne fuite en dehors du contexte d'Adatum.  
 Dans cet atelier, vous allez voir comment mettre en oeuvre la réponse à la demande du CTO en utilisant les labels d'informations sensibles dans le centre d'administration *Purview* et avec des commandes *Windows Powershell*.
 >**Important :** Les labels d'informations sensibles et leurs stratégies peuvent prendre jusqu'à 24h pour se propager dans l'intégralité de l'environnement 365. Malheureusement, comme votre stage touche à sa fin, il y a de fortes chances que vous ne soyez pas à même d'en vérifier l'application dans votre tenant de test. Ceci étant acté, cet exercice va tout de même vous permettre de découvrir les interfaces de mise en oeuvre desdits labels et des stratégies correspondantes.
 
@@ -34,14 +34,15 @@ Dans votre rôle d'administrateur, en tant que Dominique Skyetson, vous allez cr
 1. Procédez de même pour ajouter les comptes de ```Alan``` (Alan Yoo) et ```Joni``` (Joni Sherman).
 1. Cliquez sur le bouton **Next**.
 1. Sur la page **Edit settings**, saisissez ```PNDgroup``` dans le champ **Team email address**.  
-	>**Note :** A droite du champ **Tema email address**, sélectionnez votre préfixe de tenant de sorte que le nom de la nouvelle équipe ressemble à *PNDgroup@WWLxxxxx.onmicrosoft.com*.
-
 1. Toujours sur la page **Edit Settings**, dans le champ **Privacy**, **Private - People can only join if they're added by an owner\[...].**.
 1. Cliquez sur le bouton **Next**.
 1. Sur la page **Review and finish adding team**, cliquez sur le bouton **Add Team**.
 1. Sur la page **New team created**, notez le message indiquant qu'il peut s'écouler 5 minutes avant que la nouvelle équipe ne s'affiche. Cliquez sur **Close**.
 1. Sur la page **Active teams and groups**, cliquez sur le bouton **Refresh** dans la barre de menu au-dessus de la liste des groupes. Si nécessaire, attendez quelques instants et répétez l'opération jusqu'à ce qu'apparaisse la nouvelle équipe.
 1. Une fois l'équipe **PND group** affichée dans la liste, cliquez sur son nom.
+1. Dans le panneau **PND Group** qui s'affiche à droite, cliquez sur le lien **Edit** sous la colonne **Email address** de l'onglet **General**
+1. Sur le panneau **Edit email adresses**, cliquez sur les points de suspension en regard de l'alias **PNDgroup@WWLxxxxx.onmicrosoft.com** et choisissez **Change to primary email**.
+1. Cliquez sur le bouton **Save** avant de cliquer sur la flêche de retour en haut à gauche pour revenir au panneau **PND Group**.
 1. Pour des questions de sécurité, vous avez décidé d'inclure Elviss Cress comme copropriétaire de cette équipe. Dans le panneau **PND Group** qui s'affiche, l'onglet **General** est affiché par défaut, cliquez sur l'onglet **Membership** pour l'afficher.
 1. Sur l'onglet **Membership**, cliquez sur le bouton **+ Add owners**.
 1. Sur le panneau **Add team owners to PND Group**, saisissez ```Elvis``` et cliquez sur le compte de **Elvis Cress** qui s'affiche.
