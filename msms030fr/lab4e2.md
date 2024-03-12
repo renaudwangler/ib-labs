@@ -127,7 +127,7 @@ Dans cette tâche, vous allez forcer volontairement la synchronisation entre l'A
 1. Vous pouvez utiliser la commande suivante pour vérifier si le groupe **Research** a été trouvé :
 	```$resGroup```
 1. Utilisez la commande suivante pour afficher la liste des utilisateurs inclus dans le groupe **Research** :
-	```Get-MgGroupMember -GroupId $mktGroup.Id | ForEach-Object { Get-MgUser -UserId $_.Id} | Out-GridView```
+	```Get-MgGroupMember -GroupId $resGroup.Id | ForEach-Object { Get-MgUser -UserId $_.Id} | Out-GridView```
 1. Vérifiez que les utilisateurs suivants, que vous aviez enlevé à la tâche précédente **ne sont pas présents** dans la liste affichée :
 	- Cai Chu
 	- Shannon Booth
