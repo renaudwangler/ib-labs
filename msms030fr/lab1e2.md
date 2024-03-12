@@ -39,7 +39,7 @@ Dans cette tâche vous allez ajouter le domaine DNS d'entreprise à votre tenant
     - TXT contient ```v=spf1 include:spf.protection.outlook.com -all```  
 
 1. Plus bas dans la page **Add DNS records** cliquez sur **Advanced Options**.
-1. Trois services additionnels sont affichés ici : **Skype for Business**, **Intune and Mobile Device Management for Microsoft 365** et **DomainKeys Identified Mail (DKIM).  
+1. Trois services additionnels sont affichés ici : **Skype for Business**, **Intune and Mobile Device Management for Microsoft 365** et **DomainKeys Identified Mail (DKIM)**.  
 	> Sélectionnez les cases à cocher des deux premiers services, cela va faire apparaître un ensemble d'enregistrements DNS à créer pour chacun.
 1. Notez que quatre enregistrements DNS sont requis pour **Skype for Business** - deux **CNAME** et deux **SRV**. Sélectionnez chaque enregistrement pour l'afficher et en prendre note  
 	> **Important :** Bien que Teams soit désormais utilisée comme plateforme de collaboration et de conversation en temps réel, il reste nécessaire de sélectionner **Skype for Business**. La raison en est que Teams va s'appuyer sur ces enregistrements DNS pour diverses fonctionnalités qui ne fonctionneront pas correctement sans.  
