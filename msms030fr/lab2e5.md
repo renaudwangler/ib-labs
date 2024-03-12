@@ -35,7 +35,7 @@ Cette tâche est assez similaire à la précédente, mais vous allez la réalise
 1. Dans la fenêtre **Permission requested**, cochez la case **Consent on behalf of your organization** et cliquez sur **Accept**.	
 1. Pour voir tous les rôles diponibles, vous poubvez utiliser la commande suivante :
 	```Get-MgRoleManagementDirectoryRoleDefinition |Select-Object -Property DisplayName,Description | Out-GridView```
-1. Dominique souhaite affecter le rôle **Service support administrator** à **Nona Snider**. Pour ce faire, vous pouvez urtiliser la commande suivante :
+1. Dominique souhaite affecter le rôle **Service support administrator** à **Nona Snider**. Pour ce faire, vous pouvez utiliser la commande suivante :
 	```New-MgRoleManagementDirectoryRoleAssignment -DirectoryScopeId '/' -RoleDefinitionId (Get-MgRoleManagementDirectoryRoleDefinition | where DisplayName -eq 'Service support administrator').Id -PrincipalId (Get-MgUser -Search 'DisplayName:nona' -ConsistencyLevel eventual).Id```
 1. Vous souhaitez désormais vérifier quels utilisateurs se sont vu affecter quels rôles. Pour réaliser cette recherche en Powershell, vous pouvez utiliser la commande suivante :
 	```Get-MgRoleManagementDirectoryRoleAssignment -Filter "roleDefinitionId eq '$((Get-MgRoleManagementDirectoryRoleDefinition |Select-Object -Property DisplayName,Description,Id | Out-GridView -PassThru).Id)'" | ForEach-Object {Get-MgUser -UserId $_.PrincipalId -ErrorAction SilentlyContinue}```
