@@ -42,7 +42,7 @@ Dominique va désormais tester si les utilisateurs avec licence peuvent être em
 1. Basculez vers **LON-DC1**, ou vous devriez encore être connecté avec le compte **Administrator**. Vous devriez également avoir votre navigateur Internet ouvert, et y être connecté avec le compte de Dominique Skyetson. Vous devirez avoir un onglet ouvert sur le portail **Microsoft 365 admin center**.
 1. Pour désactiver le paramètre de téléchargement global, ouvrez l'onglet de votre navigateur qui affiche le portail **Microsoft 365 admin center**, Si nécessaire, cliquez sur **...Show all** dans le menu de navigation afin de pouvoir ouvrir le groupe d'options **Settings**, et sélectionnez pour finir **Org Settings**.
 1. Sur la page **Org settings**, l'onglet **Services** est affiché par défaut. Défilez la liste des services afin de pouvoir cliquer sur **Microsoft 365 installation options**.
-1. Dans le panneau **Microsoft 365 installation options** qui s'affiche, cliquez sur l'onglet **Installation** puis, dans la section **Apps for Windows and mobile devices**, décochez la case **Office (includes Skype for Business)**, ce qui va désactiver cette fonctionnalité.
+1. Dans le panneau **Microsoft 365 installation options** qui s'affiche, cliquez sur l'onglet **Installation** puis, décochez toutes les cases de la section **Apps for Windows and mobile devices**, ce qui va désactiver ces fonctionnalités.
 1. Cliquez sur **Save**.
 	>**Important :** Laissez le panneau *Microsoft 365 installation options** ouvert car vous allez y revenir dans la tâche suivante.
 
