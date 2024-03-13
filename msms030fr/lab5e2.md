@@ -40,8 +40,8 @@ Dominique souhaite désormais ajouter Microsoft 365 apps automatiquement aux pé
 Pour que l'*auto-enrollment* fonctionne comme prévu, vous devez vérifier que que le paramétrage en a été fait correctement. Les étapes suivantes montrent les principaux prérequis dans l'utilisation d'Intune :  
 1. Suite à la tâche précédente, vous devriez encore être connecté sur le portail **Microsoft Intune admin center** avec le compte de Dominique.
 1. Dans le menu de navigation à gauche du portail **Microsoft Intune admin center**, cliquez sur **Devices**.
-1. Dans la section **Devices**, sous **Device enrollment**, cliquez sur **Enroll devices**.
-1. Dans la page **Enroll devices**, sélectionnez la tuile **Automatic Enrollment**.
+1. Dans la section **Devices**, sous **Device onboarding**, cliquez sur **Enrollment**.
+1. Dans la page **Devices Enrollment**, dans l'onglet **Windows**, sélectionnez **Automatic Enrollment**.
 1. Dans la page **Configure**, en regard de **MDM user scope**, sélectionnez **All**. En regard de **Windows Information Protection (WIP) user scope**, sélectionnez **All**.
 1. Cliquez sur **Save**.
 
