@@ -40,6 +40,9 @@ A travers les ateliers de ce stage, vous allez prendre l'identité de Dominique 
 ```https://admin.microsoft.com```
 1. Dans la fenêtre **Sign in**, saisissez le nom de connexion du compte *MOD Administrator* (sous la forme **admin@WWWLxxxxxxxxxx.onmicrosoft.com**) et cliquez sur **Next**
 1. Dans la fenêtre **Enter password**, saisissez ou collez le **mot de passe du tenant** que vous avez précédemment noté et cliquez sur **Sign in**
+    >**Nota :** Depuis Mars 2024, Microsoft, victime de trop d'attaques cyber, impose l'utilisation de la MFA pour tous les contextes professionnels, y-compris pour les tenant de test Microsoft 365 que l'éditeur fournit pour les formations officielles.
+    Il faut désormais mettre en place la MFA pour tous les utilisateurs à tester dans ce contexte. Reportez-vous à la procédure [Mise en place de la M.F.A pour les ateliers Microsoft](../mfaSetup) chaque fois que vous souhaiterez vous connecter avec un nouveau compte utilisateur.
+
 1. Sur la fenêtre **Stay signed in?**, cochez la case **Don’t show this again** et cliquez sur **Yes.**
 1. Si un popup **Welcome to Microsoft 365** apparaît, cliquez deux fois sur la flèche droite pour pouvoir le fermer.
 1. Dans le **Microsoft 365 admin center**, dans le menu de navigation de gauche, sélectionnez **...Show all** pour voir tous les choix dudit menu.

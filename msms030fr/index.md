@@ -64,3 +64,5 @@ ___
     - L'atelier 3 est dispensable.
     - Les tâches 2 et 3 de l'atelier 4, exercice 1 sont dispensables
     - Si vous souhaitez maximiser vos chances de constater les résultats de l'atelier 10, vous pouvez le réaliser en avance, car son résultat nécessite une latence importante.
+
+## [Mise en place de la M.F.A pour les ateliers Microsoft](../mfaSetup)
