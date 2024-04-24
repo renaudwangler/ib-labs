@@ -31,8 +31,8 @@ Vous utiliserez ensuite la VM **LON-CL2** pour installer Microsoft 365 Apps.
 1. Dans la boite de dialogue **Update your password**, entrez **Pa55w.rd**** dans le champ **Current password**, puis entrez ```ibForm@tion``` dans les champs **New password** et **Confirm password**. Cliquez sur **Sign in**.
 1. Si une fenêtre **Stay signed in?** apparait, cochez la case **Don't show this again** et cliquez sur **Yes.**
 1. Si la boite de dialogue **Welcome to Microoft 365** apparait, fermez-la.
-1. Dans la page **Welcome to Microsoft 365** de Laura, constatez que Microsoft 365 apps n'apparait pas dans le menu **Install apps** puisque Laura ne s'est pas vu affecté de licence Office 365.  
-1. Cliquez sur le menu **Install apps** et sélectionnez **Other install options**.
+1. Dans la page **Welcome to Microsoft 365** de Laura, constatez que Microsoft 365 apps n'apparait pas dans le menu **Install and more** puisque Laura ne s'est pas vu affecté de licence Office 365.  
+1. Cliquez sur le menu **Install and more** et sélectionnez **Install Microsoft 365 Apps**.
 1. La fenêtre **My account** de Laura s'affiche. Sous la section **Office apps &amp; devices**, vous ne devriez rien trouver...  
 	>**Important :** Vous venez de vérifier qu'un utilisateur ne peut télécharger Microsoft 365 Apps for enterprise s'il ne s'est pas vu affecter de licence idoine.
 1. Laissez votre navigateur Internet ouvert pour réaliser la tâche suivante.
@@ -54,7 +54,7 @@ Dominique va désormais tester si les utilisateurs avec licence peuvent être em
 1. Dans le champ **Email address**, saisissez ```alan@WWLxxxxx.onmicrosoft.com``` et cliquez sur **Sign in**
 1. Dans la fenêtre **Enter password**, saisissez ```Pa55w.rd``` et cliquez sur **Sign in.**
 1. Dans la boite de dialogue **Update your password**, tapez ```Pa55w.rd``` dans le champ **Current password**, tapez ensuite ```ibForm@tion``` dans les champs **New password** et **Confirm password** avant de cliquer sur **Sign in**.
-1. Dans la page  **Welcome to Microsoft 365** de Alan, cliquez sur les menu **Install apps** et sélectionnez **Other install options**.
+1. Dans la page  **Welcome to Microsoft 365** de Alan, cliquez sur les menu **Install and more** et sélectionnez **Install Microsoft 365 Apps**.
 1. La fenêtre **My account** de Alan s'affiche. Sous la section **Office apps &amp; devices**, vous ne devriez rien trouver...  
 	>**Important :** Vous venez de vérifier qu'un utilisateur licencié ne peut télécharger Microsoft 365 Apps for enterprise si le paramètre global l'en empêche.
 1. Dominique souhaite désormais réactiver le paramètre d'installation global pour que Alan puisse réaliser l'installation de Microsoft 365 Apps for enterprise.  
