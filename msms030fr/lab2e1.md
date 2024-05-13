@@ -37,7 +37,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 1. Cliquez **Next**.
 1. Sur la page **Assign product licenses** , saisissez les informations suivantes:
 	- Select location : **United States**
-	- Licences : Vérifier que l'option **Assign user a product license** est sélectionnée et cochez la case en regard de la licence **Office 365 E3** 
+	- Licences : Vérifier que l'option **Assign user a product license** est sélectionnée et cochez la case en regard de la licence **Office 365 E5** 
 1. Cliquez sur **Next.**
 1. Sur la page **Optional settings**, cliquez sur la ligne **Roles (User : no administration access).**
 1. Sélectionnez le titre **Admin center access**. Les rôles les plus souvent affectés vont alors s'afficher.
@@ -50,7 +50,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 	- **Password :** Utilisez le mot de passe ```Pa55w.rd```, et, comme pour le compte de Dominique, exigez le changement de mot de passe à la première connexion.
 	- **Licenses :** Affectez une licence **Office 365 E3** à l'utilisateur **Alan Yoo**. Pour tous les autres utilisateurs, sélectionner l'option **Create user without product license (not recommended)**.
 	- **Roles :** Par défaut chaque utilisateur se verra affecter le rôle **User role (no administration access)**; Cela suffira pour le moment. Dans un futur exercice, vous affecterez des rôles administratifs à certains utilisateurs pour tester la délégation administrative. Ainsi, en arrivant sur la page **Optional settings**, cliquez directement sur **Next**.
-	> ```Alan Yoo``` | username ```alan``` | Licence **Office 365 E3** mais pas de rôle admin  
+	> ```Alan Yoo``` | username ```alan``` | Licence **Office 365 E5** mais pas de rôle admin  
 	```Ada Russell``` | username ```ada``` | Ni licence ni rôle admin
 	```Adam Hobbs``` | username ```adam``` | Ni licence ni rôle admin
 	```Libby Hayward``` | username ```libby``` | Ni licence ni rôle admin
