@@ -46,7 +46,7 @@ Dominique va désormais tester si les utilisateurs avec licence peuvent être em
 1. Cliquez sur **Save**.
 	>**Important :** Laissez le panneau *Microsoft 365 installation options** ouvert car vous allez y revenir dans la tâche suivante.
 
-1. Vous souhaitez tester si, en désactivant ce paramètre, cela empêche un utilisateur **licencié** d'installer Microsoft 365 Apps for enterprise. Dans ce cas vous allez utiliser le compte de **Alan Yoo**, qui a aussi été créé lors de [l'atelier 2,exercice1](lab2e1#t%C3%A2che-1---cr%C3%A9ation-dutilisateurs); cependant, contrairement à Laura Atkins, vous aviez affecté une licence Office 365 E3 à Alan.
+1. Vous souhaitez tester si, en désactivant ce paramètre, cela empêche un utilisateur **licencié** d'installer Microsoft 365 Apps for enterprise. Dans ce cas vous allez utiliser le compte de **Alan Yoo**, qui a aussi été créé lors de [l'atelier 2,exercice1](lab2e1#t%C3%A2che-1---cr%C3%A9ation-dutilisateurs); cependant, contrairement à Laura Atkins, vous aviez affecté une licence Office 365 E5 à Alan.
 1. Basculez vers **LON-CL2**.
 1. Sur LON-CL2, vous devriez encore être connecté à l'environnement Microsoft 365 avec le compte de Laura Atkins suite à la tâche précédente. Vous devez d'abord vous déconnecter du compte de Laura, cliquez donc sur son icône (le rond en haut à droite avec ses initiales **LA**) pour cliquer sur **Sign out**.
 	>**Important :** Suite à une déconnexion, il est très fortement conseillé de fermer tous les onglets de votre navigateur sauf celui qui s'appelle **Login**.

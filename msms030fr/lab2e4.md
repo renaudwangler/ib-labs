@@ -48,7 +48,7 @@ Dans un exercice précédent, vous avez créé des comptes utilisateurs en utili
 	>**Note :** Vous pouvez simplement taper la commande ```$user2``` pour afficher le résultat de l'opération précédente avant de passer à la suite.
 1. Utilisez la commande suivante pour obtenir la liste des comptes qui n'ont pas de licence associée à leur compte :
 	```Get-MgUser -Filter "assignedLicenses/`$count eq 0 and userType eq 'Member'" -ConsistencyLevel eventual -CountVariable unlicensedUserCount -All```
-1. Utilisez la commande suivante pour obtenir la licence **Office 365 E3** disponible dans le contexte du projet pilote :
+1. Utilisez la commande suivante pour obtenir la licence **Office 365 E5** disponible dans le contexte du projet pilote :
 	```$license = Get-MgSubscribedSku|where SkuPartNumber -like "Office_365_E5*"```
 	>**Note :** Vous pouvez simplement taper la commande ```$license``` pour afficher le résultat de l'opération précédente avant de passer à la suite.
 1. Utilisez la commande suivante pour affecter la licence au premier compte utilisateur :
