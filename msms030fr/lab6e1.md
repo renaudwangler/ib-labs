@@ -2,7 +2,7 @@
 layout: stage
 title: "Lab6-Ex1 - Paramètres de transport des messages"
 length: "00"
-date: "11/11/2023"
+date: "13/05/2024"
 ---
 # Scénario
 Vous avez pris l'identité de Dominique Skyetson, Administrateur de l'entreprise Adatum, et vous avez commencé à déployer Microsoft 365 dans un environnement virtuel pilote. Dans cet exercice, Dominique veut créer des connecteurs Exchange Online d'émission et de réception en utilisant le portail Exchange admin center. Exchange utilise ces connecteurs pour gérer les flux de messages entrant et sortant vers et depuis les serveurs Exchange Online.  
@@ -20,7 +20,7 @@ Dans cette tâche, vous allez créer deux connecteurs pour forcer l'utilisation 
 1. Ouvrez une session sur LON-CL1 en utilisant le compte ```adatum\administrator``` et le mot de passe ```Pa55w.rd```.
 1. Cliquez sur l'icône de **Microsoft Edge** dans la barre des tâches pour lancer votre navigateur Internet. Maximisez sa fenêtre.
 1. Dans votre navigateur internet, utilisez l'adresse ```https://admin.microsoft.com``` pour ouvrir le portail **Microsoft 365 admin center**.
-1. Connectez-vous au centre d'administration avec le compte de Dominique (```dom@WWLxxxxx.onmicrosoft.com``` et mot de passe ```ibForm@ion```)
+1. Connectez-vous au centre d'administration avec le compte de Dominique (```dom@m365xxxxx.onmicrosoft.com``` et mot de passe ```ibForm@ion```)
 1. Dans le menu de navigation du portail **Microsoft 365 Admin center**, sous la section **Admin Centers** cliquez sur **Exchange**. Cela va ouvrir le portail administratif de Exchange Online dans un nouvel onglet.
 1. Dans le portail **Exchange admin center**, dans le menu de navigation à gauche, ouvrez le groupe d'options **Mail flow** pour sélectionner **Connectors**.
 1. Sur la page **Connectors**, vous souhaitez ajouter un nouveau connecteur. Cliquez sur le bouton **+ Add a connector** sur la barre de menu au-dessus de la liste des connecteurs.
@@ -68,7 +68,7 @@ Dans cette tâche, vous allez créer deux connecteurs pour forcer l'utilisation 
 1. Dans le panneau **Set rule conditions** qui s'affiche, entrez les informations suivantes :  
 	- Dans le champ **Name**, saisissez ```Messages that must be moderated```
 	- Dans la section **Apply this rule if**, sélectionnez **The recipient** et **is this person**. Une fenêtre **Select members** apparaît. Sélectionnez **Megan Bowen** dans la liste des boites aux lettres et cliquez sur **Save**.
-	- Sous la section **Do the following**, sélectionnez **Forward the message for approval** et **to these people**. Une fenêtre **Select members** apparaît. Sélectionnez **Dominique Skyetson** (dom@WWLxxxxx.onmicrosoft.com) dans la liste des boites aux lettres et cliquez sur **Save**.
+	- Sous la section **Do the following**, sélectionnez **Forward the message for approval** et **to these people**. Une fenêtre **Select members** apparaît. Sélectionnez **Dominique Skyetson** (dom@m365xxxxx.onmicrosoft.com) dans la liste des boites aux lettres et cliquez sur **Save**.
 1. Cliquez sur **Next**.
 1. Sur la page **Set rule settings** choisissez **Enforce** et un niveau de sévérité de **Low** avant de cliquer sur **Next**.
 1. Sur la page **Review and finish**, cliquez sur **Finish**.
@@ -90,7 +90,7 @@ Dans cette tâche, vous allez tester les nouvelles règles de transport que vous
 1. Basculez sur l'onglet **Microsoft 365 admin center** et référez-vous aux procédures que vous avez utilisé [l'atelier 2, exercice 5](lab2e5#t%C3%A2che-3---v%C3%A9rification-de-la-d%C3%A9l%C3%A9gation-administrative) pour réinitialiser le mot de passe de **Megan Bowen** vers **Pa55w.rd**.
 1. Ouvrez le menu de votre navigateur Internet (en haut à droite) et lancez-en une nouvelle instance en choisissant **New Inprivate Window**.
 1. Dans votre nouvelle fenêtre de navigation privée, utilisez l'adresse suivante pour ouvrir la boite aux lettres de Megan Bowen : ```https://outlook.office.com```.
-1. Sur la page **Sign in**, connectez-vous avec le compte ```meganB@WWLxxxxx.onmicrosoft.com```.
+1. Sur la page **Sign in**, connectez-vous avec le compte ```meganB@m365xxxxx.onmicrosoft.com```.
 1. Sur la page **Enter password**, utilisez le mot de passe ```Pa55w.rd``` et cliquez sur **Sign in**.
 1. Sur la page **Update your password**, saisissez ```Pa55w.rd``` dans le champ **Current password** et ```ibForm@tion``` dans les champs **New password** et **Confirm password** avant de cliquer sur **Sign in**.
 1. Sur la page **Stay sign in?** cochez la case **Don't show this again** et cliquez sur **Yes**.
@@ -107,7 +107,7 @@ Dans cette tâche, vous allez tester les nouvelles règles de transport que vous
 1. Prenez quelques instants pour consulter les différentes requêtes proposées par défaut.
 1. Cliquez sur le bouton **+ Start a trace**.
 1. Dans le panneau **New message trace**, vous pouvez jeter un oeil aux options de recherche avant de cliquer sur **Search**.
-1. Dans la fenêtre **Message trace search results**, cliquez sur le message envoyé par **alan@WWLxxxxx.onmicrosoft.com** à **meganb@WWLxxxxx.onmicrosoft.com**.
+1. Dans la fenêtre **Message trace search results**, cliquez sur le message envoyé par **alan@m365xxxxx.onmicrosoft.com** à **meganb@m365xxxxx.onmicrosoft.com**.
 1. Dans la fenêtre **Message de test du transport Exchange**, consultez les informations détaillées sur le transport du message. Sélectionnez la flèche en regard de **Message events**.
 1. Dans la colonne **Event**, constatez la présence des évènements **Transport rule** qui ont appliqué le message d'avertissement et rerouté le message vers la boite de Dominique Skyetson.
 1. Cliquez sur le **X** de fermeture en haut à droite du panneau.

@@ -2,7 +2,7 @@
 layout: stage
 title: "Lab7-Ex1 - Configuration de Microsoft Teams"
 length: "00"
-date: "11/11/2023"
+date: "13/05/2024"
 ---
 # Scénario
 Dans cet exercice, vous allez apprendre à gérer et configurer les principales fonctionnalités de l'environnement *Teams* depuis *le Teams admin center*. Dans son rôle d'administrateur d'Adatum, Dominique Skyetson a décidé de customiser la stratégie de l'entreprise concernant les réunions. Les stratégies de réunion contrôlent les fonctionnalités disponibles pour les participants. Une stratégie à l'échelle de l'entreprise, nommée *Global* est créée par défaut et est affectée à tous les utilisateurs de l'entreprise lors de la création du tenant. Dominique a choisi de modifier cette stratégie par défaut.  
@@ -98,7 +98,7 @@ Créer une file d'attente téléphonique est un processus en deux étapes, dans 
 1. Sur le panneau **Add resource account** qui apparaît, entrez les information suivantes :
 	- **Display name** : **Calling Queue 1**
 	- **Username** : **cq1**
-	- **Domain name** : Dans le champ domaine à droite de l'adresse email, sélectionnez, dans le menu déroulant votre nom de domaine **WWLxxxxx.onmicrosoft.com**.
+	- **Domain name** : Dans le champ domaine à droite de l'adresse email, sélectionnez, dans le menu déroulant votre nom de domaine **m365xxxxx.onmicrosoft.com**.
 	- **Resource account type** : **Call queue**
 1. Cliquez sur **Save**.
 1. **Calling Queue 1** apparaît désormais dans la liste des comptes de ressource.

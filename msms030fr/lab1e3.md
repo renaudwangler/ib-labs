@@ -2,7 +2,7 @@
 layout: stage
 title: "Lab1-Ex3 - Visite des portails administratifs 365"
 length: "00"
-date: "11/11/2023"
+date: "13/05/2024"
 ---
 # Scénario
 Maintenant que le tenant du projet pilote 365 de Adatum est complètement créé, vous pouvez commencer à utiliser l'environnement Microsoft 365. Dans cet exercice, vous allez visiter divers portails administratifs les plus utiles pour le quotidien d'un administrateur 365 afin de commencer à vous familiariser avec leur contenu et leur navigation.
@@ -22,7 +22,7 @@ Bien que vous ayez déjà accédé au portail général d'administration *Micros
 1. Sur la barre des tâches, cliquez sur l'icône de **Microsoft Edge** pour lancer votre navigateur. Maximisez la fenêtre du navigateur lorsqu'elle s'ouvre.
 1. Dans votre navigateur, rendez-vous sur le portail d'administration **Microsoft 365 admin center** en utilisant l'url suivante :
 ```https://admin.microsoft.com/```
-1. Dans la fenêtre **Sign in**, saisissez le nom de connexion du compte *MOD Administrator* (sous la forme **admin@WWWLxxxxxxxxxx.onmicrosoft.com**) et cliquez sur **Next**
+1. Dans la fenêtre **Sign in**, saisissez le nom de connexion du compte *MOD Administrator* (sous la forme **admin@M365xxxxxxxxx.onmicrosoft.com**) et cliquez sur **Next**
 1. Dans la fenêtre **Enter password**, saisissez ou collez le **mot de passe du tenant** que vous avez précédemment noté et cliquez sur **Sign in**
 1. Sur la fenêtre **Stay signed in?**, cochez la case **Don’t show this again** et cliquez sur **Yes.**
 1. Si un popup **Welcome to Microsoft 365** apparaît, cliquez deux fois sur la flèche droite pour pouvoir le fermer.

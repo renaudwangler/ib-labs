@@ -2,7 +2,7 @@
 layout: stage
 title: "Lab9-Ex2 - OneDrive for Business"
 length: "00"
-date: "11/11/2023"
+date: "13/05/2024"
 ---
 # Scénario
 Après avoir implémenté *Viva Engage* dans le projet pilote Adatum, Dominique Skyetson est prêt à faire de même avec *OneDrive for Business*. Dominique sait que, avec OneDrive, les utilisateurs d'Adatum pourront accéder aisément et de manière sécurisée à leurs fichiers de travail depuis tous leur périphériques. Cela leur permettra aussi d'être plus efficace dans le travail avec d'autres collaborateurs, qu'ils soient internes ou externes à l'entreprise.  
@@ -24,7 +24,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 	1. Cliquez sur le bouton **Account** en bas à gauche de la fenêtre Word. Cliquez ensuite sur le lien **Sign out**.
 	1. Validez l'opération en cliquant sur le bouton **Sign out**.
 	1. Cliquez ensuite sur le bouton **Sign In**.
-	1. Dans la fenêtre **Sign in**, saisissez **alan@WWLxxxxx.onmicrosoft.com** et cliquez sur **Next**.
+	1. Dans la fenêtre **Sign in**, saisissez **alan@M365xxxxx.onmicrosoft.com** et cliquez sur **Next**.
 	1. Vérifiez que **Alan Yoo** apparaît désormais en haut à droite de Word.
 1. Après avoir vérifié que Word est licencié pour Alan Yoo, vous pouvez fermer Word.
 1. Basculez sur le navigateur Edge qui devrai être encore ouvert et connecté avec le compte de **Alan Yoo** sur sa boite aux lettres *Outlook on the web*.
@@ -38,7 +38,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 1. Fermez l'onglet Word Online de votre navigateur.
 1. Dans la fenêtre **OneDrive**, votre document **OneDrive test.docx** devrait apparaître (si ce n'est pas le cas, rafraichissez cette fenêtre). Cliquez sur l'icône d'engrenage **Settings** en haut à droite.
 1. Sur le panneau **Settings**, cliquez sur **Sync the OneDrive**.
-1. Sur la boite de dialogue **This site is trying to open Microsoft OneDrive**, cochez la case **Always allow WWLxxxxx-my.sharepoint.com to open links of this type in the associated app** avant de cliquer sur **Open**.
+1. Sur la boite de dialogue **This site is trying to open Microsoft OneDrive**, cochez la case **Always allow M365xxxxx-my.sharepoint.com to open links of this type in the associated app** avant de cliquer sur **Open**.
 1. Dans la boite de dialogue **Set up OneDrive**, le compte d'Alan Yoo est affiché dans le champ **Email address**. Cliquez sur **Sign in**.
 1. Dans la fenêtre **Enter password**, saisissez ```ibForm@tion``` et cliquez sur **Sign in**.
 1. Sur la page **Stay signed in to all your apps**, cliquez sur **No, sign in to this app only**.
@@ -82,7 +82,7 @@ Maintenant que la synchronisation de fichiers est activée avec *OneDrive for Bu
 	Passez votre souris à gauche du nom de fichier **Projetc Targets.docx** et sélectionnez le cercle qui apparaît de sorte que ce dernier affiche une coche.
 1. Une fois le fichier sélectionné, cliquez sur le bouton **Share** dans le menu en haut de page.
 1. Dans la boite de dialogue **Share "Project Targets.docx**, entrez les informations suivantes :
-	- Entrez l'adresse de Dominique (*dom@WWLxxxxx.onmicrosoft.com*) dans le champ **Add a name, group or email**. Sélectionnez le compte de **Dominique Skyetson** qui s'affiche.
+	- Entrez l'adresse de Dominique (*dom@M365xxxxx.onmicrosoft.com*) dans le champ **Add a name, group or email**. Sélectionnez le compte de **Dominique Skyetson** qui s'affiche.
 	- Dans le même champ, sur **Add more**, entrez **Nona** et sélectionnez le compte de **Nona Snider** qui s'affiche.
 	- Dans le champ **Add a message** saisissez ```Voici les dernières informations sur le projet A.```.
 1. Cliquez sur le bouton **Send**.

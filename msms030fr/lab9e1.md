@@ -2,7 +2,7 @@
 layout: stage
 title: "Lab9-Ex1 - Viva Engage"
 length: "00"
-date: "11/11/2023"
+date: "13/05/2024"
 ---
 # Scénario
 Comme *Engage* amène la richesse du réseau social d'entreprise Yammer aux environnements *teams*, *SharePoint Online* et aux autres applications Microsoft 365, Dominique Skyetson s'intéresse à la mise en oeuvre de *Viva Engage* dans le projet pilote d'Adatum. Ceci permettra aux utilisateurs d'Adatum de partager, créer et éditer des fichiers directement dans les conversations *Engage* avec *Office for the web*.  
@@ -35,7 +35,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 1. Dans la section **Enabled Features**, décochez la case **3rd Party Applications**.
 1. Cliquez sur **Save** en bas de page.
 1. Dans le menu de navigation du portail d'administration **Engage**, sous la section **Content and Security**, cliquez sur **Monitor Keywords**.
-1. Sur la page **Monitor Keywords**, entrez l'adresse de Dominique (*dom@WWLxxxxx.onmicrosoft.com*) dans le champ **Email Address**.
+1. Sur la page **Monitor Keywords**, entrez l'adresse de Dominique (*dom@M365xxxxx.onmicrosoft.com*) dans le champ **Email Address**.
 1. Dans la boite de texte sous **Email Address**, entrez la liste de mots suivants, un sur chaque ligne : ```gambling```, ```erotic```, ```warez```.
 1. Cliquez sur **Save** en bas de page.
 1. Dans votre navigateur Internet, fermez l'onglet **Viva Engage : Admin\[...]** et l'onglet **Viva Engage - Feed** avant de passer à la tâche suivante.

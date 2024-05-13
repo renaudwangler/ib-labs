@@ -2,7 +2,7 @@
 layout: stage
 title: "Lab1-Ex1 - Création de l'environnement"
 length: "00"
-date: "13/11/2023"
+date: "13/05/2024"
 ---
 # Scénario
 Dans ce premier exercice, vous allez commencer par visiter le tenant 365 dans le projet pilote.  
@@ -25,7 +25,7 @@ dans votre environnement d'atelier, goDeploy a déjà créé un tenant Microsoft
 ## Tâche 1 - Identifiants Microsoft 365
 Une fois votre atelier démarré, vous pourrez accéder au compte de test Microsoft 365 fourni par goDeploy. Le compte *MOD Administrator* a été créé et s'est vu affecté le rôle *Global Administrator* sur le tenant de test.
 Il vous est conseillé de prendre note des informations suivantes (fournies par goDeploy) pour utilisation ultérieure :  
-- **Préfixe du tenant**. Ce préfixe sera utilisé pour identifier et se connecter avec les comptes Entra Id dans votre tenant. Le format de ce préfixe est de la forme **WWLxxxxx.onmicrosoft.com**. Notez donc la valeur **WWLxxxxx** pour utilisation ultérieure dans tout cet atelier.
+- **Préfixe du tenant**. Ce préfixe sera utilisé pour identifier et se connecter avec les comptes Entra Id dans votre tenant. Le format de ce préfixe est de la forme **M365xxxxx.onmicrosoft.com**. Notez donc la valeur **M365xxxxx** pour utilisation ultérieure dans tout cet atelier.
 - **Mot de passe du tenant**. Fourni par goDeploy, c'est le mot de passe du compte *MOD Administrator* (et des utilisateurs précréés).
 - **Nom DNS d'entreprise**. goDeploy a également créé un nom de domaine DNS pour l'entreprise Adatum. Il peut être trouvé sous le nom **Lab Domain** dans l'onglet **DNS** du volet de gauche de votre environnement goDeploy (c'est un nom qui ressemble à *labXXXXX.godeploylabs.com*).  
 
@@ -38,7 +38,7 @@ A travers les ateliers de ce stage, vous allez prendre l'identité de Dominique 
 1. Sur la barre des tâches, cliquez sur l'icône de **Microsoft Edge**. Passez les éventuelles pages de bienvenue (vous pouvez choisir **Continue without signing in**).
 1. Dans le navigateur, accédez au portail d'administration de Microsoft 365 en utilisant l'url suivante :
 ```https://admin.microsoft.com```
-1. Dans la fenêtre **Sign in**, saisissez le nom de connexion du compte *MOD Administrator* (sous la forme **admin@WWWLxxxxxxxxxx.onmicrosoft.com**) et cliquez sur **Next**
+1. Dans la fenêtre **Sign in**, saisissez le nom de connexion du compte *MOD Administrator* (sous la forme **admin@M365xxxxxxxxxx.onmicrosoft.com**) et cliquez sur **Next**
 1. Dans la fenêtre **Enter password**, saisissez ou collez le **mot de passe du tenant** que vous avez précédemment noté et cliquez sur **Sign in**
     >**Nota :** Depuis Mars 2024, Microsoft, victime de trop d'attaques cyber, impose l'utilisation de la MFA pour tous les contextes professionnels, y-compris pour les tenant de test Microsoft 365 que l'éditeur fournit pour les formations officielles.
     Il faut désormais mettre en place la MFA pour tous les utilisateurs à tester dans ce contexte. Reportez-vous à la procédure [Mise en place de la M.F.A pour les ateliers Microsoft](../mfaSetup) chaque fois que vous souhaiterez vous connecter avec un nouveau compte utilisateur.

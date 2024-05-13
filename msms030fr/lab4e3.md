@@ -2,7 +2,7 @@
 layout: stage
 title: "Lab4-Ex3 - Activation de la jonction de domaine hybride"
 length: "00"
-date: "06/12/2023"
+date: "13/05/2024"
 ---
 # Scénario
 Dans cet exercice, vous allez configurer Entra Connect pour configurer la jonction de domaine Hybride. La jonction de domaine hybride permet aux ordinateurs de l'entreprise qui ont un compte dans ADDS d'être automatiquement inscrits et reconnus dans Entra Id.
@@ -18,7 +18,7 @@ Dans cette tâche, vous allez utiliser l'assistant de configuration de Entra Con
 1. Dans la page d'accueil **Welcome to Azure AD Connect**, cliquez sur le bouton **Configure**.
 1. Sur la page **Additional tasks**, sélectionnez la ligne **Configure device options** puis cliquez sur **Next**.
 1. Sur la page **Overview**, cliquez sur **Next**.
-1. Sur la page **Connect to Azure AD**, saisissez les informations de connexion de Dominique Skyetson (```dom@WWLxxxxx.onmicrosoft.com``` dans le champ **USERNAME** et ```ibForm@tion``` dans le champ **PASSWORD**) puis cliquez sur **Next**.
+1. Sur la page **Connect to Azure AD**, saisissez les informations de connexion de Dominique Skyetson (```dom@m365xxxxx.onmicrosoft.com``` dans le champ **USERNAME** et ```ibForm@tion``` dans le champ **PASSWORD**) puis cliquez sur **Next**.
 1. Si une fenêtre **Sign in to your account** surgit, utilisez la pour vous connecter avec le compte de Dominique.
 1. Sur la page **Device options**, sélectionnez **Configure Hybrid Azure AD join** et cliquez sur **Next**.
 1. Sur la page **Device operating systems**, cochez la case **Windows 10 or later domain-joined devices** et cliquez sur **Next**.
