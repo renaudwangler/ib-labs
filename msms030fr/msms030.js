@@ -10,9 +10,9 @@ domainInput.style.width = '50%'
 domainInput.style.height = '50%'
 domainInput.style.background = 'white'
 domainInput.style.border = 'solid 2px blue'
-domainInput.style.position = 'sticky'
-domainInput.style.top = '25%'
+domainInput.style.position = 'absolute'
+domainInput.style.bottom = '0'
 domainInput.style.left = '25%'
-domainInput.innerHTML = '<div style="width:100%;height:20px;background:blue;">Noms des domaines</div>Ici, vous pouvez saisir les noms de domaine de votre instance d\'atelier afin de vous en faciliter la réalisation.<br/>Domaine original Microsoft 365 : '+onmicrosoftDomain+'.onmicrosoft.com'
+domainInput.innerHTML = '<div style="width:100%;height:20px;background:blue;color:white;fontWeight:bold">Noms des domaines</div>Ici, vous pouvez saisir les noms de domaine de votre instance d\'atelier afin de vous en faciliter la réalisation.<br/>Domaine original Microsoft 365 : '+onmicrosoftDomain+'.onmicrosoft.com'
 
-document.body.appendChild(domainInput)
+document.addEventListener('DOMContentLoaded',function(){document.body.appendChild(domainInput)})
