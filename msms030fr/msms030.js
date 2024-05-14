@@ -5,8 +5,8 @@ if (localStorage.getItem('msms030-godeployDomain')) { godeployDomain = localStor
 else { godeployDomain = 'labxxxxxx' }
 
 function updateDomains() {
-    document.body.innerHTML = document.body.innerHTML.replace(/[onmicrosoftDomain]/g,onmicrosoftDomain)
-    document.body.innerHTML = document.body.innerHTML.replace(/[godeployDomain]/g,godeployDomain) }
+    document.body.innerHTML = document.body.innerHTML.replace(/\[onmicrosoftDomain\]/g,onmicrosoftDomain)
+    document.body.innerHTML = document.body.innerHTML.replace(/\[godeployDomain\]/g,godeployDomain) }
 
 //CRéation du div de saisie des domaines
 domainInput = document.createElement('div')
