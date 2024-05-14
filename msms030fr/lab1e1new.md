@@ -2,7 +2,7 @@
 layout: stage
 title: "Lab1-Ex1 - Création de l'environnement"
 length: "00"
-date: "13/05/2024"
+date: "14/05/2024"
 script: "msms030.js"
 ---
 # Scénario
@@ -24,11 +24,14 @@ dans votre environnement d'atelier, goDeploy a déjà créé un tenant Microsoft
 - Un compte administrateur du tenant Microsoft 365 (dont le nom affiché est *MOD Administrator*).  
 
 ## Tâche 1 - Identifiants Microsoft 365
-Une fois votre atelier démarré, vous pourrez accéder au compte de test Microsoft 365 fourni par goDeploy. Le compte *MOD Administrator* a été créé et s'est vu affecté le rôle *Global Administrator* sur le tenant de test.
-Il vous est conseillé de prendre note des informations suivantes (fournies par goDeploy) pour utilisation ultérieure :  
-- **Préfixe du tenant**. Ce préfixe sera utilisé pour identifier et se connecter avec les comptes Entra Id dans votre tenant. Le format de ce préfixe est de la forme **xxxxxxxx.onmicrosoft.com**. Notez donc la valeur **xxxxxxxx** pour utilisation ultérieure dans tout cet atelier.
-- **Mot de passe du tenant**. Fourni par goDeploy, c'est le mot de passe du compte *MOD Administrator* (et des utilisateurs précréés).
+Une fois votre atelier démarré, vous pourrez accéder au compte de test Microsoft 365 fourni par goDeploy. Le compte *MOD Administrator* a été créé et s'est vu affecté le rôle *Global Administrator* sur le tenant de test.  
+Si votre navigateur le supporte, vous pouvez <a href="#" onclick="domainInput.style.display='block';">cliquer sur ce lien</a> pour personnalisé les noms de domaines dans ces instructions et vous en faciliter l'utilisation tout au long de votre stage.  
+A défaut, il vous faudra prendre note des informations suivantes fournies dans l'environnement d'atelier :  
+- **Préfixe du tenant**. Ce préfixe sera utilisé pour identifier et se connecter avec les comptes Entra Id dans votre tenant. Le format de ce préfixe est de la forme **xxxxxxxx.onmicrosoft.com**. Notez donc la valeur **xxxxxxxx** pour utilisation ultérieure dans tous les ateliers, en remplacement de la mention [‎onmicrosoftDomain].
 - **Nom DNS d'entreprise**. goDeploy a également créé un nom de domaine DNS pour l'entreprise Adatum. Il peut être trouvé sous le nom **Lab Domain** dans l'onglet **DNS** du volet de gauche de votre environnement goDeploy (c'est un nom qui ressemble à *labXXXXX.godeploylabs.com*).  
+
+Dans tous les cas, il vous faudra prendre note du **mot de passe du tenant**. Fourni par goDeploy, c'est le mot de passe du compte *MOD Administrator* (et des utilisateurs précréés).
+
 
 ## Tâche 2 - Profil d'entreprise de Adatum
 A travers les ateliers de ce stage, vous allez prendre l'identité de Dominique Skyetson, administrateur Microsoft 365 de Adatum. En tant que Dominique, il vous a été demandé de configurer le profil de l'entreprise sur le tenant de test. Dans cette tâche, vous allez procéder à cette configuration. Puisque Dominique ne s'est pas encore créé de compte personnel dans l'environnement (ce sera fait à l'atelier suivant), vous allez d'abord vous connecter avec le compte *MOD Administrator* par défaut, dont vous avez précédemment noté le mot de passe.  
