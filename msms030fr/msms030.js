@@ -5,14 +5,9 @@ if (localStorage.getItem('msms030-godeployDomain')) { godeployDomain = localStor
 else { godeployDomain = 'labxxxxxx' }
 
 //CRéation du div de saisie des domaines
-var domainInput = document.createElement('div')
-domainInput.style.width = '50%'
-domainInput.style.height = '50%'
-domainInput.style.background = 'white'
-domainInput.style.border = 'solid 2px blue'
-domainInput.style.position = 'fixed'
-domainInput.style.top = '25%'
-domainInput.style.left = '25%'
+domainInput = document.createElement('div')
+domainInput.style.cssText = 'width:50%; height:50%; background:white; border:solid 2px blue; position:fixed; top:25%; left:25%'
+
 
 domainInputTitle = document.createElement('div')
 domainInputTitle.style.width = '100%'
@@ -25,8 +20,8 @@ domainInput.appendChild(domainInputTitle)
 
 domainInputContent = document.createElement('div')
 domainInputContent.style.padding = '5px'
-domainInputContent.innerHTML = 'Ici, vous pouvez saisir les noms de domaine de votre instance d\'atelier afin de vous en faciliter la réalisation.<br/><ul><li>Domaine original Microsoft 365 : '+onmicrosoftDomain+'.onmicrosoft.com</li><li>Domaine de l\'atelier goDeploy : '+godeployDomain+'.godeploylabs.com</li></ul>'
+domainInputContent.innerHTML = 'Ici, vous pouvez saisir les noms de domaine de votre instance d\'atelier afin de vous en faciliter la réalisation.<br/><ul><li>Domaine original Microsoft 365 : ' + onmicrosoftDomain + '.onmicrosoft.com</li><li>Domaine de l\'atelier goDeploy : ' + godeployDomain + '.godeploylabs.com</li></ul>'
 
 domainInput.appendChild(domainInputContent)
 
-document.addEventListener('DOMContentLoaded',function(){document.body.appendChild(domainInput)})
+document.addEventListener('DOMContentLoaded', function () { document.body.appendChild(domainInput) })
