@@ -13,6 +13,9 @@
         <link rel="stylesheet" href="/ib-pages/style.css?v={{site.github.build_revision}}">
         <link rel="shortcut icon" href="/ib-pages/favicon.ico">
         <script src="/ib-pages/ib-pages.js"></script>
+        {% if page.script %}
+            <script src="{{page.script}}"></script>
+        {% endif %}
     </head>
     {{ content }}
 </html>
