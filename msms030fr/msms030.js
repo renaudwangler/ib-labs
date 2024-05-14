@@ -1,3 +1,4 @@
+var domainInput
 function updateDomains() {
     //Récupération des donms de domaine, si stockés dans la base du navigateur
     if (localStorage.getItem('msms030-onmicrosoftDomain')) { onmicrosoftDomain = localStorage.getItem('msms030-onmicrosoftDomain') }
