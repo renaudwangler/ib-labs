@@ -16,7 +16,7 @@ function updateDomains() {
 function newDomains() {
     localStorage.setItem('msms030-onmicrosoftDomain',document.getElementById('onmicrosoftDomainNew').value)
     localStorage.setItem('msms030-godeployDomain',document.getElementById('godeployDomainNew').value)
-    updateDomains()
-    domainInput.style.display = 'none'}
+    domainInput.style.display = 'none'
+    updateDomains()}
 
 document.addEventListener('DOMContentLoaded', function () { updateDomains(); document.body.appendChild(domainInput) })
