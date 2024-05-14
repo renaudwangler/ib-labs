@@ -20,6 +20,8 @@ function newDomains() {
     localStorage.setItem('msms030-godeployDomain',document.getElementById('godeployDomainNew').value)
     document.getElementById('domainInput').style.display = 'none'
     document.body.innerHTML = document.body.innerHTML.replaceAll(onmicrosoftDomain,document.getElementById('onmicrosoftDomainNew').value)
-    document.body.innerHTML = document.body.innerHTML.replaceAll(godeployDomain,document.getElementById('godeployDomainNew').value)}
+    document.body.innerHTML = document.body.innerHTML.replaceAll(godeployDomain,document.getElementById('godeployDomainNew').value)
+    onmicrosoftDomain = document.getElementById('onmicrosoftDomainNew').value
+    godeployDomain = document.getElementById('godeployDomainNew').value}
 
 document.addEventListener('DOMContentLoaded', function () { updateDomains(); document.body.appendChild(domainInput) })
