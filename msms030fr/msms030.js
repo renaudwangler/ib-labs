@@ -14,14 +14,8 @@ domainInput.style.cssText = 'width:50%; background:white; border:solid 2px blue;
 
 domainInputTitle = document.createElement('div')
 domainInputTitle.style.cssText = 'width:100%; height:25px; background: blue;color: white; font-weight:bold;'
-domainInputTitle.innerHTML = '&nbsp;Noms des domaines'
+domainInputTitle.innerHTML = '&nbsp;Noms des domaines <div style="width:21px; height:21px; line-height:21px; position:absolute; top:2px; right:2px; background:red; display:block; text-align:center; cursor: pointer;" onclick = "domainInput.style.display=\'none\'">X</div>'
 domainInput.appendChild(domainInputTitle)
-
-domainInputClose = document.createElement('div')
-domainInputClose.style.cssText = 'width:21px; height:21px; line-height:21px; position:absolute; top:2px; right:2px; background:red; display:block; text-align:center; cursor: pointer;'
-domainInputClose.innerHTML = 'X'
-domainInputClose.addEventListener('click',function() {domainInput.style.display='none'})
-domainInputTitle.appendChild(domainInputClose)
 
 domainInputContent = document.createElement('div')
 domainInputContent.style.cssText = 'padding: 5px'
