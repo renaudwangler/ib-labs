@@ -4,6 +4,10 @@ else { onmicrosoftDomain = 'M365xxxxxx' }
 if (localStorage.getItem('msms030-godeployDomain')) { godeployDomain = localStorage.getItem('msms030-godeployDomain') }
 else { godeployDomain = 'labxxxxxx' }
 
+function updateDomains() {
+    document.body.innerHTML = document.body.innerHTML.replace('[onmicrosoftDomain]',onmicrosoftDomain)
+    document.body.innerHTML = document.body.innerHTML.replace('[godeployDomain]',godeployDomain) }
+
 //CRéation du div de saisie des domaines
 domainInput = document.createElement('div')
 domainInput.style.cssText = 'width:50%; background:white; border:solid 2px blue; position:fixed; top:25%; right:0;'
@@ -21,7 +25,7 @@ domainInputTitle.appendChild(domainInputClose)
 
 domainInputContent = document.createElement('div')
 domainInputContent.style.cssText = 'padding: 5px'
-domainInputContent.innerHTML = 'Ici, vous pouvez saisir les noms de domaine de votre instance d\'atelier afin de vous en faciliter la réalisation.<br/><ul><li>Domaine original Microsoft 365 :<br/><input type="text" id="onmicrosoftDomain" value="' + onmicrosoftDomain + '">.onmicrosoft.com <a href="#"><img src="enterKey.png"></a></li><li>Domaine de l\'atelier goDeploy :<br/><input type="text" id="godeployDomain" value="' + godeployDomain + '">.godeploylabs.com <a href="#"><img src="enterKey.png"></a></li></ul>'
+domainInputContent.innerHTML = 'Ici, vous pouvez saisir les noms de domaine de votre instance d\'atelier afin de vous en faciliter la réalisation.<br/><ul><li>Domaine original Microsoft 365 :<br/><input type="text" id="onmicrosoftDomain" value="' + onmicrosoftDomain + '">.onmicrosoft.com <a href="#"><img src="enterKey.png"></a></li><br/><li>Domaine de l\'atelier goDeploy :<br/><input type="text" id="godeployDomain" value="' + godeployDomain + '">.godeploylabs.com <a href="#"><img src="enterKey.png"></a></li></ul>'
 
 domainInput.appendChild(domainInputContent)
 
