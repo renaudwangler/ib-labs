@@ -5,7 +5,7 @@ else { onmicrosoftDomain = 'M365xxxxxx' }
 if (localStorage.getItem('msms030-godeployDomain')) { godeployDomain = localStorage.getItem('msms030-godeployDomain') }
 else { godeployDomain = 'labxxxxxx' }
 //CRéation du div de saisie des domaines
-if (typeof domainInput === 'test') {
+if (typeof domainInput === 'undefined') {
     domainInput = document.createElement('div')
     domainInput.id = "domainInput"
     domainInput.style.cssText = 'width:50%; background:white; border:solid 2px blue; position:fixed; top:25%; right:0; display:none;'
