@@ -5,8 +5,8 @@ if (localStorage.getItem('msms030-godeployDomain')) { godeployDomain = localStor
 else { godeployDomain = 'labxxxxxx' }
 
 function updateDomains() {
-    document.body.innerHTML = document.body.innerHTML.replace('[onmicrosoftDomain]',onmicrosoftDomain)
-    document.body.innerHTML = document.body.innerHTML.replace('[godeployDomain]',godeployDomain) }
+    document.body.innerHTML = document.body.innerHTML.replace('/[onmicrosoftDomain]/g',onmicrosoftDomain)
+    document.body.innerHTML = document.body.innerHTML.replace('/[godeployDomain]/g',godeployDomain) }
 
 //CRéation du div de saisie des domaines
 domainInput = document.createElement('div')
@@ -30,4 +30,4 @@ domainInputContent.innerHTML = 'Ici, vous pouvez saisir les noms de domaine de v
 domainInput.appendChild(domainInputContent)
 
 
-document.addEventListener('DOMContentLoaded', function () { document.body.appendChild(domainInput) })
+document.addEventListener('DOMContentLoaded', function () { updateDomains(); document.body.appendChild(domainInput) })

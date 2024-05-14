@@ -39,7 +39,7 @@ A travers les ateliers de ce stage, vous allez prendre l'identité de Dominique 
 1. Sur la barre des tâches, cliquez sur l'icône de **Microsoft Edge**. Passez les éventuelles pages de bienvenue (vous pouvez choisir **Continue without signing in**).
 1. Dans le navigateur, accédez au portail d'administration de Microsoft 365 en utilisant l'url suivante :
 ```https://admin.microsoft.com```
-1. Dans la fenêtre **Sign in**, saisissez le nom de connexion du compte *MOD Administrator* (````admin@[onmicrosoftDomain].onmicrosoft.com```) et cliquez sur **Next**
+1. Dans la fenêtre **Sign in**, saisissez le nom de connexion du compte *MOD Administrator* (```admin@[onmicrosoftDomain].onmicrosoft.com```) et cliquez sur **Next**
 1. Dans la fenêtre **Enter password**, saisissez ou collez le **mot de passe du tenant** que vous avez précédemment noté et cliquez sur **Sign in**
     >**Nota :** Depuis Mars 2024, Microsoft, victime de trop d'attaques cyber, impose l'utilisation de la MFA pour tous les contextes professionnels, y-compris pour les tenant de test Microsoft 365 que l'éditeur fournit pour les formations officielles.
     Il faut désormais mettre en place la MFA pour tous les utilisateurs à tester dans ce contexte. Reportez-vous à la procédure [Mise en place de la M.F.A pour les ateliers Microsoft](../mfaSetup) chaque fois que vous souhaiterez vous connecter avec un nouveau compte utilisateur.
