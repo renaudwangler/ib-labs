@@ -19,7 +19,7 @@ domainInput.appendChild(domainInputTitle)
 
 domainInputContent = document.createElement('div')
 domainInputContent.style.cssText = 'padding: 5px'
-domainInputContent.innerHTML = 'Ici, vous pouvez saisir les noms de domaine de votre instance d\'atelier afin de vous en faciliter la réalisation.<br/><ul><li>Domaine original Microsoft 365 :<br/><input type="text" id="onmicrosoftDomainNew" value="' + onmicrosoftDomain + '">.onmicrosoft.com <a href="#" onclick="console.log(document.getElementById(\'onmicrosoftDomainNew\'))"><img src="enterKey.png"></a></li><br/><li>Domaine de l\'atelier goDeploy :<br/><input type="text" id="godeployDomainNew" value="' + godeployDomain + '">.godeploylabs.com <a href="#" onclick="console.log(document.getElementById(\'godeployDomainNew\'))"><img src="enterKey.png"></a></li></ul>'
+domainInputContent.innerHTML = 'Ici, vous pouvez saisir les noms de domaine de votre instance d\'atelier afin de vous en faciliter la réalisation.<br/><ul><li>Domaine original Microsoft 365 :<br/><input type="text" id="onmicrosoftDomainNew" value="' + onmicrosoftDomain + '">.onmicrosoft.com <a href="#" onclick="console.log(document.getElementById(\'onmicrosoftDomainNew\').value)"><img src="enterKey.png"></a></li><br/><li>Domaine de l\'atelier goDeploy :<br/><input type="text" id="godeployDomainNew" value="' + godeployDomain + '">.godeploylabs.com <a href="#" onclick="console.log(document.getElementById(\'godeployDomainNew\').value)"><img src="enterKey.png"></a></li></ul>'
 
 //localStorage.setItem('msms030-onmicrosoftDomain')
 
