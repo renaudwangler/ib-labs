@@ -6,9 +6,13 @@ else { godeployDomain = 'labxxxxxx' }
 
 //CRéation du div de saisie des domaines
 var domainInput = document.createElement('div')
-domainInput.width = '50%'
-domainInput.height = '50%'
-domainInput.background = 'white';
-domainInput.border = 'solid 2px blue'
+domainInput.style.width = '50%'
+domainInput.style.height = '50%'
+domainInput.style.background = 'white'
+domainInput.style.border = 'solid 2px blue'
+domainInput.style.position = 'sticky'
+domainInput.style.top = '25%'
+domainInput.style.left = '25%'
+domainInput.innerHTML = '<div style="width:100%;height:20px;background:blue;"></div>'
 
 document.body.appendChild(domainInput)
