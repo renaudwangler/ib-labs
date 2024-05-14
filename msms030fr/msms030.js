@@ -14,8 +14,9 @@ domainInputTitle.innerHTML = '&nbsp;Noms des domaines'
 domainInput.appendChild(domainInputTitle)
 
 domainInputClose = document.createElement('a')
-domainInputClose.style.cssText = 'width:21px; height:21px; position:absolute; top:2px; right:2px; background:red; display:block'
+domainInputClose.style.cssText = 'width:21px; height:21px; position:absolute; top:2px; right:2px; background:red; display:inline-block; vertical-align:middle'
 domainInputClose.appendChild(document.createTextNode('x'))
+domainInputClose.onClick = function() {domainInput.style.display='none'}
 domainInputTitle.appendChild(domainInputClose)
 
 domainInputContent = document.createElement('div')
