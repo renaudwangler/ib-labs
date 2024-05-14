@@ -25,10 +25,10 @@ dans votre environnement d'atelier, goDeploy a déjà créé un tenant Microsoft
 
 ## Tâche 1 - Identifiants Microsoft 365
 Une fois votre atelier démarré, vous pourrez accéder au compte de test Microsoft 365 fourni par goDeploy. Le compte *MOD Administrator* a été créé et s'est vu affecté le rôle *Global Administrator* sur le tenant de test.  
-Si votre navigateur le supporte, vous pouvez <a href="#" onclick="domainInput.style.display='block';">cliquer sur ce lien</a> pour personnalisé les noms de domaines dans ces instructions et vous en faciliter l'utilisation tout au long de votre stage.  
+Si votre navigateur le supporte, vous pouvez <a href="#" onclick="domainInput.style.display='block';return false">cliquer sur ce lien</a> pour personnalisé les noms de domaines dans ces instructions et vous en faciliter l'utilisation tout au long de votre stage.  
 A défaut, il vous faudra prendre note des informations suivantes fournies dans l'environnement d'atelier :  
 - **Préfixe du tenant**. Ce préfixe sera utilisé pour identifier et se connecter avec les comptes Entra Id dans votre tenant. Le format de ce préfixe est de la forme **xxxxxxxx.onmicrosoft.com**. Notez donc la valeur **xxxxxxxx** pour utilisation ultérieure dans tous les ateliers, en remplacement de la mention [‎onmicrosoftDomain].
-- **Nom DNS d'entreprise**. goDeploy a également créé un nom de domaine DNS pour l'entreprise Adatum. Il peut être trouvé sous le nom **Lab Domain** dans l'onglet **DNS** du volet de gauche de votre environnement goDeploy (c'est un nom qui ressemble à *labXXXXX.godeploylabs.com*).  
+- **Nom DNS d'entreprise**. goDeploy a également créé un nom de domaine DNS pour l'entreprise Adatum. Il peut être trouvé sous le nom **Lab Domain** dans l'onglet **DNS** du volet de gauche de votre environnement goDeploy (c'est un nom qui ressemble à *labXXXXX.godeploylabs.com*) et sera à utiliser en remplacement de la mention [‎godeployDomain]..  
 
 Dans tous les cas, il vous faudra prendre note du **mot de passe du tenant**. Fourni par goDeploy, c'est le mot de passe du compte *MOD Administrator* (et des utilisateurs précréés).
 
