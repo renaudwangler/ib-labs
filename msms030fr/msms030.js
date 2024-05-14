@@ -16,8 +16,6 @@ function updateDomains() {
     document.body.innerHTML = document.body.innerHTML.replaceAll('[godeployDomain]',godeployDomain) }
 
 function newDomains() {
-    onmicrosoftDomain = 
-    godeployDomain = 
     localStorage.setItem('msms030-onmicrosoftDomain',document.getElementById('onmicrosoftDomainNew').value)
     localStorage.setItem('msms030-godeployDomain',document.getElementById('godeployDomainNew').value)
     document.getElementById('domainInput').style.display = 'none'
