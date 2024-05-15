@@ -108,8 +108,9 @@ Dans cette tâche, vous allez vérifier l'impact des changements que vous avez f
 1. Une fois qu'une invite apparait vous indiquant que vous êtes correctement déconnecté, fermez votre navigateur Internet pour éviter qu'une session soit restée ouverte sur un autre onglet.
 1. Dans la barre des tâches, cliquez sur l'icône de **Microsoft Edge** pour relancer une session de navigation et connectez-vous sur le portail Microsoft 365 à l'adresse suivante :  
 ```https://www.microsoft365.com```
+1. Cliquez sur le bouton **SIgn in**.
 1. Dans la fenêtre **Pick an account**, sélectionnez **+ Use another account**.
-1. Dans la fenêtre **Sign in**, entrez **Libby@[onmicrosoftDomain].onmicrosoft.com** et cliquez sur **Next**.
+1. Dans la fenêtre **Sign in**, entrez ```Libby@[onmicrosoftDomain].onmicrosoft.com``` et cliquez sur **Next**.
 1. Dans la fenêtre **Enter password**, saisissez le mot de passe temporaire de Libby dont vous avez pris note à l'étape précédente et cliquez sur le bouton **Sign in**.
 1. Dans la fenêtre **Update your password**, entrez de nouveau le mot de passe temporaire de Libby dans le champ **Current password**, et utilisez le mot de passe ```ibForm@tion``` dans les champs **New password** et **Confirm password**. Cliquez sur **Sign in**.
 1. Si une fenêtre **Welcome to Microsoft 365** apparait, cliquez deux fois sur la flèche de droite pour accéder à la validation vous permettant de la fermer.
@@ -118,12 +119,12 @@ Dans cette tâche, vous allez vérifier l'impact des changements que vous avez f
 1. Une fois déconnecté, ressaisissez l'adresse suivante dans la barre d'adresse de votre navigateur si nécessaire :  
 ```https://www.microsoft365.com```
 1. Dans la page **login**, cliquez sur le choix **Switch to a different account** en dessous du bouton **Sign in**
-1. Saisissez **Alan@[onmicrosoftDomain].onmicrosoft.com** dans le champ **Email address** avant de cliquer sur **Sign in**.
+1. Saisissez ```Alan@[onmicrosoftDomain].onmicrosoft.com``` dans le champ **Email address** avant de cliquer sur **Sign in**.
 1. Dans la fenêtre **Sign in**, cliquez sur **Next**
 1. Dans la fenêtre **Enter password**, saisissez ```Pa55w.rd``` et cliquez sur **Sign in**.
 1. Sur la fenêtre **Pick an account**, constatez qu'un message d'erreur apparait, indiquant que le compte de Alan a été bloqué. Vous venez de vérifier que Alan ne peut plus se connecter à Microsoft 365.
 1. Vous allez finalement vous connecter avec votre compte admin de Dominique Skyetson, en utilisant le compte nominatif que vous avez créé dans la première tâche de cet exercice. Dans la fenêtre **Pick an account**, sélectionnez donc **+ Use another account**.
-1. Dans la fenêtre **Sign in**, saisissez **[onmicrosoftDomain].onmicrosoft.com** et cliquez sur **Next**.
+1. Dans la fenêtre **Sign in**, saisissez ```dom@[onmicrosoftDomain].onmicrosoft.com``` et cliquez sur **Next**.
 1. Dans la fenêtre suivante, utilisez le mot de passe ```Pa55w.rd``` et cliquez sur **Sign in**.
 1. Dans la fenêtre **Update your password**, saisissez ```Pa55w.rd``` dans le champ **Current password** et saisissez ```ibForm@tion``` dans les champs **New password** et **Confirm password**. Cliquez sur **Sign in**.
 1. Si une fenêtre **Welcome to Microsoft 365** apparait, cliquez deux fois sur la flèche de droite pour accèder à la validation vous permettant de la fermer. 

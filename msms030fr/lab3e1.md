@@ -13,10 +13,9 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de l'outil *Micr
 
 ## Tâche 1 - Test de connectivité
 1. Vous devriez encore être connecté sur **LON-CL1** à l'issue de l'atelier précédent. Le **Microsoft 365 admin center** devrait encore être resté ouvert dans votre navigateur et vous devriez y être connecté avec le compte *Dominique Skyetson*.
-1. Ouvrez un nouvel onglet dans le navigateur et rendez-vous à l'adresse du *Remote Connectivity Analyzer* : ```https://testconnectivity.microsoft.com```
-
+1. Ouvrez un nouvel onglet dans le navigateur et rendez-vous à l'adresse du *Remote Connectivity Analyzer* : ```https://testconnectivity.microsoft.com```  
 1. Sur la page **Microsoft Remote Connectivity Analyzer**, dans le menu de navigation vertical à gauche, l'onglet **Exchange Online** est affiché par défaut. Sur cet onglet, sélectionnez la tuile intitulée **Exchange Online Custom Domain DNS Connectivity Test**.
-1.Sur la page **Exchange Online Custom Domain DNS Connectivity Test**, saisissez les informations suivantes :  
+1. Sur la page **Exchange Online Custom Domain DNS Connectivity Test**, saisissez les informations suivantes :  
 	- Entrez ```[onmicrosoftDomain].onmicrosoft.com``` dans le champ **Domain Name**
 	- Dans la section **Service Selection**, Laissez cochée la case **Office 365 (Default)**
 	- Dans la section  **Verification**, saisissez la suite de caractères affichés en violet (Le code de vérification est insensible à la casse) avant de cliquer sur **Verify**.

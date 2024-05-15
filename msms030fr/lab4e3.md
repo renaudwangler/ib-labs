@@ -47,6 +47,7 @@ Dans cette tâche, vous allez utiliser l'assistant de configuration de Entra Con
 1. Cliquez sur le nom de **Beth Burke**.
 1. Dans le panneau qui apparait concernant les informations de **Beth Burke**, cliquez sur l'onglet **Licenses and apps**.
 1. Sur l'onglet **Licenses and apps** de Beth Burke, select **Add License** cochez toutes les cases en regard des licences disponibles et cliquez sur **Save changes**
+	>**Note :** Il vous faudra peut-être décocher l'*App* **Skype for Business Online (plan1)** pour pouvoir valider votre opération.
 1. Cliquez sur le **X** en haut à droite pour fermer le panneau d'informations de Beth Burke.
 
 ## Tâche 3 - Vérifier la synchronisation des périphériques

@@ -32,9 +32,9 @@ Cette tâche est assez similaire à la précédente, mais vous allez la réalise
 1. Vous devriez être toujours connecté sur la machine virtuelle LON-CL1, avec l'outil **Administrator : Windows Powershell ISE** réduit dans la barre des tâches. Agrandissez en la fenêtre (ou relancez l'outil en administrateur si vous l'aviez fermé).
 1. Vous allez d'abord vous (re)connecter à l'environnement Microsoft 365 avec le module Microsoft Graph. Utilisez la commande suivante : 
 	```Connect-MgGraph -scopes user.Read.All,RoleManagement.ReadWrite.Directory```
-1. Dans la fenêtre **Sign in** qui apparaît, connectez-vous avec le compte de Dominique Skyetson : **dom@[onmicrosoftDomain].onmicrosoft.com** et son mot de passe (**ibForm@tion**). 
+1. Dans la fenêtre **Sign in** qui apparaît, connectez-vous avec le compte de Dominique Skyetson : ```dom@[onmicrosoftDomain].onmicrosoft.com``` et son mot de passe (```ibForm@tion```). 
 1. Dans la fenêtre **Permission requested**, cochez la case **Consent on behalf of your organization** et cliquez sur **Accept**.	
-1. Pour voir tous les rôles diponibles, vous poubvez utiliser la commande suivante :
+1. Pour voir tous les rôles disponibles, vous pouvez utiliser la commande suivante :
 	```Get-MgRoleManagementDirectoryRoleDefinition |Select-Object -Property DisplayName,Description | Out-GridView```
 1. Dominique souhaite affecter le rôle **Service support administrator** à **Nona Snider**. Pour ce faire, vous pouvez utiliser la commande suivante :
 	```New-MgRoleManagementDirectoryRoleAssignment -DirectoryScopeId '/' -RoleDefinitionId (Get-MgRoleManagementDirectoryRoleDefinition | where DisplayName -eq 'Service support administrator').Id -PrincipalId (Get-MgUser -Search 'DisplayName:nona' -ConsistencyLevel eventual).Id```
@@ -56,7 +56,7 @@ Dans cette tâche, Dominique va vérifier la délégation administrative mise en
 1. Utilisez le menu en haut à droite de votre navigateur **Edge** pour ouvrir une nouvelle fenêtre de navigation privée (**New InPrivate window**).
 1. Dans cette nouvelle fenêtre privée, saisissez l'adresse ```https://www.microsoft365.com``` pour vous rendre sur le portail Microsoft 365.
 1. Vous allez commencer par vous connecter avec le compte de **Alan Yoo**. Cliquez sur **Sign In**
-1. Dans la fenêtre **Sign-in**, entrez **Alan@[onmicrosoftDomain].onmicrosoft.com** (remplacez bien par votre préfixe de tenant).  
+1. Dans la fenêtre **Sign-in**, entrez ```Alan@[onmicrosoftDomain].onmicrosoft.com```.  
 1. Dans la fenêtre **Enter password**, tapez ```Pa55w.rd```.
 1. Dans la fenêtre **Update your pasword**, changez le mot de passe de Alan comme déjà vu précédemment de **Pa55w.rd** vers ```ibForm@tion```.
 1. Dans la fenêtre **Stay signed in?**, cliquez sur **Yes**.
@@ -64,7 +64,7 @@ Dans cette tâche, Dominique va vérifier la délégation administrative mise en
 1. Notez que sur la page d'accueil de **Microsoft 365**, Alan n'a pas d'option **Admin** pour ouvrir le portail d'administration.
 	Vous venez donc de vérifier que Alan ne peut accéder au **Microsoft 365 admin center** puisqu'il ne s'est vu affecter aucun rôle administratif.
 1. Dans **Microsoft Edge**, en haut à droite de la page, cliquez sur l'icône utilisateur de **Alan Yoo** (Le cercle contenant ses initiales **AY**), et cliquez sur **Sign out.**
-1. Vous allez désormais vous connecter avec le compte de **Leanna Goodwin**. Dans votre page actuelle sur **Edge** en navigation privée, vous devriez être face à un message indiquant **Alan, you're signed out now**. Sur cette page, cliquez sur **Switch to a different account**, et saisissez l'adresse **Leanna@[godeployDomain].godeploylabs.com** dans le champ **Email address** qui s'affiche avant de cliquer sur **Sign in**.
+1. Vous allez désormais vous connecter avec le compte de **Leanna Goodwin**. Dans votre page actuelle sur **Edge** en navigation privée, vous devriez être face à un message indiquant **Alan, you're signed out now**. Sur cette page, cliquez sur **Switch to a different account**, et saisissez l'adresse ```Leanna@[godeployDomain].godeploylabs.com``` dans le champ **Email address** qui s'affiche avant de cliquer sur **Sign in**.
 1. Dans la fenêtre **Sign in**, vérifiez que l'adresse de Leanna est correctement saisie avant de cliquer sur **Next**.
 1. Dans la fenêtre **Enter password**, entrez ```Pa55w.rd```.
 1. Cliquez sur **Yes** sur la fenêtre **Stay signed in?**.
