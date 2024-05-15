@@ -26,7 +26,7 @@ Dans cette tâche vous allez ajouter le domaine DNS d'entreprise à votre tenant
 1. Dans le portail **Microsoft 365 admin center**, dans le menu de navigation, vous avez déjà ouvert le groupe **Settings** pour l'exercice précédant. Pour ajouter le domaine d'entreprise, cliquez sur **Domains** dans ce groupe. 
 1. Sur la page **Domains**, vous devriez voir apparaitre le domaine par défaut, créé avec votre tenant (se terminant par *.onmicrosoft.com*).
 1. Cliquez sur **+ Add domain** pour ouvrir la page **Add a domain**.
-1. Sur la page **Add a domain**, saisissez le **nom DNS d'entreprise** dans le champ **Domain name** avant de cliquer sur le bouton **Use this domain**.
+1. Sur la page **Add a domain**, saisissez le **nom DNS d'entreprise** (```[godeployDomain].godeploylabs.com```) dans le champ **Domain name** avant de cliquer sur le bouton **Use this domain**.
 1. Sur la page **Verify you own your domain**, sélectionnez l'option **Add a TXT record to the domain's DNS record** et cliquez sur **Continue**.
 1. Sur la page **Add a record to verify ownership**, prenez note de la valeur mentionnée après **TXT value**. Elle devrait ressembler à *MS=msXXXXXXXX*.
 1. Dans l'environnement d'atelier, ouvrer l'onglet **DNS** et cliquez sur **Add New §** dans la section **TXT Records**
