@@ -2,7 +2,8 @@
 layout: stage
 title: "Lab4-Ex1 - Préparation de la synchronisation d'identités"
 length: "00"
-date: "11/11/2023"
+date: "15/05/2024"
+script: "msms030.js"
 ---
 # Scénario
 Comme dans les précédents exercices, vous allez vous glisser dans la peau de Dominique Skyetson, administrateur de Adatum. Dans cet atelier, vous réaliserez les tâches nécessaires pour gérer l'hybridation de la gestion d'identités du projet pilote entre l'Active Directory existant et l'Entra ID utilisé par l'environnement Microsoft 365.  
@@ -20,8 +21,7 @@ Dans cette tâche, vous allez vous faciliter la vie en utilisant Windows Powersh
 1. Basculez sur la machine virtuelle **LON-DC1** sur laquelle vous devriez encore être connecté avec le compte **ADATUM\Administrator** et le mot de passe **Pa55w.rd**.
 1. Faites un clic-droit sur le bouton démarrer pour sélectionner **Windows PowerShell (Admin)**.
 1. Dans la fenêtre **Administrator: Windows PowerShell**, utilisez la commande suivante pour référencer votre nom DNS d'entreprise (dont vous avez pris note antérieurement) :
-	```$upnSuff = 'labxxxxx.godeploylabs.com'```
-	>**Note :** Pensez à bien modifier le nom de domaine en remplaçant les *xxxxx* avant de taper sur **[Entrée]**.
+	```$upnSuff = '[godeployDomain].godeploylabs.com'```
 1. Utilisez ensuite la commande suivante pour remplacer le suffixe UPN de votre forêt ADDS :
 	```Set-ADForest -identity adatum.com -UPNSuffixes @{replace = $upnSuff}```
 1. Utilisez, pour terminer, la commande suivante pour modifier l'UPN de tous les utilisateurs du domaine ADDS :  

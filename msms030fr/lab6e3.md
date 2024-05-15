@@ -2,7 +2,8 @@
 layout: stage
 title: "Lab6-Ex3 - Configuration des stratégies d'accès clients"
 length: "00"
-date: "13/05/2024"
+date: "15/05/2024"
+script: "msms030.js"
 ---
 # Scénario
 Outlook on the web permet aux utilisateurs d'Adatum d'accèder à leur boite aux lettres depuis un navigateur Interner. Après qu'Adatum ait créé son tenant Microsoft 365 avec Exchange Online, ce dernier inclut une unique stratégie nommée **OWAMailboxPolicy-Default**. Cette stratégie définit les paramètres Outlook on the web pour tous les utilisateurs. Cependant, Dominique Skyetson, par son rôle d'administrateur de Adatum, souhaite créer une stratégie Outlook on the web policy qui s'appliqera à un utilisateur particulier (dans notre cas Alan Yoo). En vérifiant si une telle affectation de straégie par utilisateur fonctionne, Dominique sera dès lors capable de gérer les paramètres de boite aux lettres pour les différentes populations d'utilisateurs de l'entreprise.  
@@ -40,7 +41,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 1. Sélectionnez votre stratégie **Limited features** avant de cliquer sur **Save**.
 1. Fermez le panneau d'information d'**Alan Yoo** une fois le changement sauvegardé.
 1. Vous allez maintenant ouvrir le client Outlook sur LON-CL2. Basculez sur la machine virtuelle **LON-CL2** sur laquelle vous devriez être connecté avec l'utilisateur **.\admin**. Cliquez sur le bouton **Démarrer** de la barre des tâches et, dans le menu **Démarrer**, cliquez sur **Outlook**.
-1. Si votre client Outlook n'est pas configuré, configurez-le, par exemple, pour le compte de Alan Yoo (alan@m365xxxxx.onmicrosoft.com).
+1. Si votre client Outlook n'est pas configuré, configurez-le, par exemple, pour le compte de Alan Yoo (alan@[onmicrosoftDomain].onmicrosoft.com).
 1. Dans **Outlook**, cliquez sur **+ New Email**.
 1. Dans la fenêtre de composition de nouveau message, cliquez sur le bouton **To** et, dans la liste des utilisateurs qui apparaît, sélectionnez **Alan Yoo** avant de cliquer sur **To** et **OK**.
 1. Dans le champ **Subject**, entrez ```Attachment Test```.
@@ -49,7 +50,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 1. Cliquez sur **Send**.
 1. Après que le message soit envoyé, fermez Outlook.
 1. Si un navigateur Internet est ouvert sur LON-CL2, fermez-le. Lancez ensuite une nouvelle session de navigation en cliquant sur l'icône de **Edge** dans la barre des tâches.
-1. Ouvrez *Outlook on the Web* pour **Alan Yoo** en vous rendant à l'adresse suivante : ```https://outlook.office365.com```. Si la boite aux lettres de Alan ne s'ouvre pas, connectez-vous avec son compte (**alan@m365xxxxx.onmicrosoft.com** et le mot de passe **Pa55w.rd**).
+1. Ouvrez *Outlook on the Web* pour **Alan Yoo** en vous rendant à l'adresse suivante : ```https://outlook.office365.com```. Si la boite aux lettres de Alan ne s'ouvre pas, connectez-vous avec son compte (```alan@[onmicrosoftDomain].onmicrosoft.com``` et le mot de passe ```Pa55w.rd```).
 1. Dans la boite de réception de Alan (*Inbox*), sélectionnez le message reçu de la tâche précédente dont le sujet est **Attachment Test**.
 1. Sélectionnez la flèche descendante à droite du fichier joint **dism.log**.
 1. Dans la boite de Alan, vous ne devriez pas avoir l'option **Donwload** si la stratégie s'est correctement appliquée.
@@ -62,7 +63,7 @@ Dans cette tâche, vous allez créer une stratégie d'accès mobile qui place to
 1. Dans le portail **Exchange admin center**, ouvrez le groupe d'options **Mobile** pour cliquer sur **Mobile device access**.
 1. Sur la page **Quarantined Devices**, cliquez sur le bouton **Edit** en haut à droite.
 1. Dans le panneau **Exchange ActiveSync access settings** qui s'affiche, dans la section **Connection Settings**, sélectionnez l'option **Quarantine – Let me decide to block or allow later**.
-1. Sous la section **Quarantine Notification Email Messages**, enter l'adresse email de Dominique (**dom@m365xxxxx.onmicrosoft.com**).
+1. Sous la section **Quarantine Notification Email Messages**, enter l'adresse email de Dominique (```dom@[onmicrosoftDomain].onmicrosoft.com```).
 1. Cliquez sur le bouton **Save** avatn de fermer le panneau **Exchange ActiveSync access settings**.
 1. Conservez votre navigateur Internet ouvert pour la tâche suivante.
 

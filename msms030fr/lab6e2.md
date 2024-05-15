@@ -2,7 +2,8 @@
 layout: stage
 title: "Lab6-Ex2 - Configuration de la protection de la messagerie"
 length: "00"
-date: "13/05/2024"
+date: "15/05/2024"
+script: "msms030.js"
 ---
 # Scénario
 Dans cet exercice, vous allez continuer, sous l'identité de Dominique Skyetson, Administrateur de l'entreprise Adatum à déployer Microsoft 365 dans un environnement virtuel pilote. Adatum a récemment constaté une recrudescence des attaques virales. Le CTO de l'entreprise a demandé à Dominique de rechercher les différentes options disponibles dans Exchange Online pour fortifier l'environnement de messagerie de Adatum.  
@@ -25,7 +26,7 @@ Dans cette tâche, vous allez créer un filtre antiviral pour les pièces jointe
 1. Sur la barre de menu, cliquez sur **+ Create** pour ajouter un nouveau filtre antiviral.
 1. Sur la page **Name your policy**, entrez ```Malware Policy``` dans le champ **Name**.
 1. Dans le champ **Description**, saisissez ```This policy has been created to protect the messaging environment.``` avant de cliquer sur **Next**.
-1. Sur la page **Users and Domains**, cliquez dans le champ **Domains** et tapez ```onmicrosoft```pour sélectionner votre domaine original (**m365xxxxx.onmicrosoft.com** et pas m365xxxxx.mail.onmicrosoft.com) avant de cliquer sur **Next**.
+1. Sur la page **Users and Domains**, cliquez dans le champ **Domains** et tapez ```onmicrosoft```pour sélectionner votre domaine original (**[onmicrosoftDomain].onmicrosoft.com** et pas [onmicrosoftDomain].mail.onmicrosoft.com) avant de cliquer sur **Next**.
 1. Sur la page **Protection settings**, constatez les valeurs par défaut et les options disponibles et cliquez sur **Next**.
 1. Sur la page **Review**, cliquez sur le bouton **Submit** (vous pouvez aussi choisir d'annuler l'assistant car vous ne testerez pas cette stratégie antivirale).
 1. Sur la page **Created new anti-malware policy**, cliquez sur **Done**.
@@ -68,10 +69,10 @@ Dans cette dernière tâche, vous allez activer **Defender for Office** pour Sha
 1. Dans le panneau **Global settings** qui s'affiche, dans la section **Protect files in SharePoint, OneDrive, and Microsoft Teams**, activez l'option **Turn on Defender for Office 365 for SharePoint, OneDrive and Microsoft Teams** si elle ne l'est pas et cliquez sur **Save** (cliquez sur **Cancel** si vous n'avez fait aucun changement).
 1. Sur la page **Safe attachments**, cliquez sur **+ Create** dans la barre de menu pour créer une nouvelle stratégie.
 1. Sur la page **Name your policy**, saisissez ```AttachmentPolicy1``` dans le champ **Name** avant de cliquer sur **Next**.
-1. Sur la page **Users and domains**, cliquez dans le champ **Domains** et tapez ```onmicrosoft```. Sélectionnez ensuite votre domaine **m365xxxxx.onmicrosoft.com** et cliquez sur **Next**.
+1. Sur la page **Users and domains**, cliquez dans le champ **Domains** et tapez ```onmicrosoft```. Sélectionnez ensuite votre domaine **[onmicrosoftDomain].onmicrosoft.com** et cliquez sur **Next**.
 1. Sur la page **Settings**, dans la section **Safe attachments unknown malware response**, choisissez l'option **Dynamic Delivery**. Cette option permet l'envoi des message traités à leur destinataire dès leur réception, mais sans permettre l'accès à la pièce jointe tant que celle-ci n'a pas été correctement scannée comme sans danger.
 1. Sous la section **Redirect messages with detected attachments**, cochez la case **Enable redirect**.
-1. Dans le champ **Send messages that contain monitored attachments to the specified eemail address**, entrez l'adresse de Dominique Skyetson (**dom@m365xxxxx.onmicrosoft.com**) avant de cliquer sur **Next**.
+1. Dans le champ **Send messages that contain monitored attachments to the specified eemail address**, entrez l'adresse de Dominique Skyetson (```dom@[onmicrosoftDomain].onmicrosoft.com```) avant de cliquer sur **Next**.
 1. Sur la page **Review**, cliquez sur le bouton **Submit** puis **Done*.
 	(Vous pouvez aussi cliquer sur **Cancel** puisque cette stratégie ne sera pas testée)
 1. Laissez la session ouverte sur LON-CL1 et ne fermez pas votre navigateur Internet pour l'exercice suivant.

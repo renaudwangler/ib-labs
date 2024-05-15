@@ -2,7 +2,8 @@
 layout: stage
 title: "Lab2-Ex5 - Délégation d'administration"
 length: "00"
-date: "13/05/2024"
+date: "15/05/2024"
+script: "msms030.js"
 ---
 # Scénario
 Dans cet exercice, en tant que Dominique Skyetson et pour le projet pilote Microsoft 365 de Adatum, vous allez gérer la délégation administrative en affectant des rôles d'administrateurs à plusieurs utilisateurs. Vous allez procéder à ces affectations de rôle à la fois par le portail d'administration et en Powershell. Une fois ces rôles affectés, vous vous connecterez avec les comptes concernés pour tester la délégation administrative.
@@ -31,7 +32,7 @@ Cette tâche est assez similaire à la précédente, mais vous allez la réalise
 1. Vous devriez être toujours connecté sur la machine virtuelle LON-CL1, avec l'outil **Administrator : Windows Powershell ISE** réduit dans la barre des tâches. Agrandissez en la fenêtre (ou relancez l'outil en administrateur si vous l'aviez fermé).
 1. Vous allez d'abord vous (re)connecter à l'environnement Microsoft 365 avec le module Microsoft Graph. Utilisez la commande suivante : 
 	```Connect-MgGraph -scopes user.Read.All,RoleManagement.ReadWrite.Directory```
-1. Dans la fenêtre **Sign in** qui apparaît, connectez-vous avec le compte de Dominique Skyetson : **dom@M365xxxxx.onmicrosoft.com** et son mot de passe (**ibForm@tion**). 
+1. Dans la fenêtre **Sign in** qui apparaît, connectez-vous avec le compte de Dominique Skyetson : **dom@[onmicrosoftDomain].onmicrosoft.com** et son mot de passe (**ibForm@tion**). 
 1. Dans la fenêtre **Permission requested**, cochez la case **Consent on behalf of your organization** et cliquez sur **Accept**.	
 1. Pour voir tous les rôles diponibles, vous poubvez utiliser la commande suivante :
 	```Get-MgRoleManagementDirectoryRoleDefinition |Select-Object -Property DisplayName,Description | Out-GridView```
@@ -55,7 +56,7 @@ Dans cette tâche, Dominique va vérifier la délégation administrative mise en
 1. Utilisez le menu en haut à droite de votre navigateur **Edge** pour ouvrir une nouvelle fenêtre de navigation privée (**New InPrivate window**).
 1. Dans cette nouvelle fenêtre privée, saisissez l'adresse ```https://www.microsoft365.com``` pour vous rendre sur le portail Microsoft 365.
 1. Vous allez commencer par vous connecter avec le compte de **Alan Yoo**. Cliquez sur **Sign In**
-1. Dans la fenêtre **Sign-in**, entrez **Alan@M365xxxxx.onmicrosoft.com** (remplacez bien par votre préfixe de tenant).  
+1. Dans la fenêtre **Sign-in**, entrez **Alan@[onmicrosoftDomain].onmicrosoft.com** (remplacez bien par votre préfixe de tenant).  
 1. Dans la fenêtre **Enter password**, tapez ```Pa55w.rd```.
 1. Dans la fenêtre **Update your pasword**, changez le mot de passe de Alan comme déjà vu précédemment de **Pa55w.rd** vers ```ibForm@tion```.
 1. Dans la fenêtre **Stay signed in?**, cliquez sur **Yes**.
@@ -63,7 +64,7 @@ Dans cette tâche, Dominique va vérifier la délégation administrative mise en
 1. Notez que sur la page d'accueil de **Microsoft 365**, Alan n'a pas d'option **Admin** pour ouvrir le portail d'administration.
 	Vous venez donc de vérifier que Alan ne peut accéder au **Microsoft 365 admin center** puisqu'il ne s'est vu affecter aucun rôle administratif.
 1. Dans **Microsoft Edge**, en haut à droite de la page, cliquez sur l'icône utilisateur de **Alan Yoo** (Le cercle contenant ses initiales **AY**), et cliquez sur **Sign out.**
-1. Vous allez désormais vous connecter avec le compte de **Leanna Goodwin**. Dans votre page actuelle sur **Edge** en navigation privée, vous devriez être face à un message indiquant **Alan, you're signed out now**. Sur cette page, cliquez sur **Switch to a different account**, et saisissez l'adresse **Leanna@labxxxxx.godeploylabs.com** dans le champ **Email address** qui s'affiche avant de cliquer sur **Sign in**.
+1. Vous allez désormais vous connecter avec le compte de **Leanna Goodwin**. Dans votre page actuelle sur **Edge** en navigation privée, vous devriez être face à un message indiquant **Alan, you're signed out now**. Sur cette page, cliquez sur **Switch to a different account**, et saisissez l'adresse **Leanna@[godeployDomain].godeploylabs.com** dans le champ **Email address** qui s'affiche avant de cliquer sur **Sign in**.
 1. Dans la fenêtre **Sign in**, vérifiez que l'adresse de Leanna est correctement saisie avant de cliquer sur **Next**.
 1. Dans la fenêtre **Enter password**, entrez ```Pa55w.rd```.
 1. Cliquez sur **Yes** sur la fenêtre **Stay signed in?**.
@@ -89,7 +90,7 @@ Dans la liste **Active users**, notez que, en passant la souris sur les lignes r
 1. Pour vérifier si, oui ou non, Leila Macdonald peut se connecter après que son compte ait été bloqué, vous allez tenter de vous connecter en tant que Leila. Déconnectez-vous, sur Microsoft 365, du compte de **Leanna Goodwin** (En cliquant sur le cercle en haut à droite puis sur **Sign out**).
 1. Fermez ensuite tous les autres onglets de la fenêtre de navigation privée de Edge sauf l'onglet **Sign out**. Sur ce dernier onglet, naviguez sur l'adresse ```https://www.microsoft365.com```.
 1. Sur la page **Login - Microsoft 365**, cliquez sur **Switch to a different account**.
-1. Saisissez l'adresse **leila@labxxxxx.godeploylabs.com** dans le champ **Email address** avant de cliquer sur **Sign in**.
+1. Saisissez l'adresse **leila@[godeployDomain].godeploylabs.com** dans le champ **Email address** avant de cliquer sur **Sign in**.
 1. Sur la page **Sign in**, vérifiez l'adresse saisie pour Leila avant de cliquer sur **Next**.
 	>La fenêtre **Pick an account** devrait apparaître et afficher un message d'erreur rouge indiquant **Your account has been locked. Contact your support person to unlock it, then try again.**  
 	Vous venez de vérifier que Leila (ou quelqu'un ayant obtenu son nom de connexion et son mot de passe) ne peut ouvrir de session.

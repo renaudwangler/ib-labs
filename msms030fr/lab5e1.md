@@ -2,7 +2,8 @@
 layout: stage
 title: "Lab5-Ex1 - Déploiement de Microsoft 365 apps for enterprise"
 length: "00"
-date: "13/05/2024"
+date: "15/05/2024"
+script: "msms030.js"
 ---
 # Scénario
 Vous avez pris l'identité de Dominique Skyetson, Administrateur de l'entreprise Adatum, et vous avez commencé à déployer Microsoft 365 dans un environnement virtuel pilote. Dans cet exercice, vous allez réaliser les tâches nécessaires pour comprendre l'installation de la suite Office par les utilisateurs. Cette installation *user-driven* est un processus à deux étapes : 1) Configurer le compte utilisateur de telle sorte qu'un utilisateur éligible puisse télécharger les fichiers et réaliser l'installation, et 2) réaliser l'installation de la suite Office.  
@@ -18,7 +19,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 - L'installation *user-driven* de Microsoft 365 apps.
 
 ## Tâche 1 – Vérifier l'impact des licences sur l'installation
-Dans cette tâche, Dominique va tester si un utilisateur qui ne s'est pas vu affecté de licence peut ou non télécharger Microsoft 365 Apps. Pour ce test, vous pouvez utiliser n'importe quel utilisateur préexistant de la liste **Active Users** dans le portail Microsoft 365 admin center. Ces utilisateurs ont des comptes Entra Id du domaine par défaut (m365xxxxx.onmicrosoft.com); ils n'ont pas de compte correspondant *on-premises* dans le domaine ADDS adatum.com (qui a désormais été changé *on-premises* et remplacé par labxxxxx.godeploylabs.com). Sans compte *on-premises*, vous ne pouvez vous connecter à une VM Cliente.  
+Dans cette tâche, Dominique va tester si un utilisateur qui ne s'est pas vu affecté de licence peut ou non télécharger Microsoft 365 Apps. Pour ce test, vous pouvez utiliser n'importe quel utilisateur préexistant de la liste **Active Users** dans le portail Microsoft 365 admin center. Ces utilisateurs ont des comptes Entra Id du domaine par défaut ([onmicrosoftDomain].onmicrosoft.com); ils n'ont pas de compte correspondant *on-premises* dans le domaine ADDS adatum.com (qui a désormais été changé *on-premises* et remplacé par [godeployDomain].godeploylabs.com). Sans compte *on-premises*, vous ne pouvez vous connecter à une VM Cliente.  
 C'est pourquoi vous devez d'abord utiliser un compte ADDS pour vous connecter. Pour ce test, vous utiliserez le compte de **Laura Atkins**. Vous allez créer un compte pour Laura, mais sans lui affecter de licence.  
 Vous utiliserez ensuite la VM **LON-CL2** pour installer Microsoft 365 Apps.
 1. Basculez vers **LON-CL2** et connectez-vous en **.\Admin** avec le mot de passe **Pa55w.rd**.
@@ -26,7 +27,7 @@ Vous utiliserez ensuite la VM **LON-CL2** pour installer Microsoft 365 Apps.
 1. Maximisez votre navigateur Internet puis rendez-vous sur la page d'accueil **Microsoft 365** en utilisant l'adresse suivante : ```https://www.microsoft365.com```
 	>**Note :** Si n'importe quel compte est automatiquement connecté, déconnectez-le en cliquant sur l'icône d'utilisateur (rond en haut à droite) et en sélectionnant **Sign out**, retapez ensuite ```https://www.microsoft365.com``` dans la barre d'adresse.
 1. Cliquez sur **Sign in**.
-1. Dans la fenêtre **Sign in**, tapez **Laura@m365xxxxx.onmicrosoft.com** avant de cliquer sur **Next**.
+1. Dans la fenêtre **Sign in**, tapez ```Laura@m[onmicrosoftDomain].onmicrosoft.com``` avant de cliquer sur **Next**.
 1. Dans la fenêtre **Enter password**, saisissez ```Pa55w.rd``` et cliquez sur **Sign in**.
 1. Dans la boite de dialogue **Update your password**, entrez **Pa55w.rd**** dans le champ **Current password**, puis entrez ```ibForm@tion``` dans les champs **New password** et **Confirm password**. Cliquez sur **Sign in**.
 1. Si une fenêtre **Stay signed in?** apparait, cochez la case **Don't show this again** et cliquez sur **Yes.**
@@ -51,7 +52,7 @@ Dominique va désormais tester si les utilisateurs avec licence peuvent être em
 1. Sur LON-CL2, vous devriez encore être connecté à l'environnement Microsoft 365 avec le compte de Laura Atkins suite à la tâche précédente. Vous devez d'abord vous déconnecter du compte de Laura, cliquez donc sur son icône (le rond en haut à droite avec ses initiales **LA**) pour cliquer sur **Sign out**.
 	>**Important :** Suite à une déconnexion, il est très fortement conseillé de fermer tous les onglets de votre navigateur sauf celui qui s'appelle **Login**.
 1. Dans l'onglet **Login**, cliquez sur **Switch to a different account**.
-1. Dans le champ **Email address**, saisissez ```alan@m365xxxxx.onmicrosoft.com``` et cliquez sur **Sign in**
+1. Dans le champ **Email address**, saisissez ```alan@[onmicrosoftDomain].onmicrosoft.com``` et cliquez sur **Sign in**
 1. Dans la fenêtre **Enter password**, saisissez ```Pa55w.rd``` et cliquez sur **Sign in.**
 1. Dans la boite de dialogue **Update your password**, tapez ```Pa55w.rd``` dans le champ **Current password**, tapez ensuite ```ibForm@tion``` dans les champs **New password** et **Confirm password** avant de cliquer sur **Sign in**.
 1. Dans la page  **Welcome to Microsoft 365** de Alan, cliquez sur les menu **Install and more** et sélectionnez **Install Microsoft 365 Apps**.
@@ -83,7 +84,7 @@ Dans la tâche précédente, vous vous êtes connecté avec le compte de Alan Yo
 1. Pour vérifier l'installation de Microsoft 365 Apps for enterprise par Alan Yoo, cliquez sur le bouton **Démarrer** en bas à gauche de la barre des tâches. La section **Recently added** (en haut du menu **Démarrer**) affiche Microsoft 365 Apps for enterprise qui vient juste d'être installée. Cela pourra inclure Word, PowerPoint, OneNote, Outlook, Publisher, Access, Teams et Excel.
 1. Dans le menu **Démarrer**, cliquez sur **Word**.
 1. Dans la fenêtre **Hello Alan, welcome to Word**, cliquez sur **Continue**.
-1. Dans la fenêtre **Activate Office**, vérifiez l'adresse de Alan : ```alan@m365xxxxx.onmicrosoft.com``` avant de cliquer sur **Next**.
+1. Dans la fenêtre **Activate Office**, vérifiez l'adresse de Alan : ```alan@[onmicrosoftDomain].onmicrosoft.com``` avant de cliquer sur **Next**.
 1. Dans la fenêtre **Enter password**, tapez **ibForm@tion** et cliquez sur **Sign in.**
 1. Sur la fenêtre **Stay signed in to all your apps**, cliquez sur le lien **No, sign in to this app only**.
 1. Sur la fenêtre **Accept the license agreement**, cliquez sur le bouton **Accept**.

@@ -2,7 +2,8 @@
 layout: stage
 title: "Lab2-Ex4 - Gestion des utilisateurs et des groupes avec Windows PowerShell"
 length: "00"
-date: "13/05/2024"
+date: "15/05/2024"
+script: "msms030.js"
 ---
 # Scénario
 Windows Powershell permet aux administrateurs d'automatiser, d'accélérer et de fluidifier les tâches qui seraient faites dans le portail Microssoft 365 admin center, les plus compliquées comme les plus simples.  
@@ -37,14 +38,14 @@ Dans cette tâche vous allez mettre en place l'environnement fondamental pour la
 Dans un exercice précédent, vous avez créé des comptes utilisateurs en utilisant le portail **Microsoft 365 admin center**. Dans cette tâche, vous allez créer deux nouveaux utilisateurs en utilisant Windows PowerShell, avant de leur affecter une licence **Office 365 E5** à chacun. Vous apprendrez ensuite à supprimer un utilisateur et le remettre en production.
 1. Vous devriez être resté connecté sur la machine **LON-CL1** avec le compte **Administrator** et le mot de passe **Pa55w.rd**; l'outil **Windows Powershell ISE** devrait être resté ouvert en tant qu'administrateur. Si nécessaire, maximisez sa fenêtre.
 1. Dans la partie basse (fond bleu) de l'outil, tapez la commande suivante : ```Connect-MgGraph -scopes User.ReadWrite.All,Group.ReadWrite.All,Domain.ReadWrite.All,Organization.Read.All,UserAuthenticationMethod.ReadWrite.All```.
-1. Dans la fenêtre **Sign in** qui apparaît, connectez-vous avec le compte de Dominique Skyetson : **dom@WM365xxxxx.onmicrosoft.com** et son mot de passe (**ibForm@tion**). 
+1. Dans la fenêtre **Sign in** qui apparaît, connectez-vous avec le compte de Dominique Skyetson : **dom@[onmicrosoftDomain].onmicrosoft.com** et son mot de passe (**ibForm@tion**). 
 1. Dans la fenêtre **Permission requested**, cochez la case **Consent on behalf of your organization** et cliquez sur **Accept**.
-1. Utilisez désormais la commande suivante pour créer le premier compte utilisateur nommé **Catherine Richard** avec un mot de passe **Pa55w.rd** et un emplacement **CH**. Dans la commande suivante, pensez bien à remplacer M365xxxx.onmicrosoft.com par le nom de domaine pertinent dans votre contexte d'atelier. 
+1. Utilisez désormais la commande suivante pour créer le premier compte utilisateur nommé **Catherine Richard** avec un mot de passe **Pa55w.rd** et un emplacement **CH**.   
 	>**Note :** La valeur *False* pour *ForceChangePasswordNextSignIn* signifie que Catherine n'aura pas besoin de modifier son mot de passe lors de sa première connexion.  
-	```$user1 = New-MGuser –UserPrincipalName catherine@M365xxxxx.onmicrosoft.com –DisplayName "Catherine Richard" -GivenName Catherine -SurName Richard -PasswordProfile @{password='Pa55w.rd';ForceChangePasswordNextSignIn=$false} -UsageLocation CH -AccountEnabled -MailNickname catherine```
+	```$user1 = New-MGuser –UserPrincipalName catherine@[onmicrosoftDomain].onmicrosoft.com –DisplayName "Catherine Richard" -GivenName Catherine -SurName Richard -PasswordProfile @{password='Pa55w.rd';ForceChangePasswordNextSignIn=$false} -UsageLocation CH -AccountEnabled -MailNickname catherine```
 	>**Note :** Vous pouvez simplement taper la commande ```$user1``` pour afficher le résultat de l'opération précédente avant de passer à la suite.
 1. la commande suivante va créer un second compte utilisateur pour **Tameka Reed** (pensez à remplacer le nom du domaine):
-	```$user2 = New-MGuser –UserPrincipalName tameka@M365xxxxx.onmicrosoft.com –DisplayName "Tameka Reed" -GivenName Tameka -SurName Reed -PasswordProfile @{password='Pa55w.rd';ForceChangePasswordNextSignIn=$false} -UsageLocation CH -AccountEnabled -MailNickname tameka```
+	```$user2 = New-MGuser –UserPrincipalName tameka@[onmicrosoftDomain].onmicrosoft.com –DisplayName "Tameka Reed" -GivenName Tameka -SurName Reed -PasswordProfile @{password='Pa55w.rd';ForceChangePasswordNextSignIn=$false} -UsageLocation CH -AccountEnabled -MailNickname tameka```
 	>**Note :** Vous pouvez simplement taper la commande ```$user2``` pour afficher le résultat de l'opération précédente avant de passer à la suite.
 1. Utilisez la commande suivante pour obtenir la liste des comptes qui n'ont pas de licence associée à leur compte :
 	```Get-MgUser -Filter "assignedLicenses/`$count eq 0 and userType eq 'Member'" -ConsistencyLevel eventual -CountVariable unlicensedUserCount -All```
@@ -82,8 +83,8 @@ Dans cette tâche, vous allez utiliser Windows Powershell pour importer un fichi
 1. Dans la partie basse (fond bleu) de l'outil, tapez la commande suivante avant de taper sur **[Entrée]** pour la valider : ```Invoke-WebRequest "https://raw.githubusercontent.com/renaudwangler/ib-labs/master/msms030fr/users.csv" | Select-Object -ExpandProperty Content | Out-File ".\users.csv"```.
 1. En utilisant la commande suivante, vous allez pourvoir visualiser le contenu du fichier CSV dans **Notepad** :
 ```notepad .\users.csv```
-1. Dans la fenêtre **users.csv - Notepad** qui s'ouvre, passez en revue les informations présentes pour les utilisateurs. Notez que, pour chaque utilisateur, le domaine de connexion est **labxxxxx.godeploylabs.com**. Il vous faut désormais remplacer ce nom de domaine par votre **Nom DNS d'entreprise**. Dans le menu de Notepad, cliquez sur **Edit** puis **Replace**.
-1. Dans la fenêtre de remplacement, tapez ```labxxxxx.godeploylabs.com``` dans le champ **Find what** et saisissez votre **Nom DNS d'entreprise** (dont vous avez pris note dans le premier exercice et que vous pouvez retrouver dans l'onglet **DNS** de l'environnement d'ateliers) dans le champ **Replace with**.
+1. Dans la fenêtre **users.csv - Notepad** qui s'ouvre, passez en revue les informations présentes pour les utilisateurs. Notez que, pour chaque utilisateur, le domaine de connexion est **[godeployDomain].godeploylabs.com**. Il vous faut désormais remplacer ce nom de domaine par votre **Nom DNS d'entreprise**. Dans le menu de Notepad, cliquez sur **Edit** puis **Replace**.
+1. Dans la fenêtre de remplacement, tapez ```[godeployDomain].godeploylabs.com``` dans le champ **Find what** et saisissez votre **Nom DNS d'entreprise** (dont vous avez pris note dans le premier exercice et que vous pouvez retrouver dans l'onglet **DNS** de l'environnement d'ateliers) dans le champ **Replace with**.
 1. Cliquez sur le bouton **Replace All** avant de fermer la fenêtre de remplacement.
 1. Cliquez sur la case **X** de fermeture de **Notepad**. Dans la boite de dialogue qui apparaît vous demandant si vous souhaitez sauvegarder vos modifications, cliquez sur **Save**.
 1. Retournez à **Administrator : Windows Powershell ISE** pour utiliser la commande suivante pour procéder à l'import des utilisateurs contenus dans le fichier :

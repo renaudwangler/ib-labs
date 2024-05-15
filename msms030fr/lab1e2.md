@@ -2,7 +2,8 @@
 layout: stage
 title: "Lab1-Ex2 - Ajout d'un domaine DNS d'entreprise"
 length: "00"
-date: "11/11/2023"
+date: "15/05/2024"
+script: "msms030.js"
 ---
 # Scénario
 Adatum a donc acheté un nouveau nom de domaine DNS pour son projet pilote (fourni par votre hébergeur d'ateliers) qui soit utilisable sur Internet.
@@ -34,7 +35,7 @@ Dans cette tâche vous allez ajouter le domaine DNS d'entreprise à votre tenant
 1. Suyr la page **How do you want to connect to your domain?**, sélectionnez **More options**. Deux options s'affichent : **Add your own DNS records**, et **Skip and do this later (not recommended)**. L'option **Add your own DNS records** est sélectionnée par défaut, cliquez sur le couton **Continue** pour ouvrir la page **Add DNS records**.
 1. La page **Add DNS records** identifie les services qu'une entreprise peut implémenter dans le contexte de son déploiement Microsoft 365 et qui ont besoin d'enregistrements DNS. L'option **Exchange and Exchange Online Protection** devrait être sélectionnée par défaut (sinon, sélectionnez là).
 	> Trois enregistrements DNS sont nécessaires pour les services Exchange - un enregistrement **MX** , un alias **CNAME**, et un enregistrement **TXT**. Sélectionnez chaque enregistrement pour l'ouvrir et prendre note de son contenu à créer.  
-    - MX pointe vers ```labxxxxx-godeploylabs-com.mail.protection.outlook.com``` avec préférence de **0**  
+    - MX pointe vers ```[godeployDomain]-godeploylabs-com.mail.protection.outlook.com``` avec préférence de **0**  
     - CNAME associe ```autodiscover``` à ```autodiscover.outlook.com```  
     - TXT contient ```v=spf1 include:spf.protection.outlook.com -all```  
 

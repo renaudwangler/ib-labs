@@ -2,7 +2,8 @@
 layout: stage
 title: "Lab4-Ex2 - Mise en oeuvre de la synchronisation d'identités"
 length: "00"
-date: "13/05/2024"
+date: "15/05/2024"
+script: "msms030.js"
 ---
 # Scénario
 Dans cet exercice, vous allez activer la synchronisation entre l'ADDS de Adatum et Entra Id. Entra Connect continuera ensuite à synchroniser les changements toutes les 30 minutes.  
@@ -21,7 +22,7 @@ Dans cette tâche, vous allez utiliser l'assistant d'installation de Entra Conne
 1. Vous devriez encore être connecté sur **LON-DC1** avec le compte **Administrator** à l'issue de la tâche précédente.
 1. Dans votre navigateur Internet, rendez-vous à l'adresse ```https://admin.microsoft.com```.
 	>**Note :** Vous pouvez réutiliser l'onglet **Step 2: Install IdFix - Microsoft** de la tâche précédente qui ne sera pas réutilisé.
-1.	1. Si besoin, dans la boite **Sign in**, utilisez l'adresse de connexion de Dominique Skyetson (**dom@M365xxxxx.onmicrosoft.com**) et cliquez sur **Next**.
+1.	1. Si besoin, dans la boite **Sign in**, utilisez l'adresse de connexion de Dominique Skyetson (**dom@[onmicrosoftDomain].onmicrosoft.com**) et cliquez sur **Next**.
 	1. Dans la boite **Enter password**, saisissez ```ibForm@tion``` et cliquez sur **Sign in**.
 	1. Dans la boite **Stay signed in?**, cochez la case **Don’t show this again** et cliquez sur **Yes.**
 1. Dans le menu de navigation à gauche, ouvrez le groupe d'options **Users** pour cliquer sur **Active Users**.
@@ -36,7 +37,7 @@ Dans cette tâche, vous allez utiliser l'assistant d'installation de Entra Conne
 1. L'installation de l'outil Entra Connect a démarré, sur la fenêtre **Welcome to Azure AD Connect**, cochez la case  **I agree to the license terms and privacy notice** avant de cliquer sur **Continue**.
 	>**Note :** Si la fenêtre **Welcome to Azure AD Connect** n'apparait pas, cherchez son icône dans la barre des tâches (la plus à droite) et cliquez dessus.
 1. Sur la page **Express Settings**, lisez les mentions concernant la synchronisation de la forêt **Adatum** et cliquez sur le bouton **Use express settings**.
-1. Sur la page **Connect to Azure AD**, saisissez ```dom@m365xxxxx.onmicrosoft.com``` dans le champ **USERNAME**, ```ibForm@tion``` dans le champ **password**, et cliquez sur **Next**.
+1. Sur la page **Connect to Azure AD**, saisissez ```dom@[onmicrosoftDomain]onmicrosoft.com``` dans le champ **USERNAME**, ```ibForm@tion``` dans le champ **password**, et cliquez sur **Next**.
 1. Sur la page **Connect to AD DS**, saisissez ```ADATUM\Administrator``` dans le champ **USERNAME**, et ```Pa55w.rd``` dans le champ **PASSWORD** avant de cliquer sur **Next**.
 1. Dans la page **Azure AD sign-in configuration**, cochez la case **Continue without matching all UPN suffixes to verified domains** et cliquez sur **Next**.
 1. Sur la page **Ready to configure**, vérifiez que la case **Start the synchronization process when configuration completes** soit cochée avant de cliquer sur **Install**.
@@ -44,7 +45,7 @@ Dans cette tâche, vous allez utiliser l'assistant d'installation de Entra Conne
 1. Cliquez sur le bouton démarrer en bas à gauche de la barre des tâches. Dans le menu **Démarrer**, ouvrez le groupe **Azure AD Connect** sur l'onglet **All apps** et cliquez sur **Synchronization Service** pour lancer cet outil.  
 	>**Note :** Si, en sélectionnant **Azure AD Connect** dans le menu **Démarrer** vous ne pouvez ouvrir le groupe et sélectionner **Synchronization Service**, il pourra être nécessaire de vous déconnecter et reconnecter sur LON-DC1.
 1. Dans la fenêtre **Synchronization Service Manager**, l'onglet **Operations** est affiché par défaut, vous permettant de surveiller le processus de synchronisation.
-1. Attentez que la tâche **Export** pour **m365xxxxx.onmicrosoft.com** soit terminée ; la colonne **Status** devrait indiquer **success**. Une fois terminée, cliquez sur cette ligne.
+1. Attentez que la tâche **Export** pour **[onmicrosoftDomain].onmicrosoft.com** soit terminée ; la colonne **Status** devrait indiquer **success**. Une fois terminée, cliquez sur cette ligne.
 1. Dans la partie inférieure de la fenêtre, un panneau de détail affiche les informations concernant cette opération de synchronisation.
 1. Dans la section **Export Statistics**, notez le nombre d'utilisateurs qui ont été ajoutés et mis à jour.
 1. Maintenant que Entra Connect a réalisé la première synchronisation, les suivantes auront lieu toutes les 30 minutes. Fermez l'outil **Synchronization Service Manager**. 
@@ -94,7 +95,7 @@ Dans cette tâche, vous allez forcer volontairement la synchronisation entre l'A
 ## Tâche 5 - Résultat de la Synchronisation   
 1. Basculez sur la machine virtuelle **LON-CL1**.
 1. Examinons maintenant les résultats de la synchronisation. Lancez votre navigateur Edge et ouvrez le centre d'administration Microsoft 365 en utilisant l'adresse suivante : ```https://admin.microsoft.com```.
-1. Connectez vous avec le compte de Dominique (```dom@m365xxxxx.onmicrosoft.com``` avec son mot de passe ```ibForm@tion```.
+1. Connectez vous avec le compte de Dominique (```dom@[onmicrosoftDomain].onmicrosoft.com``` avec son mot de passe ```ibForm@tion```.
 1. Dans le portail **Microsoft 365 admin center**, dans le menu de navigation à gauche, ouvrez le groupe d'options **Teams & groups** pour sélectionner **Active teams & groups**.
 1. Dans la liste **Active teams & groups**, vérifiez qu'un groupe **Manufacturing** apparaît sous l'onglet **Security groups**.
 1. Vérifiez que, au contraire le groupe **Print Operators** n'est pas présent.
@@ -106,7 +107,7 @@ Dans cette tâche, vous allez forcer volontairement la synchronisation entre l'A
 1. Fermez le panneau **Manufacturing**.
 1. Regardons maintenant le contenu de ce groupe en PowerShell. Dans la barre des tâches, cliquez sur l'icône de l'outil **Administrator: Windows PowerSHell ISE** que vous aviez réduit précédemment.
 1. Dans la partie basse (fond bleu) de l'outil, tapez la commande suivante pour vous connecter à Entra Id : ```Connect-MgGraph -scopes User.Read.All,Group.Read.All```.
-1. Dans la fenêtre **Sign in** qui apparaît, connectez-vous avec le compte de Dominique Skyetson : **dom@m365xxxxx.onmicrosoft.com** (ou sélectionnez le dans la fenêtre **Pick an Account** le cas échéant) et son mot de passe (**ibForm@tion**). 
+1. Dans la fenêtre **Sign in** qui apparaît, connectez-vous avec le compte de Dominique Skyetson : ```dom@[onmicrosoftDomain].onmicrosoft.com``` (ou sélectionnez le dans la fenêtre **Pick an Account** le cas échéant) et son mot de passe (**ibForm@tion**). 
 1. Dans la fenêtre **Permission requested**, cochez la case **Consent on behalf of your organization** et cliquez sur **Accept**.
 1. Utilisez la commande suivante pour chercher le groupe **Print Operators** :
 	```Get-MgGroup -Filter "DisplayName eq 'Print Operators' and MailEnabled eq false"```

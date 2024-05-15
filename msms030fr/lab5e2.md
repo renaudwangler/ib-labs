@@ -2,7 +2,8 @@
 layout: stage
 title: "Lab5-Ex2 - Déploiement de Microsoft 365 apps via MDM"
 length: "00"
-date: "06/12/2023"
+date: "15/05/2024"
+script: "msms030.js"
 ---
 # Scénario
 Vous avez pris l'identité de Dominique Skyetson, Administrateur de l'entreprise Adatum, et vous avez commencé à déployer Microsoft 365 dans un environnement virtuel pilote. Dans cet exercice, vous allez réaliser les tâches nécessaires à l'installation de Microsoft 365 Apps en utilisant le MDM.  
@@ -61,7 +62,7 @@ Dominique souhaite désormais vérifier comment fonctionne la stratégie d'*auto
 Dans cette tâche, Beth Burke va vérifier que l'ordinateur est enrôlé pour le MDM et que Microsoft 365 apps est installée.
 >**Note :** Il peut facilement se passer plus de 5 minutes avant que l'enrôlement du poste ne soit effectif.
 
-1. Connectez-vous à  **LON-CL1** en cliquant sur **Other user** pour utiliser le compte **Beth@labxxxxx.godeploylabs.com** avec le mot de passe **Pa55w.rd**.
+1. Connectez-vous à  **LON-CL1** en cliquant sur **Other user** pour utiliser le compte ```Beth@[godeployDomain].godeploylabs.com``` avec le mot de passe **Pa55w.rd**.
    >**Note :** Si le mot de passe de Beth n'est pas correct, vous pouvez le réinitialiser :
       1. Basculez sur **LON-DC1**
       1. Dans l'outil **Server Manager**, utilisez le menu **Tools** en haut à droite pour lancer l'**Active Directory Administrative Center**.

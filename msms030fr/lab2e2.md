@@ -2,7 +2,8 @@
 layout: stage
 title: "Lab2-Ex2 - Gestion des stratégies de mots de passe Microsoft 365"
 length: "00"
-date: "13/05/2024"
+date: "15/05/2024"
+script: "msms030.js"
 ---
 # Scénario
 Dans cet exercice, vous allez poursuivre, dans la peau de Dominique Skyetson, en tant qu'administrateur d'Adatum. Dans le contexte du projet pilote de Adatum, Dominique veut comprendre les fonctionnalités de gestion de mot de passe de Microsoft 365. Il va commencer par mettre en place une stratégie de mot de passe qui expire après 60 jours.  
@@ -54,7 +55,7 @@ Si vous n'avez pas de téléphone :
 
 ## Tâche 3 - Tester l'authentification multifactorielle
 1. Cliquez sur l'icône de **Microsoft Edge** sur la barre des tâches pour ouvrir une nouvelle session de navigation et réouvrez le portail **Microsoft 365 Admin center** en utilisant l'url suivante ```https://admin.microsoft.com```
-1. Dans la fenêtre **Pick an Account**, choisissez **dom@M365xxxxx.onmicrosoft.com**.
+1. Dans la fenêtre **Pick an Account**, choisissez **dom@[onmicrosoftDomain].onmicrosoft.com**.
 1. Dans la fenêtre **Enter password**, entrez **```ibForm@tion```** et cliquez sur **Sign in**.
 1. La MFA étant maintenant active pour Dom, une fenêtre **More information required** apparait. Cliquez sur **Next**.
 1. Dans la fenêtre **Keep your account secure** qui s'affiche désormais, il est indiqué que vous pouvez utiliser l'application *Microsoft Authenticator* pour la MFA.  

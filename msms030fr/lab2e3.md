@@ -2,7 +2,8 @@
 layout: stage
 title: "Lab2-Ex3 - Gestion des groupes"
 length: "00"
-date: "11/11/2023"
+date: "15/05/2024"
+script: "msms030.js"
 ---
 # Scénario
 Précédemment vous avez ajouté plusieurs compte Microsoft 365. Pour poursuivre dans votre rôle d'administration de Dominique Skyetson, vous souhaitez désormais mettre en place la gestion des groupes dans Microsoft 365. Dans cet exercice, vous allez créer de nouveaux groupes et gérer leur contenu en leur affectant des utilisateurs. Vous testerez aussi l'effet d'une suppression de groupe sur les utilisateurs contenus dans celui-ci.
@@ -22,7 +23,7 @@ En tant que Dominique Skyetson, vous souhaitez désormais mettre en oeuvre les g
 1. Dans la fenêtre **Add members**, cliquez sur **Next**.
 1. Dans la fenêtre **Edit settings**, saisissez ```insidesales``` dans le champ **Group email address**.  
 	>**Note :** A droite du champ **Group email address** se trouve le domaine. Il est déjà prérempli avec le domaine par défaut de Adatum. Cela diffère de l'ajout d'utilisateurs en ce que vous ne pouvez choisir un autre domaine ; laissez donc la valeur par défaut telle quelle.  
-	Après avoir configuré ce champt, l'adresse email du groupe Inside Sales devrait ressembler à : **insidesales@labxxxxxx.godeploylabs.com**  
+	Après avoir configuré ce champt, l'adresse email du groupe Inside Sales devrait ressembler à : **insidesales@[godeployDomain].godeploylabs.com**  
 	Arès avoir configuré l'adresse email, sous la section **Privacy**, laissez la valeur par défaut à **Public** et laissez la case cochée **Create a team for this group** avant de cliquer sur **Next**.
 1. Dans la fenêtre **Review and finish adding group** , vérifiez votre saisie et si une option a besoin d'être modifiée, cliquez sur l'option **Edit** en regard de celle-ci; sinon, cliquez sur le bouton **Create group** en bas de la page.
 1. Sur la page **Inside Sales group created**, un message s'affiche indiquant que l'apparition du groupe dans la liste pourra prendre jusqu'à 5 minutes. Cliquez sur **Close**

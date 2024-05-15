@@ -2,7 +2,8 @@
 layout: stage
 title: "Lab2-Ex1 - Gestion des utilisateurs avec le centre d'administration Microsoft 365"
 length: "00"
-date: "13/05/2024"
+date: "15/05/2024"
+script: "msms030.js"
 ---
 # Scénario
 Dominique Skyetson est l'administrateur de l'entreprise Adatum. Comme il n'a pas de compte utilisateur Microsoft 365 déclaré pour lui-même, Dominique s'est jusqu'à présent connecté à l'administration du tenant avec le compte *Mod Administrator*. Dans cet exercice, il va se créer son compte et y assigner le rôle *Global Administrator* qui lui permettra ensuite de faire toutes les actions administratives sur le tenant de manière nominative.
@@ -27,10 +28,10 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 	- Display name : En tabulant dans ce champ, il sera automatiquement rempli avec la valeur ```Dominique Skyetson```.
 	- Username : ```dom```  
 		>**IMPORTANT :** A droite du champ **Username** se trouve le domaine de l'utilisateur. Il sera rempli avec le domaine DNS configuré comme étant le domaine par défaut. Pour Adatum, il s'agit du domaine que vous avez ajouté lors du premier atelier.  
-		Cependant, pour les besoin des exercices concernant la synchronisation d'identité, il vous est conseillé de sélectionner le domaine **WWLxxxxx.onmicrosoft.com** pour tous les utilisateurs que vous créez dans cet exercice.  
-		C'est pourquoi vous devez sélectionner la flèche à droite du champ **Domains** pour sélectionner le domaine **WWLxxxxx.onmicrosoft.com** (s'il vous est impossible de sélectionner ce domaine à la création des utilisateurs, vous pouvez le changer à postériori).  
+		Cependant, pour les besoin des exercices concernant la synchronisation d'identité, il vous est conseillé de sélectionner le domaine **[onmicrosoftDomain].onmicrosoft.com** pour tous les utilisateurs que vous créez dans cet exercice.  
+		C'est pourquoi vous devez sélectionner la flèche à droite du champ **Domains** pour sélectionner le domaine **[onmicrosoftDomain].onmicrosoft.com** (s'il vous est impossible de sélectionner ce domaine à la création des utilisateurs, vous pouvez le changer à postériori).  
 		Après avoir configuré ce champ, le nom utilisateur de Dominique devrait apparaitre sous la forme:
-		**dom@WWLxxxxx.onmicrosoft.com**  
+		**dom@[onmicrosoftDomain].onmicrosoft.com**  
 	- Décochez l'option **Automatically create a password**
 	- Password : ```Pa55w.rd``` (Astuce : cliquez sur l'icône d'oeil à droite pour vérifier le mot de passe saisi)
 	- Cochez la case **Require this user to change their password when they first sign in**
@@ -47,7 +48,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 1. Sur la page **Review and finish** , vérifiez les informations saisies. Si quoi que ce soit nécessite d'être changé, cliquez sur le lien **Edit** correspondant et réalisez les changements nécessaires. Sinon, si tout est correct, cliquez sur **Finish adding**. 
 1. Sur la page **Dominique Skyetson added to active users**, cliquez sur **Show** à coté de **Password** pour vérifier que vous avez bien saisi correctement **Pa55w.rd**.
 1. En bas de la page, cliquez sur le lien **Add another user** et recommencez les étapes 3 à 12 précédentes, pour ajouter les utilisateurs avec les informations suivantes :
-	- **Username domain :** Lors de la saisie du **Username** pour chaque utilisateur, assurez-vous de sélectionner le domaine **WWLxxxxx.onmicrosoft.com** comme vous l'avez fait pour le compte de Dominique (Si vous ne pouvez le sélectionner à la création, changez-le une fois le compte créé).
+	- **Username domain :** Lors de la saisie du **Username** pour chaque utilisateur, assurez-vous de sélectionner le domaine **[onmicrosoftDomain].onmicrosoft.com** comme vous l'avez fait pour le compte de Dominique (Si vous ne pouvez le sélectionner à la création, changez-le une fois le compte créé).
 	- **Password :** Utilisez le mot de passe ```Pa55w.rd```, et, comme pour le compte de Dominique, exigez le changement de mot de passe à la première connexion.
 	- **Licenses :** Affectez une licence **Office 365 E5 (no Teams)** et une licence **Microsoft Teams Enterprise** à l'utilisateur **Alan Yoo**, en décochant l'App **Skype for Business Online (plan1)** comme vous l'avez fait pour Dominique Skyetson. Pour tous les autres utilisateurs, sélectionner l'option **Create user without product license (not recommended)**.
 	- **Roles :** Par défaut chaque utilisateur se verra affecter le rôle **User role (no administration access)**; Cela suffira pour le moment. Dans un futur exercice, vous affecterez des rôles administratifs à certains utilisateurs pour tester la délégation administrative. Ainsi, en arrivant sur la page **Optional settings**, cliquez directement sur **Next**.
@@ -57,7 +58,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 	```Libby Hayward``` | username ```libby``` | Ni licence ni rôle admin
 	```Laura Atkins```| username ```laura``` | Ni licence ni rôle admin
 1. Après avoir ajouté le dernier compte (celui de *Laura Atkins*) cliquez sur le bouton **Close** pour revenir à la liste des **Active users**
-1. Vérifiez la liste **Active users**. Vérifiez que chacun des précédents utilisateurs a pour domaine **WWLxxxxx.onmicrosoft.com** et changez-le si ce n'est pas le cas.
+1. Vérifiez la liste **Active users**. Vérifiez que chacun des précédents utilisateurs a pour domaine **[onmicrosoftDomain].onmicrosoft.com** et changez-le si ce n'est pas le cas.
 1. Restez connecté sur LON-CL1 et laissez votre navigateur Internet ouvert pour la tâche suivante de cet atelier.
 
 ## Tâche 2 : Modification d'utilisateurs Microsoft 365
@@ -89,7 +90,7 @@ Teams Enterprise**. Déselectionnez l'*App* **Skype for business Online (plan 1)
 1. Dans le panneau **Restore Libby Hayward**, vous avez l'option d'affecter un nouveau mot de passe à Libby ou de demander la génération automatique d'un nouveau mot de passe. **Sur le terrain, il est conseillé de générer automatiquement un mot de passe et d'exiger que l'utilisateur le change à sa première connexion.**  
 	Puisque l'option **Auto-generate password** est sélectionnée par défaut et que la case **Make this user change their password when they first sign in** est cochée, cliquez simplement sur le bouton **Restore** en bas de la page.
 1. Le panneau **Libby Hayward has been restored** s'affiche pour confirmer que le compte de Libby a été restauré et son mot de passe remplacé. Vous avez également l'option d'envoyer le nouveau mot de passe de Libby par email.  
-	Sélectionnez la case en regard de **Send password in email**, et dans le champ **Email the new password to the following recipients**, l'adresse email du compte *MOD Administrator* est inscrite par défaut. Après cette adresse, saisissez un point-virgule, suivi de l'adresse email de Dominique (**dom@WWLxxxxx.onmicrosoft.com**) avant de cliquer sur le bouton **Send email and close**. 
+	Sélectionnez la case en regard de **Send password in email**, et dans le champ **Email the new password to the following recipients**, l'adresse email du compte *MOD Administrator* est inscrite par défaut. Après cette adresse, saisissez un point-virgule, suivi de l'adresse email de Dominique (**dom@[onmicrosoftDomain].onmicrosoft.com**) avant de cliquer sur le bouton **Send email and close**. 
 1. Le compte de Libby ne devrait plus apparaitre dans la liste **Deleted users**. Dans le portail **Microsoft 365 admin center**, dans le menu de navigation, sélectionnez **Active users**.
 1. Vérifiez que **Libby Hayward** apparait dans la liste.
 1. Laissez votre navigateur Internet ouvert pour la suite des opérations en tâche suivante. 
@@ -107,7 +108,7 @@ Dans cette tâche, vous allez vérifier l'impact des changements que vous avez f
 1. Dans la barre des tâches, cliquez sur l'icône de **Microsoft Edge** pour relancer une session de navigation et connectez-vous sur le portail Microsoft 365 à l'adresse suivante :  
 ```https://www.microsoft365.com```
 1. Dans la fenêtre **Pick an account**, sélectionnez **+ Use another account**.
-1. Dans la fenêtre **Sign in**, entrez **Libby@WWLxxxxx.onmicrosoft.com** et cliquez sur **Next**.
+1. Dans la fenêtre **Sign in**, entrez **Libby@[onmicrosoftDomain].onmicrosoft.com** et cliquez sur **Next**.
 1. Dans la fenêtre **Enter password**, saisissez le mot de passe temporaire de Libby dont vous avez pris note à l'étape précédente et cliquez sur le bouton **Sign in**.
 1. Dans la fenêtre **Update your password**, entrez de nouveau le mot de passe temporaire de Libby dans le champ **Current password**, et utilisez le mot de passe ```ibForm@tion``` dans les champs **New password** et **Confirm password**. Cliquez sur **Sign in**.
 1. Si une fenêtre **Welcome to Microsoft 365** apparait, cliquez deux fois sur la flèche de droite pour accéder à la validation vous permettant de la fermer.
@@ -116,12 +117,12 @@ Dans cette tâche, vous allez vérifier l'impact des changements que vous avez f
 1. Une fois déconnecté, ressaisissez l'adresse suivante dans la barre d'adresse de votre navigateur si nécessaire :  
 ```https://www.microsoft365.com```
 1. Dans la page **login**, cliquez sur le choix **Switch to a different account** en dessous du bouton **Sign in**
-1. Saisissez **Alan@WWLxxxxx.onmicrosoft.com** dans le champ **Email address** avant de cliquer sur **Sign in**.
+1. Saisissez **Alan@[onmicrosoftDomain].onmicrosoft.com** dans le champ **Email address** avant de cliquer sur **Sign in**.
 1. Dans la fenêtre **Sign in**, cliquez sur **Next**
 1. Dans la fenêtre **Enter password**, saisissez ```Pa55w.rd``` et cliquez sur **Sign in**.
 1. Sur la fenêtre **Pick an account**, constatez qu'un message d'erreur apparait, indiquant que le compte de Alan a été bloqué. Vous venez de vérifier que Alan ne peut plus se connecter à Microsoft 365.
 1. Vous allez finalement vous connecter avec votre compte admin de Dominique Skyetson, en utilisant le compte nominatif que vous avez créé dans la première tâche de cet exercice. Dans la fenêtre **Pick an account**, sélectionnez donc **+ Use another account**.
-1. Dans la fenêtre **Sign in**, saisissez **dom@WWLxxx.onmicrosoft.com** et cliquez sur **Next**.
+1. Dans la fenêtre **Sign in**, saisissez **[onmicrosoftDomain].onmicrosoft.com** et cliquez sur **Next**.
 1. Dans la fenêtre suivante, utilisez le mot de passe ```Pa55w.rd``` et cliquez sur **Sign in**.
 1. Dans la fenêtre **Update your password**, saisissez ```Pa55w.rd``` dans le champ **Current password** et saisissez ```ibForm@tion``` dans les champs **New password** et **Confirm password**. Cliquez sur **Sign in**.
 1. Si une fenêtre **Welcome to Microsoft 365** apparait, cliquez deux fois sur la flèche de droite pour accèder à la validation vous permettant de la fermer. 
