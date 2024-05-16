@@ -27,7 +27,7 @@ Vous utiliserez ensuite la VM **LON-CL2** pour installer Microsoft 365 Apps.
 1. Maximisez votre navigateur Internet puis rendez-vous sur la page d'accueil **Microsoft 365** en utilisant l'adresse suivante : ```https://www.microsoft365.com```
 	>**Note :** Si n'importe quel compte est automatiquement connecté, déconnectez-le en cliquant sur l'icône d'utilisateur (rond en haut à droite) et en sélectionnant **Sign out**, retapez ensuite ```https://www.microsoft365.com``` dans la barre d'adresse.
 1. Cliquez sur **Sign in**.
-1. Dans la fenêtre **Sign in**, tapez ```Laura@m[onmicrosoftDomain].onmicrosoft.com``` avant de cliquer sur **Next**.
+1. Dans la fenêtre **Sign in**, tapez ```Laura@[onmicrosoftDomain].onmicrosoft.com``` avant de cliquer sur **Next**.
 1. Dans la fenêtre **Enter password**, saisissez ```Pa55w.rd``` et cliquez sur **Sign in**.
 1. Dans la boite de dialogue **Update your password**, entrez **Pa55w.rd**** dans le champ **Current password**, puis entrez ```ibForm@tion``` dans les champs **New password** et **Confirm password**. Cliquez sur **Sign in**.
 1. Si une fenêtre **Stay signed in?** apparait, cochez la case **Don't show this again** et cliquez sur **Yes.**
@@ -67,7 +67,7 @@ Dominique va désormais tester si les utilisateurs avec licence peuvent être em
 1. Sur LON-CL2, le navigateur Internet devrait être resté ouvert sur la page du compte de Alan contenant la section **Office apps and devices**.  
 	Cliquez sur l'icône **Refresh** du navigateur pour recharger complètement la page.
 	>**Note :** IL pourra être nécessaire d'attendre quelques instants et de recharger de nouveau la page...
-1. Sous la section **Office apps &amp; devices**, un bouton **Install Office** est apparu, précédé d'un message indiquant que Alan peut procéder à l'installation pour 5 PCs ou Macs, 5 tablettes et 5 smartphones.  
+1. Sous la section **Office apps &amp; devices**, un bouton **Install Office** est apparu.  
 	>**Important :** Vous venez de vérifier qu'un utilisateur avec une licence Office affectée est capable de lancer le téléchargement et l'installation de la suite Office depuis son portail si le paramètre global est actif.
 1. Restez sur cette page sur LON-CL2 pour réaliser l'installation *user-driven* dans la tâche suivante.
 
@@ -83,9 +83,9 @@ Dans la tâche précédente, vous vous êtes connecté avec le compte de Alan Yo
 1. L'installation va prendre quelques minutes à se terminer. Une fois l'installation réalisée, cliquez sur le bouton **Close** dans la fenêtre **You're all set!**.
 1. Pour vérifier l'installation de Microsoft 365 Apps for enterprise par Alan Yoo, cliquez sur le bouton **Démarrer** en bas à gauche de la barre des tâches. La section **Recently added** (en haut du menu **Démarrer**) affiche Microsoft 365 Apps for enterprise qui vient juste d'être installée. Cela pourra inclure Word, PowerPoint, OneNote, Outlook, Publisher, Access, Teams et Excel.
 1. Dans le menu **Démarrer**, cliquez sur **Word**.
-1. Dans la fenêtre **Hello Alan, welcome to Word**, cliquez sur **Continue**.
-1. Dans la fenêtre **Activate Office**, vérifiez l'adresse de Alan : ```alan@[onmicrosoftDomain].onmicrosoft.com``` avant de cliquer sur **Next**.
-1. Dans la fenêtre **Enter password**, tapez **ibForm@tion** et cliquez sur **Sign in.**
+1. Dans la fenêtre **Sign in to get strated with Word**, cliquez sur **Sign in or create account**.
+1. Dans la fenêtre **Activate Office**, saisissez l'adresse de Alan : ```alan@[onmicrosoftDomain].onmicrosoft.com``` avant de cliquer sur **Next**.
+1. Dans la fenêtre **Enter password**, tapez ```ibForm@tion``` et cliquez sur **Sign in.**
 1. Sur la fenêtre **Stay signed in to all your apps**, cliquez sur le lien **No, sign in to this app only**.
 1. Sur la fenêtre **Accept the license agreement**, cliquez sur le bouton **Accept**.
 1. Dans la fenêtre **Your privacy matters** window, cliquez sur **Close**.

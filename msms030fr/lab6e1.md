@@ -16,7 +16,24 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 - La modération des messages
 - La traçabilité des messages
 
-## Tâche 1 - Création de connecteurs pour TLS
+## Tâche 1 - Changement du domaine de messagerie
+Microsoft ayant eu de nombreux problèmes d'utilisation des domaines *onmicrosoft.com* pour des attaques cyber, ces domaines sont désormais marqués comme étant illégitimes (spam) par défaut. Dans cette première tâche, vous allez ajouter une adresse email basée sur le domaine [godeployDomain].godeploylabs.com à toutes les boites qui seront utilisées pour test.
+1. Ouvrez une session sur LON-CL1 en utilisant le compte ```adatum\administrator``` et le mot de passe ```Pa55w.rd```.
+1. Cliquez sur l'icône de **Microsoft Edge** dans la barre des tâches pour lancer votre navigateur Internet. Maximisez sa fenêtre.
+1. Dans votre navigateur internet, utilisez l'adresse ```https://admin.microsoft.com``` pour ouvrir le portail **Microsoft 365 admin center**.
+1. Connectez-vous au centre d'administration avec le compte de Dominique (```dom@[onmicrosoftDomain].onmicrosoft.com``` et mot de passe ```ibForm@ion```)
+1. Dans le menu de navigation du portail **Microsoft 365 Admin center**, sous la section **Admin Centers** cliquez sur **Exchange**. Cela va ouvrir le portail administratif de Exchange Online dans un nouvel onglet.
+1. Si nécessaire, dans le portail **Exchange admin center**, dans le menu de navigation à gauche, ouvrez le groupe d'options **Recipients** pour sélectionner **Mailboxes**.
+1. Cliquez sur le nom de *Dominique Skyetson** puis, dans le panneau d'informations qui apparait, cliquez sur le lien **Manage email address types** dans la section **Email addresses**.
+1. Sur le panneau **Manage email address types**, cliquez sur **+ Add email address type**
+1. Sur le panneau **New email address**, saisissez ```dom``` dans le champ **Email address**, avant de sélectionner le domaine **[godeployDomain].godeploylabs.com** après le sigle @.
+1. cliquez sur la case **Set as primary email address** afin de la sélectionner et valider en utilisant le bouton **OK** en bas de page.
+1. De retour sur le panneau **Manage email adress types**, cliquez sur **Save** puis fermez le panneau d'informations de Dominique avec la croix de fermeture en haut à droite.  
+**Important :** Répétez ensuite les étapes précedentes pour les comptes utilisateurs qui vont nous servir pour les test dans nos ateliers :  
+> Alan Yoo | email : ```alan```@[godeployDomain].godeploylabs.com
+	Megan Bowen | email : ```meganB```@[godeployDomain].godeploylabs.com
+
+## Tâche 2 - Création de connecteurs pour TLS
 Dans cette tâche, vous allez créer deux connecteurs pour forcer l'utilisation de TLS avec Trey Research, qui est une entreprise partenaire de Adatum avec laquelle des échanges de données sensibles doivent être sécurisés lors de leur transmission par email. Un connecteur servira pour la gestion des messages sortant vers Trey Research et un autre permettra d'accepter les messages entrant depuis l'entreprise partenaire.  
 1. Ouvrez une session sur LON-CL1 en utilisant le compte ```adatum\administrator``` et le mot de passe ```Pa55w.rd```.
 1. Cliquez sur l'icône de **Microsoft Edge** dans la barre des tâches pour lancer votre navigateur Internet. Maximisez sa fenêtre.
@@ -37,7 +54,7 @@ Dans cette tâche, vous allez créer deux connecteurs pour forcer l'utilisation 
 1. Notez que le statut de la tâche **Send test email** est **Failed**.
 1. Sur la page **Validation email**, cliquez sur **Next** avant de cliquer sur **Yes proceed** pour sauvegarder le connecteur bien que la validation ait échoué.  
 	>**Note :** La validation du flux de message n'aboutit pas car vous avez ici utilisé une entreprise fictionnelle qui n'existe pas. C'est le comportement attendu pour cet atelier.
-1. Sur la page *Review Connector**, cliquez sur **Create connector** puis sur **Done**.
+1. Sur la page **Review Connector**, cliquez sur **Create connector** puis sur **Done**.
 1. Vous venez d'ajouter un connecteur d'émission (*outbound*) de Adatum vers Trey Research. Vous allez maintenant créer un connecteur de réception (*inbound*) de Trey Research vers Adatum. Dans le centre d'admin Exchange Online, sur la page **Connectors**, cliquez de nouveau sur le bouton **+ Add a connector**.
 1. Sur le panneau **New connector**, sélectionnez **Partner organization** sous la section **Connection from**.
 1. Notez que **Office 365** est présélectionné automatiquement sous la section **Connection to**. Cliquez sur **Next**.
@@ -49,7 +66,7 @@ Dans cette tâche, vous allez créer deux connecteurs pour forcer l'utilisation 
 1. Sur la page **Connectors**, vous devriez désormais voir le connecteur d'envoi (*outbound*) et de réception (*inbound*) que vous venez de créer.  
 1. Laissez votre navigateur ouvert pour réaliser la tâche suivante.
 
-## Tâche 2 - Créer des règles de transport
+## Tâche 3 - Créer des règles de transport
 1. Vous devriez être resté connecté sur **LON-CL1** avec le compte **adatum\Administrator** et le mot de passe **Pa55w.rd**.
 1. Votre navigateur Internet devrait être resté ouvert et connecté sur les portails **Microsoft 365 admin center** et **Exchange admin center** avec le compte de Dominique Skyetson.
 1. Dans le portail **Exchange admin center**, le groupe d'options **Mail flow** devrait être resté ouvert suite à la tâche précédente, cliquez sur **Rules** dans ce groupe d'options.
@@ -77,13 +94,13 @@ Dans cette tâche, vous allez créer deux connecteurs pour forcer l'utilisation 
 1. Cliquez sur la règle que vous venez de créer et basculez le choix **Enable or disable rule** sur **Enabled** avant de fermer le panneau de la règle.
 1. Laissez votre navigateur ouvert pour réaliser la tâche suivante.
 
-## Tâche 3 - Validation des règles de transport
+## Tâche 4 - Validation des règles de transport
 Dans cette tâche, vous allez tester les nouvelles règles de transport que vous venez de créer. Vous allez envoyer un email de Alan Yoo à Megan Bowen, ce qui devrait déclencher la règle de transport de modération. Vous vérifierez ensuite que le message d'avertissement a été ajouté, respectant la première règle.
 1. Basculez vers la machine virtuelle **LON-CL2**. Vous devriez être resté connecté avec le compte **Admin**, le navigateur Internet étant resté ouvert et connecté avec le compte de **Alan Yoo**. Sur l'onglet **Home - Microsoft 365**, cliquez sur l'icône de **Outlook** dans le menu des applications à gauche.
 1. Sur la page **Mail - Alan Yoo - Outlook**, cliquez sur le bouton **New mail**.
 1. Dans le formulaire de nouveau message, saisissez ```Megan``` dans le champ **To**. Sélectionnez **Megan Bowen** une fois que son compte a été trouvé.
 1. Dans le champ **Subject**, entrez ```Message de test du transport Exchange```.
-1. Dans le corps du message, saisissez **Message de test de l'avertissement et de la modération par règles de transport Exchange**.
+1. Dans le corps du message, saisissez ```Message de test de l'avertissement et de la modération par règles de transport Exchange```.
 1. Cliquez sur le bouton **Send**.
 1. Vous allez maintenant vous connecter sur la boite aux lettres de Dominique Skyetson. Basculez vers la machine virtuelle **LON-CL1**. Dans votre navigateur Internet, utilisez le menu des application 365 (la grille de 3x3 en haut à gauche des pages 365) pour lancer l'application web Outlook.
 1. Dans l'onglet **Mail - Dominique Skyetson - Outlook**, Vérifiez la boite de réception **Inbox** de Dominique. Si vous voyez le message de Alan Yoo, ouvrez le message et vérifiez que le message d'avertissement (**If you are not the intended \[...] delete it.**) a été ajouté à la suite du corps du message.  
@@ -101,14 +118,14 @@ Dans cette tâche, vous allez tester les nouvelles règles de transport que vous
 1. Sur LON-CL1, fermez votre page de navigation privée de votre navigateur Internet.
 1. Basculez sur LON-CL2 pour y fermer votre navigateur Internet.
 
-## Tâche 4 - Traçabilité de la livraison des messages
+## Tâche 5 - Traçabilité de la livraison des messages
 1. Sur LON-CL1, vous devriez être resté connecté avec le compte **adatum\Administrator** et le mot de passe **Pa55w.rd**.
 1. Votre navigateur Internet devrait être resté ouvert et connecté sur les portails **Microsoft 365 admin center** et **Exchange admin center** avec le compte de Dominique Skyetson (vous pouvez fermer l'onglet avec la boite aux lettres outlook de Dominique).
 1. Dans le portail **Exchange admin center**, dans le menu de navigation, dans le groupe d'options **mail flow**, cliquez sur **Message trace**.
 1. Prenez quelques instants pour consulter les différentes requêtes proposées par défaut.
 1. Cliquez sur le bouton **+ Start a trace**.
 1. Dans le panneau **New message trace**, vous pouvez jeter un oeil aux options de recherche avant de cliquer sur **Search**.
-1. Dans la fenêtre **Message trace search results**, cliquez sur le message envoyé par **alan@[onmicrosoftDomain].onmicrosoft.com** à **meganb@[onmicrosoftDomain].onmicrosoft.com**.
+1. Dans la fenêtre **Message trace search results**, cliquez sur le message envoyé par **alan@[godeployDomain].godeploylabs.com** à **meganb@[godeployDomain].godeploylabs.com**.
 1. Dans la fenêtre **Message de test du transport Exchange**, consultez les informations détaillées sur le transport du message. Sélectionnez la flèche en regard de **Message events**.
 1. Dans la colonne **Event**, constatez la présence des évènements **Transport rule** qui ont appliqué le message d'avertissement et rerouté le message vers la boite de Dominique Skyetson.
 1. Cliquez sur le **X** de fermeture en haut à droite du panneau.
