@@ -2,7 +2,8 @@
 layout: stage
 title: "Lab7-Ex1 - Configuration de Microsoft Teams"
 length: "00"
-date: "13/05/2024"
+date: "17/05/2024"
+script: "msms030.js"
 ---
 # Scénario
 Dans cet exercice, vous allez apprendre à gérer et configurer les principales fonctionnalités de l'environnement *Teams* depuis *le Teams admin center*. Dans son rôle d'administrateur d'Adatum, Dominique Skyetson a décidé de customiser la stratégie de l'entreprise concernant les réunions. Les stratégies de réunion contrôlent les fonctionnalités disponibles pour les participants. Une stratégie à l'échelle de l'entreprise, nommée *Global* est créée par défaut et est affectée à tous les utilisateurs de l'entreprise lors de la création du tenant. Dominique a choisi de modifier cette stratégie par défaut.  
@@ -42,7 +43,7 @@ Toujours en tant que Dominique Skyetson, Administrateur de l'entreprise Adatum, 
 1. Les portails **Microsoft 365 admin center** et **Microsoft Teams admin center** devraient encore être resté ouverts dans votre navigateur (et vous devriez y être connecté avec le compte de *Dominique Skyetson*).
 1. sur le portail **Microsoft Teams admin center**, cliquez sur **Meeting settings** dans le groupe d'options **Meetings**.
 1. Sur la page **Meetings settings**, dans la section **Email invitation**, Saisissez les informations suivantes :
-	- **Logo URL** : ```https://renaudwangler.github.io/ib-labs/assets/logo_ibcegos.png```
+	- **Logo URL** : ```https://renaudwangler.github.io/ib-pages/logo_ibcegos.png```
 	- **Legal URL** : ```https://adatum.com/legal.html```
 	- **Help URL** : ```https://adatum.com/joiningmeetinghelp.html```
 	- **Footer :** ```Please accept at your earliest convenience. Thank you!```
@@ -96,9 +97,9 @@ Créer une file d'attente téléphonique est un processus en deux étapes, dans 
 1. Sur l'onglet **Teams admin center** de votre navigateur, dans le menu de navigation, ouvrez le groupe d'options **Voice** et cliquez sur **Resource accounts.**
 1. Sur la page **Resource accounts** cliquez sur **+ Add** dans la barre de menu au-dessus de la liste des comptes de ressource.
 1. Sur le panneau **Add resource account** qui apparaît, entrez les information suivantes :
-	- **Display name** : **Calling Queue 1**
-	- **Username** : **cq1**
-	- **Domain name** : Dans le champ domaine à droite de l'adresse email, sélectionnez, dans le menu déroulant votre nom de domaine **m365xxxxx.onmicrosoft.com**.
+	- **Display name** : ```Calling Queue 1```
+	- **Username** : ```cq1```
+	- **Domain name** : Dans le champ domaine à droite de l'adresse email, sélectionnez, dans le menu déroulant votre nom de domaine **[onmicrosoftDomain].onmicrosoft.com**.
 	- **Resource account type** : **Call queue**
 1. Cliquez sur **Save**.
 1. **Calling Queue 1** apparaît désormais dans la liste des comptes de ressource.
@@ -155,7 +156,7 @@ Grâce à la fonctionnalité d'accès externe, les utilisateurs *Teams* d'autres
 Dans le contexte du projet pilote d'Adatum, Dominique Skyetson souhaite bloquer la communication avec tous les domaines Entra Id externes, sauf pour ce qui concerne les utilisateurs de deux entités partenaire de Adatum (microsoft.com et ib.cegos.fr).
 1. Sur le portail **Microsoft Teams admin center**, cliquez sur **External access** dans le groupe d'options **Users**.
 1. Sur la page **External access**, cliquez sur le menu **Allow all external domains** et sélectionnez **Allow only specific external domains**
-1. Pour ajouter le domaine avec lequel la communication est autorisée, cliquez sur le bouton **Allow domains**.
+1. Pour ajouter le domaine avec lequel la communication est autorisée, cliquez sur le bouton **Add external domain**.
 1. Dans le panneau **Add external domain**, saisissez ```microsoft.com``` dans le champ **Domain** avant de cliquer sur **Done**.
 1. Pour ajouter un second domaine autorisé, cliquez sur **+ Add a domain** au-dessus de la liste des domaines autorisés.
 1. Dans le panneau **Add external domain**, saisissez ```ib.cegos.fr``` dans le champ **Domain** avant de cliquer sur **Done**.
@@ -182,7 +183,7 @@ Dans le contexte du projet pilote Adatum, Dominique Skyetson va maintenant modif
 1. Dans la boite de dialogue **Changes will take time to take effect**, cliquez sur **Confirm**.
 1. Conservez votre navigateur Internet ouvert pour la tâche suivante.
 
-## Tâche 9 – Gestion des paramètres Teams
+## Tâche 9 – Gestion des paramètres d'équipes
 Le portail d'administration de *Teams* inclut un ensemble de paramètre qui contrôlent la performance du client *Teams*.  
 Dominique Skyetson va, pour finir cet atelier, configurer un certain nombre de ces paramêtres choisis par l'équipe projet pilote d'Adatum.
 1. Sur le portail **Microsoft Teams admin center**, cliquez sur **Teams settings** dans le groupe d'options **Teams**.

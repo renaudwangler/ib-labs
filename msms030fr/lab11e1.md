@@ -2,7 +2,8 @@
 layout: stage
 title: "Lab11-Ex1 - Etat de santé du service Microsoft 365"
 length: "00"
-date: "13/11/2023"
+date: "17/05/2024"
+script: "msms030.js"
 ---
 # Scénario
 Pour conclure le projet pilote d'Adatum, Dominique Skyetson souhaite faire le point sur la visibilité de l'état des services Microsoft 365, incluant Office on the web, Engage et le MDM. Après une petite recherche, Dominique a découvert que cette information est directement accessible dans la page *Service Health* sur le portail d'administration Microsoft 365. Ainsi, si Adatum rencontre des problèmes avec l'exploitation d'un service Cloud, Dominique peut vérifier l'état de santé dudit service pour déterminer si le problème est actuel/connu/en cours de résolution avant d'ouvrir un ticket de support chez Microsoft et/ou de passer du temps à résoudre le souci. 

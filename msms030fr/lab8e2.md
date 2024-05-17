@@ -2,7 +2,8 @@
 layout: stage
 title: "Lab8-Ex2 - Configuration de sites SharePoint Online"
 length: "00"
-date: "13/05/2024"
+date: "17/05/2024"
+script: "msms030.js"
 ---
 # Scénario
 Dans cet exercice, Dominique Skyetson veut commencer à explorer les sites *SharePoint Online*. Pour en comparer le fonctionnement, Dominique va créer un site en utilisant le portail *SharePoint Online admin center*, avant d'en créer un second en utilisant Windows PowerShell. Elle va ensuite mettre en place les permissions d'accès sur les sites et vérifier leur mode de fonctionnement.
@@ -40,10 +41,10 @@ Après avoir créé un site avec le portail d'administration de Sharepoint Onlin
 	```Connect-SPOService –Url https://M365xxxxx-admin.sharepoint.com```
 	>**Note :** M365xxxxx est votre préfixe de tenant que vous avez noté au début de vos ateliers. Notez que, dans cette commande, il est suffixé de *-admin*.
 
-1. Dans la boite de dialogue **Sign in**, saisissez le nom de connexion de Dominique Skyetson (dom@M365xxxxx.onmicrosoft.com) et cliquez sur **Next**.
+1. Dans la boite de dialogue **Sign in**, saisissez le nom de connexion de Dominique Skyetson (dom@[onmicrosoftDomain]x.onmicrosoft.com) et cliquez sur **Next**.
 1. Dans la boite de dialogue **Enter password**, saisissez ```ibForm@tion``` et cliquez sur **Sign in**.
 1. Dans l'invite Powershell, utilisez la commande suivante pour créer un nouveau site nommé **Accounting** :  
-	```New-SPOSite -Url https://M365xxxxx.sharepoint.com/sites/Accounting -Owner dom@M365xxxxx.onmicrosoft.com -StorageQuota 500 -NoWait -Template PROJECTSITE#0 –Title Accounting```
+	```New-SPOSite -Url https://M365xxxxx.sharepoint.com/sites/Accounting -Owner dom@[onmicrosoftDomain].onmicrosoft.com -StorageQuota 500 -NoWait -Template PROJECTSITE#0 –Title Accounting```
 	>**Note :** M365xxxxx est votre préfixe de tenant que vous avez noté au début de vos ateliers. Notez que, dans cette commande, il est **n'est pas** suffixé de *-admin* !
 
 1. Minimisez la fenêtre **Administrator: Windows Powershell ISE**.
@@ -65,7 +66,7 @@ Après avoir ajouté les sites de la formation et de la comptabilité d'Adatum, 
 1. Fermez le panneau **Add site admins to Training**.
 1. Basculez sur la machine virtuelle **LON-CL2** ou vous devriez encore être connecté avec le compte **.\admin**.
 1. Dans le navigateur Edge, le Webmail **Outlook** devrait être resté ouvert (et vous devriez y être connecté avec le compte de *Alan Yoo*).
-1. Dans la barre d'adresse du navigateur, utilisez l'adresse suivante : ```https://M365xxxxx.sharepoint.com/sites/Training``` pour ouvrir le site Sharepoint du service formation de Adatum.
+1. Dans la barre d'adresse du navigateur, utilisez l'adresse suivante : ```https://[onmicrosoftDomain].sharepoint.com/sites/Training``` pour ouvrir le site Sharepoint du service formation de Adatum.
 1. Une fois que le site **Training** s'ouvre, attendez que l'icône d'engrenage s'affiche en haut à droite (à gauche des initiales de Alan Yoo). Cliquez sur cette icône d'engrenage.
 1. Sur le panneau **Settings**, cliquez sur **Site permissions**.
 1. Sur le panneau **Permissions**, cliquez sur **Advanced permissions settings**.
@@ -76,8 +77,8 @@ Après avoir ajouté les sites de la formation et de la comptabilité d'Adatum, 
 ## Tâche 4 - Vérification de l'accès aux sites
 Dans cette tâche, Alan Yoo, en tant qu'administrateur du site Sharepoint de la formation va donner l'accès au site du service Formation à deux utilisateurs qui en ont besoin : Libby Hayward et Elvis Cress. Tandis que Libby va demander l'accès au site, Alan sait déjà que Elvis a besoin d'accès et va lui assigner directement.
 1. Sur **LON-CL2**, faites un clic-droit sur l'icône de **Edge** sur la barre des tâches, et dans le menu qui apparaît, choisissez **New InPrivate window**.
-1. Dans la nouvelle session **InPrivate Browsing** de votre navigateur Internet, entrez l'adresse suivante pour ouvrir le site Sharepoint du service formation : ```https://M365xxxxx.sharepoint.com/sites/Training```.
-1. Dans la boite de dialogue **Sign in**, entrez **libby@M365xxxxx.onmicrosoft.com** et cliquez sur **Next**.
+1. Dans la nouvelle session **InPrivate Browsing** de votre navigateur Internet, entrez l'adresse suivante pour ouvrir le site Sharepoint du service formation : ```https://[onmicrosoftDomain].sharepoint.com/sites/Training```.
+1. Dans la boite de dialogue **Sign in**, entrez **libby@[onmicrosoftDomain].onmicrosoft.com** et cliquez sur **Next**.
 1. Sur la page **Enter password**, saisissez ```ibForm@tion``` et cliquez sur **Sign in**.
 1. Sur la page **Stay signed in?**, cliquez sur **Yes**.
 1. Une page s'affiche **Access required** qui indique **You need permission to access this site.** Un champ de message est prérempli avec la valeur : **I'd like access, please**.  
@@ -96,12 +97,12 @@ Dans cette tâche, Alan Yoo, en tant qu'administrateur du site Sharepoint de la 
 1. Sur la boite de dialogue **Share 'Training'**, l'onglet **Invite People** est affiché par défaut. Dans le champ **Enter names or email addresses**, entrez ```Elvis```. Cliquez sur le compte de **Elvis Cress** lorsqu'il apparaît avant de cliquer sur **Share**.  
 	Le nom de Elvis Cress apparaît désormais dans la page **People and Groups - Training Visitors** au côté de Libby Hayward.
 1. Vous allez maintenant vérifier que Libby peut accéder au site Sharepoint du service Formation. Basculez sur la session de navigation privée que vous aviez minimisée.
-1. Rafraichissez la page de demande d'accès au site **Training** (Si nécessaire, retentez l'accès sur l'adresse ```https://M365xxxxx.sharepoint.com/sites/Training```)
+1. Rafraichissez la page de demande d'accès au site **Training** (Si nécessaire, retentez l'accès sur l'adresse ```https://[onmicrosoftDomain].sharepoint.com/sites/Training```)
 1. Le site **Training** s'ouvre : vous venez de confirmer que Libby peut accéder au site formation d'Adatum suite à l'acceptation de sa demande.
 1. Fermez la fenêtre de navigation privée de Libby.
 1. Faites de nouveau un clic-droit sur l'icône de **Edge** sur la barre des tâches, et dans le menu qui apparaît, choisissez **New InPrivate window**.
 1. Dans la nouvelle sesssion **InPrivate Browsing** de votre navigateur Internet, entrez l'adresse suivante pour ouvrir le site Sharepoint du service formation : ```https://M365xxxxx.sharepoint.com/sites/Training```.
-1. Dans la boite de dialogue **Sign in**, entrez **elvis@labxxxxx.godeploylabs.com** et cliquez sur **Next**.
+1. Dans la boite de dialogue **Sign in**, entrez **elvis@[godeployDomain].godeploylabs.com** et cliquez sur **Next**.
 1. Sur la page **Enter password**, saisissez ```Pa55W.Rd``` et cliquez sur **Sign in**.
 1. Sur la page **Stay signed in?**, cliquez sur **Yes**.
 1. Le site **Training** s'ouvre, confirmant que Elvis Cress y a accès après que l'administrateur du site lui ait donné accès.

@@ -2,7 +2,8 @@
 layout: stage
 title: "Lab8-Ex3 - Partage externe dans Sharepoint Online"
 length: "00"
-date: "11/11/2023"
+date: "17/05/2024"
+script: "msms030.js"
 ---
 # Scénario
 Dans les deux précédents exercices, Dominique Skyetson a configuré les services et les sites *SharePoint Online*. Il est donc désormais prêt à gérer le partage externe dans Sharepoint Online, dans le contexte d'ouverture d'Adatum vers Microsoft 365.  

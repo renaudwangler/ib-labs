@@ -2,7 +2,8 @@
 layout: stage
 title: "Lab10-Ex1 - Création de labels de sensibilité"
 length: "00"
-date: "13/05/2024"
+date: "17/05/2024"
+script: "msms030.js"
 ---
 # Scénario
 Adatum a désormais une bonne vision de Microsoft 365 grâce à son projet pilote. L'entreprise a gagné plusieurs contrats gouvernementaux, l'amenant à travailler sur de nombreux produits sensibles et classifiés.  
@@ -41,7 +42,7 @@ Dans votre rôle d'administrateur, en tant que Dominique Skyetson, vous allez cr
 1. Sur la page **Active teams and groups**, cliquez sur le bouton **Refresh** dans la barre de menu au-dessus de la liste des groupes. Si nécessaire, attendez quelques instants et répétez l'opération jusqu'à ce qu'apparaisse la nouvelle équipe.
 1. Une fois l'équipe **PND group** affichée dans la liste, cliquez sur son nom.
 1. Dans le panneau **PND Group** qui s'affiche à droite, cliquez sur le lien **Edit** sous la colonne **Email address** de l'onglet **General**
-1. Sur le panneau **Edit email adresses**, cliquez sur les points de suspension en regard de l'alias **PNDgroup@M365xxxxx.onmicrosoft.com** et choisissez **Change to primary email**.
+1. Sur le panneau **Edit email adresses**, cliquez sur les points de suspension en regard de l'alias **PNDgroup@[onmicrosoftDomain].onmicrosoft.com** et choisissez **Change to primary email**.
 1. Cliquez sur le bouton **Save** avant de cliquer sur la flêche de retour en haut à gauche pour revenir au panneau **PND Group**.
 1. Pour des questions de sécurité, vous avez décidé d'inclure Elviss Cress comme copropriétaire de cette équipe. Dans le panneau **PND Group** qui s'affiche, l'onglet **General** est affiché par défaut, cliquez sur l'onglet **Membership** pour l'afficher.
 1. Sur l'onglet **Membership**, cliquez sur le bouton **+ Add owners**.
@@ -96,7 +97,7 @@ Après avoir testé la création de labels de données sensibles en utilisant le
 1. Dans la commande (bleue) de **Administrator: Windows PowerShell ISE**, utilisez la commande suivante :  
 	```Install-Module -Name ExchangeOnlineManagement -Force```
 1. Dans l'invite Powershell, utilisez la commande suivante pour vous connecter à l'environnement *Purview* : (pensez à remplacer le préfixe du tenant par celui de votre tenant de test) :  
-	````Connect-IPPSSession -UserPrincipalName dom@M365xxxxx.onmicrosoft.com````
+	````Connect-IPPSSession -UserPrincipalName dom@[onmicrosoftDomain].onmicrosoft.com````
 1. Sur la page **Enter password**, saisissez ```ibForm@tion``` dans le champ **Password** avant de cliquer sur **Sign in**.
 1. Dans l'invite Powershell, utilisez la commande suivante pour créer un nouveau label de données sensibles nommé *Adatum-Secret* :  
 	```New-Label -Name Adatum-Secret -DisplayName Adatum-Secret -Tooltip 'For use with Government contracts ONLY' -AdvancedSettings @{Color="Red"} -Comment 'For use with Government contracts ONLY'```  
@@ -159,7 +160,7 @@ Dominique a, pour finir, décidé de tester la publication de labels de données
 
 1. Utilisez son icône sur la barre des tâches pour maximiser la fenêtre **Administrator: Windows PowerShell ISE** que vous aviez utilisée dans une tâche précédente.
 1. Dans la commande (bleue) de **Administrator: Windows PowerShell ISE**, utilisez la commande suivante pour créer un stratégie de publication de labels nommée *Adatum-Secret policy* :  
-	```New-LabelPolicy -Name 'Adatum-Secret policy' -Labels 'Adatum-Secret' -Comment 'This policy is for the Microsoft 365 pilot project team related to Project New Day.' -ModernGroupLocation PNDgroup@M365xxxxx.onmicrosoft.com   -AdvancedSettings @{AttachmentAction = 'Automatic'; DisableMandatoryInOutlook = 'True'}``` 
+	```New-LabelPolicy -Name 'Adatum-Secret policy' -Labels 'Adatum-Secret' -Comment 'This policy is for the Microsoft 365 pilot project team related to Project New Day.' -ModernGroupLocation PNDgroup@M[onmicrosoftDomain].onmicrosoft.com   -AdvancedSettings @{AttachmentAction = 'Automatic'; DisableMandatoryInOutlook = 'True'}``` 
 	>**Note :** Pensez à modifier le préfixe de tenant dans la précédente commande en le remplaçant par celui de votre tenant de test.
 
 1. Basculez vers votre navigateur Internet et affichez l'onglet du portail **Microsoft Purview**. Vous devriez être resté sur la page **Label policies**.
