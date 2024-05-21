@@ -20,7 +20,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 1. Vous deviez être connecté sur **LON-CL2**, avec le compte **.\Admin** et le mot de passe **Pa55w.rd**.
 1. Dans un précédent atelier, vous vous êtes connecté sur Microsoft 365 en tant que Alan Yoo et avez téléchargé et installé **Microsoft 365 Apps for enterprise**.  
 	Vous devriez donc désormais pouvoir ouvrir l'application **Word** en tapant ```winword``` dans la barre de recherche, à droite du bouton **Démarrer** sur la barre des tâches. Cliquez sur **Word** dans la section **Best match** du menu **Démarrer**.
-1. Lorsque **Word** s'ouvre, vérifiez quel compte utilisateur est licencié pour l'utiliser, ne haut à droite de la fenêtre. S'il s'agit déjà du compte de Alan (ses initiales **AY** sont dans le cercle), passez au point suivant.  
+1. Lorsque **Word** s'ouvre, vérifiez quel compte utilisateur est licencié pour l'utiliser, en haut à droite de la fenêtre. S'il s'agit déjà du compte de Alan (ses initiales **AY** sont dans le cercle), passez au point suivant.  
 	Cependant, si un compte différent est présent :
 	1. Cliquez sur le bouton **Account** en bas à gauche de la fenêtre Word. Cliquez ensuite sur le lien **Sign out**.
 	1. Validez l'opération en cliquant sur le bouton **Sign out**.
@@ -38,8 +38,8 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 1. Dans le panneau qui s'affiche, entrez ```OneDrive Test``` dans le champ **File Name** et cliquez en-dehors de ce champ. Cela va renommer votre fichier et fermer le panneau de sauvegarde.
 1. Fermez l'onglet Word Online de votre navigateur.
 1. Dans la fenêtre **OneDrive**, votre document **OneDrive test.docx** devrait apparaître (si ce n'est pas le cas, rafraichissez cette fenêtre). Cliquez sur l'icône d'engrenage **Settings** en haut à droite.
-1. Sur le panneau **Settings**, cliquez sur **Sync the OneDrive**.
-1. Sur la boite de dialogue **This site is trying to open Microsoft OneDrive**, cochez la case **Always allow M365xxxxx-my.sharepoint.com to open links of this type in the associated app** avant de cliquer sur **Open**.
+1. Sur le panneau **Settings**, cliquez sur **Sync this OneDrive**.
+1. Sur la boite de dialogue **This site is trying to open Microsoft OneDrive**, cochez la case **Always allow [onmicrosoftDOmain]-my.sharepoint.com to open links of this type in the associated app** avant de cliquer sur **Open**.
 1. Dans la boite de dialogue **Set up OneDrive**, le compte d'Alan Yoo est affiché dans le champ **Email address**. Cliquez sur **Sign in**.
 1. Dans la fenêtre **Enter password**, saisissez ```ibForm@tion``` et cliquez sur **Sign in**.
 1. Sur la page **Stay signed in to all your apps**, cliquez sur **No, sign in to this app only**.
@@ -50,7 +50,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 1. Sur la page **All your files, ready and on-demand**, cliquez sur **Next**.
 1. Sur la page **Get the mobile app**, cliquez sur **Later**.
 1. Sur la page **You OneDrive is ready for you** cliquez sur **Open my OneDrive folder**.
-1. L'explorateur de fichiers de Windows va s'ouvrir automatiquement sur le dossier **OneDrive - Adatum**.Vérifiez que le document **OneDrive test.docx** est présent effectivement synchronisé sur le poste de travail local
+1. L'explorateur de fichiers de Windows va s'ouvrir automatiquement sur le dossier **OneDrive - Adatum**.Vérifiez que le document **OneDrive test.docx** est à présent effectivement synchronisé sur le poste de travail local.
 1. Laissez ouvert l'explorateur de fichier et le navigateur Internet pour la tâche suivante.
 
 ## Tâche 2 - Création de fichiers à synchroniser avec OneDrive
@@ -59,6 +59,7 @@ Maintenant que la synchronisation de fichiers est activée avec *OneDrive for Bu
 1. Dans l'explorateur, cliquez sur **New folder** dans la section **New** de l'onglet **Home**.
 1. Saisissez ```Private``` comme nom pour ce dossier.
 1. De la même manière, créez un second dossier nommé ```Project A```.
+1. Double-cliquez sur le dossier *Private* pour l'ouvrir dans l'explorateur de fichiers
 1. Cliquez sur **New item** dans la section **New** de l'onglet **Home** de l'explorateur de fichiers et choisissez **Microsoft Word Document** et nommez le document ```Holidays```.docx.
 1. Dans l'explorateur de fichiers, une petite coche verte apparaît à droite du nom du fichier **Holidays.docx**.  
 	Double-cliquez sur le fichier **Holidays.docx** pour l'ouvrir (notez que Word est licencié pour Alan Yoo, visible en haut à droite de Word). Tapez quelque texte de test dans le document, sauvegardez le document et fermez Microsoft Word.
@@ -72,22 +73,22 @@ Maintenant que la synchronisation de fichiers est activée avec *OneDrive for Bu
 1. Dans la liste **My files**, vous devriez voir vos deux nouveaux dossiers - **Private** et **Project A**.
 1. Cliquez sur votre document **Holidays.docx** pour l'ouvrir dans Word Online.
 1. Dans la barre de menu en haut de page, le **Mode Menu** est sur **Editing**. Ajoutez quelques mots à votre document. Ce dernier est automatiquement sauvegardé une fois que la coche apparaît sur le nuage à droite de son nom.
-1. Dans votre navigateur Internet, basculez sur l'onglet **OneDrive for Business**.
+1. Dans votre navigateur Internet, basculez sur l'onglet **OneDrive**.
 1. Puisque vous venez de modifier votre fichier **Holidays.docx**, vous verrez mention de ce changement dans la colonne **Modified**, qui vous indique que le document a été modifié il y a quelques secondes.
 1. Basculez de nouveau vers l'explorateur de fichier que vous aviez minimisé. 
 1. Dans l'arborescence, cliquez sur **OndeDrive - Adatum** pour retourner à la racine de votre emplacement OneDrive. Vous devriez voir que les changements que vous venez de faire ont été correctement synchronisés sur la copie locale.
 
 ## Tâche 3 - Partage de fichiers avec d'autres utilisateurs
 1. Dans l'explorateur de fichier, faites un clic-droit sur le dossier *Project A** et sélectionnez **View online**.
-1. Votre navigateur Internet devrait s'ouvrir sur le **OneDrive for Business** de Alan, avec l'arborescence ouverte sur **My files > Project A**.  
+1. Votre navigateur Internet devrait s'ouvrir sur le **OneDrive** de Alan, avec l'arborescence ouverte sur **My files > Project A**.  
 	Passez votre souris à gauche du nom de fichier **Projetc Targets.docx** et sélectionnez le cercle qui apparaît de sorte que ce dernier affiche une coche.
 1. Une fois le fichier sélectionné, cliquez sur le bouton **Share** dans le menu en haut de page.
-1. Dans la boite de dialogue **Share "Project Targets.docx**, entrez les informations suivantes :
-	- Entrez l'adresse de Dominique (*dom@[onmicrosoftDomain].onmicrosoft.com*) dans le champ **Add a name, group or email**. Sélectionnez le compte de **Dominique Skyetson** qui s'affiche.
-	- Dans le même champ, sur **Add more**, entrez **Nona** et sélectionnez le compte de **Nona Snider** qui s'affiche.
+1. Dans la boite de dialogue **Share "Project Targets.docx"**, entrez les informations suivantes :
+	- Entrez l'adresse de Dominique (```dom@[onmicrosoftDomain].onmicrosoft.com```) dans le champ **Add a name, group or email**. Sélectionnez le compte de **Dominique Skyetson** qui s'affiche.
+	- Dans le même champ, sur **Add more**, entrez ```Nona``` et sélectionnez le compte de **Nona Snider** qui s'affiche.
 	- Dans le champ **Add a message** saisissez ```Voici les dernières informations sur le projet A.```.
 1. Cliquez sur le bouton **Send**.
-1. Après que le message a été envoyé, fermez la fenêtre **Link shared with**.
+1. Après que le message a été envoyé, fermez la fenêtre **You invited 2 peope to edit[...]**.
 1. Basculez sur **LON-CL1**. Votre navigateur Internet devrait être encore ouvert, avec le compte de Dominique Skyetson connecté.
 1. Si vous n'avez aucun onglet ouvert sur la messagerie de Dominique, cliquez sur le menu des applications 365 (le carré de 3 x 3 cases haut à gauche de la page) pour y choisir **Outlook**.
 1. Sélectionnez le message qui a pour sujet **Alan Yoo shared ""Project Targets" with you** (s'il n'apparaît pas, rafraichissez la page *Outlook on the web*).

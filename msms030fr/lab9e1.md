@@ -30,13 +30,13 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 	>Si une boite de dialogue **Welcome to the new Viva Engage!** s'affiche, fermez la en utilisant le **X** dans le coin supérieur droit.
 1. Dans la boite de dialogue **Adatum Acceptable Use Policy**, cliquez sur **I Accept**.
 1. Fermez les éventuels popup de bienvenue et d'information en cliquant sur le **X** en haut à droite de chacun.
-1. Retournez sur l'onglet comportant le **Viva Engage : Admin center**.
+1. Retournez sur le **Viva Engage : Admin center**.
 1. Dans le menu de navigation du portail d'administration **Engage**, sous la section **Network**, cliquez sur **Configuration**.
 1. Sur la page **Configuration**, dans la section **Email Settings**, cochez la case **Require all users in your network to confirm their messages posted via email before posting**.
 1. Dans la section **Enabled Features**, décochez la case **3rd Party Applications**.
 1. Cliquez sur **Save** en bas de page.
 1. Dans le menu de navigation du portail d'administration **Engage**, sous la section **Content and Security**, cliquez sur **Monitor Keywords**.
-1. Sur la page **Monitor Keywords**, entrez l'adresse de Dominique (*dom@[onmicrosoftDomain].onmicrosoft.com*) dans le champ **Email Address**.
+1. Sur la page **Monitor Keywords**, entrez l'adresse de Dominique (```dom@[onmicrosoftDomain].onmicrosoft.com```) dans le champ **Email Address**.
 1. Dans la boite de texte sous **Email Address**, entrez la liste de mots suivants, un sur chaque ligne : ```gambling```, ```erotic```, ```warez```.
 1. Cliquez sur **Save** en bas de page.
 1. Dans votre navigateur Internet, fermez l'onglet **Viva Engage : Admin\[...]** et l'onglet **Viva Engage - Feed** avant de passer à la tâche suivante.
