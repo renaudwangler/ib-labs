@@ -14,7 +14,7 @@ Dans cette tâche, vous allez utiliser le portail Sharepoint admin center pour c
 1. Dans le menu de navigation du **Sharepoint admin center**, cliquez sur le choix **Active sites** dans le groupe d'options **Sites**.
 1. Sur la barre de menu au-dessus de la liste de sites, cliquez sur le bouton **+ Create**.
 1. Sur la page **Create a site: Select the site type**, cliquez sur la tuile **Communication Site**.
-1. Sur la page **Select a template**, choisissez le modèle de site qui semble convenir pour la communication sur les formations proposées par Adatum en cliquant sur la première tuile. Validez votre choix en cliquant sur **use template**.
+1. Sur la page **Select a template**, choisissez le modèle de site **Standard communication**, qui semble convenir pour la communication sur les formations proposées par Adatum en cliquant sur la première tuile. Validez votre choix en cliquant sur **use template**.
 1. Sur la page **Give your site a name**, saisissez ```Training``` dans le champ **Site name**.
 1. Dans le champ **Site description**, saisissez ```Adatum training department catalog```.
 1. Dans le champ **Site owner**, tapez ```dominique``` et cliquez sur le compte de Dominique Skyetson.
@@ -77,11 +77,12 @@ Après avoir ajouté les sites de la formation et de la comptabilité d'Adatum, 
 Dans cette tâche, Alan Yoo, en tant qu'administrateur du site Sharepoint de la formation va donner l'accès au site du service Formation à deux utilisateurs qui en ont besoin : Libby Hayward et Elvis Cress. Tandis que Libby va demander l'accès au site, Alan sait déjà que Elvis a besoin d'accès et va lui assigner directement.
 1. Sur **LON-CL2**, faites un clic-droit sur l'icône de **Edge** sur la barre des tâches, et dans le menu qui apparaît, choisissez **New InPrivate window**.
 1. Dans la nouvelle session **InPrivate Browsing** de votre navigateur Internet, entrez l'adresse suivante pour ouvrir le site Sharepoint du service formation : ```https://[onmicrosoftDomain].sharepoint.com/sites/Training```.
-1. Dans la boite de dialogue **Sign in**, entrez **libby@[onmicrosoftDomain].onmicrosoft.com** et cliquez sur **Next**.
+1. Dans la boite de dialogue **Sign in**, entrez ```libby@[onmicrosoftDomain].onmicrosoft.com``` et cliquez sur **Next**.
 1. Sur la page **Enter password**, saisissez ```ibForm@tion``` et cliquez sur **Sign in**.
 1. Sur la page **Stay signed in?**, cliquez sur **Yes**.
 1. Une page s'affiche **Access required** qui indique **You need permission to access this site.** Un champ de message est prérempli avec la valeur : **I'd like access, please**.  
 	Puisque ce message peut être personnalisé, Libby souhaite saisir un message justifiant pourquoi elle a besoin d'accéder à ce site. Remplacez le message existant par le suivant : ```Bonjour. Je m'appelle Libby Hayward. Je m'occupe du suivi post-formation de nos stagiaires internes et externes en France. J'aurai donc besoin d'accéder à ce site pour pouvoir participer à la vie du service Formation d'Adatum.```
+	>**Note :** Si une page d'erreur vous indique que Libby n'est pas présente dans l'environnement Sharepoint, votre test est peut-être trop rapide après la création du site : revenez plus tard pour retester la fin de la présente tâche...
 1. Cliquez sur le bouton **Request Access**.
 1. Minimisez la fenêtre de navigation privée dans la barre des tâches et retournez sur le navigateur Edge ou Alan Yoo est resté connecté.
 1. Sur la page du site Sharepoint **Training**, Cliquez sur l'icône d'engrenage.
