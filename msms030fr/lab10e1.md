@@ -35,7 +35,7 @@ Dans votre rôle d'administrateur, en tant que Dominique Skyetson, vous allez cr
 1. Procédez de même pour ajouter les comptes de ```Alan``` (Alan Yoo) et ```Joni``` (Joni Sherman).
 1. Cliquez sur le bouton **Next**.
 1. Sur la page **Edit settings**, saisissez ```PNDgroup``` dans le champ **Team email address**.  
-1. Toujours sur la page **Edit Settings**, dans le champ **Privacy**, **Private - People can only join if they're added by an owner\[...].**.
+1. Toujours sur la page **Edit Settings**, dans le champ **Privacy**, sélectionnez **Private - People can only join if they're added by an owner\[...].**.
 1. Cliquez sur le bouton **Next**.
 1. Sur la page **Review and finish adding team**, cliquez sur le bouton **Add Team**.
 1. Sur la page **New team created**, notez le message indiquant qu'il peut s'écouler 5 minutes avant que la nouvelle équipe ne s'affiche. Cliquez sur **Close**.
@@ -110,7 +110,7 @@ Après avoir testé la création de labels de données sensibles en utilisant le
 1. Sur la page **Provide basic details for this label**, cliquez sur le bouton **Next**.
 1. Sur la page **Define the scope for this label**, cliquez sur **Next**.
 1. Sur la page **Choose protection settings for labeled items** page, cochez la case devant **Apply content marking** et cliquez sur **Next**.
-1.	Sur la page **Content marking**, cliquez sur le contrôle de bascule **Content marking** pour le faire passer à *ON**. De nouvelles options s'affichent que vous allez compléter dans les étapes suivantes.
+1.	Sur la page **Content marking**, cliquez sur le contrôle de bascule **Content marking** pour le faire passer à **ON**. De nouvelles options s'affichent que vous allez compléter dans les étapes suivantes.
 1. Cochez la case **Add a watermark** et cliquez sur le bouton **Customize text**.
 1. Dans le panneau **Customize watermark text**, saisissez les informations suivantes avant de cliquer sur le bouton **Save** :
 	- **Watermark text** : ```ADATUM - SECRET```
@@ -144,7 +144,7 @@ Dans sa découverte des méthodes de travail avec les labels de données sensibl
 1. Dans le panneau **Sensitivity labels to publish** qui s'affiche, cochez la case devant **Adatum-Classified** avant de cliquer sur **Add**.
 1. De retour sur la page **Choose sensitivity labels to publish** cliquez sur le bouton **Next**.
 1. Sur la page **Assign admin units**, cliquez sur **Next**.
-1. Sur la page **Publish to users and groups**, vous allez définir quels utilisateurs et groupes sont légitime à utiliser le label. Notez que le choix sélectionné est sur **All**, ce qui inclut tous les utilisateurs d'Adatum. Cliquez donc sur **Next**.
+1. Sur la page **Publish to users and groups**, vous allez définir quels utilisateurs et groupes sont légitime à utiliser le label. Notez que le choix sélectionné est sur **All users & groups**, ce qui inclut tous les utilisateurs d'Adatum. Cliquez donc sur **Next**.
 1. Sur la page **Policy Settings**, laissez toutes les cases décochées et cliquez sur **Next**.
 1. Sur la page **Apply a default label to documents**, cliquez sur **Next**.
 1. Sur la page **Default settings for emails**, cliquez sur **Next**.
@@ -161,7 +161,6 @@ Dominique a, pour finir, décidé de tester la publication de labels de données
 1. Utilisez son icône sur la barre des tâches pour maximiser la fenêtre **Administrator: Windows PowerShell ISE** que vous aviez utilisée dans une tâche précédente.
 1. Dans la commande (bleue) de **Administrator: Windows PowerShell ISE**, utilisez la commande suivante pour créer un stratégie de publication de labels nommée *Adatum-Secret policy* :  
 	```New-LabelPolicy -Name 'Adatum-Secret policy' -Labels 'Adatum-Secret' -Comment 'This policy is for the Microsoft 365 pilot project team related to Project New Day.' -ModernGroupLocation PNDgroup@M[onmicrosoftDomain].onmicrosoft.com   -AdvancedSettings @{AttachmentAction = 'Automatic'; DisableMandatoryInOutlook = 'True'}``` 
-	>**Note :** Pensez à modifier le préfixe de tenant dans la précédente commande en le remplaçant par celui de votre tenant de test.
 
 1. Basculez vers votre navigateur Internet et affichez l'onglet du portail **Microsoft Purview**. Vous devriez être resté sur la page **Label policies**.
 1. Dans la liste des stratégies, la stratégie **Adatum-Classified Policy** que vous avez créé dans le portail est affichée. Cliquez sur le bouton **Refresh** dans la barre de menu au-dessus de la liste.
