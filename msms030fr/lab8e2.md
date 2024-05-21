@@ -38,14 +38,13 @@ Après avoir créé un site avec le portail d'administration de Sharepoint Onlin
 1. Dans la partie basse (bleue) de la fenêtre **Administrator: Windows Powershell ISE**, utilisez la commande suivante pour installer le module Powershell de gestion de Sharepoint Online :  
 	```Install-Module Microsoft.Online.SharePoint.PowerShell -Force```
 1. Dans l'invite de commande de l'ISE, utilisez la commande suivante pour vous connecter à votre environnement Sharepoint Online :  
-	```Connect-SPOService –Url https://M365xxxxx-admin.sharepoint.com```
-	>**Note :** M365xxxxx est votre préfixe de tenant que vous avez noté au début de vos ateliers. Notez que, dans cette commande, il est suffixé de *-admin*.
+	```Connect-SPOService –Url https://[onmicrosoftDomain]-admin.sharepoint.com```
+	>**Note :** Dans cette commande, le nom de domaine original est suffixé de *-admin*.
 
-1. Dans la boite de dialogue **Sign in**, saisissez le nom de connexion de Dominique Skyetson (dom@[onmicrosoftDomain]x.onmicrosoft.com) et cliquez sur **Next**.
+1. Dans la boite de dialogue **Sign in**, saisissez le nom de connexion de Dominique Skyetson (```dom@[onmicrosoftDomain].onmicrosoft.com```) et cliquez sur **Next**.
 1. Dans la boite de dialogue **Enter password**, saisissez ```ibForm@tion``` et cliquez sur **Sign in**.
 1. Dans l'invite Powershell, utilisez la commande suivante pour créer un nouveau site nommé **Accounting** :  
-	```New-SPOSite -Url https://M365xxxxx.sharepoint.com/sites/Accounting -Owner dom@[onmicrosoftDomain].onmicrosoft.com -StorageQuota 500 -NoWait -Template PROJECTSITE#0 –Title Accounting```
-	>**Note :** M365xxxxx est votre préfixe de tenant que vous avez noté au début de vos ateliers. Notez que, dans cette commande, il est **n'est pas** suffixé de *-admin* !
+	```New-SPOSite -Url https://[onmicrosoftDomain].sharepoint.com/sites/Accounting -Owner dom@[onmicrosoftDomain].onmicrosoft.com -StorageQuota 500 -NoWait -Template PROJECTSITE#0 –Title Accounting```  
 
 1. Minimisez la fenêtre **Administrator: Windows Powershell ISE**.
 1. Dans votre navigateur Internet, la page **Active sites** devrait toujours être affichée à l'issue de la tâche précédente. Si le site **Accounting** ne s'affiche pas, rafraichissez la page du navigateur. (Il vous faudra peut-être attendre quelques instants et répéter l'opération). Ne passez pas à la tâche suivante tant que vous n'avez pas constaté l'affichage du site **Accounting** dans la liste des sites actifs.
@@ -101,7 +100,7 @@ Dans cette tâche, Alan Yoo, en tant qu'administrateur du site Sharepoint de la 
 1. Le site **Training** s'ouvre : vous venez de confirmer que Libby peut accéder au site formation d'Adatum suite à l'acceptation de sa demande.
 1. Fermez la fenêtre de navigation privée de Libby.
 1. Faites de nouveau un clic-droit sur l'icône de **Edge** sur la barre des tâches, et dans le menu qui apparaît, choisissez **New InPrivate window**.
-1. Dans la nouvelle sesssion **InPrivate Browsing** de votre navigateur Internet, entrez l'adresse suivante pour ouvrir le site Sharepoint du service formation : ```https://M365xxxxx.sharepoint.com/sites/Training```.
+1. Dans la nouvelle sesssion **InPrivate Browsing** de votre navigateur Internet, entrez l'adresse suivante pour ouvrir le site Sharepoint du service formation : ```https://[onmicrosoftDomain].sharepoint.com/sites/Training```.
 1. Dans la boite de dialogue **Sign in**, entrez **elvis@[godeployDomain].godeploylabs.com** et cliquez sur **Next**.
 1. Sur la page **Enter password**, saisissez ```Pa55W.Rd``` et cliquez sur **Sign in**.
 1. Sur la page **Stay signed in?**, cliquez sur **Yes**.

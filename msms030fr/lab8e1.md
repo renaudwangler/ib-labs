@@ -20,8 +20,8 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 1. Basculez sur la machine virtuelle **LON-CL1**, sur laquelle vous devriez encore être connecté avec le compte **adatum\Administrator** et le mot de passe **Pa55w.rd**.
 1. Les portails **Microsoft 365 admin center** et **Microsoft Teams admin center** (que vous pouvez désormais fermer) devraient encore être resté ouverts dans votre navigateur (et vous devriez y être connecté avec le compte de *Dominique Skyetson*).
 1. Dans le portail **Microsoft 365 admin center**, dans le menu de navigation, cliquez sur **Show all** (si nécessaire) puis cliquez sur **Sharepoint** sous la section **Admin centers**. Ceci va ouvrir le portail **SharePoint admin center** dans un nouvel onglet.
-1. Si une boite de dialogue **Take tour** apparaît, cliquez en dehors pour la fermer.
-1. Dans le menu de navigation du portail **Sahrepoint admin center**, ouvrez le groupe d'options **Policies** pour cliquer sur **Sharing**.
+1. Si une boite de dialogue **Take the tour** apparaît, cliquez en dehors pour la fermer.
+1. Dans le menu de navigation du portail **Sharepoint admin center**, ouvrez le groupe d'options **Policies** pour cliquer sur **Sharing**.
 1. Sur la page **Sharing**, cliquez pour ouvrir la section **More external sharing settings**. Parmi les options affichées, cochez les cases **Guests must sign in using the same account to which sharing invitations are sent** et **Allow guests to share items they don't own** (si elle n'est pas déjà cochée par défaut)). Cliquez sur le bouton **Save** en bas de page.
 1. Conservez votre navigateur Internet ouvert pour la tâche suivante. 
 
@@ -30,7 +30,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 1. Dans le menu de navigation du portail **SharePoint admin center** cliquez sur **More features**.
 1. Sur la page **More features**, cliquez sur le bouton **Open** sur la tuile **User profiles**.
 1. Sur la page **User Profiles**, sous l'en-tête **People** cliquez sur **Manage User Profiles**.
-1. Sur la page **User Profiles**, tapez ````Alan`` dans le champ **Find profiles** avant de cliquer surt **Find**.
+1. Sur la page **User Profiles**, tapez ```Alan``` dans le champ **Find profiles** avant de cliquer surt **Find**.
 1. Le profil de Alan yoo s'affiche dans la liste. Cliquez sur la première colonne de la ligne du profil de Alan pour sélectionner **Edit My Profile**.
 1. Dans la page **User Profiles**, Saisissez ```dominique``` dans le champ **Manager** et cliquez sur l'icône **check names** à droite du champ et vérifiez que le compte de Dominique Skyetson est affiché.
 1. Dans le coin haut à droite de la page **User Priles**, cliquez sur le bouton **Save and close**.
