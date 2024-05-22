@@ -100,41 +100,13 @@ Après avoir testé la création de labels de données sensibles en utilisant le
 	````Connect-IPPSSession -UserPrincipalName dom@[onmicrosoftDomain].onmicrosoft.com````
 1. Sur la page **Enter password**, saisissez ```ibForm@tion``` dans le champ **Password** avant de cliquer sur **Sign in**.
 1. Dans l'invite Powershell, utilisez la commande suivante pour créer un nouveau label de données sensibles nommé *Adatum-Secret* :  
-	```New-Label -Name Adatum-Secret -DisplayName Adatum-Secret -Tooltip 'For use with Government contracts ONLY' -AdvancedSettings @{Color="Red"} -Comment 'For use with Government contracts ONLY'```  
+	```New-Label -Name Adatum-Secret -DisplayName Adatum-Secret -Tooltip 'For use with Government contracts ONLY' -AdvancedSettings @{Color="Red"} -Comment 'For use with Government contracts ONLY' `
+-ApplyContentMarkingFooterEnabled $true -ApplyContentMarkingFooterText 'ADATUM - SECRET' -ApplyContentMarkingFooterFontSize 12 -ApplyContentMarkingFooterFontColor '#008000' -ApplyContentMarkingFooterAlignment left `
+-ApplyContentMarkingHeaderEnabled $true -ApplyContentMarkingHeaderText 'TOP SECRET' -ApplyContentMarkingHeaderAlignment left -ApplyContentMarkingHeaderFontColor '#0000FF' -ApplyContentMarkingHeaderFontSize 12 `
+-ApplyWaterMarkingEnabled $true -ApplyWaterMarkingText 'ADATUM - SECRET' -ApplyWaterMarkingFontColor '#FF0000' -ApplyWaterMarkingFontSize 48 -ApplyWaterMarkingLayout Diagonal```  
 1. Basculez vers votre navigateur Internet et affichez l'onglet du portail **Microsoft Purview**. Vous devriez être resté sur la page **Labels**.
 1. Dans la liste des labels, le label **Adatum-Classified** que vous avez créé dans le portail est affiché. Cliquez sur le bouton **Refresh** dans la barre de menu au-dessus de la liste.
 1. Vous devriez désormais trouver dans la liste des labels le label **Adatum-Secret** que vous venez de créer en PowerShell en plus du label **Adatum-Classified**.  
-	Cliquez sur le label **Adatum-Secret**.
-1.	Dans le panneau **Adatum-Secret** qui s'affiche, vous allez modifier le détail du comportement de ce label (qui s'avère sinon particulièrement compliqué à faire dans *Windows PowerShell*).  
-	Pour compléter les informations du label, cliquez sur le choix **Edit label** (il pourra être nécessaire de cliquer sur les points de suspension à droite pour y accéder).
-1. Sur la page **Provide basic details for this label**, cliquez sur le bouton **Next**.
-1. Sur la page **Define the scope for this label**, cliquez sur **Next**.
-1. Sur la page **Choose protection settings for labeled items** page, cochez la case devant **Apply content marking** et cliquez sur **Next**.
-1.	Sur la page **Content marking**, cliquez sur le contrôle de bascule **Content marking** pour le faire passer à **ON**. De nouvelles options s'affichent que vous allez compléter dans les étapes suivantes.
-1. Cochez la case **Add a watermark** et cliquez sur le bouton **Customize text**.
-1. Dans le panneau **Customize watermark text**, saisissez les informations suivantes avant de cliquer sur le bouton **Save** :
-	- **Watermark text** : ```ADATUM - SECRET```
-	- **Font size** : **48**
-	- **Font color** : **Red**
-	- **Text layout** : **Diagonal**
-1. Cochez la case **Add a header** et cliquez sur le bouton **Customize text**.
-1. Dans le panneau **Customize header text**, saisissez les informations suivantes avant de cliquer sur le bouton **Save** :
-	- **Header text** : ```TOP SECRET```
-	- **Font size** : **12**
-	- **Font color** : **Blue**
-	- **Align text** : **Left**
-1. Cochez la case **Add a footer** et cliquez sur le bouton **Customize text**.
-1. Dans le panneau **Customize footer text**, saisissez les informations suivantes avant de cliquer sur le bouton **Save** :
-	- **Footer text** : ```ADATUM - SECRET```
-	- **Font size** : **12**
-	- **Font color** : **Green**
-	- **Align text**: **Left**
-1. Sur la page **Content marking**, cliquez sur le bouton **Next**.
-1. Sur la page **Auto-labeling for files and emails**, assurez-vous que l'option **Auto-labeling for files and emails** reste désactivée et cliquez sur **Next**.
-1. Sur la page **Define protection settings for groups and sites**, cliquez sur **Next**. 
-1. Sur la page **Auto-labeling for schematized data assets (preview)** cliquez encore sur **Next**.
-1. Sur la page **Review your settings and finish**, révisez votre saisie et, si nécessaire, cliquez sur le lien **Edit** pour les modifier ; sinon, cliquez sur le bouton **Save label** en bas de page.
-1. Sur la page **Label updated**, cliquez sur le bouton **Done**.
 	
 ## Tâche 4 - Publication de labels dans *Purview*
 Dans sa découverte des méthodes de travail avec les labels de données sensibles dans Microsoft 365, Dominique souhaite comprendre comment publier ces labels dans le portail *Purview*.
