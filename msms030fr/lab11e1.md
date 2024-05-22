@@ -22,7 +22,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 1. Dans le menu de navigation du portail **Microsoft 365 admin center**, sélectionnez **Service health** dans le groupe d'options **Health** (il pourra être utile de cliquer sur **Show all**).
 1. Sur la page **Service health** page, si un problème est présent dans la section **Active issues Microsoft is working on**, cliquez sur son titre pour ouvrir un panneau d'information contenant les détails du problème. Consultez les informations détaillées sur le problème, puis fermer le panneau.
 1. Sur la page **Service health**, sous la section **Service status**, consultez la liste des services pour voir si certains affichent un problème connu en cours. Essayez, le cas échéant, de faire le lien avec les informations consultées dans le point précédent.
-1. Sur la page **Service health**, cliquez sur l'onglet **Issue history**. Un historique des incidents récemment résolus et autres avertissements va s'afficher.
+1. Remontez sur la page **Service health**, cliquez sur l'onglet **Issue history**. Un historique des incidents récemment résolus et autres avertissements va s'afficher.
 1. Dans le menu de navigation du portail **Microsoft 365 admin center**, sélectionnez **Message center** dans le groupe d'options **Health**.
 1. La page **Message Center** affiche une liste de tous les messages en cours (*inbox*) liés à des modifications planifiées et/ou en cours de mise en oeuvre. Sélectionnez un message pour consulter quelques informations sur le changement prévu. N'hésitez pas à consulter n'importe quel message dont le thème vous intéresse.
 1. L'onglet **Archive** affiche la liste de changement récent, mais passés. Sélectionnez une entrée de la liste pour avoir plus de détails dessus.
