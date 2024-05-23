@@ -36,12 +36,11 @@ Il faut donc désormais mettre en place la MFA pour tous les utilisateurs à tes
 1. Ouvrir une invite Powershell **en Administrateur**
 1. Utiliser la commande suivante pour installer l'application automatiquement : 
     ```Invoke-Command -ScriptBlock ([Scriptblock]::Create((Invoke-WebRequest 'https://raw.githubusercontent.com/renaudwangler/ib-labs/master/2fast.ps1' -useBasicParsing).Content))```
-1. Sur la page **Welcome**, cliquer sur le bouton **Create new datafile (first start)**.
+1. Si une fenêtre **Tutorial** s'affiche, cliquez sur le bouton **Skip**.
+1. Sur la page **Welcome**, cliquer sur le bouton **Load existing data file**.
 1. Dans la fenêtre **Create datafile**, cliquer sur le bouton **Choose local path**.
-1. Dans la fenêtre **Select Folder**, choisir le dossier **Documents** et cliquer sur le bouton **Select Folder**
-1. De retour sur la fenêtre **Create datafile**, saisir les données suivantes avant de cliquer sur le bouton **Create datafile**.
-    - ```mibMFA``` dans le champ **Filename**
-    - ```Pa55w.rd``` dans les champs **Password** et **Repeat password**
+1. Dans la fenêtre **Open**, choisir le dossier **Documents** et ouvrir le fichier **ibMFA.2fa**
+1. De retour sur la fenêtre **Load existing Datafile**, saisir ```Pa55w.rd``` dans le champ **Password** avant de valider.
 
 ## Etape 2a : Activer la MFA pour un compte utilisateur lors de sa première connexion
 1. Lors de la connexion de l'utilisateur, après saisie du mot de passe, apparaît la fenêtre **More information required** :
