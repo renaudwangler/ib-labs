@@ -9,7 +9,7 @@ date: "23/04/2024"
 Depuis Mars 2024, Microsoft, victime de trop d'attaques cyber, impose l'utilisation de la MFA pour tous les contextes professionnels, y-compris pour les tenant de test Microsoft 365 que l'éditeur fournit pour les formations officielles.  
 Il faut donc désormais mettre en place la MFA pour tous les utilisateurs à tester dans ce contexte.
 
-## Etape 1 : Installer une application MFA depuis le Store Microsoft sur Windows 10/11
+## Etape 1a : Installer une application MFA depuis le Store Microsoft sur Windows 10/11
 1. Ouvrir une session sur la machine cible de l'installation.
 1. Cliquer sur le bouton **Démarrer** de Windows 10/11 et taper ```Store```
 1. Cliquer sur le raccourci **"Microsoft Store"**   
@@ -31,12 +31,12 @@ Il faut donc désormais mettre en place la MFA pour tous les utilisateurs à tes
 
 >**Nota :** Cette procédure pourra être répétée (ainsi que la procédure *2*) sur chaque machine virtuelle et/ou profils depuis lesquels on souhaitera accèder à la MFA des utilisateurs.
 
-## Etape 1b : Installer l'application automatiquement
+## Etape 1b : Installer une application MFA automatiquement sur Windows 10/11
 1. Ouvrir une session sur la machine cible de l'installation.
 1. Ouvrir une invite Powershell **en Administrateur**
 1. Utiliser la commande suivante pour installer l'application automatiquement : 
     ```Invoke-Command -ScriptBlock ([Scriptblock]::Create((Invoke-WebRequest 'https://raw.githubusercontent.com/renaudwangler/ib-labs/master/2fast.ps1' -useBasicParsing).Content))```
-1. Si une fenêtre **Tutorial** s'affiche, cliquez sur le bouton **Skip**.
+1. Une fois l'application installée et lançée, si une fenêtre **Tutorial** s'affiche, cliquez sur le bouton **Skip**.
 1. Sur la page **Welcome**, cliquer sur le bouton **Load existing data file**.
 1. Dans la fenêtre **Create datafile**, cliquer sur le bouton **Choose local path**.
 1. Dans la fenêtre **Open**, choisir le dossier **Documents** et ouvrir le fichier **ibMFA.2fa**
