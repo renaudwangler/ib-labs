@@ -2,7 +2,7 @@ if ([System.Security.Principal.WindowsIdentity]::GetCurrent().groups -match 'S-1
     #Script à lancer en administrateur
     #Récupération automatique dernière version de 2fast
     Start-BitsTransfer -source ((Invoke-WebRequest 'https://api.github.com/repos/2fast-team/2fast/releases/latest') | ConvertFrom-Json).assets.browser_download_url -Destination './2fast.zip'
-    Start-BitsTransfer -source 'https://raw.githubusercontent.com/renaudwangler/ib-labs/master/trainingMFA.2fa' -Destination "$([System.Environment]::GetFolderPath("MyDocuments"))\ibMFA.2fa"
+    Start-BitsTransfer -source 'https://raw.githubusercontent.com/renaudwangler/ib-labs/master/ibMFA.2fa' -Destination "$([System.Environment]::GetFolderPath("MyDocuments"))\ibMFA.2fa"
     Expand-Archive '.\2fast.zip' -DestinationPath .\2fast -Force
 
     #Activation du "sideloading" d'applications sur le poste
@@ -15,11 +15,13 @@ if ([System.Security.Principal.WindowsIdentity]::GetCurrent().groups -match 'S-1
     set-location .\2fast
     .\Add-appDevPackage.ps1 -CertificatePath (Get-ChildItem *.cer).VersionInfo.FileName -Force
     .\Add-appDevPackage.ps1 -SkipLoggingTelemetry -Force
+    Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\broadFileSystemAccess\$((Get-AppxPackage "*2fa*").PackageFamilyName)" -Name "Value" -Value "Allow"
 
     #Nettoyage final
     Set-Location ..
     Remove-Item -Path .\2fast -Recurse
     Remove-Item -path .\2fast.zip
+
 
     Write-Warning -Message 'Application de MFA installée, procédez à sa configuration...' 
     Start-Process -FilePath 'explorer.exe' "shell:appsFolder\$((Get-StartApps "2fast*").appId)"}
