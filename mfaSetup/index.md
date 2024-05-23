@@ -10,7 +10,7 @@ Depuis Mars 2024, Microsoft, victime de trop d'attaques cyber, impose l'utilisat
 Il faut donc désormais mettre en place la MFA pour tous les utilisateurs à tester dans ce contexte.
 
 ## Etape 1 : Installer une application MFA depuis le Store Microsoft sur Windows 10/11
-1. Ouvrir une session sur une machine virtuelle cliente.
+1. Ouvrir une session sur la machine cible de l'installation.
 1. Cliquer sur le bouton **Démarrer** de Windows 10/11 et taper ```Store```
 1. Cliquer sur le raccourci **"Microsoft Store"**   
     >**Nota :** Le service Windows Update doit être activé et démarré pour utiliser le *Microsoft Store*  
@@ -26,10 +26,22 @@ Il faut donc désormais mettre en place la MFA pour tous les utilisateurs à tes
 1. Dans la fenêtre **Create datafile**, cliquer sur le bouton **Choose local path**.
 1. Dans la fenêtre **Select Folder**, choisir le dossier **Documents** et cliquer sur le bouton **Select Folder**
 1. De retour sur la fenêtre **Create datafile**, saisir les données suivantes avant de cliquer sur le bouton **Create datafile**.
-    - ```msMfaData``` dans le champ **Filename**
+    - ```mibMFA``` dans le champ **Filename**
     - ```Pa55w.rd``` dans les champs **Password** et **Repeat password**
 
->**Nota :** Cette procédure pourra être répétée (ainsi que la suivante) sur chaque machine virtuelle et profils depuis lesquels on souhaitera accèder à la MFA des utilisateurs.
+>**Nota :** Cette procédure pourra être répétée (ainsi que la procédure *2*) sur chaque machine virtuelle et/ou profils depuis lesquels on souhaitera accèder à la MFA des utilisateurs.
+
+## Etape 1b : Installer l'application automatiquement
+1. Ouvrir une session sur la machine cible de l'installation.
+1. Ouvrir une invite Powershell **en Administrateur**
+1. Utiliser la commande suivante pour installer l'application automatiquement : 
+    ```Invoke-Command -ScriptBlock ([Scriptblock]::Create((Invoke-WebRequest 'https://raw.githubusercontent.com/renaudwangler/ib-labs/master/2fast.ps1' -useBasicParsing).Content))```
+1. Sur la page **Welcome**, cliquer sur le bouton **Create new datafile (first start)**.
+1. Dans la fenêtre **Create datafile**, cliquer sur le bouton **Choose local path**.
+1. Dans la fenêtre **Select Folder**, choisir le dossier **Documents** et cliquer sur le bouton **Select Folder**
+1. De retour sur la fenêtre **Create datafile**, saisir les données suivantes avant de cliquer sur le bouton **Create datafile**.
+    - ```mibMFA``` dans le champ **Filename**
+    - ```Pa55w.rd``` dans les champs **Password** et **Repeat password**
 
 ## Etape 2a : Activer la MFA pour un compte utilisateur lors de sa première connexion
 1. Lors de la connexion de l'utilisateur, après saisie du mot de passe, apparaît la fenêtre **More information required** :
