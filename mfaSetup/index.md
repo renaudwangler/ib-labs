@@ -35,7 +35,7 @@ Il faut donc désormais mettre en place la MFA pour tous les utilisateurs à tes
 1. Ouvrir une session sur la machine cible de l'installation.
 1. Ouvrir une invite Powershell **en Administrateur**
 1. Utiliser la commande suivante pour installer l'application automatiquement : 
-    ```Invoke-Command -ScriptBlock ([Scriptblock]::Create((Invoke-WebRequest 'https://raw.githubusercontent.com/renaudwangler/ib-labs/master/2fast.ps1' -useBasicParsing).Content))```
+    ```set-ExecutionPolicy bypass -force; Invoke-Command -ScriptBlock ([Scriptblock]::Create((Invoke-WebRequest 'https://raw.githubusercontent.com/renaudwangler/ib-labs/master/2fast.ps1' -useBasicParsing).Content))```
 1. Une fois l'application installée et lançée, si une fenêtre **Tutorial** s'affiche, cliquez sur le bouton **Skip**.
 1. Sur la page **Welcome**, cliquer sur le bouton **Load existing data file**.
 1. Dans la fenêtre **Create datafile**, cliquer sur le bouton **Choose local path**.
