@@ -3,10 +3,10 @@ layout: page
 title: "Gestion des mises à jour avec Intune"
 synopsis: "Configuration de le gestion des mises à jour des postes Windows dans Intune/Endpoint Manager"
 length: "00"
-date: "18/01/2024"
+date: "18/05/2024"
 ---
 # Scenario
-Il vous a été demandé de créer un environnement de mises à jour qu'i n'affecte que les machines membres du groupe "*Contoso Developer Devices*". Ce groupe doit répondre aux prérequis suivants :
+Il vous a été demandé de créer un environnement de mises à jour qui n'affecte que les machines membres du groupe "*Contoso Developer Devices*". Ce groupe doit répondre aux prérequis suivants :
 - Quality update deferral period (days): **15**
 - Feature update deferral period \(days\): **45**
 - Option to pause Windows updates: **Disable**
@@ -20,7 +20,7 @@ Les ateliers suivant de la formation md-102 doivent avoir été réalisés avant
 - 0301-Creating and Deploying Configuration Profiles
     >** Nota :** VOus aurez également besoin d'un téléphone mobile vous permettant de recevoir des MS pour la configuration de Windows Hello.
 
-## Etape 1 : Vérificatuon des paramètres de mise à jour d'un périphérique
+## Etape 1 : Vérification des paramètres de mise à jour d'un périphérique
 1. Sur **SEA-WS1**, connectez-vous avec le compte de **Aaron Nicholls** et le code pin ```102938```. 
 1. Ouvrez le menu **Start** et cliquez sur l'icône **Settings**.
 1. Dans les **Settings**, sélectionnez **Windows Update**.
