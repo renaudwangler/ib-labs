@@ -23,7 +23,7 @@ Dans cette tâche, Dominique va tester si un utilisateur qui ne s'est pas vu aff
 C'est pourquoi vous devez d'abord utiliser un compte ADDS pour vous connecter. Pour ce test, vous utiliserez le compte de **Laura Atkins**. Vous allez créer un compte pour Laura, mais sans lui affecter de licence.  
 Vous utiliserez ensuite la VM **LON-CL2** pour installer Microsoft 365 Apps.
 1. Basculez vers **LON-CL2** et connectez-vous en **.\Admin** avec le mot de passe **Pa55w.rd**.
-1. Vous allez commencer par tester si un utilisateur sans licence Office 365 peut ou non installer Microsoft 365 Apps. Pour ce test, vous allez utiliser le compte de **Laura Atkins**. Vous avez créé un compte pour Laura dans [l'atelier 2,exercice1](lab2e1#t%C3%A2che-1---cr%C3%A9ation-dutilisateurs), mais ne lui avez pas affecté de licence. Dans LON-CL2, cliquez sur l'icône **Microsoft Edge** sur la barre des tâches.
+1. Vous allez commencer par tester si un utilisateur sans licence Microsoft 365 Apps peut ou non installer Microsoft 365 Apps. Pour ce test, vous allez utiliser le compte de **Laura Atkins**. Vous avez créé un compte pour Laura dans [l'atelier 2,exercice1](lab2e1#t%C3%A2che-1---cr%C3%A9ation-dutilisateurs), mais ne lui avez pas affecté de licence. Dans LON-CL2, cliquez sur l'icône **Microsoft Edge** sur la barre des tâches.
 1. Maximisez votre navigateur Internet puis rendez-vous sur la page d'accueil **Microsoft 365** en utilisant l'adresse suivante : ```https://www.microsoft365.com```
 	>**Note :** Si n'importe quel compte est automatiquement connecté, déconnectez-le en cliquant sur l'icône d'utilisateur (rond en haut à droite) et en sélectionnant **Sign out**, retapez ensuite ```https://www.microsoft365.com``` dans la barre d'adresse.
 1. Cliquez sur **Sign in**.
@@ -32,7 +32,7 @@ Vous utiliserez ensuite la VM **LON-CL2** pour installer Microsoft 365 Apps.
 1. Dans la boite de dialogue **Update your password**, entrez **Pa55w.rd**** dans le champ **Current password**, puis entrez ```ibForm@tion``` dans les champs **New password** et **Confirm password**. Cliquez sur **Sign in**.
 1. Si une fenêtre **Stay signed in?** apparait, cochez la case **Don't show this again** et cliquez sur **Yes.**
 1. Si la boite de dialogue **Welcome to Microoft 365** apparait, fermez-la.
-1. Dans la page **Welcome to Microsoft 365** de Laura, constatez que Microsoft 365 apps n'apparait pas dans le menu **Install and more** puisque Laura ne s'est pas vu affecté de licence Office 365.  
+1. Dans la page **Welcome to Microsoft 365** de Laura, constatez que Microsoft 365 apps n'apparait pas dans le menu **Install and more** puisque Laura ne s'est pas vu affecté de licence Microsoft 365 Apps.  
 1. Cliquez sur le menu **Install and more** et sélectionnez **Install Microsoft 365 Apps**.
 1. La fenêtre **My account** de Laura s'affiche. Sous la section **Office apps &amp; devices**, vous ne devriez rien trouver...  
 	>**Important :** Vous venez de vérifier qu'un utilisateur ne peut télécharger Microsoft 365 Apps for enterprise s'il ne s'est pas vu affecter de licence idoine.
@@ -47,7 +47,7 @@ Dominique va désormais tester si les utilisateurs avec licence peuvent être em
 1. Cliquez sur **Save**.
 	>**Important :** Laissez le panneau *Microsoft 365 installation options** ouvert car vous allez y revenir dans la tâche suivante.
 
-1. Vous souhaitez tester si, en désactivant ce paramètre, cela empêche un utilisateur **licencié** d'installer Microsoft 365 Apps for enterprise. Dans ce cas vous allez utiliser le compte de **Alan Yoo**, qui a aussi été créé lors de [l'atelier 2,exercice1](lab2e1#t%C3%A2che-1---cr%C3%A9ation-dutilisateurs); cependant, contrairement à Laura Atkins, vous aviez affecté une licence Office 365 E5 à Alan.
+1. Vous souhaitez tester si, en désactivant ce paramètre, cela empêche un utilisateur **licencié** d'installer Microsoft 365 Apps for enterprise. Dans ce cas vous allez utiliser le compte de **Alan Yoo**, qui a aussi été créé lors de [l'atelier 2,exercice1](lab2e1#t%C3%A2che-1---cr%C3%A9ation-dutilisateurs); cependant, contrairement à Laura Atkins, vous aviez affecté une licence Microsoft 365 E5 à Alan.
 1. Basculez vers **LON-CL2**.
 1. Sur LON-CL2, vous devriez encore être connecté à l'environnement Microsoft 365 avec le compte de Laura Atkins suite à la tâche précédente. Vous devez d'abord vous déconnecter du compte de Laura, cliquez donc sur son icône (le rond en haut à droite avec ses initiales **LA**) pour cliquer sur **Sign out**.
 	>**Important :** Suite à une déconnexion, il est très fortement conseillé de fermer tous les onglets de votre navigateur sauf celui qui s'appelle **Login**.

@@ -6,7 +6,7 @@ $wwlDomain = (get-MgDomain | where id -like "M365x*").id
 $labDomain = (get-MgDomain | where id -like "lab*.godeploylabs.com").id
 $user1 = New-MGuser –UserPrincipalName "catherine@$wwlDomain" –DisplayName "Catherine Richard" -GivenName Catherine -SurName Richard -PasswordProfile @{password='Pa55w.rd';ForceChangePasswordNextSignIn=$false} -UsageLocation CH -AccountEnabled -MailNickname catherine
 $user2 = New-MGuser –UserPrincipalName "tameka@$wwlDomain" –DisplayName "Tameka Reed" -GivenName Tameka -SurName Reed -PasswordProfile @{password='Pa55w.rd';ForceChangePasswordNextSignIn=$false} -UsageLocation CH -AccountEnabled -MailNickname tameka
-$license = Get-MgSubscribedSku|where SkuPartNumber -like "Office_365_E5*"
+$license = Get-MgSubscribedSku|where SkuPartNumber -like "Microsoft_365_E5*"
 $user1.Id,$user2.Id | foreach-object {Set-MgUserLicense -userId $_ -AddLicenses @{SkuId=$license.SkuId} -RemoveLicenses @()}
 Invoke-WebRequest "https://raw.githubusercontent.com/renaudwangler/ib-labs/master/msms030fr/users.csv" | Select-Object -ExpandProperty Content | Out-File ".\users.csv"
 (Get-Content .\users.csv).Replace('labxxxxx.godeploylabs.com', $labDomain) | Set-Content .\users.csv
