@@ -16,6 +16,25 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 - la création de comptes utilisateurs dans le portail *Microsoft 365 Admin Center*
 - la modification d'options sur les comptes utilisateurs dans le portail *Microsoft 365 Admin Center*
 
+## Préparation - Désaffection de licences
+1. Vous devriez encore être connecté sur **LON-CL1** à l'issue du premier atelier. Le **Microsoft 365 admin center** devrait encore être resté ouvert dans votre navigateur et vous devriez y être connecté avec le compte *MOD Administrator*. 
+1. Dans le portail **Microsoft 365 admin center**, dans le menu de navigation à gauche, ouvrez le groupe **Billing** pour sélectionner l'entrée **Licenses**.  
+1. Dans la fenêtre licenses, cliquez sur la ligne **Microsoft 365 E5 (no Teams)**.
+1. Dans le panneau **Microsoft 365 E5 (no Teams)**, cochez les cases en regard des utilisateurs suivant avant de cliquer sur **Unassign licenses** :  
+	- Adele Vance
+	- Alex Wilber
+	- Christie Cline
+	- Debra Berger
+	- Grady Archie
+	- Irvin Sayers
+	- Johanna Lorenz
+	- Lee Gu
+	- Lidia Holloway
+	- Miriam Graham
+	- Pradeep Gupta
+1. Dans la fenêtre de confirmation **Unassign 11 licenses?**, cliquez sur le bouton **Unassign**.
+1. Dans le menu de navigation à gauche du portail administratif, ouvrez le groupe **Billing** pour resélectionner l'entrée **Licenses**.  
+1. Répétez la procédure précédente pour désaffecter la license **Microsoft Teams Enterprise** des mêmes utilisateurs.
 
 ## Tâche 1 - Création d'utilisateurs
 1. Vous devriez encore être connecté sur **LON-CL1** à l'issue du premier atelier. Le **Microsoft 365 admin center** devrait encore être resté ouvert dans votre navigateur et vous devriez y être connecté avec le compte *MOD Administrator*. 
@@ -38,7 +57,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 1. Cliquez **Next**.
 1. Sur la page **Assign product licenses** , saisissez les informations suivantes:
 	- Select location : **United States**
-	- Licences : Vérifier que l'option **Assign user a product license** est sélectionnée et cochez les cases en regard des licences **Office 365 E5 (no Teams)**  et **Microsoft Teams Enterprise**
+	- Licences : Vérifier que l'option **Assign user a product license** est sélectionnée et cochez les cases en regard des licences **Microsoft 365 E5 (no Teams)**  et **Microsoft Teams Enterprise**
 	- **Apps** : Ouvrez cette section pour décocher **Skype for Business (plan 1)**
 1. Cliquez sur **Next.**
 1. Sur la page **Optional settings**, cliquez sur la ligne **Roles (User : no administration access).**
@@ -50,9 +69,9 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 1. En bas de la page, cliquez sur le lien **Add another user** et recommencez les étapes 3 à 12 précédentes, pour ajouter les utilisateurs avec les informations suivantes :
 	- **Username domain :** Lors de la saisie du **Username** pour chaque utilisateur, assurez-vous de sélectionner le domaine **[onmicrosoftDomain].onmicrosoft.com** comme vous l'avez fait pour le compte de Dominique (Si vous ne pouvez le sélectionner à la création, changez-le une fois le compte créé).
 	- **Password :** Utilisez le mot de passe ```Pa55w.rd```, et, comme pour le compte de Dominique, exigez le changement de mot de passe à la première connexion.
-	- **Licenses :** Affectez une licence **Office 365 E5 (no Teams)** et une licence **Microsoft Teams Enterprise** à l'utilisateur **Alan Yoo**, en décochant l'App **Skype for Business Online (plan1)** comme vous l'avez fait pour Dominique Skyetson. Pour tous les autres utilisateurs, sélectionner l'option **Create user without product license (not recommended)**.
+	- **Licenses :** Affectez une licence **Microsoft 365 E5 (no Teams)** et une licence **Microsoft Teams Enterprise** à l'utilisateur **Alan Yoo**, en décochant l'App **Skype for Business Online (plan1)** comme vous l'avez fait pour Dominique Skyetson. Pour tous les autres utilisateurs, sélectionner l'option **Create user without product license (not recommended)**.
 	- **Roles :** Par défaut chaque utilisateur se verra affecter le rôle **User role (no administration access)**; Cela suffira pour le moment. Dans un futur exercice, vous affecterez des rôles administratifs à certains utilisateurs pour tester la délégation administrative. Ainsi, en arrivant sur la page **Optional settings**, cliquez directement sur **Next**.
-	> ```Alan Yoo``` | username ```alan``` | Licence **Office 365 E5** et **Microsoft Teams Enterprise** mais pas de rôle admin  
+	> ```Alan Yoo``` | username ```alan``` | Licence **Microsoft 365 E5** et **Microsoft Teams Enterprise** mais pas de rôle admin  
 	```Ada Russell``` | username ```ada``` | Ni licence ni rôle admin
 	```Adam Hobbs``` | username ```adam``` | Ni licence ni rôle admin
 	```Libby Hayward``` | username ```libby``` | Ni licence ni rôle admin
@@ -74,7 +93,7 @@ Vous affecterez ensuite une licence produit au compte de Ada Russell. Pour finir
 1. Sur le panneau **Block sign-in**, cochez la case **Block this user from signing in** avant de cliquer sur le bouton **Save changes**. Notez le bandeau vert indiquant que le compte de Alan est désormais bloqué et qu'il sera déconnecté des services Microsoft dans les 60 minutes. Cliquez sur le **X** de fermeture en haut à droite du panneau **Block sign-in**.
 1. Dans la liste **Active users**, désélectionnez la case à gauche de **Alan Yoo**, avant de sélectionner **Ada Russell**.
 1. Pour Ada, vous souhaitez apprendre à affecter une licence à un utilisateur existant. Dans la barre des menus au-dessus des utilisateurs, cliquez sur **Manage product licenses** (utilisez les points de suspension **More Options** si le choix n'est pas affiché).
-1. Sur le panneau **Ada Russell** qui s'affiche, l'onglet **Licenses and apps** est affiché par défaut (puisque vous avez sélectionné l'option **Manage product licenses**). Sous la liste des licences, cliquez sur les cases **Office 365 E5 (no Teams)** et **Microsoft 
+1. Sur le panneau **Ada Russell** qui s'affiche, l'onglet **Licenses and apps** est affiché par défaut (puisque vous avez sélectionné l'option **Manage product licenses**). Sous la liste des licences, cliquez sur les cases **Microsoft 365 E5 (no Teams)** et **Microsoft 
 Teams Enterprise**. Déselectionnez l'*App* **Skype for business Online (plan 1)** avant de cliquer sur le bouton **Save changes**.  
 1. Sélectionnez le **X** en haut à droite pour fermer le panneau d'informations de **Ada Russell**.
 1. Dans la liste **Active users**, vous pouvez voir qu'une licence a été affectée au compte de **Ada Russell**. Décochez la case en regard de **Ada Russell** avant de sélectionner **Libby Hayward**.
