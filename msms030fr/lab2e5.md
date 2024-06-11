@@ -90,8 +90,8 @@ Dans la liste **Active users**, notez que, en passant la souris sur les lignes r
 1. Pour vérifier si, oui ou non, Leila Macdonald peut se connecter après que son compte ait été bloqué, vous allez tenter de vous connecter en tant que Leila. Déconnectez-vous, sur Microsoft 365, du compte de **Leanna Goodwin** (En cliquant sur le cercle en haut à droite puis sur **Sign out**).
 1. Fermez ensuite tous les autres onglets de la fenêtre de navigation privée de Edge sauf l'onglet **Sign out**. Sur ce dernier onglet, naviguez sur l'adresse ```https://www.microsoft365.com```.
 1. Sur la page **Login - Microsoft 365**, cliquez sur **Switch to a different account**.
-1. Saisissez l'adresse **leila@[godeployDomain].godeploylabs.com** dans le champ **Email address** avant de cliquer sur **Sign in**.
-1. Sur la page **Sign in**, vérifiez l'adresse saisie pour Leila avant de cliquer sur **Next**.
+1. Saisissez l'adresse ```leila@[godeployDomain].godeploylabs.com``` dans le champ **Email address** avant de cliquer sur **Sign in**.
+1. Sur la page **Sign in**, vérifiez l'adresse saisie pour Leila avant de cliquer sur **Next** et saisir le mot de passe ```Pa55w.rd```.
 	>La fenêtre **Pick an account** devrait apparaître et afficher un message d'erreur rouge indiquant **Your account has been locked. Contact your support person to unlock it, then try again.**  
 	Vous venez de vérifier que Leila (ou quelqu'un ayant obtenu son nom de connexion et son mot de passe) ne peut ouvrir de session.
 1. Fermez maintenant la fenêtre de navigation privée de **Edge** et basculez sur votre autre fenêtre **Edge**, dans laquelle vous devriez être resté connecté sur l'environnement **Microsoft 365** en tant que Dominique Skyetson. La liste **Active users** devrait être affichée dans le portail **Microsoft 365 admin center** depuis les précédentes tâches.
