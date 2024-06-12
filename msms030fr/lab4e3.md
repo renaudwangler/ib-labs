@@ -66,7 +66,7 @@ Dans cette tâche, vous allez utiliser l'assistant de configuration de Entra Con
 1. Sur la mire d'ouverture de session, connectez vous avec le compte de  ```Beth@[godeployDomain].godeploylabs.com``` et le mot de passe ```Pa55w.rd```.
 1. Sur la barre des tâches, dans le champ de recherche à droite du bouton Démarrer, tapez ```Windows PowerShell ISE``` sur **Windows Powershell (ISE)**.
 1. Utilisez la commande suivante pour afficher l'état de la jonction de la machine : ```dsregcmd /status```.
-1. Au début du résultat, vous devriez voir **YES** en regard de **AzureADJoined**. Si ce n'est pas le cas, attendez quelques instants avant de réessayer.
+1. Au début du résultat, vous devriez voir **YES** en regard de **AzureADJoined**. Si ce n'est pas le cas, attendez quelques instants avant de réessayer (vous pouvez utiliser la commande ```dsregcmd /join``` pour tenter d'accélerer les choses....).
 1. Fermez la fenêtre **Windows Powershell**.
 1. Ouvrez le menu **Démarrer** et cliquez sur l'engrenage **Settings** dans son menu de navigation à gauche.
 1. Dans la fenêtre **Windows Settings**, cliquez sur **Accounts**.
