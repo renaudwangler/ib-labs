@@ -44,7 +44,7 @@ Toujours en tant que Dominique Skyetson, Administrateur de l'entreprise Adatum, 
 1. sur le portail **Microsoft Teams admin center**, cliquez sur **Meeting settings** dans le groupe d'options **Meetings**.
 1. Sur la page **Meetings settings**, dans la section **Email invitation**, Saisissez les informations suivantes :
 	- **Logo URL** : ```https://renaudwangler.github.io/ib-pages/logo_ibcegos.png```
-	- **Legal URL** : ```https://adatum.com/legal.html```
+	- **Privacy and security URL** : ```https://adatum.com/legal.html```
 	- **Help URL** : ```https://adatum.com/joiningmeetinghelp.html```
 	- **Footer :** ```Please accept at your earliest convenience. Thank you!```
 1. Cliquez sur le bouton **Preview invite**.
