@@ -32,7 +32,8 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 	- Lidia Holloway
 	- Miriam Graham
 	- Pradeep Gupta
-	> Nota : Si tous les utilisateurs de la liste ne sont pas présent dans votre tenant de test, contentez-vous de désaffecter les licences de celles et ceux qui s'y trouvent, ce n'est pas pénalisant pour la suite....  
+	> Nota 1 : Si tous les utilisateurs de la liste ne sont pas présent dans votre tenant de test, contentez-vous de désaffecter les licences de celles et ceux qui s'y trouvent, ce n'est pas pénalisant pour la suite....  
+	> Nota 2 : Si, sur votre tenant, les licenses présentes sont **Office 365 E5 (no teams)** et non **Microsoft 365 E5 (no Teams)**, merci d'adapter des énnonçés des ateliers en conséquence...
 1. Dans la fenêtre de confirmation **Unassign 11 licenses?**, cliquez sur le bouton **Unassign**.
 1. Dans le menu de navigation à gauche du portail administratif, ouvrez le groupe **Billing** pour resélectionner l'entrée **Licenses**.  
 1. Répétez la procédure précédente pour désaffecter la license **Microsoft Teams Enterprise** des mêmes utilisateurs.
