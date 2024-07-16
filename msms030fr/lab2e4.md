@@ -45,13 +45,13 @@ Dans un exercice précédent, vous avez créé des comptes utilisateurs en utili
 	>**Note :** La valeur *False* pour *ForceChangePasswordNextSignIn* signifie que Catherine n'aura pas besoin de modifier son mot de passe lors de sa première connexion.  
 	```$user1 = New-MGuser –UserPrincipalName catherine@[onmicrosoftDomain].onmicrosoft.com –DisplayName "Catherine Richard" -GivenName Catherine -SurName Richard -PasswordProfile @{password='Pa55w.rd';ForceChangePasswordNextSignIn=$false} -UsageLocation CH -AccountEnabled -MailNickname catherine```
 	>**Note :** Vous pouvez simplement taper la commande ```$user1``` pour afficher le résultat de l'opération précédente avant de passer à la suite.
-1. la commande suivante va créer un second compte utilisateur pour **Tameka Reed** (pensez à remplacer le nom du domaine):
+1. la commande suivante va créer un second compte utilisateur pour **Tameka Reed**:
 	```$user2 = New-MGuser –UserPrincipalName tameka@[onmicrosoftDomain].onmicrosoft.com –DisplayName "Tameka Reed" -GivenName Tameka -SurName Reed -PasswordProfile @{password='Pa55w.rd';ForceChangePasswordNextSignIn=$false} -UsageLocation CH -AccountEnabled -MailNickname tameka```
 	>**Note :** Vous pouvez simplement taper la commande ```$user2``` pour afficher le résultat de l'opération précédente avant de passer à la suite.
 1. Utilisez la commande suivante pour obtenir la liste des comptes qui n'ont pas de licence associée à leur compte :
 	```Get-MgUser -Filter "assignedLicenses/`$count eq 0 and userType eq 'Member'" -ConsistencyLevel eventual -CountVariable unlicensedUserCount -All```
 1. Utilisez la commande suivante pour obtenir la licence **Microsoft 365 E5** disponible dans le contexte du projet pilote :
-	```$license = Get-MgSubscribedSku|where SkuPartNumber -like "Microsoft_365_E5*"```
+	```$license = Get-MgSubscribedSku|where SkuPartNumber -like "*_365_E5*"```
 	>**Note :** Vous pouvez simplement taper la commande ```$license``` pour afficher le résultat de l'opération précédente avant de passer à la suite.
 1. Utilisez la commande suivante pour affecter la licence au premier compte utilisateur :
 	```Set-MgUserLicense -userId $user1.id -AddLicenses @{SkuId=$license.SkuId} -RemoveLicenses @()```
