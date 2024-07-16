@@ -16,7 +16,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 - la création de comptes utilisateurs dans le portail *Microsoft 365 Admin Center*
 - la modification d'options sur les comptes utilisateurs dans le portail *Microsoft 365 Admin Center*
 
-## Préparation - Désaffection de licences
+## Préparation - Désaffectation de licences
 1. Vous devriez encore être connecté sur **LON-CL1** à l'issue du premier atelier. Le **Microsoft 365 admin center** devrait encore être resté ouvert dans votre navigateur et vous devriez y être connecté avec le compte *MOD Administrator*. 
 1. Dans le portail **Microsoft 365 admin center**, dans le menu de navigation à gauche, ouvrez le groupe **Billing** pour sélectionner l'entrée **Licenses**.  
 1. Dans la fenêtre licenses, cliquez sur la ligne **Microsoft 365 E5 (no Teams)**.
@@ -32,6 +32,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 	- Lidia Holloway
 	- Miriam Graham
 	- Pradeep Gupta
+	> Nota : Si tous les utilisateurs de la liste ne sont pas présent dans votre tenant de test, contentez-vous de désaffecter les licences de celles et ceux qui s'y trouvent, ce n'est pas pénalisant pour la suite....  
 1. Dans la fenêtre de confirmation **Unassign 11 licenses?**, cliquez sur le bouton **Unassign**.
 1. Dans le menu de navigation à gauche du portail administratif, ouvrez le groupe **Billing** pour resélectionner l'entrée **Licenses**.  
 1. Répétez la procédure précédente pour désaffecter la license **Microsoft Teams Enterprise** des mêmes utilisateurs.
