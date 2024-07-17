@@ -42,7 +42,7 @@ Dans cette tâche, vous allez utiliser l'assistant d'installation de Entra Conne
 1. Dans la page **Azure AD sign-in configuration**, cochez la case **Continue without matching all UPN suffixes to verified domains** et cliquez sur **Next**.
 1. Sur la page **Ready to configure**, vérifiez que la case **Start the synchronization process when configuration completes** soit cochée avant de cliquer sur **Install**.
 1. Attendez la fin de la mise en oeuvre de la synchronisation (cela prendra quelques minutes) et cliquez sur **Exit**.
-1. Cliquez sur le bouton démarrer en bas à gauche de la barre des tâches. Dans le menu **Démarrer**, ouvrez le groupe **Azure AD Connect** sur l'onglet **All apps** et cliquez sur **Synchronization Service** pour lancer cet outil.  
+1. Cliquez sur le bouton démarrer en bas à gauche de la barre des tâches. Dans le menu **Démarrer**, lancez l'outil **Synchronization Service**, en allant le chercher dans le groupe d'applications **Azure AD Connect** sur l'onglet **All apps**.  
 	>**Note :** Si, en sélectionnant **Azure AD Connect** dans le menu **Démarrer** vous ne pouvez ouvrir le groupe et sélectionner **Synchronization Service**, il pourra être nécessaire de vous déconnecter et reconnecter sur LON-DC1.
 1. Dans la fenêtre **Synchronization Service Manager**, l'onglet **Operations** est affiché par défaut, vous permettant de surveiller le processus de synchronisation.
 1. Attentez que la tâche **Export** pour **[onmicrosoftDomain].onmicrosoft.com** soit terminée ; la colonne **Status** devrait indiquer **success**. Une fois terminée, cliquez sur cette ligne.
