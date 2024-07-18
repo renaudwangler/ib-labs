@@ -52,7 +52,6 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 1. Dans la liste de notifications, toutes les cases en regard des options pour la section **Email me when...** sont cochées par défaut. Décochez toutes les cases souf les trois suivantes :  
 	- **I receive a message in my inbox**
 	- **I log in from somewhere new**
-	- **I post a message via email (This will send a confirmation email)**
 1. Cliquez sur le bouton **Save**.
 1. Dans votre navigateur Internet, fermez l'onglet **Viva Engage : Notifications** avant de passer à la tâche suivante.
 
