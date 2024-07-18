@@ -32,8 +32,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 1. Fermez les éventuels popup de bienvenue et d'information en cliquant sur le **X** en haut à droite de chacun.
 1. Retournez sur le **Viva Engage : Admin center**.
 1. Dans le menu de navigation du portail d'administration **Engage**, sous la section **Network**, cliquez sur **Configuration**.
-1. Sur la page **Configuration**, dans la section **Email Settings**, cochez la case **Require all users in your network to confirm their messages posted via email before posting**.
-1. Dans la section **Enabled Features**, décochez la case **3rd Party Applications**.
+1. Sur la page **Configuration**, dans la section **Enabled Features**, décochez la case **3rd Party Applications**.
 1. Cliquez sur **Save** en bas de page.
 1. Dans le menu de navigation du portail d'administration **Engage**, sous la section **Content and Security**, cliquez sur **Monitor Keywords**.
 1. Sur la page **Monitor Keywords**, entrez l'adresse de Dominique (```dom@[onmicrosoftDomain].onmicrosoft.com```) dans le champ **Email Address**.
