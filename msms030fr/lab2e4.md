@@ -94,7 +94,7 @@ Dans cette tâche, vous allez utiliser Windows Powershell pour importer un fichi
 1. Vous pouvez ensuite utiliser la commande suivante pour obtenir la liste des comptes utilisateurs et constater qu'elle contient désormais les nouveaux utilisateurs importés à l'instant :
 	```Get-MgUser```
 1. Minimiser l'outil **Administrator : Windows Powershell ISE** et retournez dans votre navigateur Internet. 
-1. Dans le portail **Microsoft 365 admin center** navigez jusqu'à la liste **Active users**. Jettez un oeil au contenu de cette loste pour vérifier que les utilisateurs importés sont bien présents, ainsir que Catherine Richard et Tameka Reed, que vous avez ajouté précédemment par commandes PowerShell.
+1. Dans le portail **Microsoft 365 admin center** navigez jusqu'à la liste **Active users**. Jetez un oeil au contenu de cette liste pour vérifier que les utilisateurs importés sont bien présents, ainsi que Catherine Richard et Tameka Reed, que vous avez ajouté précédemment par commandes PowerShell.
 1. Dans le **Microsoft 365 admin center**, cliquez syr **Show all** (si nécessaire) pour afficher toutes les entrées de menu. Dans le groupe d'options **Admin centers**, cliquez sur **Exchange**.
 1. Dans le portail **Exchange admin center**, ouvrez le groupe d'options **Recipients** pour sélectionner **Mailboxes** si vous n'y êtes pas arrivé par défaut. Parcourrez les boites aux lettres et notez qu'aucune boite aux lettres n'a été créée pour les utilisateurs sans licence.
 1. Fermez l'onglet **Exchange Admin Center** dans le navigateur, pour retourner sur l'onglet **Microsoft 365 admin center**. 
