@@ -57,7 +57,7 @@ En tant que Dominique Skyetson, vous souhaitez désormais mettre en oeuvre les g
 1. Sous la section **Members** de la fenêtre **Accounts Receivable**, sélectionnez le lien **View all and manage members** pour ajouter des membres au groupe. 
 1. Dans la fenêtre **Members**, cliquez sur le bouton **+ Add members** : La liste des utilisateurs actifs s'affiche.
 1. Dans la liste des utilisateurs, sélectionnez **Adam Hobbs** et **Libby Hayward** puis cliquez sur **Add (2)**.
-1. Une fois que le message vert **Saved** apparait sur le panneau **Owners**, cliquez sur le **X** en haut à droite pour fermer le panneau d'informations sur **Accounts Receivable**.
+1. Une fois que le message vert **Saved** apparait sur le panneau **Members**, cliquez sur le **X** en haut à droite pour fermer le panneau d'informations sur **Accounts Receivable**.
  
 ## Tâche 2 - Suppression de groupe
 1. Vous souhaitez désormais tester les effets de la suppression d'un groupe. Basculez sur l'onglet **Teams & Microsoft 365 groups**.
