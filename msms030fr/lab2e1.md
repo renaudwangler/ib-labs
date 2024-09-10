@@ -110,8 +110,7 @@ Teams Enterprise**. Déselectionnez l'*App* **Skype for business Online (plan 1)
 1. Sur la barre de menu, cliquez sur le bouton **Restore user**.
 1. Dans le panneau **Restore Libby Hayward**, vous avez l'option d'affecter un nouveau mot de passe à Libby ou de demander la génération automatique d'un nouveau mot de passe. **Sur le terrain, il est conseillé de générer automatiquement un mot de passe et d'exiger que l'utilisateur le change à sa première connexion.**  
 	Puisque l'option **Auto-generate password** est sélectionnée par défaut et que la case **Make this user change their password when they first sign in** est cochée, cliquez simplement sur le bouton **Restore** en bas de la page.
-1. Le panneau **Libby Hayward has been restored** s'affiche pour confirmer que le compte de Libby a été restauré et son mot de passe remplacé. Vous avez également l'option d'envoyer le nouveau mot de passe de Libby par email.  
-	Sélectionnez la case en regard de **Send password in email**, et dans le champ **Email the new password to the following recipients**, l'adresse email du compte *MOD Administrator* est inscrite par défaut. Après cette adresse, saisissez un point-virgule, suivi de l'adresse email de Dominique (```dom@[onmicrosoftDomain].onmicrosoft.com```) avant de cliquer sur le bouton **Send email and close**.  
+1. Le panneau **Libby Hayward has been restored** s'affiche pour confirmer que le compte de Libby a été restauré et son mot de passe remplacé. Prenez soin de copier le nouveau mot de passe (en en prenant par exemple note dans un notepad) vous en aurez besoin à la tâche suivante avant de cliquer sur le bouton **Close**.  
 	>**Note :** Si vous avez procédé *trop* rapidement à la suppression et restauration de l'utilisateur, il se peut que le nom de connexion de celui-ci ne soit pas correct (restauration effectuée avant que le suppression ne soit complètement assumée). Dans ce cas, vous pourrez ensuite aisément modifier le nom de connexion de Libby pour lui remettre ```libby@[onmicrosoftDomain].onmicrosoft.com```...
 1. Le compte de Libby ne devrait plus apparaitre dans la liste **Deleted users**. Dans le portail **Microsoft 365 admin center**, dans le menu de navigation, sélectionnez **Active users**.
 1. Vérifiez que **Libby Hayward** apparait dans la liste.
@@ -120,11 +119,6 @@ Teams Enterprise**. Déselectionnez l'*App* **Skype for business Online (plan 1)
 ## Tâche 3 - Vérification des paramètres utilisateurs
 Dans cette tâche, vous allez vérifier l'impact des changements que vous avez fait aux comptes utilisateurs dans les tâches précédentes. Vous allez vous connecter avec le compte de Libby Hayward et donc avoir besoin du mot de passe temporaire qui lui a été affecté. Vous allez ensuite ouvrir une session Microsoft 365 en tant que Alan Yoo, afin de valider si son compte est bien empêché de se connecter. 
 1. Vous devriez encore être connecté sur **LON-CL1** à l'issue du premier atelier. Le **Microsoft 365 admin center** devrait encore être resté ouvert dans votre navigateur et vous devriez y être connecté avec le compte *MOD Administrator*.
-1. Vous allez avoir besoin de vous connecter sur la messagerie Outlook de l'administrateur global afin de récupérer le mot de passe temporaire qui a été affecté au compte de Libby. Dans votre navigateur, dans la page du portail **Microsoft 365 admin center**, sélectionnez l'icône **Outlook** dans le menu applicatif dans le coin supérieur gauche (menu situé derrière l'icône affichant un carré de 3 cases par 3cases).   
-	 Vous allez ainsi afficher la boite Outlook du compte *Mod Administrator* dans un nouvel onglet.
-1. Si une fenêtre **Welcome** apparait, cliquez sur le **X*** en haut à droite pour la fermer.
-1. Dans la boite de réception **Inbox** de l'administrateur, sélectionnez le message émis par **Microsoft on behalf of your organization** dont le sujet devrait être **Account information for new or modified users**.  
-	Ce message devrait contenir le mot de passe temporaire de Libby, prenez en bonne note (vous pouvez, par exemple, le coller ainsi que le nom de connexion de Libby dans un document texte dans *Notepad*).
 1. Vous devez vous déconnecter de Microsoft 365 et vous reconnecter avec le compte de Libby Hayward. Sélectionnez le cercle en haut à droite avec **MA** (les initiales de *MOD Administrator*) et cliquez sur **Sign out**.
 1. Une fois qu'une invite apparait vous indiquant que vous êtes correctement déconnecté, fermez votre navigateur Internet pour éviter qu'une session soit restée ouverte sur un autre onglet.
 1. Dans la barre des tâches, cliquez sur l'icône de **Microsoft Edge** pour relancer une session de navigation et connectez-vous sur le portail Microsoft 365 à l'adresse suivante :  
@@ -132,7 +126,7 @@ Dans cette tâche, vous allez vérifier l'impact des changements que vous avez f
 1. Cliquez sur le bouton **SIgn in**.
 1. Dans la fenêtre **Pick an account**, sélectionnez **+ Use another account**.
 1. Dans la fenêtre **Sign in**, entrez ```Libby@[onmicrosoftDomain].onmicrosoft.com``` et cliquez sur **Next**.
-1. Dans la fenêtre **Enter password**, saisissez le mot de passe temporaire de Libby dont vous avez pris note à l'étape précédente et cliquez sur le bouton **Sign in**.
+1. Dans la fenêtre **Enter password**, saisissez le mot de passe temporaire de Libby dont vous avez pris note dans la tâche précédente et cliquez sur le bouton **Sign in**.
 1. Dans la fenêtre **Update your password**, entrez de nouveau le mot de passe temporaire de Libby dans le champ **Current password**, et utilisez le mot de passe ```ibForm@tion``` dans les champs **New password** et **Confirm password**. Cliquez sur **Sign in**.
 1. Si une fenêtre **Welcome to Microsoft 365** apparait, cliquez deux fois sur la flèche de droite pour accéder à la validation vous permettant de la fermer.
 1. Vérifiez que vous pouvez accéder à la page d'accueil de Microsoft 365. Notez qu'aucune application n'est présente sur le portail de Libby puisque vous n'avez affecté aucune licence au compte de Libby.
