@@ -29,7 +29,7 @@ Vous utiliserez ensuite la VM **LON-CL2** pour installer Microsoft 365 Apps.
 1. Cliquez sur **Sign in**.
 1. Dans la fenêtre **Sign in**, tapez ```Laura@[onmicrosoftDomain].onmicrosoft.com``` avant de cliquer sur **Next**.
 1. Dans la fenêtre **Enter password**, saisissez ```Pa55w.rd``` et cliquez sur **Sign in**.
-1. Dans la boite de dialogue **Update your password**, entrez **Pa55w.rd**** dans le champ **Current password**, puis entrez ```ibForm@tion``` dans les champs **New password** et **Confirm password**. Cliquez sur **Sign in**.
+1. Dans la boite de dialogue **Update your password**, entrez ```Pa55w.rd``` dans le champ **Current password**, puis entrez ```ibForm@tion``` dans les champs **New password** et **Confirm password**. Cliquez sur **Sign in**.
 1. Si une fenêtre **Stay signed in?** apparait, cochez la case **Don't show this again** et cliquez sur **Yes.**
 1. Si la boite de dialogue **Welcome to Microoft 365** apparait, fermez-la.
 1. Dans la page **Welcome to Microsoft 365** de Laura, constatez que Microsoft 365 apps n'apparait pas dans le menu **Install and more** puisque Laura ne s'est pas vu affecté de licence Microsoft 365 Apps.  
