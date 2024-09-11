@@ -81,7 +81,7 @@ Dans la tâche précédente, vous vous êtes connecté avec le compte de Alan Yo
 1.  Dans la barre de notification qui apparait en haut à droite de votre navigateur, cliquez sur le lien **Open file** sous le fichier **OfficeSetup.exe** une fois ce dernier téléchargé. Vous allez ainsi lancer l'assistant d'installation d'Office.
 1. Si une boite de dialogue **Do you want to allow this app to make changes to your device?** apparait, cliquez sur **Yes**.
 1. L'installation va prendre quelques minutes à se terminer. Une fois l'installation réalisée, cliquez sur le bouton **Close** dans la fenêtre **You're all set!**.
-1. Pour vérifier l'installation de Microsoft 365 Apps for enterprise par Alan Yoo, cliquez sur le bouton **Démarrer** en bas à gauche de la barre des tâches. La section **Recently added** (en haut du menu **Démarrer**) affiche Microsoft 365 Apps for enterprise qui vient juste d'être installée. Cela pourra inclure Word, PowerPoint, OneNote, Outlook, Publisher, Access, Teams et Excel.
+1. Pour vérifier l'installation de Microsoft 365 Apps for enterprise par Alan Yoo, cliquez sur le bouton **Démarrer** en bas à gauche de la barre des tâches. La section **Recently added** (en haut du menu **Démarrer**) affiche Microsoft 365 Apps for enterprise qui vient juste d'être installée. Cela pourra inclure Word, PowerPoint, OneNote, Outlook, Publisher, Access et Excel.
 1. Dans le menu **Démarrer**, cliquez sur **Word**.
 1. Dans la fenêtre **Sign in to get strated with Word**, cliquez sur **Sign in or create account**.
 1. Dans la fenêtre **Activate Office**, saisissez l'adresse de Alan : ```alan@[onmicrosoftDomain].onmicrosoft.com``` avant de cliquer sur **Next**.
