@@ -83,7 +83,7 @@ Dans la tâche précédente, vous vous êtes connecté avec le compte de Alan Yo
 1. L'installation va prendre quelques minutes à se terminer. Une fois l'installation réalisée, cliquez sur le bouton **Close** dans la fenêtre **You're all set!**.
 1. Pour vérifier l'installation de Microsoft 365 Apps for enterprise par Alan Yoo, cliquez sur le bouton **Démarrer** en bas à gauche de la barre des tâches. La section **Recently added** (en haut du menu **Démarrer**) affiche Microsoft 365 Apps for enterprise qui vient juste d'être installée. Cela pourra inclure Word, PowerPoint, OneNote, Outlook, Publisher, Access et Excel.
 1. Dans le menu **Démarrer**, cliquez sur **Word**.
-1. Dans la fenêtre **Sign in to get strated with Word**, cliquez sur **Sign in or create account**.
+1. Dans la fenêtre **Sign in to get started with Word**, cliquez sur **Sign in or create account**.
 1. Dans la fenêtre **Activate Office**, saisissez l'adresse de Alan : ```alan@[onmicrosoftDomain].onmicrosoft.com``` avant de cliquer sur **Next**.
 1. Dans la fenêtre **Enter password**, tapez ```ibForm@tion``` et cliquez sur **Sign in.**
 1. Sur la fenêtre **Stay signed in to all your apps**, cliquez sur le lien **No, sign in to this app only**.
