@@ -22,7 +22,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 1. Dans le portail **Microsoft 365 admin center**, dans le menu de navigation, cliquez sur **Show all** (si nécessaire) puis cliquez sur **Sharepoint** sous la section **Admin centers**. Ceci va ouvrir le portail **SharePoint admin center** dans un nouvel onglet.
 1. Si une boite de dialogue **Take the tour** apparaît, cliquez en dehors pour la fermer.
 1. Dans le menu de navigation du portail **Sharepoint admin center**, ouvrez le groupe d'options **Policies** pour cliquer sur **Sharing**.
-1. Sur la page **Sharing**, cliquez pour ouvrir la section **More external sharing settings**. Parmi les options affichées, cochez les cases **Guests must sign in using the same account to which sharing invitations are sent** et **Allow guests to share items they don't own** (si elle n'est pas déjà cochée par défaut)). Cliquez sur le bouton **Save** en bas de page.
+1. Sur la page **Sharing**, cliquez pour ouvrir la section **More external sharing settings**. Parmi les options affichées, cochez la case **Allow guests to share items they don't own** (si elle n'est pas déjà cochée par défaut)). Cliquez sur le bouton **Save** en bas de page.
 1. Conservez votre navigateur Internet ouvert pour la tâche suivante. 
 
 ## Tâche 2 - Configuration des profils utilisateurs
