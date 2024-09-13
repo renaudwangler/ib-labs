@@ -49,7 +49,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 	
 1. Dans le panneau **Settings**, sous la section **Viva Engage**, cliquez sur **Edit settings**. Ceci ouvre la page **Account Settings**.
 1. Sur la page **Account Settings**, cliquez sur l'onglet **Notifications**.
-1. Dans la liste de notifications, toutes les cases en regard des options pour la section **Email me when...** sont cochées par défaut. Décochez toutes les cases souf les trois suivantes :  
+1. Dans la liste de notifications, toutes les cases en regard des options pour la section **Email me when...** sont cochées par défaut. Décochez toutes les cases sauf les deux suivantes :  
 	- **I receive a message in my inbox**
 	- **I log in from somewhere new**
 1. Cliquez sur le bouton **Save**.
