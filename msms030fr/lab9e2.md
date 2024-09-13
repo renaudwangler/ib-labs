@@ -33,9 +33,8 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 1. Si une fenêtre **Welcome to OneDrive for Business** apparaît, fermez-la.
 1. Dans la page **OneDrive**, cliquez sur le bouton **+ Add new** et choisissez **Word document**.
 1. Si une fenêtre **Your privacy option** s'affiche, cliquez sur **Close**.
-1. Dans le document vierge qui s'est ouvert sur un nouvel onglet de navigation dans **Word Online**, tapez un peu de texte témoin et constatez que *Word Online* le sauvegarde en surveillant la petite coche de validation qui apparaît sur le nuage à droite du nom de votre document (**Doument**).
-1. Vous souhaitez renommer ce document. Dans la barre de menu de Word Online, ouvrez le menu **File**, cliquez sur **Save as** pour choisir **Rename**.
-1. Dans le panneau qui s'affiche, entrez ```OneDrive Test``` dans le champ **File Name** et cliquez en-dehors de ce champ. Cela va renommer votre fichier et fermer le panneau de sauvegarde.
+1. Dans le document vierge qui s'est ouvert sur un nouvel onglet de navigation dans **Word Online**, tapez un peu de texte témoin et constatez que *Word Online* le sauvegarde en surveillant la petite coche de validation qui apparaît sur le nuage à droite du nom de votre document (**Document**).
+1. Vous souhaitez renommer ce document. Dans la barre de menu de Word Online, cliquez sur le champ contenant le nom du document (*Document*) pour saisir le nouveau nom ```OneDrive Test``` dans le champ **Rename File* et cliquez en-dehors de ce champ. Cela va renommer votre fichier.
 1. Fermez l'onglet Word Online de votre navigateur.
 1. Dans la fenêtre **OneDrive**, votre document **OneDrive test.docx** devrait apparaître (si ce n'est pas le cas, rafraichissez cette fenêtre). Cliquez sur l'icône d'engrenage **Settings** en haut à droite.
 1. Sur le panneau **Settings**, cliquez sur **Sync this OneDrive**.
