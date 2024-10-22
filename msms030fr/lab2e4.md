@@ -25,7 +25,8 @@ Dans cette tâche vous allez mettre en place l'environnement fondamental pour la
 1. Faites un clic-droit sur **Windows Powershell ISE** et, dans le menu qui apparait, choisissez **Run as administrator**.
 1. Si une fenêtre **Do you want to allow this app to make changes to your device** apparait, cliquez sur **Yes**.
 1. Dans la partie basse (fond bleu) de la fenêtre **Administrator: Windows PowerShell ISE**, tapez ```install-module microsoft.graph -force``` et faites **[Entrée]** si nécessaire.
-	>**Note :** Si le système Windows n'est pas correctement à jour dans la machine virtuelle, réalisez ces opérations préparatoires dans une invite **Windows Powershell** standard (en fermant la fenêtre *Windows Powershell ISE** pour la réouvrir ensuite à partir de la tâche 2...)
+	>**Note :** Si le système Windows n'est pas correctement à jour dans la machine virtuelle, réalisez ces opérations préparatoires dans une invite **Windows Powershell** standard (en fermant la fenêtre **Windows Powershell ISE** pour la réouvrir ensuite à partir de la tâche 2...)
+	>**Note :** Notez également que l'installation du module Microsoft Graph est **particulièrement longue**... patience donc...
 1. S'il vous est demandé si vous souhaitez faire confiance à **NuGet provider**, tapez **Y** pour répondre oui.
 1. S'il vous est demandé de confirmer si vous souhaitez installer les modules depuis la **Powershell Gallery** (PSGallery), tapez **A** pour répondre *Oui à tous*
 1. Attendez que l'installation des modules se termine et que l'ISE vous rende la main (Vous pouvez vérifier la couleur du bouton **Stop** en haut de l'outil qui doit être repassé au gris, s'il est rouge c'est que le processus d'installation n'est pas encore terminé, il peut se passer quelques minutes pendant lesquelles vous aurez l'impression que plus rien n'évolue).
