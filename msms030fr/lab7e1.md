@@ -72,7 +72,7 @@ Dans le contexte de son projet pilote, Adatum demande la création d'une nouvell
 	- **Chat** : **On**
 	- **Chat with groups** : **On**
 	- **Giphy in conversations** : **Off**
-	- **Giphy content rating** : **Moderate**
+	- **Giphy content rating** : **PG (Based on the Giphy content rating)**
 	- **Memes in conversations** : **Off**
 	- **Stickers in conversations** : **Off**
 	- **URL previews** : **On**
