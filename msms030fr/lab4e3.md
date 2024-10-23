@@ -19,12 +19,12 @@ Dans cette tâche, vous allez utiliser l'assistant de configuration de Entra Con
 1. Dans la page d'accueil **Welcome to Azure AD Connect**, cliquez sur le bouton **Configure**.
 1. Sur la page **Additional tasks**, sélectionnez la ligne **Configure device options** puis cliquez sur **Next**.
 1. Sur la page **Overview**, cliquez sur **Next**.
-1. Sur la page **Connect to Azure AD**, saisissez les informations de connexion de Dominique Skyetson (```dom@[onmicrosoftDomain].onmicrosoft.com``` dans le champ **USERNAME** et ```ibForm@tion``` dans le champ **PASSWORD**) puis cliquez sur **Next**.
+1. Sur la page **Connect to Entra**, saisissez les informations de connexion de Dominique Skyetson (```dom@[onmicrosoftDomain].onmicrosoft.com``` dans le champ **USERNAME** et ```ibForm@tion``` dans le champ **PASSWORD**) puis cliquez sur **Next**.
 1. Si une fenêtre **Sign in to your account** surgit, utilisez la pour vous connecter avec le compte de Dominique.
 1. Sur la page **Device options**, sélectionnez **Configure Hybrid Azure AD join** et cliquez sur **Next**.
 1. Sur la page **Device operating systems**, cochez la case **Windows 10 or later domain-joined devices** et cliquez sur **Next**.
 1. Sur la page **SCP configuration**, sélectionnez la case à cocher en regard de **Adatum.com**
-	1. Sélectionnez **Azure Active Directory** dans le champ **Authentication Service**.
+	1. Sélectionnez **Entra Id** dans le champ **Authentication Service**.
 	1. Cliquez sur **Add**.
 	1. Dans la boite de dialogue **Enterprise Admin Credentials**, entrez ```ADATUM\Administrator``` dans le champ **USERNAME** et ```Pa55w.rd``` Dasn le champ **PASSWORD**.
 	1. Cliquez sur **OK**.
