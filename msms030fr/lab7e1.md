@@ -175,7 +175,7 @@ Dans le contexte du projet pilote Adatum, Dominique Skyetson va maintenant modif
 	- **Delete chat** : **Off**
 	- **Chat** : **On**
 	- **Giphy in conversations** : **Off**
-	- **Giphy content rating** : **Strict**
+	- **Giphy content rating** : **G (based on the GIPHY Content Rating)**
 	- **Memes in conversations** : **Off**
 	- **Stickers in conversations** : **Off**
 	- **Immersive reader for messages** : **On**
