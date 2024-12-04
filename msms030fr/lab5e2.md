@@ -28,9 +28,9 @@ Dominique souhaite désormais ajouter Microsoft 365 apps automatiquement aux pé
 1. Dans la fenêtre **Apps - All apps**, cliquez sur le bouton **+ Add**.
 1. Dans le panneau **Select app type**, sous **App type**, cliquez sur le menu déroulant. Sous **Microsoft 365 Apps**, sélectionnez **Windows 10 and later** avant de cliquer sur **Select**.
 1. Dans la page **App suite information**, conservez les valeurs par défaut et cliquez sur **Next**.
-1. Dans l'onglet **Configure app suite**, sélectionnez **Office Open Document Format** pour le champ **Default file format**.
-1. En face de **Select Office apps**, cliquez sur le panneau déroulant. Confirmez que toutes les applications, sauf **Skype for business** sont sélectionnez. Cliquez de nouveau sur l'en-tête de menu pour le fermer.
+1. Dans l'onglet **Configure app suite**, en face de **Select Office apps**, cliquez sur le panneau déroulant. Confirmez que toutes les applications, sauf **Skype for business** sont sélectionnez. Cliquez de nouveau sur l'en-tête de menu pour le fermer.
 1. En face de **Select other Office apps (license required)**, cliquez sur le panneau déroulant. Sélectionnez **Project Online Desktop client** et **Visio Online Plan 2**. Cliquez de nouveau sur l'en-tête de menu pour le fermer.
+1. Sélectionnez **Office Open Document Format** pour le champ **Default file format**.
 1. En face de **Update channel**, sélectionnez **Semi-Annual Enterprise Channel**.
 1. En face de **Accept the Microsoft Software License Terms on behalf of users**, sélectionnez **Yes**.
 1. Cliquez sur **Next**.
