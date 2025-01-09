@@ -4,13 +4,13 @@ title: 'MS365 - Administration de Microsoft 365'
 synopsis: "Ateliers pratiques de la formation ib MS365"
 ---
 # Ateliers du stage
-L'entreprise **ib Cegos Workshop (ICW)** héberge actuellement un environnement informatique *classique*, dans ses datacenters, qui comporte diverses applications historiques (comme Microsoft Exchange par exemple). L'entreprise a cependant récemment décider de tester la migration vers les outils présents dans l'offre Microsoft 365, y voyant une opportunité économique et une opportunité d'améliorer la qualité du service apporté par le système d'information aux utilisateurs du métier.  
+L'entreprise **ib Cegos Workshop (ICW)** héberge actuellement un environnement informatique *classique*, dans ses datacenters, qui comporte diverses applications historiques (comme Microsoft Exchange par exemple). L'entreprise a cependant récemment décidé de tester la migration vers les outils présents dans l'offre Microsoft 365, y voyant une opportunité économique ainsi qu'une opportunité d'améliorer la qualité du service apporté par le SI aux utilisateurs du métier.  
 
-Au fil des ateliers de ce stage, vous allez prendre l'identité de Marie Skyetson, membre de l'équipe d'administration IT de ICW.  
-L'équipe projet de ib Cegos Workshop a donc décide de mettre en oeuvre Microsoft 365 dans un projet pilote, afin de monter en compétence sur les produits et de voir les besoins métiers qui pourraient être couverts par les outils de l'offre Microsoft 365.  
+Au fil des ateliers de ce stage, vous allez prendre l'identité de Dominique Skyetson, membre de l'équipe d'administration IT de ICW.  
+L'équipe projet de ib Cegos Workshop a donc décidé de mettre en oeuvre Microsoft 365 dans un projet pilote, afin de monter en compétence sur les produits et de voir les besoins métiers qui pourraient être couverts par les outils de l'offre Microsoft 365.  
 
-## Atelier 1 - Provisioning de l'environnement Microsoft 365
-### Exercice 1 - [Création du tenant Microsoft 365](lab1e1)
+## Atelier 1 - Appréhension de l'environnement Microsoft 365
+### Exercice 1 - [Préparation de tenant pilote Microsoft 365](lab1e1)
 ___
 ## Atelier 2 - Gestion des utilisateurs et des groupes Microsoft 365
 ### Exercice 1 - [Gestion des utilisateurs avec le centre d'administration Microsoft 365](lab2e1)

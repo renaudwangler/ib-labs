@@ -1,21 +1,14 @@
 ---
 layout: stage
-title: "Lab1-Ex1 - Création de l'environnement"
+title: "Lab1-Ex1 - Appréhension de l'environnement"
 length: "00"
 date: "18/12/2023"
 ---
 # Scénario
-A travers les ateliers de ce stage, vous allez prendre l'identité de Marie Skyetson, administratrice Microsoft 365 de *ib Cegos Workshop (ICW)*. En tant que Marie, il vous a été demandé de créer un environnement de test Microsoft 365. Vous allez donc commencer par créer un nouveau tenant Microsoft 365 en utilisant le programme.  
-Vous allez ensuite vous assurer que les machines virtuelles de l'environnement de test soient correctement configurées, avant de voir les options de cutomisation applicables sur l'ensemble de l'organisation.
+A travers les ateliers de ce stage, vous allez prendre l'identité de Dominique Skyetson, administratrice Microsoft 365 de *ib Cegos Workshop (ICW)*. En tant que Dominique, il vous a été demandé de créer un environnement pilote Microsoft 365. Vous allez donc commencer par prendre connaissance du tenant Microsoft 365 qui a été fourni à fins de tests.  
+Vous allez ensuite vous assurer que les machines virtuelles de l'environnement de test soient correctement configurées, avant de voir les options de cutomisation applicables sur l'ensemble de l'organisation.  
 
-
-Vous allez commencer par vous connecter sur la machine **LON-DC1** en utilisant le compte administrateur  **icw\administrator**, pour ensuite vous connecter au tenant Microsoft 365 avec le compte **MOD Administrator**. Vous allez ensuite mettre à jour le profil de l'entreprise *ib Cegos Workshop*.  
-
-# Objectifs
-A la fin de cet exercice, vous aurez une meilleure connaissance de :
-- La configuration des options globales pour tous les utilisateurs de l'entreprise 
-- La navigation dans le portail **Microsoft 365 admin center**
-- La manière de suivre les informations que Microsoft fournit concernant l'état de santé du service.  
+Vous allez commencer par vous connecter sur la machine **LON-DC1** en utilisant le compte administrateur  **adatum\administrator**, pour ensuite vous connecter au tenant Microsoft 365 avec le compte **MOD Administrator**. Vous allez ensuite mettre à jour le profil de l'entreprise *ib Cegos Workshop*.  
 
 ## Avant de commencer
 Votre formateur/trice pourra, le cas échéant, vous donner quelques indications complémentaires concernant l'environnement d'atelier que vous utiliserez.  
@@ -34,7 +27,7 @@ Pour faciliter les manipulations nous vous recommandons (particulièrement si vo
 1. Choisissez un mot de passe assez complexe, prenez-en note, décochez les deux cases à cocher et cliquez sur **Suivant/next**
     >**Important :** Veillez à bien consigner **par écrit** le nom de connexion et le mot de passe de votre compte !  
 
-1. Indiquez ```Marie``` dans le champ **Prenom/First name** et ```Skyetson``` dans le champ **Nom/Last name** avant de cliquer sur **Suivant/Next**
+1. Indiquez ```Dominique``` dans le champ **Prenom/First name** et ```Skyetson``` dans le champ **Nom/Last name** avant de cliquer sur **Suivant/Next**
 1. Indiquez votre date de naissance (attention à choisir une date ne faisant pas de vous une personne mineure) et cliquez sur **Suivant/next**
 1. Le cas échéant, complétez les étapes de lutte contre les robots.  
     > **Nota :** Si votre navigateur semble tourner en boucle sur cette étape, il vous faudra créer votre compte Microsoft depuis une autre adresse IP (votre smartphone en 4G/5G par exemple)  
@@ -53,10 +46,11 @@ Pour faciliter les manipulations nous vous recommandons (particulièrement si vo
     - **I accept the terms and conditions[...]** : cochez la case
 1. Choisissez **Applications for internal use at my company** en réponse à la question **What is your primary focus as a developer?** puis cliquez sur **Next**
 1. Cochez la case **Microsoft Graph** en réponse à la question **What areas of Microsoft 365 development are you interested in?** avant de cliquer sur **Save**
+1. Utilisez un numéro de téléphone (personnel ou professionnel) pour activer votre compte.
 1. Sur la page **Set up your Mircosoft 365 E5 sandbox**, sélectionnez l'option **Instant sandbox** et cliquez sur **Next**.
 1. Renseignez ensuite les informations suivantes avant de cliquer sur **Continuer** :
     - **Country/Region** : Europe / Middle East / Africa (Ireland)
-    - **Admin username** : ```Marie-A```
+    - **Admin username** : ```Dom-A```
     - **Admin password** : ```ibForm@tion1234```
     - **Confirm admin password** : ```ibForm@tion1234```
     - **Use alternative password for all 16 fictious users** : décochez la case
