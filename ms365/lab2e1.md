@@ -6,28 +6,25 @@ date: "10/01/2025"
 script: "ms365.js"
 ---
 # Scénario
-Comme Dominique Skyetson n'a pas de compte utilisateur Microsoft 365 déclaré pour lui-même, il s'est jusqu'à présent connecté à l'administration du tenant avec le compte *Mod Administrator*.  
-Dans cet exercice, il va se créer son compte et y assigner le rôle *Global Administrator* qui lui permettra ensuite de faire toutes les actions administratives sur le tenant de manière nominative.  
+Comme Dominique Skyetson n'a pas de compte utilisateur Microsoft 365 déclaré pour elle-même, elle s'est jusqu'à présent connectée à l'administration du tenant avec le compte *Mod Administrator*.  
+Dans cet exercice, elle va se créer son compte et y assigner le rôle *Global Administrator* qui lui permettra ensuite de faire toutes les actions administratives sur le tenant de manière nominative.  
 Prenant le rôle de Dominique, vous allez ensuite créer plusieurs comptes utilisateurs en utilisant le centre d'administration 365 que vous serez par la suite amené à ajouter à des groupes pour gérer la sécurité. Bien que les administrateurs de plus haut niveau de l'entreprise ne créent pas habituellement des comptes utilisateurs, il vous est nécessaire de le faire en attendant que la configuration complète du tenant pilote soit terminée et que les comptes soient automatiquement synchronisés (synchronisation mise en place ultérieurement).  
-> **Important :** Pour votre environnement réel, il est très fortement conseillé de noter le mot de passe du compte *Global Admin* original (*Mod Administrator* dans notre atelier) et de le stocker de manière particulièrement sécurisée. Ce compte est un compte non nominatif sur lequel il vous faudra peut-être compter lorsque tous les autres moyens de vous en sortir ne fonctionneront plus. La MFA ne sera a priori pas activée sur ce compte (car il n'est pas nominatif) et son mot de passe sera potentiellement partagé par plusieurs personnes, en faisant une cible idéale pour les attaques de sécurité. Il est donc conseillé de ne jamais l'utiliser au quotidien et de toujours préférer l'utilisation de comptes personnalisés et nominatifs (comme celui de Dominique dans notre atelier) sur lesquels la MFA sera systématiquement exigée.  
+> **Important :** Pour votre environnement réel, il est très fortement conseillé de noter le mot de passe du compte *Global Admin* original (*Mod Administrator* dans notre atelier) et de le stocker de manière particulièrement sécurisée. Ce compte est un compte non nominatif sur lequel il vous faudra peut-être compter lorsque tous les autres moyens de vous en sortir ne fonctionneront plus. Il est donc conseillé de ne jamais l'utiliser au quotidien et de toujours préférer l'utilisation de comptes personnalisés et nominatifs (comme celui de Dominique dans notre atelier).  
 
-# Objectifs
-A la fin de cet exercice, vous aurez une meilleure connaissance de :
-- la création de comptes utilisateurs dans le portail *Microsoft 365 Admin Center*
-- la modification d'options sur les comptes utilisateurs dans le portail *Microsoft 365 Admin Center*
+## Tâche 1 - Installation du module Windows Powershell pour Entra ID
+Dans cette tâche vous allez mettre en place l'environnement permettant la gestion de Microsoft 365 à l'aide de Windows Powershell. Cette installation est longue et la faire immédiatement avant d'en avoir besoin optimisera vos manipulations suivantes.
+1. Cette opération se déroule sur la machine **LON-DC1**, connecté avec le compte **Administrator** et le mot de passe **Pa55w.rd**.
+1. Dans la zone de recherche en bas à gauche de la barre des tâches, tapez ```powershell```
+1. Faites un clic-droit sur **Windows Powershell ISE** et, dans le menu qui apparait, choisissez **Run as administrator**.
+	>**Note :** Veillez à bien cliquer sur "**Windows Powershell ISE**" et non "**Windows Powershell ISE (x86)**".  
+1. Si une fenêtre **Do you want to allow this app to make changes to your device** apparait, cliquez sur **Yes**.
+1. Dans la partie basse (fond bleu) de la fenêtre **Administrator: Windows PowerShell ISE**, tapez ```install-module microsoft.graph -force``` et faites **[Entrée]**.
+1. S'il vous est demandé si vous souhaitez faire confiance à **NuGet provider**, tapez **Y** pour répondre oui.
+1. S'il vous est demandé de confirmer si vous souhaitez installer les modules depuis la **Powershell Gallery** (PSGallery), tapez **A** pour répondre *Oui à tous*
+1. N'attendez pas que l'installation des modules se termine et que l'ISE vous rende la main (Vous pouvez vérifier la couleur du bouton **Stop** en haut de l'outil qui doit être repassé au gris, s'il est rouge c'est que le processus d'installation n'est pas encore terminé, il peut se passer quelques minutes pendant lesquelles vous aurez l'impression que plus rien n'évolue... Patience donc...).
+1. Vous fermerez la fenêtre **Administrator: Windows Powershell ISE** une fois l'installation terminée.
 
-
-## Tâche 1 - Création d'utilisateurs
-1. Basculez vers la machine virtuelle **LON-CL1**
-1. Connectez-vous à la machine LON-CL1 avec le compte ```adatum\administrator``` et le mot de passe ```Pa55W.rd```.
-1. Sur la barre des tâches, cliquez sur l'icône de **Microsoft Edge** pour lancer votre navigateur. Maximisez la fenêtre du navigateur lorsqu'elle s'ouvre pour faciliter la navigation dans les portails administratifs.
-1. Passez les éventuelles pages de bienvenue de Edge (vous pouvez choisir **Continue without signing in**).
-1. Dans le navigateur, accédez au portail d'administration de Microsoft 365 en utilisant l'url suivante :
-```https://admin.microsoft.com```
-1. Dans la fenêtre **Sign in**, saisissez le nom de connexion du compte *MOD Administrator* (sous la forme **admin@WWWLxxxxxxxxxx.onmicrosoft.com**) et cliquez sur **Next**
-1. Dans la fenêtre **Enter password**, saisissez ou collez le **mot de passe du tenant** que vous avez précédemment noté et cliquez sur **Sign in**
-1. Sur la fenêtre **Stay signed in?**, cliquez sur **No.**
-1. Si un popup **Welcome to Microsoft 365** apparaît, cliquez deux fois sur la flèche droite pour pouvoir le fermer.
+## Tâche 2 - Création d'utilisateurs par le portail d'administration
 1. Dans le portail **Microsoft 365 admin center**, dans le menu de navigation à gauche, ouvrez le groupe **Users** pour sélectionner l'entrée **Active users**.  
 	>Puisque vous prenez le rôle de Dominique Skyetson pour cet exercice, vous allez vous créer un compte utilisateur pour vous-même et lui affecter le rôle *Global Administrator*, donnant ainsi à Dominique l'accès à toutes les prérogatives administratives dans l'environnement Microsoft 365.
 1. Dans la fenêtre **Active Users**, cliquez sur **Add a user**.
@@ -36,117 +33,122 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 	- Last name : ```Skyetson``` 
 	- Display name : En tabulant dans ce champ, il sera automatiquement rempli avec la valeur ```Dominique Skyetson```.
 	- Username : ```dom```  
-		>**IMPORTANT :** A droite du champ **Username** se trouve le domaine de l'utilisateur. Il sera rempli avec le domaine DNS configuré comme étant le domaine par défaut. Pour Adatum, il s'agit du domaine que vous avez ajouté lors du premier atelier.  
-		Cependant, pour les besoin des exercices concernant la synchronisation d'identité, sélectionnez ici le domaine **WWLxxxxx.onmicrosoft.com** pour le compte de Dominique: 
-		Vous devez sélectionner la flèche à droite du champ **Domains** pour sélectionner le domaine **WWLxxxxx.onmicrosoft.com** (s'il vous est impossible de sélectionner ce domaine à la création des utilisateurs, vous pouvez le changer à postériori).  
+		>**IMPORTANT :** A droite du champ **Username** se trouve le domaine de l'utilisateur. Il sera rempli avec le domaine DNS configuré comme étant le domaine par défaut. Assurez vous qu'il s'agisse bien du domaine **[onmicrosoftDomain].onmicrosoft.com**.  
 		Après avoir configuré ce champ, le nom utilisateur de Dominique devrait apparaitre sous la forme:
-		**dom@WWLxxxxx.onmicrosoft.com**  
+		**dom@[onmicrosoftDomain].onmicrosoft.com**  
 	- Décochez l'option **Automatically create a password**
 	- Password : ```Pa55w.rd``` (Astuce : cliquez sur l'icône d'oeil à droite pour vérifier le mot de passe saisi)
-	- Cochez la case **Require this user to change their password when they first sign in**
+	- Cochez la case **Require this user to change their password when they first sign in** si elle ne l'est pas
 1. Cliquez **Next**.
 1. Sur la page **Assign product licenses** , saisissez les informations suivantes:
 	- Select location : **United States**
-	- Licences : Vérifier que l'option **Assign user a product license** est sélectionnée et cochez la case en regard de la licence **Office 365 E3** 
+	- Licences : Vérifier que l'option **Assign user a product license** est sélectionnée et cochez la case en regard des licences **Microsoft Teams Enterprise** et **Office 365 E5 (no Teams)** 
 1. Cliquez sur **Next.**
 1. Sur la page **Optional settings**, cliquez sur la ligne **Roles (User : no administration access).**
-1. Sélectionnez le titre **Admin center access**. Les rôles les plus souvent affectés vont alors s'afficher.
+1. Sélectionnez le bouton radio **Admin center access**. Les rôles les plus souvent affectés vont alors s'afficher.
 	>**Note :** Si vous souhaitez affecter un autre rôle qui ne se trouve pas dans cette liste, sélectionnez la ligne **Show all by category** pour afficher l'intégralité des rôles disponibles. Cependant, dans notre cas, Dominique veut s'assigner le rôle Global Administrator. Il peut le faire, étant connecté avec le compte *MOD Administrator*, qui est aussi Global admin. Seul un Global admin peut affecter le rôle Global Administrator à un utilisateur.
 1. Sélectionnez **Global Administrator** avant de cliquer sur **Next**.
 1. Sur la page **Review and finish** , vérifiez les informations saisies. Si quoi que ce soit nécessite d'être changé, cliquez sur le lien **Edit** correspondant et réalisez les changements nécessaires. Sinon, si tout est correct, cliquez sur **Finish adding**. 
 1. Sur la page **Dominique Skyetson added to active users**, cliquez sur **Show** à coté de **Password** pour vérifier que vous avez bien saisi correctement **Pa55w.rd**.
 1. En bas de la page, cliquez sur le lien **Add another user** et recommencez les étapes 3 à 12 précédentes, pour ajouter les utilisateurs avec les informations suivantes :
-	- **Username domain :** Lors de la saisie du **Username** pour chaque utilisateur, laissez le domaine **labxxxxx.godeploylabs.com** comme nom de domaine par défaut.
+	- **Username domain :** Lors de la saisie du **Username** pour chaque utilisateur, laissez le domaine **[onmicrosoftDomain].onmicrosoft.com** comme nom de domaine par défaut.
 	- **Password :** Utilisez le mot de passe ```Pa55w.rd```, et, comme pour le compte de Dominique, exigez le changement de mot de passe à la première connexion.
-	- **Licenses :** Affectez une licence **Office 365 E3** à l'utilisateur **Alan Yoo**. Pour tous les autres utilisateurs, sélectionner l'option **Create user without product license (not recommended)**.
-	- **Roles :** Par défaut chaque utilisateur se verra affecter le rôle **User role (no administration access)**; Cela suffira pour le moment. Dans un futur exercice, vous affecterez des rôles administratifs à certains utilisateurs pour tester la délégation administrative. Ainsi, en arrivant sur la page **Optional settings**, cliquez directement sur **Next**.  
+	- **Licenses :** Affectez les licences **Office 365 E5 (no Teams)** et **Microsoft Teams Enterprise** à l'utilisateur **Alan Yoo**. Pour tous les autres utilisateurs, sélectionner l'option **Create user without product license (not recommended)**.
+	- **Roles :** Par défaut chaque utilisateur se verra affecter le rôle **User role (no administration access)**. Ainsi, en arrivant sur la page **Optional settings**, cliquez directement sur **Next**.  
 
 	| **First Name** | **Last Name** | **Display Name** | **username** | **Licence** | **Role** |
 	|----------------|---------------|------------------|--------------|-------------|----------|
-	| ```Alan``` | ```Yoo``` | Alan Yoo | ```alan``` | **Office 365 E3** | **User** |
+	| ```Alan``` | ```Yoo``` | Alan Yoo | ```alan``` | **Microsoft Teams Enterprise** et **Office 365 E5 (no Teams)** | **User** |
 	| ```Ada``` | ```Russell``` | Ada Russel | ```ada``` | Sans | **User** |
 	| ```Adam``` | ```Hobbs``` | Adam Hobbs | ```adam``` | Sans | **User** |
 	| ```Libby``` | ``` Hayward``` | Libby Haywards | ```libby``` | Sans | **User** |
 	| ```Laura``` | ``` Atkins```| Laura Atkins | ```laura``` | Sans | **User** |  
 
 1. Après avoir ajouté le dernier compte (celui de *Laura Atkins*) cliquez sur le bouton **Close** pour revenir à la liste des **Active users**
-1. Vérifiez la liste **Active users**. Vérifiez que chacun des précédents utilisateurs a pour domaine **WWLxxxxx.onmicrosoft.com** et changez-le si ce n'est pas le cas.
-1. Restez connecté sur LON-CL1 et laissez votre navigateur Internet ouvert pour la tâche suivante de cet atelier.
+1. Vérifiez la liste **Active users**. Vérifiez que chacun des précédents utilisateurs a pour domaine **[onmicrosoftDomain].onmicrosoft.com** et changez-le si ce n'est pas le cas.
 
 ## Tâche 2 : Modification d'utilisateurs Microsoft 365
-Dans cette tâche, vous allez réaliser nombre des actions possibles d'édition de comptes utilisateurs. Vous allez commencer par mettre à jour les informations de contact d'Alan Yoo, avant de l'empêcher de se connecter.  
-Empêcher la connexion d'un utilisateur est un *best practice* lorsque vous pensez que le compte ou le mot de passe d'un utilisateur a pu être compromis. Ceci évite que l'utilisateur puisse se connecter et, de plus, le déconnectera de tous les services Microsoft 365 dans les 60 minutes.
-Vous affecterez ensuite une licence produit au compte de Ada Russell.  
-Pour finir, vous allez supprimer le compte de Libby Hayward, et voir comment le restaurer.
-1. Vous devriez encore être connecté sur **LON-CL1**. Le **Microsoft 365 admin center** devrait encore être resté ouvert dans votre navigateur et vous devriez y être connecté avec le compte *MOD Administrator*.
-1. Dans le portail **Microsoft 365 admin center**, la page **Active users** devrait être encore affichée à l'issue de la première tâche de cet exercice. Sélectionnez la case à cocher en regard du compte de **Alan Yoo**, sans cliquer sur la ligne de ce compte en lui-même.
-1. Dans la barre de menu au-dessus de la liste d'utilisateurs, sélectionnez les **points de suspension** (**More actions**). Dans le menu qui apparait, sélectionnez **Manage contact information**.
+Dans cette tâche, vous allez réaliser quelques actions d'édition de comptes utilisateurs. Vous allez commencer par mettre à jour les informations de contact d'Alan Yoo, avant de l'empêcher de se connecter.  
+>Empêcher la connexion d'un utilisateur est un *best practice* lorsque vous pensez que le compte ou le mot de passe d'un utilisateur a pu être compromis. Ceci évite que l'utilisateur puisse se connecter et, de plus, le déconnectera de tous les services Microsoft 365 dans les 60 minutes.
+Vous affecterez également une licence produit au compte de Ada Russell.  
+1. Dans le portail **Microsoft 365 admin center**, la page **Active users** devrait être encore affichée à l'issue de la première tâche de cet exercice. Cliquez sur le nom du compte de **Alan Yoo**.
+1. Dans la fenêtre **Alan Yoo**, cliquez sur le lien **Manage contact information**.
 1. Dans le panneau **Manage contact information** qui apparait pour Alan Yoo, saisissez ```Accounts Receivable``` dans le champ **Department** avant de cliquer sur **Save changes**. 
 1. Une fois que le bandeau vert indiquant **Contact information updated** apparait, cliquez sur le **X** de fermeture en haut à droite du panneau **Manage contact information**.
-1. Le compte d'Alan Yoo devrait toujours être sélectionné dans la liste **Active Users**. Dans la barre de menu au-dessus de la liste d'utilisateurs, sélectionnez les **points de suspension** (**More actions**) de nouveau. Dans le menu qui apparait, sélectionnez **Edit sign-in status**.
+1. Le compte d'Alan Yoo devrait toujours être sélectionné dans la liste **Active Users**. Dans la barre de menu au-dessus de la liste d'utilisateurs, sélectionnez les **points de suspension** (**More actions**). Dans le menu qui apparait, sélectionnez **Edit sign-in status** (le dernier choix du menu).
 1. Sur le panneau **Block sign-in**, cochez la case **Block this user from signing in** avant de cliquer sur le bouton **Save changes**. Notez le bandeau vert indiquant que le compte de Alan est désormais bloqué et qu'il sera déconnecté des services Microsoft dans les 30 minutes. Cliquez sur le **X** de fermeture en haut à droite du panneau **Block sign-in**.
-1. Dans la liste **Active users**, désélectionnez la case à gauche de **Alan Yoo**, avant de sélectionner **Ada Russell**.
-1. Pour Ada, vous souhaitez apprendre à affecter une licence à un utilisateur existant. Dans la barre des menus au-dessus des utilisateurs, cliquez sur **Manage product licenses** (utilisez les points de suspension **More Options** si le choix n'est pas affiché).
-1. Sur le panneau **Ada Russell** qui s'affiche, l'onglet **Licenses and apps** est affiché par défaut (puisque vous avez sélectionné l'option **Manage product licenses**). Sous la liste des licences, click sur la case **Office 365 E3** avant de cliquer sur le bouton **Save changes**.  
+1. Dans la liste **Active users**, désélectionnez la case à gauche de **Alan Yoo**, avant de cliquer sur le nom de **Ada Russell**.
+1. Pour Ada, vous souhaitez apprendre à affecter une licence à un utilisateur existant. Basculez sur l'onglet **Licenses and apps**.
+1. Sur le panneau **Ada Russell** qui s'affiche, dans la liste des licences, cliquez sur les case **Microsoft Teams Enterprise** et **Office 365 E5 (no Teams)** avant de cliquer sur le bouton **Save changes**.  
 1. Sélectionnez le **X** en haut à droite pour fermer le panneau d'informations de **Ada Russell**.
-1. Dans la liste **Active users**, vous pouvez voir qu'une licence a été affectée au compte de **Ada Russell**. Décochez la case en regard de **Ada Russell** avant de sélectionner **Libby Hayward**.
-1. A droite du nom de Libby Hayward, sélectionnez les points de suspension verticaux. Dans le menu qui apparait, notez que les options sont similaires à celle du menu que vous avez utilisé jusqu'à présent, même si moins nombreuses. 
-1. Dans cette tâche vous allez supprimer le compte de Libby avant de le restaurer. Vous pouvez supprimer un utilisateur en sélectionnant l'option **Delete user** dans son menu.
-1. Sur le panneau **Delete this user ?**, cliquez sur le bouton **Delete user** en bas de page.
-1. Sur le panneau **Libby Hayward has been deleted**, cliquez sur le bouton **Close**.
-1. Vérifiez que le compte de **Libby Hayward** n'apparait plus dans le liste **Active users**.  
-1. Vérifiez maintenant que Libby apparait dans la liste des utilisateurs supprimés. Dans le portail **Microsoft 365 admin center**, dans le menu de navigation, cliquez sur **Deleted users**.
-1. Sur la page **Deleted users**, vérifiez que **Libby Hayward** apparait dans la liste des utilisateurs supprimés.
-1. Supprimer un utilisateur réalise un *soft-delete* de son compte ; ce qui permet aux entreprises de restaurer les utilisateurs pendant 30 jours après leur suppression. Dans la liste **Deleted users**, sélectionnez la case à cocher en regard de **Libby Hayward**. 
-1. Sur la barre de menu, cliquez sur le bouton **Restore user**.
-1. Dans le panneau **Restore Libby Hayward**, vous avez l'option d'affecter un nouveau mot de passe à Libby ou de demander la génération automatique d'un nouveau mot de passe. **Sur le terrain, il est conseillé de générer automatiquement un mot de passe et d'exiger que l'utilisateur le change à sa première connexion.**  
-	Puisque l'option **Auto-generate password** est sélectionnée par défaut et que la case **Make this user change their password when they first sign in** est cochée, cliquez simplement sur le bouton **Restore** en bas de la page.
-1. Le panneau **Libby Hayward has been restored** s'affiche pour confirmer que le compte de Libby a été restauré et son mot de passe remplacé. Vous avez également l'option d'envoyer le nouveau mot de passe de Libby par email.  
-	Sélectionnez la case en regard de **Send password in email**, et dans le champ **Email the new password to the following recipients**, l'adresse email du compte *MOD Administrator* est inscrite par défaut. Après cette adresse, saisissez un point-virgule, suivi de l'adresse email de Dominique (**dom@WWLxxxxx.onmicrosoft.com**) avant de cliquer sur le bouton **Send email and close**. 
-1. Le compte de Libby ne devrait plus apparaitre dans la liste **Deleted users**. Dans le portail **Microsoft 365 admin center**, dans le menu de navigation, sélectionnez **Active users**.
-1. Vérifiez que **Libby Hayward** apparait dans la liste.
-1. Laissez votre navigateur Internet ouvert pour la suite des opérations en tâche suivante. 
+1. Dans la liste **Active users**, vous pouvez voir qu'une licence a été affectée au compte de **Ada Russell**.
 
 ## Tâche 3 - Vérification des paramètres utilisateurs
-Dans cette tâche, vous allez vérifier l'impact des changements que vous avez fait aux comptes utilisateurs dans les tâches précédentes. Vous allez vous connecter avec le compte de Libby Hayward et donc avoir besoin du mot de passe temporaire qui lui a été affecté. Vous allez ensuite ouvrir une session Microsoft 365 en tant que Alan Yoo, afin de valider si son compte est bien empêché de se connecter. 
-1. Vous devriez encore être connecté sur **LON-CL1**. Le **Microsoft 365 admin center** devrait encore être resté ouvert dans votre navigateur et vous devriez y être connecté avec le compte *MOD Administrator*.
-1. Vous allez avoir besoin de vous connecter sur la messagerie Outlook de l'administrateur global afin de récupérer le mot de passe temporaire qui a été affecté au compte de Libby. Dans votre navigateur, dans la page du portail **Microsoft 365 admin center**, sélectionnez l'icône **Outlook** dans le menu applicatif dans le coin supérieur gauche (menu situé derrière l'icône affichant un carré de 3 cases par 3cases).   
-	 Vous allez ainsi afficher la boite Outlook du compte *Mod Administrator* dans un nouvel onglet.
-1. Si une fenêtre **Welcome** apparait, cliquez sur le **X*** en haut à droite pour la fermer.
-1. Dans la boite de réception **Inbox** de l'administrateur, sélectionnez le message émis par **Microsoft on behalf of your organization** dont le sujet devrait être **Account information for new or modified users**.  
-	Ce message devrait contenir le mot de passe temporaire de Libby, prenez en bonne note (vous pouvez, par exemple, le coller ainsi que le nom de connexion de Libby dans un document texte dans *Notepad*).
-1. Vous devez vous déconnecter de Microsoft 365 et vous reconnecter avec le compte de Libby Hayward. Sélectionnez le cercle en haut à droite avec **MA** (les initiales de *MOD Administrator*) et cliquez sur **Sign out**.
+Dans cette tâche, vous allez vérifier l'impact des changements que vous avez fait aux comptes utilisateurs dans les tâches précédentes. Vous allez ouvrir une session Microsoft 365 en tant que Alan Yoo, afin de valider si son compte est bien empêché de se connecter. 
+1. Vous devez vous déconnecter de Microsoft 365 et vous reconnecter avec le compte de Dominique Skyetson. Sélectionnez le cercle en haut à droite avec **MA** (les initiales de *MOD Administrator*) et cliquez sur **Sign out**.
 1. Une fois qu'une invite apparait vous indiquant que vous êtes correctement déconnecté, fermez votre navigateur Internet pour éviter qu'une session soit restée ouverte sur un autre onglet.
 1. Dans la barre des tâches, cliquez sur l'icône de **Microsoft Edge** pour relancer une session de navigation et connectez-vous sur le portail Microsoft 365 à l'adresse suivante :  
 ```https://www.microsoft365.com```
-1. Dans la fenêtre **Pick an account**, sélectionnez **+ Use another account**.
-1. Dans la fenêtre **Sign in**, entrez **Libby@WWLxxxxx.onmicrosoft.com** et cliquez sur **Next**.
-1. Dans la fenêtre **Enter password**, saisissez le mot de passe temporaire de Libby dont vous avez pris note à l'étape précédente et cliquez sur le bouton **Sign in**.
-1. Dans la fenêtre **Update your password**, entrez de nouveau le mot de passe temporaire de Libby dans le champ **Current password**, et utilisez le mot de passe ```ibForm@tion``` dans les champs **New password** et **Confirm password**. Cliquez sur **Sign in**.
-1. Si une fenêtre **Welcome to Microsoft 365** apparait, cliquez deux fois sur la flèche de droite pour accéder à la validation vous permettant de la fermer.
-1. Vérifiez que vous pouvez accéder à la page d'accueil de Microsoft 365. Notez qu'aucune application n'est présente sur le portail de Libby puisque vous n'avez affecté aucune licence au compte de Libby.
-1. Vous devez désormais vous déconnecter du compte de Libby pour tenter de vous connecter avec le compte de Alan Yoo. Pour vous déconnecter, cliquez sur le cercle en haut à droite contenant **LH** (les initiales de Libby Hayward) et cliquez sur **Sign out**.
-1. Une fois déconnecté, ressaisissez l'adresse suivante dans la barre d'adresse de votre navigateur si nécessaire :  
-```https://www.microsoft365.com```
-1. Dans la page **login**, cliquez sur le choix **Switch to a different account** en dessous du bouton **Sign in**
-1. Saisissez **Alan@WWLxxxxx.onmicrosoft.com** dans le champ **Email address** avant de cliquer sur **Sign in**.
-1. Dans la fenêtre **Sign in**, cliquez sur **Next**
+1. Dans la page **Welcome to Microsoft 365**, cliquez sur le bouton **Sign in**.
+1. Dans le panneau **Pick an account**, cliquez sur **+ Use another account**.
+1. Saisissez **Alan@[onmicrosoftDomain].onmicrosoft.com** dans le champ **Email address** avant de cliquer sur **Next**.
 1. Dans la fenêtre **Enter password**, saisissez ```Pa55w.rd``` et cliquez sur **Sign in**.
 1. Sur la fenêtre **Pick an account**, constatez qu'un message d'erreur apparait, indiquant que le compte de Alan a été bloqué. Vous venez de vérifier que Alan ne peut plus se connecter à Microsoft 365.
-1. Vous allez finalement vous connecter avec votre compte admin de Dominique Skyetson, en utilisant le compte nominatif que vous avez créé dans la première tâche de cet exercice. Dans la fenêtre **Pick an account**, sélectionnez donc **+ Use another account**.
+1. Vous allez finalement vous connecter avec votre compte admin de Dominique Skyetson, en utilisant le compte nominatif que vous avez créé dans la première tâche de cet exercice. Dans la fenêtre **Pick an account**, resélectionnez donc **+ Use another account**.
 1. Dans la fenêtre **Sign in**, saisissez **dom@WWLxxx.onmicrosoft.com** et cliquez sur **Next**.
 1. Dans la fenêtre suivante, utilisez le mot de passe ```Pa55w.rd``` et cliquez sur **Sign in**.
 1. Dans la fenêtre **Update your password**, saisissez ```Pa55w.rd``` dans le champ **Current password** et saisissez ```ibForm@tion``` dans les champs **New password** et **Confirm password**. Cliquez sur **Sign in**.
 1. Si une fenêtre **Welcome to Microsoft 365** apparait, cliquez deux fois sur la flèche de droite pour accèder à la validation vous permettant de la fermer. 
-1. Dans la page d'accueil **Welcome to Microsot 365**, cliquez sur la tuile **Admin**.
+1. Dans la page d'accueil **Welcome to Microsot 365**, cliquez sur la tuile **Admin** à gauche.
 1. Dans le portail **Microsoft 365 admin center**, dans le menu de navigation à gauche, ouvrez le groupe **Users** pour y sélectionner **Active users**.
 1. Dans la lite **Active users** cliquez sur le nom de **Alan Yoo**.
 1. Sur le panneau d'informations de **Alan Yoo** qui apparait, notez qu'il vous est indiqué que le compte de Alan est actuellement bloqué, cliquez sur le bouton **Unblock sign-in**.
 1. Dans le panneau **Unblock sign-in** qui apparait, la case à cocher **Block this user from signing in** est cochée. Décochez cette case avant de cliquer sur **Save changes**.
 1. Une fois le message vert de confirmation apparu indiquant que le compte de Alan Yoo est désormais débloqué, cliquez sur le **X** en haut à droite afin de fermer le panneau **Unblock sign in**.  
-1. Restez connecté avec le compte de Dominique Skyetson sur le centre d'administration ouvert dans LON-CL1 pour les opérations de l'exercice suivant.
+
+## Tâche 4 - Création d'utilisateurs avec Windows Powershell
+Vous devriez avoir fermé la fenêtre **Windows Powershell ISE** qui vous a servi à installer le module Graph en début d'exerice. Ouvrez une nouvelle fenêtre Windows Powershell ISE en tant qu'administrateur (cette manipulation est nécessaire).
+1. Dans la partie basse (fond bleu) de l'outil, tapez la commande suivante avant de taper sur **[Entrée]** pour la valider : ```Connect-MgGraph -scopes User.ReadWrite.All,Group.ReadWrite.All,Domain.ReadWrite.All,Organization.Read.All,UserAuthenticationMethod.ReadWrite.All```.
+1. Dans la fenêtre **Sign in** qui apparaît, connectez-vous avec le compte de Dominique Skyetson : **dom@[onmicrosoftDomain]x.onmicrosoft.com** et son mot de passe (**ibForm@tion**). 
+1. Dans la fenêtre **Permission requested**, cochez la case **Consent on behalf of your organization** et cliquez sur **Accept**.
+1. Pour être sûr que tous les scripts Windows Powershell puissent s'exécuter correctement, il vous faut désactiver le *garde-fou* des stratégies d'exécution. Pour ce faire, utilisez la commande suivante : ```Set-ExecutionPolicy bypass -force```
+	>**Note :** Comme pour les commandes précédentes, il vous faudra taper sur la touche **[Entrée]** pour lancer l'exécution de chaque commande. Nous partirons de ce principe et ne le rappellerons donc plus après chaque commande.
+1. Utilisez la commande suivante pour stocker dans une variable le nom du domaine initial de votre tenant :  
+	```$tenantId = (get-MgDomain | where IsInitial).id```
+	>**Note :** Vous pouvez simplement taper la commande ```$tenantId``` pour afficher le résultat de l'opération précédente avant de passer à la suite.
+1. Utilisez désormais la commande suivante pour créer le premier compte utilisateur nommé **Catherine Richard** avec un mot de passe **Pa55w.rd** et un emplacement **CH**. 
+	>**Note :** La valeur *False* pour *ForceChangePasswordNextSignIn* signifie que Catherine n'aura pas besoin de modifier son mot de passe lors de sa première connexion.  
+	```$user1 = New-MGuser –UserPrincipalName catherine@$tenantId –DisplayName "Catherine Richard" -GivenName Catherine -SurName Richard -PasswordProfile @{password='Pa55w.rd';ForceChangePasswordNextSignIn=$false} -UsageLocation CH -AccountEnabled -MailNickname catherine```
+	>**Note :** Vous pouvez simplement taper la commande ```$user1``` pour afficher le résultat de l'opération précédente avant de passer à la suite.
+1. La commande suivante va créer un second compte utilisateur pour **Tameka Reed** :
+	```$user2 = New-MGuser –UserPrincipalName tameka@$tenantId –DisplayName "Tameka Reed" -GivenName Tameka -SurName Reed -PasswordProfile @{password='Pa55w.rd';ForceChangePasswordNextSignIn=$false} -UsageLocation CH -AccountEnabled -MailNickname tameka```
+	>**Note :** Vous pouvez simplement taper la commande ```$user2``` pour afficher le résultat de l'opération précédente avant de passer à la suite.
+1. Utilisez la commande suivante pour obtenir la liste des comptes qui n'ont pas de licence associée à leur compte :
+	```Get-MgUser -Filter "assignedLicenses/`$count eq 0 and userType eq 'Member'" -ConsistencyLevel eventual -CountVariable unlicensedUserCount -All```
+1. Utilisez la commande suivante pour obtenir la licence **Office 365 E5** disponible dans le contexte du projet pilote :
+	```$license = Get-MgSubscribedSku|where SkuPartNumber -like Office*```
+	>**Note :** Vous pouvez simplement taper la commande ```$license``` pour afficher le résultat de l'opération précédente avant de passer à la suite.
+1. Utilisez la commande suivante pour affecter la licence au premier compte utilisateur :
+	```Set-MgUserLicense -userId $user1.id -AddLicenses @{SkuId=$license.SkuId} -RemoveLicenses @()```
+1. Utilisez la commande suivante pour affecter la même licence au second compte utilisateur :
+	```Set-MgUserLicense -userId $user2.id -AddLicenses @{SkuId=$license.SkuId} -RemoveLicenses @()```	
+
+## Tâche 5 - Import d'utilisateurs multiples
+Dans cette tâche, vous allez utiliser Windows Powershell pour importer un fichier CSV de nouveaux utilisateurs dans Microsoft 365.  
+1. Tapez la commande suivante avant de taper sur **[Entrée]** pour la valider : ```Invoke-WebRequest "https://raw.githubusercontent.com/renaudwangler/ib-labs/master/ms365/users.csv" | Select-Object -ExpandProperty Content | Out-File ".\users.csv"```.
+1. En utilisant la commande suivante, vous allez pourvoir visualiser le contenu du fichier CSV dans **Notepad** :
+```notepad .\users.csv```
+1. Dans la fenêtre **users.csv - Notepad** qui s'ouvre, passez en revue les informations présentes pour les utilisateurs.
+1. Retournez à **Administrator : Windows Powershell ISE** pour utiliser la commande suivante pour procéder à l'import des utilisateurs contenus dans le fichier :
+	```Import-Csv -Path .\users.csv | ForEach-Object {New-MGuser –UserPrincipalName "$($_.FirstName.ToLower())@$tenantId" –DisplayName $_.DisplayName -GivenName $_.LastName -SurName $_.FirstName -PasswordProfile @{password='Pa55w.rd';ForceChangePasswordNextSignIn=$false} -UsageLocation $_.UsageLocation -AccountEnabled -MailNickname $_.FirstName -jobTitle $_.Title -Department $_.department -StreetAddress $_.StreetAddress -City $_.city -PostalCode $_.PostalCode -Country $_.Country}```
+1. Constatez le résultat de cette commande : chaque utilisateur est ajouté à l'environnement Microsoft 365 (sans licence affectée cependant).
+1. Vous pouvez ensuite utiliser la commande suivante pour obtenir la liste des comptes utilisateurs et constater qu'elle contient désormais les nouveaux utilisateurs importés à l'instant :
+	```Get-MgUser```
+1. Minimiser l'outil **Administrator : Windows Powershell ISE** et retournez dans votre navigateur Internet.  
+	> **Note :** Il est important de ne pas fermer la fenêtre de l'ISE pour ne pas perdre la session PowerShell et les variables qu'elle contient.
+1. Dans le portail **Microsoft 365 admin center** navigez jusqu'à la liste **Active users**. Jettez un oeil au contenu de cette loste pour vérifier que les utilisateurs importés sont bien présents, ainsir que Catherine Richard et Tameka Reed, que vous avez ajouté précédemment par commandes PowerShell.
 
 ## Résultat
-A l'issue de ce premier exercice, vous avez créé et géré des comptes utilisateurs ainsi que leurs licences pour coller au plus près aux besoins métier de Adatum.
+A l'issue de ce premier exercice, vous avez créé et géré des comptes utilisateurs ainsi que leurs licences pour coller au plus près aux besoins métier de ib Cegos Workshop.
 
-Vous pouvez poursuivre par [l'exercice 2 - Gestion des stratégies de mots de passe Microsoft 365](lab2e2)
+Vous pouvez poursuivre par [l'exercice 2 - Création de groupes](lab2e2)

@@ -10,14 +10,6 @@ Windows Powershell permet aux administrateurs d'automatiser, d'accélérer et de
 Dans cet exercice, vous allez continuer, en tant que Dominique, à faire des opérations administratives de maintenance dans Microsoft 365 en utilisant Windows Powershell. Cela vous permettra de comparer l'expérience de création et de maintenance des utilisateurs et des groupes entre le centre d'administration et le scripting Powershell.
 Vous souhaitez donc utiliser Windows Powershell pour créer des comptes utilisateurs, leur affecter des licences, modifier des comptes et créer des groupes...
 
-# Objectifs
-A la fin de cet exercice, vous aurez une meilleure connaissance de :
-- Le module Windows Powershell Microsoft Graph
-- La création d'utilisateurs par script
-- La création d'utilisateurs par import depuis un fichier
-- La création et modification de groupes 365 en Powershell
-- Le travail sur les mots de passe en Powershell
-
 ## Tâche 1 - Installation du module Windows Powershell pour Entra ID
 Dans cette tâche vous allez mettre en place l'environnement fondamental pour la gestion de Microsoft 365 à l'aide de Windows Powershell.
 1. A la suite de l'exercice précédent, vous devriez être resté connecté sur la machine **LON-CL1** avec le compte **Administrator** et le mot de passe **Pa55w.rd**.
