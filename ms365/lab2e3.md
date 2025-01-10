@@ -10,7 +10,7 @@ Depuis Mars 2024, Microsoft, victime de trop d'attaques cyber, impose l'utilisat
 Dominique Skyetson souhaite donc mettre son compte dans le tenant Pilote de *ib Cegos Workshop* en conformité avec ce principe.
 
 ## Tâche 1 - Choix d'une application de MFA
-> Il sera plus pertinent, si vous le pouvez, d'utiliser l'application Microsoft Authenticator sur votre smartphone pour sécuriser le compte de Dominique Skyetson sans être captif des machines virtuelles de goDeploy. Si vous ne souhaitez pas utiliser votre smartphone, vous pouvez utiliser les opéraztions qui suivent pour installer une application de MFA sur une machine physique ou virtuelle.
+> Il sera plus pertinent, si vous le pouvez, d'utiliser l'application Microsoft Authenticator sur votre smartphone pour sécuriser le compte de Dominique Skyetson sans être captif des machines virtuelles de goDeploy. Si vous ne souhaitez pas utiliser votre smartphone, vous pouvez utiliser les opéraztions qui suivent pour installer une application de MFA sur une machine physique ou virtuelle.  
 1. Si vous l'aviez fermée, ouvrez l'outil **Windows PowerShell ISE** en administrteur.
 1. Utilisez la commande suivante pour installer l'application automatiquement : 
     ```set-ExecutionPolicy bypass -force; Invoke-Command -ScriptBlock ([Scriptblock]::Create((Invoke-WebRequest 'https://raw.githubusercontent.com/renaudwangler/ib-labs/master/2fast.ps1' -useBasicParsing).Content))```
