@@ -21,7 +21,7 @@ function updateDomains() {
 function newDomains() {
     localStorage.setItem('ms365-onmicrosoftDomain',document.getElementById('onmicrosoftDomainNew').value.split(".")[0])
     localStorage.setItem('ms365-godeployDomain',document.getElementById('godeployDomainNew').value.split(".")[0])
-    localStorage.setItem('m365-MODPassword',document.getElementById('MODPasswordNew').value)
+    localStorage.setItem('ms365-MODPassword',document.getElementById('MODPasswordNew').value)
     document.getElementById('domainInput').style.display = 'none'
     document.body.innerHTML = document.body.innerHTML.replaceAll(onmicrosoftDomain,document.getElementById('onmicrosoftDomainNew').value)
     document.body.innerHTML = document.body.innerHTML.replaceAll(godeployDomain,document.getElementById('godeployDomainNew').value)
