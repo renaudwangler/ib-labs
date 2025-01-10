@@ -12,7 +12,7 @@ ICW gère directement les enregistrements de ses domaines DNS. Pour que ce domai
 ## Avant de commencer
 Votre formateur/trice pourra, le cas échéant, vous donner quelques indications complémentaires concernant l'environnement d'atelier a distance que vous utiliserez.  
 dans votre environnement d'atelier, goDeploy vous fournit un nom de domaine DNS d'entreprise pour le projet pilote. Vous pouvez identifier ce nom de domaine en tête de l'onglet **DNS** dans l'environnement d'atelier.
-    > **Note** : L'onglet **DNS** ne se trouve pas dans la machine virtuelle mais à sa gauche, dans le portail goDeploy.  
+> **Note** : L'onglet **DNS** ne se trouve pas dans la machine virtuelle mais à sa gauche, dans le portail goDeploy.  
 
 ## Tâche 1 - Ajout du DNS d'entreprise
 Dans cette tâche vous allez ajouter le domaine DNS d'entreprise à votre tenant Microsoft 365. 
@@ -27,12 +27,12 @@ Dans cette tâche vous allez ajouter le domaine DNS d'entreprise à votre tenant
 1. Dans l'environnement d'atelier, ouvrer l'onglet **DNS** et cliquez sur **Add New +** dans la section **TXT Records**
 1. Dans la fenêtre **Add DNS TXT Record**, tapez **@** dans le champ **Name** et la valeur notée au point précédent dans le champ **Value** avant de cliquer sur **Save**.
 1. De retour dans la machine virtuelle **LON-DC1**, Sur la page **Add a record to verify ownership**, cliquez sur le bouton **Verify**.
-1. Sur la page **How do you want to connect to your domain?**, sélectionnez **More options**. Deux options s'affichent : **Add your own DNS records**, et **Skip and do this later (not recommended)**. L'option **Add your own DNS records** est sélectionnée par défaut, cliquez sur le bouton **Continue** pour ouvrir la page **Add DNS records**.
+1. Sur la page **How do you want to connect to your domain?**, cliquez sur le bouton **Continue** pour ouvrir la page **Add DNS records**.
 1. La page **Add DNS records** identifie les services qu'une entreprise peut implémenter dans le contexte de son déploiement Microsoft 365 et qui ont besoin d'enregistrements DNS. L'option **Exchange and Exchange Online Protection** devrait être sélectionnée par défaut (sinon, sélectionnez là).
 	> Trois enregistrements DNS sont nécessaires pour les services Exchange - un enregistrement **MX** , un alias **CNAME**, et un enregistrement **TXT**. Sélectionnez chaque enregistrement pour l'ouvrir et prendre note de son contenu à créer.  
-    - MX pointe vers ```[godeployDomain]-godeploylabs-com.mail.protection.outlook.com``` avec préférence de **0**  
+    - MX ( de nom ```@```) pointe vers ```[godeployDomain]-godeploylabs-com.mail.protection.outlook.com``` avec préférence de **0**  
     - CNAME associe ```autodiscover``` à ```autodiscover.outlook.com```  
-    - TXT contient ```v=spf1 include:spf.protection.outlook.com -all```  
+    - TXT ( de nom ```@```) contient ```v=spf1 include:spf.protection.outlook.com -all```  
 
 1. Plus bas, dans la page **Add DNS records**, cliquez sur **Advanced Options**.
 1. Trois services additionnels sont affichés ici : **Skype for Business**, **Intune and Mobile Device Management for Microsoft 365** et **DomainKeys Identified Mail (DKIM)**.  
@@ -52,9 +52,17 @@ Dans cette tâche vous allez ajouter le domaine DNS d'entreprise à votre tenant
     > **Note** : Voici un exemple d'onglet DNS contenant les enregistrements nécessaires créés pour vous aider : il vous faudra cependant remplacer la mention labXXXXXX par votre nom DNS d'entreprise :
     ![msms030fr DNS Sample](DNS-Sample.png)
 1. De retour dans la machine virtuelle **lon-DC1**, cliquez sur le bouton **Continue**. A ce moment, l'assistant de création du domaine va vérifier que tous les enregistrements DNS nécessaires ont correctement été créés.
-1. Si tous les enregistrements DNS attendus ont été correctement crées, la page **Domain setup is complete** devrait apparaître (Dans le cas contraire, merci de vérifier les enregistrement DNS manquant/erronés indiqués sur la page **Add DNS records** qui s'est réaffichée, avant de cliquer de nouveau sur **Continue*).
+1. Si tous les enregistrements DNS attendus ont été correctement crées, la page **Domain setup is complete** devrait apparaître (Dans le cas contraire, merci de vérifier les enregistrement DNS manquant/erronés indiqués sur la page **Add DNS records** qui s'est réaffichée, avant de cliquer de nouveau sur **Continue**).
 1. Cliquez sur **Done**.
 1. Vous allez être renvoyé vers la page **Domains** dans laquelle la colonne **status** pour votre DNS d'entreprise devrait afficher **Healthy**.  
+
+## Tâche 2 - Définition du domaine par défaut
+Dans un contexte de production, il serait pertinent que le nouveau domaine que nous venons d'ajouter soit le domaine par défaut de l'environnement 365.  
+Pour notre pilote, il sera plus simple de repasser le domaine [onmicrosoftDomain].onmicrosoft.com en domaine par défaut.
+1. Sur la page **Domains**, cliquez sur les trois points verticaux en regard du domaine **[onmicrosoftDomain].onmicrosoft.com**
+1. Cliquez sur le choix **Set as default**
+1. Sur le popup **Set this domain as default?** cliquez sur le bouton **Set as default**
+1. Assurez-vous que, dans la liste des domaines, c'est bien le domaine **[onmicrosoftDomain].onmicrosoft.com** qui porte désormais la mention *(Default)*.
 
 ## Résultat
 A l'issue de ce troisième exercice, vous avez mis en place tous les enregistrements DNS nécessaires au bon fonctionnement des services Microsoft 365 pour le projet pilote de ICW.

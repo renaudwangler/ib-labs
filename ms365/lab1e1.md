@@ -52,7 +52,7 @@ Bien que goDeploy ait initié la création du tenant Microsoft 365 pour *ib Cego
 ```https://admin.microsoft.com```
    >**Nota important:** Si vous rencontrez des soucis réseau dans les machines virtuelles goDeploy pour vous connecter sur l'environnement Microsoft 365, vous pouvez executer toutes les opérations à faire dans un navigateur Internet sur n'importe qul autre navigateur Internet en dehors des machines virtuelles (local).
 1. Dans la fenêtre **Sign in**, saisissez le nom de connexion du compte *MOD Administrator* (```admin@[onmicrosoftDomain].onmicrosoft.com```) et cliquez sur **Next**
-1. Dans la fenêtre **Enter password**, saisissez ou collez **[MODPassword]}** et cliquez sur **Sign in**
+1. Dans la fenêtre **Enter password**, saisissez ou collez ```[MODPassword]``` et cliquez sur **Sign in**
 1. Tout au long de vos manipulations, vous pouvez cliquer sur **Got it** sur le pop-up qui vous informe de la sauvegarde de vos mots de passe sur les machines.
 1. Sur la fenêtre **Stay signed in?**, cochez la case **Don’t show this again** et cliquez sur **Yes.**
 1. Si un popup **Welcome to Microsoft 365** apparaît, cliquez deux fois sur la flèche droite pour pouvoir le fermer.
