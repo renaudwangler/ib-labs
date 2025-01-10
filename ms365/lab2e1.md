@@ -69,8 +69,9 @@ Dans cette tâche vous allez mettre en place l'environnement permettant la gesti
 
 ## Tâche 2 : Modification d'utilisateurs Microsoft 365
 Dans cette tâche, vous allez réaliser quelques actions d'édition de comptes utilisateurs. Vous allez commencer par mettre à jour les informations de contact d'Alan Yoo, avant de l'empêcher de se connecter.  
->Empêcher la connexion d'un utilisateur est un *best practice* lorsque vous pensez que le compte ou le mot de passe d'un utilisateur a pu être compromis. Ceci évite que l'utilisateur puisse se connecter et, de plus, le déconnectera de tous les services Microsoft 365 dans les 60 minutes.
+>Empêcher la connexion d'un utilisateur est un *best practice* lorsque vous pensez que le compte ou le mot de passe d'un utilisateur a pu être compromis. Ceci évite que l'utilisateur puisse se connecter et, de plus, le déconnectera de tous les services Microsoft 365 dans les 60 minutes.  
 Vous affecterez également une licence produit au compte de Ada Russell.  
+
 1. Dans le portail **Microsoft 365 admin center**, la page **Active users** devrait être encore affichée à l'issue de la première tâche de cet exercice. Cliquez sur le nom du compte de **Alan Yoo**.
 1. Dans la fenêtre **Alan Yoo**, cliquez sur le lien **Manage contact information**.
 1. Dans le panneau **Manage contact information** qui apparait pour Alan Yoo, saisissez ```Accounts Receivable``` dans le champ **Department** avant de cliquer sur **Save changes**. 
@@ -136,8 +137,7 @@ Vous devriez avoir fermé la fenêtre **Windows Powershell ISE** qui vous a serv
 ## Tâche 5 - Import d'utilisateurs multiples
 Dans cette tâche, vous allez utiliser Windows Powershell pour importer un fichier CSV de nouveaux utilisateurs dans Microsoft 365.  
 1. Tapez la commande suivante avant de taper sur **[Entrée]** pour la valider : ```Invoke-WebRequest "https://raw.githubusercontent.com/renaudwangler/ib-labs/master/ms365/users.csv" | Select-Object -ExpandProperty Content | Out-File ".\users.csv"```.
-1. En utilisant la commande suivante, vous allez pourvoir visualiser le contenu du fichier CSV dans **Notepad** :
-```notepad .\users.csv```
+1. En utilisant la commande suivante, vous allez pourvoir visualiser le contenu du fichier CSV dans **Notepad** : ```notepad .\users.csv```
 1. Dans la fenêtre **users.csv - Notepad** qui s'ouvre, passez en revue les informations présentes pour les utilisateurs.
 1. Retournez à **Administrator : Windows Powershell ISE** pour utiliser la commande suivante pour procéder à l'import des utilisateurs contenus dans le fichier :
 	```Import-Csv -Path .\users.csv | ForEach-Object {New-MGuser –UserPrincipalName "$($_.FirstName.ToLower())@$tenantId" –DisplayName $_.DisplayName -GivenName $_.LastName -SurName $_.FirstName -PasswordProfile @{password='Pa55w.rd';ForceChangePasswordNextSignIn=$false} -UsageLocation $_.UsageLocation -AccountEnabled -MailNickname $_.FirstName -jobTitle $_.Title -Department $_.department -StreetAddress $_.StreetAddress -City $_.city -PostalCode $_.PostalCode -Country $_.Country}```
@@ -145,10 +145,10 @@ Dans cette tâche, vous allez utiliser Windows Powershell pour importer un fichi
 1. Vous pouvez ensuite utiliser la commande suivante pour obtenir la liste des comptes utilisateurs et constater qu'elle contient désormais les nouveaux utilisateurs importés à l'instant :
 	```Get-MgUser```
 1. Minimiser l'outil **Administrator : Windows Powershell ISE** et retournez dans votre navigateur Internet.  
-	> **Note :** Il est important de ne pas fermer la fenêtre de l'ISE pour ne pas perdre la session PowerShell et les variables qu'elle contient.
+	> **Note :** Il est important de ne pas fermer la fenêtre de l'ISE PowerShell pour ne pas perdre la session PowerShell et les variables qu'elle contient.
 1. Dans le portail **Microsoft 365 admin center** navigez jusqu'à la liste **Active users**. Jettez un oeil au contenu de cette loste pour vérifier que les utilisateurs importés sont bien présents, ainsir que Catherine Richard et Tameka Reed, que vous avez ajouté précédemment par commandes PowerShell.
 
 ## Résultat
-A l'issue de ce premier exercice, vous avez créé et géré des comptes utilisateurs ainsi que leurs licences pour coller au plus près aux besoins métier de ib Cegos Workshop.
+A l'issue de ce premier exercice, vous avez créé et géré des comptes utilisateurs ainsi que leurs licences pour les besoins métier de ib Cegos Workshop.
 
 Vous pouvez poursuivre par [l'exercice 2 - Création de groupes](lab2e2)
