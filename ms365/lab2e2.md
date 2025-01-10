@@ -9,23 +9,15 @@ script: "ms365.js"
 Vous avez déjà ajouté plusieurs compte utilisateurs Microsoft 365. Pour poursuivre dans votre rôle d'administration de Dominique Skyetson, vous souhaitez désormais mettre en place la gestion des groupes dans Microsoft 365. Dans cet exercice, vous allez créer de nouveaux groupes et gérer leur contenu, en leur affectant des utilisateurs.  
 Vous testerez aussi l'effet d'une suppression de groupe sur les utilisateurs contenus dans celui-ci.
 
-# Objectifs
-A la fin de cet exercice, vous aurez une meilleure connaissance de :
-- Les groupes Microsoft 365 et leur création dans le portail d'administration
-- La modification des membres et la suppression des groupes
-
-## Tâche 1 - Création de groupes
-En tant que Dominique Skyetson, vous souhaitez désormais mettre en oeuvre les groupes Microsoft 365 dans le projet pilote. Dans cette tâche, vous allez ajouter deux groupes de Vente et un groupe du service comptabilité. Vous allez ensuite supprimer un des groupes Vente pour constater que cela ne supprime pas les utilisateurs contenus dans ce groupe.
-1. Vous devriez encore être connecté sur **LON-CL1**admin. Le **Microsoft 365 admin center** devrait encore être resté ouvert dans votre navigateur et vous devriez y être connecté avec le compte *Dominique Skyetson*.
+## Tâche 1 - Création de groupes avec le portail d'administration
+En tant que Dominique Skyetson, vous souhaitez désormais mettre en oeuvre les groupes Microsoft 365 dans le projet pilote. Dans cette tâche, vous allez ajouter deux groupes de Vente et un groupe du service comptabilité.  
 1. Dans le portail **Microsoft 365 admin center**, dans le menu de navigation de gauche, ouvrez **Teams & groups** pour sélectionner **Active teams & groups**.
-1. Cliquez sur le bouton **Add a Microsoft 365 group** dans la barre de menu de l'onglet **Teams & Microsoft 365 groups**.
+1. Cliquez sur le bouton **+ Add a Microsoft 365 group** dans la barre de menu de l'onglet **Teams & Microsoft 365 groups**.
 1. Dans la fenêtre **Set up the basics**, entrez ```Inside Sales``` dans le champ **Name** et ```Collaboration group for the Inside Sales users``` dans le champ **Description** avant de cliquer sur **Next**.
 1. Dans la fenêtre **Assign owners**, cliquez sur **+ Assign owners** pour afficher la liste des utilisateurs. Sélectionnez **Alan Yoo**, avant de cliquer sur **Add (1)** puis **Next**. 
 1. Dans la fenêtre **Add members**, cliquez sur **Next** (vous ajouterez des membres au groupe plus loin dans cette tâche).
 1. Dans la fenêtre **Edit settings**, saisissez ```insidesales``` dans le champ **Group email address**.  
-	>**Note :** A droite du champ **Group email address** se trouve le domaine. Il est déjà prérempli avec le domaine par défaut de Adatum.    
-	Après avoir configuré ce champ, l'adresse email du groupe Inside Sales devrait ressembler à : **insidesales@labxxxxxx.godeploylabs.com**  
-	Arès avoir configuré l'adresse email, sous la section **Privacy**, laissez la valeur par défaut à **Public** et cliquez sur **Next**.
+1. Après avoir configuré l'adresse email, sous la section **Privacy**, laissez la valeur par défaut à **Public** et cliquez sur **Next**.
 1. Dans la fenêtre **Review and finish adding group** , vérifiez votre saisie et si une option a besoin d'être modifiée, cliquez sur l'option **Edit** en regard de celle-ci; sinon, cliquez sur le bouton **Create group** en bas de la page.
 1. Sur la page **Inside Sales group created**, un message s'affiche indiquant que l'apparition du groupe dans la liste pourra prendre jusqu'à 5 minutes. Cliquez sur **Close**
 1. De retour sur la liste **Active teams and groups**, cliquez sur l'onglet **Security groups**
@@ -62,16 +54,29 @@ En tant que Dominique Skyetson, vous souhaitez désormais mettre en oeuvre les g
 ## Tâche 2 - Suppression de groupe
 Vous souhaitez désormais tester les effets de la suppression d'un groupe.  
 1. Basculez sur l'onglet **Teams & Microsoft 365 groups**.
-1. Cliquez sur les points de suspension verticaux à droite du groupe **Inside Sales** et cliquez sur **Delete group**. 
-1. Dasn la fenêtre **Delete Inside Sales?**, cliquez sur le bouton **Delete group**.
+1. Cliquez sur les points de suspension verticaux à droite du groupe **Inside Sales** et cliquez sur **Delete team**. 
+1. Dasn la fenêtre **Delete Inside Sales?**, cliquez sur le bouton **Delete team**.
 1. Sur la fenêtre **Inside Sales was deleted**, cliquez sur **Close**.
 1. Vous voilà de retour sur la liste des **Teams & microsoft 365 groups** dans le portail **Microsoft 365 admin center**. Le groupe **Inside Sales** ne devrait plus apparaitre dans cette liste (utilisez le bouton *refresh* le cas échéant).
 1. Pour vérifier si la suppression d'un groupe a eu un impact sur ses membres, dans le menu de navigation à gauche, cliquez sur le choix **Active users** dans le groupe d'options **Users**.
 1. Dans la liste des **Active users**, vérifiez que les 2 membres du groupe supprimé, **Ada Russel** et **Alan Yoo**, sont toujours présents dans la liste.
 1. Vous venez donc de vérifier que la suppression d'un groupe ne supprime pas ses membres.
-1. Restez connecté avec le compte de Dominique Skyetson sur le centre d'administration ouvert dans LON-CL1 pour les opérations de l'exercice suivant.
+
+## Tâche 3 - Création de groupes avec Windows Powershell
+Dans cette tâche, vous allez utiliser Windows Powershell pour créer un groupe et ajouter deux membres à celui-ci.
+1. Maximisez l'outil **Windows Powershell ISE** qui devrait être resté ouvert dans la barre des tâches.
+1. Dans la partie basse (fond bleu) de l'outil, tapez la commande suivante avant de taper sur **[Entrée]** pour la valider : 
+	```$mktGroup = New-MgGroup -DisplayName Marketing -Description 'Marketing department users' -groupTypes unified -MailEnabled -securityEnabled -mailNickName marketing```
+1. Utilisez la commande suivante pour ajouter **Catherine** (compte utilisateur créés précédemment et encore référencé par la variable powershell) dans le nouveau groupe **Marketing** :
+	```New-MgGroupMember -groupId $mktGroup.Id -DirectoryObjectId $user1.Id```
+1. Utilisez la commande suivante pour ajouter le compte de **Tameka** dans le nouveau groupe **Marketing** :
+	```New-MgGroupMember -groupId $mktGroup.Id -DirectoryObjectId $user2.Id```
+1. Pour vérifier votre mise en oeuvre, vous pouvez utiliser la commande suivante :
+	```Get-MgGroupMember -groupId $mktGroup.Id | ForEach-Object {Get-MgUser -UserId $_.Id}```
+1. Vérifiez que Catherine Richard et Tameka Reed apparaissent dans la liste des membres du groupe Marketing.
+1. Vous pouvez désormais fermer l'outil **Windows Powershell ISE**.
 
 ## Résultat
-A l'issue de cet exercice, vous avez testé la création, la modification et la suppression de groupes par l'interface administrative de Microsoft 365.
+A l'issue de cet exercice, vous avez testé la création, la modification et la suppression de groupes par l'interface administrative de Microsoft 365 et à l'aide de Windows Powershell.
 
-Vous pouvez poursuivre par [l'exercice 3 - Gestion des utilisateurs et des groupes avec Windows PowerShell](lab2e3)
+Vous pouvez poursuivre par [l'exercice 3 - Authentification multifactorielle](lab2e3)
