@@ -1,6 +1,6 @@
 ---
 layout: stage
-title: "Lab1-Ex3 - Visite des portails administratifs 365"
+title: "Lab1-Ex3 - Personnalisation du tenant"
 length: "00"
 date: "10/01/2025"
 script: "ms365.js"

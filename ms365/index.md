@@ -10,8 +10,10 @@ L'entreprise **ib Cegos Workshop (ICW)** héberge actuellement un environnement 
 Au fil des ateliers de ce stage, vous allez prendre l'identité de Dominique Skyetson, membre de l'équipe d'administration IT de ICW.  
 L'équipe projet de ib Cegos Workshop a donc décidé de mettre en oeuvre Microsoft 365 dans un projet pilote, afin de monter en compétence sur les produits et de voir les besoins métiers qui pourraient être couverts par les outils de l'offre Microsoft 365.  
 
-## Atelier 1 - Appréhension de l'environnement Microsoft 365
+## Atelier 01 - Appréhension de l'environnement Microsoft 365
 ### Exercice 1 - [Préparation de tenant pilote Microsoft 365](lab1e1)
+### Exercice 2 - [Paramètres d'organisation](lab1e2)
+### Exercice 3 - [Personnalisation du tenant](lab1e3)
 ___
 ## Atelier 2 - Gestion des utilisateurs et des groupes Microsoft 365
 ### Exercice 1 - [Gestion des utilisateurs avec le centre d'administration Microsoft 365](lab2e1)
@@ -52,6 +54,4 @@ ___
 1. Pour réaliser les ateliers de ce stage, vous allez utiliser un environnement de stage fourni par notre partenaire *goDeploy*. Cet environnement, qui inclut un compte de test Microsoft 365, comporte des instructions d'atelier (en anglais) que nous vous invitons à remplacer par les présentes instructions.
 1. Pour vous faciliter la vie pendant vos ateliers, vous pouvez utiliser <a href="#" onclick="document.getElementById('domainInput').style.display = 'block';return false">le lien suivant</a> pour saisir les noms de domaines spécifiques à votre atelier goDeploy.
 1. Si vous constatez des dérives entre les présentes instructions et les interfaces que vous rencontrez pendant votre atelier, n'hésitez pas à prévenir votre formateur/trice pour que les présentes instructions soient mises à jour.  
-1. Les ateliers doivent être réalisés dans l'ordre prévu pour éviter les surprises, avec l'exception suivante :
-    - Les tâches 2 et 3 de l'atelier 3, exercice 1 sont dispensables
-1. Si vous souhaitez maximiser vos chances de constater les résultats de l'atelier 8, vous pouvez le réaliser en avance, car son résultat nécessite une latence importante.
+1. Les ateliers doivent être réalisés dans l'ordre prévu pour éviter les surprises.
