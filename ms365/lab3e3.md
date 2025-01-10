@@ -6,11 +6,8 @@ date: "10/01/2025"
 script: "ms365.js"
 ---
 # Scénario
-Dans cet exercice, vous allez configurer Entra Connect pour configurer la jonction de domaine Hybride. La jonction de domaine hybride permet aux ordinateurs de l'entreprise qui ont un compte dans ADDS d'être automatiquement inscrits et reconnus dans Entra Id.
-
-# Objectifs
-A la fin de cet exercice, vous aurez une meilleure connaissance de :
-- La configuration de la jonction hybride des postes de travail dans Entra Connect
+Dans cet exercice, vous allez configurer Entra Connect pour l'ouverture de session en mode PTA et pour la jonction de domaine Hybride.  
+> La jonction de domaine hybride permet aux ordinateurs de l'entreprise qui ont un compte dans ADDS d'être automatiquement inscrits et reconnus dans Entra Id.  
 
 ## Tâche 1 - Configurer la jonction hybride Entra Id
 Dans cette tâche, vous allez utiliser l'assistant de configuration de Entra Connect pour activer la jonction hybride des ordinateurs membres de l'ADDS.
@@ -77,6 +74,6 @@ Dans cette tâche, vous allez utiliser l'assistant de configuration de Entra Con
 1. Fermez l'application **Mail** et déconnectez-vous de LON-CL1 avec le compte de beth comme déjà réalisé précédemment.
 
 ## Résultat
-A l'issue de cet exercice, vous avez vu la procédure permettant de mettre en place la jonction hybride des postes de travail entre ADDS et Entra Id.
+A l'issue de cet exercice, vous avez vu la procédure permettant de mettre en place la jonction hybride des postes de travail entre ADDS et Entra Id, ainsi que l'authentification PTA.
 
 # Fin de l'atelier 3
