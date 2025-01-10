@@ -1,43 +1,26 @@
 ---
 layout: stage
-title: "Lab3-Ex2 - Mise en oeuvre de la synchronisation d'identités"
+title: "Lab3-Ex2 - Synchronisation d'objets"
 length: "00"
 date: "10/01/2025"
 script: "ms365.js"
 ---
 # Scénario
-Dans cet exercice, vous allez activer la synchronisation entre l'ADDS de Adatum et Entra Id. Entra Connect continuera ensuite à synchroniser les changements toutes les 30 minutes.  
-Vous allez ensuite utiliser des objets groupes pour faire quelques modifications sur l'ADDS et vérifier l'effet de la synchronisation sur les objets équivalents dans Entra Id. Dominique souhaite aussi comprendre comment forcer la synchronisation si une opération urgente ne peut attendre le délai de 30 minutes.  
+Dans cet exercice, vous allez activer la synchronisation entre l'ADDS de *ib Cegos Workshop* et Entra Id. Entra Connect continuera ensuite à synchroniser les changements toutes les 30 minutes.  
+Vous allez ensuite utiliser des objets groupes pour faire quelques modifications sur l'ADDS et vérifier l'effet de la synchronisation sur les objets équivalents dans Entra Id.  
 >**Important :** En démarrant cet exercice, préparez-vous à réaliser les 3 premières tâches sans délai entre elles pour éviter que Entra Connect ne synchronise automatiquement les changements que vous souhaitez forcer.
 
-# Objectifs
-A la fin de cet exercice, vous aurez une meilleure connaissance de :
-- L'outil Entra Connect
-- La synchronisation d'objets
-- La synchronisation forcée
-- La vérification de la synchronisation
-
 ## Tâche 1 - Installer Entra Connect
-Dans cette tâche, vous allez utiliser l'assistant d'installation de Entra Connect pour activer la synchronisation entre l'ADDS de Adatum et Entra Id. Une fois la configuration terminée, le processus de synchronisation démarre automatiquement.
-1. Vous devriez encore être connecté sur **LON-DC1** avec le compte **Administrator** à l'issue de la tâche précédente.
-1. Dans votre navigateur Internet, rendez-vous à l'adresse ```https://admin.microsoft.com```.
-	>**Note :** Vous pouvez réutiliser l'onglet **Step 2: Install IdFix - Microsoft** de la tâche précédente qui ne sera pas réutilisé.
-1.	1. Si besoin, dans la boite **Sign in**, utilisez l'adresse de connexion de Dominique Skyetson (**dom@WWLxxxxx.onmicrosoft.com**) et cliquez sur **Next**.
-	1. Dans la boite **Enter password**, saisissez ```ibForm@tion``` et cliquez sur **Sign in**.
-	1. Dans la boite **Stay signed in?**, cochez la case **Don’t show this again** et cliquez sur **Yes.**
-1. Dans le menu de navigation à gauche, ouvrez le groupe d'options **Users** pour cliquer sur **Active Users**.
-1. Au-dessus de la liste **Active users**, dans la barre de menu, cliquez sur les points de suspension à droite pour sélectionner **Directory synchronization**.
-1. Sur la page **About user synchronization**, cliquez sur le bouton **Next**.
-1. Sur la page **Select a migration option**, cochez la case the **Continuous sync** avant de cliquer sur **Next**.
-1. Sur la page **Prepare by running IdFix**, cliquez sur **Next** (vous avez déjà réalisé ce nettoyage lors de l'exercice précédente de cet atelier).
-1. Sur la page **Review synchronization tools**, sélectionnez **Microsoft Entra Connect Sync** et cliquez sur **Next**.
-1.Sur la page **Sync your users** page, cliquez sur la tuile **Download Microsoft Entra Connect Sync**.
+Dans cette tâche, vous allez utiliser l'assistant d'installation de Entra Connect pour activer la synchronisation entre l'ADDS de ICW et Entra Id. Une fois la configuration terminée, le processus de synchronisation démarre automatiquement.
+1. Cette manipulation se réalise sur **LON-DC1**, connecté avec le compte **Administrator**.
+1. Ouvrez un nouvel onglet sur votre navigateur Internet et rendez-vous à l'adresse suivante : ```https://go.microsoft.com/fwlink/?LinkId=615771```
+1. Sur la page **Download Microsoft Entra Connect from official Microsoft Download Center**, cliquez sur le bouton **Donwload**.
 1. Dans la notification en haut à droite (si la notification n'apparaît pas, allez chercher le fichier **AzureADConnect.msi** dans le dossier **Downloads** de LON-DC1), cliquez sur **Open File** sous le nom du fichier téléchargé : **AzureADConnect.msi**.
 1. Si une boite de dialogue **Do you want to run this file?** s'affiche, cliquez sur **Run**.
-1. L'installation de l'outil Entra Connect a démarré, sur la fenêtre **Welcome to Azure AD Connect**, cochez la case  **I agree to the license terms and privacy notice** avant de cliquer sur **Continue**.
-	>**Note :** Si la fenêtre **Welcome to Azure AD Connect** n'apparait pas, cherchez son icône dans la barre des tâches (la plus à droite) et cliquez dessus.
+1. L'installation de l'outil Entra Connect a démarré, sur la fenêtre **Welcome to Entra Connect**, cochez la case  **I agree to the license terms and privacy notice** avant de cliquer sur **Continue**.
+	>**Note :** Si la fenêtre **Welcome to Entra Connect** n'apparait pas, cherchez son icône dans la barre des tâches (la plus à droite) et cliquez dessus.
 1. Sur la page **Express Settings**, lisez les mentions concernant la synchronisation de la forêt **Adatum** et cliquez sur le bouton **Use express settings**.
-1. Sur la page **Connect to Azure AD**, saisissez ```dom@WWLxxxxx.onmicrosoft.com``` dans le champ **USERNAME**, ```ibForm@tion``` dans le champ **password**, et cliquez sur **Next**.
+1. Sur la page **Connect to Azure AD**, saisissez ```dom@[onmicrosoftDomain].onmicrosoft.com``` dans le champ **USERNAME**, ```ibForm@tion``` dans le champ **password**, et cliquez sur **Next**.
 1. Sur la page **Connect to AD DS**, saisissez ```ADATUM\Administrator``` dans le champ **USERNAME**, et ```Pa55w.rd``` dans le champ **PASSWORD** avant de cliquer sur **Next**.
 1. Dans la page **Azure AD sign-in configuration**, cochez la case **Continue without matching all UPN suffixes to verified domains** et cliquez sur **Next**.
 1. Sur la page **Ready to configure**, vérifiez que la case **Start the synchronization process when configuration completes** soit cochée avant de cliquer sur **Install**.

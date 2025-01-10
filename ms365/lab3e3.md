@@ -1,6 +1,6 @@
 ---
 layout: stage
-title: "Lab3-Ex3 - Activation de la jonction de domaine hybride"
+title: "Lab3-Ex3 - Pass Through Authentication"
 length: "00"
 date: "10/01/2025"
 script: "ms365.js"
