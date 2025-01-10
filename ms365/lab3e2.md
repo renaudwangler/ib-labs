@@ -2,7 +2,8 @@
 layout: stage
 title: "Lab3-Ex2 - Mise en oeuvre de la synchronisation d'identités"
 length: "00"
-date: "06/12/2023"
+date: "10/01/2025"
+script: "ms365.js"
 ---
 # Scénario
 Dans cet exercice, vous allez activer la synchronisation entre l'ADDS de Adatum et Entra Id. Entra Connect continuera ensuite à synchroniser les changements toutes les 30 minutes.  

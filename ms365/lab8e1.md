@@ -2,7 +2,8 @@
 layout: stage
 title: "Lab8-Ex1 - Création de labels de sensibilité"
 length: "00"
-date: "11/11/2023 (15h00)"
+date: "10/01/2025"
+script: "ms365.js"
 ---
 # Scénario
 Adatum a désormais une bonne vision de Microsoft 365 grâce à son projet pilote. L'entreprise a gagné plusieurs contrats gouvernementaux, l'amenant à travailler sur de nombreux produits sensibles et classifiés.  

@@ -2,7 +2,8 @@
 layout: stage
 title: "Lab2-Ex1 - Gestion des utilisateurs avec le centre d'administration Microsoft 365"
 length: "00"
-date: "18/12/2023"
+date: "10/01/2025"
+script: "ms365.js"
 ---
 # Scénario
 Comme Dominique Skyetson n'a pas de compte utilisateur Microsoft 365 déclaré pour lui-même, il s'est jusqu'à présent connecté à l'administration du tenant avec le compte *Mod Administrator*.  

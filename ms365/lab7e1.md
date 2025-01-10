@@ -2,7 +2,8 @@
 layout: stage
 title: "Lab7-Ex1 - Configuration des paramètres de SharePoint Online"
 length: "00"
-date: "11/11/2023"
+date: "10/01/2025"
+script: "ms365.js"
 ---
 # Scénario
 Maintenant que Dominique a configuré *Exchange Online* et *Teams*, il s'apprette à implémenter *Sharepoint Online* dans le projet pilote d'Adatum.  

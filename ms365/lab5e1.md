@@ -2,7 +2,8 @@
 layout: stage
 title: "Lab5-Ex1 - Paramètres de transport des messages"
 length: "00"
-date: "11/11/2023"
+date: "10/01/2025"
+script: "ms365.js"
 ---
 # Scénario
 Vous avez pris l'identité de Dominique Skyetson, Administrateur de l'entreprise Adatum, et vous avez commencé à déployer Microsoft 365 dans un environnement virtuel pilote. Dans cet exercice, Dominique veut créer des connecteurs Exchange Online d'émission et de réception en utilisant le portail Exchange admin center. Exchange utilise ces connecteurs pour gérer les flux de messages entrant et sortant vers et depuis les serveurs Exchange Online.  

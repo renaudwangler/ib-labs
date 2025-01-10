@@ -2,7 +2,8 @@
 layout: stage
 title: "Lab1-Ex1 - Appréhension de l'environnement"
 length: "00"
-date: "18/12/2023"
+date: "10/01/2025"
+script: "ms365.js"
 ---
 # Scénario
 A travers les ateliers de ce stage, vous allez prendre l'identité de Dominique Skyetson, administratrice Microsoft 365 de *ib Cegos Workshop (ICW)*. En tant que Dominique, il vous a été demandé de créer un environnement pilote Microsoft 365. Vous allez donc commencer par prendre connaissance du tenant Microsoft 365 qui a été fourni à fins de tests.  

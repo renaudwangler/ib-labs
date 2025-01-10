@@ -2,7 +2,8 @@
 layout: stage
 title: "Lab2-Ex3 - Gestion des utilisateurs et des groupes avec Windows PowerShell"
 length: "00"
-date: "19/12/2023"
+date: "10/01/2025"
+script: "ms365.js"
 ---
 # Scénario
 Windows Powershell permet aux administrateurs d'automatiser, d'accélérer et de fluidifier les tâches qui seraient faites dans le portail Microsoft 365 admin center, les plus compliquées comme les plus simples.  

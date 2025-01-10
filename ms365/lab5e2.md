@@ -2,7 +2,8 @@
 layout: stage
 title: "Lab5-Ex2 - Configuration de la protection de la messagerie"
 length: "00"
-date: "11/11/2023"
+date: "10/01/2025"
+script: "ms365.js"
 ---
 # Scénario
 Dans cet exercice, vous allez continuer, sous l'identité de Dominique Skyetson, Administrateur de l'entreprise Adatum à déployer Microsoft 365 dans un environnement virtuel pilote. Adatum a récemment constaté une recrudescence des attaques virales. Le CTO de l'entreprise a demandé à Dominique de rechercher les différentes options disponibles dans Exchange Online pour fortifier l'environnement de messagerie de Adatum.  

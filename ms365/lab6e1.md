@@ -2,7 +2,8 @@
 layout: stage
 title: "Lab6-Ex1 - Configuration de Microsoft Teams"
 length: "00"
-date: "11/11/2023"
+date: "10/01/2025"
+script: "ms365.js"
 ---
 # Scénario
 Dans cet exercice, vous allez apprendre à gérer et configurer les principales fonctionnalités de l'environnement *Teams* depuis *le Teams admin center*. Dans son rôle d'administrateur d'Adatum, Dominique Skyetson a décidé de customiser la stratégie de l'entreprise concernant les réunions. Les stratégies de réunion contrôlent les fonctionnalités disponibles pour les participants. Une stratégie à l'échelle de l'entreprise, nommée *Global* est créée par défaut et est affectée à tous les utilisateurs de l'entreprise lors de la création du tenant. Dominique a choisi de modifier cette stratégie par défaut.  

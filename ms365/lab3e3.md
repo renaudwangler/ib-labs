@@ -2,7 +2,8 @@
 layout: stage
 title: "Lab3-Ex3 - Activation de la jonction de domaine hybride"
 length: "00"
-date: "06/12/2023"
+date: "10/01/2025"
+script: "ms365.js"
 ---
 # Scénario
 Dans cet exercice, vous allez configurer Entra Connect pour configurer la jonction de domaine Hybride. La jonction de domaine hybride permet aux ordinateurs de l'entreprise qui ont un compte dans ADDS d'être automatiquement inscrits et reconnus dans Entra Id.

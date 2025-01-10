@@ -2,7 +2,8 @@
 layout: stage
 title: "Lab5-Ex3 - Configuration des stratégies d'accès clients"
 length: "00"
-date: "11/11/2023"
+date: "10/01/2025"
+script: "ms365.js"
 ---
 # Scénario
 Outlook on the web permet aux utilisateurs d'Adatum d'accèder à leur boite aux lettres depuis un navigateur Interner. Après qu'Adatum ait créé son tenant Microsoft 365 avec Exchange Online, ce dernier inclut une unique stratégie nommée **OWAMailboxPolicy-Default**. Cette stratégie définit les paramètres Outlook on the web pour tous les utilisateurs. Cependant, Dominique Skyetson, par son rôle d'administrateur de Adatum, souhaite créer une stratégie Outlook on the web policy qui s'appliqera à un utilisateur particulier (dans notre cas Alan Yoo). En vérifiant si une telle affectation de straégie par utilisateur fonctionne, Dominique sera dès lors capable de gérer les paramètres de boite aux lettres pour les différentes populations d'utilisateurs de l'entreprise.  

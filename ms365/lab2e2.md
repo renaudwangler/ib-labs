@@ -2,7 +2,8 @@
 layout: stage
 title: "Lab2-Ex2 - Gestion des groupes"
 length: "00"
-date: "19/12/2023"
+date: "10/01/2025"
+script: "ms365.js"
 ---
 # Scénario
 Vous avez déjà ajouté plusieurs compte utilisateurs Microsoft 365. Pour poursuivre dans votre rôle d'administration de Dominique Skyetson, vous souhaitez désormais mettre en place la gestion des groupes dans Microsoft 365. Dans cet exercice, vous allez créer de nouveaux groupes et gérer leur contenu, en leur affectant des utilisateurs.  

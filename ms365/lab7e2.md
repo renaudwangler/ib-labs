@@ -2,7 +2,8 @@
 layout: stage
 title: "Lab7-Ex2 - Configuration de sites SharePoint Online"
 length: "00"
-date: "11/11/2023"
+date: "10/01/2025"
+script: "ms365.js"
 ---
 # Scénario
 Dans cet exercice, Dominique Skyetson veut commencer à explorer les sites *SharePoint Online*. Pour en comparer le fonctionnement, Dominique va créer un site en utilisant le portail *SharePoint Online admin center*, avant d'en créer un second en utilisant Windows PowerShell. Elle va ensuite mettre en place les permissions d'accès sur les sites et vérifier leur mode de fonctionnement.
