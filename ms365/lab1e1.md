@@ -22,7 +22,7 @@ Une fois votre atelier démarré, il vous faut prendre note des informations sui
 - **Préfixe du tenant**. Ce préfixe, trouvable dans le nom de l'administrateur du tenant, sera utilisé pour identifier et se connecter avec les comptes Entra Id dans votre tenant. Le format de ce préfixe est de la forme **xxxxxxxx.onmicrosoft.com**. Notez donc la valeur **xxxxxxxx** pour utilisation ultérieure dans tous les ateliers, en remplacement de la mention [‎onmicrosoftDomain] ou [onmicrosoftDomain].  
 - **Mot de passe du tenant**. Fourni par goDeploy, il s'agit du mot de passe du compte *MOD Administrator*.  
 - **Nom DNS d'entreprise**. goDeploy a également créé un nom de domaine DNS pour l'entreprise *ib Cegos Workshop*. Il peut être trouvé sous le nom **Lab Domain** dans l'onglet **DNS** du volet de gauche de votre environnement goDeploy (c'est un nom qui ressemble à *labXXXXX.godeploylabs.com*) et sera à utiliser en remplacement de la mention [‎godeployDomain] ou [godeployDomain].  
- >**Astuce :** Si votre navigateur le supporte, vous pouvez <a href="#" onclick="document.getElementById('domainInput').style.display = 'block';return false">cliquer sur ce lien</a> pour personnaliser les noms de domaines dans ces instructions et vous en faciliter l'utilisation tout au long des ateliers de ce stage. 
+ >**Astuce :** Si votre navigateur le supporte, vous pouvez <a href="#" onclick="document.getElementById('domainInput').style.display = 'block';return false">cliquer sur ce lien</a> pour personnaliser les informations dans ces instructions et vous en faciliter l'utilisation tout au long des ateliers de ce stage. 
 
 ## Tâche 2 - Vérification du démarrage de l'atelier
 Dans un environnement de test comme celui qui nous est fourni, qui ne contient qu'un seul contrôleur de domaine, le démarrage des machines peut poser problème. Afin de maximiser les chances que les manipulations des ateliers suivants se passent correctement, vous allez commencer par *corriger* le démarrage des VMs.
@@ -52,7 +52,7 @@ Bien que goDeploy ait initié la création du tenant Microsoft 365 pour *ib Cego
 ```https://admin.microsoft.com```
    >**Nota important:** Si vous rencontrez des soucis réseau dans les machines virtuelles goDeploy pour vous connecter sur l'environnement Microsoft 365, vous pouvez executer toutes les opérations à faire dans un navigateur Internet sur n'importe qul autre navigateur Internet en dehors des machines virtuelles (local).
 1. Dans la fenêtre **Sign in**, saisissez le nom de connexion du compte *MOD Administrator* (```admin@[onmicrosoftDomain].onmicrosoft.com```) et cliquez sur **Next**
-1. Dans la fenêtre **Enter password**, saisissez ou collez le **mot de passe du tenant** que vous avez précédemment noté et cliquez sur **Sign in**
+1. Dans la fenêtre **Enter password**, saisissez ou collez **[MODPassword]}** et cliquez sur **Sign in**
 1. Tout au long de vos manipulations, vous pouvez cliquer sur **Got it** sur le pop-up qui vous informe de la sauvegarde de vos mots de passe sur les machines.
 1. Sur la fenêtre **Stay signed in?**, cochez la case **Don’t show this again** et cliquez sur **Yes.**
 1. Si un popup **Welcome to Microsoft 365** apparaît, cliquez deux fois sur la flèche droite pour pouvoir le fermer.
@@ -68,7 +68,6 @@ Dans cette tâche, vous allez vérifier l'état de santé du service Microsoft 3
 	> **Note** : Si aucun problème n'est actuellement listé, vous pouvez toujours cliquer sur l'onglet **Issue history** pour réaliser l'opération suivante.
 1. Cliquez sur une ligne représentant un problème pour observer le détail des informations fournies par l'éditeur sur ce problème et son état actuel de prise en charge et/ou de résolution.
 1. Après avoir observé les détails d'un problème, cliquez sur le **X** en haut à droite pour le fermer et n'hésitez pas à aller en observer d'autres.
-1. Restez connecté sur LON-DC1 et laissez votre navigateur Internet ouvert pour l'exercice suivant de vos ateliers.
 
 ## Résultat
 A l'issue de ce premier exercice, vous avez vérifié l'état de l'environnement pilote pour ICW.  

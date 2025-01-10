@@ -6,59 +6,57 @@ date: "10/01/2025"
 script: "ms365.js"
 ---
 # Scénario
-Maintenant que le tenant du projet pilote 365 de Adatum est complètement créé, vous pouvez commencer à utiliser l'environnement Microsoft 365. Dans cet exercice, vous allez visiter divers portails administratifs les plus utiles pour le quotidien d'un administrateur 365 afin de commencer à vous familiariser avec leur contenu et leur navigation.
-Dans les exercices précédents, vous avez accéder aux portail 365 depuis un contrôleur de domaine (LON-DC1). La création du tenant étant désormais actée, il semble plus judicieux à Dominique Skyetson d'accéder aux outils d'administration depuis sa machine d'administrateur LON-CL1.
-Vous allez donc commencer par vous connecter sur la machine cliente **LON-CL1** en utilisant le compte administrateur local **Adatum\administrator** pour ensuite vous connecter au tenant Microsoft 365 avec le compte **MOD Administrator**.
+*Ib Cegos Workshop* a donc acheté un nouveau nom de domaine DNS pour son projet pilote (fourni par votre hébergeur d'ateliers) qui soit utilisable sur Internet.
+ICW gère directement les enregistrements de ses domaines DNS. Pour que ce domaine soit utilisable sur le tenant, il va vous falloir passer par un assistant de configuration et créer les enregistrements DNS attendus. C'est ce que vous allez réaliser dans ce troisième exercice.
 
-# Objectifs
-A la fin de cet exercice, vous aurez une meilleure connaissance de :
-- la nature des principaux portails d'administration
-- la navigation dans ces portails
+## Avant de commencer
+Votre formateur/trice pourra, le cas échéant, vous donner quelques indications complémentaires concernant l'environnement d'atelier a distance que vous utiliserez.  
+dans votre environnement d'atelier, goDeploy vous fournit un nom de domaine DNS d'entreprise pour le projet pilote. Vous pouvez identifier ce nom de domaine en tête de l'onglet **DNS** dans l'environnement d'atelier.
+    > **Note** : L'onglet **DNS** ne se trouve pas dans la machine virtuelle mais à sa gauche, dans le portail goDeploy.  
 
-## Tâche 1 - Visite du Microsoft 365 admin center
-Bien que vous ayez déjà accédé au portail général d'administration *Microsoft 365 admin center* dans les exercices précédents, vous allez désormais découvrir quelques fonctionnalités complémentaires de ce portail. 
-1. Basculez vers la machine virtuelle **LON-CL1**.
-1. Connectez-vous à la machine LON-CL1 avec le compte **adatum\Administrator** et le mot de passe **Pa55w.rd**. 
-    > **Note :** Si un panneau **Networks** s'affiche sur la droite de votre écran demandant si vous souhaitez activer la découverte sur le réseau, cliquez sur **Yes**.
-1. Sur la barre des tâches, cliquez sur l'icône de **Microsoft Edge** pour lancer votre navigateur. Maximisez la fenêtre du navigateur lorsqu'elle s'ouvre.
-1. Dans votre navigateur, rendez-vous sur le portail d'administration **Microsoft 365 admin center** en utilisant l'url suivante :
-```https://admin.microsoft.com/```
-1. Dans la fenêtre **Sign in**, saisissez le nom de connexion du compte *MOD Administrator* (sous la forme ```admin@[onmicrosoftDomain].onmicrosoft.com```) et cliquez sur **Next**
-1. Dans la fenêtre **Enter password**, saisissez ou collez le **mot de passe du tenant** que vous avez précédemment noté et cliquez sur **Sign in**
-1. Sur la fenêtre **Stay signed in?**, cochez la case **Don’t show this again** et cliquez sur **Yes.**
-1. Si un popup **Welcome to Microsoft 365** apparaît, cliquez deux fois sur la flèche droite pour pouvoir le fermer.
-1. Dans le premier exercice, vous avez déjà été voir la liste des utilisateurs déclarés (**Active Users**). Vous allez désormais poursuivre votre exploration en regardant la liste des groupes présents dans l'environnement. Dans le menu de navigation à gauche, ouvrez le groupe **Teams & Groups** pour sélectionner l'option **Active teams & groups**... 
-1. Dans le menu de navigation, cliquez sur **...Show all** pour afficher toutes les options de ce menu. 
-1. Dans le menu de navigation, ouvrez le groupe **Health** afin de sélectionner le **Message center**.
-1. Dans la page **Message center**, l'onglet **Inbox** est affiché par défaut. Parcourez-en les messages. Si un message en particulier vous intéresse, cliquez dessus pour en ouvrir le détail. Cela va ouvrir un panneau à droite de la page qui affiche tous les détails concernant le message choisi. Après avoir fini de consulter les détails de ce message, cliquez sur le **X** tout en haut à droite pour fermer le panneau de détails.
-1. Laissez votre navigateur Internet ouvert, sur la page du portail **Microsoft 365 admin center** pour la suite de cet exercice.
+## Tâche 1 - Ajout du DNS d'entreprise
+Dans cette tâche vous allez ajouter le domaine DNS d'entreprise à votre tenant Microsoft 365. 
+1. Les opérations sont à faire sur **LON-DC1**, connecté avec le compte **Administrator**.
+1. Dans votre navigateur Internet, vous devriez toujours être sur le portail **Microsoft 365 admin center**, connecté avec le compte *MOD Administrator*.
+1. Dans le portail **Microsoft 365 admin center**, dans le menu de navigation, vous avez déjà ouvert le groupe **Settings** pour l'exercice précédant. Pour ajouter le domaine d'entreprise, cliquez sur **Domains** dans ce groupe. 
+1. Sur la page **Domains**, vous devriez voir apparaitre le domaine par défaut, créé avec votre tenant ([onmicrosoftDomain].onmicrosoft.com).
+1. Cliquez sur **+ Add domain** pour ouvrir la page **Add a domain**.
+1. Sur la page **Add a domain**, saisissez le **nom DNS d'entreprise** (```[godeployDomain].godeploylabs.com```) dans le champ **Domain name** avant de cliquer sur le bouton **Use this domain**.
+1. Sur la page **Verify you own your domain**, sélectionnez l'option **Add a TXT record to the domain's DNS record** et cliquez sur **Continue**.
+1. Sur la page **Add a record to verify ownership**, prenez note de la valeur mentionnée après **TXT value**. Elle devrait ressembler à *MS=msXXXXXXXX*.
+1. Dans l'environnement d'atelier, ouvrer l'onglet **DNS** et cliquez sur **Add New +** dans la section **TXT Records**
+1. Dans la fenêtre **Add DNS TXT Record**, tapez **@** dans le champ **Name** et la valeur notée au point précédent dans le champ **Value** avant de cliquer sur **Save**.
+1. De retour dans la machine virtuelle **LON-DC1**, Sur la page **Add a record to verify ownership**, cliquez sur le bouton **Verify**.
+1. Sur la page **How do you want to connect to your domain?**, sélectionnez **More options**. Deux options s'affichent : **Add your own DNS records**, et **Skip and do this later (not recommended)**. L'option **Add your own DNS records** est sélectionnée par défaut, cliquez sur le bouton **Continue** pour ouvrir la page **Add DNS records**.
+1. La page **Add DNS records** identifie les services qu'une entreprise peut implémenter dans le contexte de son déploiement Microsoft 365 et qui ont besoin d'enregistrements DNS. L'option **Exchange and Exchange Online Protection** devrait être sélectionnée par défaut (sinon, sélectionnez là).
+	> Trois enregistrements DNS sont nécessaires pour les services Exchange - un enregistrement **MX** , un alias **CNAME**, et un enregistrement **TXT**. Sélectionnez chaque enregistrement pour l'ouvrir et prendre note de son contenu à créer.  
+    - MX pointe vers ```[godeployDomain]-godeploylabs-com.mail.protection.outlook.com``` avec préférence de **0**  
+    - CNAME associe ```autodiscover``` à ```autodiscover.outlook.com```  
+    - TXT contient ```v=spf1 include:spf.protection.outlook.com -all```  
 
-## Tâche 2 - Visite du Exchange admin center
-1. Suite à la tâche précédente, vous devriez toujours être connecté à **LON-CL1** et votre navigateur Internet devrait être ouvert sur le **Microsoft 365 Admin Center**, connecté en **MOD Administrator**. Dans le menu de navigation, dans la section **Admin centers**, cliquez sur **Exchange**. Un nouvel onglet va s'ouvrir, affichant le portail **Exchange admin center**.
-1. Parcourez le **Exchange admin center**, en sélectionnant chaque entrée de son menu de navigation. Consultez les informations disponibles pour chaque entrée et parcourez les onglets (le cas échéant).
-1. Une fois terminée votre visite du *Exchange admin center*, fermez l'onglet du navigateur dans lequel vous l'avez ouvert (laissez le navigateur et les autres onglets ouverts).
+1. Plus bas, dans la page **Add DNS records**, cliquez sur **Advanced Options**.
+1. Trois services additionnels sont affichés ici : **Skype for Business**, **Intune and Mobile Device Management for Microsoft 365** et **DomainKeys Identified Mail (DKIM)**.  
+	> Sélectionnez les cases à cocher des deux premiers services, cela va faire apparaître un ensemble d'enregistrements DNS à créer pour chacun.
+1. Notez que quatre enregistrements DNS sont requis pour **Skype for Business** - deux **CNAME** et deux **SRV**. Sélectionnez chaque enregistrement pour l'afficher et en prendre note  
+	> **Important :** Bien que Teams soit désormais utilisée comme plateforme de collaboration et de conversation en temps réel, il reste nécessaire de sélectionner **Skype for Business**. La raison en est que Teams va s'appuyer sur ces enregistrements DNS pour diverses fonctionnalités qui ne fonctionneront pas correctement sans.  
+    - CNAME associe ```sip``` à ```sipdir.online.lync.com```  
+    - CNAME associe ```lyncdiscover``` à ```webdir.online.lync.com```  
+    - SRV ```_sip._tls``` cible ```sipdir.online.lync.com``` (Priorité **100**, poids **1** et port ```443```)  
+    - SRV ```_sipfederationtls._tcp``` cible ```sipfed.online.lync.com``` (Priorité **100**, poids **1** et port ```5061```)  
 
-## Tâche 3 - Visite du Teams admin center
-1. Suite à la tâche précédente, vous devriez toujours être connecté à **LON-CL1** et votre navigateur Internet devrait être ouvert sur le **Microsoft 365 Admin Center**, connecté en **MOD Administrator**. Dans le menu de navigation, dans la section **Admin centers**, cliquez sur **Teams**. Un nouvel onglet va s'ouvrir, affichant le portail **Microsoft Teams admin center**.
-1. Parcourez le **Microsoft Teams admin center**, en sélectionnant chaque entrée de son menu de navigation. Consultez les informations disponibles pour chaque entrée et parcourez les onglets (le cas échéant).
-1. Une fois terminée votre visite du *Microsoft Teams admin center*, fermez l'onglet du navigateur dans lequel vous l'avez ouvert (laissez le navigateur et les autres onglets ouverts).
+1. Notez que deux alias CNAME sont nécessaires au fonctionnement correct de **Intune and Mobile Device Management for Microsoft 365**. Sélectionnez **CNAME Record (2)** pour les afficher et prenez bonne note de leur contenu.  
+    - CNAME associe ```enterpriseregistration``` à ```enterpriseregistration.windows.net```  
+    - CNAME associe ```enterpriseenrollment``` à ```enterpriseenrollment-s.manage.microsoft.com``` (selon les tenants, peut aussi être associé à ```enterpriseenrollment.manage.microsoft.com```).  
 
-## Tâche 4 - Visite du SharePoint admin center
-1. Suite à la tâche précédente, vous devriez toujours être connecté à **LON-CL1** et votre navigateur Internet devrait être ouvert sur le **Microsoft 365 Admin Center**, connecté en **MOD Administrator**. Dans le menu de navigation, dans la section **Admin centers**, cliquez sur **Sharepoint**. Un nouvel onglet va s'ouvrir, affichant le portail **Sharepoint admin center**.
-1. Parcourez le **Sharepoint admin center**, en sélectionnant chaque entrée de son menu de navigation. Consultez les informations disponibles pour chaque entrée et parcourez les onglets (le cas échéant).
-1. Une fois terminée votre visite du *Sharepoint admin center*, fermez l'onglet du navigateur dans lequel vous l'avez ouvert (laissez le navigateur et les autres onglets ouverts).
-
-## Tâche 5 - Visite de Microsoft 365 Defender
-1. Suite à la tâche précédente, vous devriez toujours être connecté à **LON-CL1** et votre navigateur Internet devrait être ouvert sur le **Microsoft 365 Admin Center**, connecté en **MOD Administrator**. Dans le menu de navigation, dans la section **Admin centers**, cliquez sur **Security**. Un nouvel onglet va s'ouvrir, affichant le portail **Microsoft 365 Defender**.
-1. Parcourez le **Microsoft 365 Defender**, en sélectionnant chaque entrée de son menu de navigation. Consultez les informations disponibles pour chaque entrée et parcourez les onglets (le cas échéant).
-1. Une fois terminée votre visite du *Microsoft 365 Defender*, fermez l'onglet du navigateur dans lequel vous l'avez ouvert (laissez le navigateur et les autres onglets ouverts).
-
-## Tâche 6 - Visite de Microsoft Purview 
-1. Suite à la tâche précédente, vous devriez toujours être connecté à **LON-CL1** et votre navigateur Internet devrait être ouvert sur le **Microsoft 365 Admin Center**, connecté en **MOD Administrator**. Dans le menu de navigation, dans la section **Admin centers**, cliquez sur **Compliance**. Un nouvel onglet va s'ouvrir, affichant le portail **Microsoft Purview**.
-1. Parcourez le **Microsoft Purview**, en sélectionnant chaque entrée de son menu de navigation. Consultez les informations disponibles pour chaque entrée et parcourez les onglets (le cas échéant).
-1. Une fois terminée votre visite du *Microsoft Purview*, fermez l'onglet du navigateur dans lequel vous l'avez ouvert (laissez le navigateur et les autres onglets ouverts).
-1. Laissez, pour finir, votre navigateur Internet ouvert et connecté car vous allez l'utiliser dans le prochain atelier.
+1. Retournez dans l'onglet **DNS** de votre environnement d'atelier et créez-y tous les enregistrements DNS nécessaires pour le tenant du projet pilote.
+    > **Note** : Voici un exemple d'onglet DNS contenant les enregistrements nécessaires créés pour vous aider : il vous faudra cependant remplacer la mention labXXXXXX par votre nom DNS d'entreprise :
+    ![msms030fr DNS Sample](DNS-Sample.png)
+1. De retour dans la machine virtuelle **lon-DC1**, cliquez sur le bouton **Continue**. A ce moment, l'assistant de création du domaine va vérifier que tous les enregistrements DNS nécessaires ont correctement été créés.
+1. Si tous les enregistrements DNS attendus ont été correctement crées, la page **Domain setup is complete** devrait apparaître (Dans le cas contraire, merci de vérifier les enregistrement DNS manquant/erronés indiqués sur la page **Add DNS records** qui s'est réaffichée, avant de cliquer de nouveau sur **Continue*).
+1. Cliquez sur **Done**.
+1. Vous allez être renvoyé vers la page **Domains** dans laquelle la colonne **status** pour votre DNS d'entreprise devrait afficher **Healthy**.  
 
 ## Résultat
-A l'issue de ce premier exercice, vous avez visité les principaux portails utiles au quotidien d'un administrateur Microsoft 365 et commencé à appréhender la navigation dans ceux-ci.
+A l'issue de ce troisième exercice, vous avez mis en place tous les enregistrements DNS nécessaires au bon fonctionnement des services Microsoft 365 pour le projet pilote de ICW.
+
 # Fin de l'atelier 1
