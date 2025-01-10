@@ -52,6 +52,6 @@ ___
 ___
 ## Conseils génériques
 1. Pour réaliser les ateliers de ce stage, vous allez utiliser un environnement de stage fourni par notre partenaire *goDeploy*. Cet environnement, qui inclut un compte de test Microsoft 365, comporte des instructions d'atelier (en anglais) que nous vous invitons à remplacer par les présentes instructions.
-1. Pour vous faciliter la vie pendant vos ateliers, vous pouvez utiliser <a href="#" onclick="document.getElementById('domainInput').style.display = 'block';return false">le lien suivant</a> pour saisir les noms de domaines spécifiques à votre atelier goDeploy.
+1. Pour vous faciliter la vie pendant vos ateliers, vous pouvez utiliser <a href="#" onclick="document.getElementById('domainInput').style.display = 'block';return false">le lien suivant</a> pour saisir les informations spécifiques à votre atelier goDeploy.
 1. Si vous constatez des dérives entre les présentes instructions et les interfaces que vous rencontrez pendant votre atelier, n'hésitez pas à prévenir votre formateur/trice pour que les présentes instructions soient mises à jour.  
 1. Les ateliers doivent être réalisés dans l'ordre prévu pour éviter les surprises.
