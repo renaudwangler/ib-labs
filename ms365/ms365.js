@@ -1,8 +1,8 @@
 var onmicrosoftDomain,godeployDomain
 //Récupération des nomms de domaine, si stockés dans la base du navigateur
-if (localStorage.getItem('msms030-onmicrosoftDomain')) { onmicrosoftDomain = localStorage.getItem('msms030-onmicrosoftDomain') }
+if (localStorage.getItem('ms365-onmicrosoftDomain')) { onmicrosoftDomain = localStorage.getItem('ms365-onmicrosoftDomain') }
 else { onmicrosoftDomain = 'M365xxxxxx' }
-if (localStorage.getItem('msms030-godeployDomain')) { godeployDomain = localStorage.getItem('msms030-godeployDomain') }
+if (localStorage.getItem('ms365-godeployDomain')) { godeployDomain = localStorage.getItem('ms365-godeployDomain') }
 else { godeployDomain = 'labxxxxxx' }
 //CRéation du div de saisie des domaines
 if (typeof domainInput === 'undefined') {
@@ -16,8 +16,8 @@ function updateDomains() {
     document.body.innerHTML = document.body.innerHTML.replaceAll('[godeployDomain]',godeployDomain) }
 
 function newDomains() {
-    localStorage.setItem('msms030-onmicrosoftDomain',document.getElementById('onmicrosoftDomainNew').value)
-    localStorage.setItem('msms030-godeployDomain',document.getElementById('godeployDomainNew').value)
+    localStorage.setItem('ms365-onmicrosoftDomain',document.getElementById('onmicrosoftDomainNew').value)
+    localStorage.setItem('ms365-godeployDomain',document.getElementById('godeployDomainNew').value)
     document.getElementById('domainInput').style.display = 'none'
     document.body.innerHTML = document.body.innerHTML.replaceAll(onmicrosoftDomain,document.getElementById('onmicrosoftDomainNew').value)
     document.body.innerHTML = document.body.innerHTML.replaceAll(godeployDomain,document.getElementById('godeployDomainNew').value)
