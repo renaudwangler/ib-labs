@@ -1,6 +1,6 @@
 ---
 layout: stage
-title: "Lab2-Ex3 - Gestion des utilisateurs et des groupes avec Windows PowerShell"
+title: "Lab2-Ex3 - Authentification multifactorielle"
 length: "00"
 date: "10/01/2025"
 script: "ms365.js"

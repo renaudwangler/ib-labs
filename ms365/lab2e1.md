@@ -1,6 +1,6 @@
 ---
 layout: stage
-title: "Lab2-Ex1 - Gestion des utilisateurs avec le centre d'administration Microsoft 365"
+title: "Lab2-Ex1 - Création d'utilisateurs"
 length: "00"
 date: "10/01/2025"
 script: "ms365.js"

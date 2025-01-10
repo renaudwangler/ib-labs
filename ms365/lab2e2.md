@@ -1,6 +1,6 @@
 ---
 layout: stage
-title: "Lab2-Ex2 - Gestion des groupes"
+title: "Lab2-Ex2 - Création de groupes"
 length: "00"
 date: "10/01/2025"
 script: "ms365.js"
