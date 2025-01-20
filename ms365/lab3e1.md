@@ -18,7 +18,7 @@ Dans cette tâche, vous allez vous faciliter la vie en utilisant Windows Powersh
 1. Dans la fenêtre **Administrator: Windows PowerShell ISE**, utilisez la commande suivante pour remplacer le suffixe UPN de votre forêt ADDS :
 	```Get-ADForest | Set-ADForest -UPNSuffixes @{replace = '[godeployDomain].godeploylabs.com'}```
 1. Utilisez, pour terminer, la commande suivante pour modifier l'UPN de tous les utilisateurs du domaine ADDS :  
-	```Get-ADUser -Filter * -Properties SamAccountName | ForEach-Object { Set-ADUser $_  -UserPrincipalName "$($_.SamAccountName.replace(' ',''))@[godeployDomain].godeploylabs.com'" }```
+	```Get-ADUser -Filter * -Properties SamAccountName | ForEach-Object { Set-ADUser $_  -UserPrincipalName "$($_.SamAccountName.replace(' ',''))@[godeployDomain].godeploylabs.com" }```
 
 ## Tâche 2 - Activation de TLS 1.2
 La machine Windows Server fournie dans le cadre de notre pilote n'a pas le protocole TLS 1.2 actif. l'utilisation de nombreuses fonctionnalités du cloud Microsoft n'est désormais plus supportée sans ce prérequis.
