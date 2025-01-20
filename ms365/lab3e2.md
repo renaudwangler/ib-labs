@@ -24,7 +24,7 @@ Dans cette tâche, vous allez utiliser l'assistant d'installation de Entra Conne
 1. Sur la page **Connect to Microsoft Entra ID**, saisissez ```dom@[onmicrosoftDomain].onmicrosoft.com``` dans le champ **USERNAME** et cliquez sur **Next**.
 1. Sur le panneau **Pick an account**, sléectionnez **dom@[onmicrosoftDomain].onmicrosoft.com** et saisissez ```ibForm@tion``` dans le champ **password** pour cliquer sur **Sign in**.
 1. Sur la page **Connect to AD DS** saisissez ```ADATUM\Administrator``` dans le champ **USERNAME**, et ```Pa55w.rd``` dans le champ **PASSWORD** avant de cliquer sur **Next**.
-1. Dans la page *Microsoft Entra sign-in configuration**, cochez la case **Continue without matching all UPN suffixes to verified domains** et cliquez sur **Next**.
+1. Dans la page **Microsoft Entra sign-in configuration**, cochez la case **Continue without matching all UPN suffixes to verified domains** et cliquez sur **Next**.
 1. Sur la page **Ready to configure**, vérifiez que la case **Start the synchronization process when configuration completes** soit cochée avant de cliquer sur **Install**.
 1. Attendez la fin de la mise en oeuvre de la synchronisation (cela prendra quelques minutes) et cliquez sur **Exit**.
 

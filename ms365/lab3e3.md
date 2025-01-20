@@ -16,21 +16,20 @@ Dans cette tâche, vous allez utiliser l'assistant de configuration de Entra Con
 1. Dans la page d'accueil **Welcome to Azure AD Connect**, cliquez sur le bouton **Configure**.
 1. Sur la page **Additional tasks**, sélectionnez la ligne **Configure device options** puis cliquez sur **Next**.
 1. Sur la page **Overview**, cliquez sur **Next**.
-1. Sur la page **Connect to Azure AD**, saisissez les informations de connexion de Dominique Skyetson (```dom@WWLxxxxx.onmicrosoft.com``` dans le champ **USERNAME** et ```ibForm@tion``` dans le champ **PASSWORD**) puis cliquez sur **Next**.
-1. Si une fenêtre **Sign in to your account** surgit, utilisez la pour vous connecter avec le compte de Dominique.
-1. Sur la page **Device options**, sélectionnez **Configure Hybrid Azure AD join** et cliquez sur **Next**.
+1. Sur la page **Connect to Microsoft Entra ID**, saisissez les informations de connexion de Dominique Skyetson (```dom@[onmicrosoftDomain].onmicrosoft.com``` dans le champ **USERNAME**) puis cliquez sur **Next**.
+1. Si une fenêtre **Sign in to your account** surgit, utilisez la pour vous connecter avec le compte de Dominique (```dom@[onmicrosoftDomain].onmicrosoft.com``` dans le champ **USERNAME** et ```ibForm@tion``` dans le champ **PASSWORD**).
+1. Sur la page **Device options**, sélectionnez **Configure Hybrid Microsoft ENtra ID join** et cliquez sur **Next**.
 1. Sur la page **Device operating systems**, cochez la case **Windows 10 or later domain-joined devices** et cliquez sur **Next**.
 1. Sur la page **SCP configuration**, sélectionnez la case à cocher en regard de **Adatum.com**
-	1. Sélectionnez **Azure Active Directory** dans le champ **Authentication Service**.
+	1. Sélectionnez **Microsoft Entra ID** dans le champ **Authentication Service**.
 	1. Cliquez sur **Add**.
-	1. Dans la boite de dialogue **Enterprise Admin Credentials**, entrez ```ADATUM\Administrator``` dans le champ **USERNAME** et ```Pa55w.rd``` Dasn le champ **PASSWORD**.
+	1. Dans la boite de dialogue **Enterprise Admin Credentials**, entrez ```ADATUM\Administrator``` dans le champ **USERNAME** et ```Pa55w.rd``` dans le champ **PASSWORD**.
 	1. Cliquez sur **OK**.
 1. De retour sur la fenêtre **SCP configuration**, cliquez sur **Next**.
 1. Sur la page **Ready to configure**, cliquez sur le bouton **Configure**.
 1. Sur la page **Configuration complete**, cliquez sur **Exit**.
-1. Basculez sur la machine **LON-CL1** faites un clic-droit sur le bouton **Démarrer** et choisissez **Shut down or sign out >** puis **sign out**.
-1. Si une liste d'applications ouvertes empèchant la fermeture de session s'affiche, cliquez sur **Sign out anyway**.
-1. Sur la mire d'ouverture de session, cliquez sur **Other user** et connectez-vous avec le compte de  ```Beth@labxxxxx.godeploylabs.com``` et le mot de passe ```Pa55w.rd```.
+1. Basculez sur la machine **LON-CL1**.
+1. Sur la mire d'ouverture de session, cliquez sur **Other user** et connectez-vous avec le compte de  ```Beth@[godeployDomain].godeploylabs.com``` et le mot de passe ```Pa55w.rd```.
 
 ## Tâche 2 - Affecter des licences
 1. Basculez de nouveau sur **LON-DC1**, vous devriez encore être connecté en tant que Dominique Skyetson sur le portail **Microsoft 365 admin center** dans **Edge**.
@@ -58,7 +57,7 @@ Dans cette tâche, vous allez utiliser l'assistant de configuration de Entra Con
 1. Basculez de nouveau sur la machine **LON-CL1**.
 1. Vous devriez toujours être connecté avec le compte de Beth. Pour vous assurer que la jonction hybride soit effective le plus rapidement possible, il vous faut vous déconnecter : faites un clic-droit sur le bouton **Démarrer** et choisissez **Shut down or sign out >** puis **sign out**.
 1. Si une liste d'applications ouvertes empêchant la fermeture de session s'affiche, cliquez sur **SIgn out anyway**.
-1. Sur la mire d'ouverture de session, connectez vous avec le compte de  ```Beth@labxxxxx.godeploylabs.com``` et le mot de passe ```Pa55w.rd```.
+1. Sur la mire d'ouverture de session, connectez vous avec le compte de  ```Beth@[godeployDomain].godeploylabs.com``` et le mot de passe ```Pa55w.rd```.
 1. Sur la barre des tâches, dans le champ de recherche à droite du bouton Démarrer, tapez ```Windows PowerShell ISE``` sur **Windows Powershell (ISE)**.
 1. Utilisez la commande suivante pour afficher l'état de la jonction de la machine : ```dsregcmd /status```.
 1. Au début du résultat, vous devriez voir **YES** en regard de **AzureADJoined**. Si ce n'est pas le cas, attendez quelques instants avant de réessayer.
