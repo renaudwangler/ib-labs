@@ -38,10 +38,10 @@ Dans cette tâche, vous allez utiliser l'assistant de configuration de Entra Con
 ## Tâche 2 - Affecter des licences
 1. Basculez de nouveau sur **LON-DC1**, vous devriez encore être connecté en tant que Dominique Skyetson sur le portail **Microsoft 365 admin center** dans **Edge**.
 1. Dans le portail **Microsoft 365 admin center**, naviguez vers la liste des **Active Users** si nécessaire.
-1. Dans la liste des **Active users**, dans le champ **Search active users list** entrez ```Christie``` et appuyez sur **[Entrée]**.
-1. Cliquez sur le nom de **Christie Cline**.
-1. Dans le panneau qui apparait concernant les informations de **Christie Cline**, cliquez sur l'onglet **Licenses and apps**.
-1. Sur l'onglet **Licenses and apps** de Christie Cline, décochez toutes les cases et cliquez sur **Save changes**
+1. Dans la liste des **Active users**, dans le champ **Search active users list** entrez ```isahia``` et appuyez sur **[Entrée]**.
+1. Cliquez sur le nom de **Isahia Langer**.
+1. Dans le panneau qui apparait concernant les informations de **Isahia Langer**, cliquez sur l'onglet **Licenses and apps**.
+1. Sur l'onglet **Licenses and apps** de Isahia Langer, décochez toutes les cases et cliquez sur **Save changes**
 	>**Note :** Les étapes précédentes ne sont nécessaires que si votre tenant ne contient pas assez de licences pour pouvoir en affecter à Beth dans les étapes suivantes. Ne tenez pas compte des étapes précédentes si vous avez assez de licences à affecter à Beth....
 1. Dans la liste des **Active users**, dans le champ **Search active users list** entrez ```beth``` et appuyez sur **[Entrée]**.
 1. Cliquez sur le nom de **Beth Burke**.
