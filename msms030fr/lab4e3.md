@@ -21,7 +21,7 @@ Dans cette tâche, vous allez utiliser l'assistant de configuration de Entra Con
 1. Sur la page **Overview**, cliquez sur **Next**.
 1. Sur la page **Connect to Entra**, saisissez les informations de connexion de Dominique Skyetson (```dom@[onmicrosoftDomain].onmicrosoft.com``` dans le champ **USERNAME** et ```ibForm@tion``` dans le champ **PASSWORD**) puis cliquez sur **Next**.
 1. Si une fenêtre **Sign in to your account** surgit, utilisez la pour vous connecter avec le compte de Dominique.
-1. Sur la page **Device options**, sélectionnez **Configure Hybrid Azure AD join** et cliquez sur **Next**.
+1. Sur la page **Device options**, sélectionnez **Configure Hybrid Microsoft Entra ID join** et cliquez sur **Next**.
 1. Sur la page **Device operating systems**, cochez la case **Windows 10 or later domain-joined devices** et cliquez sur **Next**.
 1. Sur la page **SCP configuration**, sélectionnez la case à cocher en regard de **Adatum.com**
 	1. Sélectionnez **Entra Id** dans le champ **Authentication Service**.
