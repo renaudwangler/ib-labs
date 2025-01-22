@@ -119,8 +119,8 @@ Maintenant que vous avez créé un compte de ressource pour votre file d'atente,
 	- **Music on hold** : **Play default music**
 1. Sur la page **Greeting and music**, cliquez sur **Next**.
 1. Sur la page **Call answering** saisissez les valeurs suivantes :
-	- Sélectionnez **Choose users and groups**, pour cliquer sur le bouton **Add users**. Dans le panneau **Add users**, entrez ```alan``` dans le champ **Search by display name or username**. Passez votre souris sur la ligne de **Alan Yoo** qui s'affiche pour cliquer sur le bouton **Add** à sa droite.  
-		>**Important :** Constatez le message d'erreur rouge qui apparaît en haut du panneau, indiquant que Alan Yoo n'a pas de licence téléphonie *Teams* associée. Sur le panneau **Add users**, cliquez sur **Cancel**.
+	- Sélectionnez **Choose users and groups**, pour cliquer sur le bouton **Add users**. Dans le panneau **Add users**, entrez ```alan``` dans le champ **Search by display name or username**.  
+		>**Important :** Constatez le message notant **No matches found, as only Enterprise Voice-enabled users are supported**. Vu que Alan Yoo n'a pas de licence téléphonie *Teams* associée il n'apparait pas. Sur le panneau **Add users**, cliquez sur **Cancel**.
 	- Cliquez sur le bouton **Add groups**. Dans le panneau **Add call agents**, tapez ```sales``` dans le champ **Search by distribution list or group name**. Passez votre souris sur la ligne de **Sales department** qui s'affiche pour cliquer sur le bouton **Add** à sa droite.  
 	- En bas du panneau **Add call agents** cliquez sur le bouton **Add**.
 1. Sur la page **Call answering**, cliquez sur **Next**.
