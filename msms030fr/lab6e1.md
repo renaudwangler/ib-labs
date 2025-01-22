@@ -86,7 +86,7 @@ Dans cette tâche, vous allez créer deux connecteurs pour forcer l'utilisation 
 1. Dans le panneau **Set rule conditions** qui s'affiche, entrez les informations suivantes :  
 	- Dans le champ **Name**, saisissez ```Messages that must be moderated```
 	- Dans la section **Apply this rule if**, sélectionnez **The recipient** et **is this person**. Une fenêtre **Select members** apparaît. Sélectionnez **Megan Bowen** dans la liste des boites aux lettres et cliquez sur **Save**.
-	- Sous la section **Do the following**, sélectionnez **Forward the message for approval** et **to these people**. Une fenêtre **Select members** apparaît. Sélectionnez **Dominique Skyetson** (dom@[onmicrosoftDomain].onmicrosoft.com) dans la liste des boites aux lettres et cliquez sur **Save**.
+	- Sous la section **Do the following**, sélectionnez **Forward the message for approval** et **to these people**. Une fenêtre **Select members** apparaît. Sélectionnez **Dominique Skyetson** (dom@[godeployDomain].godeploylabs.com) dans la liste des boites aux lettres et cliquez sur **Save**.
 1. Cliquez sur **Next**.
 1. Sur la page **Set rule settings** choisissez **Enforce** et un niveau de sévérité de **Low** avant de cliquer sur **Next**.
 1. Sur la page **Review and finish**, cliquez sur **Finish**.
