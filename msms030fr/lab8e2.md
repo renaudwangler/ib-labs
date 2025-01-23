@@ -23,7 +23,7 @@ Dans cette tâche, vous allez utiliser le portail Sharepoint admin center pour c
 	>**Note :** La création d'un site Sharepoint Online peut prendre quelques minutes. Ne passez pas à la suite des opérations tant que vous ne voyez pas apparaître le site **Training** dans la liste.
 
 1. Sur la page **Active sites**, passez votre souris sur la ligne du site **Training**. Sélectionnez la case à cocher qui s'affiche à gauche du nom du site.
-1. Sélectionnez la ligne du site **Training** devrait faire apparaître le bouton **Sharing** dans la barre de menu au-dessus de la liste de sites. Si ce bouton n'apparaît pas, vous pouvez tenter de rafraichir la page de votre navigateur.
+1. Sélectionnez la ligne du site **Training** devrait faire apparaître le bouton **Sharing** dans la barre de menu au-dessus de la liste de sites. Si ce bouton n'apparaît pas, vérifiez s'il est masqué dans le choix **More** (points de suspensions), vous pouvez tenter de rafraichir la page de votre navigateur.
 1. Cliquez sur le bouton **Sharing** une fois qu'il est apparu sur la barre de menu.
 1. Dans le panneau **Sharing**, sélectionnez **Anyone** avant de cliquer sur **Save** et de fermer le panneau.
 	>**Note :** Les paramètres de site changent pour permettre le partage d'éléments de ce site de la manière la plus ouverte possible.

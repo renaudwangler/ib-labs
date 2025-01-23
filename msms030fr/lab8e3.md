@@ -43,7 +43,7 @@ Dans l'exercice précédent, vous avez créé un site pour le service formation 
 1. Dans la barre de menu de la page **training**, cliquez sur **Documents**.
 1. Dans la barre de menu de la page **Documents** qui s'affiche, cliquez sur **+ New** pour choisir **Word document**.
 1. **Word Online** s'ouvre dans un nouvel onglet de votre navigateur Internet. Si une boite de dialogue **Your privacy option** s'affiche, cliquez sur **Close**.
-1. Dans le document vierge *Word*, tapez quelques mots de test et attendez que le document soit automatiquement sauvegardé (vous pouvez le surveiller en attendant l'icône de nuage marqué d'une coche de validation à droite du nom du **Document**). Cliquez ensuite sur le menu déroulant (la flèche) à droite du nom du **Document**.
+1. Dans le document vierge *Word*, tapez quelques mots de test et attendez que le document soit automatiquement sauvegardé (vous pouvez le surveiller en attendant l'icône de nuage marqué d'une coche de validation à droite du nom du **Document**). Cliquez l'icône de nuage à droite du nom du **Document**.
 1. Dans le panneau qui s'affiche, dans le champ **Location**, cliquez sur le lien **Shared Documents**.
 1. Un nouvel onglet s'ouvre dans votre navigateur, affichant de nouveau la page des **Documents** du site **training**. Le document que vous venez de créer (Nommé par défaut *Document.docx*) devrait apparaître dans la liste des documents.
 1. Sélectionnez donc le bouton **Share this item with other people** qui s'affiche à droite du nom de votre document lorsque vous passez la souris dessus.
