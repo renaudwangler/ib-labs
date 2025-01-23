@@ -31,7 +31,7 @@ Dans votre rôle d'administrateur, en tant que Dominique Skyetson, vous allez cr
 1. Cliquez sur **Next**.
 1. Sur la page **Add owners**, entrez ```Dominique```dans le champ **Owners** et cliquez sur le compte de **Dominique Skyetson** lorsqu'il s'affiche.
 1. Cliquez sur **Next**.
-1. Sur la page **Add members**, entrez ```Isaiah```dans le champ **Members** et cliquez sur le compte de **Isaiah Langer** lorsqu'il s'affiche.
+1. Sur la page **Add members**, entrez ```Beth```dans le champ **Members** et cliquez sur le compte de **Beth Burke** lorsqu'il s'affiche.
 1. Procédez de même pour ajouter les comptes de ```Alan``` (Alan Yoo) et ```Joni``` (Joni Sherman).
 1. Cliquez sur le bouton **Next**.
 1. Sur la page **Edit settings**, saisissez ```PNDgroup``` dans le champ **Team email address**.  
@@ -41,9 +41,6 @@ Dans votre rôle d'administrateur, en tant que Dominique Skyetson, vous allez cr
 1. Sur la page **New team created**, notez le message indiquant qu'il peut s'écouler 5 minutes avant que la nouvelle équipe ne s'affiche. Cliquez sur **Close**.
 1. Sur la page **Active teams and groups**, cliquez sur le bouton **Refresh** dans la barre de menu au-dessus de la liste des groupes. Si nécessaire, attendez quelques instants et répétez l'opération jusqu'à ce qu'apparaisse la nouvelle équipe.
 1. Une fois l'équipe **PND group** affichée dans la liste, cliquez sur son nom.
-1. Dans le panneau **PND Group** qui s'affiche à droite, cliquez sur le lien **Edit** sous la colonne **Email address** de l'onglet **General**
-1. Sur le panneau **Edit email adresses**, cliquez sur les points de suspension en regard de l'alias **PNDgroup@[onmicrosoftDomain].onmicrosoft.com** et choisissez **Change to primary email**.
-1. Cliquez sur le bouton **Save** avant de cliquer sur la flêche de retour en haut à gauche pour revenir au panneau **PND Group**.
 1. Pour des questions de sécurité, vous avez décidé d'inclure Elviss Cress comme copropriétaire de cette équipe. Dans le panneau **PND Group** qui s'affiche, l'onglet **General** est affiché par défaut, cliquez sur l'onglet **Membership** pour l'afficher.
 1. Sur l'onglet **Membership**, cliquez sur le bouton **+ Add owners**.
 1. Sur le panneau **Add team owners to PND Group**, saisissez ```Elvis``` et cliquez sur le compte de **Elvis Cress** qui s'affiche.
@@ -53,17 +50,18 @@ Dans votre rôle d'administrateur, en tant que Dominique Skyetson, vous allez cr
 
 ## Tâche 2 - Création de labels dans le portail *Purview*
 Dominique a décidé de tester la création de labels de données sensibles en utilisant le portail *Purview* et *Windows Powershell*. Dans cette tâche, vous allez d'abord utiliser le portail *Purview* pour créer un premier label.
-1. Dans le menu du portail **Microsoft 365 admin center**, cliquez sur **Compliance** sous la section **Admin centers**.
-1. Dans le menu de navigation du portail **Microsoft Purview**, cliquez sur **Labels** dans le groupe d'options **Information protection**.
-1. Sur la page **Labels**, cliquez sur le bouton **Turn on** pour activer les compléments d'activation des labels de données sensibles.
-1. Dans la boite de dialogue qui s'affiche, cliquez sur **Yes**.
-1. Une fois la boite de dialogue fermée, dans le bandeau jaune sur la page **Labels**, cliquez sur **Turn on now**.
+1. Dans le menu du portail **Microsoft 365 admin center**, cliquez sur **Compliance** sous la section **Admin centers** (le cas échéant, il vous faudra peutêtre basculer sur le **New Microsoft Purview portal**).
+1. Cliquez sur la case **I agree to the terms of data flow[...]** avant de cliquer sur **Get started**.
+1. Dans le menu de navigation du portail **Microsoft Purview**, cliquez sur **Solutions/Information Protection**.
+1. Dans le menu **Information protection**, cliquez sur le choix **Sensitivity labels**.
+1. Sur la page **Sensitivity labels**, dans le bandeau jaune sur la page **Labels**, cliquez sur **Turn on now**.
 1. Sur la page **Labels**, cliquez sur **+ Create a label** dans la barre de menu au-dessus de la liste des labels.
 1. Sur la page **Provide basic details for this label**, saisissez ```Adatum-Classified``` dans les champs **Name** et **Display name**
 1. Saisissez ```For Official Use Only``` dans les champs **Description for Users** et **Description for admins**
+1. Choisissez une couleur pour ce label en cliquant sur le carré la contenant.
 1. Cliquez sur le bouton **Next**.
 1. Sur la page **Define the scope for this label**, cliquez sur **Next**.
-1. Sur la page **Choose protection settings for labeled items** page, cochez la case devant **Apply content marking** et cliquez sur **Next**.
+1. Sur la page **Choose protection settings hte tyoes of items you selected**, cochez la case devant **Apply content marking** et cliquez sur **Next**.
 1.	Sur la page **Content marking**, cliquez sur le contrôle de bascule **Content marking** pour le faire passer à *ON**. De nouvelles options s'affichent que vous allez compléter dans les étapes suivantes.
 1. Cochez la case **Add a watermark** et cliquez sur le bouton **Customize text**.
 1. Dans le panneau **Customize watermark text**, saisissez les informations suivantes avant de cliquer sur le bouton **Save** :
@@ -86,7 +84,6 @@ Dominique a décidé de tester la création de labels de données sensibles en u
 1. Sur la page **Content marking**, cliquez sur le bouton **Next**.
 1. Sur la page **Auto-labeling for files and emails**, assurez-vous que l'option **Auto-labeling for files and emails** reste désactivée et cliquez sur **Next**.
 1. Sur la page **Define protection settings for groups and sites**, cliquez sur **Next**. 
-1. Sur la page **Auto-labeling for schematized data assets (preview)** cliquez encore sur **Next**.
 1. Sur la page **Review your settings and finish**, révisez votre saisie et, si nécessaire, cliquez sur le lien **Edit** pour les modifier ; sinon, cliquez sur le bouton **Create label** en bas de page.
 1. Sur la page **Your sensitivity label was created**, cliquez sur le bouton **Done**.
 1. Sur le panneau **Publish label** qui s'affiche, cliquez sur **Cancel**, vous réaliserez la publication des labels ultérieurement, dans la tâche 4 du présent exercice.
@@ -107,7 +104,7 @@ Après avoir testé la création de labels de données sensibles en utilisant le
 	
 ## Tâche 4 - Publication de labels dans *Purview*
 Dans sa découverte des méthodes de travail avec les labels de données sensibles dans Microsoft 365, Dominique souhaite comprendre comment publier ces labels dans le portail *Purview*.
-1. Dans le menu de **Microsoft Purview**, cliquez sur **Label policies** dans le choix d'options **Information Protection**
+1. Dans le menu de **Microsoft Purview**, cliquez sur **Publishing policies** dans le groupe **Sensitivity labels** de la solution **Information Protection**
 1. Sur la page **Label policies**, cliquez sur **Publish label** dans le menu au-dessus de la liste des stratégies de labels.
 1. Dans l'assistant **Create policy**, sur la page **Choose sensitivity labels to publish**, cliquez sur le lien **Choose sensitivity labels to publish**.
 1. Dans le panneau **Sensitivity labels to publish** qui s'affiche, cochez la case devant **Adatum-Classified** avant de cliquer sur **Add**.
