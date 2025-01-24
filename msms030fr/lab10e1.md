@@ -93,7 +93,7 @@ Après avoir testé la création de labels de données sensibles en utilisant le
 1. Si vous aviez minimisé la fenêtre **Administrator: Windows Powershell ISE** dans la barre des tâches, cliquez sur son icône pour la maximiser. Sinon, tapez ```Windows Powershell ISE``` dans le champ de recherche à droite du bouton **Démarrer** sur la barre des tâches. A droite du menu **Démarrer**, cliquez sur **Run as administrator** sous l'application.
 1. Dans la commande (bleue) de **Administrator: Windows PowerShell ISE**, utilisez la commande suivante :  
 	```Install-Module -Name ExchangeOnlineManagement -Force```
-1. Dans l'invite Powershell, utilisez la commande suivante pour vous connecter à l'environnement *Purview* : (pensez à remplacer le préfixe du tenant par celui de votre tenant de test) :  
+1. Dans l'invite Powershell, utilisez la commande suivante pour vous connecter à l'environnement *Purview* : (Si la commande pose problème en **Powershell ISE**, utilisez une simple invite **Powershell**) :  
 	````Connect-IPPSSession -UserPrincipalName dom@[onmicrosoftDomain].onmicrosoft.com````
 1. Sur la page **Enter password**, saisissez ```ibForm@tion``` dans le champ **Password** avant de cliquer sur **Sign in**.
 1. Dans l'invite Powershell, utilisez la commande suivante pour créer un nouveau label de données sensibles nommé *Adatum-Secret* :  
