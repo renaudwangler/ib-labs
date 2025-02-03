@@ -73,7 +73,7 @@ Dans cette tâche, vous allez utiliser l'assistant de configuration de Entra Con
 1. Fermez la fenêtre **Windows Powershell ISE**.
 1. Ouvrez le menu **Démarrer** et cliquez sur l'engrenage **Settings** dans son menu de navigation à gauche.
 1. Dans la fenêtre **Windows Settings**, cliquez sur **Accounts**.
-1. Cliquez sur l'onglet **Email & accounts**. Vous devriez y voir le compte *Work or school* de Beth (ce constat peut prendre quelques longues minutes...).
+1. Cliquez sur l'onglet **Email & accounts**. Vous devriez y voir le compte *Work or school* de Beth (ce constat peut prendre quelques longues minutes... Voire nécessiter de se déconnecter/reconnecter sur LON-CL1).
 1. Fermez la fenêtre **Settings** et déconnectez-vous de LON-CL1 avec le compte de beth comme déjà réalisé précédemment.
 
 ## Résultat

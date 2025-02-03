@@ -27,8 +27,7 @@ ___
 ___
 ## Atelier 4 - Déploiement de la suite Microsoft 365 Apps
 ### Exercice 1 - [Installation de la suite Microsoft 365 Apps](lab4e1)
-### Exercice 2 - [Stratégies de déploiment et de mises à jour](lab4e2)
-### Exercice 3 - [Utilisation de Microsoft Intune pour installer Microsoft 365 Apps](lab4e3)
+### Exercice 2 - [Utilisation de Microsoft Intune pour installer Microsoft 365 Apps](lab4e2)
 ___
 ## Atelier 5 - Configuration des services Exchange Online
 ### Exercice 1 - [Création de Boîtes aux lettres](lab5e1)
