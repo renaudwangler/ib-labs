@@ -32,8 +32,8 @@ Dans cette tâche, vous allez utiliser l'assistant de configuration de Entra Con
 1. Sur le bureau, double-cliquez de nouveau sur l'icône **Azure AD Connect** pour lancer l'outil Entra Connect.
 1. Dans la page d'accueil **Welcome to Azure AD Connect**, cliquez sur le bouton **Configure**.
 1. Sur la page **Additional tasks**, sélectionnez la ligne **Change user sign-in** puis cliquez sur **Next**.
-1. Sur la page **Connect to Microsoft Entra ID**, saisissez les informations de connexion de Dominique Skyetson (```dom@[onmicrosoftDomain].onmicrosoft.com``` dans le champ **USERNAME**) puis cliquez sur **Next**.
-1. Si une fenêtre **Sign in to your account** surgit, utilisez la pour vous connecter avec le compte de Dominique (```dom@[onmicrosoftDomain].onmicrosoft.com``` dans le champ **USERNAME** et ```ibForm@tion``` dans le champ **PASSWORD**).
+1. Sur la page **Connect to Microsoft Entra ID**, saisissez les informations de connexion de Dominique Skyetson (```dom@[onmicrosoftDomain].onmicrosoft.com``` dans le champ **Username**) puis cliquez sur **Next**.
+1. Si une fenêtre **Sign in to your account** surgit, utilisez la pour vous connecter avec le compte de Dominique (```dom@[onmicrosoftDomain].onmicrosoft.com``` dans le champ **Username** et ```ibForm@tion``` dans le champ **Password**).
 1. Sur la page **User sign-in**, sélectionnez **Pass-through authentication** , décochez **Ebale single sign-on** et cliquez sur **Next**.
 1. Sur la page **Ready to configure**, cliquez sur le bouton **Configure**.
 1. Sur la page **Configuration complete**, cliquez sur **Exit**.
@@ -54,7 +54,7 @@ Dans cette tâche, vous allez utiliser l'assistant de configuration de Entra Con
 1. Cliquez sur le **X** en haut à droite pour fermer le panneau d'informations de Beth Burke.
 
 ## Tâche 3 - Vérifier la synchronisation des périphériques
-1. Sur LON-DC1, dans la fenêtre **Administrator: Windows PowerShell**, utilisez la flèche haute du clavier pour rappeler la dernière commande :  
+1. Sur LON-DC1, dans la fenêtre **Administrator: Windows PowerShell**, Saisissez la commande suivante pour synchroniser l'ADDS :  
    ```Start-AdSyncSyncCycle -PolicyType Delta```
 1. Appuyez sur **[Entrée]** pour lancer la commande de synchronisation.
 1. De retour dans votre navigateur Internet, dans le portail **Microsoft 365 admin center**, dans le menu de navigation de gauche, cliquez sur **...Show all** pour afficher toutes les options.
@@ -70,10 +70,10 @@ Dans cette tâche, vous allez utiliser l'assistant de configuration de Entra Con
 1. Sur la barre des tâches, dans le champ de recherche à droite du bouton Démarrer, tapez ```Windows PowerShell ISE``` et cliquez sur **Windows Powershell (ISE)**.
 1. Utilisez la commande suivante pour afficher l'état de la jonction de la machine : ```dsregcmd /status```.
 1. Au début du résultat, vous devriez voir **YES** en regard de **AzureADJoined**. Si ce n'est pas le cas, attendez quelques instants avant de réessayer.
-1. Fermez la fenêtre **Windows Powershell**.
+1. Fermez la fenêtre **Windows Powershell ISE**.
 1. Ouvrez le menu **Démarrer** et cliquez sur l'engrenage **Settings** dans son menu de navigation à gauche.
 1. Dans la fenêtre **Windows Settings**, cliquez sur **Accounts**.
-1. Cliquez sur l'onglet **Email & accounts**. Vous devriez y voir le compte *Work or school* de Beth.
+1. Cliquez sur l'onglet **Email & accounts**. Vous devriez y voir le compte *Work or school* de Beth (ce constat peut prendre quelques longues minutes...).
 1. Fermez la fenêtre **Settings** et déconnectez-vous de LON-CL1 avec le compte de beth comme déjà réalisé précédemment.
 
 ## Résultat
