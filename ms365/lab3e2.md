@@ -20,7 +20,6 @@ Dans cette tâche, vous allez utiliser l'assistant d'installation de Entra Conne
 1. L'installation de l'outil Entra Connect a démarré, sur la fenêtre **Welcome to Microsoft Entra Connect**, cochez la case  **I agree to the license terms and privacy notice** avant de cliquer sur **Continue**.
 	>**Note :** Si la fenêtre **Welcome to Microsoft Entra Connect** n'apparait pas, cherchez son icône dans la barre des tâches (la plus à droite) et cliquez dessus.
 1. Sur la page **Express Settings**, lisez les mentions concernant la synchronisation de la forêt **Adatum** et cliquez sur le bouton **Use express settings**.
-1. Sur la page **Install required components**, cliquez sur **Install** et patientez quelques minutes que tous les composants nécessaires soient installés.
 1. Sur la page **Connect to Microsoft Entra ID**, saisissez ```dom@[onmicrosoftDomain].onmicrosoft.com``` dans le champ **USERNAME** et cliquez sur **Next**.
 1. Sur le panneau **Pick an account**, sléectionnez **dom@[onmicrosoftDomain].onmicrosoft.com** et saisissez ```ibForm@tion``` dans le champ **password** pour cliquer sur **Sign in**.
 1. Sur la page **Connect to AD DS** saisissez ```ADATUM\Administrator``` dans le champ **USERNAME**, et ```Pa55w.rd``` dans le champ **PASSWORD** avant de cliquer sur **Next**.

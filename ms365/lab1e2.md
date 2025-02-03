@@ -9,7 +9,7 @@ script: "ms365.js"
 En tant que Dominique, il vous a été demandé de configurer le profil de l'entreprise sur le tenant pilote. Dans cet exercice, vous allez procéder à cette configuration.
  
 ## Tâche 1 - Customisation de l'organisation
-1. Sur LON-DC1, dans le **Microsoft 365 admin center**, dans le menu de navigation de gauche, cliquez sur **Settings** pour en ouvrir le groupe d'options, puis cliquez sur **Org Settings**.
+1. Sur LON-DC1, dans le **Microsoft 365 admin center**, dans le menu de navigation de gauche, cliquez sur **Settings** (il pourra être nécessaire de cliquer sur **Show all**) pour en ouvrir le groupe d'options, puis cliquez sur **Org Settings**.
 1. Dans la fenêtre **Org Settings**, c'est l'onglet **Services** qui est affiché par défaut. Puisque vous souhaitez modifier le profil de l'entreprise, cliquez sur l'onglet **Organization profile** pour l'afficher. sélectionnez ensuite **Organization information**.
 1. Dans la fenêtre **Organization information** qui s'affiche, modifiez les informations suivantes :
     - Name : ```ib Cegos Workshop```

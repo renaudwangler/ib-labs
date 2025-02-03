@@ -17,17 +17,18 @@ Dans cette tâche, vous allez utiliser l'assistant de configuration de Entra Con
 1. Sur la page **Additional tasks**, sélectionnez la ligne **Configure device options** puis cliquez sur **Next**.
 1. Sur la page **Overview**, cliquez sur **Next**.
 1. Sur la page **Connect to Microsoft Entra ID**, saisissez les informations de connexion de Dominique Skyetson (```dom@[onmicrosoftDomain].onmicrosoft.com``` dans le champ **USERNAME**) puis cliquez sur **Next**.
-1. Si une fenêtre **Sign in to your account** surgit, utilisez la pour vous connecter avec le compte de Dominique (```dom@[onmicrosoftDomain].onmicrosoft.com``` dans le champ **USERNAME** et ```ibForm@tion``` dans le champ **PASSWORD**).
-1. Sur la page **Device options**, sélectionnez **Configure Hybrid Microsoft ENtra ID join** et cliquez sur **Next**.
+1. Si une fenêtre **Sign in to your account** surgit, utilisez la pour vous connecter avec le compte de Dominique (```dom@[onmicrosoftDomain].onmicrosoft.com``` dans le champ **Username** et ```ibForm@tion``` dans le champ **Password**).
+1. Sur la page **Device options**, sélectionnez **Configure Hybrid Microsoft Entra ID join** et cliquez sur **Next**.
 1. Sur la page **Device operating systems**, cochez la case **Windows 10 or later domain-joined devices** et cliquez sur **Next**.
 1. Sur la page **SCP configuration**, sélectionnez la case à cocher en regard de **Adatum.com**
 	1. Sélectionnez **Microsoft Entra ID** dans le champ **Authentication Service**.
 	1. Cliquez sur **Add**.
-	1. Dans la boite de dialogue **Enterprise Admin Credentials**, entrez ```ADATUM\Administrator``` dans le champ **USERNAME** et ```Pa55w.rd``` dans le champ **PASSWORD**.
+	1. Dans la boite de dialogue **Enterprise Admin Credentials**, entrez ```ADATUM\Administrator``` dans le champ **Username** et ```Pa55w.rd``` dans le champ **Password**.
 	1. Cliquez sur **OK**.
 1. De retour sur la fenêtre **SCP configuration**, cliquez sur **Next**.
 1. Sur la page **Ready to configure**, cliquez sur le bouton **Configure**.
 1. Sur la page **Configuration complete**, cliquez sur **Exit**.
+	> **Note :** S'il vous est indiqué que la synchronisation est activée mais n'a pas encore eu lieu, utilisez le bouton **Retry** Pour retenter la configuration. Cet état peut durer un temps important et il est important que la configuration aboutisse complètement pour la suite de vos ateliers.  
 1. Sur le bureau, double-cliquez de nouveau sur l'icône **Azure AD Connect** pour lancer l'outil Entra Connect.
 1. Dans la page d'accueil **Welcome to Azure AD Connect**, cliquez sur le bouton **Configure**.
 1. Sur la page **Additional tasks**, sélectionnez la ligne **Change user sign-in** puis cliquez sur **Next**.
