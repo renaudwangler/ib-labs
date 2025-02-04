@@ -1,6 +1,6 @@
 ---
 layout: stage
-title: "Lab7-Ex3 - Partage externe dans Sharepoint Online"
+title: "Lab6-Ex3 - Définition des autorisatione"
 length: "00"
 date: "10/01/2025"
 script: "ms365.js"
@@ -66,4 +66,4 @@ Dans l'exercice précédent, vous avez créé un site pour le service formation 
 ## Résultat
 A l'issue de cet exercice, vous avez configuré un nouveau site Sharepoint Online pour le partager avec des utilisateurs externes et testé cette fonctionnalité.
 
-# Fin de l'atelier 7
+Vous pouvez poursuivre par [l'exercice 4 - Fonctionnalités avancées](lab6e4)

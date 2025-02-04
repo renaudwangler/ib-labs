@@ -1,227 +1,114 @@
 ---
 layout: stage
-title: "Lab6-Ex1 - Configuration de Microsoft Teams"
+title: "Lab6-Ex1 - Création d'un site Sharepoint"
 length: "00"
 date: "10/01/2025"
 script: "ms365.js"
 ---
 # Scénario
-Dans cet exercice, vous allez apprendre à gérer et configurer les principales fonctionnalités de l'environnement *Teams* depuis *le Teams admin center*. Dans son rôle d'administrateur d'Adatum, Dominique Skyetson a décidé de customiser la stratégie de l'entreprise concernant les réunions. Les stratégies de réunion contrôlent les fonctionnalités disponibles pour les participants. Une stratégie à l'échelle de l'entreprise, nommée *Global* est créée par défaut et est affectée à tous les utilisateurs de l'entreprise lors de la création du tenant. Dominique a choisi de modifier cette stratégie par défaut.  
-Dominique souhaite également utiliser les paramètres des réunions *Teams* pour contrôler si des utilisateurs anonymes peuvent rejoindre les réunions et customiser les messages d'invitation dans ces réunions. Dans le contexte du projet pilote d'Adatum, il lui a été demandé de vérifier les paramètres modifiables concernant ces messages d'invitation. 
-Ensuite, Dominique veut créer une nouvelle stratégie de messages qui concernera les messages interpersonnels et les canaux. Il va ensuite créer un compte de ressource pour une file d'attente téléphonique qui devra accueillir les appels des clients, jouer un message d'accueil avant de placer l'appel du client en attente, pendant la recherche d'un agent préconfiguré pour répondre à l'appel. Une fois le compte de ressource créé, il procédera à la création de la file d'attente elle-même.  
-Arrivé à ce point, Dominique va se pencher sur les stratégies d'appel. Il lui a été demandé de créer une stratégie d'appels pour Adatum. Au lieu de customiser la stratégie globale par défaut, il suivra le conseil générique et créera sa propre stratégie qui sera utilisée par défaut ensuite par Adatum.  
-Finalement, Dominique souhaite gérer l'accès à *Teams*, spécifiquement l'accès externe et l'accès invité. Il souhaite bloquer la communication avec les utilisateurs d'un domaine spécifique qui a été source de multiples attaques de spam envers Adatum l'an passé. En même temps, il souhaite autoriser les communications avec les utilisateurs d'un autre domaine qui est un partenaire clef de Adatum.
+Dans cet exercice, Dominique Skyetson veut commencer à explorer les sites *SharePoint Online*. Pour en comparer le fonctionnement, Dominique va créer un site en utilisant le portail *SharePoint Online admin center*, avant d'en créer un second en utilisant Windows PowerShell.
 
-# Objectifs
-A la fin de cet exercice, vous aurez une meilleure connaissance de :
-- Les réunions *Teams* et leurs stratégies
-- Les stratégies de messages
-- Les files d'attente (standards téléphoniques) dans *Teams*
-- Les stratégies d'accès externe et invité dans *Teams*
-- Les paramètres globaux du client *Teams*
+## Tâche 1 - Créer un site dans le SharePoint admin center
+Dans cette tâche, vous allez utiliser le portail Sharepoint admin center pour créer un site pour le service formation de ib Cegos Workshop.
+1. Basculez sur la machine virtuelle **LON-CL1**, sur laquelle vous devriez encore être connecté avec le compte **adatum\Administrator** et le mot de passe **Pa55w.rd**.
+1. Les portails **Microsoft 365 admin center**, **Microsoft Defender admin Center** et **Exchange admin center** (qVous pouvez désormais fermer les deux derniers) devraient encore être resté ouverts dans votre navigateur (et vous devriez y être connecté avec le compte de *Dominique Skyetson*).
+1. Dans le portail **Microsoft 365 admin center**, dans le menu de navigation, cliquez sur **Show all** (si nécessaire) puis cliquez sur **Sharepoint** sous la section **Admin centers**. Ceci va ouvrir le portail **SharePoint admin center** dans un nouvel onglet.
+1. Si une boite de dialogue **Take tour** apparaît, cliquez en dehors pour la fermer.
+1. Dans le menu de navigation du **Sharepoint admin center**, cliquez sur le choix **Active sites** dans le groupe d'options **Sites**.
+1. Sur la barre de menu au-dessus de la liste de sites, cliquez sur le bouton **+ Create**.
+1. Sur la page **Create a site: Select the site type**, cliquez sur la tuile **Communication Site**.
+1. Sur la page **Select a template**, choisissez le modèle de site "**Standard communication**". Validez votre choix en cliquant sur **use template**.
+1. Sur la page **Give your site a name**, saisissez ``Formation``` dans le champ **Site name**.
+1. Dans le champ **Site description**, saisissez ```ib Cegos Workshop - Formations```.
+1. Dans le champ **Site owner**, tapez ```dominique``` et cliquez sur le compte de Dominique Skyetson.
+1. Sur la page **Give your site a name**, cliquez sur le bouton **Next**.
+1. Sur la page **Set language and other options**, cliquez sur le bouton **Create site**. Vous allez retourner sur la page **Active sites**.
+	>**Note :** La création d'un site Sharepoint Online peut prendre quelques minutes. Ne passez pas à la suite des opérations tant que vous ne voyez pas apparaître le site **Formation** dans la liste.
+1. Sur la page **Active sites**, passez votre souris sur la ligne du site **Formation**. Sélectionnez la case à cocher qui s'affiche à gauche du nom du site.
+1. Sélectionnez la ligne du site **Formation** devrait faire apparaître le bouton **Sharing** dans la barre de menu au-dessus de la liste de sites. Si ce bouton n'apparaît pas, vous pouvez tenter de rafraichir la page de votre navigateur.
+1. Cliquez sur le bouton **Sharing** une fois qu'il est apparu sur la barre de menu.
+1. Dans le panneau **Sharing**, sélectionnez **Anyone** avant de cliquer sur **Save** et de fermer le panneau.
+	>**Note :** Les paramètres de site changent pour permettre le partage d'éléments de ce site de la manière la plus ouverte possible.
+1. Conservez votre navigateur Internet ouvert pour les tâches ultérieures.
 
+## Tâche 2 - Créer un site avec Windows Powershell
+Après avoir créé un site avec le portail d'administration de Sharepoint Online, vous allez désormais utiliser Windows Powershell pour créer un site pour le service comptabilité de Adatum.
+1. Sur **LON-CL1**, tapez ```Powershell ISE``` dans la recherche à droite du bouton **Démarrer** sur la barre des tâches.
+1. Sur le menu **Démarrer**, dans le panneau de détail sur l'application **Windows PowerShell ISE**, cliquez sur **Run as administrator**.
+1. Si une fenêtre **User Account Control** apparaît, connectez-vous avec le compte **adatum\administrator** et le mot de passe ```Pa55w.rd```.
+1. Dans la partie basse (bleue) de la fenêtre **Administrator: Windows Powershell ISE**, utilisez la commande suivante pour installer le module Powershell de gestion de Sharepoint Online :  
+	```Install-Module Microsoft.Online.SharePoint.PowerShell -Force```
+1. Dans l'invite de commande de l'ISE, utilisez la commande suivante pour vous connecter à votre environnement Sharepoint Online :  
+	```Connect-SPOService –Url https://[onmicrosoftDomain]-admin.sharepoint.com```
+1. Dans la boite de dialogue **Sign in**, saisissez le nom de connexion de Dominique Skyetson (```dom@[onmicrosoftDomain].onmicrosoft.com```) et cliquez sur **Next**.
+1. Dans la boite de dialogue **Enter password**, saisissez ```ibForm@tion``` et cliquez sur **Sign in**.
+1. Dans l'invite Powershell, utilisez la commande suivante pour créer un nouveau site nommé **Accounting** :  
+	```New-SPOSite -Url https://WWLxxxxx.sharepoint.com/sites/Accounting -Owner dom@WWLxxxxx.onmicrosoft.com -StorageQuota 500 -NoWait -Template PROJECTSITE#0 –Title Accounting```
+	>**Note :** WWLxxxxx est votre préfixe de tenant que vous avez noté au début de vos ateliers. Notez que, dans cette commande, il est **n'est pas** suffixé de *-admin* !
 
-## Tâche 1 - Gestion de la stratégie globale de réunion
-Les stratégies de réunion contrôlent les fonctionnalités disponibles pour les participants dans les réunions *Teams* qui ont été planifiées par les utilisateurs de l'entreprise. Une stratégie par défaut pour l'entreprise nommée *Global* a été créée par défaut et elle a été appliquée à tous les utilisateurs de l'entreprise. Vous pouvez soit faire des changements à cette stratégie par défaut, soit créer votre propre stratégie spécifique. En créant une stratégie spécifique, il est possible d'autoriser ou d'interdire la disponibilité de certaines fonctionnalités à vos utilisateurs.
-Dans le rôle de Dominique Skyetson, vous souhaitez maintenant customiser la stratégie globale de réunions pour l'entreprise, comme souhaité dans le cadre du projet pilote de mise en oeuvre de *Teams* chez Adatum.
-1. Votre session devrait déjà ouverte sur **LON-CL1**, avec le compte **ADATUM\Administrator** et le mot de passe **Pa55w.rd**.
-1. Les portails **Microsoft 365 admin center** et **Exchange admin center** (que vous pouvez désormais fermer) devraient encore être resté ouverts dans votre navigateur (et vous devriez y être connecté avec le compte de *Dominique Skyetson*).
-1. Dans le portail **Microsoft 365 admin center**, dans le menu de navigation de gauche, cliquez sur **Show all** (si nécessaire), puis descendez dans ce menu pour cliquer sur **Teams** dans la section **Admin centers**. Cela va ouvrir le **Microsoft Teams admin center** dans un nouvel onglet.
-1. Dans le portail **Microsoft Teams admin center**,  dans le menu de navigation, cliquez sur **Show All**.
-1. Ouvrez le groupe d'options **Meetings** pour cliquer sur le choix **Meeting policies**.
-1. Descendez dans la fenêtre **Meeting policies** pour cliquer sur la stratégie **Global (Org-wide default)**.  
-1. Dans la fenêtre **Global (Org-wide default)** qui s'affiche, sous la section **Meeting join &amp; lobby**, observez chaque paramètre. Comme Adatum a rencontré des problèmes par le passé avec des invités en accès téléphonique entrant de manière inopinée dans des réunion, il vous a été demandé de vérifier que l'option **People dialing-in can bypass the lobby** soit sur **Off**.
-1. Sous la section **Content Sharing**, observez chaque paramètre. Sur le choix **Screen sharing mode**, cliquez sur **Entire screen** pour le changer en **Single application**.
-1. Toujours sous la section **Content Sharing**, basculez le choix **External participants can give or request control** à **On**.
-1. Sous la section **Recording and transcription**, observez chaque paramètre et passez la fonctionnalité de  **Transcription** à **On**.
-1. Cliquez sur le bouton **Save** en bas de la page.
-1. Cliquez sur le bouton **Confirm** dans la boite de dialogue **Changes will take time to take effect**.
+1. Minimisez la fenêtre **Administrator: Windows Powershell ISE**.
+1. Dans votre navigateur Internet, la page **Active sites** devrait toujours être affichée à l'issue de la tâche précédente. Si le site **Accounting** ne s'affiche pas, rafraichissez la page du navigateur. (Il vous faudra peut-être attendre quelques instants et répéter l'opération). Ne passez pas à la tâche suivante tant que vous n'avez pas constaté l'affichage du site **Accounting** dans la liste des sites actifs.
+1. Conservez votre navigateur Internet ouvert pour la tâche suivante.
+
+## Tâche 3 - Configurer des permissions sur les sites
+Après avoir ajouté les sites de la formation et de la comptabilité d'Adatum, vous allez configurer des permissions pour le site de la formation. Vous allez affecter le rôle d'administrateur sur le site Formation à Alan Yoo.
+
+1. Sur la machine LON-CL1, les portails **Microsoft 365 admin center** et **Sharepoint admin center** devraient être resté ouverts dans votre navigateur (et vous devriez y être connecté avec le compte de *Dominique Skyetson*).
+1. Dans le menu de navigation du portail **SharePoint admin center**, cliquez sur **Active sites** dans le groupe d'options **Sites**.
+1. Sur la page **Active sites**, constatez que les sites **Accounting** et **Training** apparaissent dans la liste des sites actifs. Cliquez sur le nom du site **Training**.
+	>**Note :** Cliquez sur le nom du site et non sur son adresse *../sites/training*.
+
+1. A la création du site **Training**, Dominique Skyetson a été affecté comme seul administrateur. Vous souhaitez désormais ajouter **Alan Yoo** comme administrateur secondaire.  
+	Sur le panneau **Training** qui s'affiche à droite de l'écran, sélectionnez l'onglet **Membership**.
+1. Sur l'onglet **Membership**, sous la section **Site admins** cliquez sur **+ Add site admins**.
+1. Sur la page **Add site admins to training**, tapez ```Alan``` dans le champ **Search by name or email address**. Sélectionnez le compte de **Alan Yoo** lorsqu'il apparaît puis cliquez sur **Add (1)**.
+1. Fermez le panneau **Add site admins to Training**.
+1. Basculez sur la machine virtuelle **LON-CL2** ou vous devriez encore être connecté avec le compte **.\admin**.
+1. Dans le navigateur Edge, le Webmail **Outlook** devrait être resté ouvert (et vous devriez y être connecté avec le compte de *Alan Yoo*).
+1. Dans la barre d'adresse du navigateur, utilisez l'adresse suivante : ```https://WWLxxxxx.sharepoint.com/sites/Training``` pour ouvrir le site Sharepoint du service formation de Adatum.
+1. Une fois que le site **Training** s'ouvre, attendez que l'icône d'engrenage s'affiche en haut à droite (à gauche des initiales de Alan Yoo). Cliquez sur cette icône d'engrenage.
+1. Sur le panneau **Settings**, cliquez sur **Site permissions**.
+1. Sur le panneau **Permissions**, cliquez sur **Advanced permissions settings**.
+1. Sur l'onglet **Permissions: Training**, cliquez sur **Site Collection Administrators** dans la section **Manage** du ruban.
+1. Vérifier que **Alan Yoo** apparaît dans le champ. Vous venez de vérifier que Alan est administrateur du site du service Formation, car il peut accéder aux paramètres administratifs de celui-ci.
 1. Conservez votre navigateur Internet ouvert pour la tâche suivante. 
 
-## Tâche 2 – Gestion des paramètres de réunions
-Toujours en tant que Dominique Skyetson, Administrateur de l'entreprise Adatum, vous allez ici utiliser les paramètres de contrôle des réunions *Teams* pour contrôler si les utilisateurs anonymes peuvent rejoindre des réunions, et customiser les messages d'invitation. Vous pourriez aussi utiliser ces paramètres pour activer la QOS (*Quality of Service*) et définir les ports utilisés pour le trafic temps-réel. Tous ces paramètres s'appliquent à toutes les réunions *Teams* que les utilisateurs de l'entreprise vont planifier.
-1. Les portails **Microsoft 365 admin center** et **Microsoft Teams admin center** devraient encore être resté ouverts dans votre navigateur (et vous devriez y être connecté avec le compte de *Dominique Skyetson*).
-1. sur le portail **Microsoft Teams admin center**, cliquez sur **Meeting settings** dans le groupe d'options **Meetings**.
-1. Sur la page **Meetings settings**, dans la section **Email invitation**, Saisissez les informations suivantes :
-	- **Logo URL** : ```https://renaudwangler.github.io/ib-labs/assets/logo_ibcegos.png```
-	- **Legal URL** : ```https://adatum.com/legal.html```
-	- **Help URL** : ```https://adatum.com/joiningmeetinghelp.html```
-	- **Footer :** ```Please accept at your earliest convenience. Thank you!```
-1. Cliquez sur le bouton **Preview invite**.
-1. Sur la boite de dialogue **Email invite preview**, consultez l'aperçu de l'invitation avant de cliquer sur le bouton **Close** pour la fermer.
-1. De retour sur la page **Meetings settings**, sous la section **Network**, consultez les paramètres actuels.  
-	>**Note :** Si vous aviez besoin de ports réseau spécifiques que votre entreprise utilise pour envoyer et recevoir le flux multimédia, c'est l'endroit où vous pourriez le configurer. Pour les besoins de notre atelier, vous n'avez pas besoin de toucher aux paramètres de cette section. 
-1. Cliquez sur le bouton **Save**.
-1. Cliquez sur le bouton **Confirm** puis sur le
-1. Select **Confirm** dans la boite de dialogue **Changes will take time to take effect**.
-1. Conservez votre navigateur Internet ouvert pour la tâche suivante.
-
-## Tâche 3 – Gestion des stratégies de messages
-Les stratégies de messages sont utilisées pour contrôler quelles fonctionnalités de messagerie sont disponibles aux utilisateurs *Teams* dans la messagerie interpersonnelle et dans les canaux d'équipes. Vous pouvez utiliser la stratégie par défaut qui a été créée automatiquement en même temps que votre tenant ou créer de nouvelles stratégies spécifiques répondant à des besoins particuliers de certains utilisateurs choisis dans l'entreprise.  
-Dans le contexte de son projet pilote, Adatum demande la création d'une nouvelle stratégie de messages concernant les fonctionnalités dans les messages dans l'environnement *Teams*.
-1. Les portails **Microsoft 365 admin center** et **Microsoft Teams admin center** devraient encore être resté ouverts dans votre navigateur (et vous devriez y être connecté avec le compte de *Dominique Skyetson*).
-1. sur le portail **Microsoft Teams admin center**, cliquez sur **Messaging policies** dans le groupe d'options **Messaging**.
-1. Sur la page **Messaging policies**, constatez que seule la stratégie par défaut **Global (Org-wide default)** existe. Cliquez sur **+ Add** dans la barre de menu au-dessus de la liste de stratégies.
-1. Sur la fenêtre **Messaging policies \ Add**, saisissez ```Chat and Channel Messaging Policy``` dans le champ **Add a name for your messaging policy** en haut du formulaire.
-1. Sélectionnez les valeurs suivantes pour chaque paramètre :
-	- **Owners can delete sent messages** : **Off**
-	- **Delete sent messages** : **Off**
-	- **Delete chat** : **Off**
-	- **Edit sent messages** : **On**
-	- **Read receipts** : **Turned on for everyone**
-	- **Chat** : **On**
-	- **Chat with groups** : **On**
-	- **Giphy in conversations** : **Off**
-	- **Giphy content rating** : **Moderate**
-	- **Memes in conversations** : **Off**
-	- **Stickers in conversations** : **Off**
-	- **URL previews** : **On**
-	- **Translate messages** : **On**
-	- **Immersive reader for messages** : **On**
-	- **Send urgent messages using priority notifications** : **On**
-	- **Create voice messages** : **Allowed in chats and channels**
-	- **On mobile devices, display favorite channels about recent chats** : **Not enabled**
-	- **Remove users from a group chat** : **Off**
-	- **Text prediction** : **Off**
-	- **Suggested replies** : **On**
-	- **Chat permission role** : **Restricted permissions**
-	- **Users with full chat permissions can delete any message** : **Off**
-	- **Video messages** : **Off**
-1. Cliquez sur **Save.** 
-1. Conservez votre navigateur Internet ouvert pour la tâche suivante.
-
-## Tâche 4 – Créer un compte de ressource
-Un compte de ressource, qui correspond à un objet utilisateur désactivé dans *Entra Id*, peut être utilisé pour représenter n'importe quelle ressource. Par exemple, un compte de ressource dans Exchange est utilisé pour représenter une salle de réunion et, dans *Teams*, les comptes de ressource seront utilisés pour les système de file d'attente et de répondeur de la téléphonie.  
-Dans le contexte du projet pilote de Adatum, Dominique a été sollicité pour créer un compte de ressource pour un standard d'appel téléphonique qui devra accepter les appels des clients, jouer un message de bienvenue et placer ensuite le client en attente d'un agent qui décroche l'appel pour s'en occuper.  
-Créer une file d'attente téléphonique est un processus en deux étapes, dans cette première tâche, vous allez créer le compte de ressource qui représente cette file d'attente. Dans la prochaine tâche, vous associerez réellement la file d'attente au dit compte.
-1. Sur l'onglet **Teams admin center** de votre navigateur, dans le menu de navigation, ouvrez le groupe d'options **Voice** et cliquez sur **Resource accounts.**
-1. Sur la page **Resource accounts** cliquez sur **+ Add** dans la barre de menu au-dessus de la liste des comptes de ressource.
-1. Sur le panneau **Add resource account** qui apparaît, entrez les information suivantes :
-	- **Display name** : **Calling Queue 1**
-	- **Username** : **cq1**
-	- **Domain name** : Dans le champ domaine à droite de l'adresse email, sélectionnez, dans le menu déroulant votre nom de domaine **WWLxxxxx.onmicrosoft.com**.
-	- **Resource account type** : **Call queue**
-1. Cliquez sur **Save**.
-1. **Calling Queue 1** apparaît désormais dans la liste des comptes de ressource.
-1. Conservez votre navigateur Internet ouvert pour la tâche suivante.
-
-## Tâche 5 - Créer une file d'attente
-Maintenant que vous avez créé un compte de ressource pour votre file d'atente, vous allez créer ladite file d'attente et de l'affecter au compte de ressource.
-1. Sur le portail **Microsoft Teams admin center**, cliquez sur **Call queues** dans le groupe d'options **Voice**.
-1. Sur la page **Call queues**, cliquez sur **+ Add** dans la barre de menu en haut de la page.
-1. Sur la page **Call queues \ Add a call queue**, entrez ```Call Queue 1``` dans le champ **Add a name for your call queue** en haut du formulaire.
-1. La page affiche un message indiquant **You haven’t added any resource accounts yet.**. Sous ce message, cliquez sur le bouton **Add**.
-1. Sur le panneau **Add account** qui apparaît à droite de l'écran, dans la boite **Search by display or username**, saisissez ```Calling```. Dans le popup qui apparaît, sélectionnez le compte **Calling Queue 1** (s'il n'apparaît pas, patientez un instant avant de rafraichir votre navigateur et de réessayer) en passant votre souris dessus et cliquez sur le bouton **Add** qui apparaît à sa droite.
-1. En bas du panneau **Add accounts** cliquez sur le bouton **Add**. Vous retournez sur la page" **Call Queue 1**, qui affiche désormais **Calling Queue 1** dans la liste des comptes de ressource pour cette file d'attente.
-1. Sur la fenêtre **Call Queue 1**, cliquez sur **Next**.
-1. Sur la page **Greeting and music**, saisissez les valeurs suivantes :
-	- **Greeting** : **No greeting**
-	- **Music on hold** : **Play default music**
-1. Sur la page **Greeting and music**, cliquez sur **Next**.
-1. Sur la page **Call answering** saisissez les valeurs suivantes :
-	- Sélectionnez **Choose users and groups**, pour cliquer sur le bouton **Add users**. Dans le panneau **Add users**, entrez ```alan``` dans le champ **Search by display name or username**. Passez votre souris sur la ligne de **Alan Yoo** qui s'affiche pour cliquer sur le bouton **Add** à sa droite.  
-		>**Important :** Constatez le message d'erreur rouge qui apparaît en haut du panneau, indiquant que Alan Yoo n'a pas de licence téléphonie *Teams* associée. Sur le panneau **Add users**, cliquez sur **Cancel**.
-	- Cliquez sur le bouton **Add groups**. Dans le panneau **Add call agents**, tapez ```sales``` dans le champ **Search by distribution list or group name**. Passez votre souris sur la ligne de **Sales department** qui s'affiche pour cliquer sur le bouton **Add** à sa droite.  
-	- En bas du panneau **Add call agents** cliquez sur le bouton **Add**.
-1. Sur la page **Call answering**, cliquez sur **Next**.
-1. Sur la page **Agen selection** renseignez les valeurs suivantes :
-	- **Routing Method** : **Round Robin**   
-	- **Presence-based routing** : **Off**
-	- **Call agents can opt out of taking calls** : **On**
-	- **Call agent alert time (seconds)** : **45** (il pourra être plus simple de taper la valeur dans le champ que d'utiliser le curseur)
-1. Sur la page **Agent selection**, cliquez sur **Next**.
-1. Sur la page **Exception handling**, laissez les valeurs par défaut et cliquez sur **Next**.
-1. Sur la page **Authorized users**, cliquez sur **Submit**. **Call Queue 1** apparaît désormais dans la liste des files d'attente.
-1. Conservez votre navigateur Internet ouvert pour la tâche suivante.
-
-## Tâche 6 - Créer une stratégie d'appels
-Dans *Teams*, les stratégies d'appels contrôlent quelles fonctionnalités d'appel et de téléphonie sont disponibles aux utilisateurs. Les stratégies d'appels déterminent si un utilisateur peut passer des appels privés, utiliser le transfert d'appel ou des numéros d'appels spécifiques, transfert ses appels vers sa boite vocale, initier des appels de groupe etc... Des stratégies d'appels par défaut sont créées en même temps que le tenant mais les administrateurs peuvent également créer des stratégies plus spécifiques.  
-Dans le cadre du projet pilote *Teams* de Adatum, Dominique Skyetson a été missionné pour créer une stratégie d'appels spécifiques. Ainsi, au lieu de modifier une stratégie par défaut, il va créer sa propre stratégie qui sera utilisée sur les comptes des utilisateurs Adatum.
-1. Sur le portail **Microsoft Teams admin center**, cliquez sur **Calling policies** dans le groupe d'options **Voice**.
-1. Sur la page **Calling policies**, parcourez les stratégies proposées par défaut avant de cliquer sur **+ Add** dans la barre de menu au-dessus de la liste des stratégies.
-1. Sur la page **Calling policies \ Add**, Saisissez ```Default Adatum Calling Policy``` dans le champ **Add a name for your calling policy** en haut du formulaire.
-1. Parcourez ensuite le formulaire pour saisir les valeurs suivantes (laissez les éléments non mentionnés à leur valeur par défaut) :
-	- **Make private calls** : **On**
-	- **Call forwarding and simultaneous ringing to people in your organization** : **Off**
-	- **Voicemail for inbound calls** : **Off**
-	- **Delegation for inbound and outbound calls** : **Off**
-	- **Prevent toll bypass and send calls through the PSTN** : **On**
-	- **Busy on busy during calls** : **Let users decide**
-1. Cliquez sur le bouton **Save**.
-1. La stratégie **Default Adatum Calling Policy** apparaît désormais dans la liste. Notez que **yes** s'affiche dans la colonne *Custom policy*.
-1. Conservez votre navigateur Internet ouvert pour la tâche suivante.
-
-## Tâche 7 – Gestion de l'accès externe
-Grâce à la fonctionnalité d'accès externe, les utilisateurs *Teams* d'autres domaines peuvent participer à des appels et des échanges de messages. Vous pouvez cependant bloquer les utilisateurs de certains domaines.  
-Dans le contexte du projet pilote d'Adatum, Dominique Skyetson souhaite bloquer la communication avec tous les domaines Entra Id externes, sauf pour ce qui concerne les utilisateurs de deux entités partenaire de Adatum (microsoft.com et ib.cegos.fr).
-1. Sur le portail **Microsoft Teams admin center**, cliquez sur **External access** dans le groupe d'options **Users**.
-1. Sur la page **External access**, cliquez sur le menu **Allow all external domains** et sélectionnez **Allow only specific external domains**
-1. Pour ajouter le domaine avec lequel la communication est autorisée, cliquez sur le bouton **Allow domains**.
-1. Dans le panneau **Add external domain**, saisissez ```microsoft.com``` dans le champ **Domain** avant de cliquer sur **Done**.
-1. Pour ajouter un second domaine autorisé, cliquez sur **+ Add a domain** au-dessus de la liste des domaines autorisés.
-1. Dans le panneau **Add external domain**, saisissez ```ib.cegos.fr``` dans le champ **Domain** avant de cliquer sur **Done**.
-1. Cliquez sur le bouton **Save** en bas de page.
-1. Dans la boite de dialogue **Changes will take time to take effect**, cliquez sur **Confirm**.
-1. Conservez votre navigateur Internet ouvert pour la tâche suivante. 
-
-## Tâche 8 – Gestion de l'accès invité
-La fonctionnalité d'accès invité de *Teams* permet de gérer si les utilisateurs d'entités externes peuvent être invités dans l'environnement *Teams* et si quelles fonctionnalités sont accessibles à ces utilisateurs invités.  
-Dans le contexte du projet pilote Adatum, Dominique Skyetson va maintenant modifier les fonctionnalités disponibles pour les comptes invités dans le tenant de Adatum.
-1. Sur le portail **Microsoft Teams admin center**, cliquez sur **Guest access** dans le groupe d'options **Users**.
-1. Dans la fenêtre **Guest access**, assurez-vous que **Guest access** soit sur **On** en tête de formulaire.
-1. Parcourez les paramètres de la section **Messaging** pour modifier les valeurs suivantes :
-	- **Edit sent messages** : **Off**
-	- **Delete sent Messages** : **Off**
-	- **Delete chat** : **Off**
-	- **Chat** : **On**
-	- **Giphy in conversations** : **Off**
-	- **Giphy content rating** : **Strict**
-	- **Memes in conversations** : **Off**
-	- **Stickers in conversations** : **Off**
-	- **Immersive reader for messages** : **On**
-1. Cliquez sur le bouton **Save** en bas de page.
-1. Dans la boite de dialogue **Changes will take time to take effect**, cliquez sur **Confirm**.
-1. Conservez votre navigateur Internet ouvert pour la tâche suivante.
-
-## Tâche 9 – Gestion des paramètres Teams
-Le portail d'administration de *Teams* inclut un ensemble de paramètre qui contrôlent la performance du client *Teams*.  
-Dominique Skyetson va, pour finir cet atelier, configurer un certain nombre de ces paramêtres choisis par l'équipe projet pilote d'Adatum.
-1. Sur le portail **Microsoft Teams admin center**, cliquez sur **Teams settings** dans le groupe d'options **Teams**.
-1. Sur la page **Teams settings**, sélectionnez les valeurs suivantes :
-	- **Notifications and feeds**
-		- Suggested feeds can appear in a user's activity feed: **On**
-	- **Tagging**
-		- Who can manage tags: **Team owners and members**
-		- Team owners can change who can manage tags: **On**
-		- Suggested tags: ```Sales Manufacturing Accounting ``` (Notez qu'il y a un espace après chaque étiquette)
-		- Custom tags: **On**
-		- Shifts app can apply tags: **Off**
-	- **Email integration**
-		- Users can send emails to a channel email address: **On**
-		- Accept channel email from these SMTP Domains: ```microsoft.com ib.cegos.fr ``` (Notez qu'il y a un espace après chaque domaine)
-	- **Files**
-		- Citrix files: **On**
-		- DropBox: **Off**
-		- Box: **Off**
-		- Google Drive: **On**
-		- Egnyte: **Off**
-	- **Organization**
-		- Show Organization tab for users : **On**
-	- **Devices**
-		- Require a secondary form of authentication to access meeting content: **No access**
-		- Set content PIN: **Required for outside scheduled meeting**
-		- Surface Hub accounts can send emails: **On**
-	- **Search by name**
-		- Scope directory search using an Exchange address book policy: **On**
-	- **Safety and communications**
-		- Role-based chat permissions: **Off**
-	- **Shared channels**
-		- Provide a link to my support request page : **Off**
-1. Cliquez sur le bouton **Save.**
-1. Dans la boite de dialogue **Changes will take time to take effect**, cliquez sur **Confirm**.
-1. Conservez votre navigateur Internet ouvert pour l'atelier suivant.
+## Tâche 4 - Vérification de l'accès aux sites
+Dans cette tâche, Alan Yoo, en tant qu'administrateur du site Sharepoint de la formation va donner l'accès au site du service Formation à deux utilisateurs qui en ont besoin : Libby Hayward et Elvis Cress. Tandis que Libby va demander l'accès au site, Alan sait déjà que Elvis a besoin d'accès et va lui assigner directement.
+1. Sur **LON-CL2**, faites un clic-droit sur l'icône de **Edge** sur la barre des tâches, et dans le menu qui apparaît, choisissez **New InPrivate window**.
+1. Dans la nouvelle session **InPrivate Browsing** de votre navigateur Internet, entrez l'adresse suivante pour ouvrir le site Sharepoint du service formation : ```https://WWLxxxxx.sharepoint.com/sites/Training```.
+1. Dans la boite de dialogue **Sign in**, entrez **libby@WWLxxxxx.onmicrosoft.com** et cliquez sur **Next**.
+1. Sur la page **Enter password**, saisissez ```ibForm@tion``` et cliquez sur **Sign in**.
+1. Sur la page **Stay signed in?**, cliquez sur **Yes**.
+1. Une page s'affiche **Access required** qui indique **You need permission to access this site.** Un champ de message est prérempli avec la valeur : **I'd like access, please**.  
+	Puisque ce message peut être personnalisé, Libby souhaite saisir un message justifiant pourquoi elle a besoin d'accéder à ce site. Remplacez le message existant par le suivant : ```Bonjour. Je m'appelle Libby Hayward. Je m'occupe du suivi post-formation de nos stagiaires internes et externes en France. J'aurai donc besoin d'accéder à ce site pour pouvoir participer à la vie du service Formation d'Adatum.```
+1. Cliquez sur le bouton **Request Access**.
+1. Minimisez la fenêtre de navigation privée dans la barre des tâches et retournez sur le navigateur Edge ou Alan Yoo est resté connecté.
+1. Sur la page du site Sharepoint **Training**, Cliquez sur l'icône d'engrenage.
+1. Sur le panneau **Settings**, cliquez sur **Site contents**.
+1. en haut à droite de la page, cliquez sur le bouton **Access requests**.
+1. Sur la page **Access Requests**, vérifiez que la demande de Libby Hayward apparaît sous la section **Pending Requests**. Cliquez sur le bouton **Approve** en regard de la demande de Libby Hayward.
+1. Sur la page du site Sharepoint **Training**, Cliquez sur l'icône d'engrenage pour sélectionner le lien **Site settings**
+1. Sur la page **Site Settings**, dans la section **Users and Permissions**, cliquez sur **Site permissions**.
+1. Sur l'onglet **Permissions: Training**, dans la liste des utilisateurs ayant accès au site, sélectionnez **Training Visitors**.
+1. Dans la page **People and Groups - Training Visitors**, vérifiez que Libby Hayward soit dans la liste.
+1. Vous souhaitez désormais inviter Elvis Cress à devenir membre du site Formation. Dans la barre de menu au-dessus de la liste des utilisateurs, cliquez sur le bouton **New** et choisissez **Add Users**.
+1. Sur la boite de dialogue **Share 'Training'**, l'onglet **Invite People** est affiché par défaut. Dans le champ **Enter names or email addresses**, entrez ```Elvis```. Cliquez sur le compte de **Elvis Cress** lorsqu'il apparaît avant de cliquer sur **Share**.  
+	Le nom de Elvis Cress apparaît désormais dans la page **People and Groups - Training Visitors** au côté de Libby Hayward.
+1. Vous allez maintenant vérifier que Libby peut accéder au site Sharepoint du service Formation. Basculez sur la session de navigation privée que vous aviez minimisée.
+1. Rafraichissez la page de demande d'accès au site **Training** (Si nécessaire, retentez l'accès sur l'adresse ```https://WWLxxxxx.sharepoint.com/sites/Training```)
+1. Le site **Training** s'ouvre : vous venez de confirmer que Libby peut accéder au site formation d'Adatum suite à l'acceptation de sa demande.
+1. Fermez la fenêtre de navigation privée de Libby.
+1. Faites de nouveau un clic-droit sur l'icône de **Edge** sur la barre des tâches, et dans le menu qui apparaît, choisissez **New InPrivate window**.
+1. Dans la nouvelle sesssion **InPrivate Browsing** de votre navigateur Internet, entrez l'adresse suivante pour ouvrir le site Sharepoint du service formation : ```https://WWLxxxxx.sharepoint.com/sites/Training```.
+1. Dans la boite de dialogue **Sign in**, entrez **elvis@labxxxxx.godeploylabs.com** et cliquez sur **Next**.
+1. Sur la page **Enter password**, saisissez ```Pa55W.Rd``` et cliquez sur **Sign in**.
+1. Sur la page **Stay signed in?**, cliquez sur **Yes**.
+1. Le site **Training** s'ouvre, confirmant que Elvis Cress y a accès après que l'administrateur du site lui ait donné accès.
+1. Fermez la session de navigation privée de Elvis Cress.
+1. Conservez votre navigateur Internet ouvert pour de futurs exercices. 
 
 ## Résultat
-Dans cet atelier, vous avez travaillé sur l'accessibilité de diverses fonctionnalités dans l'environnement *Teams*.
+Après avoir réalisé cet exercice, vous devriez savoir créer et configurer des sites Sharepoint Online de base et analysé les permissions sur ceux-ci.
 
-# Fin de l'atelier 6
+Vous pouvez poursuivre par [l'exercice 2 - Gestion des bibliothèques de documents](lab6e2)

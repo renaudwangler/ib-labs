@@ -1,6 +1,6 @@
 ---
 layout: stage
-title: "Lab7-Ex2 - Configuration de sites SharePoint Online"
+title: "Lab6-Ex2 - Gestion des bibliothèques de documents"
 length: "00"
 date: "10/01/2025"
 script: "ms365.js"
@@ -112,4 +112,4 @@ Dans cette tâche, Alan Yoo, en tant qu'administrateur du site Sharepoint de la 
 ## Résultat
 Après avoir réalisé cet exercice, vous devriez savoir créer et configurer des sites Sharepoint Online de base et analysé les permissions sur ceux-ci.
 
-Vous pouvez poursuivre par [l'exercice 3 - Partage externe dans Sharepoint Online](lab7e3)
+Vous pouvez poursuivre par [l'exercice 3 - Définition des autorisation](lab6e3)

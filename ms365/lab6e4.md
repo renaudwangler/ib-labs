@@ -1,6 +1,6 @@
 ---
 layout: stage
-title: "Lab7-Ex1 - Configuration des paramètres de SharePoint Online"
+title: "Lab6-Ex4 - Fonctionnalités avancées"
 length: "00"
 date: "10/01/2025"
 script: "ms365.js"
@@ -55,4 +55,4 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 ## Résultat
 A l'issue de cet exercice, vous avez configuré les paramètres principaux du service Sharepoint Online.
 
-Vous pouvez poursuivre par [l'exercice 2 - Configuration de sites SharePoint Online](lab7e2)
+# Fin de l'atelier 7
