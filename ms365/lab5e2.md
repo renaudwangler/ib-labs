@@ -1,86 +1,119 @@
 ---
 layout: stage
-title: "Lab5-Ex2 - Configuration de la protection de la messagerie"
+title: "Lab5-Ex2 - Paramètres de transport des messages"
 length: "00"
 date: "10/01/2025"
 script: "ms365.js"
 ---
 # Scénario
-Dans cet exercice, vous allez continuer, sous l'identité de Dominique Skyetson, Administrateur de l'entreprise Adatum à déployer Microsoft 365 dans un environnement virtuel pilote. Adatum a récemment constaté une recrudescence des attaques virales. Le CTO de l'entreprise a demandé à Dominique de rechercher les différentes options disponibles dans Exchange Online pour fortifier l'environnement de messagerie de Adatum.  
-Vous allez accéder au centre d'administration de Exchange Online depuis votre machine cliente et créer une série de règles de filtrage d'hygiène pensées pour protéger l'environnement de messagerie de Adatum. Vous allez créer un filtre antiviral, un filtre de connexion et un filtre de spam. Au final, vous activerez Microsoft Defender for Office, qui protègera Adatum des attaques malicieuses contenues dans les emails, les liens (URLs) et les autres outils de collaboration.
+Vous avez pris l'identité de Dominique Skyetson, Administrateur de l'entreprise Adatum, et vous avez commencé à déployer Microsoft 365 dans un environnement virtuel pilote. Dans cet exercice, Dominique veut créer des connecteurs Exchange Online d'émission et de réception en utilisant le portail Exchange admin center. Exchange utilise ces connecteurs pour gérer les flux de messages entrant et sortant vers et depuis les serveurs Exchange Online.  
+Vous allez ensuite créer une série de règles de transport pour modifier le flux de messages dans l'environnement Adatum. Une première règle ajoutera un disclaimer à chaque message reçu, tandis qu'une seconde fera suivre les messages à destination de Megan Bowen vers la boite de Dominique Skyetson pour approbation avant livraison.
 
 # Objectifs
 A la fin de cet exercice, vous aurez une meilleure connaissance de :
-- Les stratégies antivirales de Microsoft 365
-- Les stratégies antispam de Microsoft 365
-- Defender for Office et les stratégies *Safe attachment*
+- Les connecteurs Exchange Online
+- Les règles de transport Exchange online
+- La modération des messages
+- La traçabilité des messages
 
+## Tâche 1 - Création de connecteurs pour TLS
+Dans cette tâche, vous allez créer deux connecteurs pour forcer l'utilisation de TLS avec Trey Research, qui est une entreprise partenaire de Adatum avec laquelle des échanges de données sensibles doivent être sécurisés lors de leur transmission par email. Un connecteur servira pour la gestion des messages sortant vers Trey Research et un autre permettra d'accepter les messages entrant depuis l'entreprise partenaire.  
+1. Ouvrez une session sur LON-CL1 en utilisant le compte ```adatum\administrator``` et le mot de passe ```Pa55w.rd```.
+1. Cliquez sur l'icône de **Microsoft Edge** dans la barre des tâches pour lancer votre navigateur Internet. Maximisez sa fenêtre.
+1. Dans votre navigateur internet, utilisez l'adresse ```https://admin.microsoft.com``` pour ouvrir le portail **Microsoft 365 admin center**.
+1. Connectez-vous au centre d'administration avec le compte de Dominique (```dom@WWLxxxxx.onmicrosoft.com``` et mot de passe ```ibForm@ion```)
+1. Dans le menu de navigation du portail **Microsoft 365 Admin center**, sous la section **Admin Centers** cliquez sur **Exchange**. Cela va ouvrir le portail administratif de Exchange Online dans un nouvel onglet.
+1. Dans le portail **Exchange admin center**, dans le menu de navigation à gauche, ouvrez le groupe d'options **Mail flow** pour sélectionner **Connectors**.
+1. Sur la page **Connectors**, vous souhaitez ajouter un nouveau connecteur. Cliquez sur le bouton **+ Add a connector** sur la barre de menu au-dessus de la liste des connecteurs.
+1. Sur le panneau **New connector**, sélectionnez **Office 365** sous **Connection from**.
+1. Sous **Connection to**, sélectionnez **Partner organization** avant de cliquer sur **Next**.
+1. Sur la page **Connector name**, entrez ```Trey Research Outgoing``` dans le champ **Name** et cliquez sur **Next**.
+1. Sur la page **Use of connector**, sélectionnez l'option **Only when email messages are sent to these domains**.
+	Dans la boite de texte en-dessous, saisissez ```treyresearch.net``` et cliquez sur le bouton **+** avant de cliquer sur **Next**.
+1. Sur la page **Routing**, sélectionnez l'option **Use the MX record associated with the partner’s domain** et cliquez sur **Next**.
+1. Sur la page **Security restrictions**, cochez la case **Always use Transport Layer Security (TLS) to secure the connection**, sélectionnez l'option **Issued by a trusted certificate authority (CA)** et cliquez sur **Next.**
+1. Sur la page **Validation email**, dans le champ texte, entrez ```postmaster@treyresearch.net``` et cliquez sur le bouton **+**.
+1. Cliquez sur le bouton **Validate** et attendez le résultat de la validation.
+1. Notez que le statut de la tâche **Send test email** est **Failed**.
+1. Sur la page **Validation email**, cliquez sur **Next** avant de cliquer sur **Yes proceed** pour sauvegarder le connecteur bien que la validation ait échoué.  
+	>**Note :** La validation du flux de message n'aboutit pas car vous avez ici utilisé une entreprise fictionnelle qui n'existe pas. C'est le comportement attendu pour cet atelier.
+1. Sur la page *Review Connector**, cliquez sur **Create connector** puis sur **Done**.
+1. Vous venez d'ajouter un connecteur d'émission (*outbound*) de Adatum vers Trey Research. Vous allez maintenant créer un connecteur de réception (*inbound*) de Trey Research vers Adatum. Dans le centre d'admin Exchange Online, sur la page **Connectors**, cliquez de nouveau sur le bouton **+ Add a connector**.
+1. Sur le panneau **New connector**, sélectionnez **Partner organization** sous la section **Connection from**.
+1. Notez que **Office 365** est présélectionné automatiquement sous la section **Connection to**. Cliquez sur **Next**.
+1. Sur la page **Connector name**, saisissez ```Trey Research Incoming``` dans le champ **Name** avant de cliquer sur **Next**.
+1. Sur la page **Authenticating sent email**, sélectionnez l'option **By verifying that the sender domain matches one of the following domains**.
+1. Dans le champ texte, saisissez ```treyresearch.net```, cliquez sur le bouton **+** et cliquez sur **Next**.
+1. Sur la page **Security restrictions**, cochez la case **Reject email messages if they aren’t sent over TLS** et cliquez sur **Next**.
+1. Sur la page **Review connector**, cliquez sur **Create connector**, puis cliquez sur **Done** une fois les informations sauvegardées.
+1. Sur la page **Connectors**, vous devriez désormais voir le connecteur d'envoi (*outbound*) et de réception (*inbound*) que vous venez de créer.  
+1. Laissez votre navigateur ouvert pour réaliser la tâche suivante.
 
-## Tâche 1 - Créer un filtre antiviral
-Dans cette tâche, vous allez créer un filtre antiviral pour les pièces jointes d'un type de fichier particulier qui pourraient correspondre à une attaque potentielle. Si une pièce jointe correspond à un des types de fichiers et que le domaine destinataire est le domaine de Adatum, alors un message préventif sera appliqué au message.
-1. Vous devriez encore être connecté sur **LON-CL1** à l'issue de l'atelier précédent. Les portails **Microsoft 365 admin center** et **Exchange admin center** devraient encore être resté ouverts dans votre navigateur (et vous devriez y être connecté avec le compte de *Dominique Skyetson*).
-1. Dans le portail **Microsoft 365 Admin center**, sous la section **Admin Centers** du menu de navigation à gauche, cliquez sur **Security**.
-1. Dans le portail **Microsoft 365 Defender**, dans le groupe d'options **Email &amp; collaboration** du menu de navigation, cliquez sur **Policies &amp; rules**.
-1. Sur la page **Policies &amp; rules**, cliquez sur **Threat policies**.
-1. Sur la page **Threat policies**, cliquez sur **Anti-malware** dans la section **Policies**.
-1. Sur la barre de menu, cliquez sur **+ Create** pour ajouter un nouveau filtre antiviral.
-1. Sur la page **Name your policy**, entrez ```Malware Policy``` dans le champ **Name**.
-1. Dans le champ **Description**, saisissez ```This policy has been created to protect the messaging environment.``` avant de cliquer sur **Next**.
-1. Sur la page **Users and Domains**, cliquez dans le champ **Domains** et tapez ```onmicrosoft```pour sélectionner votre domaine original (**WWLxxxxx.onmicrosoft.com** et pas WWLxxxxx.mail.onmicrosoft.com) avant de cliquer sur **Next**.
-1. Sur la page **Protection settings**, constatez les valeurs par défaut et les options disponibles et cliquez sur **Next**.
-1. Sur la page **Review**, cliquez sur le bouton **Submit** (vous pouvez aussi choisir d'annuler l'assistant car vous ne testerez pas cette stratégie antivirale).
-1. Sur la page **Created new anti-malware policy**, cliquez sur **Done**.
-1. Dans le menu de navigation séquentielle en haut de page, cliquez sur **Threat policies** pour remonter d'un niveau.
+## Tâche 2 - Créer des règles de transport
+1. Vous devriez être resté connecté sur **LON-CL1** avec le compte **adatum\Administrator** et le mot de passe **Pa55w.rd**.
+1. Votre navigateur Internet devrait être resté ouvert et connecté sur les portails **Microsoft 365 admin center** et **Exchange admin center** avec le compte de Dominique Skyetson.
+1. Dans le portail **Exchange admin center**, le groupe d'options **Mail flow** devrait être resté ouvert suite à la tâche précédente, cliquez sur **Rules** dans ce groupe d'options.
+1. Vous allez commencer par créer une règle qui ajoute un message d'avertissement à chaque email reçu. Sur la page **Rules**, cliquez sur **+ Add a rule** sur la barre de menu. Dans le menu qui apparaît, sélectionnez **Apply disclaimers**.
+1. Dans le panneau **Set rule conditions** qui s'affiche, entrez les informations suivantes :  
+	- Dans le champ **Name**, saisissez ```A. Datum Disclaimer```
+	- Dans la section **Apply this rule if**, sélectionnez **The recipient** et **is external/internal**. Une fenêtre **Select recipient location** apparaît. Sélectionnez **Inside the organization** avant de cliquer sur **Save**.
+	- Sous la section **Do the following**, cliquez sur le lien hypertexte **Enter text**. Dans la fenêtre **specify disclaimer text**, saisissez le message suivant dans le champ de texte avant de cliquer sur **Save** : ```If you are not the intended recipient of this message, you must delete it.```
+	- Sous la section **Do the following** et sous le texte que vous venez de saisir, cliquez sur le lien hypertexte **Select one**. Dans la fenêtre **specity fallback action**, vous devez sélectionner une action à réaliser si le serveur ne peut ajouter le message d'avertissement. Dans notre cas, sélectionnez **Wrap** et cliquez sur **Save**.
+1. Cliquez sur **Next**.
+1. Sur la page **Set rule settings** choisissez **Enforce** et un niveau de sévérité de **Medium** avant de cliquer sur **Next**.
+1. Sur la page **Review and finish**, cliquez sur **Finish**.
+1. Une fois la règle créée, cliquez sur le bouton **Done** pour quitter l'assistant de création de règle.
+1. Cliquez sur la règle que vous venez de créer et basculez le choix **Enable or disable rule** sur **Enabled** avant de fermer le panneau de la règle.
+1. Vous allez désormais créer une seconde règle qui fait suivre automatiquement à la boite aux lettres de Dominique Skyetson pour modération les messages envoyés à Megan Bowen.
+	Sur la page **rules** cliquez sur **+ Add a rule**. Dans le menu qui apapraît, sélectionnez **Send messages to a moderator**.
+1. Dans le panneau **Set rule conditions** qui s'affiche, entrez les informations suivantes :  
+	- Dans le champ **Name**, saisissez ```Messages that must be moderated```
+	- Dans la section **Apply this rule if**, sélectionnez **The recipient** et **is this person**. Une fenêtre **Select members** apparaît. Sélectionnez **Megan Bowen** dans la liste des boites aux lettres et cliquez sur **Save**.
+	- Sous la section **Do the following**, sélectionnez **Forward the message for approval** et **to these people**. Une fenêtre **Select members** apparaît. Sélectionnez **Dominique Skyetson** (dom@WWLxxxxx.onmicrosoft.com) dans la liste des boites aux lettres et cliquez sur **Save**.
+1. Cliquez sur **Next**.
+1. Sur la page **Set rule settings** choisissez **Enforce** et un niveau de sévérité de **Low** avant de cliquer sur **Next**.
+1. Sur la page **Review and finish**, cliquez sur **Finish**.
+1. Une fois la règle créée, cliquez sur le bouton **Done** pour quitter l'assistant de création de règle.
+1. Cliquez sur la règle que vous venez de créer et basculez le choix **Enable or disable rule** sur **Enabled** avant de fermer le panneau de la règle.
+1. Laissez votre navigateur ouvert pour réaliser la tâche suivante.
 
-## Tâche 2 - Créer un filtre de connexion
-Dans cette tâche, vous allez modifier le filtre de connexion par défaut pour y inclure une IP bloquée et une IP de confiance. Tout message venant d'une IP de confiance sera accepté, tandis que tout message venant d'une IP bloquée sera bloqué.
-1. Vous devriez encore être connecté sur **LON-CL1** à l'issue de l'atelier précédent. Les portails **Microsoft 365 admin center**, **Exchange admin center** et **Mircosoft 365 Defender** devraient encore être resté ouverts dans votre navigateur (et vous devriez y être connecté avec le compte de *Dominique Skyetson*).
-1. Dans le portail **Microsoft 365 Defender**, sur la page **Threat policies**, cliquez sur **Anti-spam**.
-1. Dans la liste des stratégies, sélectionnez **Connection filter policy (Default)**.
-1. Une fois le panneau des détails de la stratégie affiché, cliquez sur le lien **Edit connection filter policy**.
-1. Dans le contexte de l'atelier, vous **N'ALLEZ PAS** ajouter d'adresse IP bloquée. Vous pourriez le faire si vous aviez connaissance d'une adresse que vous souhaitez tester et/ou marquer comme problématique. Cependant, il faudra à peu près une heure pour que ce changement se propage sur la globalité de l'environnement. Pour votre atelier, il est suffisant de constater que vous êtes à même d'ajouter une adresse IP dans cette interface.
-1. Cochez la case **Turn on safe list** plus bas dans la page. C'est un conseil d'activer cette fonction pour votre *tenant* pour souscrire à la gestion par Microsoft des adresses à problèmes les plus connues. Cocher cette case supprimera automatiquement les messages de spam émis par ces émetteurs.
-1. Cliquez sur les boutons **Save** puis **Close** une fois les changements sauvegardés.
-1. Laissez votre navigateur Internet ouvert sur l'onglet **Anti-spam policies** pour la tâche suivante.
+## Tâche 3 - Validation des règles de transport
+Dans cette tâche, vous allez tester les nouvelles règles de transport que vous venez de créer. Vous allez envoyer un email de Alan Yoo à Megan Bowen, ce qui devrait déclencher la règle de transport de modération. Vous vérifierez ensuite que le message d'avertissement a été ajouté, respectant la première règle.
+1. Basculez vers la machine virtuelle **LON-CL2**. Vous devriez être resté connecté avec le compte **Admin**, le navigateur Internet étant resté ouvert et connecté avec le compte de **Alan Yoo**. Sur l'onglet **Home - Microsoft 365**, cliquez sur l'icône de **Outlook** dans le menu des applications à gauche.
+1. Sur la page **Mail - Alan Yoo - Outlook**, cliquez sur le bouton **New mail**.
+1. Dans le formulaire de nouveau message, saisissez ```Megan``` dans le champ **To**. Sélectionnez **Megan Bowen** une fois que son compte a été trouvé.
+1. Dans le champ **Subject**, entrez ```Message de test du transport Exchange```.
+1. Dans le corps du message, saisissez **Message de test de l'avertissement et de la modération par règles de transport Exchange**.
+1. Cliquez sur le bouton **Send**.
+1. Vous allez maintenant vous connecter sur la boite aux lettres de Dominique Skyetson. Basculez vers la machine virtuelle **LON-CL1**. Dans votre navigateur Internet, utilisez le menu des application 365 (la grille de 3x3 en haut à gauche des pages 365) pour lancer l'application web Outlook.
+1. Dans l'onglet **Mail - Dominique Skyetson - Outllok**, Vérifiez la boite de réception **Inbox** de Dominique. Si vous voyez le message de Alan Yoo, ouvrez le message et vérifiez que le message d'avertissement (**If you are not the intended \[...] delete it.**) a été ajouté à la suite du corps du message.  
+	Si jamais le message ne se trouve pas dans la boite de réception de Dominique, vérifiez le dossier **Junk Email**. Si le message attendu n'est toujours pas visible, attendez un peu et/ou rafraichissez votre onglet de navigateur Internet.
+1. Basculez sur l'onglet **Microsoft 365 admin center** et référez-vous aux procédures que vous avez utilisé [l'atelier 2, exercice 5](lab2e5#t%C3%A2che-3---v%C3%A9rification-de-la-d%C3%A9l%C3%A9gation-administrative) pour réinitialiser le mot de passe de **Megan Bowen** vers **Pa55w.rd**.
+1. Ouvrez le menu de votre navigateur Internet (en haut à droite) et lancez-en une nouvelle instance en choisissant **New Inprivate Window**.
+1. Dans votre nouvelle fenêtre de navigation privée, utilisez l'adresse suivante pour ouvrir la boite aux lettres de Megan Bowen : ```https://outlook.office.com```.
+1. Sur la page **Sign in**, connectez-vous avec le compte ```meganB@WWLxxxxx.onmicrosoft.com```.
+1. Sur la page **Enter password**, utilisez le mot de passe ```Pa55w.rd``` et cliquez sur **Sign in**.
+1. Sur la page **Update your password**, saisissez ```Pa55w.rd``` dans le champ **Current password** et ```ibForm@tion``` dans les champs **New password** et **Confirm password** avant de cliquer sur **Sign in**.
+1. Sur la page **Stay sign in?** cochez la case **Don't show this again** et cliquez sur **Yes**.
+1. Sur la page **outlook** de Megan Bowen, jetez un oeil à la boite de réception **Inbox** :
+	- Si votre message de test est arrivé, c'est probablement que la règle que vous avez créée ne s'est pas encore propagée sur la globalité de l'environnement Exchange Online : vous pouvez retenter l'envoi d'un nouveau message si vous souhaiter pousser le test plus loin.
+	- Si votre message de test n'est pas arrivé, vous pouvez basculez entre vos sessions Outlook pour valider l'envoi du message depuis la boite de Dominique et vérifier sa réception après modération dans la boite de Megan Bowen.
+1. Sur LON-CL1, fermez votre page de navigation privée de votre navigateur Internet.
+1. Basculez sur LON-CL2 pour y fermer votre navigateur Internet.
 
-## Tâche 3 - Créer un filtre antispam
-Pour les clients Microsoft 365 dont les boites aux lettres sont hébergées sur Exchange Online, leurs messages sont automatiquement protégés contre les spams et les virus. Microsoft 365 a des fonctionnalités natives de filtrage antispam et antivirales qui protègent les flux de messages entrants et sortants.  
-En tant qu'administrateur de Adatum, Dominique souhaite activer et maintenir les technologies de filtrage utilisées, qui sont activées par défaut. Ceci étant, il peut customiser l'utilisation de ces technologies dans le contexte de l'entreprise.
-1. Vous devriez encore être connecté sur **LON-CL1** à l'issue de l'atelier précédent. Les portails **Microsoft 365 admin center**, **Exchange admin center** et **Mircosoft 365 Defender** devraient encore être resté ouverts dans votre navigateur (et vous devriez y être connecté avec le compte de *Dominique Skyetson*).
-1. Dans le portail **Microsoft 365 Defender**, sur la page **Anti-spam policies**, cliquez sur **Anti-spam inbound policy (Default)**.
-1. Dans le panneau **Anti-spam inbound policy (Default)** qui s'affiche, descendez pour cliquer sur le lien **Edit actions**.  
-	>**Note :** Dans cette section vous sont présentées une sélection d'options sur la manière dont seront repérés les spam et la manière dont ils seront traités en fonction de leur niveau de gravité.
-1. Dans la fenêtre **Actions**, réalisez les sélections suivantes :
-	- Spam : **Move message to Junk Email folder**
-	- High Confident Spam : **Prepend subject line with text**
-	- Bulk complaint level (BCL) met or exceeded : **Move message to Junk Email folder**
-	- Retain spam in quarantine for this many days: **10**
-	- Prepend subject line with this text: saisissez ```SPAM: This message contains potential spam```
-1. Cliquez sur le bouton **Save**.
-1. Une fois les modifications sauvegardées, cliquez sur **Close**.
-1. Laissez votre navigateur Internet ouvert sur l'onglet **Anti-spam policies** pour la tâche suivante.
-
-## Tâche 4 - Stratégie *Safe attachment*
-Dans cette dernière tâche, vous allez activer **Defender for Office** pour Sharepoint, OneDrive et Teams et vous allez créer une stratégie *Safe Attachments* qui va permettre de tester les pièces jointes des messages non détectées comme problématiques par l'antivirus. Vous allez configurer la stratégie de sorte que si une pièce jointe est problématique, elle soit retirée du message avant sa livraison au destinataire et qu'une copie du message original soit envoyée dans la boite de Dominique Skyetson pour investigation plus poussée.
-1. Vous devriez encore être connecté sur **LON-CL1** à l'issue de l'atelier précédent. Les portails **Microsoft 365 admin center**, **Exchange admin center** et **Mircosoft 365 Defender** devraient encore être resté ouverts dans votre navigateur (et vous devriez y être connecté avec le compte de *Dominique Skyetson*).
-1. Dans le portail **Microsoft 365 Defender**, en haut de la page **Anti-spam policies**, dans le menu séquentiel, cliquez sur **Threat policies** pour remonter d'un niveau.
-1. Dans la section **Policies**, cliquez sur **Safe attachments**.
-1. Sur la page **Safe attachments**, cliquez sur **Global settings** dans la barre de menu.
-1. Dans le panneau **Global settings** qui s'affiche, dans la section **Protect files in SharePoint, OneDrive, and Microsoft Teams**, activez l'option **Turn on Defender for Office 365 for SharePoint, OneDrive and Microsoft Teams** si elle ne l'est pas et cliquez sur **Save** (cliquez sur **Cancel** si vous n'avez fait aucun changement).
-1. Sur la page **Safe attachments**, cliquez sur **+ Create** dans la barre de menu pour créer une nouvelle stratégie.
-1. Sur la page **Name your policy**, saisissez ```AttachmentPolicy1``` dans le champ **Name** avant de cliquer sur **Next**.
-1. Sur la page **Users and domains**, cliquez dans le champ **Domains** et tapez ```onmicrosoft```. Sélectionnez ensuite votre domaine **WWLxxxxx.onmicrosoft.com** et cliquez sur **Next**.
-1. Sur la page **Settings**, dans la section **Safe attachments unknown malware response**, choisissez l'option **Dynamic Delivery**. Cette option permet l'envoi des message traités à leur destinataire dès leur réception, mais sans permettre l'accès à la pièce jointe tant que celle-ci n'a pas été correctement scannée comme sans danger.
-1. Sous la section **Redirect messages with detected attachments**, cochez la case **Enable redirect**.
-1. Dans le champ **Send messages that contain monitored attachments to the specified eemail address**, entrez l'adresse de Dominique Skyetson (**dom@WWLxxxxx.onmicrosoft.com**) avant de cliquer sur **Next**.
-1. Sur la page **Review**, cliquez sur le bouton **Submit** puis **Done*.
-	(Vous pouvez aussi cliquer sur **Cancel** puisque cette stratégie ne sera pas testée)
-1. Laissez la session ouverte sur LON-CL1 et ne fermez pas votre navigateur Internet pour l'exercice suivant.
-
->**NOTE :** Malheureusement, il nous est impossible de créer un environnement d'ateliers dans lequel vous pourriez tester les stratégies que vous venez de créer. Pour ce faire, il vous faudrait vous envoyer un message contenant une cyber-attaque qui ne serait pas préalablement détectée par les antivirus de l'environnement Microsoft 365.  
-Ceci étant dit, après avoir crée une stratégie *Safe Attachments* dans un environnement de production, une bonne manière de constater son bon fonctionnement peut être la consultation des rapports de Defender for office dans le portail. Pour plus d'information sur leur utilisation, vous pouvez consulter la section suivante de la documentation : [View Defender for Office 365 reports in the Microsoft 365 Defender portal](https://learn.microsoft.com/microsoft-365/security/office-365-security/reports-defender-for-office-365).
+## Tâche 4 - Traçabilité de la livraison des messages
+1. Sur LON-CL1, vous devriez être resté connecté avec le compte **adatum\Administrator** et le mot de passe **Pa55w.rd**.
+1. Votre navigateur Internet devrait être resté ouvert et connecté sur les portails **Microsoft 365 admin center** et **Exchange admin center** avec le compte de Dominique Skyetson (vous pouvez fermer l'onglet avec la boite aux lettres outlook de Dominique).
+1. Dans le portail **Exchange admin center**, dans le menu de navigation, dans le groupe d'options **mail flow**, cliquez sur **Message trace**.
+1. Prenez quelques instants pour consulter les différentes requêtes proposées par défaut.
+1. Cliquez sur le bouton **+ Start a trace**.
+1. Dans le panneau **New message trace**, vous pouvez jeter un oeil aux options de recherche avant de cliquer sur **Search**.
+1. Dans la fenêtre **Message trace search results**, cliquez sur le message envoyé par **alan@WWLxxxxx.onmicrosoft.com** à **meganb@WWLxxxxx.onmicrosoft.com**.
+1. Dans la fenêtre **Message de test du transport Exchange**, consultez les informations détaillées sur le transport du message. Sélectionnez la flèche en regard de **Message events**.
+1. Dans la colonne **Event**, constatez la présence des évènements **Transport rule** qui ont appliqué le message d'avertissement et rerouté le message vers la boite de Dominique Skyetson.
+1. Cliquez sur le **X** de fermeture en haut à droite du panneau.
 
 ## Résultat
-Au cours de cet exercice, vous avez configuré les paramètres anti-spam et anti-virus de Microsoft 365.
+A l'issue de cet exercice, vous avez configuré des paramètres de transport des messages et modifié ce transport par l'utilisation de simples règles. Vous avez de plus appris à tracer le transport des messages dans Exchange Online.
 
-Vous pouvez poursuivre par [l'exercice 3 - Configuration des stratégies d'accès clients](lab5e3)
+Vous pouvez poursuivre par [l'exercice 2 - Configuration de la protection de la messagerie](lab5e2)

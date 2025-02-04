@@ -31,7 +31,7 @@ ___
 ___
 ## Atelier 5 - Configuration des services Exchange Online
 ### Exercice 1 - [Création de Boîtes aux lettres](lab5e1)
-### Exercice 2 - [Personnalisation des paramètres](lab5e2)
+### Exercice 2 - [Paramètres de transport des messages](lab5e2)
 ### Exercice 3 - [Gestion des autorisations](lab5e3)
 ### Exercice 4 - [Surveillance et diagnostic](lab5e4)
 ___
