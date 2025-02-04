@@ -2,7 +2,7 @@
 layout: stage
 title: "Lab5-Ex1 - Création de Boîtes aux lettres"
 length: "00"
-date: "10/01/2025"
+date: "04/02/2025"
 script: "ms365.js"
 ---
 # Scénario
@@ -26,21 +26,21 @@ Microsoft ayant eu de nombreux problèmes d'utilisation des domaines *onmicrosof
 1. Sur le panneau **New email address**, saisissez ```dom``` dans le champ **Email address**, avant de sélectionner le domaine **[godeployDomain].godeploylabs.com** après le sigle @.
 1. cliquez sur la case **Set as primary email address** afin de la sélectionner et valider en utilisant le bouton **OK** en bas de page.
 1. De retour sur le panneau **Manage email adress types**, cliquez sur **Save** puis fermez le panneau d'informations de Dominique avec la croix de fermeture en haut à droite.  
-**Important :** Répétez ensuite les étapes précedentes pour les comptes utilisateurs qui vont nous servir pour les test dans nos ateliers :  
-| Alan Yoo | email : ```alan```@[godeployDomain].godeploylabs.com |
-| Megan Bowen | email : ```meganB```@[godeployDomain].godeploylabs.com |
+>**Important :** Répétez ensuite les étapes précedentes pour les comptes utilisateurs qui vont nous servir pour les test dans nos ateliers :
+>- Alan Yoo : ```alan```@[godeployDomain].godeploylabs.com
+>- Megan Bowen  : ```meganB```@[godeployDomain].godeploylabs.com
 
 ## Tâche 1 - Création d'une Boite aux lettres de resources.
 1. Dans votre navigateur internet, retournez sur l'onglet ou le portail **Microsoft 365 admin center** est ouvert.
 1. Dans la section **Resources** cliquez sur **Rooms & equipment**.
 1. Dans la page **Rooms & equipment**, cliquez sur **+ Add resource**.
-1. Dans le panneau **Add resource** qui apparait, saisissez les informations suivantes avant de cliquer sur **Save** : 
-| **Resource type** | Room |
-| **Name** | ```Salle de réunion 1``` |
-| **Email** | ```reunion1```@[godeployDomain].godeploylabs.com |
-| **Capacity** | ```12``` |
-| **Location** | ```Batiment 1``` |
-| **Phone number** | Laisser ce champ vide |
+1. Dans le panneau **Add resource** qui apparait, saisissez les informations suivantes avant de cliquer sur **Save** :  
+	- **Resource type** : Room 
+	- **Name** : ```Salle de réunion 1``` 
+	- **Email** : ```reunion1```@[godeployDomain].godeploylabs.com 
+	- **Capacity** : ```12``` 
+	- **Location** : ```Batiment 1``` 
+	- **Phone number** : Laisser ce champ vide 
 1. Une fois que le message **Salle de réunion 1 is ready** apparaît, cliquer sur la croix de fermeture en haut à droite pour la fermer.
 1. Sur la page **Rooms & equipement**, vous devriez désormais voir la boîte de resource *Salle de réunion 1* que vous venez de créer.  
 1. Laissez votre navigateur ouvert pour réaliser la tâche suivante.
@@ -50,9 +50,9 @@ Microsoft ayant eu de nombreux problèmes d'utilisation des domaines *onmicrosof
 1. Dans le portail **Exchange admin center**, dans le menu de navigation à gauche, ouvrez le groupe d'options **Recipients** si nécessaire pour y sélectionner **Mailboxes**.
 1. Cliquez sur **+ Add a shared mailbox** sur la barre de menu.
 1. Dans le panneau **Add resource** qui apparait, saisissez les informations suivantes avant de cliquer sur **Create** : 
-| **Display name** | ```hotline``` |
-| **Email address** | ```hotline```@[godeployDomain].godeploylabs.com |
-| **Alias** | ```hotline``` |
+	- **Display name** : ```hotline``` 
+	- **Email address** : ```hotline```@[godeployDomain].godeploylabs.com 
+	- **Alias** : ```hotline``` 
 1. Une fois que la boite est créée, cliquez sur le lien **Add users to this mailbox**.
 1. Dans la panneau **Manage shared mailbox members**, cliquez sur le bouton **+ Add members**.
 1. Sélectionnez le compte de **Alan Yoo** (alan@[godeployDomain].godeploylabs.com) avant de cliquer sur **Save**.
@@ -72,7 +72,6 @@ Microsoft ayant eu de nombreux problèmes d'utilisation des domaines *onmicrosof
 1. Dans le popup **Add shared folder or mailbox**, saisissez l'adresse ```hotline@[godeployDomain].godeploylabs.com```.
 1. Cliquez sur le bouton **Add**.
 1. Constatez que la boite partagée **hotline** apparaît en dessous des autres dossiers de Outlook.
-1. Cliquez sur le **X** de fermeture en haut à droite du panneau.
 
 ## Résultat
 A l'issue de cet exercice, vous avez configuré des boites aux lettres dans Exchange Online.

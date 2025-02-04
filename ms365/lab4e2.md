@@ -2,7 +2,7 @@
 layout: stage
 title: "Lab4-Ex2 - Déploiement de Microsoft 365 apps via MDM"
 length: "00"
-date: "10/01/2025"
+date: "04/02/2025"
 script: "ms365.js"
 ---
 # Scénario

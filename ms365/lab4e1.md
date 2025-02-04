@@ -2,7 +2,7 @@
 layout: stage
 title: "Lab4-Ex1 - Déploiement de Microsoft 365 apps for enterprise"
 length: "00"
-date: "10/01/2025"
+date: "03/02/2025"
 script: "ms365.js"
 ---
 # Scénario
