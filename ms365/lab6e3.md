@@ -16,7 +16,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 - La fonctionnalité de partage externe
 
 ## Tâche 1 - Configurer des permissions sur les sites
-Après avoir ajouté les sites de la formation et de la comptabilité d'Adatum, vous allez configurer des permissions pour le site de la formation. Vous allez affecter le rôle d'administrateur sur le site Formation à Alan Yoo.
+Après avoir ajouté les sites de la formation et de la comptabilité d'ib Cegos Workshop, vous allez configurer des permissions pour le site de la formation. Vous allez affecter le rôle d'administrateur sur le site Formation à Alan Yoo.
 
 1. Sur la machine LON-CL1, les portails **Microsoft 365 admin center** et **Sharepoint admin center** devraient être resté ouverts dans votre navigateur (et vous devriez y être connecté avec le compte de *Dominique Skyetson*), vous pouvez fermer l'onglet ouvert sur le site **Formation - CVs** pour le moment.
 1. Dans le menu de navigation du portail **SharePoint admin center**, cliquez sur **Active sites** dans le groupe d'options **Sites**.
@@ -30,7 +30,7 @@ Après avoir ajouté les sites de la formation et de la comptabilité d'Adatum, 
 1. Fermez le panneau **Add site admins to Training**.
 1. Basculez sur la machine virtuelle **LON-CL2** ou vous devriez encore être connecté avec le compte **.\admin**.
 1. Dans le navigateur Edge, le Webmail **Outlook** est resté ouvert (et vous devriez y être connecté avec le compte ```alan@[onmicrosoftDomain].onmicrosoft.com``` et le mot de passe ```ibForm@tion```).
-1. Dans la barre d'adresse du navigateur, utilisez l'adresse suivante : ```https://[onmicrosoftDomain].sharepoint.com/sites/Formation``` pour ouvrir le site Sharepoint du service formation de Adatum.
+1. Dans la barre d'adresse du navigateur, utilisez l'adresse suivante : ```https://[onmicrosoftDomain].sharepoint.com/sites/Formation``` pour ouvrir le site Sharepoint du service formation de ib Cegos Workshop.
 1. Une fois que le site **Formation** s'ouvre, attendez que l'icône d'engrenage s'affiche en haut à droite (à gauche des initiales de Alan Yoo). Cliquez sur cette icône d'engrenage.
 1. Sur le panneau **Settings**, cliquez sur **Site permissions**.
 1. Sur le panneau **Permissions**, cliquez sur **Advanced permissions settings**.
@@ -90,7 +90,7 @@ Dans cette tâche, Alan Yoo, en tant qu'administrateur du site Sharepoint de la 
 1. Un nouvel onglet s'ouvre, affichant le contenu du site **Formation**. En haut de ce nouvel onglet (à droite sous le bandeau *Sharepoint*), cliquez sur **Site access**.
 1. dans le panneau **Site access** qui s'affiche, vous pouvez afficher les propriétaires, membres et visiteurs du site. En ouvrant la section **Site visitors - no control**, vous devriez pouvoir vérifier la présence de **Elvis Cress* et **Libby Hayward** ajoutés précédemment.
 1. Dans le champ situé au-dessus de ces groupes (sous la mention **Add users, Microsoft 365 groups or \[...]**), entrez une adresse email personnelle (qui n'a pas besoin d'être un compte Microsoft 365). Votre adresse email apparaît ensuite sous le champ en question, vous pouvez cliquer dessus.  
-	Votre adresse personnelle apparaît désormais sous le champ, accompagnée d'un message indiquant que cette adresse est en dehors de l'entreprise Adatum.
+	Votre adresse personnelle apparaît désormais sous le champ, accompagnée d'un message indiquant que cette adresse est en dehors de l'organisation ib cegos Workshop.
 1. Dans le champ **Add a message**, saisissez le message suivant : ```Comme convenu, vous pouvez désormais accéder au site Formation de ib Cegos Workshop.```.
 1. Cliquez ensuite sur le bouton **Share**.
 1. Dans la barre de menu de la page **training**, cliquez sur **Stages**.

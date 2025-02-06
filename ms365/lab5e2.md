@@ -33,7 +33,7 @@ Dans cette tâche, vous allez créer deux connecteurs pour forcer l'utilisation 
 1. Sur la page **Validation email**, cliquez sur **Next** avant de cliquer sur **Yes proceed** pour sauvegarder le connecteur bien que la validation ait échoué.  
 	>**Note :** La validation du flux de message n'aboutit pas car vous avez ici utilisé une entreprise fictionnelle qui n'existe pas. C'est le comportement attendu pour cet atelier.
 1. Sur la page *Review Connector**, cliquez sur **Create connector** puis sur **Done**.
-1. Vous venez d'ajouter un connecteur d'émission (*outbound*) de Adatum vers Trey Research. Vous allez maintenant créer un connecteur de réception (*inbound*) de Trey Research vers ib Cegos Wrokshop. Dans le centre d'admin Exchange Online, sur la page **Connectors**, cliquez de nouveau sur le bouton **+ Add a connector**.
+1. Vous venez d'ajouter un connecteur d'émission (*outbound*) de ib Cegos Workshop vers Trey Research. Vous allez maintenant créer un connecteur de réception (*inbound*) de Trey Research vers ib Cegos Wrokshop. Dans le centre d'admin Exchange Online, sur la page **Connectors**, cliquez de nouveau sur le bouton **+ Add a connector**.
 1. Sur le panneau **New connector**, sélectionnez **Partner organization** sous la section **Connection from**.
 1. Notez que **Office 365** est présélectionné automatiquement sous la section **Connection to**. Cliquez sur **Next**.
 1. Sur la page **Connector name**, saisissez ```Trey Research Incoming``` dans le champ **Name** avant de cliquer sur **Next**.

@@ -32,7 +32,7 @@ Dans cette tâche, vous allez utiliser le portail Sharepoint admin center pour c
 1. Conservez votre navigateur Internet ouvert pour les tâches ultérieures.
 
 ## Tâche 2 - Créer un site avec Windows Powershell
-Après avoir créé un site avec le portail d'administration de Sharepoint Online, vous allez désormais utiliser Windows Powershell pour créer un site pour le service comptabilité de Adatum.
+Après avoir créé un site avec le portail d'administration de Sharepoint Online, vous allez désormais utiliser Windows Powershell pour créer un site pour le service comptabilité de ib Cegos Workshop.
 1. Sur **LON-CL1**, tapez ```Powershell ISE``` dans la recherche à droite du bouton **Démarrer** sur la barre des tâches.
 1. Sur le menu **Démarrer**, dans le panneau de détail sur l'application **Windows PowerShell ISE**, cliquez sur **Run as administrator**.
 1. Si une fenêtre **User Account Control** apparaît, connectez-vous avec le compte **adatum\administrator** et le mot de passe ```Pa55w.rd```.

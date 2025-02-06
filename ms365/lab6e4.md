@@ -6,8 +6,8 @@ date: "10/01/2025"
 script: "ms365.js"
 ---
 # Scénario
-Maintenant que Dominique a configuré *Exchange Online* et *Teams*, il s'apprette à implémenter *Sharepoint Online* dans le projet pilote d'Adatum.  
-Dans cet exercice, Dominique va commencer par modifier les paramètres génériques de Sharepoint Online pour les mettre en conformité avec les besoins business d'Adatum.
+Maintenant que Dominique a configuré *Exchange Online* et *Teams*, il s'apprette à implémenter *Sharepoint Online* dans le projet pilote d'ib Cegos Workshop.  
+Dans cet exercice, Dominique va commencer par modifier les paramètres génériques de Sharepoint Online pour les mettre en conformité avec les besoins business d'ib Cegos Workshop.
 
 # Objectifs
 A la fin de cet exercice, vous aurez une meilleure connaissance de :

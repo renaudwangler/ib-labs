@@ -70,7 +70,7 @@ Dans cette tâche, Beth Burke va vérifier que l'ordinateur est enrôlé pour le
 1. Connectez-vous à  **LON-CL1** en cliquant sur **Other user** pour utiliser le compte ```Beth@[godeployDomain].godeploylabs.com``` avec le mot de passe ```Pa55w.rd```.
 1. Cliquez sur le bouton **Démarrer** et cliquez sur **Settings**.
 1. Cliquez sur la section **Accounts** et choisissez l'onglet **Access work or school**.
-1. Ouvrer la sexction **Connected to ADATUM AD domain**
+1. Ouvrer la section **Connected to ADATUM AD domain**
 1. Cliquez sur **Info** pour voir les informations d'enrôlement MDM (Si le bouton n'est pas présent, redémarrer **LON-CL1** pourra accélérer la manoeuvre).
 1. Patientez quelques (longues...) minutes, pour vérifier que la suite Microsoft 365 apps a été installée sur LON-CL1.
 1. Fermez la session de Beth sur LON-CL1

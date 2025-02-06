@@ -34,7 +34,7 @@ Toujours en tant que Dominique Skyetson, Administratrice de l'organisation ib Ce
 1. sur le portail **Microsoft Teams admin center**, cliquez sur **Meeting settings** dans le groupe d'options **Meetings**.
 1. Sur la page **Meetings settings**, dans la section **Email invitation**, Saisissez les informations suivantes :
 	- **Logo URL** : ```https://renaudwangler.github.io/ib-pages/logo_ibcegos.png```
-	- **Legal URL** : ```https://adatum.com/legal.html```
+	- **Legal URL** : ```https://www.ib-formation.fr/informations-legales/cgv```
 	- **Help URL** : ```https://adatum.com/joiningmeetinghelp.html```
 	- **Footer :** ```Merci de nous faire savoir si vous souhaitez/pouvez participer à cette réunion si possible.```
 1. Cliquez sur le bouton **Preview invite**.
