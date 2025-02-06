@@ -42,9 +42,8 @@ ___
 ___
 ## Atelier 7 - Administration de Microsoft Teams
 ### Exercice 1 - [Configuration des équipes et des canaux](lab7e1)
-### Exercice 2 - [Gestion des autorisations dans Microsoft Teams](lab7e2)
+### Exercice 2 - [Gestion des stratégies Microsoft Teams](lab7e2)
 ### Exercice 3 - [Fonctionnalités avancées de Microsoft Teams](lab7e3)
-### Exercice 4 - [Intégration avec d'autres services Teams](lab7e4)
 ___
 ## Atelier 8 - Travail sur les labels de sensibilité
 ### Exercice 1 - [Création de labels de sensibilité](lab8e1)

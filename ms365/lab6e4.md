@@ -43,4 +43,4 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 ## Résultat
 A l'issue de cet exercice, vous avez configuré quelques-uns parmi les nombreux paramètres du service Sharepoint Online.
 
-# Fin de l'atelier 7
+# Fin de l'atelier 6

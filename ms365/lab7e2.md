@@ -1,6 +1,6 @@
 ---
 layout: stage
-title: "Lab7-Ex0 - Configuration de Microsoft Teams"
+title: "Lab7-Ex2 - Gestion des stratégies Microsoft Teams"
 length: "00"
 date: "10/01/2025"
 script: "ms365.js"
@@ -224,4 +224,4 @@ Dominique Skyetson va, pour finir cet atelier, configurer un certain nombre de c
 ## Résultat
 Dans cet atelier, vous avez travaillé sur l'accessibilité de diverses fonctionnalités dans l'environnement *Teams*.
 
-# Fin de l'atelier 6
+Vous pouvez poursuivre par [l'exercice 3 - Fonctionnalités avancées de Microsoft Teams](lab7e3)
