@@ -50,7 +50,7 @@ ___
 ### Exercice 2 - [Publication des labels de sensibilité](lab8e2)
 ___
 ## Atelier 9 - Etat de santé des services Microsoft 365
-### Exercice 1 - [Etat de santé du service Microsoft 365(lab9e1)
+### Exercice 1 - [Etat de santé du service Microsoft 365](lab9e1)
 ### Exercice 2 - [Dépannage de flux de messages](lab9e2)
 ___
 ## Conseils génériques
