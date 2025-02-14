@@ -47,7 +47,7 @@ ___
 ___
 ## Atelier 8 - Travail sur les labels de sensibilité
 ### Exercice 1 - [Création de labels de sensibilité](lab8e1)
-### Exercice 2 - [Publication des lables de sensibilité](lab8e2)
+### Exercice 2 - [Publication des labels de sensibilité](lab8e2)
 ___
 ## Atelier 9 - Etat de santé des services Microsoft 365
 ### Exercice 1 - [Etat de santé du service Microsoft 365(lab9e1)

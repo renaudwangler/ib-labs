@@ -99,4 +99,4 @@ Après avoir testé la création de labels de données sensibles en utilisant le
 ## Résultat
 Dans cet exercice, vous avez créé des labels de données sensibles.
 
-Vous pouvez poursuivre par [l'exercice 2 - Publication des lables de sensibilité](lab8e2)
+Vous pouvez poursuivre par [l'exercice 2 - Publication des labels de sensibilité](lab8e2)

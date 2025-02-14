@@ -1,6 +1,6 @@
 ---
 layout: stage
-title: "Lab8-Ex2 - Publication des lables de sensibilité"
+title: "Lab8-Ex2 - Publication des labels de sensibilité"
 length: "00"
 date: "14/02/2025"
 script: "ms365.js"
@@ -37,7 +37,7 @@ Dominique a, pour finir, décidé de tester la publication de labels de données
 
 1. Utilisez son icône sur la barre des tâches pour maximiser la fenêtre **Administrator: Windows PowerShell** que vous aviez utilisée dans l'exercice précédent.
 1. Dans la commande de **Administrator: Windows PowerShell**, utilisez la commande suivante pour créer un stratégie de publication de labels nommée *ICW-Secret* :  
-	```New-LabelPolicy -Name 'ICW-Secret' -Labels 'ICW-Secret' -Comment 'Cette stratégie est pour l''équipe pilote du projet Microsoft 365, concernant le projet Renouvellement (PRN).' -ModernGroupLocation PgroupePRN@M[onmicrosoftDomain].onmicrosoft.com   -AdvancedSettings @{AttachmentAction = 'Automatic'; DisableMandatoryInOutlook = 'True'}``` 
+	```New-LabelPolicy -Name 'ICW-Secret' -Labels 'ICW-Secret' -Comment 'Cette stratégie est pour l''équipe pilote du projet Microsoft 365, concernant le projet Renouvellement (PRN).' -ModernGroupLocation groupePRN@[onmicrosoftDomain].onmicrosoft.com   -AdvancedSettings @{AttachmentAction = 'Automatic'; DisableMandatoryInOutlook = 'True'}``` 
 
 1. Basculez vers votre navigateur Internet et affichez l'onglet du portail **Microsoft Purview**. Vous devriez être resté sur la page **Label policies**.
 1. Dans la liste des stratégies, la stratégie **ICW-Classifié** que vous avez créé dans le portail est affichée. Cliquez sur le bouton **Refresh** dans la barre de menu au-dessus de la liste.
