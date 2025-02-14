@@ -65,4 +65,4 @@ Dans cette tâche, vous allez surveiller le flux de message en analysant leur tr
 ## Résultat
 A l'issue de ce dernier exercice, vous avez compris comment analyser les problèmes de messages non délivrés.
 
-# Fin des ateliers du stage msms030
+# Fin des ateliers du stage ms365

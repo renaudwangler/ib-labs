@@ -47,13 +47,11 @@ ___
 ___
 ## Atelier 8 - Travail sur les labels de sensibilité
 ### Exercice 1 - [Création de labels de sensibilité](lab8e1)
-### Exercice 2 - [Application de labels aux documents](lab8e2)
-### Exercice 3 - [Configuratiuon des politiques de protection basées sur les labels](lab8e3)
+### Exercice 2 - [Publication des lables de sensibilité](lab8e2)
 ___
 ## Atelier 9 - Etat de santé des services Microsoft 365
-### Exercice 1 - [Consultation de l'état de santé des services](lab9e1)
-### Exercice 2 - [Analyse des détails des incidents](lab9e2)
-### Exercice 3 - [Mise en place de mesures correctives](lab9e3)
+### Exercice 1 - [Etat de santé du service Microsoft 365(lab9e1)
+### Exercice 2 - [Dépannage de flux de messages](lab9e2)
 ___
 ## Conseils génériques
 1. Pour réaliser les ateliers de ce stage, vous allez utiliser un environnement de stage fourni par notre partenaire *goDeploy*. Cet environnement, qui inclut un compte de test Microsoft 365, comporte des instructions d'atelier (en anglais) que nous vous invitons à remplacer par les présentes instructions.
