@@ -68,7 +68,7 @@ A travers les ateliers de ce stage, vous allez prendre l'identité de Dominique 
 1. Dans la liste des utilisateurs, sélectionnez *MOD Administrator* avant de cliquer sur **Save**.
 1. Dans la fenêtre **Release preferences** , clique sur le **X** de fermeture en haut à droite.
 1. De retour sur l'onglet **Organization profile** de la fenêtre **Org settings**, sélectionnez **Custom themes**.
-1. Dans la fenêtre **Custom themes**, cliquez sur le thème **Default theme**.
+1. Dans la fenêtre **Customize Microsoft 365 for your organization**, cliquez sur **+ Add theme**
 1. Dans la fenêtre **Default theme**, prenez le temps de parcourir les différentes options d'affichage et de branding qui s'offrent à vous. Pour les besoins de l'atelier, n'hésitez pas à modifier quelques paramètres ici pour voir comment ils seront appliqués aux utilisateurs de Adatum.
 1. Si vous avez fait des changements dans le thème par défaut, cliquez sur **Save** lorsque vous avez terminé. Cliquez ensuite sur le **X** en haut à droite pour fermer la fénêtre **Default theme**.
 1. Restez connecté sur LON-DC1 VM et laissez votre navigateur Internet ouvert pour la tâche suivante de cet atelier.
