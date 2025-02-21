@@ -33,7 +33,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 1. Sur la page **User Profiles**, tapez ```Alan``` dans le champ **Find profiles** avant de cliquer surt **Find**.
 1. Le profil de Alan yoo s'affiche dans la liste. Cliquez sur la première colonne de la ligne du profil de Alan pour sélectionner **Edit My Profile**.
 1. Dans la page **User Profiles**, Saisissez ```dominique``` dans le champ **Manager** et cliquez sur l'icône **check names** à droite du champ et vérifiez que le compte de Dominique Skyetson est affiché.
-1. Dans le coin haut à droite de la page **User Priles**, cliquez sur le bouton **Save and close**.
+1. Dans le coin haut à droite de la page **User Profiles**, cliquez sur le bouton **Save and close**.
 1. Fermez l'onglet **Manage User Profiles** de votre navigateur internet, afin de retourner sur l'onglet contenant le **SharePoint admin center**.
 1. Sur la page **More features**, cliquez sur le bouton **Open** sur la tuile **User profiles**.
 1. Sur la page **User Profiles**, sous l'en-tête **My Site Settings** cliquez sur **Setup My Sites**.
