@@ -36,12 +36,12 @@ Pour tester l'authentification multifactorielle (MFA), Dominique Skyetson veut l
 
 1. Vous devriez encore être connecté sur **LON-CL1** à l'issue du premier atelier. Le **Microsoft 365 admin center** devrait encore être resté ouvert dans votre navigateur et vous devriez y être connecté avec le compte *Dominique Skyetson*.
 1. Pour activer la MFA pour le compte utilisateur de Dominique Skyetson, vous devez d'abord accéder à la liste des **Active users** dans le portail **Microsoft 365 admin center**. Utilisez donc le menu de navigation pour ouvrir le groupe d'options **Users** afin d'y choisir **Active users**.
-1. Dans la page **Active users**, dans la barre de menu au-dessus de la liste d'utilisateurs, cliquez sur **Multi-factor authentication**. Cette action va ouvrir un nouvel onglet **Multi-factor authentication**, avec la vue **Users** affichée par défaut.  
+1. Dans la page **Active users**, dans la barre de menu au-dessus de la liste d'utilisateurs, cliquez sur **Multi-factor authentication**. Cette action va ouvrir le portail d'administration Entra dans un nouvel onglet, sur la page **Per-user ultifactor authentication** (avec la vue **Users** affichée par défaut).  
+1. Si vous êtes amenés à mettre en place la MFA de Dominique pour accèder à cette page, vous pouvez vous référer à la procédure détaillée dans la tâche 3 suivante, sinon, poursuivez avec la procédure de la présente tâche
 	>**Note :** Le statut MFA de tous les utilisateurs existant est **Disabled**.
-1. Parcourez la liste des utilisateurs si nécessaire (avec les flèches en base de page) pour cliquer sur la case à gauche de Dominique Skyetson.
-1. A droite de **Dominique Skyetson**, dans la section *Quick steps*, cliquez sur **Enable**
-1. Sur la fenêtre **About enabling multi-factor auth**, cliquez sur **enable multi-factor auth**. 
-1. Lorsque la boite **Updates successful** apparait, cliquez sur **close**. Dans la liste des utilisateurs de la fenêtre **multi-factor authentication**, vérifiez que le statut MFA de Dominique a changé pour **Enabled**.
+1. Parcourez la liste des utilisateurs si nécessaire pour cliquer sur la case à gauche de Dominique Skyetson.
+1. Dans la barre de menu au dessus de la liste d'utilisateurs, cliquez sur **Enable MFA**
+1. Sur le popup **Enable multi-factor authentication**, cliquez sur le bouton **Enable**. 
 1. Vous devez désormais vous déconnecter de Microsoft 365. Cliquez sur le compte de Dominique en haut à droite et choisissez **Sign out**.
 1. une fois déconnectez, fermez votre navigateur Internet (tous les onglets).
 

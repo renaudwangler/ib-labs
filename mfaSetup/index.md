@@ -9,7 +9,9 @@ date: "23/04/2024"
 Depuis Mars 2024, Microsoft, victime de trop d'attaques cyber, impose l'utilisation de la MFA pour tous les contextes professionnels, y-compris pour les tenant de test Microsoft 365 que l'éditeur fournit pour les formations officielles.  
 Il faut donc désormais mettre en place la MFA pour tous les utilisateurs à tester dans ce contexte.
 
-## Etape 1a : Installer une application MFA depuis le Store Microsoft sur Windows 10/11
+## Etape 1a : Installer une application MFA depuis le Store Microsoft sur Windows 10/11  
+>** Nota :** Si vous le pouvez, utilisez une application de gestion de MFA sur votre smartphone/machine physique, cela vous évitera de vous rendre tributaire de la disponibilité de la machine virtuelle de l'environnement d'atelier. Si vous ne le pouvez/souhaitez pas , vous pouvez utiliser la procédure ci dessous (ou celle de la ta^che 1b) pour installer une application MFA sur mla machine virtuelle.  
+
 1. Ouvrir une session sur la machine cible de l'installation.
 1. Cliquer sur le bouton **Démarrer** de Windows 10/11 et taper ```Store```
 1. Cliquer sur le raccourci **"Microsoft Store"**   
