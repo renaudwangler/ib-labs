@@ -63,7 +63,7 @@ Dans cette tâche, Dominique va vérifier la délégation administrative mise en
 1. Si une fenêtre **Welcome to Microsoft 365** apparait, cliquez deux fois sur la flèche de droite pour pouvoir la fermer.
 1. Notez que sur la page d'accueil de **Microsoft 365**, Alan n'a pas d'option **Admin** pour ouvrir le portail d'administration.
 	Vous venez donc de vérifier que Alan ne peut accéder au **Microsoft 365 admin center** puisqu'il ne s'est vu affecter aucun rôle administratif.
-1. Dans **Microsoft Edge**, en haut à droite de la page, cliquez sur l'icône utilisateur de **Alan Yoo** (Le cercle contenant ses initiales **AY**), et cliquez sur **Sign out.**
+1. Dans **Microsoft Edge**, en bas à gauche de la page, cliquez sur l'icône utilisateur de **Alan Yoo** (Le cercle contenant ses initiales **AY**), et cliquez sur **Sign out.**
 1. Vous allez désormais vous connecter avec le compte de **Leanna Goodwin**. Dans votre page actuelle sur **Edge** en navigation privée, vous devriez être face à un message indiquant **Alan, you're signed out now**. Sur cette page, cliquez sur **Switch to a different account**, et saisissez l'adresse ```Leanna@[godeployDomain].godeploylabs.com``` dans le champ **Email address** qui s'affiche avant de cliquer sur **Sign in**.
 1. Dans la fenêtre **Sign in**, vérifiez que l'adresse de Leanna est correctement saisie avant de cliquer sur **Next**.
 1. Dans la fenêtre **Enter password**, entrez ```Pa55w.rd```.
