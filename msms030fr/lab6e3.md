@@ -49,7 +49,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 1. Cliquez sur **Send**.
 1. Basculez ensuite sur LON-CL2.
 1. Si un navigateur Internet est ouvert sur LON-CL2, fermez-le. Lancez ensuite une nouvelle session de navigation en cliquant sur l'icône de **Edge** dans la barre des tâches.
-1. Ouvrez *Outlook on the Web* pour **Alan Yoo** en vous rendant à l'adresse suivante : ```https://outlook.office365.com```. Si la boite aux lettres de Alan ne s'ouvre pas, connectez-vous avec son compte (```alan@[onmicrosoftDomain].onmicrosoft.com``` et le mot de passe ```Pa55w.rd```).
+1. Ouvrez *Outlook on the Web* pour **Alan Yoo** en vous rendant à l'adresse suivante : ```https://outlook.office365.com```. Si la boite aux lettres de Alan ne s'ouvre pas, connectez-vous avec son compte (```alan@[onmicrosoftDomain].onmicrosoft.com``` et le mot de passe ```ibForm@tion```).
 1. Dans la boite de réception de Alan (*Inbox*), sélectionnez le message reçu de la tâche précédente dont le sujet est **Attachment Test**.
 1. Sélectionnez la flèche descendante à droite du fichier joint **dism.log**.
 1. Dans la boite de Alan, vous ne devriez pas avoir l'option **Donwload** si la stratégie s'est correctement appliquée.
