@@ -22,7 +22,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 ## Tâche 1 - Ajout de 365 apps dans Intune
 Dominique souhaite désormais ajouter Microsoft 365 apps automatiquement aux périphériques qu'il gère. Pour gérer les périphériques en utilisant Microsoft 365, Adatum a acquis des abonnements Enterprise Mobility + Security E5 (EMS E5). Dans cette tâche, Dominique va affecter une de ces licences à un utilisateur. Ensuite, il ajoutera Mircosoft 365 apps aux périphériques gérés et en vérifie l'installation.
 1. Basculez vers la VM cliente **LON-CL1** sur laquelle vous devriez être connecté avec le compte ```Adatum\Administrator``` et le mot de passe ```Pa55w.rd```. Vous devriez encore être connecté sur votre navigateur Internet avec le compte de Dominique sur le portail **Microsoft 365 admin center**.
-1. Dans le menu de navigation du portail **Microsoft 365 admin center**, cliquez sur **Show all...** si nécessaire pour pouvoir cliquer sur **Endpoint Manager**.
+1. Dans le menu de navigation du portail **Microsoft 365 admin center**, cliquez sur **Show all...** si nécessaire pour pouvoir cliquer sur **Microsoft Intune**.
 1. Dans le portail **Microsoft Intune admin center**, dans le menu de navigation de gauche, sélectionnez **Apps**.
 1. Dans la fenêtre **Apps - Overview**, cliquez sur **All apps**.
 1. Dans la fenêtre **Apps - All apps**, cliquez sur le bouton **+ Create**.
