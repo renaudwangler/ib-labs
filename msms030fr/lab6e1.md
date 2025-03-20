@@ -38,7 +38,7 @@ Dans cette tâche, vous allez créer deux connecteurs pour forcer l'utilisation 
 1. Ouvrez une session sur LON-CL1 en utilisant le compte ```adatum\administrator``` et le mot de passe ```Pa55w.rd```.
 1. Cliquez sur l'icône de **Microsoft Edge** dans la barre des tâches pour lancer votre navigateur Internet. Maximisez sa fenêtre.
 1. Dans votre navigateur internet, utilisez l'adresse ```https://admin.microsoft.com``` pour ouvrir le portail **Microsoft 365 admin center**.
-1. Connectez-vous au centre d'administration avec le compte de Dominique (```dom@[onmicrosoftDomain].onmicrosoft.com``` et mot de passe ```ibForm@ion```)
+1. Connectez-vous au centre d'administration avec le compte de Dominique (```dom@[onmicrosoftDomain].onmicrosoft.com``` et mot de passe ```ibForm@tion```)
 1. Dans le menu de navigation du portail **Microsoft 365 Admin center**, sous la section **Admin Centers** cliquez sur **Exchange**. Cela va ouvrir le portail administratif de Exchange Online dans un nouvel onglet.
 1. Dans le portail **Exchange admin center**, dans le menu de navigation à gauche, ouvrez le groupe d'options **Mail flow** pour sélectionner **Connectors**.
 1. Sur la page **Connectors**, vous souhaitez ajouter un nouveau connecteur. Cliquez sur le bouton **+ Add a connector** sur la barre de menu au-dessus de la liste des connecteurs.
