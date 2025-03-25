@@ -39,7 +39,7 @@ dans votre environnement d'atelier, goDeploy vous fournit un nom de domaine DNS 
 
 ## Tâche 1 - Ajout du DNS d'entreprise
 Dans cette tâche vous allez ajouter le domaine DNS d'entreprise à votre tenant Microsoft 365.  
-5. Les opérations sont à faire sur **LON-DC1**, connecté avec le compte **Administrator**.
+1 [ ] Les opérations sont à faire sur **LON-DC1**, connecté avec le compte **Administrator**.
 1. Dans votre navigateur Internet, vous devriez toujours être sur le portail **Microsoft 365 admin center**, connecté avec le compte *MOD Administrator*.
 1. Dans le portail **Microsoft 365 admin center**, dans le menu de navigation, vous avez déjà ouvert le groupe **Settings** pour l'exercice précédant. Pour ajouter le domaine d'entreprise, cliquez sur **Domains** dans ce groupe.
 1. Sur la page **Domains**, vous devriez voir apparaitre le domaine par défaut, créé avec votre tenant ([onmicrosoftDomain].onmicrosoft.com).
