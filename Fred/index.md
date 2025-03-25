@@ -3,7 +3,7 @@ layout: page
 title: 'Test de numérotation continue des tâches d''atelier'
 genericSynopsis: Essais de numérotation continue dans les tâches d'ateliers
 script: "ms365.js"
-length: ''
+length: '00'
 ---
 # Scénario 1 : Migration d’un serveur ESXi autonome
 ## Atelier 1 : Vérification de l’existant

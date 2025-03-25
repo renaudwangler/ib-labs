@@ -16,7 +16,7 @@ La variable obligatoire en en-tête du stage
 - **genericSynopsis :** Le résumer (descriptif) d'un atelier. La présence de cette vrariable listera l'atelier dans la section **Conseils génériques** de la page d'accueil.
 
 Les variables disponibles dans l'en-tête de chaque stage  
-- **length :** durée en minutes
+- **length :** durée en minutes (mettre '00' pour ne pas afficher)
 - **date :** Afficher la date de dernière édition d'un atelier dans son pied de page.
 - **synopsis :** Le résumé de l'atelier pour qu'il apparaisse dans la liste
 
