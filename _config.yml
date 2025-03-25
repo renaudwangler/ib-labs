@@ -2,9 +2,10 @@ markdown: kramdown
 kramdown:
    syntax_highlighter_opts:
       disable : true
+markdown_extensions:
+  - sane_lists
 sass:
   style: :compressed
-
 theme: jekyll-theme-slate
 defaults:
   -
