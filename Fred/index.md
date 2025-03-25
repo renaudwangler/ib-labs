@@ -36,6 +36,7 @@ ICW gère directement les enregistrements de ses domaines DNS. Pour que ce domai
 Votre formateur/trice pourra, le cas échéant, vous donner quelques indications complémentaires concernant l'environnement d'atelier a distance que vous utiliserez.  
 dans votre environnement d'atelier, goDeploy vous fournit un nom de domaine DNS d'entreprise pour le projet pilote. Vous pouvez identifier ce nom de domaine en tête de l'onglet **DNS** dans l'environnement d'atelier.
 > **Note** : L'onglet **DNS** ne se trouve pas dans la machine virtuelle mais à sa gauche, dans le portail goDeploy.  
+
 ## Tâche 1 - Ajout du DNS d'entreprise
 Dans cette tâche vous allez ajouter le domaine DNS d'entreprise à votre tenant Microsoft 365.
 5. Les opérations sont à faire sur **LON-DC1**, connecté avec le compte **Administrator**.
