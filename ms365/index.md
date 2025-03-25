@@ -1,7 +1,7 @@
 ---
 layout: home
-title: 'MS365 - Administration de Microsoft 365'
-synopsis: "Ateliers pratiques de la formation ib MS365"
+title: 'L''essentiel pour l''administrateur MS365'
+synopsis: "Déroulé détaillé des ateliers pratiques de la formation ib Cegos MS365"
 script: "ms365.js"
 ---
 # Ateliers du stage
