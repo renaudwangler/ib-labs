@@ -3,6 +3,7 @@ layout: page
 title: 'Test de numérotation continue des tâches d''atelier'
 genericSynopsis: Essais de numérotation continue dans les tâches d'ateliers
 script: "ms365.js"
+length: ''
 ---
 # Scénario 1 : Migration d’un serveur ESXi autonome
 ## Atelier 1 : Vérification de l’existant
@@ -28,21 +29,18 @@ script: "ms365.js"
     Ce nom d’interface risque de changer après la migration de la VM. Il faudra certainement adapter la configuration réseau de la machine  
     ![image.png](image%203.png)
 1. Poursuite du test  
-
-    # Scénario
-    *Ib Cegos Workshop* a donc acheté un nouveau nom de domaine DNS pour son projet pilote (fourni par votre hébergeur d'ateliers) qui soit utilisable sur Internet.
-    ICW gère directement les enregistrements de ses domaines DNS. Pour que ce domaine soit utilisable sur le tenant, il va vous falloir passer par un assistant de configuration et créer les enregistrements DNS attendus. C'est ce que vous allez réaliser dans ce troisième exercice.
-
-    ## Avant de commencer
-    Votre formateur/trice pourra, le cas échéant, vous donner quelques indications complémentaires concernant l'environnement d'atelier a distance que vous utiliserez.  
-    dans votre environnement d'atelier, goDeploy vous fournit un nom de domaine DNS d'entreprise pour le projet pilote. Vous pouvez identifier ce nom de domaine en tête de l'onglet **DNS** dans l'environnement d'atelier.
-    > **Note** : L'onglet **DNS** ne se trouve pas dans la machine virtuelle mais à sa gauche, dans le portail goDeploy.  
-
-    ## Tâche 1 - Ajout du DNS d'entreprise
-    Dans cette tâche vous allez ajouter le domaine DNS d'entreprise à votre tenant Microsoft 365. 
-1. Les opérations sont à faire sur **LON-DC1**, connecté avec le compte **Administrator**.
+# Scénario
+*Ib Cegos Workshop* a donc acheté un nouveau nom de domaine DNS pour son projet pilote (fourni par votre hébergeur d'ateliers) qui soit utilisable sur Internet.
+ICW gère directement les enregistrements de ses domaines DNS. Pour que ce domaine soit utilisable sur le tenant, il va vous falloir passer par un assistant de configuration et créer les enregistrements DNS attendus. C'est ce que vous allez réaliser dans ce troisième exercice.
+## Avant de commencer
+Votre formateur/trice pourra, le cas échéant, vous donner quelques indications complémentaires concernant l'environnement d'atelier a distance que vous utiliserez.  
+dans votre environnement d'atelier, goDeploy vous fournit un nom de domaine DNS d'entreprise pour le projet pilote. Vous pouvez identifier ce nom de domaine en tête de l'onglet **DNS** dans l'environnement d'atelier.
+> **Note** : L'onglet **DNS** ne se trouve pas dans la machine virtuelle mais à sa gauche, dans le portail goDeploy.  
+## Tâche 1 - Ajout du DNS d'entreprise
+Dans cette tâche vous allez ajouter le domaine DNS d'entreprise à votre tenant Microsoft 365.
+5. Les opérations sont à faire sur **LON-DC1**, connecté avec le compte **Administrator**.
 1. Dans votre navigateur Internet, vous devriez toujours être sur le portail **Microsoft 365 admin center**, connecté avec le compte *MOD Administrator*.
-1. Dans le portail **Microsoft 365 admin center**, dans le menu de navigation, vous avez déjà ouvert le groupe **Settings** pour l'exercice précédant. Pour ajouter le domaine d'entreprise, cliquez sur **Domains** dans ce groupe. 
+1. Dans le portail **Microsoft 365 admin center**, dans le menu de navigation, vous avez déjà ouvert le groupe **Settings** pour l'exercice précédant. Pour ajouter le domaine d'entreprise, cliquez sur **Domains** dans ce groupe.
 1. Sur la page **Domains**, vous devriez voir apparaitre le domaine par défaut, créé avec votre tenant ([onmicrosoftDomain].onmicrosoft.com).
 1. Cliquez sur **+ Add domain** pour ouvrir la page **Add a domain**.
 1. Sur la page **Add a domain**, saisissez le **nom DNS d'entreprise** (```[godeployDomain].godeploylabs.com```) dans le champ **Domain name** avant de cliquer sur le bouton **Use this domain**.
