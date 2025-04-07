@@ -52,12 +52,12 @@ Si vous voulez vous simplifier la vie, vous pouvez systèmatiser l'utilisation d
 1. Utilisez les quelques lignes de script suivantes pour réaliser l'ensemble des opérations proposées dans les procédures précédentes en une fois :  
     ```
     $ADdomain = Get-ADDomain -Current LocalComputer
-if ((Get-NetConnectionProfile).NetworkCategory -ne 'DomainAuthenticated') {
+    if ((Get-NetConnectionProfile).NetworkCategory -ne 'DomainAuthenticated') {
     Write-Host "Nettoyage du réseau local." -ForegroundColor Yellow
     Get-NetAdapter|Restart-NetAdapter
     while((Get-NetConnectionProfile).NetworkCategory -ne 'DomainAuthenticated') { Start-Sleep -Seconds 1 }
-} else { Write-Host "Réseau local déjà en mode domaine." -ForegroundColor Green}
-Get-ADComputer -Filter * | Where DNSHostName -NotLike "$($ENV:ComputerName)*" | ForEach-Object {
+    } else { Write-Host "Réseau local déjà en mode domaine." -ForegroundColor Green}
+    Get-ADComputer -Filter * | Where DNSHostName -NotLike "$($ENV:ComputerName)*" | ForEach-Object {
     $compName = $_.DNSHostName
     try { 
         Restart-Computer -ComputerName $compName -Force -ErrorAction Stop
