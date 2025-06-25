@@ -40,6 +40,10 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 1. Sur la page **Manage settings for email apps**, remplacez (vous pouvez cliquer sur le **x** à droite de la stratégie actuelle) le contenu du champ **Outlook web app mailbox policy** en tapant ```Limited features```.
 1. Sélectionnez votre stratégie **Limited features** avant de cliquer sur **Save**.
 1. Fermez le panneau d'information d'**Alan Yoo** une fois le changement sauvegardé.
+1. Cliquez sur l'icone de recherche de la barre des tâches puis tapez ```Windows Powershell``` et lançez une invite Powershell.
+1. Dans la fenêtre Windows Powershell**, tapez la commande suivante et validez par **[Entrée]** :
+	```Invoke-WebRequest "https://raw.githubusercontent.com/renaudwangler/ib-labs/master/msms030fr/pieceJointe.txt" | Select-Object -ExpandProperty Content | Out-File "c:\users\administrator\documents\pieceJointe.txt"```
+1. Vous pouvez désormais ferme la fenêtre Powershell et revenir à votre navigateur Internet.
 1. Dans votre navigateur Internet, utilisez le menu des application 365 (la grille de 3x3 en haut à gauche des pages 365) pour lancer l'application web Outlook.
 1. Dans **Outlook**, cliquez sur le bouton **New mail**.
 1. Dans la fenêtre de composition de nouveau message, tapez ```alan@[godeployDomain].godeploylabs.com``` dans le champ **To**.
