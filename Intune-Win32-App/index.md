@@ -41,6 +41,7 @@ Dans cette étape, vous allez préparer le fichier nécessaire pour que l'instal
 1. Patientez pendant la génération du package d'installation **.\vsCode\vsCodeUserSetup-x64.intunewin**....
 
 ## Etape 3: Affectation du package préparé dans Intune
+Dans cette étape, vous allez affeter votre package logiciel dans Intune, afin de le voir installé dans le contexte de l'utilisateur sur la machine de test.
 1. De retour dans votre navigateur, ouvrez le portail d'administration Intune, à l'adresse ```https://intune.microsoft.com/```
 1. Connectez-vous avec votre compte administrateur Intune
 1. Cliquez sur la section **Apps** dans le menu de gauche
@@ -51,15 +52,19 @@ Dans cette étape, vous allez préparer le fichier nécessaire pour que l'instal
 1. Allez chercher le fichier **vsCodeUserSetup-x64.intiunewin** dans le dossier **Downloads\vsCode**, ajoutez-le et cliquez sur **OK**.
 1. Dans la page **App information**, remplaçez le nom de l'application par ```Visual Studio Code``` 
 1. Dans le champ **Publisher**, saisissez ```Microsoft```et cliquez sur **Next**
-1. Dans les champs **Install command** et **Uninstall command**, saisissez ```VScodeUserSetup-x64```
+1. Dans le champ **Install command** et **Uninstall command**, saisissez ```VScodeUserSetup-x64.exe /VERYSILENT```
+1. Dans le champ **Uninstall command**, saisissez ```"%USERPROFILE%\AppData\Local\Programs\Microsoft VS Code\unins000.exe" /VERYSILENT"```
 1. Basculez le mode **Install behavior** sur **User** et cliquez sur **Next**
 1. dans le champ **Minimum operating system**, sélectionnez **Windows 10 1607** et cliquez sur **Next**
 1. dans le champ **Rule format**, sélectionnez **Manually configure detection rules** et cliquez sur **+Add**
 1. dans le panneau **Detection rule** qui s'ouvre alors, sélectionnez le type **File** dans le champ **Rule Type**
-1. Saisissez ```%USERPROFILE%\AppData\Local\Programs``` dans le champ **Path** et ```Microsoft VS Code``` dans le champ **File or folder**
+1. Saisissez ```%USERPROFILE%\AppData\Local\Programs\Microsoft VS Code``` dans le champ **Path** et ```Microsoft VS Code``` dans le champ **File or folder**
 1. Sélectionnez **File or folder exists** dans le champ **Detection method** et cliquez sur **Ok**.
 1. Cliquez trois fois sur **Next** pour arriver à la page **Assignments**.
 1. Sur l'onglet **Assignments**, cliquez sur **+Add all users** dans la section **Required** avant de cliquer sur **Next** puis **Create**.
-1. Attendez que le package applicatif soit upoadé sur Intune en surveillant la zone de notification.
+1. Attendez que le package applicatif soit uploadé sur Intune en surveillant la zone de notification.
 
 ## Etape 4: Résultat de l'installation
+1. Connectez-vous sur la machine cible de l'installation.
+1. Après quelques minutes (n'hésitez pas à redémarrer la machine, cela peut accélérer le processus de synchronisation avec Intune) vous devriez voir apparître la fenêtre **Get Started with VS Code** (Visual Studio Code étant configuré par défaut pour s'ouvrir après son installation réussie).
+1. Retournez sur votre machine administrative, dans le navigateur ou le portail Intune est resté ouvert sur la page représentant votre package applicatif **Visual Studio Code**. Après quelques minutes (réfraichir et forcer la synchonisation de votre machine de test peut aider), vous devriez voir l'état **Installed** passer de 0 à 1 !
