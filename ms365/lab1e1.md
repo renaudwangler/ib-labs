@@ -42,7 +42,7 @@ Dans un environnement de test comme celui qui nous est fourni, qui ne contient q
 1. Maintenant que LON-DC1 est correctement démarré, il vous suffit de redémarrer les autres machines virtuelles pour qu'elles s'*accrochent* correctement au réseau de domaine : Basculez sur la machine **LON-CL1**.
 1. Sur l'écran de connexion de LON-CL1, cliquez sur l'icône **Power** (dernière icône en bas à droite) et choisissez **Restart**.
 1. Répétez l'opération précédente pour LON-CL2.
-    > **Note :** Vous n'avez pas besoin d'attendre que les machines clientes aient redémarrer pour commencer la tâche suivante.  
+    > **Note :** Vous n'avez pas besoin d'attendre que les machines clientes aient redémarré pour commencer la tâche suivante.  
 
 ## Tâche 3 - Vérification de la création du tenant
 Bien que goDeploy ait initié la création du tenant Microsoft 365 pour *ib Cegos Workshop*, en tant que Dominique Skyetson, administratrice de ICW, vous allez vérifier cette création afin de pouvoir poursuivre vos tests pour le projet pilote.

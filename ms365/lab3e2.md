@@ -13,8 +13,12 @@ Vous allez ensuite utiliser des objets groupes pour faire quelques modifications
 ## Tâche 1 - Installer Entra Connect
 Dans cette tâche, vous allez utiliser l'assistant d'installation de Entra Connect pour activer la synchronisation entre l'ADDS de ICW et Entra Id. Une fois la configuration terminée, le processus de synchronisation démarre automatiquement.
 1. Cette manipulation se réalise sur **LON-DC1**, connecté avec le compte **Administrator**.
-1. Sur la barre des tâches, cliquez sur l'icône de **Microsoft Edge** et rendez-vous à l'adresse suivante : ```https://go.microsoft.com/fwlink/?LinkId=615771```
-1. Sur la page **Download Microsoft Entra Connect from official Microsoft Download Center**, cliquez sur le bouton **Donwload**.
+1. Sur la barre des tâches, cliquez sur l'icône de **Microsoft Edge** et rendez-vous à l'adresse suivante : ```https://entra.microsoft.com```
+1. Dans la fenêtre **Sign in**, saisissez le nom de connexion du compte *MOD Administrator* (```admin@[onmicrosoftDomain].onmicrosoft.com```) et cliquez sur **Next**
+1. Dans la fenêtre **Enter password**, saisissez ou collez ```[MODPassword]``` et cliquez sur **Sign in**
+1. Dans le menu de navigation à gauche, sélectionnez **Entra Connect**.
+1. Sur la page **Microsoft Entra Connect - Get started**, cliquez sur l'onglet **Manage** et cliquez ensuite sur le bouton bleu **Download Conect Sync Agent**.
+1. Sur le panneau **Download Connect Sync Agent** qui apparait, cliquez sur le bouton **Accept terms & download**
 1. Dans la notification en haut à droite (si la notification n'apparaît pas, allez chercher le fichier **AzureADConnect.msi** dans le dossier **Downloads** de LON-DC1), cliquez sur **Open File** sous le nom du fichier téléchargé : **AzureADConnect.msi**.
 1. Si une boite de dialogue **Do you want to run this file?** s'affiche, cliquez sur **Run**.
 1. L'installation de l'outil Entra Connect a démarré, sur la fenêtre **Welcome to Microsoft Entra Connect**, cochez la case  **I agree to the license terms and privacy notice** avant de cliquer sur **Continue**.
