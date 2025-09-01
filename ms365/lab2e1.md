@@ -57,6 +57,7 @@ Dans cette tâche vous allez mettre en place l'environnement permettant la gesti
 	- **Roles :** Par défaut chaque utilisateur se verra affecter le rôle **User role (no administration access)**. Ainsi, en arrivant sur la page **Optional settings**, cliquez directement sur **Next**.  
 
 	| **First Name** | **Last Name** | **Display Name** | **username** | **Licence** | **Role** |  
+	
 	|----------------|---------------|------------------|--------------|-------------|----------|  
 	| ```Alan``` | ```Yoo``` | Alan Yoo | ```alan``` | **Microsoft Teams Enterprise** et **Office 365 E5 (no Teams)** | **User** |  
 	| ```Ada``` | ```Russell``` | Ada Russel | ```ada``` | Sans | **User** |  
