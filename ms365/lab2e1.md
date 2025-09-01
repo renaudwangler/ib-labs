@@ -56,12 +56,12 @@ Dans cette tâche vous allez mettre en place l'environnement permettant la gesti
 	- **Licenses :** Affectez les licences **Office 365 E5 (no Teams)** et **Microsoft Teams Enterprise** à l'utilisateur **Alan Yoo**. Pour tous les autres utilisateurs, sélectionner l'option **Create user without product license (not recommended)**.
 	- **Roles :** Par défaut chaque utilisateur se verra affecter le rôle **User role (no administration access)**. Ainsi, en arrivant sur la page **Optional settings**, cliquez directement sur **Next**.  
 
-	| **First Name** | **Last Name** | **Display Name** | **username** | **Licence** | **Role** |
-	|----------------|---------------|------------------|--------------|-------------|----------|
-	| ```Alan``` | ```Yoo``` | Alan Yoo | ```alan``` | **Microsoft Teams Enterprise** et **Office 365 E5 (no Teams)** | **User** |
-	| ```Ada``` | ```Russell``` | Ada Russel | ```ada``` | Sans | **User** |
-	| ```Adam``` | ```Hobbs``` | Adam Hobbs | ```adam``` | Sans | **User** |
-	| ```Libby``` | ``` Hayward``` | Libby Haywards | ```libby``` | Sans | **User** |
+	| **First Name** | **Last Name** | **Display Name** | **username** | **Licence** | **Role** |  
+	|----------------|---------------|------------------|--------------|-------------|----------|  
+	| ```Alan``` | ```Yoo``` | Alan Yoo | ```alan``` | **Microsoft Teams Enterprise** et **Office 365 E5 (no Teams)** | **User** |  
+	| ```Ada``` | ```Russell``` | Ada Russel | ```ada``` | Sans | **User** |  
+	| ```Adam``` | ```Hobbs``` | Adam Hobbs | ```adam``` | Sans | **User** |  
+	| ```Libby``` | ``` Hayward``` | Libby Haywards | ```libby``` | Sans | **User** |  
 	| ```Laura``` | ``` Atkins```| Laura Atkins | ```laura``` | Sans | **User** |  
 
 1. Après avoir ajouté le dernier compte (celui de *Laura Atkins*) cliquez sur le bouton **Close** pour revenir à la liste des **Active users**
