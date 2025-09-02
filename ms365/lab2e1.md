@@ -129,7 +129,7 @@ Vous devriez avoir fermé la fenêtre **Windows Powershell ISE** qui vous a serv
 1. Utilisez la commande suivante pour obtenir la liste des comptes qui n'ont pas de licence associée à leur compte :
 	```Get-MgUser -Filter "assignedLicenses/`$count eq 0 and userType eq 'Member'" -ConsistencyLevel eventual -CountVariable unlicensedUserCount -All```
 1. Utilisez la commande suivante pour obtenir la licence **Office 365 E5** disponible dans le contexte du projet pilote :
-	```$license = Get-MgSubscribedSku|where SkuPartNumber -like \*365*```
+	```$license = Get-MgSubscribedSku|where SkuPartNumber -like *365*```
 	>**Note :** Vous pouvez simplement taper la commande ```$license``` pour afficher le résultat de l'opération précédente avant de passer à la suite.
 1. Utilisez la commande suivante pour affecter la licence au premier compte utilisateur :
 	```Set-MgUserLicense -userId $user1.id -AddLicenses @{SkuId=$license.SkuId} -RemoveLicenses @()```
