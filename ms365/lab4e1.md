@@ -57,7 +57,7 @@ Dominique va désormais tester si les utilisateurs avec licence peuvent être em
 1. Dans le champ **Email address**, saisissez ```alan@[onmicrosoftDomain].onmicrosoft.com``` et cliquez sur **Sign in**
 1. Dans la fenêtre **Enter password**, saisissez ```Pa55w.rd``` et cliquez sur **Sign in.**
 1. Dans la boite de dialogue **Update your password**, tapez ```Pa55w.rd``` dans le champ **Current password**, tapez ensuite ```ibForm@tion``` dans les champs **New password** et **Confirm password** avant de cliquer sur **Sign in**.
-1. Dans la page **What can I help you find?", ouvrez le menu de gauche is nécessaire pour cliquer sur **Apps**.
+1. Dans la page **What can I help you find?**, ouvrez le menu de gauche si nécessaire pour cliquer sur **Apps**.
 1. Sur la page **Apps**, cliquez sur le bouton **Install apps** en haut à droite et sélectionnez **Microsoft 365 apps**.
 1. La fenêtre **My account** de Alan s'affiche. Sous la section **Office apps &amp; devices**, vous ne devriez pas pouvoir installer Office...  
 	>**Important :** Vous venez de vérifier qu'un utilisateur licencié ne peut télécharger Microsoft 365 Apps for enterprise si le paramètre global l'en empêche.
