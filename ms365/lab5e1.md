@@ -63,9 +63,8 @@ Microsoft ayant eu de nombreux problèmes d'utilisation des domaines *onmicrosof
 ## Tâche 3 - Visualisation des boites créées
 1. Basculez vers la machine virtuelle **LON-CL2**. Vous devriez être resté connecté avec le compte **Admin**, le navigateur Internet étant resté ouvert et connecté avec le compte de **Alan Yoo**. Sur l'onglet **Home - Microsoft 365**, cliquez sur l'icône de **Outlook** dans le menu des applications à gauche.
 1. Sur la page **Mail - Alan Yoo - Outlook**, cliquez sur la flêche à droite du bouton **New mail** pour sélectionner **Event**.
-1. Dans le formulaire *Scheduling Assistant*, cliquez sur le champ **Add a title** et saisissez ```Réunion de préparation```.
-1. Dans le formulaire *Scheduling Assistant*, cliquez sur le champ **Invite attendees** et saisissez ```Salle de réunion 1``` pour sélectionner la salle de réunion.
-	> **Note :** A terme, la salle de réunion pourra être sélectionnée dans la zone **Search for a room or location**.
+1. Dans le formulaire *event*, cliquez sur le champ **Add a title** et saisissez ```Réunion de préparation```.
+1. Dans le formulaire *event*, cliquez sur le champ **Invite attendees** et saisissez ```Salle de réunion 1``` pour sélectionner la salle de réunion.
 1. Ajoutez Dominique Skyetson (```dom@[godeployDomain].godeploylabs.com```) comme invitée à la réunion.
 1. Fermez la fenêtre **Réunion de préparation - Meeting** (cliquez sur **Leave** pour confirmer).
 1. Sur la page **Mail - Alan Yoo - Outlook**, faites un clic-droit sur **Folders** et choisissez **Add shared folder or mailbox**.
