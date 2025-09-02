@@ -25,14 +25,15 @@ Vous utiliserez ensuite la VM **LON-CL2** pour installer Microsoft 365 Apps.
 1. Basculez vers **LON-CL2** et connectez-vous en ```.\Admin``` avec le mot de passe ```Pa55w.rd```.
 1. Vous allez commencer par tester si un utilisateur sans licence Office 365 peut ou non installer Microsoft 365 Apps. Pour ce test, vous allez utiliser le compte de **Laura Atkins**. Vous avez créé un compte pour Laura dans [l'atelier 2,exercice1](lab2e1#t%C3%A2che-1---cr%C3%A9ation-dutilisateurs), mais ne lui avez pas affecté de licence. Dans LON-CL2, cliquez sur l'icône **Microsoft Edge** sur la barre des tâches.
 1. Maximisez votre navigateur Internet puis rendez-vous sur la page d'accueil **Microsoft 365** en utilisant l'adresse suivante : ```https://www.microsoft365.com```
-	>**Note :** Si n'importe quel compte est automatiquement connecté, déconnectez-le en cliquant sur l'icône d'utilisateur (rond en haut à droite) et en sélectionnant **Sign out**, retapez ensuite ```https://www.microsoft365.com``` dans la barre d'adresse.
+	>**Note :** Si n'importe quel compte est automatiquement connecté, déconnectez-le nom d'utilisateur (en bas à gauche dans le menu) et en sélectionnant **Sign out**, retapez ensuite ```https://www.microsoft365.com``` dans la barre d'adresse.
 1. Cliquez sur **Sign in**.
 1. Dans la fenêtre **Sign in**, tapez ```Laura@[onmicrosoftDomain].onmicrosoft.com``` avant de cliquer sur **Next**.
 1. Dans la fenêtre **Enter password**, saisissez ```Pa55w.rd``` et cliquez sur **Sign in**.
 1. Dans la boite de dialogue **Update your password**, entrez ```Pa55w.rd``` dans le champ **Current password**, puis entrez ```ibForm@tion``` dans les champs **New password** et **Confirm password**. Cliquez sur **Sign in**.
 1. Si une fenêtre **Stay signed in?** apparait, cochez la case **Don't show this again** et cliquez sur **Yes.**
 1. Si la boite de dialogue **Welcome to Microoft 365** apparait, fermez-la.
-1. Dans la page **Welcome to Microsoft 365** de Laura, cliquez sur **Install and more** puis **Install Microsoft 365 apps**.
+1. Dans la page **What can I help you find?", ouvrez le menu de gauche is nécessaire pour cliquer sur **Apps**.
+1. Sur la page **Apps**, cliquez sur le bouton **Install apps** en haut à droite et sélectionnez **Microsoft 365 apps**.
 1. La fenêtre **My account** de Laura s'affiche.
 1. Cliquez sur le bouton **View apps & devices**.
 1. Dans la section **Office**, vous ne devriez rien trouver...  
@@ -50,13 +51,14 @@ Dominique va désormais tester si les utilisateurs avec licence peuvent être em
 
 1. Vous souhaitez tester si, en désactivant ce paramètre, cela empêche un utilisateur **licencié** d'installer Microsoft 365 Apps for enterprise. Dans ce cas vous allez utiliser le compte de **Alan Yoo**, qui a aussi été créé lors de [l'atelier 2,exercice1](lab2e1#t%C3%A2che-1---cr%C3%A9ation-dutilisateurs); cependant, contrairement à Laura Atkins, vous aviez affecté une licence Office 365 E5 à Alan.
 1. Basculez vers **LON-CL2**.
-1. Sur LON-CL2, vous devriez encore être connecté à l'environnement Microsoft 365 avec le compte de Laura Atkins suite à la tâche précédente. Vous devez d'abord vous déconnecter du compte de Laura, cliquez donc sur son icône (le rond en bas à gauche avec ses initiales **LA**) pour cliquer sur **Sign out**.
+1. Sur LON-CL2, vous devriez encore être connecté à l'environnement Microsoft 365 avec le compte de Laura Atkins suite à la tâche précédente. Vous devez d'abord vous déconnecter du compte de Laura, cliquez donc sur son nom (en bas à gauche) pour cliquer sur **Sign out**.
 	>**Important :** Suite à une déconnexion, il est très fortement conseillé de fermer tous les onglets de votre navigateur sauf celui qui s'appelle **Login**.
 1. Dans l'onglet **Login**, cliquez sur **Switch to a different account**.
 1. Dans le champ **Email address**, saisissez ```alan@[onmicrosoftDomain].onmicrosoft.com``` et cliquez sur **Sign in**
 1. Dans la fenêtre **Enter password**, saisissez ```Pa55w.rd``` et cliquez sur **Sign in.**
 1. Dans la boite de dialogue **Update your password**, tapez ```Pa55w.rd``` dans le champ **Current password**, tapez ensuite ```ibForm@tion``` dans les champs **New password** et **Confirm password** avant de cliquer sur **Sign in**.
-1. Dans la page  **Welcome to Microsoft 365** de Alan, cliquez sur **Install and more** et sélectionnez **Install Microsoft 365 apps**.
+1. Dans la page **What can I help you find?", ouvrez le menu de gauche is nécessaire pour cliquer sur **Apps**.
+1. Sur la page **Apps**, cliquez sur le bouton **Install apps** en haut à droite et sélectionnez **Microsoft 365 apps**.
 1. La fenêtre **My account** de Alan s'affiche. Sous la section **Office apps &amp; devices**, vous ne devriez pas pouvoir installer Office...  
 	>**Important :** Vous venez de vérifier qu'un utilisateur licencié ne peut télécharger Microsoft 365 Apps for enterprise si le paramètre global l'en empêche.
 1. Dominique souhaite désormais réactiver le paramètre d'installation global pour que Alan puisse réaliser l'installation de Microsoft 365 Apps for enterprise.  
@@ -68,7 +70,7 @@ Dominique va désormais tester si les utilisateurs avec licence peuvent être em
 1. Sur LON-CL2, le navigateur Internet devrait être resté ouvert sur la page du compte de Alan contenant la section **Office apps and devices**.  
 	Cliquez sur l'icône **Refresh** du navigateur pour recharger complètement la page.
 	>**Note :** IL pourra être nécessaire d'attendre quelques instants et de recharger de nouveau la page...
-1. Sous la section **Office apps &amp; devices**, un bouton **Install Office** est apparu, précédé d'un message indiquant que Alan peut procéder à l'installation pour 5 PCs ou Macs, 5 tablettes et 5 smartphones.  
+1. Sous la section **Office apps &amp; devices**, un bouton **Install Office** est apparu.  
 	>**Important :** Vous venez de vérifier qu'un utilisateur avec une licence Office affectée est capable de lancer le téléchargement et l'installation de la suite Office depuis son portail si le paramètre global est actif.
 1. Restez sur cette page sur LON-CL2 pour réaliser l'installation *user-driven* dans la tâche suivante.
 

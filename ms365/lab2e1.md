@@ -44,7 +44,7 @@ Dans cette tâche vous allez mettre en place l'environnement permettant la gesti
 	- Select location : **United States**
 	- Licences : Vérifier que l'option **Assign user a product license** est sélectionnée et cochez la case en regard des licences **Microsoft Teams Enterprise** et **Office 365 E5 (no Teams)** 
 	>**Note 1:** Si votre tenant de test vous est fourni avec des licences **Microsoft 365 (no Teams)**, il faudra les utiliser en lieu et place des licences **Office 365 (no Teams)** tout au long de ces ateliers.  
-	>**Note 2:** Si vous ne pouvez affecter de licence à Dominique car toutes celles de votre tenant de test sont déjà consommées, il vous faudra désassigner les licences **Office 365 (no Teams)** et **Microsoft Teams Enterprise** des utilisateurs "Debra Berger", "Grady Archie", "Irvin Sayers" et "Johanna Lorenz" (n'hésitez pas à solliciter votre animateur/animatrice pour vous aider dans cette démarche).  
+	>**Note 2:** Si vous ne pouvez affecter de licence à Dominique car toutes celles de votre tenant de test sont déjà consommées, il vous faudra désassigner les licences **Office 365 (no Teams)** et **Microsoft Teams Enterprise** des utilisateurs "Debra Berger", "Grady Archie", "Irvin Sayers", "Lodoa Holloway" et "Johanna Lorenz" (n'hésitez pas à solliciter votre animateur/animatrice pour vous aider dans cette démarche).  
 1. Cliquez sur **Next.**
 1. Sur la page **Optional settings**, cliquez sur la ligne **Roles (User : no administration access).**
 1. Sélectionnez le bouton radio **Admin center access**. Les rôles les plus souvent affectés vont alors s'afficher.
