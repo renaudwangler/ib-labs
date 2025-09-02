@@ -21,7 +21,7 @@ Dans cette tâche vous allez mettre en place l'environnement permettant la gesti
 1. Dans la partie basse (fond bleu) de la fenêtre **Administrator: Windows PowerShell ISE**, tapez ```install-module microsoft.graph -force``` et faites **[Entrée]**.
 1. S'il vous est demandé si vous souhaitez faire confiance à **NuGet provider**, tapez **Y** pour répondre oui.
 1. S'il vous est demandé de confirmer si vous souhaitez installer les modules depuis la **Powershell Gallery** (PSGallery), tapez **A** pour répondre *Oui à tous*
-1. N'attendez pas que l'installation des modules se termine et que l'ISE vous rende la main (Vous pouvez vérifier la couleur du bouton **Stop** en haut de l'outil qui doit être repassé au gris, s'il est rouge c'est que le processus d'installation n'est pas encore terminé, il peut se passer quelques minutes pendant lesquelles vous aurez l'impression que plus rien n'évolue... Patience donc...).
+1. Vous n'avez pas besoin que l'installation des modules soit terminée et que l'ISE vous rende la main pour la tâche suivante, il faudra que cela soit le cas pour la tâche 5 (Vous pouvez vérifier la couleur du bouton **Stop** en haut de l'outil qui doit être repassé au gris, s'il est rouge c'est que le processus d'installation n'est pas encore terminé, il peut se passer quelques minutes pendant lesquelles vous aurez l'impression que plus rien n'évolue... Patience donc...).
 1. Vous fermerez la fenêtre **Administrator: Windows Powershell ISE** une fois l'installation terminée.
 
 ## Tâche 2 - Création d'utilisateurs par le portail d'administration
@@ -43,6 +43,8 @@ Dans cette tâche vous allez mettre en place l'environnement permettant la gesti
 1. Sur la page **Assign product licenses** , saisissez les informations suivantes:
 	- Select location : **United States**
 	- Licences : Vérifier que l'option **Assign user a product license** est sélectionnée et cochez la case en regard des licences **Microsoft Teams Enterprise** et **Office 365 E5 (no Teams)** 
+	>**Note 1:** Si votre tenant de test vous est fourni avec des licences **Microsoft 365 (no Teams)**, il faudra les utiliser en lieu et place des licences **Office 365 (no Teams)** tout au long de ces ateliers.  
+	>**Note 2:** Si vous ne pouvez affecter de licence à Dominique car toutes celles de votre tenant de test sont déjà consommées, il vous faudra désassigner les licences **Office 365 (no Teams)** et **Microsoft Teams Enterprise** des utilisateurs "Debra Berger" et "Grady Archie" (n'hésitez pas à solliciter votre animateur/animatrice pour vous aider dans cette démarche).  
 1. Cliquez sur **Next.**
 1. Sur la page **Optional settings**, cliquez sur la ligne **Roles (User : no administration access).**
 1. Sélectionnez le bouton radio **Admin center access**. Les rôles les plus souvent affectés vont alors s'afficher.
@@ -67,7 +69,7 @@ Dans cette tâche vous allez mettre en place l'environnement permettant la gesti
 1. Après avoir ajouté le dernier compte (celui de *Laura Atkins*) cliquez sur le bouton **Close** pour revenir à la liste des **Active users**
 1. Vérifiez la liste **Active users**. Vérifiez que chacun des précédents utilisateurs a pour domaine **[onmicrosoftDomain].onmicrosoft.com** et changez-le si ce n'est pas le cas.
 
-## Tâche 2 : Modification d'utilisateurs Microsoft 365
+## Tâche 3 : Modification d'utilisateurs Microsoft 365
 Dans cette tâche, vous allez réaliser quelques actions d'édition de comptes utilisateurs. Vous allez commencer par mettre à jour les informations de contact d'Alan Yoo, avant de l'empêcher de se connecter.  
 >Empêcher la connexion d'un utilisateur est un *best practice* lorsque vous pensez que le compte ou le mot de passe d'un utilisateur a pu être compromis. Ceci évite que l'utilisateur puisse se connecter et, de plus, le déconnectera de tous les services Microsoft 365 dans les 60 minutes.  
 Vous affecterez également une licence produit au compte de Ada Russell.  
@@ -84,7 +86,7 @@ Vous affecterez également une licence produit au compte de Ada Russell.
 1. Sélectionnez le **X** en haut à droite pour fermer le panneau d'informations de **Ada Russell**.
 1. Dans la liste **Active users**, vous pouvez voir qu'une licence a été affectée au compte de **Ada Russell**.
 
-## Tâche 3 - Vérification des paramètres utilisateurs
+## Tâche 4 - Vérification des paramètres utilisateurs
 Dans cette tâche, vous allez vérifier l'impact des changements que vous avez fait aux comptes utilisateurs dans les tâches précédentes. Vous allez ouvrir une session Microsoft 365 en tant que Alan Yoo, afin de valider si son compte est bien empêché de se connecter. 
 1. Vous devez vous déconnecter de Microsoft 365 et vous reconnecter avec le compte de Dominique Skyetson. Sélectionnez le cercle en haut à droite avec **MA** (les initiales de *MOD Administrator*) et cliquez sur **Sign out**.
 1. Une fois qu'une invite apparait vous indiquant que vous êtes correctement déconnecté, fermez votre navigateur Internet pour éviter qu'une session soit restée ouverte sur un autre onglet.
@@ -107,7 +109,7 @@ Dans cette tâche, vous allez vérifier l'impact des changements que vous avez f
 1. Dans le panneau **Unblock sign-in** qui apparait, la case à cocher **Block this user from signing in** est cochée. Décochez cette case avant de cliquer sur **Save changes**.
 1. Une fois le message vert de confirmation apparu indiquant que le compte de Alan Yoo est désormais débloqué, cliquez sur le **X** en haut à droite afin de fermer le panneau **Unblock sign in**.  
 
-## Tâche 4 - Création d'utilisateurs avec Windows Powershell
+## Tâche 5 - Création d'utilisateurs avec Windows Powershell
 Vous devriez avoir fermé la fenêtre **Windows Powershell ISE** qui vous a servi à installer le module Graph en début d'exerice. Ouvrez une nouvelle fenêtre Windows Powershell ISE en tant qu'administrateur (cette manipulation est nécessaire).
 1. Dans la partie basse (fond bleu) de l'outil, tapez la commande suivante avant de taper sur **[Entrée]** pour la valider : ```Connect-MgGraph -scopes User.ReadWrite.All,Group.ReadWrite.All,Domain.ReadWrite.All,Organization.Read.All,UserAuthenticationMethod.ReadWrite.All```.
 1. Dans la fenêtre **Sign in** qui apparaît, connectez-vous avec le compte de Dominique Skyetson : ```dom@[onmicrosoftDomain].onmicrosoft.com``` et son mot de passe (```ibForm@tion```). 
@@ -127,14 +129,14 @@ Vous devriez avoir fermé la fenêtre **Windows Powershell ISE** qui vous a serv
 1. Utilisez la commande suivante pour obtenir la liste des comptes qui n'ont pas de licence associée à leur compte :
 	```Get-MgUser -Filter "assignedLicenses/`$count eq 0 and userType eq 'Member'" -ConsistencyLevel eventual -CountVariable unlicensedUserCount -All```
 1. Utilisez la commande suivante pour obtenir la licence **Office 365 E5** disponible dans le contexte du projet pilote :
-	```$license = Get-MgSubscribedSku|where SkuPartNumber -like Office*```
+	```$license = Get-MgSubscribedSku|where SkuPartNumber -like \*365*```
 	>**Note :** Vous pouvez simplement taper la commande ```$license``` pour afficher le résultat de l'opération précédente avant de passer à la suite.
 1. Utilisez la commande suivante pour affecter la licence au premier compte utilisateur :
 	```Set-MgUserLicense -userId $user1.id -AddLicenses @{SkuId=$license.SkuId} -RemoveLicenses @()```
 1. Utilisez la commande suivante pour affecter la même licence au second compte utilisateur :
 	```Set-MgUserLicense -userId $user2.id -AddLicenses @{SkuId=$license.SkuId} -RemoveLicenses @()```	
 
-## Tâche 5 - Import d'utilisateurs multiples
+## Tâche 6 - Import d'utilisateurs multiples
 Dans cette tâche, vous allez utiliser Windows Powershell pour importer un fichier CSV de nouveaux utilisateurs dans Microsoft 365.  
 1. Tapez la commande suivante avant de taper sur **[Entrée]** pour la valider : ```Invoke-WebRequest "https://raw.githubusercontent.com/renaudwangler/ib-labs/master/ms365/users.csv" | Select-Object -ExpandProperty Content | Out-File ".\users.csv"```.
 1. En utilisant la commande suivante, vous allez pourvoir visualiser le contenu du fichier CSV dans **Notepad** : ```notepad .\users.csv```
