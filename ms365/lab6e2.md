@@ -61,14 +61,14 @@ Dans cette tâche, vous allez utiliser le portail Sharepoint admin center pour c
 
 ## Tâche 4 - Edition des informations de la bibliothèque
 1. Cliquez sur la case au début de la ligne des titres (avant **Name**) pour sélectionner tous les documents.
-1. Cliquez sur l'icone **i** en fin de la ligne de menu du dossier pour ouvrir le panneau de détails.
+1. Cliquez sur l'icone **Details** en fin de la ligne de menu du dossier pour ouvrir le panneau de détails.
 1. Sur le panneau **Bulk edit properties** qui s'affiche, cliquez sur le dernier champ **Validé(e)** pour sélectionner **Non** avant de cliquer sur **Save**.
 1. Cliquez ensuite sur la croix de fermeture en haut à droite du panneau **Bulk edit properties** pour le fermer.
-1. Déselctionnez l'ensemble des fichiers (à l'aide de la case à cocher de sélection dans la ligne de titres)
+1. Déselectionnez l'ensemble des fichiers (à l'aide de la case à cocher de sélection dans la ligne de titres)
 1. Cliquez sur les points de suspension en regard du second nom de fichier **Bold food service[...]** pour sélectionner **Details**
 1. Sur le panneau de détails qui apparait, Cliquez sur le champ **Formateur/trice** pour y saisir ```Victoria Burke```
 1. cliquez sur la valeur **Non** en dessous de **Validé(e)** pour sélectionner **Oui**.
-1. Cliquez sur les points de suspension en regard du quatrième nom de fichier **BModern nursing[...]** pour sélectionner **Details**
+1. Cliquez sur les points de suspension en regard du quatrième nom de fichier **Modern nursing[...]** pour sélectionner **Details**
 1. Sur le panneau de détails qui apparait, Cliquez sur le champ **Formateur/trice** pour y saisir ```Kristi Laar```
 1. cliquez sur la valeur **Non** en dessous de **Validé(e)** pour sélectionner **Oui**.
 
