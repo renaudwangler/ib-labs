@@ -67,10 +67,10 @@ Dans cette tâche, Alan Yoo, en tant qu'administrateur du site Sharepoint de la 
 1. Fermez la fenêtre de navigation privée de Libby.
 1. Faites de nouveau un clic-droit sur l'icône de **Edge** sur la barre des tâches, et dans le menu qui apparaît, choisissez **New InPrivate window**.
 1. Dans la nouvelle sesssion **InPrivate Browsing** de votre navigateur Internet, entrez l'adresse suivante pour ouvrir le site Sharepoint du service formation : ```https://[onmicrosoftDomain].sharepoint.com/sites/Formation```.
-1. Dans la boite de dialogue **Sign in**, entrez ```@[onmicrosoftDomain].onmicrosoft.com``` et cliquez sur **Next**.
-1. Sur la page **Enter password**, saisissez ```Pa55W.Rd``` et cliquez sur **Sign in**.
+1. Dans la boite de dialogue **Sign in**, entrez ```elvis@[onmicrosoftDomain].onmicrosoft.com``` et cliquez sur **Next**.
+1. Sur la page **Enter password**, saisissez ```Pa55w.rd``` et cliquez sur **Sign in**.
 1. Sur la page **Stay signed in?**, cliquez sur **Yes**.
-1. Le site **Training** s'ouvre, confirmant que Elvis Cress y a accès après qu'Alan, administrateur du site lui ait donné accès.
+1. Le site **Formation** s'ouvre, confirmant que Elvis Cress y a accès après qu'Alan, administrateur du site, lui ait donné accès.
 1. Fermez la session de navigation privée de Elvis Cress.
 
 ## Tâche 3 - Configurer le paramètre de partage global de Sharepoint
