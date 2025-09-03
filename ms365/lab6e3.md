@@ -62,11 +62,11 @@ Dans cette tâche, Alan Yoo, en tant qu'administrateur du site Sharepoint de la 
 1. Sur la boite de dialogue **Share 'Formation'**, l'onglet **Invite People** est affiché par défaut. Dans le champ **Enter names or email addresses**, entrez ```Elvis```. Cliquez sur le compte de **Elvis Cress** lorsqu'il apparaît avant de cliquer sur **Share**.  
 	Le nom de Elvis Cress apparaît désormais dans la page **People and Groups - Training Visitors** au côté de Libby Hayward.
 1. Vous allez maintenant vérifier que Libby peut accéder au site Sharepoint du service Formation. Basculez sur la session de navigation privée que vous aviez minimisée.
-1. Rafraichissez la page de demande d'accès au site **Formation** (Il sera probablement nécessaire de retaper l'adresse ```https://[onmicrosoftDomain].sharepoint.com/sites/Training``` pour accéder au site)
+1. Rafraichissez la page de demande d'accès au site **Formation** (Il sera probablement nécessaire de retaper l'adresse ```https://[onmicrosoftDomain].sharepoint.com/sites/Formation``` pour accéder au site)
 1. Le site **Formation** s'ouvre : vous venez de confirmer que Libby peut accéder au site formation d'ib Cegos Workshop suite à l'acceptation de sa demande.
 1. Fermez la fenêtre de navigation privée de Libby.
 1. Faites de nouveau un clic-droit sur l'icône de **Edge** sur la barre des tâches, et dans le menu qui apparaît, choisissez **New InPrivate window**.
-1. Dans la nouvelle sesssion **InPrivate Browsing** de votre navigateur Internet, entrez l'adresse suivante pour ouvrir le site Sharepoint du service formation : ```https://[onmicrosoftDomain].sharepoint.com/sites/Training```.
+1. Dans la nouvelle sesssion **InPrivate Browsing** de votre navigateur Internet, entrez l'adresse suivante pour ouvrir le site Sharepoint du service formation : ```https://[onmicrosoftDomain].sharepoint.com/sites/Formation```.
 1. Dans la boite de dialogue **Sign in**, entrez ```@[onmicrosoftDomain].onmicrosoft.com``` et cliquez sur **Next**.
 1. Sur la page **Enter password**, saisissez ```Pa55W.Rd``` et cliquez sur **Sign in**.
 1. Sur la page **Stay signed in?**, cliquez sur **Yes**.
