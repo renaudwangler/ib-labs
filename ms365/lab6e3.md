@@ -85,7 +85,7 @@ Dans cette tâche, Alan Yoo, en tant qu'administrateur du site Sharepoint de la 
 1. Sur la liste des sites Sharepoint, cliquez sur le nom du site **Formation** (pas sur son adresse *../sites/Formation*).
 1. Sur le panneau **Formation** qui apparaît à droite de l'écran, cliquez sur le dernier onglet **Settings**.
 1. Sur l'onglet **Settings**, l'option **Anyone** devrait être sélectionnée par défaut pour le champ **External file sharing**. Si ce n'est pas le cas, changez-la avant de sauvegarder (avec le bouton *Save*) ce changement.
-1. Fermez ensuite le panneau **Training** avec la croix de fermeture en haut à droite.
+1. Fermez ensuite le panneau **Formation** avec la croix de fermeture en haut à droite.
 1. Dans la liste des sites Sharepoint, cliquez désormais sur l'adresse **../sites/Formation** du site du service formation.
 1. Un nouvel onglet s'ouvre, affichant le contenu du site **Formation**. En haut de ce nouvel onglet (à droite sous le bandeau *Sharepoint*), cliquez sur **Site access**.
 1. dans le panneau **Site access** qui s'affiche, vous pouvez afficher les propriétaires, membres et visiteurs du site. En ouvrant la section **Site visitors - no control**, vous devriez pouvoir vérifier la présence de **Elvis Cress* et **Libby Hayward** ajoutés précédemment.
@@ -93,7 +93,7 @@ Dans cette tâche, Alan Yoo, en tant qu'administrateur du site Sharepoint de la 
 	Votre adresse personnelle apparaît désormais sous le champ, accompagnée d'un message indiquant que cette adresse est en dehors de l'organisation ib cegos Workshop.
 1. Dans le champ **Add a message**, saisissez le message suivant : ```Comme convenu, vous pouvez désormais accéder au site Formation de ib Cegos Workshop.```.
 1. Cliquez ensuite sur le bouton **Share**.
-1. Dans la barre de menu de la page **training**, cliquez sur **Stages**.
+1. Dans la barre de menu de la page **Formation**, cliquez sur **Stages**.
 1. Dans la page **Stages**, cliquez sur le nom du dossier **CVs** pour l'ouvrir.
 1. Sélectionnez le bouton **Share this item with other people** qui s'affiche en regard du premier document de la liste.
 1. Dans la boite de dialogue **Share "ATS office ...letter.docx"** qui s'affiche, entrez l'adresse de messagerie personnelle que vous avez déjà utilisée au point précédent dans le champ **Add a name, group or email** et saisissez ```Voici le CV que nous avions convenu d'étudier avant validation. Il vous est possible de l'éditer.``` dans le champ **Add a message**.
