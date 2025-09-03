@@ -67,9 +67,10 @@ Microsoft ayant eu de nombreux problèmes d'utilisation des domaines *onmicrosof
 1. Dans le formulaire *event*, cliquez sur le champ **Invite attendees** et saisissez ```Salle de réunion 1``` pour sélectionner la salle de réunion.
 1. Ajoutez Dominique Skyetson (```dom@[godeployDomain].godeploylabs.com```) comme invitée à la réunion.
 1. Fermez la fenêtre **Réunion de préparation - Meeting** (cliquez sur **Leave** pour confirmer).
-1. Sur la page **Mail - Alan Yoo - Outlook**, faites un clic-droit sur **Folders** et choisissez **Add shared folder or mailbox**.
-1. Dans le popup **Add shared folder or mailbox**, saisissez l'adresse ```hotline@[godeployDomain].godeploylabs.com```.
-1. Cliquez sur le bouton **Add**.
+1. Sur la page **Mail - Alan Yoo - Outlook**, cliquez sur l'engrenage de paramètrage de la messagerie, en haut à droite.
+1. Sur le panneau **Settings** qui apparait, sélectionnez le premier onglet **Account** et le sous onglet **Shared with me**.
+1. Dans le popup **Add shared email account**, saisissez l'adresse ```hotline@[godeployDomain].godeploylabs.com```.
+1. Cliquez sur le bouton **Continue** puis **Close**.
 1. Constatez que la boite partagée **hotline** apparaît en dessous des autres dossiers de Outlook.
 
 ## Résultat
