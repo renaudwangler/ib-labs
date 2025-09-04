@@ -43,7 +43,7 @@ Dans votre rôle d'administratrice, en tant que Dominique Skyetson, vous allez c
 
 ## Tâche 2 - Création de labels dans le portail *Purview*
 Dominique a décidé de tester la création de labels de données sensibles en utilisant le portail *Purview* et *Windows Powershell*. Dans cette tâche, vous allez d'abord utiliser le portail *Purview* pour créer un premier label.
-1. Dans le menu du portail **Microsoft 365 admin center**, cliquez sur **Compliance** sous la section **Admin centers** (le cas échéant, il vous faudra peut-être basculer sur le **New Microsoft Purview portal**).
+1. Dans le menu du portail **Microsoft 365 admin center**, cliquez sur **Microsoft Purview** sous la section **Admin centers**.
 1. Cliquez sur la case **I agree to the terms of data flow[...]** avant de cliquer sur **Get started**.
 1. Dans le menu de navigation du portail **Microsoft Purview**, cliquez sur **Solutions/Information Protection**.
 1. Dans le menu **Information protection**, cliquez sur le choix **Sensitivity labels**.
