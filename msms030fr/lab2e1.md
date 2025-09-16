@@ -130,7 +130,7 @@ Dans cette tâche, vous allez vérifier l'impact des changements que vous avez f
 1. Dans la fenêtre **Update your password**, entrez de nouveau le mot de passe temporaire de Libby dans le champ **Current password**, et utilisez le mot de passe ```ibForm@tion``` dans les champs **New password** et **Confirm password**. Cliquez sur **Sign in**.
 1. Si une fenêtre **Welcome to Microsoft 365** apparait, cliquez deux fois sur la flèche de droite pour accéder à la validation vous permettant de la fermer.
 1. Vérifiez que vous pouvez accéder à la page d'accueil de Microsoft 365. Notez qu'aucune application n'est présente sur le portail de Libby puisque vous n'avez affecté aucune licence au compte de Libby.
-1. Vous devez désormais vous déconnecter du compte de Libby pour tenter de vous connecter avec le compte de Alan Yoo. Pour vous déconnecter, cliquez sur le cercle en haut à droite contenant **LH** (les initiales de Libby Hayward) et cliquez sur **Sign out**.
+1. Vous devez désormais vous déconnecter du compte de Libby pour tenter de vous connecter avec le compte de Alan Yoo. Pour vous déconnecter, cliquez sur le nom de connexion de Libby Hayward (en bas à gauche)) et cliquez sur **Sign out**.
 1. Une fois déconnecté, ressaisissez l'adresse suivante dans la barre d'adresse de votre navigateur si nécessaire :  
 ```https://www.microsoft365.com```
 1. Dans la page **login**, cliquez sur le choix **Switch to a different account** en dessous du bouton **Sign in**
