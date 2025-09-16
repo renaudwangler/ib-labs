@@ -2,7 +2,7 @@
 #Il permet d'avoir le nécessaire de réalisé pour les ateliers 
 
 Connect-MgGraph -scopes User.ReadWrite.All,Group.ReadWrite.All,Domain.ReadWrite.All,Organization.Read.All,UserAuthenticationMethod.ReadWrite.All -noWelcome
-$wwlDomain = (get-MgDomain | where id -like "M365x*").id
+$wwlDomain = (get-MgDomain | where id -like "*.onmicrosoft.com").id
 $labDomain = (get-MgDomain | where id -like "lab*.godeploylabs.com").id
 $user1 = New-MGuser –UserPrincipalName "catherine@$wwlDomain" –DisplayName "Catherine Richard" -GivenName Catherine -SurName Richard -PasswordProfile @{password='Pa55w.rd';ForceChangePasswordNextSignIn=$false} -UsageLocation CH -AccountEnabled -MailNickname catherine
 $user2 = New-MGuser –UserPrincipalName "tameka@$wwlDomain" –DisplayName "Tameka Reed" -GivenName Tameka -SurName Reed -PasswordProfile @{password='Pa55w.rd';ForceChangePasswordNextSignIn=$false} -UsageLocation CH -AccountEnabled -MailNickname tameka
