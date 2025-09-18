@@ -26,12 +26,12 @@ Dans cette tâche, vous allez utiliser l'assistant d'installation de Entra Conne
 1. Une fois que la machine LON-DC1 a redémarré, connectez-vous dessus avec le compte ```adatum\administrator``` et le mot de passe ```Pa55w.Rd```.
 	>**Note :** Il pourra être intéressant de (re)faire le ménage dans le démarrage du réseau du controleur de domaine avant de poursuivre les manipulations.
 1. Lancez votre navigateur Internet afin de vous rendre à l'adresse ```https://admin.microsoft.com```.
-1.	1. Si besoin, dans la boite **Sign in**, utilisez l'adresse de connexion de Dominique Skyetson (```dom@[onmicrosoftDomain].onmicrosoft.com```) et cliquez sur **Next**.
+1. Si besoin, dans la boite **Sign in**, utilisez l'adresse de connexion de Dominique Skyetson (```dom@[onmicrosoftDomain].onmicrosoft.com```) et cliquez sur **Next**.
 	1. Dans la boite **Enter password**, saisissez ```ibForm@tion``` et cliquez sur **Sign in**.
 	1. Dans la boite **Stay signed in?**, cochez la case **Don’t show this again** et cliquez sur **Yes.**
 1. Dans le menu de navigation à gauche, cliquez sur **Identity** sous la section **Admin centers** (il pourra être nécessaire de cliquer sur **Show All**) afin d'ouvrir le portail d'administration Entra dans un nouvel onglet.
-1. Dans le centre d'administration Entra, cliquez sur **Show more** dans le menu pour pouvoir ouvrir la section **Hybrid management** et cliquer  sur **Microsoft ENtra Connect**.
-1. Dans la page **Microsoft Entra Connect - Het started**, cliquez sur l'onglet **Manage** dans la zone de détails à droite.
+1. Dans le centre d'administration Entra, ouvrez la section **Identity** pour cliquer sur **Entra Connect**.
+1. Dans la page **Microsoft Entra Connect - Get started**, cliquez sur l'onglet **Manage** dans la zone de détails à droite.
 1. Dans la seconde partie, intitulée **Manage from on-premises : Connect Sync**, cliquez sur le bouton **Donwload Connect Sync Agent**.
 1. Dans le panneau *Microsoft Entra Connect Agent** qui s'est ouvert, cliquez sur le bouton **Accept terms & download**.
 	>**Note :** Le téléchargement peut prendre quelques minutes à démarrer dans votre navigateur, sans aucune information... Patience....
