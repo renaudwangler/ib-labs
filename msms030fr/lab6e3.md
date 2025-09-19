@@ -66,7 +66,7 @@ Dans cette tâche, vous allez créer une stratégie d'accès mobile qui place to
 1. Dans le portail **Exchange admin center**, ouvrez le groupe d'options **Mobile** pour cliquer sur **Mobile device access**.
 1. Sur la page **Quarantined Devices**, cliquez sur le bouton **Edit** en haut à droite.
 1. Dans le panneau **Exchange ActiveSync access settings** qui s'affiche, dans la section **Connection Settings**, sélectionnez l'option **Quarantine – Let me decide to block or allow later**.
-1. Sous la section **Quarantine Notification Email Messages**, enter l'adresse email de Dominique (```dom@[godeployDomain].godeploylabs.com``).
+1. Sous la section **Quarantine Notification Email Messages**, enter l'adresse email de Dominique (```dom@[godeployDomain].godeploylabs.com```).
 1. Cliquez sur le bouton **Save** avant de fermer le panneau **Exchange ActiveSync access settings**.
 1. Conservez votre navigateur Internet ouvert pour la tâche suivante.
 
