@@ -54,7 +54,7 @@ Bien que vous ayez déjà accédé au portail général d'administration *Micros
 1. Une fois terminée votre visite du *Microsoft 365 Defender*, fermez l'onglet du navigateur dans lequel vous l'avez ouvert (laissez le navigateur et les autres onglets ouverts).
 
 ## Tâche 6 - Visite de Microsoft Purview 
-1. Suite à la tâche précédente, vous devriez toujours être connecté à **LON-CL1** et votre navigateur Internet devrait être ouvert sur le **Microsoft 365 Admin Center**, connecté en **MOD Administrator**. Dans le menu de navigation, dans la section **Admin centers**, cliquez sur **Compliance**. Un nouvel onglet va s'ouvrir, affichant le portail **Microsoft Purview**.
+1. Suite à la tâche précédente, vous devriez toujours être connecté à **LON-CL1** et votre navigateur Internet devrait être ouvert sur le **Microsoft 365 Admin Center**, connecté en **MOD Administrator**. Dans le menu de navigation, dans la section **Admin centers**, cliquez sur **Microsoft Purview**. Un nouvel onglet va s'ouvrir, affichant le portail **Microsoft Purview**.
 1. Parcourez le **Microsoft Purview**, en sélectionnant chaque entrée de son menu de navigation. Consultez les informations disponibles pour chaque entrée et parcourez les onglets (le cas échéant).
 1. Une fois terminée votre visite du *Microsoft Purview*, fermez l'onglet du navigateur dans lequel vous l'avez ouvert (laissez le navigateur et les autres onglets ouverts).
 1. Laissez, pour finir, votre navigateur Internet ouvert et connecté car vous allez l'utiliser dans le prochain atelier.
