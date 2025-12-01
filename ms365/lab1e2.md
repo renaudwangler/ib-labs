@@ -11,9 +11,7 @@ En tant que Dominique, il vous a été demandé de configurer le profil de l'ent
 ## Tâche 1 - Customisation de l'organisation
 1. Sur LON-DC1, dans le **Microsoft 365 admin center**, dans le menu de navigation de gauche, cliquez sur **Settings** (il pourra être nécessaire de cliquer sur **Show all**) pour en ouvrir le groupe d'options, puis cliquez sur **Org Settings**.
 1. Dans la fenêtre **Org Settings**, c'est l'onglet **Services** qui est affiché par défaut. Puisque vous souhaitez modifier le profil de l'entreprise, cliquez sur l'onglet **Organization profile** pour l'afficher. sélectionnez ensuite **Organization information**.
-1. Dans la fenêtre **Organization information** qui s'affiche, modifiez les informations suivantes :
-    - Name : ```ib Cegos Workshop```
-	- Technical contact : (l'adresse email du compte *MOD Administrator* : ```admin@[onmicrosoftDomain].onmicrosoft.com```)
+1. Dans la fenêtre **Organization information** qui s'affiche, modifiez le champ **Technical contact** pour y mettre l'adresse email du compte *MOD Administrator* : ```admin@[onmicrosoftDomain].onmicrosoft.com```
 1. Cliquez ensuite sur **Save**.
 1. Une fois les modifications sauvegardées, un message ***Saved*** apparaît en haut de la fenêtre dans un encadré vert. Cliquez sur le **X** tout en haut à droite de la fenêtre **Organization information** pour la fermer.
 
