@@ -3,8 +3,8 @@ layout: page
 title: "Intégration de serveur avec ARC"
 synopsis: "Utilisation de l'*Azure Resource Control* pour gérer une machine Windows depuis l'environnement Azure.  
 (L'accès aux resources Azure depuis la machine Windows se fera nativement gràce à une *Managed Identity*)"
-length: "00"
-date: "08/12/2023"
+length: "30"
+date: "10/12/2025"
 ---
 # Scenario
 Dans cet atelier, nous allons illustrer l'utilisation de l'*Azure Resource Control* pour gérer une machine Windows depuis l'environnement Azure.  
@@ -14,15 +14,17 @@ Vous allez commencer par lancer la création d'une machine virtuelle Windows qui
 > **Nota :** La machine créée ici simulera une machine Windows qui ne serait pas hébergée dans Azure  
 
 1. Connectez-vous au portail Azure (http://portal.azure.com) et cliquez sur **+ Create a resource**
-1. Dans la fenêtre **Create a resource**, sélectionnez **Compute** puis cliquez sur **Create** sous **Virtual Machine**.
+1. Dans la fenêtre **Create a resource**, cliquez sur **Create** sous **Virtual Machine**.
 1. Dans la fenêtre **Create a virtual machine**, Utilisez les paramètres suivants dans l'onglet **Basics** (laissez les paramètres non mentionnés à leur valeur par défaut):  
    - **Resource Group:** cliquez **Create new**, utilisez **demoARC** comme nom et cliquez sur **OK**.
    - **Virtual machine name:** **ARC-VM**
    - **Region :** **East US** (ou toute autre région conseillée par votre formateur/trice)
-   - **Image :** Windows Server 2022 Datacenter: Azure Edition - Gen2
-   - **Size :** **Standard_DS1_v2**
-   - **Administrator account - Username :** saisir **Student**
-   - **Administrator account - Password :** saisir **Pa55w.rd1234**
+   - **Availability options:** **No infrastructure redundancy required**
+   - **Security type:** **Standard**
+   - **Image :** **Windows Server 2025 Datacenter Azure Edition - x64 Gen2**
+   - **Size :** **Standard_D2s_v3**
+   - **Administrator account - Username :** saisir ```Student```**
+   - **Administrator account - Password :** saisir ```Pa55w.rd1234```****
 1. Cliquez sur **Review + create** puis, une fois que le message *Validation passed* est apparu, cliquez sur **Create**.
 > **Nota :** Vous avez besoin d'attendre que le déploiement de la machine virtuelle soit terminé pour passer à l'étape suivante.  
 
@@ -30,14 +32,14 @@ Vous allez commencer par lancer la création d'une machine virtuelle Windows qui
 Notre machine virtuelle simule une machine *on premises* et ne doit, à ce titre, pas être connectée avec l'environnement Azure
 1. Connectez-vous au portail Azure (http://portal.azure.com) et cliquez sur **Home** puis sur **Resource groups**
 1. Dans la page **Resource Groups**, cliquez sur le *resource group* **demoARC** pour l'ouvrir
-1. Dans la page **demoARC**, cliquez sur votre machine virtuelle **ARC-VM** pour l'ouvrir
-1. Dans la barre d'outils supérieure de la page **ARC-VM**, cliquez sur **Connect / RDP**
+1. Dans la page **demoARC**, cliquez sur votre machine virtuelle **ARC-VM** pour ouvrir sa page
+1. Dans la barre d'outils supérieure de la page **ARC-VM**, cliquez sur **Connect / Connect**
 1. Dans la page **ARC-VM \| Connect**, cliquez sur le bouton **Download RDP File**
 1. Ouvrez le fichier *ARC-VM.rd* téléchargé depuis votre navigateur Internet et connectez-vous avec les informations suivantes :
     - Nom d'utilisateur : **Student**
-    - Mot de passe : **Pa55w.rd1234**
+    - Mot de passe : ````Pa55w.rd1234````
 1. Une fois la session ouverte, attendez, si nécessaire, qu'elle s'initialise correctement.
-1. Dans la session distante, si le panneau **Networks** s'affiche, cliquez sur **yes**.
+  > **Nota :** Dans la session distante, si le panneau **Networks** s'affiche, cliquez sur **yes**.
 1. Dans le menu démarrer de la machine virtuelle, faites un clic-droit sur **Windows Powershell ISE** et choisissez **More / Run as administrator**
 1. Dans **Windows Powershell ISE**, cliquez sur la petite flèche descendante à coté de la mention **Script** pour faire apparaître le panneau **Untitled.ps1**
 1. Dans le panneau **Untitled.ps1**, saisissez les 3 lignes de code suivantes :
@@ -51,20 +53,17 @@ Notre machine virtuelle simule une machine *on premises* et ne doit, à ce titre
 
 ## Etape 3: Connecter la machine Windows à Azure
 Vous allez maintenant vous connecter à la machine virtuelle pour y installer le nécessaire de connexion en gestion Azure.
-1. Ouvrez le navigateur **Microsoft Edge** et initialisez le navigateur.
+1. Depuis le bureau distant de la machine virtuelle, ouvrez le navigateur **Microsoft Edge** et initialisez le navigateur.
 1. Dans **Microsoft Edge**, connectez-vous au portail Azure (http://portal.azure.com) avec votre compte d'administrateur
-1. Dans le portail Azure, dans la barre de recherche, commencez à saisir **Azure Arc** et cliquez sur le service **Azure Arc**
-1. Dans la page **Azure Arc**, dans la section **Infrastructure**, cliquez sur **Servers**
-1. Dans la page **Azure Arc \| Servers** cliquez sur **+ Add**
-1. Dans la page **Add servers with Azure Arc**, cliquez sur le bouton **Generate script** sur la tuime **Add a single server**
-1. Sur l'onglet **1. Prerequisites**, cliquez sur **Next**
-1. Sur l'onglet **2. Resource details**, utilisez les informations suivantes avant de cliquer sur **Next** :
+1. Dans le portail Azure, dans la barre de recherche, commencez à saisir **Azure Arc** et cliquez sur le choix **Machines - Azure Arc**
+1. Dans la page **Azure Arc \| Machines** cliquez sur **+ Onboard/Create** et choisissez **Onboard existing machine**
+1. Dans la page **Onboard existing machines with Azure Arc**, utilisez les informations suivantes avant de cliquer sur **Download and run script** :
     - **Resource Group :** Sélectionnez **demoARC**
     - **Region :** Sélectionnez la même région que pour la VM précédente.
     - **Operating system :** Selectionnez **Windows**
+    - **Connect SQL Server** Décochez la case
     - **Connectivity method :** Sélectionnez **Public endpoint**
-1. Sur l'onglet **3. tags**, cliquez sur **Next**
-1. Sur l'onglet **Download and run script**, utilisez le bouton **Copy to clipboard** à coté du bouton **Download**
+1. Sur l'onglet **1.Download and run script**, utilisez le bouton **Copy to clipboard** à coté du bouton **Download**
 1. Dans le **Windows Powershell ISE** précédemment utilisé, dans le panneau **Untitled.ps1**, remplacez le contenu par le script copié au point précédent puis cliquez sur la flèche verte **Run Script (F5)**.
 1. Dans la fenêtre de navigateur Internet qui s'ouvre, sélectionnez votre compte administrateur (qui ne doit pas être un compte Microsoft...) pour valider la connexion à Azure (le message "**Authentication complete. You can return to the application. Feel free to close this browser tab.**" valide cette connexion)
 
