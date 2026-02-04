@@ -3,7 +3,7 @@ layout: page
 title: "Installation d'une application Windows Win32 via Intune"
 synopsis: "Tester de manière la plus simple et rapide possible l'outil IntuneAppUtil pour préparer et installer une application Windows Win32 sur un poste géré par Intune'"
 length: "00"
-date: "31/07/2025"
+date: "04/02/2026"
 ---
 # Scenario
 Dans cet atelier, il vous est proposé de tester l'installation via Intune d'une application Win32 sur un poste Windows. Vous allez pouvoir préparer l'application pour installation puis paramètrer son installation par Intune.
@@ -32,7 +32,7 @@ Dans cette étape, vous allez préparer le fichier nécessaire pour que l'instal
 1. Sur la barre des tâches, cliquez sur l'icone de l'explorateur de fichiers **File explorer** pour le lancer.
 1. Dans l'explorateur de fichiers, double-cliquez sur la librairie des téléchargements **Downloads**
 1. Renommez le fichier d'installation **VSCodeUserSetup-x64XXXXXXX.exe** pour en supprimer la version et l'appeler **VSCodeUserSetup-x64.exe**
-1. Dans le dossier des téléchargements, créez un nouveau dossier nommé **vsCode** et glissez-y le fichier **VSCodeUserSetup-x64.exe**
+1. Dans le dossier des téléchargements, créez un nouveau dossier nommé **vsCodeSource** et glissez-y le fichier **VSCodeUserSetup-x64.exe**
 1. Utilisez la recherche de la barre des tâches pour lancer l'outil **Windows Powershell**
 1. Dans la fenêtre **Windows Powershell**, utilisez les commandes suivantes pour préparer le fichier pour Intune :
   1. ```cd .\downloads```
