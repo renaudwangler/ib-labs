@@ -32,7 +32,7 @@ Dans cette tâche vous allez ajouter le domaine DNS d'entreprise à votre tenant
 1. Dans l'environnement d'atelier, ouvrer l'onglet **DNS** et cliquez sur **Add New §** dans la section **TXT Records**
 1. Dans la fenêtre **Add DNS TXT Record**, tapez **@** dans le champ **Name** et la valeur notée au précédent dans le champ **Value** avant de cliquer sur **Save**.
 1. De retour dans la machine virtuelle **LON-DC1**, Sur la page **Add a record to verify ownership**, cliquez sur le bouton **Verify**.
-1. Suyr la page **How do you want to connect to your domain?**, sélectionnez **More options**. Deux options s'affichent : **Add your own DNS records**, et **Skip and do this later (not recommended)**. L'option **Add your own DNS records** est sélectionnée par défaut, cliquez sur le couton **Continue** pour ouvrir la page **Add DNS records**.
+1. Sur la page **How do you want to connect to your domain ?**, sélectionnez **More options**. Deux options s'affichent : **Add your own DNS records**, et **Skip and do this later (not recommended)**. L'option **Add your own DNS records** est sélectionnée par défaut, cliquez sur le bouton **Continue** pour ouvrir la page **Add DNS records**.
 1. La page **Add DNS records** identifie les services qu'une entreprise peut implémenter dans le contexte de son déploiement Microsoft 365 et qui ont besoin d'enregistrements DNS. L'option **Exchange and Exchange Online Protection** devrait être sélectionnée par défaut (sinon, sélectionnez là).
 	> Trois enregistrements DNS sont nécessaires pour les services Exchange - un enregistrement **MX** , un alias **CNAME**, et un enregistrement **TXT**. Sélectionnez chaque enregistrement pour l'ouvrir et prendre note de son contenu à créer.  
     - MX pointe vers ```[godeployDomain]-godeploylabs-com.mail.protection.outlook.com``` avec préférence de **0**  
@@ -40,15 +40,8 @@ Dans cette tâche vous allez ajouter le domaine DNS d'entreprise à votre tenant
     - TXT contient ```v=spf1 include:spf.protection.outlook.com -all```  
 
 1. Plus bas dans la page **Add DNS records** cliquez sur **Advanced Options**.
-1. Trois services additionnels sont affichés ici : **Skype for Business**, **Intune and Mobile Device Management for Microsoft 365** et **DomainKeys Identified Mail (DKIM)**.  
-	> Sélectionnez les cases à cocher des deux premiers services, cela va faire apparaître un ensemble d'enregistrements DNS à créer pour chacun.
-1. Notez que quatre enregistrements DNS sont requis pour **Skype for Business** - deux **CNAME** et deux **SRV**. Sélectionnez chaque enregistrement pour l'afficher et en prendre note  
-	> **Important :** Bien que Teams soit désormais utilisée comme plateforme de collaboration et de conversation en temps réel, il reste nécessaire de sélectionner **Skype for Business**. La raison en est que Teams va s'appuyer sur ces enregistrements DNS pour diverses fonctionnalités qui ne fonctionneront pas correctement sans.  
-    - CNAME associe ```sip``` à ```sipdir.online.lync.com```  
-    - CNAME associe ```lyncdiscover``` à ```webdir.online.lync.com```  
-    - SRV ```_sip._tls``` cible ```sipdir.online.lync.com``` (Priorité **100**, poids **1** et port ```443```)  
-    - SRV ```_sipfederationtls._tcp``` cible ```sipfed.online.lync.com``` (Priorité **100**, poids **1** et port ```5061```)  
-
+1. Deux services additionnels sont affichés ici : **Intune and Mobile Device Management for Microsoft 365** et **DomainKeys Identified Mail (DKIM)**.  
+	> Sélectionnez la case à cocher en regard du premier, cela va faire apparaître un ensemble d'enregistrements DNS à créer.
 1. Notez que deux alias CNAME sont nécessaires au fonctionnement correct de **Intune and Mobile Device Management for Microsoft 365**. Sélectionnez **CNAME Record (2)** pour les afficher et prenez bonne note de leur contenu.  
     - CNAME associe ```enterpriseregistration``` à ```enterpriseregistration.windows.net```  
     - CNAME associe ```enterpriseenrollment``` à ```enterpriseenrollment-s.manage.microsoft.com``` (selon les tenants, peut aussi être associé à ```enterpriseenrollment.manage.microsoft.com```).  
