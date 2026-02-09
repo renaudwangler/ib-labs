@@ -11,7 +11,7 @@ Adatum gère directement les enregistrements de ses domaines DNS. Pour que ce do
 
 # Objectifs
 A la fin de cet exercice, vous aurez une meilleure connaissance de :
-- lL'ajout d'un domaine DNS d'entreprise à un tenant Microsoft 365  
+- L'ajout d'un domaine DNS d'entreprise à un tenant Microsoft 365  
 
 ## Avant de commencer
 Votre formateur/trice pourra, le cas échéant, vous donner quelques indications complémentaires concernant l'environnement d'atelier a distance que vous utiliserez.  
