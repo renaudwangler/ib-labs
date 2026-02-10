@@ -17,13 +17,13 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de l'outil *Micr
 1. Sur la page **Microsoft Remote Connectivity Analyzer**, dans le menu de navigation vertical à gauche, l'onglet **Exchange Online** est affiché par défaut. Sur cet onglet, sélectionnez la tuile intitulée **Exchange Online Custom Domain DNS Connectivity Test**.
 1. Sur la page **Exchange Online Custom Domain DNS Connectivity Test**, saisissez les informations suivantes :  
 	- Entrez ```[onmicrosoftDomain].onmicrosoft.com``` dans le champ **Domain Name**
-	- Dans la section **Service Selection**, Laissez cochée la case **Office 365 (Default)**
+	- Dans la section **Service Selection**, Laissez cochée la case **Microsoft 365 (Default)**
 	- Dans la section  **Verification**, saisissez la suite de caractères affichés en violet (Le code de vérification est insensible à la casse) avant de cliquer sur **Verify**.
 1. Si la vérification se passe correctement, un message apparaît en bas de page indiquant : **You are now verified for the rest of this browser session (30 minute maximum).**
 1. Cliquez sur **Perform Test**.
 	>**Note :** Si vous recevez un message concernant le fait d'avoir réalisé trop de tests les 60 dernières secondes, attendez quelques instant avant de réessayer.
 
-1. Lorsque vous voyez appraître le message **Successfully verified specified external domain name settings for your domain in Office 365**, cliquez sur la flèche basse **V** à gauche de **Test Steps** (cliquez sur le texte **Test Steps** lui-même ne fonctionne pas) afin de parcourir les étapes vérifiées lors de ce test de votre domainde de tenant.
+1. Lorsque vous voyez appraître le message **Successfully verified specified external domain name settings for your domain in Microsoft 365**, cliquez sur la flèche basse **V** à gauche de **Test Steps** (cliquez sur le texte **Test Steps** lui-même ne fonctionne pas) afin de parcourir les étapes vérifiées lors de ce test de votre domainde de tenant.
 
 ## Tâche 2 - Test de connectivité Exchange
 1. Sur la page **Microsoft Remote Connectivity Analyzer**, dans le menu de navigation vertical à gauche, cliquez sur l'onglet **Exchange Online**.

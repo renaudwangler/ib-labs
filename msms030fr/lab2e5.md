@@ -80,7 +80,7 @@ Dans la liste **Active users**, notez que, en passant la souris sur les lignes r
 1. Dans la liste **Active users**, cliquez sur la clef **Reset a password** en regard du compte de **Alan Yoo**.
 1. Dans le panneau **Reset password** pour Alan, si nécessaire, décochez la case **Automatically create a password** et saisissez ```Pa55w.rd``` dans le champ **Password**. Si nécessaire,  sélectionnez la case à cocher **Require this user to change their password when they first sign in**.
 1. Cliquez sur **Reset password**.
-1. Dans la fenêtre **Password has been reseet**, vous devriez voir un message vert indiquant que la réinitialisation du mot de passe a correctement eu lieu. Cliquez sur **close**.
+1. Dans la fenêtre **Password has been reset**, vous devriez voir un message vert indiquant que la réinitialisation du mot de passe a correctement eu lieu. Cliquez sur **close**.
 1. Adatum suppute que le compte de Leila Macdonald's ait pu être compromis récemment. En conséquence, Leanna s'est vu demander de bloquer le compte de Leila pour l'empêcher de se connecter jusqu'à ce que l'équipe sécurité détermine l'étendue du problème. Dans la liste **Active users**, cliquez sur le nom de **Leila Macdonald**.   
 1. Dans le panneau d'informations sur Leila, cliquez sur le bouton **Block sign-in**.
 1. Dans la fenêtre **Block sign-in**, cochez la case **Block this user from signing in** avant de cliquer sur **Save changes**.

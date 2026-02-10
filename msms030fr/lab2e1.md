@@ -60,7 +60,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 1. Sur la page **Assign product licenses** , saisissez les informations suivantes:
 	- Select location : **United States**
 	- Licences : Vérifier que l'option **Assign user a product license** est sélectionnée et cochez les cases en regard des licences **Microsoft 365 E5 (no Teams)**  et **Microsoft Teams Enterprise**
-	- **Apps** : Ouvrez cette section pour décocher **Skype for Business (plan 1)**
+	- **Apps** : Ouvrez cette section pour décocher **Skype for Business Online (plan 1)**
 1. Cliquez sur **Next.**
 1. Sur la page **Optional settings**, cliquez sur la ligne **Roles (User : no administration access).**
 1. Sélectionnez le titre **Admin center access**. Les rôles les plus souvent affectés vont alors s'afficher.
@@ -145,7 +145,7 @@ Dans cette tâche, vous allez vérifier l'impact des changements que vous avez f
 1. Si une fenêtre **Welcome to Microsoft 365** apparait, cliquez deux fois sur la flèche de droite pour accèder à la validation vous permettant de la fermer. 
 1. Dans la page d'accueil **Welcome to Microsot 365**, cliquez sur la tuile **Admin**.
 1. Dans le portail **Microsoft 365 admin center**, dans le menu de navigation à gauche, ouvrez le groupe **Users** pour y sélectionner **Active users**.
-1. Dans la lite **Active users** cliquez sur le nom de **Alan Yoo**.
+1. Dans la liste **Active users** cliquez sur le nom de **Alan Yoo**.
 1. Sur le panneau d'informations de **Alan Yoo** qui apparait, notez qu'il vous est indiqué que le compte de Alan est actuellement bloqué, cliquez sur le bouton **Unblock sign-in**.
 1. Dans le panneau **Unblock sign-in** qui apparait, la case à cocher **Block this user from signing in** est cochée. Décochez cette case avant de cliquer sur **Save changes**.
 1. Une fois le message vert de confirmation apparu indiquant que le compte de Alan Yoo est désormais débloqué, cliquez sur le **X** en haut à droite afin de fermer le panneau **Unblock sign in**.  

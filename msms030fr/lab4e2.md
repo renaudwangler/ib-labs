@@ -23,7 +23,7 @@ Dans cette tâche, vous allez utiliser l'assistant d'installation de Entra Conne
 1. Avant de pouvoir installer Entra Connect, il nous faut activer la version 1.2 du protocole TLS sur LON-DC1. Dans la barre des tâches, cliquez sur l'icône de l'outil **Administrator: Windows PowerSHell ISE** que vous aviez réduit précédemment.
 1. utilisez la commande suivante pour activer le TLS 1.2 et attendez que LON-DC1 redémarre :  
 ```Invoke-Command -ScriptBlock ([Scriptblock]::Create((Invoke-WebRequest 'https://raw.githubusercontent.com/renaudwangler/ib-labs/master/msms030fr/enabletls12.ps1' -useBasicParsing).Content))```
-1. Une fois que la machine LON-DC1 a redémarré, connectez-vous dessus avec le compte ```adatum\administrator``` et le mot de passe ```Pa55w.Rd```.
+1. Une fois que la machine LON-DC1 a redémarré, connectez-vous dessus avec le compte ```adatum\administrator``` et le mot de passe ```Pa55w.rd```.
 	>**Note :** Il pourra être intéressant de (re)faire le ménage dans le démarrage du réseau du controleur de domaine avant de poursuivre les manipulations.
 1. Lancez votre navigateur Internet afin de vous rendre à l'adresse ```https://admin.microsoft.com```.
 1. Si besoin, dans la boite **Sign in**, utilisez l'adresse de connexion de Dominique Skyetson (```dom@[onmicrosoftDomain].onmicrosoft.com```) et cliquez sur **Next**.
