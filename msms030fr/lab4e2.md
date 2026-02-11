@@ -30,7 +30,7 @@ Dans cette tâche, vous allez utiliser l'assistant d'installation de Entra Conne
 	1. Dans la boite **Enter password**, saisissez ```ibForm@tion``` et cliquez sur **Sign in**.
 	1. Dans la boite **Stay signed in?**, cochez la case **Don’t show this again** et cliquez sur **Yes.**
 1. Dans le menu de navigation à gauche, cliquez sur **Identity** sous la section **Admin centers** (il pourra être nécessaire de cliquer sur **Show All**) afin d'ouvrir le portail d'administration Entra dans un nouvel onglet.
-1. Dans le centre d'administration Entra, ouvrez la section **Identity** pour cliquer sur **Entra Connect**.
+1. Dans le centre d'administration Entra, ouvrez la section **Entra Id** pour cliquer sur **Entra Connect**.
 1. Dans la page **Microsoft Entra Connect - Get started**, cliquez sur l'onglet **Manage** dans la zone de détails à droite.
 1. Dans la seconde partie, intitulée **Manage from on-premises : Connect Sync**, cliquez sur le bouton **Donwload Connect Sync Agent**.
 1. Dans le panneau *Microsoft Entra Connect Agent** qui s'est ouvert, cliquez sur le bouton **Accept terms & download**.
@@ -40,7 +40,8 @@ Dans cette tâche, vous allez utiliser l'assistant d'installation de Entra Conne
 1. L'installation de l'outil Entra Connect a démarré, sur la fenêtre **Welcome to Entra Connect**, cochez la case  **I agree to the license terms and privacy notice** avant de cliquer sur **Continue**.
 	>**Note :** Si la fenêtre **Welcome to Entra Connect** n'apparait pas, cherchez son icône dans la barre des tâches (la plus à droite) et cliquez dessus.
 1. Sur la page **Express Settings**, lisez les mentions concernant la synchronisation de la forêt **Adatum** et cliquez sur le bouton **Use express settings**.
-1. Sur la page **Connect to Entra**, saisissez ```dom@[onmicrosoftDomain].onmicrosoft.com``` dans le champ **USERNAME** et ```ibForm@tion``` dans le champ **password**, et cliquez sur **Next**.
+1. Sur la page **Connect to Entra**, saisissez ```dom@[onmicrosoftDomain].onmicrosoft.com``` dans le champ **USERNAME** et cliquez sur **Next**
+1. Connectez vous ensuite avec le compte de Dominique (mot de passe ```ibForm@tion```).
 1. Sur la page **Connect to AD DS**, saisissez ```ADATUM\Administrator``` dans le champ **USERNAME**, et ```Pa55w.rd``` dans le champ **PASSWORD** avant de cliquer sur **Next**.
 1. Dans la page **Entra sign-in configuration**, cochez la case **Continue without matching all UPN suffixes to verified domains** et cliquez sur **Next**.
 1. Sur la page **Ready to configure**, vérifiez que la case **Start the synchronization process when configuration completes** soit cochée avant de cliquer sur **Install**.
@@ -57,7 +58,7 @@ Dans cette tâche, vous allez utiliser l'assistant d'installation de Entra Conne
 ## Tâche 2 - Créer des groupes pour Tester la synchronisation
 Vous allez maintenant créer un nouveau groupe de sécurité dans ADDS, le mettre à jour et l'inclure dans un groupe *built-in* de l'ADDS.  
 Chaque groupe se verra affecté plusieurs membres. Après la synchronisation forcée, vous vérifierez que le groupe de sécurité est désormais visible dans Entra Id. Vous vérifierez également que le groupe *built-in* n'est PAS visible dans Entra Id, bien qu'il comporte des utilisateurs présents dans l'annuaire.  
-Les groupes *Built-in* sont des groupes prédéfinis dans l'ADDS, situés dans le conteneur système **Builtin**. Ils sont créés nativement lors de l'installation de l'ADDS et n'ont d'utilité que dans la mise ne place de la sécurité de l'ADDDS. N'étant pas utiles dans le cloud, vous vérifierez ici qu'ils n'y sont pas synchronisés.
+Les groupes *Built-in* sont des groupes prédéfinis dans l'ADDS, situés dans le conteneur système **Builtin**. Ils sont créés nativement lors de l'installation de l'ADDS et n'ont d'utilité que dans la mise en place de la sécurité de l'ADDS. N'étant pas utiles dans le cloud, vous vérifierez ici qu'ils n'y sont pas synchronisés.
 1. Vous devriez toujours être connecté sur **LON-DC1** avec le compte **Administrator** à l'issue de la tâche précédente.
 1. Si vous aviez fermé l'outil **Server Manager**, réouvrez-le maintenant ; sinon, cliquez sur son icône dans la barre des tâches pour le maximiser.
 1. Dans l'outil **Server Manager**, cliquez sur le menu **Tools** en haut à droite et lancez le **Active Directory Administrative center**.

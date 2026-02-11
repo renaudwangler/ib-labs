@@ -40,6 +40,7 @@ Dans cette tâche vous allez mettre en place l'environnement fondamental pour la
 Dans un exercice précédent, vous avez créé des comptes utilisateurs en utilisant le portail **Microsoft 365 admin center**. Dans cette tâche, vous allez créer deux nouveaux utilisateurs en utilisant Windows PowerShell, avant de leur affecter une licence **Microsoft 365 E5** à chacun. Vous apprendrez ensuite à supprimer un utilisateur et le remettre en production.
 1. Vous devriez être resté connecté sur la machine **LON-CL1** avec le compte **Administrator** et le mot de passe **Pa55w.rd**; l'outil **Windows Powershell ISE** devrait être resté ouvert en tant qu'administrateur. Si nécessaire, maximisez sa fenêtre.
 1. Dans la partie basse (fond bleu) de l'outil, tapez la commande suivante : ```Connect-MgGraph -scopes User.ReadWrite.All,Group.ReadWrite.All,Domain.ReadWrite.All,Organization.Read.All,UserAuthenticationMethod.ReadWrite.All```.
+>**Note :** Le cas échéant, il faudra choisir que le compte de Dominique est "professionnel" (*Work or School account*)
 1. Dans la fenêtre **Sign in** qui apparaît, connectez-vous avec le compte de Dominique Skyetson : ```dom@[onmicrosoftDomain].onmicrosoft.com``` et son mot de passe (```ibForm@tion```). 
 1. Dans la fenêtre **Permission requested**, cochez la case **Consent on behalf of your organization** et cliquez sur **Accept**.
 1. Utilisez désormais la commande suivante pour créer le premier compte utilisateur nommé **Catherine Richard** avec un mot de passe **Pa55w.rd** et un emplacement **CH**.   
@@ -96,7 +97,7 @@ Dans cette tâche, vous allez utiliser Windows Powershell pour importer un fichi
 	```Get-MgUser```
 1. Minimiser l'outil **Administrator : Windows Powershell ISE** et retournez dans votre navigateur Internet. 
 1. Dans le portail **Microsoft 365 admin center** navigez jusqu'à la liste **Active users**. Jetez un oeil au contenu de cette liste pour vérifier que les utilisateurs importés sont bien présents, ainsi que Catherine Richard et Tameka Reed, que vous avez ajouté précédemment par commandes PowerShell.
-1. Dans le **Microsoft 365 admin center**, cliquez syr **Show all** (si nécessaire) pour afficher toutes les entrées de menu. Dans le groupe d'options **Admin centers**, cliquez sur **Exchange**.
+1. Dans le **Microsoft 365 admin center**, cliquez sur **Show all** (si nécessaire) pour afficher toutes les entrées de menu. Dans le groupe d'options **Admin centers**, cliquez sur **Exchange**.
 1. Dans le portail **Exchange admin center**, ouvrez le groupe d'options **Recipients** pour sélectionner **Mailboxes** si vous n'y êtes pas arrivé par défaut. Parcourrez les boites aux lettres et notez qu'aucune boite aux lettres n'a été créée pour les utilisateurs sans licence.
 1. Fermez l'onglet **Exchange Admin Center** dans le navigateur, pour retourner sur l'onglet **Microsoft 365 admin center**. 
 1. Conservez la session ouverte sur la machine virtuelle LON-CL1 pour la tâche suivante

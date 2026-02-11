@@ -26,7 +26,7 @@ Dans cette tâche, vous allez utiliser l'assistant de configuration de Entra Con
 1. Sur la page **SCP configuration**, sélectionnez la case à cocher en regard de **Adatum.com**
 	1. Sélectionnez **Entra Id** dans le champ **Authentication Service**.
 	1. Cliquez sur **Add**.
-	1. Dans la boite de dialogue **Enterprise Admin Credentials**, entrez ```ADATUM\Administrator``` dans le champ **USERNAME** et ```Pa55w.rd``` Dasn le champ **PASSWORD**.
+	1. Dans la boite de dialogue **Enterprise Admin Credentials**, entrez ```ADATUM\Administrator``` dans le champ **USERNAME** et ```Pa55w.rd``` Dans le champ **PASSWORD**.
 	1. Cliquez sur **OK**.
 1. De retour sur la fenêtre **SCP configuration**, cliquez sur **Next**.
 1. Sur la page **Ready to configure**, cliquez sur le bouton **Configure**.
