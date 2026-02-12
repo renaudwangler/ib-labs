@@ -34,7 +34,7 @@ Dans cette tâche, vous allez créer un filtre antiviral pour les pièces jointe
 
 ## Tâche 2 - Créer un filtre de connexion
 Dans cette tâche, vous allez modifier le filtre de connexion par défaut pour y inclure une IP bloquée et une IP de confiance. Tout message venant d'une IP de confiance sera accepté, tandis que tout message venant d'une IP bloquée sera bloqué.
-1. Vous devriez encore être connecté sur **LON-CL1** à l'issue de l'atelier précédent. Les portails **Microsoft 365 admin center**, **Exchange admin center** et **Mircosoft 365 Defender** devraient encore être resté ouverts dans votre navigateur (et vous devriez y être connecté avec le compte de *Dominique Skyetson*).
+1. Vous devriez encore être connecté sur **LON-CL1** à l'issue de l'atelier précédent. Les portails **Microsoft 365 admin center**, **Exchange admin center** et **Microsoft 365 Defender** devraient encore être resté ouverts dans votre navigateur (et vous devriez y être connecté avec le compte de *Dominique Skyetson*).
 1. Dans le portail **Microsoft 365 Defender**, sur la page **Threat policies**, cliquez sur **Anti-spam**.
 1. Dans la liste des stratégies, sélectionnez **Connection filter policy (Default)**.
 1. Une fois le panneau des détails de la stratégie affiché, cliquez sur le lien **Edit connection filter policy**.
@@ -46,7 +46,7 @@ Dans cette tâche, vous allez modifier le filtre de connexion par défaut pour y
 ## Tâche 3 - Créer un filtre antispam
 Pour les clients Microsoft 365 dont les boites aux lettres sont hébergées sur Exchange Online, leurs messages sont automatiquement protégés contre les spams et les virus. Microsoft 365 a des fonctionnalités natives de filtrage antispam et antivirales qui protègent les flux de messages entrants et sortants.  
 En tant qu'administrateur de Adatum, Dominique souhaite activer et maintenir les technologies de filtrage utilisées, qui sont activées par défaut. Ceci étant, il peut customiser l'utilisation de ces technologies dans le contexte de l'entreprise.
-1. Vous devriez encore être connecté sur **LON-CL1** à l'issue de l'atelier précédent. Les portails **Microsoft 365 admin center**, **Exchange admin center** et **Mircosoft 365 Defender** devraient encore être resté ouverts dans votre navigateur (et vous devriez y être connecté avec le compte de *Dominique Skyetson*).
+1. Vous devriez encore être connecté sur **LON-CL1** à l'issue de l'atelier précédent. Les portails **Microsoft 365 admin center**, **Exchange admin center** et **Microsoft 365 Defender** devraient encore être resté ouverts dans votre navigateur (et vous devriez y être connecté avec le compte de *Dominique Skyetson*).
 1. Dans le portail **Microsoft 365 Defender**, sur la page **Anti-spam policies**, cliquez sur **Anti-spam inbound policy (Default)**.
 1. Dans le panneau **Anti-spam inbound policy (Default)** qui s'affiche, descendez pour cliquer sur le lien **Edit actions**.  
 	>**Note :** Dans cette section vous sont présentées une sélection d'options sur la manière dont seront repérés les spam et la manière dont ils seront traités en fonction de leur niveau de gravité.
@@ -62,7 +62,7 @@ En tant qu'administrateur de Adatum, Dominique souhaite activer et maintenir les
 
 ## Tâche 4 - Stratégie *Safe attachment*
 Dans cette dernière tâche, vous allez activer **Defender for Office** pour Sharepoint, OneDrive et Teams et vous allez créer une stratégie *Safe Attachments* qui va permettre de tester les pièces jointes des messages non détectées comme problématiques par l'antivirus. Vous allez configurer la stratégie de sorte que si une pièce jointe est problématique, elle soit retirée du message avant sa livraison au destinataire et qu'une copie du message original soit envoyée dans la boite de Dominique Skyetson pour investigation plus poussée.
-1. Vous devriez encore être connecté sur **LON-CL1** à l'issue de l'atelier précédent. Les portails **Microsoft 365 admin center**, **Exchange admin center** et **Mircosoft 365 Defender** devraient encore être resté ouverts dans votre navigateur (et vous devriez y être connecté avec le compte de *Dominique Skyetson*).
+1. Vous devriez encore être connecté sur **LON-CL1** à l'issue de l'atelier précédent. Les portails **Microsoft 365 admin center**, **Exchange admin center** et **Microsoft 365 Defender** devraient encore être resté ouverts dans votre navigateur (et vous devriez y être connecté avec le compte de *Dominique Skyetson*).
 1. Dans le portail **Microsoft 365 Defender**, en haut de la page **Anti-spam policies**, dans le menu séquentiel, cliquez sur **Threat policies** pour remonter d'un niveau.
 1. Dans la section **Policies**, cliquez sur **Safe attachments**.
 1. Sur la page **Safe attachments**, cliquez sur **Global settings** dans la barre de menu.
@@ -72,7 +72,7 @@ Dans cette dernière tâche, vous allez activer **Defender for Office** pour Sha
 1. Sur la page **Users and domains**, cliquez dans le champ **Domains** et tapez ```onmicrosoft```. Sélectionnez ensuite votre domaine **[onmicrosoftDomain].onmicrosoft.com** et cliquez sur **Next**.
 1. Sur la page **Settings**, dans la section **Safe attachments unknown malware response**, choisissez l'option **Dynamic Delivery**. Cette option permet l'envoi des message traités à leur destinataire dès leur réception, mais sans permettre l'accès à la pièce jointe tant que celle-ci n'a pas été correctement scannée comme sans danger.
 1. Sous la section **Redirect messages with detected attachments**, cochez la case **Enable redirect**.
-1. Dans le champ **Send messages that contain monitored attachments to the specified eemail address**, entrez l'adresse de Dominique Skyetson (```dom@[onmicrosoftDomain].onmicrosoft.com```) avant de cliquer sur **Next**.
+1. Dans le champ **Send messages that contain monitored attachments to the specified email address**, entrez l'adresse de Dominique Skyetson (```dom@[onmicrosoftDomain].onmicrosoft.com```) avant de cliquer sur **Next**.
 1. Sur la page **Review**, cliquez sur le bouton **Submit** puis **Done*.
 	(Vous pouvez aussi cliquer sur **Cancel** puisque cette stratégie ne sera pas testée)
 1. Laissez la session ouverte sur LON-CL1 et ne fermez pas votre navigateur Internet pour l'exercice suivant.

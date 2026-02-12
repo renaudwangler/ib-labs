@@ -6,7 +6,7 @@ date: "15/05/2024"
 script: "msms030.js"
 ---
 # Scénario
-Outlook on the web permet aux utilisateurs d'Adatum d'accèder à leur boite aux lettres depuis un navigateur Interner. Après qu'Adatum ait créé son tenant Microsoft 365 avec Exchange Online, ce dernier inclut une unique stratégie nommée **OWAMailboxPolicy-Default**. Cette stratégie définit les paramètres Outlook on the web pour tous les utilisateurs. Cependant, Dominique Skyetson, par son rôle d'administrateur de Adatum, souhaite créer une stratégie Outlook on the web policy qui s'appliqera à un utilisateur particulier (dans notre cas Alan Yoo). En vérifiant si une telle affectation de straégie par utilisateur fonctionne, Dominique sera dès lors capable de gérer les paramètres de boite aux lettres pour les différentes populations d'utilisateurs de l'entreprise.  
+Outlook on the web permet aux utilisateurs d'Adatum d'accèder à leur boite aux lettres depuis un navigateur Internet. Après qu'Adatum ait créé son tenant Microsoft 365 avec Exchange Online, ce dernier inclut une unique stratégie nommée **OWAMailboxPolicy-Default**. Cette stratégie définit les paramètres Outlook on the web pour tous les utilisateurs. Cependant, Dominique Skyetson, par son rôle d'administrateur de Adatum, souhaite créer une stratégie Outlook on the web policy qui s'appliqera à un utilisateur particulier (dans notre cas Alan Yoo). En vérifiant si une telle affectation de stratégie par utilisateur fonctionne, Dominique sera dès lors capable de gérer les paramètres de boite aux lettres pour les différentes populations d'utilisateurs de l'entreprise.  
 Dominique configurera ensuite une stratégie de boite aux lettres pour les périphériques mobiles qui exige un mot de passe de périphérique, ainsi qu'une stratégie de périphérique mobile permettant de placer en quarantaine tout nouveau périphérique; nécessitant approbation de celui-ci pour qu'il puisse synchroniser les messages.
 
 # Objectifs
@@ -17,7 +17,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 
 
 ## Tâche 1 - Configuration de stratégie Outlook Web App
-1. Vous devriez encore être connecté sur **LON-CL1** à l'issue de l'atelier précédent. Les portails **Microsoft 365 admin center**, **Exchange admin center** et **Mircosoft 365 Defender** (que vous pouvez désormais fermer) devraient encore être resté ouverts dans votre navigateur (et vous devriez y être connecté avec le compte de *Dominique Skyetson*).
+1. Vous devriez encore être connecté sur **LON-CL1** à l'issue de l'atelier précédent. Les portails **Microsoft 365 admin center**, **Exchange admin center** et **Microsoft 365 Defender** (que vous pouvez désormais fermer) devraient encore être resté ouverts dans votre navigateur (et vous devriez y être connecté avec le compte de *Dominique Skyetson*).
 1. Dans le portail **Exchange admin center**, ouvrez le groupe d'options **Roles** pour cliquer sur **Outlook Web App policies**.
 1. Sur la page **Outlook Web App policies**, constatez la présence d'une stratégie par défaut, nommée **OWAMailboxPolicy-Default**. Cette stratégie définit les paramètres de 
  *Outlook on the web* pour tous les utilisateurs.  
@@ -49,14 +49,14 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 1. Dans la fenêtre de composition de nouveau message, tapez ```alan@[godeployDomain].godeploylabs.com``` dans le champ **To**.
 1. Dans le champ **Add a subject**, entrez ```Attachment Test```.
 1. Dans le bandeau, cliquez sur l'icône de pièce jointe et choisissez **Browse This computer**.
-1. Dans la fenêtre **Open**, naviguez vers le dossier **Documents**, sélectionnez **pieceJoint.txt** puis cliquez sur **Open**.
+1. Dans la fenêtre **Open**, naviguez vers le dossier **Documents**, sélectionnez **pieceJointe.txt** puis cliquez sur **Open**.
 1. Cliquez sur **Send**.
 1. Basculez ensuite sur LON-CL2.
 1. Si un navigateur Internet est ouvert sur LON-CL2, fermez-le. Lancez ensuite une nouvelle session de navigation en cliquant sur l'icône de **Edge** dans la barre des tâches.
 1. Ouvrez *Outlook on the Web* pour **Alan Yoo** en vous rendant à l'adresse suivante : ```https://outlook.office365.com```. Si la boite aux lettres de Alan ne s'ouvre pas, connectez-vous avec son compte (```alan@[onmicrosoftDomain].onmicrosoft.com``` et le mot de passe ```ibForm@tion```).
 1. Dans la boite de réception de Alan (*Inbox*), sélectionnez le message reçu de la tâche précédente dont le sujet est **Attachment Test**.
-1. Sélectionnez la flèche descendante à droite du fichier joint **dism.log**.
-1. Dans la boite de Alan, vous ne devriez pas avoir l'option **Donwload** si la stratégie s'est correctement appliquée.
+1. Sélectionnez la flèche descendante à droite du fichier joint **pieceJointe.txt**.
+1. Dans la boite de Alan, vous ne devriez pas avoir l'option **Download** si la stratégie s'est correctement appliquée.
 	>**Note :** La prise en compte de votre stratégie peut prendre quelques minutes. Vous pouvez aussi essayer de faire un *force-refresh* de votre navigateur pour vous assurer que le moteur de Webmail que Alan utilise n'est pas celui qui a été précédemment mis en cache par exemple.
 1. Conservez votre navigateur Internet ouvert pour les ateliers suivants.
 
