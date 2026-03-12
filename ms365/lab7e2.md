@@ -53,6 +53,7 @@ Dans le contexte de son projet pilote, ib Cegos Workshop demande la création d'
 1. Sélectionnez les valeurs suivantes pour chaque paramètre :
 	- **Owners can delete sent messages** : **Off**
 	- **Delete sent messages** : **Off**
+	- **Users can delete messages sent by bots** : **Off**
 	- **Delete chat** : **Off**
 	- **Edit sent messages** : **On**
 	- **Read receipts** : **Turned on for everyone**
@@ -60,9 +61,9 @@ Dans le contexte de son projet pilote, ib Cegos Workshop demande la création d'
 	- **Delete custom emojis** : **Off**
 	- **Chat** : **On**
 	- **Chat with groups** : **On**
-	- **Cusyom avatars for group chats** : **Off**
+	- **Custom avatars for group chats** : **On**
 	- **Giphy in conversations** : **Off**
-	- **Giphy content rating** : **PG (based on the GIPHY Content Rating)**
+	- **Giphy content rating** : **PG (Based on the Giphy content rating)**
 	- **Memes in conversations** : **Off**
 	- **Stickers in conversations** : **Off**
 	- **URL previews** : **On**
@@ -74,13 +75,13 @@ Dans le contexte de son projet pilote, ib Cegos Workshop demande la création d'
 	- **Create voice messages** : **Allowed in chats and channels**
 	- **On mobile devices, display favorite channels about recent chats** : **Not enabled**
 	- **Remove users from a group chat** : **Off**
-	- **Text prediction** : **On**
+	- **Text prediction** : **Off**
 	- **Suggested replies** : **On**
 	- **Chat permission role** : **Restricted permissions**
 	- **Users with full chat permissions can delete any message** : **Off**
 	- **Video messages** : **Off**
 	- **Priority account chat control** : **Off**
-	- **Use Designer to create backgrounds and images** : **Not enabled**
+	- **Automatically share files and Loop links with all people in external chats.** : **Not Enabled**
 1. Cliquez sur **Save.** 
 
 ## Résultat

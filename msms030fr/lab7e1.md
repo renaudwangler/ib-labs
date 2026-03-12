@@ -33,7 +33,7 @@ Dans le rôle de Dominique Skyetson, vous souhaitez maintenant customiser la str
 1. Dans la fenêtre **Global (Org-wide default)** qui s'affiche, sous la section **Meeting join &amp; lobby**, observez chaque paramètre. Comme Adatum a rencontré des problèmes par le passé avec des invités en accès téléphonique entrant de manière inopinée dans des réunion, il vous a été demandé de vérifier que l'option **People dialing-in can bypass the lobby** soit sur **Off**.
 1. Sous la section **Content Sharing**, observez chaque paramètre. Sur le choix **Screen sharing mode**, cliquez sur **Entire screen** pour le changer en **Single application**.
 1. Toujours sous la section **Content Sharing**, basculez le choix **External participants can give or request control** à **On**.
-1. Sous la section **Recording and transcription**, observez chaque paramètre et passez la fonctionnalité de  **Transcription** à **On**.
+1. Sous la section **Recording and transcription**, observez chaque paramètre et assurez vous que la fonctionnalité de  **Transcription** soit sur **On**.
 1. Cliquez sur le bouton **Save** en bas de la page.
 1. Cliquez sur le bouton **Confirm** dans la boite de dialogue **Changes will take time to take effect**.
 1. Conservez votre navigateur Internet ouvert pour la tâche suivante. 
@@ -62,20 +62,26 @@ Dans le contexte de son projet pilote, Adatum demande la création d'une nouvell
 1. Les portails **Microsoft 365 admin center** et **Microsoft Teams admin center** devraient encore être resté ouverts dans votre navigateur (et vous devriez y être connecté avec le compte de *Dominique Skyetson*).
 1. sur le portail **Microsoft Teams admin center**, cliquez sur **Messaging policies** dans le groupe d'options **Messaging**.
 1. Sur la page **Messaging policies**, constatez que seule la stratégie par défaut **Global (Org-wide default)** existe. Cliquez sur **+ Add** dans la barre de menu au-dessus de la liste de stratégies.
-1. Sur la fenêtre **Messaging policies \ Add**, saisissez ```Chat and Channel Messaging Policy``` dans le champ **Add a name for your messaging policy** en haut du formulaire.
+1. Sur la fenêtre **Messaging policies \ Add**, saisissez ```Chat and Channel Messaging Policy``` dans le champ **Name** en haut du formulaire.
 1. Sélectionnez les valeurs suivantes pour chaque paramètre :
 	- **Owners can delete sent messages** : **Off**
 	- **Delete sent messages** : **Off**
+	- **Users can delete messages sent by bots** : **Off**
 	- **Delete chat** : **Off**
 	- **Edit sent messages** : **On**
 	- **Read receipts** : **Turned on for everyone**
+	- **Upload custom emojis** : **Off**
+	- **Delete custom emojis** : **Off**
 	- **Chat** : **On**
 	- **Chat with groups** : **On**
+	- **Custom avatars for group chats** : **On**
 	- **Giphy in conversations** : **Off**
 	- **Giphy content rating** : **PG (Based on the Giphy content rating)**
 	- **Memes in conversations** : **Off**
 	- **Stickers in conversations** : **Off**
 	- **URL previews** : **On**
+	- **Report inappropriate content** : **On**
+	- **Report a security concern** : **On**
 	- **Translate messages** : **On**
 	- **Immersive reader for messages** : **On**
 	- **Send urgent messages using priority notifications** : **On**
@@ -87,6 +93,8 @@ Dans le contexte de son projet pilote, Adatum demande la création d'une nouvell
 	- **Chat permission role** : **Restricted permissions**
 	- **Users with full chat permissions can delete any message** : **Off**
 	- **Video messages** : **Off**
+	- **Priority account chat control** : **Off**
+	- **Automatically share files and Loop links with all people in external chats.** : **Not Enabled**
 1. Cliquez sur **Save.** 
 1. Conservez votre navigateur Internet ouvert pour la tâche suivante.
 
@@ -109,10 +117,14 @@ Créer une file d'attente téléphonique est un processus en deux étapes, dans 
 Maintenant que vous avez créé un compte de ressource pour votre file d'atente, vous allez créer ladite file d'attente et de l'affecter au compte de ressource.
 1. Sur le portail **Microsoft Teams admin center**, cliquez sur **Call queues** dans le groupe d'options **Voice**.
 1. Sur la page **Call queues**, cliquez sur **+ Add** dans la barre de menu en haut de la page.
-1. Sur la page **Call queues \ Add a call queue**, entrez ```Call Queue 1``` dans le champ **Add a name for your call queue** en haut du formulaire.
-1. La page affiche un message indiquant **You haven’t added any resource accounts yet.**. Sous ce message, cliquez sur le bouton **Add**.
+1. Sur la page **Set up Call Queue**, cliquez sur l'engrenage **Classic setup** en bas, pour passer à la création détaillée.
+1. entrez ```Call Queue 1``` dans le champ **Add a name for your call queue** en haut du formulaire.
+1. Sélectionnez **English (United States)** dans le champ **Language**.
+
+1. Dans la section *Resource accounts*, cliquez sur le bouton **Add** (sous le message *You haven’t added any resource accounts yet*).
 1. Sur le panneau **Add account** qui apparaît à droite de l'écran, dans la boite **Search by display or username**, saisissez ```Calling```. Dans le popup qui apparaît, sélectionnez le compte **Calling Queue 1** (s'il n'apparaît pas, patientez un instant avant de rafraichir votre navigateur et de réessayer) en passant votre souris dessus et cliquez sur le bouton **Add** qui apparaît à sa droite.
 1. En bas du panneau **Add accounts** cliquez sur le bouton **Add**. Vous retournez sur la page" **Call Queue 1**, qui affiche désormais **Calling Queue 1** dans la liste des comptes de ressource pour cette file d'attente.
+	> (ne vous préoccupez pas des warnings concernant les licences et les numéros, nous ne testerons pas réellement cette fonctionnalité dans cet atelier).
 1. Sur la fenêtre **Call Queue 1**, cliquez sur **Next**.
 1. Sur la page **Greeting and music**, saisissez les valeurs suivantes :
 	- **Greeting** : **No greeting**
@@ -130,6 +142,7 @@ Maintenant que vous avez créé un compte de ressource pour votre file d'atente,
 	- **Call agents can opt out of taking calls** : **On**
 	- **Call agent alert time (seconds)** : **45** (il pourra être plus simple de taper la valeur dans le champ que d'utiliser le curseur)
 1. Sur la page **Agent selection**, cliquez sur **Next**.
+1. Sur la page **Callback**, n'activez pas la fonctionnalité (valeur par défaut) et cliquez sur **next**.
 1. Sur la page **Exception handling**, laissez les valeurs par défaut et cliquez sur **Next**.
 1. Sur la page **Authorized users**, cliquez sur **Submit**. **Call Queue 1** apparaît désormais dans la liste des files d'attente.
 1. Conservez votre navigateur Internet ouvert pour la tâche suivante.
