@@ -31,7 +31,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 1. Basculez sur le navigateur Edge qui devrai être encore ouvert et connecté avec le compte de **Alan Yoo** sur sa boite aux lettres *Outlook on the web*.
 1. Cliquez sur le menu des applications 365 (le carré de 3 x 3 cases haut à gauche de la page) pour y choisir **OneDrive**.
 1. Si une fenêtre **Welcome to OneDrive for Business** apparaît, fermez-la.
-1. Dans la page **OneDrive**, cliquez sur le bouton **+ Add new** et choisissez **Word document**.
+1. Dans la page **OneDrive**, cliquez sur le bouton **Create or upload** et choisissez **Word document**.
 1. Si une fenêtre **Your privacy option** s'affiche, cliquez sur **Close**.
 1. Dans le document vierge qui s'est ouvert sur un nouvel onglet de navigation dans **Word Online**, tapez un peu de texte témoin et constatez que *Word Online* le sauvegarde en surveillant la petite coche de validation qui apparaît sur le nuage à droite du nom de votre document (**Document**).
 1. Vous souhaitez renommer ce document. Dans la barre de menu de Word Online, cliquez sur le champ contenant le nom du document (*Document*) pour saisir le nouveau nom ```OneDrive Test``` dans le champ **Rename File* et cliquez en-dehors de ce champ. Cela va renommer votre fichier.
