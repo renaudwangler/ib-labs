@@ -32,7 +32,10 @@ Dans cette tâche vous allez mettre en place l'environnement fondamental pour la
 1. Attendez que l'installation des modules se termine et que l'ISE vous rende la main (Vous pouvez vérifier la couleur du bouton **Stop** en haut de l'outil qui doit être repassé au gris, s'il est rouge c'est que le processus d'installation n'est pas encore terminé, il peut se passer quelques minutes pendant lesquelles vous aurez l'impression que plus rien n'évolue).
 1. Pour être sûr que tous les scripts Windows Powershell puissent s'exécuter correctement, il vous faut désactiver le *garde-fou* des stratégies d'exécution. Pour ce faire, utilisez la commande suivante : ```Set-ExecutionPolicy bypass -force```
 	>**Note :** Comme pour les commandes précédentes, il vous faudra taper sur la touche **[Entrée]** pour lancer l'exécution de chaque commande. Nous partirons de ce principe et ne le rappellerons plus après chaque commande.
-1. Laissez la fenêtre **Administrator: Windows Powershell ISE** ouverte pour la tâche suivante.
+1. Laissez la fenêtre **Administrator: Windows Powershell ISE** ouverte pour la tâche suivante.  
+
+>**Note :** Si vous rencontrez un problème sur cet atelier avec l'éditeur Powershell ISE (problème de version de l'éditeur dans les machine svirtuelles de l'atelier), vous pouvez raliser ces manipulations dans l'outil ligne de commande "**Windows Powershell**".  
+
 >**Note :** Si vous n'êtes pas intéressé par le détail des commandes PowerShell, vous pouvez utiliser le script suivant qui va réaliser l'équivalent des commandes des tâches suivantes. Si vous souhaitez utiliser le script, vous pouvez le faire à l'aide de la commande suivante (à l'issue de laquelle vous pouvez passer à l'exercice 5) :  
 ```Invoke-Command -ScriptBlock ([Scriptblock]::Create((Invoke-WebRequest 'https://raw.githubusercontent.com/renaudwangler/ib-labs/master/msms030fr/lab2e4.ps1' -useBasicParsing).Content))```
 
