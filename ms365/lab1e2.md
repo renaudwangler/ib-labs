@@ -22,7 +22,7 @@ En tant que Dominique, il vous a été demandé de configurer le profil de l'ent
 
 ## Tâche 3 - Customisation de l'apparence
 1. De retour sur l'onglet **Organization profile** de la fenêtre **Org settings**, sélectionnez **Custom themes**.
-1. Dans la fenêtre **Customize Microsoft 365 for your organization**, cliquez sur **+ Add theme**
+1. Dans la fenêtre **Customize Microsoft 365 for your organization**, cliquez sur **Default theme**
 1. Dans la fenêtre **Default theme**, prenez le temps de parcourir les différentes options d'affichage et de branding qui s'offrent à vous. Pour les besoins de l'atelier, n'hésitez pas à modifier quelques paramètres ici pour voir comment ils seront appliqués aux utilisateurs de ICW.
 1. Si vous avez fait des changements dans le thème par défaut, cliquez sur **Save** lorsque vous avez terminé. Cliquez ensuite sur le **X** en haut à droite pour fermer la fénêtre **Default theme**.
 
