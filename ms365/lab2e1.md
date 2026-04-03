@@ -101,6 +101,7 @@ Dans cette tâche, vous allez vérifier l'impact des changements que vous avez f
 1. Dans la fenêtre **Sign in**, saisissez **dom@[onmicrosoftDomain].onmicrosoft.com** et cliquez sur **Next**.
 1. Dans la fenêtre suivante, utilisez le mot de passe ```Pa55w.rd``` et cliquez sur **Sign in**.
 1. Dans la fenêtre **Update your password**, saisissez ```Pa55w.rd``` dans le champ **Current password** et saisissez ```ibForm@tion``` dans les champs **New password** et **Confirm password**. Cliquez sur **Sign in**.
+	>**Note :** Si une fenêtre vous invite à configurer l'authentification mutlifactorielle, il vous est conseillé de le faire de suite, pour ne plus avoir à vous en préocuper par la suite....
 1. Si une fenêtre **Welcome to Microsoft 365** apparait, cliquez deux fois sur la flèche de droite pour accèder à la validation vous permettant de la fermer. 
 1. Dans la page d'accueil **Welcome to Microsot 365**, cliquez sur la tuile **Admin** à gauche.
 1. Dans le portail **Microsoft 365 admin center**, dans le menu de navigation à gauche, ouvrez le groupe **Users** pour y sélectionner **Active users**.
