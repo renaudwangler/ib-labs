@@ -138,8 +138,7 @@ Dans cette tâche, vous allez vérifier l'impact des changements que vous avez f
 1. Une fois déconnecté, ressaisissez l'adresse suivante dans la barre d'adresse de votre navigateur si nécessaire :  
 ```https://www.microsoft365.com```
 1. Dans la page **login**, cliquez sur le choix **Switch to a different account** en dessous du bouton **Sign in**
-1. Saisissez ```Alan@[onmicrosoftDomain].onmicrosoft.com``` dans le champ **Email address** avant de cliquer sur **Sign in**.
-1. Dans la fenêtre **Sign in**, cliquez sur **Next**
+1. Saisissez ```Alan@[onmicrosoftDomain].onmicrosoft.com``` dans le champ **Email address** avant de cliquer sur **Next**
 1. Dans la fenêtre **Enter password**, saisissez ```Pa55w.rd``` et cliquez sur **Sign in**.
 1. Sur la fenêtre **Pick an account**, constatez qu'un message d'erreur apparait, indiquant que le compte de Alan a été bloqué. Vous venez de vérifier que Alan ne peut plus se connecter à Microsoft 365.
 1. Vous allez finalement vous connecter avec votre compte admin de Dominique Skyetson, en utilisant le compte nominatif que vous avez créé dans la première tâche de cet exercice. Dans la fenêtre **Pick an account**, sélectionnez donc **+ Use another account**.
