@@ -73,6 +73,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 	- **Password :** Utilisez le mot de passe ```Pa55w.rd```, et, comme pour le compte de Dominique, exigez le changement de mot de passe à la première connexion.
 	- **Licenses :** Affectez une licence **Microsoft 365 E5 (no Teams)** et une licence **Microsoft Teams Enterprise** à l'utilisateur **Alan Yoo**, en décochant l'App **Skype for Business Online (plan1)** comme vous l'avez fait pour Dominique Skyetson. Pour tous les autres utilisateurs, sélectionner l'option **Create user without product license (not recommended)**.
 	- **Roles :** Par défaut chaque utilisateur se verra affecter le rôle **User role (no administration access)**; Cela suffira pour le moment. Dans un futur exercice, vous affecterez des rôles administratifs à certains utilisateurs pour tester la délégation administrative. Ainsi, en arrivant sur la page **Optional settings**, cliquez directement sur **Next**.  
+
 	| **First Name** | **Last Name** | **Display Name** | **username** | **Licence** | **Role** |  
 	|----------------|---------------|------------------|--------------|-------------|----------|  
 	| ```Alan``` | ```Yoo``` | Alan Yoo | ```alan``` | **Microsoft Teams Enterprise** et **Microsoft 365 E5 (no Teams)** | **User** |  
@@ -80,6 +81,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 	| ```Adam``` | ```Hobbs``` | Adam Hobbs | ```adam``` | Sans | **User** |  
 	| ```Libby``` | ``` Hayward``` | Libby Haywards | ```libby``` | Sans | **User** |  
 	| ```Laura``` | ``` Atkins```| Laura Atkins | ```laura``` | Sans | **User** |  
+	
 1. Après avoir ajouté le dernier compte (celui de *Laura Atkins*) cliquez sur le bouton **Close** pour revenir à la liste des **Active users**
 1. Vérifiez la liste **Active users**. Vérifiez que chacun des précédents utilisateurs a pour domaine **[onmicrosoftDomain].onmicrosoft.com** et changez-le si ce n'est pas le cas.
 1. Restez connecté sur LON-CL1 et laissez votre navigateur Internet ouvert pour la tâche suivante de cet atelier.
