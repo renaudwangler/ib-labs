@@ -167,12 +167,12 @@ Dans le cadre du projet pilote *Teams* de Adatum, Dominique Skyetson a été mis
 ## Tâche 7 – Gestion de l'accès externe
 Grâce à la fonctionnalité d'accès externe, les utilisateurs *Teams* d'autres domaines peuvent participer à des appels et des échanges de messages. Vous pouvez cependant bloquer les utilisateurs de certains domaines.  
 Dans le contexte du projet pilote d'Adatum, Dominique Skyetson souhaite bloquer la communication avec tous les domaines Entra Id externes, sauf pour ce qui concerne les utilisateurs de deux entités partenaire de Adatum (microsoft.com et ib.cegos.fr).
-1. Sur le portail **Microsoft Teams admin center**, cliquez sur **External access** dans le groupe d'options **Users**.
+1. Sur le portail **Microsoft Teams admin center**, cliquez sur **External access** dans le groupe d'options **External collaboration settings**.
 1. Sur la page **External access**, cliquez sur le menu **Allow all external domains** et sélectionnez **Allow only specific external domains**
 1. Pour ajouter le domaine avec lequel la communication est autorisée, cliquez sur le bouton **Add external domain**.
-1. Dans le panneau **Add external domain**, saisissez ```microsoft.com``` dans le champ **Domain** avant de cliquer sur **Done**.
+1. Dans le panneau **Add external domain**, saisissez ```microsoft.com``` dans le champ **Enter the external domain you want to allow** avant de cliquer sur **Add** puis **Done**.
 1. Pour ajouter un second domaine autorisé, cliquez sur **+ Add a domain** au-dessus de la liste des domaines autorisés.
-1. Dans le panneau **Add external domain**, saisissez ```ib.cegos.fr``` dans le champ **Domain** avant de cliquer sur **Done**.
+1. Dans le panneau **Add external domain**, saisissez ```ib.cegos.fr``` dans le champ ***Enter the external domain you want to allow** avant de cliquer sur **Add** puis **Done**.
 1. Cliquez sur le bouton **Save** en bas de page.
 1. Dans la boite de dialogue **Changes will take time to take effect**, cliquez sur **Confirm**.
 1. Conservez votre navigateur Internet ouvert pour la tâche suivante. 
@@ -180,7 +180,7 @@ Dans le contexte du projet pilote d'Adatum, Dominique Skyetson souhaite bloquer 
 ## Tâche 8 – Gestion de l'accès invité
 La fonctionnalité d'accès invité de *Teams* permet de gérer si les utilisateurs d'entités externes peuvent être invités dans l'environnement *Teams* et si quelles fonctionnalités sont accessibles à ces utilisateurs invités.  
 Dans le contexte du projet pilote Adatum, Dominique Skyetson va maintenant modifier les fonctionnalités disponibles pour les comptes invités dans le tenant de Adatum.
-1. Sur le portail **Microsoft Teams admin center**, cliquez sur **Guest access** dans le groupe d'options **Users**.
+1. Sur le portail **Microsoft Teams admin center**, cliquez sur **Guest access** dans le groupe d'options **External collaboration settings**.
 1. Dans la fenêtre **Guest access**, assurez-vous que **Guest access** soit sur **On** en tête de formulaire.
 1. Parcourez les paramètres de la section **Messaging** pour modifier les valeurs suivantes :
 	- **Edit sent messages** : **Off**
