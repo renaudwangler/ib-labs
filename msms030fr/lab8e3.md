@@ -41,7 +41,7 @@ Dans l'exercice précédent, vous avez créé un site pour le service formation 
 1. Dans le champ **Add a message**, saisissez le message suivant : ```Comme convenu, vous pouvez désormais accéder au site Formation de Adatum.```.
 1. Cliquez ensuite sur le bouton **Share**.
 1. Dans la barre de menu de la page **training**, cliquez sur **Documents**.
-1. Dans la barre de menu de la page **Documents** qui s'affiche, cliquez sur **+ New** pour choisir **Word document**.
+1. Dans la barre de menu de la page **Documents** qui s'affiche, cliquez sur **+ Create or upload** pour choisir **Word document**.
 1. **Word Online** s'ouvre dans un nouvel onglet de votre navigateur Internet. Si une boite de dialogue **Your privacy option** s'affiche, cliquez sur **Close**.
 1. Dans le document vierge *Word*, tapez quelques mots de test et attendez que le document soit automatiquement sauvegardé (vous pouvez le surveiller en attendant l'icône de nuage marqué d'une coche de validation à droite du nom du **Document**). Cliquez l'icône de nuage à droite du nom du **Document**.
 1. Dans le panneau qui s'affiche, dans le champ **Location**, cliquez sur le lien **Shared Documents**.
