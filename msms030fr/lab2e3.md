@@ -62,7 +62,7 @@ En tant que Dominique Skyetson, vous souhaitez désormais mettre en oeuvre les g
 ## Tâche 2 - Suppression de groupe
 1. Vous souhaitez désormais tester les effets de la suppression d'un groupe. Basculez sur l'onglet **Teams & Microsoft 365 groups**.
 1. Cliquez sur les points de suspension verticaux à droite du groupe **Inside Sales** et cliquez sur **Delete team**. 
-1. Dasn la fenêtre **Delete Inside Sales?**, cliquez sur le bouton **Delete team**.
+1. Dans la fenêtre **Delete Inside Sales?**, cliquez sur le bouton **Delete team**.
 1. Sur la fenêtre **Inside Sales was deleted**, cliquez sur **Close**. 
 1. Vous voilà de retour sur la liste des **Teams & microsoft 365 groups** dans le portail **Microsoft 365 admin center**. Le groupe **Inside Sales** ne devrait plus apparaitre dans cette liste.
 1. Pour vérifier si la suppression d'un groupe a eu un impact sur ses membres, dans le menu de navigation à gauche, cliquez sur le choix **Active users** dans le groupe d'options **Users**.
