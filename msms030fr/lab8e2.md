@@ -88,7 +88,8 @@ Dans cette tâche, Alan Yoo, en tant qu'administrateur du site Sharepoint de la 
 1. Sur la page du site Sharepoint **Training**, Cliquez sur l'icône d'engrenage.
 1. Sur le panneau **Settings**, cliquez sur **Site contents**.
 1. en haut à droite de la page, cliquez sur le bouton **Access requests**.
-1. Sur la page **Access Requests**, vérifiez que la demande de Libby Hayward apparaît sous la section **Pending Requests**. Cliquez sur le bouton **Approve** en regard de la demande de Libby Hayward.
+1. Sur la page **Access Requests**, vérifiez que la demande de Libby Hayward apparaît sous la section **Pending Requests** et cliquez sur les points de suspension à droite de son nom.
+1. Cliquez sur le menu **Permission** pour sélectionner **Training Visitors** avant de cliquer sur le bouton **Approve** en regard de la demande de Libby Hayward.
 1. Sur la page du site Sharepoint **Training**, Cliquez sur l'icône d'engrenage pour sélectionner le lien **Site settings**
 1. Sur la page **Site Settings**, dans la section **Users and Permissions**, cliquez sur **Site permissions**.
 1. Sur l'onglet **Permissions: Training**, dans la liste des utilisateurs ayant accès au site, sélectionnez **Training Visitors**.
