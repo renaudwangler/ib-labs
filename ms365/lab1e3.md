@@ -35,14 +35,8 @@ Dans cette tâche vous allez ajouter le domaine DNS d'entreprise à votre tenant
     - TXT ( de nom ```@```) contient ```v=spf1 include:spf.protection.outlook.com -all```  
 
 1. Plus bas, dans la page **Add DNS records**, cliquez sur **Advanced Options**.
-1. Trois services additionnels sont affichés ici : **Skype for Business**, **Intune and Mobile Device Management for Microsoft 365** et **DomainKeys Identified Mail (DKIM)**.  
-	> Sélectionnez les cases à cocher des deux premiers services, cela va faire apparaître un ensemble d'enregistrements DNS à créer pour chacun.
-1. Notez que quatre enregistrements DNS sont requis pour **Skype for Business** - deux **CNAME** et deux **SRV**. Sélectionnez chaque enregistrement pour l'afficher et en prendre note  
-	> **Important :** Bien que Teams soit désormais utilisée comme plateforme de collaboration et de conversation en temps réel, il reste nécessaire de sélectionner **Skype for Business**. La raison en est que Teams va s'appuyer sur ces enregistrements DNS pour diverses fonctionnalités qui ne fonctionneront pas correctement sans.  
-    - CNAME associe ```sip``` à ```sipdir.online.lync.com```  
-    - CNAME associe ```lyncdiscover``` à ```webdir.online.lync.com```  
-    - SRV ```_sip._tls``` cible ```sipdir.online.lync.com``` (Priorité **100**, poids **1** et port ```443```)  
-    - SRV ```_sipfederationtls._tcp``` cible ```sipfed.online.lync.com``` (Priorité **100**, poids **1** et port ```5061```)  
+1. Deux services additionnels sont affichés ici : **Intune and Mobile Device Management for Microsoft 365** et **DomainKeys Identified Mail (DKIM)**.  
+	> Sélectionnez la cases à cocher en ragrd du premier, cela va faire apparaître un ensemble d'enregistrements DNS à créer.
 
 1. Notez que deux alias CNAME sont nécessaires au fonctionnement correct de **Intune and Mobile Device Management for Microsoft 365**. Sélectionnez **CNAME Record (2)** pour les afficher et prenez bonne note de leur contenu.  
     - CNAME associe ```enterpriseregistration``` à ```enterpriseregistration.windows.net```  
