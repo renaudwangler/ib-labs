@@ -112,8 +112,9 @@ Dans cette tâche, vous allez vérifier l'impact des changements que vous avez f
 
 ## Tâche 5 - Création d'utilisateurs avec Windows Powershell
 Vous devriez avoir fermé la fenêtre **Windows Powershell ISE** qui vous a servi à installer le module Graph en début d'exerice. Ouvrez une nouvelle fenêtre Windows Powershell ISE en tant qu'administrateur (cette manipulation est nécessaire).
-1. Dans la partie basse (fond bleu) de l'outil, tapez la commande suivante avant de taper sur **[Entrée]** pour la valider : ```Connect-MgGraph -scopes User.ReadWrite.All,Group.ReadWrite.All,Domain.ReadWrite.All,Organization.Read.All,UserAuthenticationMethod.ReadWrite.All```.
-1. Dans la fenêtre **Sign in** qui apparaît, connectez-vous avec le compte de Dominique Skyetson : ```dom@[onmicrosoftDomain].onmicrosoft.com``` et son mot de passe (```ibForm@tion```). 
+1. Dans la partie basse (fond bleu) de l'outil, tapez la commande suivante avant de taper sur **[Entrée]** pour la valider : ```Connect-MgGraph -scopes User.ReadWrite.All,Group.ReadWrite.All,Domain.ReadWrite.All,Organization.Read.All,UserAuthenticationMethod.ReadWrite.All```.  
+1. Dans la fenêtre **Sign in** qui apparaît, connectez-vous avec le compte de Dominique Skyetson : ```dom@[onmicrosoftDomain].onmicrosoft.com``` et son mot de passe (```ibForm@tion```).  
+>**Note :** Si vous rencontrez un problème sur cet atelier avec l'éditeur Powershell ISE (problème de version de l'éditeur dans les machine svirtuelles de l'atelier), vous pouvez raliser ces manipulations dans l'outil ligne de commande "**Windows Powershell**".  
 1. Dans la fenêtre **Permission requested**, cochez la case **Consent on behalf of your organization** et cliquez sur **Accept**.
 1. Pour être sûr que tous les scripts Windows Powershell puissent s'exécuter correctement, il vous faut désactiver le *garde-fou* des stratégies d'exécution. Pour ce faire, utilisez la commande suivante : ```Set-ExecutionPolicy bypass -force```
 	>**Note :** Comme pour les commandes précédentes, il vous faudra taper sur la touche **[Entrée]** pour lancer l'exécution de chaque commande. Nous partirons de ce principe et ne le rappellerons donc plus après chaque commande.
