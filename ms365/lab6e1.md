@@ -11,21 +11,21 @@ Dans cet exercice, Dominique Skyetson veut commencer à explorer les sites *Shar
 ## Tâche 1 - Créer un site dans le SharePoint admin center
 Dans cette tâche, vous allez utiliser le portail Sharepoint admin center pour créer un site pour le service formation de ib Cegos Workshop.
 1. Basculez sur la machine virtuelle **LON-CL1**, sur laquelle vous devriez encore être connecté avec le compte **adatum\Administrator** et le mot de passe **Pa55w.rd**.
-1. Les portails **Microsoft 365 admin center**, **Microsoft Defender admin Center** et **Exchange admin center** (qVous pouvez désormais fermer les deux derniers) devraient encore être resté ouverts dans votre navigateur (et vous devriez y être connecté avec le compte de *Dominique Skyetson*).
+1. Les portails **Microsoft 365 admin center**, **Microsoft Defender admin Center** et **Exchange admin center** (Vous pouvez désormais fermer les deux derniers) devraient encore être resté ouverts dans votre navigateur (et vous devriez y être connecté avec le compte de *Dominique Skyetson*).
 1. Dans le portail **Microsoft 365 admin center**, dans le menu de navigation, cliquez sur **Show all** (si nécessaire) puis cliquez sur **Sharepoint** sous la section **Admin centers**. Ceci va ouvrir le portail **SharePoint admin center** dans un nouvel onglet.
 1. Si une boite de dialogue **Take tour** apparaît, cliquez en dehors pour la fermer.
 1. Dans le menu de navigation du **Sharepoint admin center**, cliquez sur le choix **Active sites** dans le groupe d'options **Sites**.
 1. Sur la barre de menu au-dessus de la liste de sites, cliquez sur le bouton **+ Create**.
 1. Sur la page **Create a site: Select the site type**, cliquez sur la tuile **Communication Site**.
 1. Sur la page **Select a template**, choisissez le modèle de site "**Standard communication**". Validez votre choix en cliquant sur **use template**.
-1. Sur la page **Give your site a name**, saisissez ``Formation``` dans le champ **Site name**.
+1. Sur la page **Give your site a name**, saisissez ```Formation``` dans le champ **Site name**.
 1. Dans le champ **Site description**, saisissez ```ib Cegos Workshop - Formations```.
 1. Dans le champ **Site owner**, tapez ```dominique``` et cliquez sur le compte de Dominique Skyetson.
 1. Sur la page **Give your site a name**, cliquez sur le bouton **Next**.
 1. Sur la page **Set language and other options**, cliquez sur le bouton **Create site**. Vous allez retourner sur la page **Active sites**.
 	>**Note :** La création d'un site Sharepoint Online peut prendre quelques minutes. Ne passez pas à la suite des opérations tant que vous ne voyez pas apparaître le site **Formation** dans la liste.
 1. Sur la page **Active sites**, passez votre souris sur la ligne du site **Formation**. Sélectionnez la case à cocher qui s'affiche à gauche du nom du site.
-1. Sélectionnez la ligne du site **Formation** devrait faire apparaître le bouton **Sharing** dans la barre de menu au-dessus de la liste de sites. Si ce bouton n'apparaît pas, vous pouvez tenter de rafraichir la page de votre navigateur.
+1. Sélectionner la ligne du site **Formation** devrait faire apparaître le bouton **Sharing** dans la barre de menu au-dessus de la liste de sites. Si ce bouton n'apparaît pas, vous pouvez tenter de rafraichir la page de votre navigateur.
 1. Cliquez sur le bouton **Sharing** une fois qu'il est apparu sur la barre de menu.
 1. Dans le panneau **Sharing**, sélectionnez **Anyone** avant de cliquer sur **Save** et de fermer le panneau.
 	>**Note :** Les paramètres de site changent pour permettre le partage d'éléments de ce site de la manière la plus ouverte possible.

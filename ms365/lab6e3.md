@@ -1,6 +1,6 @@
 ---
 layout: stage
-title: "Lab6-Ex3 - Définition des autorisatione"
+title: "Lab6-Ex3 - Définition des autorisations"
 length: "00"
 date: "10/01/2025"
 script: "ms365.js"
@@ -52,15 +52,16 @@ Dans cette tâche, Alan Yoo, en tant qu'administrateur du site Sharepoint de la 
 1. Minimisez la fenêtre de navigation privée dans la barre des tâches (sans la fermer) et retournez sur le navigateur Edge ou Alan Yoo est resté connecté.
 1. Sur la page du site Sharepoint **Formation**, Cliquez sur l'icône d'engrenage.
 1. Sur le panneau **Settings**, cliquez sur **Site contents**.
-1. A gauche de la ligne de menu de la page, cliquez sur le bouton **Access requests**.
-1. Sur la page **Access Requests**, vérifiez que la demande de Libby Hayward apparaît sous la section **Pending Requests**. Cliquez sur le bouton **Approve** en regard de la demande de Libby Hayward.
+1. en haut à droite de la page, cliquez sur le bouton **Access requests**.
+1. Sur la page **Access Requests**, vérifiez que la demande de Libby Hayward apparaît sous la section **Pending Requests** et cliquez sur les points de suspension à droite de son nom.
+1. Cliquez sur le menu **Permission** pour sélectionner **Training Visitors** avant de cliquer sur le bouton **Approve** en regard de la demande de Libby Hayward.
 1. Sur la page du site Sharepoint **Formation**, Cliquez sur l'icône d'engrenage pour sélectionner le lien **Site settings**
 1. Sur la page **Site Settings**, dans la section **Users and Permissions**, cliquez sur **Site permissions**.
 1. Sur l'onglet **Permissions: Formation**, dans la liste des groupes ayant accès au site, sélectionnez **Formation Visitors**.
 1. Dans la page **People and Groups - Formation Visitors**, vérifiez que Libby Hayward est bien dans la liste.
 1. Vous souhaitez désormais inviter Elvis Cress à devenir membre du site Formation. Dans la barre de menu au-dessus de la liste des utilisateurs, cliquez sur le bouton **New** et choisissez **Add Users**.
 1. Sur la boite de dialogue **Share 'Formation'**, l'onglet **Invite People** est affiché par défaut. Dans le champ **Enter names or email addresses**, entrez ```Elvis```. Cliquez sur le compte de **Elvis Cress** lorsqu'il apparaît avant de cliquer sur **Share**.  
-	Le nom de Elvis Cress apparaît désormais dans la page **People and Groups - Training Visitors** au côté de Libby Hayward.
+	Le nom de Elvis Cress apparaît désormais dans la page **People and Groups - Formation Visitors** au côté de Libby Hayward.
 1. Vous allez maintenant vérifier que Libby peut accéder au site Sharepoint du service Formation. Basculez sur la session de navigation privée que vous aviez minimisée.
 1. Rafraichissez la page de demande d'accès au site **Formation** (Il sera probablement nécessaire de retaper l'adresse ```https://[onmicrosoftDomain].sharepoint.com/sites/Formation``` pour accéder au site)
 1. Le site **Formation** s'ouvre : vous venez de confirmer que Libby peut accéder au site formation d'ib Cegos Workshop suite à l'acceptation de sa demande.
