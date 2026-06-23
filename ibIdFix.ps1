@@ -14,8 +14,13 @@ function Clean-Value {
 
 function Get-DuplicateValues {
     param($Users, $Attribute)
-    $dup = $Users | Group-Object -Property $Attribute | Where-Object { $_.Count -gt 1 }
-    return $dup}
+    $filtered = $Users | Where-Object {
+        $value = $_.$Attribute
+        $null -ne $value -and
+        $value -ne "" -and
+        $value -ne " "}
+    $duplicates = $filtered | Group-Object -Property $Attribute | Where-Object { $_.Count -gt 1 }
+    return $duplicates}
 
 function Is-TechnicalMailbox {
     param($User)
@@ -99,8 +104,8 @@ foreach ($group in $dupUPN) {
             Attribute      = "UserPrincipalName"
             Value          = $user.UserPrincipalName}}}
 Write-Host "Analyse des doublons email..."
-$dupUPN = Get-DuplicateValues $Users "emailAddress"
-foreach ($group in $dupUPN) {
+$dupEmail = Get-DuplicateValues $Users "emailAddress"
+foreach ($group in $dupEmail) {
     foreach ($user in $group.Group) {
         $Report += [pscustomobject]@{
             Issue          = "Duplicate"
