@@ -1,6 +1,8 @@
 $ExportPath = ".\ibIdFix_Report.csv"
 # Regex basique (inspiré de IdFix)
-$InvalidChars = '[^a-zA-Z0-9\.\-\@\+\:]'
+$InvalidChars = '[^a-zA-Z0-9\.\-\@\+\:]+@[^a-zA-Z0-9\.\-\@\+\:]'
+
+^[^@]+@[^@]+$
 
 function Test-InvalidCharacters {
     param($Value)
@@ -19,47 +21,77 @@ function Get-DuplicateValues {
 
 function Is-TechnicalMailbox {
     param($User)
-    return ($User.proxyAddresses -like "SMTP:SystemMailbox*" -or $User.mail -like "SystemMailbox*")}
+    return ($User.proxyAddresses -like "SMTP:SystemMailbox*" -or $User.mail -like "SystemMailbox*" -or $user.proxyAddresses -like "SMTP:DiscoverySearchMailbox*")}
+
+function Test-UPNSuffix {
+    param($UPN)
+    if (-not $UPN -or $UPN -notmatch "@") {return $false}
+    $suffix = $UPN.Split("@")[1].ToLower()
+    return $script:ValidUPNSuffixes -contains $suffix}
+
+function Test-MultipleAtSymbol {
+    param($Value)
+    if ($null -eq $Value) { return $false }
+    $count = ($Value.ToCharArray() | Where-Object { $_ -eq '@' }).Count
+    return ($count -gt 1)}
+
 
 # Collecte des utilisateurs
 Write-Host "Collecte des objets AD..."
 $Users = Get-ADUser -Filter * -Properties UserPrincipalName, ProxyAddresses, mail
 $Report = @()
+# Collecte des informations de suffixes UPN
+write-host "Collecte des informations de suffixes UPN..."
+$ValidUPNSuffixes = (get-ADForest).UPNSuffixes
+$ValidUPNSuffixes += (get-ADForest).RootDomain
+$ValidUPNSuffixes = $ValidUPNSuffixes | Sort-Object -Unique
 
 # Analyse des attributs
 foreach ($user in $Users) { 
     if (Is-TechnicalMailbox $user) { continue } #Compte de boite Exchange
+
+
+    if (Test-MultipleAtSymbol $user.UserPrincipalName) { #--UPN avec plusieurs @--
+        $Report += [pscustomobject]@{
+            Issue          = "MultipleAtSymbol"
+            SamAccountName = $user.SamAccountName
+            Attribute      = "UserPrincipalName"
+            Value          = $user.UserPrincipalName}
+        continue}
+
     if (Test-InvalidCharacters $user.UserPrincipalName) { # --UPN--
-        $suggestedUPN = Clean-Value $user.UserPrincipalName
         $Report += [pscustomobject]@{
             Issue          = "InvalidCharacters"
             SamAccountName = $user.SamAccountName
             Attribute      = "UserPrincipalName"
-            Value          = $user.UserPrincipalName
-            SuggestedValue = $suggestedUPN}}
+            Value          = $user.UserPrincipalName}
+        continue}
+
+    if (-not (Test-UPNSuffix $user.UserPrincipalName)) { # --UPN Suffix--
+    $currentSuffix = $user.UserPrincipalName.Split("@")[1]
+    $Report += [pscustomobject]@{
+        Issue          = "InvalidUPNSuffix"
+        SamAccountName = $user.SamAccountName
+        Attribute      = "UserPrincipalName"
+        Value          = $user.UserPrincipalName}}
 
     if (Test-InvalidCharacters $user.mail) { # --MAIL--
-        $suggestedMail = Clean-Value $user.mail
         $Report += [pscustomobject]@{
             Issue          = "InvalidCharacters"
             SamAccountName = $user.SamAccountName
             Attribute      = "mail"
-            Value          = $user.mail
-            SuggestedValue = $suggestedMail}}
+            Value          = $user.mail}}
 
     foreach ($proxy in $user.ProxyAddresses) { # --PROXY ADDRESSES--
         if (Test-InvalidCharacters $proxy) {
-            $suggestedProxy = Clean-Value $proxy
             $Report += [pscustomobject]@{
                 Issue          = "InvalidCharacters"
                 SamAccountName = $user.SamAccountName
                 Attribute      = "proxyAddresses"
-                Value          = $proxy
-                SuggestedValue = $suggestedProxy
-            }}}}
+                Value          = $proxy}}}}
 
 # Recherche de doublons
-Write-Host "Analyse des doublons..."
+Write-Host "Analyse des doublons UPN..."
 $dupUPN = Get-DuplicateValues $Users "UserPrincipalName"
 foreach ($group in $dupUPN) {
     foreach ($user in $group.Group) {
@@ -67,9 +99,16 @@ foreach ($group in $dupUPN) {
             Issue          = "Duplicate"
             SamAccountName = $user.SamAccountName
             Attribute      = "UserPrincipalName"
-            Value          = $user.UserPrincipalName
-            SuggestedValue = "A corriger manuellement"
-        }}}
+            Value          = $user.UserPrincipalName}}}
+Write-Host "Analyse des doublons email..."
+$dupUPN = Get-DuplicateValues $Users "emailAddress"
+foreach ($group in $dupUPN) {
+    foreach ($user in $group.Group) {
+        $Report += [pscustomobject]@{
+            Issue          = "Duplicate"
+            SamAccountName = $user.SamAccountName
+            Attribute      = "emailAddress"
+            Value          = $user.emailAddress}}}        
 
 # Export du rapport
 $Report | Export-Csv -Path $ExportPath -NoTypeInformation -Encoding UTF8
