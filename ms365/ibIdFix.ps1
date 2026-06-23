@@ -17,14 +17,19 @@ function Get-DuplicateValues {
     $dup = $Users | Group-Object -Property $Attribute | Where-Object { $_.Count -gt 1 }
     return $dup}
 
+function Is-TechnicalMailbox {
+    param($User)
+    return ($User.SamAccountName -like "SystemMailbox*" -or $User.SamAccountName -like "HealthMailbox*" -or $User.SamAccountName -like "DiscoverySearchMailbox*" -or $User.SamAccountName -like "Migration*" -or $User.SamAccountName -like "FederatedEmail*" -or $User.SamAccountName -like "Exchange*" -or $User.UserPrincipalName -like "*systemmailbox*")}
+
 # Collecte des utilisateurs
 Write-Host "Collecte des objets AD..."
 $Users = Get-ADUser -Filter * -Properties UserPrincipalName, ProxyAddresses, mail
 $Report = @()
 
 # Analyse des attributs
-foreach ($user in $Users) { # --UPN--
-    if (Test-InvalidCharacters $user.UserPrincipalName) {
+foreach ($user in $Users) { 
+    if (Is-TechnicalMailbox $user) { continue } #Compte de boite Exchange
+    if (Test-InvalidCharacters $user.UserPrincipalName) { # --UPN--
         $suggestedUPN = Clean-Value $user.UserPrincipalName
         $Report += [pscustomobject]@{
             SamAccountName = $user.SamAccountName
