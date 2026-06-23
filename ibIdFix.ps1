@@ -1,6 +1,6 @@
 $ExportPath = ".\ibIdFix_Report.csv"
 # Regex basique (inspiré de IdFix)
-$InvalidChars = '[^a-zA-Z0-9\.\-\@\+\:]+@[^a-zA-Z0-9\.\-\@\+\:]'
+$InvalidChars = '[^a-zA-Z0-9.\-@+:]'
 
 ^[^@]+@[^@]+$
 
