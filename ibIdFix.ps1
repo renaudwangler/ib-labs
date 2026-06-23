@@ -2,8 +2,6 @@ $ExportPath = ".\ibIdFix_Report.csv"
 # Regex basique (inspiré de IdFix)
 $InvalidChars = '[^a-zA-Z0-9.\-@+:]'
 
-^[^@]+@[^@]+$
-
 function Test-InvalidCharacters {
     param($Value)
     if ($null -eq $Value) { return $false }
