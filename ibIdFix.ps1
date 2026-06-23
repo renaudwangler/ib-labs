@@ -41,7 +41,7 @@ function Test-MultipleAtSymbol {
 
 # Collecte des utilisateurs
 Write-Host "Collecte des objets AD..."
-$Users = Get-ADUser -Filter * -Properties UserPrincipalName, ProxyAddresses, mail
+$Users = Get-ADUser -Filter 'enabled -eq $true' -Properties UserPrincipalName, ProxyAddresses, mail, emailAddress
 $Report = @()
 # Collecte des informations de suffixes UPN
 write-host "Collecte des informations de suffixes UPN..."
