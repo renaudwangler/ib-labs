@@ -36,38 +36,30 @@ Dans cette tâche, vous allez utiliser un script pour implémenter quelques erre
 1. Lancez ensuite ledit script dans la fenêtre **Administrator: Windows PowerShell** :
 	```.\problemUsers.ps1```
 	>**Note :** Vous devriez pouvoir exécuter ce script sans problème car vous avez déjà changé la stratégie d'exécution des scripts sur LON-DC1 dans l'atelier 2.
-1. Attendez que le script ait terminé son exécution avant de fermer la fenêtre **Administrator: Windows PowerShell** et de poursuivre sur la tâche suivante.
+1. Attendez que le script ait terminé son exécution avant de poursuivre sur la tâche suivante.
 
-## Tâche 3 - Identification et correction des problèmes avec IdFix
-Dans cette tâche vous allez appréhender l'utilisation de l'outil **idFix** pour identifier et corriger les problèmes sur vos objets ADDS avant de mettre en place la synchronisation de ce dernier vers Entra Id.
+## Tâche 3 - Identification et correction des problèmes avec powerShell
+Dans cette tâche vous allez appréhender l'utilisation d'un script powerShell pour identifier et corriger les problèmes sur vos objets ADDS avant de mettre en place la synchronisation de ce dernier vers Entra Id.
 1. Vous devriez être encore connecté sur **LON-DC1** à l'issue de la tâche précédente.
-1. Si votre navigateur Internet n'est pas ouvert, cliquez sur l'icône de **Edge** dans la barre des tâches et maximisez-le.
-1. Dans votre navigateur, dans la barre d'adresse, rendez-vous à l'adresse suivante pour télécharger l'outil **idFix** : ```https://microsoft.github.io/idfix/```
-1. Dans la page **Microsoft - IdFix**, Cliquez sur le titre **Step 2: Install IdFix** dans le menu de navigation à gauche.
-1. Sous la section **Step 2: Install IdFix** en haut de page, les instructions vous proposent de télécharger et lancer **setup.exe**. Cliquez sur **setup.exe** pour télécharger le fichier sur LON-DC1.
-1. Une fois le fichier **setup.exe** téléchargé, il apparaîtra normalement dans la barre de notifications en haut à droite de votre navigateur (si ce n'est pas le cas, retrouvez le dans le répertoire **Downloads** de LON-DC1). Cliquez sur **Open File** pour lancer l'installation.
-1. Si une fenêtre **Do you want to run this file?** apparaît, cliquez sur **Run**.
-1. Dans la fenêtre **Do you want to install this application?**, cliquez sur **Install**.
-1. Sur le message **IdFix Privacy Statement**, cliquez sur **OK**.
-1. Dans la fenêtre **IdFix** qui s'affiche, sur la barre bleue en haut, cliquez sur **Query** pour lancer l'analyse de votre ADDS.
-1. Si un message **Schema Warning** s'affiche, cliquez sur le bouton **Yes** (faites de même à chaque fois que ce message apparait).  
-	Après un instant, idFix devrait vous afficher quelques erreurs.
-1. Cliquez sur le titre de la colonne **ERROR** pour trier les lignes en ordre alphabétique.
-	>**Note :** Si des erreurs de type **topleveldomain** apparaissent, contentez-vous ici de les ignorer car l'outil idFix peut les identifier mais pas les réparer.
-1. Sur la ligne de **Klemen Sic**, sélectionnez la valeur **EDIT** grâce au menu dans la colonne **ACTION**.
-1. Dans la barre de menu bleue, cliquez sur le bouton **Apply**.
-1. Dans la boite de dialogue **Apply Pending** cliquez sur **Yes**.
-	>**Note :** Constatez que la valeur de la colonne **Action** a changé de **EDIT** vers **COMPLETE** pour Klemen, indiquant ainsi que IdFix a mis à jour l'objet utilisateur et corrigé l'erreur.
-1. Sur la barre de menu bleue, cliquez sur **Query** pour relancer la requête et raffraîchir les résultats.
-1. Vérifiez que Klemen n'apparaît plus dans la liste des erreurs.
-1. Trouvez la ligne de **Logan Boyle**. La colonne **VALUE** pour Logan a été incorrectement saisie en **Lara@adatum.com**, ce qui produit un doublon avec le compte de Lara Raisic, qui est aussi dans la liste.  
-	Pour corriger l'email de Logan, vous devez déjà choisir la valeur **Lara@adatum.com** dans la colonne **UPDATE** de Logan et la remplacer en saisissant ```logan@adatum.com```. 
-1. Sélectionnez ensuite le champ **ACTION** sur la ligne de Logan et choisissez **EDIT**.
-1. Dans la barre de menu bleue, cliquez sur le bouton **Apply**.
-1. Dans la boite de dialogue **Apply Pending** cliquez sur **Yes**.
-1. Sur la barre de menu bleue, clqiuez sur **Query** pour relancer la requête et raffraîchir les résultats.
-1. Vérifiez que Logan et Lara n'apparaissent plus dans la liste des erreurs.
-1. Fermez l'outil **idFix**, vous êtes prêt à mettre en place la synchronisation.
+1. Dans la fenêtre **Administrator: WIndows Powershell**, utilisez la commande suivante pour récupérer le script que vous utiliserez ensuite :
+	```Invoke-WebRequest "https://raw.githubusercontent.com/renaudwangler/ib-labs/master/ibIdFix.ps1" | Select-Object -ExpandProperty Content | Out-File ".\ibIdFix.ps1"```
+1. Lancez ensuite ledit script dans la fenêtre **Administrator: Windows PowerShell** :
+	```.\pibIdFix.ps1```  
+1. Une foix que le script a terminé, il génère un export des problèmes en .csv et ouvre une fenêtre **$Report|out-gridview** vous permettant de constater les comptes posant problèmes dans l'ADDS et qu'il serait impossible de synchroniser correctement.
+	- La première ligne indique un problème dans la syntaxte UPN de l'utilisateur *Klemen*,
+	- Les secondes et troisièmes lignes indiquent que deux comptes ont l'attribut emailAddress dédoublé.
+	- Notez également que le domaine des deux derniers comptes en erreur n'est pas légitime dans l'environnement de l'atelier.
+1. Ouvrez donc l'outil **Server Manager** (depuis le menu démarrer si vous l'aviez fermé) pour cliquer sur le menu **Tools/Active Directory Administrative Center**.
+1. Dans l'outil **Active Directory Administrative center**, saisissze ```klemen``` dans le champ **Search** (à droite, dans l'ancadré **Global Search**).
+1. Dans la fenêtre de résultat, double-cliquez sur l'utilisateur **Klemen Sic** pour supprimer le caractère **@** après son prénom dans le champ **User UPN logon**.
+1. Cliquez sur **OK** pour valider le changement.
+1. Dans la fenêtre **Global Search**, effaçez le nom **Klemen** et saisissez le nom ```Logan``` avant d'appuyer sur **Entrée**.
+1. Dans la fenêtre de résultat, double-cliquez sur l'utilisateur **Logan Boyle** pour corriger le contenu de son champ **E-mail** avec la valeur ```logan@[godeployDomain].godeploylabs.com```.
+1. Cliquez sur **OK** pour valider le changement.
+1. Dans la fenêtre **Global Search**, effaçez le nom **Logan** et saisissez le nom ```Lara``` avant d'appuyer sur **Entrée**.
+1. Dans la fenêtre de résultat, double-cliquez sur l'utilisateur **Lara Raisic** pour corriger le contenu de son champ **E-mail** avec la valeur ```lara@[godeployDomain].godeploylabs.com```.
+1. Cliquez sur **OK** pour valider le changement.
+1. Fermez l'outil **Active Directory Administrative Center**, vous êtes prêt à mettre en place la synchronisation.
 
 ## Résultat
 Dans cet exercice, vous avez préparé votre environnement ADDS pour la mise en place de la synchronisation avec Entra Id.
