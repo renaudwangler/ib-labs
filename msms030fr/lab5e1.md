@@ -24,15 +24,15 @@ C'est pourquoi vous devez d'abord utiliser un compte ADDS pour vous connecter. P
 Vous utiliserez ensuite la VM **LON-CL2** pour installer Microsoft 365 Apps.
 1. Basculez vers **LON-CL2** et connectez-vous en **.\Admin** avec le mot de passe **Pa55w.rd**.
 1. Vous allez commencer par tester si un utilisateur sans licence Microsoft 365 Apps peut ou non installer Microsoft 365 Apps. Pour ce test, vous allez utiliser le compte de **Laura Atkins**. Vous avez créé un compte pour Laura dans [l'atelier 2,exercice1](lab2e1#t%C3%A2che-1---cr%C3%A9ation-dutilisateurs), mais ne lui avez pas affecté de licence. Dans LON-CL2, cliquez sur l'icône **Microsoft Edge** sur la barre des tâches.
-1. Maximisez votre navigateur Internet puis rendez-vous sur la page d'accueil **Microsoft 365** en utilisant l'adresse suivante : ```https://www.microsoft365.com```
-	>**Note :** Si n'importe quel compte est automatiquement connecté, déconnectez-le en cliquant sur l'icône d'utilisateur (rond en haut à droite) et en sélectionnant **Sign out**, retapez ensuite ```https://www.microsoft365.com``` dans la barre d'adresse.
+1. Maximisez votre navigateur Internet puis rendez-vous sur la page d'accueil **Microsoft 365** en utilisant l'adresse suivante : ```https://m365.cloud.microsoft```
+	>**Note :** Si n'importe quel compte est automatiquement connecté, déconnectez-le en cliquant sur l'icône d'utilisateur (rond en haut à droite) et en sélectionnant **Sign out**, retapez ensuite ```https://m365.cloud.microsoft``` dans la barre d'adresse.
 1. Cliquez sur **Sign in**.
 1. Dans la fenêtre **Sign in**, tapez ```Laura@[onmicrosoftDomain].onmicrosoft.com``` avant de cliquer sur **Next**.
 1. Dans la fenêtre **Enter password**, saisissez ```Pa55w.rd``` et cliquez sur **Sign in**.
 1. Dans la boite de dialogue **Update your password**, entrez ```Pa55w.rd``` dans le champ **Current password**, puis entrez ```ibForm@tion``` dans les champs **New password** et **Confirm password**. Cliquez sur **Sign in**.
 1. Si une fenêtre **Stay signed in?** apparait, cochez la case **Don't show this again** et cliquez sur **Yes.**
 1. Si la boite de dialogue **Welcome to Microsoft 365** apparait, fermez-la.
-1. Dans la page **What can I help you find?", ouvrez le menu de gauche is nécessaire pour cliquer sur **Apps**.
+1. Dans la page **Hi,What can I help you with?**", ouvrez le *App Launcher* (les 9 carrés en haut à gauche) pour cliquer sur **More apps**.
 1. Sur la page **Apps**, cliquez sur le bouton **Install apps** en haut à droite et sélectionnez **Microsoft 365 apps**.
 1. La fenêtre **My account** de Laura s'affiche.
 1. Cliquez sur le bouton **View apps & devices**.
@@ -57,7 +57,7 @@ Dominique va désormais tester si les utilisateurs avec licence peuvent être em
 1. Dans le champ **Email address**, saisissez ```alan@[onmicrosoftDomain].onmicrosoft.com``` et cliquez sur **Sign in**
 1. Dans la fenêtre **Enter password**, saisissez ```Pa55w.rd``` et cliquez sur **Sign in.**
 1. Dans la boite de dialogue **Update your password**, tapez ```Pa55w.rd``` dans le champ **Current password**, tapez ensuite ```ibForm@tion``` dans les champs **New password** et **Confirm password** avant de cliquer sur **Sign in**.
-1. Dans la page **What can I help you find?**, ouvrez le menu de gauche si nécessaire pour cliquer sur **Apps**.
+1. Dans la page **Hi,What can I help you with?**", ouvrez le *App Launcher* (les 9 carrés en haut à gauche) pour cliquer sur **More apps**.
 1. Sur la page **Apps**, cliquez sur le bouton **Install apps** en haut à droite et sélectionnez **Microsoft 365 apps**.
 1. La fenêtre **My account** de Alan s'affiche. Sous la section **Office apps &amp; devices**, vous ne devriez pas pouvoir installer Office...  
 	>**Important :** Vous venez de vérifier qu'un utilisateur licencié ne peut télécharger Microsoft 365 Apps for enterprise si le paramètre global l'en empêche.
