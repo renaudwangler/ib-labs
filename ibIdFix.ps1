@@ -19,7 +19,7 @@ function Get-DuplicateValues {
 
 function Is-TechnicalMailbox {
     param($User)
-    return ($User.SamAccproxyAddresses -like "SMTP:SystemMailbox*" -or $User.mail -like "SMTP:SystemMailbox*")}
+    return ($User.proxyAddresses -like "SMTP:SystemMailbox*" -or $User.mail -like "SystemMailbox*")}
 
 # Collecte des utilisateurs
 Write-Host "Collecte des objets AD..."
