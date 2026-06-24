@@ -114,18 +114,11 @@ Créer une file d'attente téléphonique est un processus en deux étapes, dans 
 1. Conservez votre navigateur Internet ouvert pour la tâche suivante.
 
 ## Tâche 5 - Créer une file d'attente
-Maintenant que vous avez créé un compte de ressource pour votre file d'atente, vous allez créer ladite file d'attente et de l'affecter au compte de ressource.
+Maintenant que vous avez créé un compte de ressource pour votre file d'atente, vous allez créer ladite file d'attente (dans le cadre de cet atelier nous ne pourrons lui affecter le précédent compte de ressource, par manque de licence et de numéro de téléphone).
 1. Sur le portail **Microsoft Teams admin center**, cliquez sur **Call queues** dans le groupe d'options **Voice**.
-1. Sur la page **Call queues**, cliquez sur **+ Add** dans la barre de menu en haut de la page.
-1. Sur la page **Set up Call Queue**, cliquez sur l'engrenage **Classic setup** en bas, pour passer à la création détaillée.
-1. entrez ```Call Queue 1``` dans le champ **Add a name for your call queue** en haut du formulaire.
-1. Sélectionnez **English (United States)** dans le champ **Language**.
-
-1. Dans la section *Resource accounts*, cliquez sur le bouton **Add** (sous le message *You haven’t added any resource accounts yet*).
-1. Sur le panneau **Add account** qui apparaît à droite de l'écran, dans la boite **Search by display or username**, saisissez ```Calling```. Dans le popup qui apparaît, sélectionnez le compte **Calling Queue 1** (s'il n'apparaît pas, patientez un instant avant de rafraichir votre navigateur et de réessayer) en passant votre souris dessus et cliquez sur le bouton **Add** qui apparaît à sa droite.
-1. En bas du panneau **Add accounts** cliquez sur le bouton **Add**. Vous retournez sur la page" **Call Queue 1**, qui affiche désormais **Calling Queue 1** dans la liste des comptes de ressource pour cette file d'attente.
-	> (ne vous préoccupez pas des warnings concernant les licences et les numéros, nous ne testerons pas réellement cette fonctionnalité dans cet atelier).
-1. Sur la fenêtre **Call Queue 1**, cliquez sur **Next**.
+1. Sur la page **Call queues**, cliquez sur **+ Add** dans la barre de menu en haut de la page puis sur **Advanced setup**.
+1. Sur la page **General info**, entrez ```Call Queue 1``` dans le champ **Add a name for your call queue** en haut du formulaire.
+1. Sélectionnez **English (United States)** dans le champ **Language** avant de cliquer sur **Next**.
 1. Sur la page **Greeting and music**, saisissez les valeurs suivantes :
 	- **Greeting** : **No greeting**
 	- **Music on hold** : **Play default music**
@@ -136,7 +129,7 @@ Maintenant que vous avez créé un compte de ressource pour votre file d'atente,
 	- Cliquez sur le bouton **Add groups**. Dans le panneau **Add call agents**, tapez ```sales``` dans le champ **Search by distribution list or group name**. Passez votre souris sur la ligne de **Sales department** qui s'affiche pour cliquer sur le bouton **Add** à sa droite.  
 	- En bas du panneau **Add call agents** cliquez sur le bouton **Add**.
 1. Sur la page **Call answering**, cliquez sur **Next**.
-1. Sur la page **Agen selection** renseignez les valeurs suivantes :
+1. Sur la page **Agent selection** renseignez les valeurs suivantes :
 	- **Routing Method** : **Round Robin**   
 	- **Presence-based routing** : **Off**
 	- **Call agents can opt out of taking calls** : **On**
@@ -144,7 +137,7 @@ Maintenant que vous avez créé un compte de ressource pour votre file d'atente,
 1. Sur la page **Agent selection**, cliquez sur **Next**.
 1. Sur la page **Callback**, n'activez pas la fonctionnalité (valeur par défaut) et cliquez sur **next**.
 1. Sur la page **Exception handling**, laissez les valeurs par défaut et cliquez sur **Next**.
-1. Sur la page **Authorized users**, cliquez sur **Submit**. **Call Queue 1** apparaît désormais dans la liste des files d'attente.
+1. Sur la page **Authorized users**, cliquez sur **Submit**. **Call Queue 1** apparaît désormais dans la liste des files d'attente (avec un warning, comme mentionné précédemment concernant le manque de licence et de numéro de téléphone).
 1. Conservez votre navigateur Internet ouvert pour la tâche suivante.
 
 ## Tâche 6 - Créer une stratégie d'appels
