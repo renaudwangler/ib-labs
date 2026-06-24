@@ -18,6 +18,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 ## Tâche 1 - Créer un filtre antiviral
 1. Vous devriez encore être connecté sur **LON-CL1** à l'issue de l'atelier précédent. Les portails **Microsoft 365 admin center** et **Exchange admin center** devraient encore être resté ouverts dans votre navigateur (et vous devriez y être connecté avec le compte de *Dominique Skyetson*).
 1. Dans le portail **Microsoft 365 Admin center**, sous la section **Admin Centers** du menu de navigation à gauche, cliquez sur **Security**.
+1. Dans le portail **Microsoft Defender**, cliquez (à gauche) sur la flêche **Show navigation**.
 1. Dans le portail **Microsoft 365 Defender**, dans le groupe d'options **Email &amp; collaboration** du menu de navigation, cliquez sur **Policies &amp; rules**.
 1. Sur la page **Policies &amp; rules**, cliquez sur **Threat policies**.
 1. Sur la page **Threat policies**, cliquez sur **Anti-malware** dans la section **Policies**.

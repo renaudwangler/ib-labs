@@ -35,6 +35,7 @@ A la fin de cet exercice, vous aurez une meilleure connaissance de :
 1. Microsoft 365 inclut également d'autres types de rapport, qui peuvent être trouvés dans le portail qui les concerne. Par exemple des :
 	- Rapports de sécurité sont disponibles dans le portail *Defender*.
 		1. Dans le menu de navigation du portail **Microsoft 365 admin center**, cliquez sur le portail **Security** dans la section **Admin centers**.
+		1. Dans le portail **Microsoft Defender**, si nécessaire, cliquez (à gauche) sur la flêche **Show navigation**.
 		1. En bas du menu de navigation du portail **Defender**, cliquez sur le choix **Reports**.
 
 	- Rapports de flux de messages dans le centre d'administration Exchange.
