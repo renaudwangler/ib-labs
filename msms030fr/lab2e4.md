@@ -86,7 +86,7 @@ Dans un exercice précédent, vous avez créé des comptes utilisateurs en utili
 Dans cette tâche, vous allez utiliser Windows Powershell pour importer un fichier CSV de nouveaux utilisateurs dans Microsoft 365. 
  
 1. Vous devriez être resté connecté sur la machine **LON-CL1** avec le compte **Administrator** et le mot de passe **Pa55w.rd**; l'outil **Windows Powershell ISE** devrait être resté ouvert en tant qu'administrateur. Si nécessaire, maximisez sa fenêtre.
-1. Dans la partie basse (fond bleu) de l'outil, tapez la commande suivante avant de taper sur **[Entrée]** pour la valider : ```Invoke-WebRequest "https://raw.githubusercontent.com/renaudwangler/ib-labs/master/msms030fr/users.csv" | Select-Object -ExpandProperty Content | Out-File ".\users.csv"```.
+1. Dans la partie basse (fond bleu) de l'outil, tapez la commande suivante avant de taper sur **[Entrée]** pour la valider : ```Invoke-WebRequest "https://raw.githubusercontent.com/renaudwangler/ib-labs/master/resources/users.csv" | Select-Object -ExpandProperty Content | Out-File ".\users.csv"```.
 1. En utilisant la commande suivante, vous allez pourvoir visualiser le contenu du fichier CSV dans **Notepad** :
 ```notepad .\users.csv```
 1. Dans la fenêtre **users.csv - Notepad** qui s'ouvre, passez en revue les informations présentes pour les utilisateurs. Notez que, pour chaque utilisateur, le domaine de connexion est **labxxxgodeploylabs.com**. Il vous faut désormais remplacer ce nom de domaine par votre **Nom DNS d'entreprise**. Dans le menu de Notepad, cliquez sur **Edit** puis **Replace**.

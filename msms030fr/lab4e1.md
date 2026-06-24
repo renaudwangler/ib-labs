@@ -32,7 +32,7 @@ L'intégration de votre ADDS on-premises avec Entra Id rendra vos utilisateurs p
 Par exemple, plusieurs objets pourraient avoir un attribut **ProxyAddresses** ou **UserPrincipalName** identiques dans l'ADDS. De nombreuses erreurs similaires pourraient poser problème dans la mise en place de la synchronisation de votre annuaire.  
 Dans cette tâche, vous allez utiliser un script pour implémenter quelques erreurs sur les utilisateurs du projet pilote Adatum afin d'identifier ensuite la manière de trouver et corriger ce genre d'erreurs.
 1. Sur LON-DC1, dans la fenêtre **Administrator: WIndows Powershell**, utilisez la commande suivante pour récupérer le script que vous utiliserez ensuite :
-	```Invoke-WebRequest "https://raw.githubusercontent.com/renaudwangler/ib-labs/master/msms030fr/problemUsers.ps1" | Select-Object -ExpandProperty Content | Out-File ".\problemUsers.ps1"```
+	```Invoke-WebRequest "https://raw.githubusercontent.com/renaudwangler/ib-labs/master/resources/problemUsers.ps1" | Select-Object -ExpandProperty Content | Out-File ".\problemUsers.ps1"```
 1. Lancez ensuite ledit script dans la fenêtre **Administrator: Windows PowerShell** :
 	```.\problemUsers.ps1```
 	>**Note :** Vous devriez pouvoir exécuter ce script sans problème car vous avez déjà changé la stratégie d'exécution des scripts sur LON-DC1 dans l'atelier 2.
@@ -42,7 +42,7 @@ Dans cette tâche, vous allez utiliser un script pour implémenter quelques erre
 Dans cette tâche vous allez appréhender l'utilisation d'un script powerShell pour identifier et corriger les problèmes sur vos objets ADDS avant de mettre en place la synchronisation de ce dernier vers Entra Id.
 1. Vous devriez être encore connecté sur **LON-DC1** à l'issue de la tâche précédente.
 1. Dans la fenêtre **Administrator: WIndows Powershell**, utilisez la commande suivante pour récupérer le script que vous utiliserez ensuite :
-	```Invoke-WebRequest "https://raw.githubusercontent.com/renaudwangler/ib-labs/master/ibIdFix.ps1" | Select-Object -ExpandProperty Content | Out-File ".\ibIdFix.ps1"```
+	```Invoke-WebRequest "https://raw.githubusercontent.com/renaudwangler/ib-labs/master/resources/ibIdFix.ps1" | Select-Object -ExpandProperty Content | Out-File ".\ibIdFix.ps1"```
 1. Lancez ensuite ledit script dans la fenêtre **Administrator: Windows PowerShell** :
 	```.\pibIdFix.ps1```  
 1. Une foix que le script a terminé, il génère un export des problèmes en .csv et ouvre une fenêtre **$Report|out-gridview** vous permettant de constater les comptes posant problèmes dans l'ADDS et qu'il serait impossible de synchroniser correctement.

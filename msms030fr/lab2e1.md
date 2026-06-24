@@ -126,17 +126,17 @@ Dans cette tâche, vous allez vérifier l'impact des changements que vous avez f
 1. Vous devez vous déconnecter de Microsoft 365 et vous reconnecter avec le compte de Libby Hayward. Sélectionnez le cercle en haut à droite avec **MA** (les initiales de *MOD Administrator*) et cliquez sur **Sign out**.
 1. Une fois qu'une invite apparait vous indiquant que vous êtes correctement déconnecté, fermez votre navigateur Internet pour éviter qu'une session soit restée ouverte sur un autre onglet.
 1. Dans la barre des tâches, cliquez sur l'icône de **Microsoft Edge** pour relancer une session de navigation et connectez-vous sur le portail Microsoft 365 à l'adresse suivante :  
-```https://www.microsoft365.com```
+```https:/m365.cloud.microsoft```
 1. Cliquez sur le bouton **SIgn in**.
 1. Dans la fenêtre **Pick an account**, sélectionnez **+ Use another account**.
 1. Dans la fenêtre **Sign in**, entrez ```Libby@[onmicrosoftDomain].onmicrosoft.com``` et cliquez sur **Next**.
 1. Dans la fenêtre **Enter password**, saisissez le mot de passe temporaire de Libby dont vous avez pris note dans la tâche précédente et cliquez sur le bouton **Sign in**.
 1. Dans la fenêtre **Update your password**, entrez de nouveau le mot de passe temporaire de Libby dans le champ **Current password**, et utilisez le mot de passe ```ibForm@tion``` dans les champs **New password** et **Confirm password**. Cliquez sur **Sign in**.
 1. Si une fenêtre **Welcome to Microsoft 365** apparait, cliquez deux fois sur la flèche de droite pour accéder à la validation vous permettant de la fermer.
-1. Vérifiez que vous pouvez accéder à la page d'accueil de Microsoft 365. Notez qu'aucune application n'est présente sur le portail de Libby (en cliquant sur le choix **Apps**) puisque vous n'avez affecté aucune licence au compte de Libby.
+1. Vérifiez que vous pouvez accéder à la page d'accueil de M365 Copilot. Notez qu'aucune application n'est présente sur le portail de Libby (en cliquant sur le **App Launcher** de 3*3 carrés en haut à gauche) puisque vous n'avez affecté aucune licence au compte de Libby.
 1. Vous devez désormais vous déconnecter du compte de Libby pour tenter de vous connecter avec le compte de Alan Yoo. Pour vous déconnecter, cliquez sur le nom de connexion de Libby Hayward (en bas à gauche) et cliquez sur **Sign out**.
 1. Une fois déconnecté, ressaisissez l'adresse suivante dans la barre d'adresse de votre navigateur si nécessaire :  
-```https://www.microsoft365.com```
+```https:/m365.cloud.microsoft```
 1. Dans la page **login**, cliquez sur le choix **Switch to a different account** en dessous du bouton **Sign in**
 1. Saisissez ```Alan@[onmicrosoftDomain].onmicrosoft.com``` dans le champ **Email address** avant de cliquer sur **Next**
 1. Dans la fenêtre **Enter password**, saisissez ```Pa55w.rd``` et cliquez sur **Sign in**.
@@ -146,7 +146,7 @@ Dans cette tâche, vous allez vérifier l'impact des changements que vous avez f
 1. Dans la fenêtre suivante, utilisez le mot de passe ```Pa55w.rd``` et cliquez sur **Sign in**.
 1. Dans la fenêtre **Update your password**, saisissez ```Pa55w.rd``` dans le champ **Current password** et saisissez ```ibForm@tion``` dans les champs **New password** et **Confirm password**. Cliquez sur **Sign in**.
 1. Si une fenêtre **Welcome to Microsoft 365** apparait, cliquez deux fois sur la flèche de droite pour accèder à la validation vous permettant de la fermer. 
-1. Dans la page d'accueil de 365, cliquez sur **Apps/more Apps** puis sur le lien **All apps** pour cliquer sur la tuile **Admin**.
+1. Dans la page d'accueil de M365 Copilot, cliquez sur le **App Launcher** puis sur la tuile **Admin**.
 1. Dans le portail **Microsoft 365 admin center**, dans le menu de navigation à gauche, ouvrez le groupe **Users** pour y sélectionner **Active users**.
 1. Dans la liste **Active users** cliquez sur le nom de **Alan Yoo**.
 1. Sur le panneau d'informations de **Alan Yoo** qui apparait, notez qu'il vous est indiqué que le compte de Alan est actuellement bloqué, cliquez sur le bouton **Unblock sign-in**.
