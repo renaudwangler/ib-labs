@@ -22,7 +22,7 @@ Dans cette tâche, vous allez vous faciliter la vie en utilisant Windows Powersh
 
 ## Tâche 2 - Activation de TLS 1.2
 La machine Windows Server fournie dans le cadre de notre pilote n'a pas le protocole TLS 1.2 actif. l'utilisation de nombreuses fonctionnalités du cloud Microsoft n'est désormais plus supportée sans ce prérequis.
-1. Toujours dans la fenêtre **Administrator: Windows PowerShell ISE**, utilisez la commande suivante pour activer le protocole TLS 1.2 : ```set-ExecutionPolicy bypass -force; Invoke-Command -ScriptBlock ([Scriptblock]::Create((Invoke-WebRequest 'https://raw.githubusercontent.com/renaudwangler/ib-labs/master/ms365/tls12.ps1' -useBasicParsing).Content))```
+1. Toujours dans la fenêtre **Administrator: Windows PowerShell ISE**, utilisez la commande suivante pour activer le protocole TLS 1.2 : ```set-ExecutionPolicy bypass -force; Invoke-Command -ScriptBlock ([Scriptblock]::Create((Invoke-WebRequest 'https://raw.githubusercontent.com/renaudwangler/ib-labs/master/resources/enabletls12.ps1' -useBasicParsing).Content))```
 1. Une fois que LON-DC1 a redémarré, ouvrez la session avec le compte ```Adatum\administrator``` et le mot de passe ```Pa55w.rd```
 1. Attendez que l'outil **Server Manager** s'ouvre automatiquement.
 1. Sur le menu de navigation de gauche de l'outil **Server Manager**, cliquez sur l'onglet **Local Server**

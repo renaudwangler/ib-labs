@@ -26,7 +26,7 @@ Dans cette tâche, vous allez utiliser le portail Sharepoint admin center pour c
 1. Dans le panneau **Create a folder**, saisissez ```CVs``` dans le champ **Name** et choisissez une couleur avant de cliquer sur **Create**
 1. Une fois le dossier créé, cliquez sur son nom pour accéder à son contenu.
 1. Ouvrez un autre onglet dans votre navigateur Internet et saisissez l'adresse suivante pour télécharger les exemples de cet atelier :
-```https://raw.githubusercontent.com/renaudwangler/ib-labs/master/ms365/sharepointDocs.zip```
+```https://raw.githubusercontent.com/renaudwangler/ib-labs/master/resources/sharepointDocs.zip```
 1. Après avoir appuyé sur [entrée], ouvrez le dossier **Downloads** sur LON-CL1 (vous pouvez le faire simplement en cliquant sur l'icône de dossier dans la notification qui apparait en haut à droite de votre navigateur).
 1. Faites un clic-droit sur le fichier **SharepointDocs.zip** et cliquez sur **Extract all**.
 1. Dans la fenêtre **Extract Compressed (Zipped) Folders, désectionnez la case **Show extracted files when complete** et cliquez sur le bouton **Extract**.
